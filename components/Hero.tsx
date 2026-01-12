@@ -1,12 +1,16 @@
 import React from "react";
 import ThemeToggle from "@/components/ThemeToggle";
 
-const Hero = () => {
+type HeroProps = {
+  H: string;
+};
+
+const Hero = ({ H }: HeroProps) => {
   return (
     <div
       className="w-full h-[60vh] md:h-[70vh] flex items-center justify-center relative overflow-hidden"
       style={{
-        backgroundImage: "url('/About/aboutherobg.png')",
+        backgroundImage: "url('/About/About Hero BG.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -35,9 +39,9 @@ const Hero = () => {
           <ThemeToggle />
         </div>
 
-        {/* ABOUT US text */}
-        <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-[120px] font-medium text-white whitespace-nowrap">
-          ABOUT US
+        {/* Heading from props */}
+        <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-[120px] font-medium text-white text-center leading-tight">
+          {H}
         </h2>
       </div>
     </div>

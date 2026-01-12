@@ -1,18 +1,18 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import React from "react";
-import Hero from "./components/Hero";
 import About from "./components/About";
 import Values from "./components/Values";
 import BrandLevelUp from "./components/BrandLevelUp";
 import Mission from "./components/Mission";
 import Image from "next/image";
+import Hero from "@/components/Hero";
 
 const AboutPage = () => {
   return (
     <div>
       <Header />
-      <Hero />
+      <Hero H="ABOUT US" />
       <About />
       <Values />
       <div className="relative">
@@ -26,7 +26,7 @@ const AboutPage = () => {
       </div>
       <BrandLevelUp />
       <Mission />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };
