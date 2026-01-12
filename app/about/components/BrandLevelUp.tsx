@@ -4,13 +4,13 @@ const BrandLevelUp = () => {
   return (
     <div
       className="flex flex-col items-center justify-center bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white h-screen bg-cover bg-center"
-      style={{ backgroundImage: "url(/Home/CTA.svg)" }}
+      style={{ backgroundImage: "url('/About/aboutherobg.png')" }}
     >
       <div className="text-center px-4 md:px-10">
         <h1 className="text-4xl sm:text-5xl font-bold text-white">
           Let's <span className="text-yellow-400">Work</span> Together
         </h1>
-        <p className="mt-4 mx-25 text-lg sm:text-xl">
+        <p className="mt-4 md:mx-25 text-lg sm:text-xl">
           We’re ready to help your business grow online with smart design,
           strategy, and creative energy. Let’s talk about how we can take your
           brand to the next level.

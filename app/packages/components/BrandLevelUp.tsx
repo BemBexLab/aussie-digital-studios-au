@@ -3,21 +3,21 @@ import React from "react";
 const BrandLevelUp = () => {
   return (
     <div
-      className="flex flex-col items-center justify-center bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white h-screen bg-cover bg-center"
+      className="flex flex-col items-center justify-center bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white min-h-screen w-full overflow-x-hidden bg-cover bg-center"
       style={{ backgroundImage: "url(/Home/CTA.svg)" }}
     >
-      <div className="text-center px-4 md:px-10">
-        <h1 className="text-4xl sm:text-5xl font-bold text-white">
+      <div className="text-center px-4 md:px-10 max-w-4xl w-full">
+        <h1 className="text-4xl sm:text-5xl font-bold text-white break-words">
           Ready to Transform Your
         </h1>
-        <h1 className="text-4xl sm:text-5xl font-bold text-yellow-400 mt-4">
+        <h1 className="text-4xl sm:text-5xl font-bold text-yellow-400 mt-4 break-words">
           Digital Presence?
         </h1>
-        <p className="mt-6 text-lg sm:text-xl">
+        <p className="mt-6 text-lg sm:text-xl break-words">
           Schedule a 30 minutes Meeting with Our Experts to Propel Your Online
           Success.
         </p>
-        <button className="mt-6 px-8 py-3 text-lg bg-teal-500 text-white rounded-full hover:bg-blue-400 transition-all inline-flex items-center group">
+        <button className="mt-6 px-8 py-3 text-lg bg-teal-500 text-white rounded-full hover:bg-blue-400 transition-all inline-flex items-center group whitespace-nowrap">
           <span>Schedule a Meeting</span>
           <span className="ml-3 relative w-10 h-10 flex items-center justify-center">
             <span
