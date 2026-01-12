@@ -14,7 +14,7 @@ import Image from "next/image";
 const HomePage = () => {
   return (
     <div>
-      <Header />
+      {/* <Header />
       <Hero />
       <AboutUs />
       <div className="relative hidden md:block">
@@ -35,9 +35,9 @@ const HomePage = () => {
           height={200}
           className="relative z-10 bottom-35 right-0 md:block"
         />
-      </div>
-      <PortfolioSection />
-      <BrandLevelUp />
+      </div> */}
+      {/* <PortfolioSection /> */}
+      {/* <BrandLevelUp />
       <div className="flex justify-end hidden md:flex">
         <Image
           src="/Geometric_Shape_Silver.png"
@@ -46,10 +46,10 @@ const HomePage = () => {
           height={200}
           className="relative z-10 bottom-35 right-0 md:block"
         />
-      </div>
+      </div> */}
       <PricingPlan />
-      <Testimonials />
-      <Footer />
+      {/* <Testimonials />
+      <Footer /> */}
     </div>
   );
 };
