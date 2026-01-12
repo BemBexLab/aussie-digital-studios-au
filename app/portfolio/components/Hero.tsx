@@ -1,5 +1,5 @@
 import React from "react";
-import { PiSunFill } from "react-icons/pi";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const Hero = () => {
   return (
@@ -38,9 +38,7 @@ const Hero = () => {
 
           {/* Green circle positioned above and to the right */}
           <div className="absolute top-2 -right-12 md:top-4 md:-right-16 lg:top-6 lg:-right-20">
-            <div className="w-12 h-12 rounded-full bg-[#4C8C74] flex items-center justify-center drop-shadow-[0_0_20px_rgba(76,140,116,0.8)]">
-              <PiSunFill size={26} />
-            </div>
+            <ThemeToggle />
           </div>
         </div>
       </div>

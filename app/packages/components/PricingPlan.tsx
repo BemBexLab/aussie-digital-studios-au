@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const PricingPlan = () => {
   return (
@@ -40,8 +41,8 @@ const PricingPlan = () => {
         </div>
 
         {/* Cards here */}
-        <div className="flex flex-row gap-4 justify-center my-7">
-          <div className="flex gap-6">
+        <div className="flex flex-col lg:flex-row gap-4 justify-center my-7 px-4">
+          <div className="flex flex-col lg:flex-row gap-6 w-full lg:w-auto">
             {/* Package 1 */}
             <div
               className="bg-cover bg-center rounded-lg p-6 w-full max-w-2xl shadow-lg"
@@ -466,11 +467,18 @@ const PricingPlan = () => {
 
             {/* Package 3 */}
             <div
-              className="bg-cover bg-center rounded-lg p-6 w-full max-w-2xl shadow-lg"
+              className="bg-cover bg-center rounded-lg p-6 w-full max-w-2xl shadow-lg relative"
               style={{
                 backgroundImage: "url('/Home/Frame_161.svg')",
               }}
             >
+              <Image
+                src="/Geometric_Shape_Silver.png"
+                alt="Decorative Image"
+                width={150}
+                height={150}
+                className="absolute -top-24 -right-20 z-20 pointer-events-none"
+              />
               <h2 className="text-base text-yellow-400 mb-4">
                 Basic Website Package
               </h2>

@@ -37,6 +37,48 @@ body {
   font-family: 'Outfit', Arial, Helvetica, sans-serif;
 }
 
+/* Light theme overrides when `html` has class `light` */
+html.light {
+  --background: #ffffff;
+  --foreground: #111827;
+}
+
+html.light body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Override common utility classes used across components so text/background behave in light mode */
+html.light .text-white { color: var(--foreground) !important; }
+html.light .bg-black { background-color: #ffffff !important; }
+html.light .bg-\[\#151515\] { background-color: #ffffff !important; }
+html.light .bg-\[\#070a0a\] { background-color: #ffffff !important; }
+html.light .text-gray-400 { color: #4b5563 !important; }
+html.light .text-gray-300 { color: #4b5563 !important; }
+html.light .text-gray-500 { color: #6b7280 !important; }
+
+/* Remove or replace dark linear-gradient usages when light theme is active */
+html.light [style*="linear-gradient"] {
+  background-image: none !important;
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+}
+
+/* Tailwind arbitrary bg classes that include linear-gradient will contain the text "linear-gradient" in the class attribute */
+html.light [class*="linear-gradient"] {
+  background-image: none !important;
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+}
+
+/* Also treat any element with a bg-black or dark background to be white in light mode */
+html.light .bg-black,
+html.light .bg-\[\#1b170f\],
+html.light .bg-\[\#070a0a\],
+html.light .bg-\[\#151515\] {
+  background-color: #ffffff !important;
+}
+
 
 /* @import "tailwindcss";
 

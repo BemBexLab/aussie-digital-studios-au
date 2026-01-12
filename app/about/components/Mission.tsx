@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Mission = () => {
   return (
-    <div className="flex flex-row justify-center items-center h-[700px]">
+    <div className="flex flex-row justify-center items-center h-[700px] overflow-hidden">
       <div className="flex">
         <div className="w-50 h-72 mr-6">
           <Image
@@ -42,7 +42,7 @@ const Mission = () => {
           />
         </div>
 
-        <div className="w-30"></div>
+        <div className="w-15"></div>
 
         <div className="flex flex-col w-120 h-72 justify-center">
           <h2 className="text-4xl font-bold mb-6">Our Mission</h2>

@@ -1,11 +1,11 @@
 // components/Hero.tsx
 import Image from "next/image";
-import { PiSunFill } from "react-icons/pi";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const Hero = () => {
   return (
     <div className="overflow-x-hidden">
-      <section className="relative h-[130vh] bg-black pb-40">
+      <section className="relative h-[125vh] bg-black pb-40">
         <div
           className="absolute inset-0 z-0"
           style={{
@@ -62,9 +62,7 @@ const Hero = () => {
         </div>
 
         <div className="absolute top-26 right-10 md:top-30 md:right-20 z-40">
-          <div className="w-12 h-12 rounded-full bg-[#4C8C74] flex items-center justify-center drop-shadow-[0_0_20px_rgba(76,140,116,0.8)]">
-            <PiSunFill size={26} />
-          </div>
+          <ThemeToggle />
         </div>
 
         <div className="absolute bottom-10 left-0 right-0 z-40 pointer-events-none flex justify-center">

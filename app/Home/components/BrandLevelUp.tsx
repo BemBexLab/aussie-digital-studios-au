@@ -3,10 +3,10 @@ import React from "react";
 const BrandLevelUp = () => {
   return (
     <div
-      className="flex flex-col items-center justify-center bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white h-screen bg-cover bg-center"
+      className="flex flex-col items-center justify-center bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white min-h-screen md:h-screen bg-cover bg-center"
       style={{ backgroundImage: "url(/Home/CTA.svg)" }}
     >
-      <div className="text-center px-4 md:px-10">
+      <div className="text-center px-4 md:px-10 py-8 md:py-0">
         <h1 className="text-4xl sm:text-5xl font-bold text-white">
           Ready to <span className="text-yellow-400">level up</span> your brand?
         </h1>

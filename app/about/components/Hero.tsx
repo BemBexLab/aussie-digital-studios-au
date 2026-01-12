@@ -33,7 +33,7 @@ const Hero = () => {
         <div className="relative">
           {/* ABOUT US text */}
           <h2 className="text-8xl md:text-9xl lg:text-[180px] font-medium text-white scale-x-70 scale-y-70">
-            Packages
+            ABOUT
           </h2>
 
           {/* Green circle positioned above and to the right */}
