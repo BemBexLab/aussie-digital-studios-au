@@ -73,7 +73,7 @@ const Hero = () => {
             <h1 className="text-white font-semibold font-black text-5xl md:text-[80px] lg:text-[120px] xl:text-[160px] leading-tight tracking-[-0.009em] whitespace-nowrap text-center">
               DIGITAL DESIGN
             </h1>
-            <p className=" text-white px-[290px] text-lg md:text-base opacity-60 font-bold mt-1">
+            <p className=" text-white px-[290px] text-lg sm:text-2xl md:text-4xl font-bold mt-1">
               that helps your brand grow.
             </p>
           </div>
