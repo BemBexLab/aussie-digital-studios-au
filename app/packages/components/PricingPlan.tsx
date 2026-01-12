@@ -5,13 +5,6 @@ const PricingPlan = () => {
   return (
     <div className="text-white py-20">
       <div className="max-w-7xl mx-auto px-4 justify-center">
-        {/* <p className="text-center my-[7px] text-xl font-medium text-[#4C8C74]">
-          Pricing Plans
-        </p>
-        <h1 className="text-center text-4xl font-semibold text-white mb-16">
-          Our Packages
-        </h1> */}
-
         {/* Buttons */}
         <div className="flex flex-row gap-2 justify-center mb-7 flex-wrap">
           <div className="bg-[rgba(76, 140, 116, 0.10)] text-[#AAAAAA] px-3 py-1.5 rounded-[8px] border border-solid hover:border-yellow-400 hover:text-yellow-400 cursor-pointer text-sm">
@@ -41,11 +34,11 @@ const PricingPlan = () => {
         </div>
 
         {/* Cards here */}
-        <div className="flex flex-col lg:flex-row gap-4 justify-center my-7 px-4">
+        <div className="flex flex-col lg:flex-row gap-4 justify-center my-7 px-4 overflow-x-hidden sm:overflow-visible">
           <div className="flex flex-col lg:flex-row gap-6 w-full lg:w-auto">
             {/* Package 1 */}
             <div
-              className="bg-cover bg-center rounded-lg p-6 w-full max-w-2xl shadow-lg"
+              className="bg-cover bg-center rounded-lg p-6 w-full max-w-full md:max-w-2xl shadow-lg"
               style={{
                 backgroundImage: "url('/Home/Frame_161.svg')",
               }}
@@ -256,7 +249,7 @@ const PricingPlan = () => {
 
             {/* Package 2 */}
             <div
-              className="bg-cover bg-center rounded-lg p-6 w-full max-w-2xl shadow-lg"
+              className="bg-cover bg-center rounded-lg p-6 w-full max-w-full md:max-w-2xl shadow-lg"
               style={{
                 backgroundImage: "url('/Home/Frame_161.svg')",
               }}
@@ -467,7 +460,7 @@ const PricingPlan = () => {
 
             {/* Package 3 */}
             <div
-              className="bg-cover bg-center rounded-lg p-6 w-full max-w-2xl shadow-lg relative"
+              className="bg-cover bg-center rounded-lg p-6 w-full max-w-full md:max-w-2xl shadow-lg relative"
               style={{
                 backgroundImage: "url('/Home/Frame_161.svg')",
               }}
@@ -477,7 +470,7 @@ const PricingPlan = () => {
                 alt="Decorative Image"
                 width={150}
                 height={150}
-                className="absolute -top-24 -right-20 z-20 pointer-events-none"
+                className="absolute -top-24 -right-6 sm:-right-20 z-20 pointer-events-none"
               />
               <h2 className="text-base text-yellow-400 mb-4">
                 Basic Website Package
