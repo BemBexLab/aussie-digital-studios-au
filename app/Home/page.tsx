@@ -47,9 +47,9 @@ const HomePage = () => {
           className="relative z-10 bottom-35 right-0 md:block"
         />
       </div>
-      <PricingPlan />
+      {/* <PricingPlan /> */}
       <Testimonials />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
