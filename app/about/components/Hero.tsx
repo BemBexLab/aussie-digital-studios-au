@@ -4,16 +4,16 @@ import ThemeToggle from "@/components/ThemeToggle";
 const Hero = () => {
   return (
     <div
-      className="w-full h-100 flex items-center justify-center relative overflow-hidden"
+      className="w-full h-[60vh] md:h-[70vh] flex items-center justify-center relative overflow-hidden"
       style={{
-        backgroundImage: "url('/About/Frame_about_hero.svg')",
+        backgroundImage: "url('/About/aboutherobg.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         backgroundAttachment: "fixed",
       }}
     >
-      {/* Clouds Video Overlay with brightness filter */}
+      {/* Clouds Video Overlay */}
       <video
         autoPlay
         muted
@@ -28,19 +28,17 @@ const Hero = () => {
         Your browser does not support the video tag.
       </video>
 
-      {/* Content */}
-      <div className="flex items-end justify-center w-full relative z-10 px-4">
-        <div className="relative">
-          {/* ABOUT US text */}
-          <h2 className="text-8xl md:text-9xl lg:text-[180px] font-medium text-white scale-x-70 scale-y-70">
-            ABOUT
-          </h2>
-
-          {/* Green circle positioned above and to the right */}
-          <div className="absolute top-2 -right-12 md:top-4 md:-right-16 lg:top-6 lg:-right-20">
-            <ThemeToggle />
-          </div>
+      {/* Content Wrapper */}
+      <div className="flex flex-col items-center justify-end w-full relative z-10 px-4 pb-6">
+        {/* ThemeToggle: Stacked above text on small screens, top-right on medium+ */}
+        <div className="self-end mb-3 md:mb-0 md:absolute md:top-3 md:right-4 lg:top-4 lg:right-6">
+          <ThemeToggle />
         </div>
+
+        {/* ABOUT US text */}
+        <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-[120px] font-medium text-white whitespace-nowrap">
+          ABOUT US
+        </h2>
       </div>
     </div>
   );

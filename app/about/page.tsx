@@ -26,7 +26,7 @@ const AboutPage = () => {
       </div>
       <BrandLevelUp />
       <Mission />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
