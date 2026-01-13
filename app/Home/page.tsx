@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import React from "react";
-import Hero from "./components/Hero";
+// import Hero from "./components/Hero_old";
 import AboutUs from "./components/AboutUs";
 import Services from "./components/Services";
 import PortfolioSection from "./components/PortfolioSection";
@@ -10,12 +10,12 @@ import { Testimonials } from "./components/Testimonials";
 import Footer from "@/components/Footer";
 
 import Image from "next/image";
+import Hero from "./components/Hero";
 
 const HomePage = () => {
   return (
     <div>
       <Hero />
-      {/* <br /> */}
       <AboutUs />
       <div className="relative hidden md:block">
         <Image

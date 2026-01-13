@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Image from "next/image";
-import Hero from "./Home/components/Hero";
+import Hero from "./Home/components/Hero_old";
 import AboutUs from "./Home/components/AboutUs";
 import Services from "./Home/components/Services";
 import PortfolioSection from "./Home/components/PortfolioSection";
