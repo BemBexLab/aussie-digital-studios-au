@@ -11,7 +11,6 @@ import Hero from "@/components/Hero";
 const AboutPage = () => {
   return (
     <div>
-      <Header />
       <Hero H="ABOUT US" />
       <About />
       <Values />
@@ -26,7 +25,6 @@ const AboutPage = () => {
       </div>
       <BrandLevelUp />
       <Mission />
-      <Footer />
     </div>
   );
 };

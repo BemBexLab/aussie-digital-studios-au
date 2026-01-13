@@ -8,11 +8,9 @@ import Hero from "@/components/Hero";
 const PackagePage = () => {
   return (
     <div>
-      <Header />
       <Hero H="PACKAGES"/>
       <PricingPlan />
       <BrandLevelUp />
-      {/* <div className="w-full h-5"></div>
       <div className="relative">
         <img
           src="/Geometric_Shape_Silver.png"
@@ -21,8 +19,7 @@ const PackagePage = () => {
           height={150}
           className="left-70 -bottom-30 right-3 md:block relative z-10"
         />
-      </div> */}
-      <Footer />
+      </div>
     </div>
   );
 };

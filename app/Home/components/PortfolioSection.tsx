@@ -3,8 +3,20 @@ import Image from "next/image";
 export default function PortfolioSection() {
   return (
     <section className="relative">
+      {/* Geometric shape image */}
+      <div className="flex justify-end">
+        <Image
+          src="/Geometric_Shape_Silver.png"
+          alt="Decorative Image"
+          width={200}
+          height={200}
+          className="relative z-10 bottom-35 right-0"
+        />
+      </div>
       {/* Heading */}
-      <div className="text-center mb-20 px-4"> {/* Added px-4 for safety on mobile */}
+      <div className="text-center mb-20 px-4">
+        {" "}
+        {/* Added px-4 for safety on mobile */}
         <p className="text-lg text-emerald-400 mb-2 font-semibold">
           Our Portfolio
         </p>
@@ -103,7 +115,9 @@ export default function PortfolioSection() {
         </div>
 
         {/* Bottom Row (Cards 04 & 05) */}
-        <div className="flex flex-col lg:flex-row gap-6 lg:gap-14 mt-12"> {/* Fixed: removed nested flex + extra div */}
+        <div className="flex flex-col lg:flex-row gap-6 lg:gap-14 mt-12">
+          {" "}
+          {/* Fixed: removed nested flex + extra div */}
           {/* Card 04*/}
           <div className="rounded-3xl w-full lg:w-[670px] flex flex-col lg:mt-[150px]">
             <div className="rounded-2xl overflow-hidden mb-6">
@@ -118,8 +132,8 @@ export default function PortfolioSection() {
                 Project Name
               </h3>
               <p className="text-sm text-gray-400 mb-4 flex-grow">
-                Lorem Ipsum is simply dummy text of the printing and
-                typesetting industry.
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
               </p>
               <div className="flex gap-2 flex-wrap">
                 <Tag label="Web design" />
@@ -128,7 +142,6 @@ export default function PortfolioSection() {
               </div>
             </div>
           </div>
-
           {/* Card 05 */}
           <div className="rounded-3xl w-full lg:w-[460px] p-4 md:p-8 flex flex-col">
             <div className="rounded-2xl overflow-hidden mb-2">
@@ -143,8 +156,8 @@ export default function PortfolioSection() {
                 Project Name
               </h3>
               <p className="text-sm text-gray-400 mb-4">
-                Lorem Ipsum is simply dummy text of the printing and
-                typesetting industry.
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
               </p>
               <div className="flex gap-2 flex-wrap">
                 <Tag label="Web design" />

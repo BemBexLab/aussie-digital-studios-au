@@ -40,11 +40,11 @@ const PricingPlan = () => {
         </div>
 
         {/* Cards here */}
-        <div className="flex flex-row gap-4 justify-center my-7">
-          <div className="flex gap-6">
+        <div className="flex flex-col md:flex-row gap-6 justify-center my-7 px-4">
+          <div className="flex flex-col md:flex-row gap-6">
             {/* Package 1 */}
             <div
-              className="bg-cover bg-center rounded-lg p-6 w-full max-w-2xl shadow-lg"
+              className="bg-cover bg-center rounded-lg p-6 w-full max-w-md md:max-w-2xl shadow-lg"
               style={{
                 backgroundImage: "url('/Home/Frame_161.svg')",
               }}
@@ -255,7 +255,7 @@ const PricingPlan = () => {
 
             {/* Package 2 */}
             <div
-              className="bg-cover bg-center rounded-lg p-6 w-full max-w-2xl shadow-lg"
+              className="bg-cover bg-center rounded-lg p-6 w-full max-w-md md:max-w-2xl shadow-lg"
               style={{
                 backgroundImage: "url('/Home/Frame_161.svg')",
               }}
@@ -466,7 +466,7 @@ const PricingPlan = () => {
 
             {/* Package 3 */}
             <div
-              className="bg-cover bg-center rounded-lg p-6 w-full max-w-2xl shadow-lg"
+              className="bg-cover bg-center rounded-lg p-6 w-full max-w-md md:max-w-2xl shadow-lg"
               style={{
                 backgroundImage: "url('/Home/Frame_161.svg')",
               }}

@@ -36,18 +36,13 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = React.useState<number | null>(null);
 
   return (
-    <div className="mx-16">
+    <div className="mx-4 sm:mx-8 md:mx-16"> {/* Responsive margin */}
       <div
-        className={`${poppins.className} max-w-screen-2xl mx-auto flex flex-col items-center justify-center px-16 md:px-32`}
+        className={`${poppins.className} max-w-screen-2xl mx-auto flex flex-col items-center justify-center px-4 sm:px-6 md:px-16 lg:px-32`}
       >
-        {/* <p className="text-indigo-600 text-sm font-medium">FAQ</p> */}
         <h2 className="text-3xl font-semibold text-center">
           Looking for answers?
         </h2>
-        {/* <p className="text-sm text-slate-500 mt-2 pb-8 text-center">
-          Ship Beautiful Frontends Without the Overhead — Customizable, Scalable
-          and Developer-Friendly UI Components.
-        </p> */}
 
         <div className="w-full">
           {faqs.map((faq, index) => {
@@ -58,7 +53,7 @@ export default function FAQ() {
             return (
               <div
                 key={faq.question}
-                className="w-full max-w-screen-xl mx-auto border-b border-slate-200 py-8"
+                className="w-full max-w-screen-xl mx-auto border-b border-slate-200 py-6 md:py-8" // Slightly less vertical padding on mobile
               >
                 <button
                   id={buttonId}
@@ -103,7 +98,7 @@ export default function FAQ() {
           })}
         </div>
       </div>
-      <div className="my-40"></div>
+      <div className="my-20 md:my-40"></div> {/* Reduce bottom spacing on mobile */}
     </div>
   );
 }

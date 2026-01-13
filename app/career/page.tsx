@@ -1,16 +1,14 @@
 import React from 'react'
-import Hero from './components/Hero'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import JobPosting from './components/JobPosting'
+import Hero from '@/components/Hero'
 
 const CareerPage = () => {
   return (
     <div>
-        <Header />
-        <Hero />
+        <Hero H='career'/>
         <JobPosting />
-        <Footer />
     </div>
   )
 }

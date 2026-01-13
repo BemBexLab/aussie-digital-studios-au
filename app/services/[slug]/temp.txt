@@ -1,0 +1,40 @@
+<div
+        className="w-full h-[400px] flex items-center justify-center relative overflow-hidden"
+        style={{
+          backgroundImage: "url('/About/Frame_about_hero.svg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundAttachment: "scroll", // fixed doesn't work well on mobile
+        }}
+      >
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline // Important for iOS
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{
+            mixBlendMode: "overlay",
+            filter: "brightness(2) contrast(1.1)",
+          }}
+        >
+          <source src="/Clouds.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        <div className="flex items-end justify-center w-full relative z-10 px-4 pb-8">
+          <div className="relative text-center">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-[96px] font-medium text-white">
+              {service.title}
+            </h2>
+            <div className="absolute -top-2 right-0 md:-top-2 md:-right-16 lg:top-2 lg:-right-20 hidden md:block">
+              <ThemeToggle />
+            </div>
+            {/* Show ThemeToggle below heading on mobile */}
+            <div className="mt-4 md:hidden inline-block">
+              <ThemeToggle />
+            </div>
+          </div>
+        </div>
+      </div>

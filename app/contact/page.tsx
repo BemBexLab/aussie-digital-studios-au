@@ -8,10 +8,8 @@ import Hero from '@/components/Hero'
 const ContactPage = () => {
   return (
     <div>
-      <Header />
       <Hero H="CONTACT US" />
       <Contact />
-      <Footer />
     </div>
 )
 }
