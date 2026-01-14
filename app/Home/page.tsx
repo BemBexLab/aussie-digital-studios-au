@@ -11,22 +11,21 @@ import Footer from "@/components/Footer";
 
 import Image from "next/image";
 import Hero from "./components/Hero";
+import LogoSlider from "./components/LogoSlider";
 
 const HomePage = () => {
   return (
     <div>
       <Hero />
+      <LogoSlider />
       <AboutUs />
-      <div className="relative hidden md:block">
-        <Image
-          src="/Geometric_Shape_Silver.png"
-          alt="Decorative Image"
-          width={200}
-          height={200}
-          className="left-13 -bottom-25 right-3 md:block relative z-10"
-        />
-      </div>
-      <br />
+      <Image
+        src="/Geometric_Shape_Silver.png"
+        alt="Decorative Image"
+        width={200}
+        height={200}
+        className="left-13 hidden -bottom-180 right-3 md:block absolute z-50"
+      />
       <Services />
       <br />
       <PortfolioSection />

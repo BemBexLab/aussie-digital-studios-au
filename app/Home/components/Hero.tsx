@@ -37,8 +37,10 @@ const Hero = () => {
         </div>
 
         {/* Top content: text + frame */}
-        <div className="flex flex-row justify-center gap-5 h-1/2">
-          <div className="w-[350px] h-1/5 mt-[250px] text-[#808c87] text-xl text-left px-0">
+        <div className="flex flex-row justify-center gap-10 h-1/2">
+          <div
+            className="uppercase w-[350px] h-1/5 mt-[250px] text-[#808c87] text-[20px] font-semibold text-xl text-left px-0 transform translate-x-18 -translate-y-20"
+          >
             Clean visuals, smart strategy and creative work that makes an
             impact.
           </div>
@@ -52,15 +54,15 @@ const Hero = () => {
         </div>
 
         {/* Main headings */}
-        <div className=" mx-auto z-20 justify-center flex flex-col px-12 w-full mt-[30px]">
+        <div className=" mx-auto z-20 justify-center max-w-7xl flex flex-col px-12 w-full mt-[30px]">
           <div className="justify-center items-center flex flex-col">
-            <span className="text-white text-3xl font-semibold mb-2 transform -translate-x-128">
+            <span className="text-white text-3xl font-semibold transform -translate-x-132">
               Modern
             </span>
-            <span className="text-white text-[150px] leading-[0.95] font-extrabold tracking-tight mb-2 whitespace-nowrap">
+            <span className="text-white text-[160px] leading-[0.95] font-semibold tracking-tight whitespace-nowrap">
               DIGITAL DESIGN
             </span>
-            <span className="text-white text-2xl font-medium mt-2 transform -translate-x-105">
+            <span className="text-white text-2xl font-medium transform -translate-x-40">
               that helps your brand grow.
             </span>
           </div>

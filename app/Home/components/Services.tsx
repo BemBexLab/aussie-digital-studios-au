@@ -1,7 +1,7 @@
 import React from "react";
 import arrowUpRight from "@/public/Home/arrow_up_right_circle_white.svg";
 import { BsArrowUpRightCircle } from "react-icons/bs";
-
+import Image from "next/image";
 
 const services = [
   {
@@ -42,7 +42,7 @@ const services = [
     ),
   },
   {
-    title: "Branding & Identity",
+    title: "Logo Design & Branding",
     desc: "Professional, memorable visuals that define your brand and make a strong first impression.",
     icon: (
       <svg
@@ -76,7 +76,7 @@ const services = [
     ),
   },
   {
-    title: "SEO & Digital Strategy",
+    title: "Search Engine Optimization",
     desc: "Smart optimisation that drives steady growth and keeps your brand visible.",
     icon: (
       <svg
@@ -103,8 +103,8 @@ const services = [
     ),
   },
   {
-    title: "Marketing & Content",
-    desc: "Clear, engaging content that builds trust and keeps your audience interested.",
+    title: "Performance Marketing",
+    desc: "Fast, clean and designed to convert. Modern websites built around your brand and goals.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -114,23 +114,84 @@ const services = [
         fill="none"
       >
         <path
-          d="M45.8333 21.875V25C45.8333 34.8209 45.8333 39.7314 42.7824 42.7823C39.7314 45.8333 34.8209 45.8333 25 45.8333C15.1791 45.8333 10.2686 45.8333 7.21763 42.7823C4.16666 39.7314 4.16666 34.8209 4.16666 25C4.16666 15.179 4.16666 10.2686 7.21763 7.2176C10.2686 4.16663 15.1791 4.16663 25 4.16663H28.125"
+          d="M4.16666 25C4.16666 15.179 4.16666 10.2686 7.21763 7.2176C10.2686 4.16663 15.1791 4.16663 25 4.16663C34.8209 4.16663 39.7314 4.16663 42.7824 7.2176C45.8333 10.2686 45.8333 15.179 45.8333 25C45.8333 34.8209 45.8333 39.7314 42.7824 42.7823C39.7314 45.8333 34.8209 45.8333 25 45.8333C15.1791 45.8333 10.2686 45.8333 7.21763 42.7823C4.16666 39.7314 4.16666 34.8209 4.16666 25Z"
           stroke="#4C8C74"
           strokeWidth="2"
           strokeLinecap="round"
         />
         <path
-          d="M14.5833 29.1667L18.3269 24.6745C19.8103 22.8944 20.552 22.0043 21.5278 22.0043C22.5036 22.0043 23.2453 22.8944 24.7287 24.6745L25.2713 25.3256C26.7547 27.1057 27.4965 27.9958 28.4722 27.9958C29.448 27.9958 30.1897 27.1057 31.6732 25.3256L35.4167 20.8334"
+          d="M14.5833 37.5L14.5833 31.25"
           stroke="#4C8C74"
           strokeWidth="2"
           strokeLinecap="round"
         />
-        <circle
-          cx="39.5833"
-          cy="10.4166"
-          r="6.25"
+        <path
+          d="M25 37.5V25"
           stroke="#4C8C74"
           strokeWidth="2"
+          strokeLinecap="round"
+        />
+        <path
+          d="M35.4167 37.5V18.75"
+          stroke="#4C8C74"
+          strokeWidth="2"
+          strokeLinecap="round"
+        />
+      </svg>
+    ),
+  },
+  {
+    title: "Social Media Marketing",
+    desc: "Professional, memorable visuals that define your brand and make a strong first impression.",
+    icon: (
+      <Image
+        src="/Home/Group_26.svg"
+        width={25}
+        height={25}
+        alt="social media icon"
+      />
+    ),
+  },
+  {
+    title: "Content Marketing",
+    desc: "Professional, memorable visuals that define your brand and make a strong first impression.",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="25"
+        height="25"
+        viewBox="0 0 50 50"
+        fill="none"
+      >
+        <path
+          d="M37.8751 16.7486L38.8406 15.7831C40.4403 14.1835 43.0339 14.1835 44.6336 15.7831C46.2333 17.3828 46.2333 19.9764 44.6336 21.5761L43.6681 22.5416M37.8751 16.7486C37.8751 16.7486 37.9958 18.8003 39.8061 20.6106C41.6164 22.421 43.6681 22.5416 43.6681 22.5416M37.8751 16.7486L28.9988 25.6249C28.3976 26.2261 28.097 26.5268 27.8384 26.8582C27.5335 27.2492 27.272 27.6722 27.0587 28.1199C26.8778 28.4993 26.7434 28.9026 26.4745 29.7092L25.6137 32.2917L25.3352 33.1272M43.6681 22.5416L34.7918 31.4179C34.1906 32.0191 33.89 32.3197 33.5585 32.5783C33.1675 32.8832 32.7445 33.1447 32.2969 33.358C31.9174 33.5389 31.5141 33.6733 30.7075 33.9422L28.125 34.803L27.2895 35.0815M27.2895 35.0815L26.454 35.36C26.0571 35.4923 25.6194 35.389 25.3236 35.0931C25.0277 34.7973 24.9244 34.3596 25.0567 33.9627L25.3352 33.1272M27.2895 35.0815L25.3352 33.1272"
+          stroke="#4C8C74"
+          strokeWidth="2"
+          strokeLinecap="round"
+        />
+        <path
+          d="M16.6667 27.0834H21.875"
+          stroke="#4C8C74"
+          strokeWidth="2"
+          strokeLinecap="round"
+        />
+        <path
+          d="M16.6667 18.75H30.2083"
+          stroke="#4C8C74"
+          strokeWidth="2"
+          strokeLinecap="round"
+        />
+        <path
+          d="M16.6667 35.4166H19.7917"
+          stroke="#4C8C74"
+          strokeWidth="2"
+          strokeLinecap="round"
+        />
+        <path
+          d="M41.3092 6.6074C38.8684 4.16663 34.9401 4.16663 27.0833 4.16663H22.9167C15.0599 4.16663 11.1316 4.16663 8.69078 6.6074C6.25 9.04818 6.25 12.9766 6.25 20.8333V29.1666C6.25 37.0234 6.25 40.9517 8.69078 43.3925C11.1316 45.8333 15.0599 45.8333 22.9167 45.8333H27.0833C34.9401 45.8333 38.8684 45.8333 41.3092 43.3925C43.274 41.4278 43.6572 38.4991 43.7319 33.3333"
+          stroke="#4C8C74"
+          strokeWidth="2"
+          strokeLinecap="round"
         />
       </svg>
     ),
@@ -155,7 +216,7 @@ const Services = () => {
       {/* subtle grid floor */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px] opacity-30" />
 
-      <div className="relative max-w-7xl mx-auto px-6">
+      <div className="relative max-w-7xl mx-10">
         {/* Heading */}
         <div className="text-center mb-16">
           <p className="text-sm font-medium text-[#4C8C74] mb-2">
@@ -166,39 +227,41 @@ const Services = () => {
           </h2>
         </div>
 
-        {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((service, i) => (
-            <div
-              key={i}
-              className="group relative rounded-2xl border border-white/10 p-6 transition overflow-hidden"
-              style={{
-                backgroundImage: "radial-gradient(circle at top right, rgba(9, 97, 53, 0.3) 0%, transparent 50%), linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%)",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                backdropFilter: "blur(10px)",
-              }}
-            >
-              <div className="flex flex-row">
-                {/* icon - fixed: use the icon directly */}
-                <div className="mb-4">{service.icon}</div>
+        <div className="flex justify-center">
+          {/* Cards */}
+          <div className="w-[950px] grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
+            {services.map((service, i) => (
+              <div
+                key={i}
+                className="group relative rounded-2xl w-[300px] border border-white/10 p-6 transition overflow-hidden"
+                style={{
+                  backgroundImage:
+                    "radial-gradient(circle at top right, rgba(9, 97, 53, 0.3) 0%, transparent 50%), linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%)",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  backdropFilter: "blur(10px)",
+                }}
+              >
+                <div className="flex flex-row">
+                  {/* icon - fixed: use the icon directly */}
+                  <div className="mb-4">{service.icon}</div>
 
-                {/* arrow: SVG for dark, react-icon for light mode */}
-                <span className="absolute top-4 right-4 mt-2 w-7 h-7 transition arrow-icon">
-                  <BsArrowUpRightCircle size={28} />
-                </span>
-                
+                  {/* arrow: SVG for dark, react-icon for light mode */}
+                  <span className="absolute top-4 right-4 mt-2 w-7 h-7 transition arrow-icon">
+                    <BsArrowUpRightCircle size={28} />
+                  </span>
+                </div>
+
+                <h3 className="text-sm font-semibold text-yellow-400 mb-2">
+                  {service.title}
+                </h3>
+
+                <p className="text-sm text-[#AAA] leading-relaxed">
+                  {service.desc}
+                </p>
               </div>
-
-              <h3 className="text-sm font-semibold text-yellow-400 mb-2">
-                {service.title}
-              </h3>
-
-              <p className="text-sm text-[#AAA] leading-relaxed">
-                {service.desc}
-              </p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
