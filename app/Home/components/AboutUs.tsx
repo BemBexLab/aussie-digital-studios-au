@@ -16,7 +16,7 @@ const AboutUs = () => {
 
             {/* Right content */}
             <div className="md:w-3/4">
-              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-[#464646] leading-snug">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-[#989998] leading-snug">
                 AussieDigitalStudios creates modern websites, strong branding
                 and clear digital strategy. We keep things simple, creative and
                 focused on real results.

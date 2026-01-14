@@ -4,11 +4,12 @@ const BrandLevelUp = () => {
   return (
     <div
       className="flex flex-col items-center justify-center bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white h-screen bg-cover bg-center"
+      data-about-brandlevelup-bg
       style={{ backgroundImage: "url('/About/aboutherobg.png')" }}
     >
       <div className="text-center px-4 md:px-10">
         <h1 className="text-4xl sm:text-5xl font-bold text-white">
-          Let's <span className="text-yellow-400">Work</span> Together
+          Let's <span className="text-yellow-400" data-brandlevelup-work>Work</span> Together
         </h1>
         <p className="mt-4 md:mx-25 text-lg sm:text-xl">
           We’re ready to help your business grow online with smart design,
@@ -28,6 +29,7 @@ const BrandLevelUp = () => {
               xmlns="http://www.w3.org/2000/svg"
               aria-hidden="true"
               role="img"
+              data-brandlevelup-arrow
             >
               <path
                 d="M7 17 L17 7"

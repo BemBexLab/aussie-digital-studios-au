@@ -1,7 +1,6 @@
 import React from "react";
-import Image from "next/image";
-
 import arrowUpRight from "@/public/Home/arrow_up_right_circle_white.svg";
+import { BsArrowUpRightCircle } from "react-icons/bs";
 
 
 const services = [
@@ -141,7 +140,8 @@ const services = [
 const Services = () => {
   return (
     <section
-      className="relative w-full overflow-hidden py-28"
+      className="relative w-full overflow-hidden py-28 services-bg-section"
+      data-services-bg
       style={{
         backgroundImage: "url('/Home/Service.png')",
         backgroundSize: "cover",
@@ -150,7 +150,7 @@ const Services = () => {
       }}
     >
       {/* overlay for content readability */}
-      <div className="absolute inset-0 bg-black/40" />
+      <div className="absolute inset-0 " />
 
       {/* subtle grid floor */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px] opacity-30" />
@@ -158,7 +158,7 @@ const Services = () => {
       <div className="relative max-w-7xl mx-auto px-6">
         {/* Heading */}
         <div className="text-center mb-16">
-          <p className="text-sm font-medium text-emerald-400 mb-2">
+          <p className="text-sm font-medium text-[#4C8C74] mb-2">
             Our Services
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold text-white">
@@ -183,21 +183,18 @@ const Services = () => {
                 {/* icon - fixed: use the icon directly */}
                 <div className="mb-4">{service.icon}</div>
 
-                {/* arrow */}
-                <Image
-                  src={arrowUpRight}
-                  alt="Decorative Arrow"
-                  width={24}
-                  height={24}
-                  className="absolute top-4 right-4 mt-2 w-7 h-7  transition"
-                />
+                {/* arrow: SVG for dark, react-icon for light mode */}
+                <span className="absolute top-4 right-4 mt-2 w-7 h-7 transition arrow-icon">
+                  <BsArrowUpRightCircle size={28} />
+                </span>
+                
               </div>
 
               <h3 className="text-sm font-semibold text-yellow-400 mb-2">
                 {service.title}
               </h3>
 
-              <p className="text-sm text-white/60 leading-relaxed">
+              <p className="text-sm text-[#AAA] leading-relaxed">
                 {service.desc}
               </p>
             </div>

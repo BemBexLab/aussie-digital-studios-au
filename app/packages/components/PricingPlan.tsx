@@ -1,7 +1,37 @@
-import React from "react";
+"use client";
+
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
 const PricingPlan = () => {
+  const [isLight, setIsLight] = useState(false);
+
+  useEffect(() => {
+    // Check initial theme
+    const checkTheme = () => {
+      setIsLight(document.documentElement.classList.contains("light"));
+    };
+
+    checkTheme();
+
+    // Watch for theme changes
+    const observer = new MutationObserver(checkTheme);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  const backgroundImageUrl = isLight
+    ? "/Home/Frame_550_Light.svg"
+    : "/Home/Frame_161.svg";
+
+  const buttonColorClass = isLight
+    ? "hover:border-[#4C8C73] hover:text-[#4C8C73]"
+    : "hover:border-yellow-400 hover:text-yellow-400";
+
   return (
     <div className="text-white py-20">
       <div className="max-w-7xl mx-auto px-4 justify-center">
@@ -40,10 +70,10 @@ const PricingPlan = () => {
             <div
               className="bg-cover bg-center rounded-lg p-6 w-full max-w-full md:max-w-2xl shadow-lg"
               style={{
-                backgroundImage: "url('/Home/Frame_161.svg')",
+                backgroundImage: `url('${backgroundImageUrl}')`,
               }}
             >
-              <h2 className="text-base text-yellow-400 mb-4">
+              <h2 className="text-base mb-4" style={{ color: isLight ? "#4C8C73" : "#FBBF24" }}>
                 Basic Website Package
               </h2>
               <p className="text-5xl text-white font-bold mb-4">
@@ -53,7 +83,7 @@ const PricingPlan = () => {
                 </span>
               </p>
               <p className="text-base text-[rgba(255, 255, 255, 0.50)]">
-                Up to <span className="font-bold">$50%</span> referral AAR
+                Up to <span className="font-bold" style={{ color: isLight ? "#4C8C73" : "inherit" }}>$50%</span> referral AAR
               </p>
               <ul role="list" className="space-y-4 my-6">
                 <li className="flex items-center">
@@ -251,10 +281,10 @@ const PricingPlan = () => {
             <div
               className="bg-cover bg-center rounded-lg p-6 w-full max-w-full md:max-w-2xl shadow-lg"
               style={{
-                backgroundImage: "url('/Home/Frame_161.svg')",
+                backgroundImage: `url('${backgroundImageUrl}')`,
               }}
             >
-              <h2 className="text-base text-yellow-400 mb-4">
+              <h2 className="text-base mb-4" style={{ color: isLight ? "#4C8C73" : "#FBBF24" }}>
                 Basic Website Package
               </h2>
               <p className="text-5xl text-white font-bold mb-4">
@@ -264,7 +294,7 @@ const PricingPlan = () => {
                 </span>
               </p>
               <p className="text-base text-[rgba(255, 255, 255, 0.50)]">
-                Up to <span className="font-bold">$50%</span> referral AAR
+                Up to <span className="font-bold" style={{ color: isLight ? "#4C8C73" : "inherit" }}>$50%</span> referral AAR
               </p>
               <ul role="list" className="space-y-4 my-6">
                 <li className="flex items-center">
@@ -462,7 +492,7 @@ const PricingPlan = () => {
             <div
               className="bg-cover bg-center rounded-lg p-6 w-full max-w-full md:max-w-2xl shadow-lg relative"
               style={{
-                backgroundImage: "url('/Home/Frame_161.svg')",
+                backgroundImage: `url('${backgroundImageUrl}')`,
               }}
             >
               <Image
@@ -472,7 +502,7 @@ const PricingPlan = () => {
                 height={150}
                 className="absolute -top-24 -right-6 sm:-right-20 z-20 pointer-events-none"
               />
-              <h2 className="text-base text-yellow-400 mb-4">
+              <h2 className="text-base mb-4" style={{ color: isLight ? "#4C8C73" : "#FBBF24" }}>
                 Basic Website Package
               </h2>
               <p className="text-5xl text-white font-bold mb-4">
@@ -482,7 +512,7 @@ const PricingPlan = () => {
                 </span>
               </p>
               <p className="text-base text-[rgba(255, 255, 255, 0.50)]">
-                Up to <span className="font-bold">$50%</span> referral AAR
+                Up to <span className="font-bold" style={{ color: isLight ? "#4C8C73" : "inherit" }}>$50%</span> referral AAR
               </p>
               <ul role="list" className="space-y-4 my-6">
                 <li className="flex items-center">

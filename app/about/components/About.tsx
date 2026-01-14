@@ -1,7 +1,25 @@
-import React from "react";
+"use client";
+
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
 const About = () => {
+  const [isLight, setIsLight] = useState(false);
+
+  useEffect(() => {
+    // Check initial theme
+    const checkTheme = () => {
+      setIsLight(document.documentElement.classList.contains("light"));
+    };
+
+    checkTheme();
+
+    // Watch for theme changes
+    const observer = new MutationObserver(checkTheme);
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
+
+    return () => observer.disconnect();
+  }, []);
   return (
     <section className="py-12 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
@@ -31,8 +49,8 @@ const About = () => {
           src="/About/Rectangle_42.png"
           alt="About Us Image"
           width={800}
-          height={400}
-          className="w-full h-auto max-h-[400px] rounded-lg shadow-lg object-cover"
+          height={900}
+          className="w-full h-[327px] max-h-[700px] rounded-lg shadow-lg object-cover"
         />
         {/* Decorative shape */}
         <img
@@ -45,6 +63,7 @@ const About = () => {
       {/* Stats Card — 2 columns */}
       <div
         className="lg:col-span-2 w-full h-auto rounded-lg bg-[#212423] shadow-lg p-6"
+        data-about-stat-card
         style={{
           backgroundImage: "url('/About/About_Section_img_02.png')",
           backgroundSize: "cover",
@@ -54,21 +73,21 @@ const About = () => {
         <div className="space-y-5">
           {/* Stat 1 */}
           <div>
-            <h3 className="text-3xl sm:text-4xl font-medium text-yellow-500">569+</h3>
+            <h3 className="text-3xl sm:text-4xl font-medium" style={{ color: isLight ? "#417AB8" : "#FBBF24" }}>569+</h3>
             <p className="text-white text-base sm:text-lg font-extralight mt-1">Happy Customers</p>
             <hr className="border-t border-gray-600 mt-3 w-4/5" />
           </div>
 
           {/* Stat 2 */}
           <div>
-            <h3 className="text-3xl sm:text-4xl font-medium text-yellow-500">1,890+</h3>
+            <h3 className="text-3xl sm:text-4xl font-medium" style={{ color: isLight ? "#417AB8" : "#FBBF24" }}>1,890+</h3>
             <p className="text-white text-base sm:text-lg font-extralight mt-1">Issues Solved</p>
             <hr className="border-t border-gray-600 mt-3 w-4/5" />
           </div>
 
           {/* Stat 3 */}
           <div>
-            <h3 className="text-3xl sm:text-4xl font-medium text-yellow-500">250+</h3>
+            <h3 className="text-3xl sm:text-4xl font-medium" style={{ color: isLight ? "#417AB8" : "#FBBF24" }}>250+</h3>
             <p className="text-white text-base sm:text-lg font-extralight mt-1">Finished Projects</p>
           </div>
         </div>

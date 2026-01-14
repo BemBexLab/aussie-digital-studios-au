@@ -41,7 +41,7 @@ const Testimonials = () => {
   ];
 
   const CreateCard = ({ card }: { card: CardData }) => (
-    <div className="p-4 rounded-xl mx-2 shadow-lg hover:shadow-xl transition-all duration-200 w-[350px] h-[180px] shrink-0 bg-[#202020] text-white border border-gray-800">
+    <div className="p-4 rounded-xl mx-2 shadow-lg hover:shadow-xl transition-all duration-200 w-[350px] h-[180px] shrink-0 bg-[#202020] text-white border border-gray-800" data-testimonial-card>
       <div className="flex gap-2">
         <div className="flex flex-col">
           {/* Stars goes here */}

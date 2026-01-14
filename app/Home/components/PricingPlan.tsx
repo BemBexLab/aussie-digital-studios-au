@@ -45,21 +45,22 @@ const PricingPlan = () => {
             {/* Package 1 */}
             <div
               className="bg-cover bg-center rounded-lg p-6 w-full max-w-md md:max-w-2xl shadow-lg"
+              data-pricing-bg
               style={{
                 backgroundImage: "url('/Home/Frame_161.svg')",
               }}
             >
-              <h2 className="text-base text-yellow-400 mb-4">
+              <h2 className="text-base text-yellow-400 mb-4 pricing-package-title">
                 Basic Website Package
               </h2>
               <p className="text-5xl text-white font-bold mb-4">
                 $229
-                <span className="line-through text-gray-400 font-semibold text-base mx-[5px] text-[#4C8C74]">
+                <span className="line-through font-semibold text-base mx-[5px] text-[#4C8C74]">
                   $499
                 </span>
               </p>
               <p className="text-base text-[rgba(255, 255, 255, 0.50)]">
-                Up to <span className="font-bold">$50%</span> referral AAR
+                Up to <span className="font-bold pricing-discount-percent">$50%</span> referral AAR
               </p>
               <ul role="list" className="space-y-4 my-6">
                 <li className="flex items-center">
@@ -256,11 +257,12 @@ const PricingPlan = () => {
             {/* Package 2 */}
             <div
               className="bg-cover bg-center rounded-lg p-6 w-full max-w-md md:max-w-2xl shadow-lg"
+              data-pricing-bg
               style={{
                 backgroundImage: "url('/Home/Frame_161.svg')",
               }}
             >
-              <h2 className="text-base text-yellow-400 mb-4">
+              <h2 className="text-base text-yellow-400 mb-4 pricing-package-title">
                 Basic Website Package
               </h2>
               <p className="text-5xl text-white font-bold mb-4">
@@ -270,7 +272,7 @@ const PricingPlan = () => {
                 </span>
               </p>
               <p className="text-base text-[rgba(255, 255, 255, 0.50)]">
-                Up to <span className="font-bold">$50%</span> referral AAR
+                Up to <span className="font-bold pricing-discount-percent">$50%</span> referral AAR
               </p>
               <ul role="list" className="space-y-4 my-6">
                 <li className="flex items-center">
@@ -467,11 +469,12 @@ const PricingPlan = () => {
             {/* Package 3 */}
             <div
               className="bg-cover bg-center rounded-lg p-6 w-full max-w-md md:max-w-2xl shadow-lg"
+              data-pricing-bg
               style={{
                 backgroundImage: "url('/Home/Frame_161.svg')",
               }}
             >
-              <h2 className="text-base text-yellow-400 mb-4">
+              <h2 className="text-base text-yellow-400 mb-4 pricing-package-title">
                 Basic Website Package
               </h2>
               <p className="text-5xl text-white font-bold mb-4">
@@ -481,7 +484,7 @@ const PricingPlan = () => {
                 </span>
               </p>
               <p className="text-base text-[rgba(255, 255, 255, 0.50)]">
-                Up to <span className="font-bold">$50%</span> referral AAR
+                Up to <span className="font-bold pricing-discount-percent">$50%</span> referral AAR
               </p>
               <ul role="list" className="space-y-4 my-6">
                 <li className="flex items-center">

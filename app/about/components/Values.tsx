@@ -1,11 +1,34 @@
+"use client";
+
 import Image from "next/image";
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const Values = () => {
+  const [isLight, setIsLight] = useState(false);
+
+  useEffect(() => {
+    // Check initial theme
+    const checkTheme = () => {
+      setIsLight(document.documentElement.classList.contains("light"));
+    };
+
+    checkTheme();
+
+    // Watch for theme changes
+    const observer = new MutationObserver(checkTheme);
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
+
+    return () => observer.disconnect();
+  }, []);
+
+  const backgroundImage = isLight
+    ? "url(/About/Frame_163_Light.svg)"
+    : "radial-gradient(circle at top right, rgba(255,255,255,0.3) 0%, transparent 50%), linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%)";
+
   return (
     <div className="flex flex-col md:flex-row md:my-10 md:mt-8 mx-4 sm:mx-6 md:mx-10">
       {/* Left Content */}
-      <div className="md:py-24 flex flex-col w-full">
+      <div className="flex flex-col w-full">
         {/* On mobile: no max-w, use px-4 for safe padding */}
         <div className="md:hidden px-4">
           <p className="text-[#4C8C74] my-20 text-lg font-medium mb-4">Our Values</p>
@@ -15,9 +38,9 @@ const Values = () => {
             {/* Card 1 */}
             <div
               className="group relative rounded-2xl w-full border border-white/10 p-6 transition overflow-hidden"
+              data-values-card
               style={{
-                backgroundImage:
-                  "radial-gradient(circle at top right, rgba(255,255,255,0.3) 0%, transparent 50%), linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%)",
+                backgroundImage: backgroundImage,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 backdropFilter: "blur(10px)",
@@ -30,7 +53,7 @@ const Values = () => {
                   <path d="M45.8333 33.3334C45.8333 33.3334 43.7647 35.1891 39.6274 36.844L33.7764 39.1843C29.6392 40.8393 27.5705 41.6667 25 41.6667C22.4294 41.6667 20.3608 40.8393 16.2235 39.1843L10.3725 36.844C6.23526 35.1891 4.16663 33.3334 4.16663 33.3334" stroke="#4C8C74" strokeWidth="2" strokeLinecap="round" />
                 </svg>
                 <div className="mt-4 flex flex-col">
-                  <h2 className="text-xl text-yellow-500">Creativity</h2>
+                  <h2 className="text-xl" style={{ color: isLight ? "#417AB8" : "#FBBF24" }}>Creativity</h2>
                   <p className="font-light">We believe in innovative solutions that stand out.</p>
                 </div>
               </div>
@@ -39,9 +62,9 @@ const Values = () => {
             {/* Card 2 */}
             <div
               className="group relative rounded-2xl w-full border border-white/10 p-6 transition overflow-hidden"
+              data-values-card
               style={{
-                backgroundImage:
-                  "radial-gradient(circle at top right, rgba(255,255,255,0.3) 0%, transparent 50%), linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%)",
+                backgroundImage: backgroundImage,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 backdropFilter: "blur(10px)",
@@ -57,7 +80,7 @@ const Values = () => {
                   <path d="M8.33337 39.5833C4.67869 38.7818 2.08337 36.7522 2.08337 34.375C2.08337 31.9977 4.67869 29.9681 8.33337 29.1666" stroke="#4C8C74" strokeWidth="2" strokeLinecap="round" />
                 </svg>
                 <div className="mt-4 flex flex-col">
-                  <h2 className="text-xl text-yellow-500">Reliability</h2>
+                  <h2 className="text-xl" style={{ color: "#417AB8" }}>Reliability</h2>
                   <p className="font-light">We’re committed to delivering results you can count on.</p>
                 </div>
               </div>
@@ -66,9 +89,9 @@ const Values = () => {
             {/* Card 3 */}
             <div
               className="group relative rounded-2xl w-full border border-white/10 p-6 transition overflow-hidden"
+              data-values-card
               style={{
-                backgroundImage:
-                  "radial-gradient(circle at top right, rgba(255,255,255,0.3) 0%, transparent 50%), linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%)",
+                backgroundImage: backgroundImage,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 backdropFilter: "blur(10px)",
@@ -80,7 +103,7 @@ const Values = () => {
                   <path d="M14.5834 29.1667L19.3602 24.3898C20.1738 23.5763 21.4929 23.5763 22.3065 24.3898L25.6102 27.6936C26.4238 28.5072 27.7429 28.5072 28.5565 27.6936L35.4167 20.8334M35.4167 20.8334V26.0417M35.4167 20.8334H30.2084" stroke="#4C8C74" strokeWidth="2" strokeLinecap="round" />
                 </svg>
                 <div className="mt-4 flex flex-col">
-                  <h2 className="text-xl text-yellow-500">Australian-driven</h2>
+                  <h2 className="text-xl" style={{ color: isLight ? "#417AB8" : "#FBBF24" }}>Australian-driven</h2>
                   <p className="font-light">We take pride in providing a local, personalised experience.</p>
                 </div>
               </div>
@@ -89,9 +112,9 @@ const Values = () => {
             {/* Card 4 */}
             <div
               className="group relative rounded-2xl w-full border border-white/10 p-6 transition overflow-hidden"
+              data-values-card
               style={{
-                backgroundImage:
-                  "radial-gradient(circle at top right, rgba(255,255,255,0.3) 0%, transparent 50%), linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%)",
+                backgroundImage: backgroundImage,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 backdropFilter: "blur(10px)",
@@ -105,7 +128,7 @@ const Values = () => {
                   <path d="M35.4166 37.5V27.0834" stroke="#4C8C74" strokeWidth="2" strokeLinecap="round" />
                 </svg>
                 <div className="mt-4 flex flex-col">
-                  <h2 className="text-xl text-yellow-500">Long-term</h2>
+                  <h2 className="text-xl" style={{ color: isLight ? "#417AB8" : "#FBBF24" }}>Long-term</h2>
                   <p className="font-light">Our goal is to build lasting relationships and help your brand grow.</p>
                 </div>
               </div>
@@ -131,7 +154,9 @@ const Values = () => {
 
           {/* First Row */}
           <div className="flex flex-col sm:flex-row mt-3 gap-3">
-            <div className="group relative rounded-2xl w-full sm:w-[280px] border border-white/10 p-6 transition overflow-hidden" style={{ backgroundImage: "radial-gradient(circle at top right, rgba(255,255,255,0.3) 0%, transparent 50%), linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%)", backgroundSize: "cover", backgroundPosition: "center", backdropFilter: "blur(10px)" }}>
+
+            {/* Card 1 */}
+            <div className="group relative rounded-2xl w-full sm:w-[280px] border border-white/10 p-6 transition overflow-hidden" data-values-card style={{ backgroundImage: backgroundImage, backgroundSize: "cover", backgroundPosition: "center", backdropFilter: "blur(10px)" }}>
               {/* ... same as before ... */}
               <div className="flex flex-col">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 50 50" fill="none">
@@ -140,12 +165,14 @@ const Values = () => {
                   <path d="M45.8333 33.3334C45.8333 33.3334 43.7647 35.1891 39.6274 36.844L33.7764 39.1843C29.6392 40.8393 27.5705 41.6667 25 41.6667C22.4294 41.6667 20.3608 40.8393 16.2235 39.1843L10.3725 36.844C6.23526 35.1891 4.16663 33.3334 4.16663 33.3334" stroke="#4C8C74" strokeWidth="2" strokeLinecap="round" />
                 </svg>
                 <div className="mt-4 flex flex-col">
-                  <h2 className="text-xl text-yellow-500">Creativity</h2>
+                  <h2 className="text-xl" style={{ color: isLight ? "#417AB8" : "#FBBF24" }}>Creativity</h2>
                   <p className="font-light">We believe in innovative solutions that stand out.</p>
                 </div>
               </div>
             </div>
-            <div className="group relative rounded-2xl w-full sm:w-[280px] border border-white/10 p-6 transition overflow-hidden" style={{ backgroundImage: "radial-gradient(circle at top right, rgba(255,255,255,0.3) 0%, transparent 50%), linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%)", backgroundSize: "cover", backgroundPosition: "center", backdropFilter: "blur(10px)" }}>
+
+            {/* Card 2 */}
+            <div className="group relative rounded-2xl w-full sm:w-[280px] border border-white/10 p-6 transition overflow-hidden" data-values-card style={{ backgroundImage: backgroundImage, backgroundSize: "cover", backgroundPosition: "center", backdropFilter: "blur(10px)" }}>
               {/* ... same as before ... */}
               <div className="flex flex-col">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 50 50" fill="none">
@@ -157,7 +184,7 @@ const Values = () => {
                   <path d="M8.33337 39.5833C4.67869 38.7818 2.08337 36.7522 2.08337 34.375C2.08337 31.9977 4.67869 29.9681 8.33337 29.1666" stroke="#4C8C74" strokeWidth="2" strokeLinecap="round" />
                 </svg>
                 <div className="mt-4 flex flex-col">
-                  <h2 className="text-xl text-yellow-500">Reliability</h2>
+                  <h2 className="text-xl" style={{ color: isLight ? "#417AB8" : "#FBBF24" }}>Reliability</h2>
                   <p className="font-light">We’re committed to delivering results you can count on.</p>
                 </div>
               </div>
@@ -166,7 +193,9 @@ const Values = () => {
 
           {/* Second Row */}
           <div className="flex flex-col sm:flex-row mt-3 gap-3">
-            <div className="group relative rounded-2xl w-full sm:w-[300px] border border-white/10 p-6 transition overflow-hidden" style={{ backgroundImage: "radial-gradient(circle at top right, rgba(255,255,255,0.3) 0%, transparent 50%), linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%)", backgroundSize: "cover", backgroundPosition: "center", backdropFilter: "blur(10px)" }}>
+
+            {/* Card 3 */}
+            <div className="group relative rounded-2xl w-full sm:w-[300px] border border-white/10 p-6 transition overflow-hidden" data-values-card style={{ backgroundImage: backgroundImage, backgroundSize: "cover", backgroundPosition: "center", backdropFilter: "blur(10px)" }}>
               {/* ... same as before ... */}
               <div className="flex flex-col">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 50 50" fill="none">
@@ -174,12 +203,14 @@ const Values = () => {
                   <path d="M14.5834 29.1667L19.3602 24.3898C20.1738 23.5763 21.4929 23.5763 22.3065 24.3898L25.6102 27.6936C26.4238 28.5072 27.7429 28.5072 28.5565 27.6936L35.4167 20.8334M35.4167 20.8334V26.0417M35.4167 20.8334H30.2084" stroke="#4C8C74" strokeWidth="2" strokeLinecap="round" />
                 </svg>
                 <div className="mt-4 flex flex-col">
-                  <h2 className="text-xl text-yellow-500">Australian-driven</h2>
+                  <h2 className="text-xl" style={{ color: isLight ? "#417AB8" : "#FBBF24" }}>Australian-driven</h2>
                   <p className="font-light">We take pride in providing a local, personalised experience.</p>
                 </div>
               </div>
             </div>
-            <div className="group relative rounded-2xl w-full sm:w-[300px] border border-white/10 p-6 transition overflow-hidden" style={{ backgroundImage: "radial-gradient(circle at top right, rgba(255,255,255,0.3) 0%, transparent 50%), linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%)", backgroundSize: "cover", backgroundPosition: "center", backdropFilter: "blur(10px)" }}>
+
+            {/* Card 4 */}
+            <div className="group relative rounded-2xl w-full sm:w-[300px] border border-white/10 p-6 transition overflow-hidden" data-values-card style={{ backgroundImage: backgroundImage, backgroundSize: "cover", backgroundPosition: "center", backdropFilter: "blur(10px)" }}>
               {/* ... same as before ... */}
               <div className="flex flex-col">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 50 50" fill="none">
@@ -189,7 +220,7 @@ const Values = () => {
                   <path d="M35.4166 37.5V27.0834" stroke="#4C8C74" strokeWidth="2" strokeLinecap="round" />
                 </svg>
                 <div className="mt-4 flex flex-col">
-                  <h2 className="text-xl text-yellow-500">Long-term</h2>
+                  <h2 className="text-xl" style={{ color: isLight ? "#417AB8" : "#FBBF24" }}>Long-term</h2>
                   <p className="font-light">Our goal is to build lasting relationships and help your brand grow.</p>
                 </div>
               </div>
@@ -203,8 +234,8 @@ const Values = () => {
         src="/About/Rectangle 43.webp"
         alt="Values Illustration"
         width={500}
-        height={200}
-        className="ml-9 mt-8 md:mt-24 lg:mt-32 hidden md:block"
+        height={700}
+        className="ml-9 mt-8 md:mt-24 lg:mt-32 hidden md:block max-h-[600px] w-auto"
       />
     </div>
   );

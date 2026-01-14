@@ -4,6 +4,7 @@ const BrandLevelUp = () => {
   return (
     <div
       className="flex flex-col items-center justify-center bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white min-h-screen md:h-screen bg-cover bg-center"
+      data-brandlevelup-bg
       style={{ backgroundImage: "url(/Home/CTA.svg)" }}
     >
       <div className="text-center px-4 md:px-10 py-8 md:py-0">
@@ -21,7 +22,7 @@ const BrandLevelUp = () => {
               aria-hidden="true"
             ></span>
             <svg
-              className="relative w-4 h-4 z-10 transition-transform duration-300 group-hover:rotate-45"
+              className="relative w-4 h-4 z-10 transition-transform duration-300 group-hover:rotate-45 button-arrow-svg"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
               aria-hidden="true"

@@ -17,7 +17,7 @@ export default function PortfolioSection() {
       <div className="text-center mb-20 px-4">
         {" "}
         {/* Added px-4 for safety on mobile */}
-        <p className="text-lg text-emerald-400 mb-2 font-semibold">
+        <p className="text-lg text-[#4C8C74] mb-2 font-semibold">
           Our Portfolio
         </p>
         <h2 className="text-4xl md:text-5xl font-semibold text-white">

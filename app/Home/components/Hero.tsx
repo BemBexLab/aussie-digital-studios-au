@@ -6,7 +6,8 @@ const Hero = () => {
     <>
       {/* Desktop Hero (md and up) */}
       <section
-        className="hidden md:block h-[695px] w-full relative"
+        className="hidden md:block h-[695px] w-full relative hero-bg-section"
+        data-hero-bg
         style={{
           backgroundImage: "url('/Hero_Section.png')",
           backgroundRepeat: "no-repeat",
@@ -26,7 +27,7 @@ const Hero = () => {
             loop
             muted
             playsInline
-            className="w-full h-[300px] sm:h-[400px] md:w-full md:h-full object-cover mix-blend-overlay opacity-20"
+            className="w-full h-[300px] sm:h-[400px] md:w-full md:h-full object-cover mix-blend-overlay opacity-20 smoke-video"
             aria-label="Video overlay"
             style={{ position: "absolute", inset: 0, height: "695px" }}
           >
@@ -64,7 +65,8 @@ const Hero = () => {
 
       {/* Mobile Hero (smaller than md) */}
       <section
-        className="md:hidden w-full relative h-[800px] flex flex-col items-center justify-center text-center px-6"
+        className="md:hidden w-full relative h-[800px] flex flex-col items-center justify-center text-center px-6 hero-bg-section"
+        data-hero-bg
         style={{
           backgroundImage: "url('/Hero_Section.png')",
           backgroundRepeat: "no-repeat",
@@ -84,7 +86,7 @@ const Hero = () => {
             loop
             muted
             playsInline
-            className="w-full h-full object-cover mix-blend-overlay opacity-10"
+            className="w-full h-full object-cover mix-blend-overlay opacity-10 smoke-video"
             aria-label="Video overlay"
           >
             <source src="/Clouds.mp4" type="video/mp4" />
