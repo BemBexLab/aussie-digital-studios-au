@@ -37,7 +37,7 @@ export default function PortfolioSection() {
                 className="w-full h-[400px] object-cover rounded-2xl relative z-10"
               />
               {/* Fix: Constrain absolute element within parent */}
-              <div className="absolute bottom-[15px] right-0 w-[150px] h-[150px] overflow-hidden pointer-events-none">
+              {/* <div className="absolute bottom-[15px] right-0 w-[150px] h-[150px] overflow-hidden pointer-events-none">
                 <Image
                   src="/Geometric_Shape_Silver.png"
                   alt="Geometric image"
@@ -45,7 +45,7 @@ export default function PortfolioSection() {
                   height={150}
                   className="block translate-x-1/2"
                 />
-              </div>
+              </div> */}
             </div>
 
             <div className="flex flex-col flex-grow">
