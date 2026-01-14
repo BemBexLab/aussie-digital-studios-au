@@ -52,14 +52,18 @@ const Hero = () => {
         </div>
 
         {/* Main headings */}
-        <div className="absolute left-0 z-20 flex flex-col items-start px-12 w-full mt-[30px]">
-          <span className="text-white text-3xl font-semibold mb-2">Modern</span>
-          <span className="text-white text-[150px] leading-[0.95] font-extrabold tracking-tight mb-2 whitespace-nowrap">
-            DIGITAL DESIGN
-          </span>
-          <span className="text-white text-2xl font-medium mt-2">
-            that helps your brand grow.
-          </span>
+        <div className=" mx-auto z-20 justify-center flex flex-col px-12 w-full mt-[30px]">
+          <div className="justify-center items-center flex flex-col">
+            <span className="text-white text-3xl font-semibold mb-2 transform -translate-x-128">
+              Modern
+            </span>
+            <span className="text-white text-[150px] leading-[0.95] font-extrabold tracking-tight mb-2 whitespace-nowrap">
+              DIGITAL DESIGN
+            </span>
+            <span className="text-white text-2xl font-medium mt-2 transform -translate-x-105">
+              that helps your brand grow.
+            </span>
+          </div>
         </div>
       </section>
 
