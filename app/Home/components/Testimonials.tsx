@@ -41,7 +41,10 @@ const Testimonials = () => {
   ];
 
   const CreateCard = ({ card }: { card: CardData }) => (
-    <div className="p-4 rounded-xl mx-2 shadow-lg hover:shadow-xl transition-all duration-200 w-[350px] h-[180px] shrink-0 bg-[#202020] text-white border border-gray-800" data-testimonial-card>
+    <div
+      className="p-4 rounded-xl mx-2 shadow-lg hover:shadow-xl transition-all duration-200 w-[350px] h-[180px] shrink-0 bg-[#202020] text-white border border-gray-800"
+      data-testimonial-card
+    >
       <div className="flex gap-2">
         <div className="flex flex-col">
           {/* Stars goes here */}
@@ -99,9 +102,20 @@ const Testimonials = () => {
   return (
     <div className="relative py-8">
       <div className="flex flex-col my-8">
-        <p className="text-sm text-[#4C8C74] text-center">Testimonials</p>
-        <p className="text-center text-4xl font-bold text-white">What Client Say About us</p>
+        <p className="text-sm text-[#4C8C74] font-semibold text-center">
+          Testimonial
+        </p>
+        <p className="text-center text-4xl font-semibold text-white mt-1">
+          What Client Say About us
+        </p>
       </div>
+      <Image
+        src="/Geometric_Shape_Silver.png"
+        alt="Decorative Image"
+        width={120}
+        height={120}
+        className="absolute z-10 bottom-35 top-20 right-30 md:block"
+      />
       <style>{`
             @keyframes marqueeScroll {
                 0% { transform: translateX(0%); }

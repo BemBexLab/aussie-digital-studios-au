@@ -201,7 +201,7 @@ const services = [
 const Services = () => {
   return (
     <section
-      className="relative w-full overflow-hidden py-28 services-bg-section"
+      className="relative w-full overflow-hidden py-18 services-bg-section"
       data-services-bg
       style={{
         backgroundImage: "url('/Home/Service.png')",
@@ -233,10 +233,10 @@ const Services = () => {
             {services.map((service, i) => (
               <div
                 key={i}
-                className="group relative rounded-2xl w-[300px] border border-white/10 p-6 transition overflow-hidden"
+                className="group relative rounded-2xl w-[290px] border border-white/10 p-6 transition overflow-hidden"
+                data-service-card
                 style={{
-                  backgroundImage:
-                    "radial-gradient(circle at top right, rgba(9, 97, 53, 0.3) 0%, transparent 50%), linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%)",
+                  backgroundImage: "url('/Home/card_dark.svg')",
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   backdropFilter: "blur(10px)",

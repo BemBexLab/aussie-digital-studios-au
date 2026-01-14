@@ -85,6 +85,9 @@ html.light .arrow-icon svg {
 html.light .arrow-icon svg * {
   color: black !important;
 }
+html.light [data-service-card] {
+  background-image: url('/Home/frame_163_light.svg') !important;  background-size: cover !important;
+  background-position: center !important;}
 @import "tailwindcss";
 
 /* Outfit font (served from public/fonts/Outfit) */
@@ -191,7 +194,7 @@ html.light .bg-\[\#151515\] {
 }
 
 .animate-scroll {
-  animation: scroll 20s linear infinite;
+  animation: scroll 10s linear infinite;
 }
 
 

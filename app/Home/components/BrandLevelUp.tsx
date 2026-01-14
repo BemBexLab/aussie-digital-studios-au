@@ -3,7 +3,7 @@ import React from "react";
 const BrandLevelUp = () => {
   return (
     <div
-      className="flex flex-col items-center justify-center bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white min-h-screen md:h-screen bg-cover bg-center"
+      className="flex flex-col items-center justify-center bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white h-80 md:h-106 bg-cover bg-center"
       data-brandlevelup-bg
       style={{ backgroundImage: "url(/Home/CTA.svg)" }}
     >
@@ -14,7 +14,7 @@ const BrandLevelUp = () => {
         <p className="mt-4 text-lg sm:text-xl">
           Let's create something modern, simple, and effective.
         </p>
-        <button className="mt-6 px-8 py-3 text-lg bg-teal-500 text-white rounded-full hover:bg-blue-400 transition-all inline-flex items-center group">
+        <button className="mt-6 px-3 py-3 text-lg bg-teal-500 text-white rounded-full hover:bg-blue-400 transition-all inline-flex items-center group">
           <span>Book a Strategy Call</span>
           <span className="ml-3 relative w-10 h-10 flex items-center justify-center">
             <span

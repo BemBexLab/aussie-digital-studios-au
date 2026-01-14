@@ -2,17 +2,15 @@ import Image from "next/image";
 
 export default function PortfolioSection() {
   return (
-    <section className="relative">
+    <section className="relative mt-40 my-20">
       {/* Geometric shape image */}
-      <div className="flex justify-end">
         <Image
           src="/Geometric_Shape_Silver.png"
           alt="Decorative Image"
           width={200}
           height={200}
-          className="relative z-10 bottom-35 right-0"
+          className="absolute z-80 bottom-600 right-0"
         />
-      </div>
       {/* Heading */}
       <div className="text-center mb-20 px-4">
         {" "}
