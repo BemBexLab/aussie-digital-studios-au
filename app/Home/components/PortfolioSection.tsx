@@ -52,13 +52,33 @@ export default function PortfolioSection() {
       <div className="text-center mb-20 px-4">
         {" "}
         {/* Added px-4 for safety on mobile */}
-        <p className="text-lg text-[#4C8C74] mb-2 font-semibold">
+        <p className="text-xl text-[#4C8C74] mb-2 font-semibold">
           Our Portfolio
         </p>
         <h2 className="text-4xl md:text-5xl font-semibold text-white">
           Proven results,
           <br /> stunning Websites
         </h2>
+        {/* Buttons - wrap & stack on mobile */}
+        <div className="flex flex-wrap gap-2 mt-6 md:gap-4 justify-center">
+          {[
+            "Logo",
+            "E-Commerce",
+            "Website Design",
+            "SMM",
+            "Video Animation",
+            "SEO",
+            "Maintenance",
+            "Branding",
+          ].map((label) => (
+            <div
+              key={label}
+              className="text-gray-400 px-3 py-1.5 md:px-4 md:py-2 rounded-[8px] border border-gray-600 cursor-pointer text-xs md:text-sm hover:border-yellow-400 hover:text-yellow-400 transition"
+            >
+              {label}
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* Main Container */}

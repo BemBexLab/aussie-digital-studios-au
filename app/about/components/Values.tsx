@@ -26,7 +26,7 @@ const Values = () => {
     : "radial-gradient(circle at top right, rgba(255,255,255,0.3) 0%, transparent 50%), linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%)";
 
   return (
-    <div className="flex flex-col md:flex-row md:my-10 md:mt-8 mx-4 sm:mx-6 md:mx-10">
+    <div className="flex flex-col my-30 md:flex-row md:mt-8 mx-4 sm:mx-6 md:mx-10">
       {/* Left Content */}
       <div className="flex flex-col w-full">
         {/* On mobile: no max-w, use px-4 for safe padding */}
@@ -148,7 +148,7 @@ const Values = () => {
         </div>
 
         {/* Desktop: original layout (unchanged) */}
-        <div className="hidden md:block max-w-7xl mx-auto px-4">
+        <div className="hidden md:block max-w-7xl mx-3">
           <p className="text-[#4C8C74] my-20 text-lg font-medium mb-4">Our Values</p>
           <h2 className="text-white text-5xl mb-5 font-bold">Our Core Values</h2>
 
@@ -233,9 +233,9 @@ const Values = () => {
       <Image 
         src="/About/Rectangle 43.webp"
         alt="Values Illustration"
-        width={500}
+        width={800}
         height={700}
-        className="ml-9 mt-8 md:mt-24 lg:mt-32 hidden md:block max-h-[600px] w-auto"
+        className="ml-9 mt-8 md:block max-h-[600px] w-[500px] flex-shrink-0"
       />
     </div>
   );

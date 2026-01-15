@@ -14,6 +14,7 @@ import Hero from "./components/Hero";
 import LogoSlider from "./components/LogoSlider";
 import WhyChooseUs from "./components/WhyChooseUs";
 import CustomPlan from "./components/CustomPlan";
+import ContactUs from "./components/ContactUs";
 
 const HomePage = () => {
   return (
@@ -28,6 +29,7 @@ const HomePage = () => {
       <PricingPlan />
       <CustomPlan />
       <Testimonials />
+      <ContactUs />
     </div>
   );
 };

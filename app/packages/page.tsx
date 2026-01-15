@@ -17,7 +17,7 @@ const PackagePage = () => {
           alt="Decorative Image"
           width={150}
           height={150}
-          className="left-70 -bottom-30 right-3 md:block relative z-10"
+          className="left-70 -bottom-15 right-3 md:block absolute z-10"
         />
       </div>
     </div>

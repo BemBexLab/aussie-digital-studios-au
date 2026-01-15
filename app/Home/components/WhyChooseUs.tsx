@@ -22,7 +22,7 @@ const cardData = [
 
 const WhyChooseUs = () => {
   return (
-    <section className="mx-15 my-20 flex justify-center">
+    <section className="mx-15 my-20 flex justify-center" style={{}}>
       <div className="flex flex-row">
         {/* First column */}
         <div className="flex flex-col w-3/5">

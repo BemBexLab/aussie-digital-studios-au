@@ -7,6 +7,8 @@ import Footer from "@/components/Footer";
 import FAQ from "../components/FAQ";
 import Cards from "../components/Cards";
 import Hero from "@/components/Hero";
+import WhyChoose from "../components/WhyChoose";
+import Portfolio from "../components/Portfolio";
 
 // Sample data (can also fetch from API or database)
 const services = [
@@ -77,53 +79,62 @@ export default async function ServicePage({
       <Hero H={service.title} />
 
       {/* Body Section #01: Image & Description */}
-      <div className="flex flex-col mx-2 md:flex-row my-12 md:my-50 gap-6 md:gap-7 px-0 md:px-10">
-        {/* Text Column */}
-        <div className="w-full md:w-1/2 relative">
-          <Image
-            src="/Geometric_Shape_Silver.png"
-            alt="Geometric Shape 01"
-            width={100}
-            height={100}
-            className="absolute top-0 left-0 -translate-y-24 md:-translate-y-72 translate-x-1 md:translate-x-2 pointer-events-none w-16 h-16 md:w-auto md:h-auto"
-          />
-          <h2 className="text-2xl md:text-3xl font-medium">{service.heading}</h2>
-          <p className="whitespace-pre-line mt-4 text-[#AAAAAA] text-sm md:text-base">
-            {service.description}
-          </p>
-          <ul className="mt-4 text-[#AAAAAA] text-sm md:text-base">
-            {service.points.map((point, index) => (
-              <li key={index} className="flex items-start gap-2 md:gap-3 mb-2">
-                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
-                <span>{point}</span>
-              </li>
-            ))}
-          </ul>
-          <div className="mt-6 text-[#AAAAAA] text-sm md:text-base">
-            {service.footnote}
+      <div className="flex px-4 md:px-8 ">
+        <div className="flex flex-col justify-center items-center gap-6 my-20 w-full max-w-7xl mx-auto md:flex-row">
+          {/* Text Column */}
+          <div className="w-full md:w-1/2 relative">
+            <Image
+              src="/Geometric_Shape_Silver.png"
+              alt="Geometric Shape 01"
+              width={100}
+              height={100}
+              className="absolute top-0 left-0 -translate-y-24 md:-translate-y-72 translate-x-1 md:translate-x-2 pointer-events-none w-16 h-16 md:w-auto md:h-auto"
+            />
+            <h2 className="text-2xl mt-5 md:text-3xl font-medium">
+              {service.heading}
+            </h2>
+            <p className="whitespace-pre-line mt-4 text-[#AAAAAA] text-sm md:text-base">
+              {service.description}
+            </p>
+            <ul className="mt-4 text-[#AAAAAA] text-sm md:text-base">
+              {service.points.map((point, index) => (
+                <li
+                  key={index}
+                  className="flex items-start gap-2 md:gap-3 mb-2"
+                >
+                  <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-6 text-[#AAAAAA] text-sm md:text-base">
+              {service.footnote}
+            </div>
           </div>
-        </div>
 
-        {/* Image Column */}
-        <div className="w-full md:w-1/2 h-full mt-6 md:mt-0">
-          <Image
-            src={service.imageUrl ?? `/Services/${slug}_image.png`}
-            alt={`${service.title} Image`}
-            width={600}
-            height={400}
-            className="w-full h-auto md:h-full object-cover rounded-[18px]"
-          />
+          {/* Image Column */}
+          <div className="w-full md:w-1/2 h-full">
+            <Image
+              src={service.imageUrl ?? `/Services/${slug}_image.png`}
+              alt={`${service.title} Image`}
+              width={900}
+              height={900}
+              className="w-full max-w-2xl h-auto object-cover rounded-[18px]"
+            />
+          </div>
         </div>
       </div>
 
       {/* Body Section #02 */}
       <Cards />
+      <WhyChoose />
 
       <br className="md:hidden" />
       <br className="md:hidden" />
       <br className="md:hidden" />
 
       {/* Body Section #03 (FAQs) */}
+      <Portfolio />
       <FAQ />
     </div>
   );

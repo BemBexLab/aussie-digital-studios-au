@@ -41,7 +41,7 @@ const Hero = ({ H }: HeroProps) => {
         </div>
 
         {/* Heading from props */}
-        <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-[120px] font-medium text-white text-center leading-tight">
+        <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-[120px] font-medium text-white text-center leading-tight uppercase">
           {H}
         </h2>
       </div>

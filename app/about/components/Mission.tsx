@@ -5,7 +5,7 @@ const Mission = () => {
   return (
     <>
       {/* Desktop: unchanged (md and up) */}
-      <div className="hidden md:flex flex-row justify-center items-center h-[700px] overflow-hidden">
+      <div className="hidden md:flex flex-row justify-center items-center h-[500px] overflow-hidden">
         <div className="flex">
           <div className="w-50 h-72 mr-6">
             <Image
@@ -17,7 +17,7 @@ const Mission = () => {
             />
           </div>
 
-          <div className="w-50 h-72 mr-6 mb-25 -translate-y-10 transform drop-shadow-2xl">
+          <div className="w-50 h-72 mr-6 -translate-y-10 transform drop-shadow-2xl">
             <Image
               src="/About/Rectangle_45.png"
               alt="Mission Image"
