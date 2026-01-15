@@ -1,9 +1,11 @@
 import React from "react";
 import Image from "next/image";
+import MissionMobile from "./MissionMobile";
 
 const Mission = () => {
   return (
     <>
+      <MissionMobile />
       {/* Desktop: unchanged (md and up) */}
       <div className="hidden md:flex flex-row justify-center items-center h-[500px] overflow-hidden">
         <div className="flex">
@@ -59,8 +61,8 @@ const Mission = () => {
         </div>
       </div>
 
-      {/* Mobile: < md — show all images, but smaller and safe */}
-      <div className="md:hidden flex flex-col items-center px-4 py-10">
+      {/* Mobile: sm screens only */}
+      <div className="hidden sm:flex flex-col items-center px-4 py-8 space-y-6">
         {/* Images row — wrap and scale down */}
         <div className="flex flex-row flex-wrap justify-center gap-3 mb-8 max-w-3xl">
           {/* Image 1 */}

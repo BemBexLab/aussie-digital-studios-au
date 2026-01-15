@@ -2,6 +2,7 @@ import React from "react";
 import arrowUpRight from "@/public/Home/arrow_up_right_circle_white.svg";
 import { BsArrowUpRightCircle } from "react-icons/bs";
 import Image from "next/image";
+import ServicesMobile from "./ServicesMobile";
 
 const services = [
   {
@@ -200,71 +201,77 @@ const services = [
 
 const Services = () => {
   return (
-    <section
-      className="relative w-full overflow-hidden py-18 services-bg-section"
-      data-services-bg
-      style={{
-        backgroundImage: "url('/Home/Service.webp')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundAttachment: "fixed",
-      }}
-    >
-      {/* overlay for content readability */}
-      <div className="absolute inset-0 " />
+    <>
+      {/* Desktop version - hidden on sm screens */}
+      <section
+        className="hidden sm:block relative w-full overflow-hidden py-18 services-bg-section"
+        data-services-bg
+        style={{
+          backgroundImage: "url('/Home/Service.webp')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+        }}
+      >
+        {/* overlay for content readability */}
+        <div className="absolute inset-0 " />
 
-      {/* subtle grid floor */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px] opacity-30" />
+        {/* subtle grid floor */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px] opacity-30" />
 
-      <div className="relative max-w-7xl mx-10">
-        {/* Heading */}
-        <div className="text-center mb-16">
-          <p className="text-xl font-medium text-[#4C8C74] mb-2">
-            Our Services
-          </p>
-          <h2 className="text-4xl md:text-4xl font-semibold text-white">
-            What We Do
-          </h2>
-        </div>
+        <div className="relative max-w-7xl mx-10">
+          {/* Heading */}
+          <div className="text-center mb-16">
+            <p className="text-xl font-medium text-[#4C8C74] mb-2">
+              Our Services
+            </p>
+            <h2 className="text-4xl md:text-4xl font-semibold text-white">
+              What We Do
+            </h2>
+          </div>
 
-        <div className="flex justify-center">
-          {/* Cards */}
-          <div className="w-[950px] grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
-            {services.map((service, i) => (
-              <div
-                key={i}
-                className="group relative rounded-2xl w-[290px] border border-white/10 p-6 transition overflow-hidden"
-                data-service-card
-                style={{
-                  backgroundImage: "url('/Home/card_dark.svg')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  backdropFilter: "blur(10px)",
-                }}
-              >
-                <div className="flex flex-row">
-                  {/* icon - fixed: use the icon directly */}
-                  <div className="mb-4">{service.icon}</div>
+          <div className="flex justify-center">
+            {/* Cards */}
+            <div className="w-[950px] grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
+              {services.map((service, i) => (
+                <div
+                  key={i}
+                  className="group relative rounded-2xl w-[290px] border border-white/10 p-6 transition overflow-hidden"
+                  data-service-card
+                  style={{
+                    backgroundImage: "url('/Home/card_dark.svg')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backdropFilter: "blur(10px)",
+                  }}
+                >
+                  <div className="flex flex-row">
+                    {/* icon - fixed: use the icon directly */}
+                    <div className="mb-4">{service.icon}</div>
 
-                  {/* arrow: SVG for dark, react-icon for light mode */}
-                  <span className="absolute top-4 right-4 mt-2 w-7 h-7 transition arrow-icon">
-                    <BsArrowUpRightCircle size={28} />
-                  </span>
+                    {/* arrow: SVG for dark, react-icon for light mode */}
+                    <span className="absolute top-4 right-4 mt-2 w-7 h-7 transition arrow-icon">
+                      <BsArrowUpRightCircle size={28} />
+                    </span>
+                  </div>
+
+                  <h3 className="text-sm font-semibold text-yellow-400 mb-2">
+                    {service.title}
+                  </h3>
+
+                  <p className="text-sm text-[#AAA] leading-relaxed">
+                    {service.desc}
+                  </p>
                 </div>
-
-                <h3 className="text-sm font-semibold text-yellow-400 mb-2">
-                  {service.title}
-                </h3>
-
-                <p className="text-sm text-[#AAA] leading-relaxed">
-                  {service.desc}
-                </p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* Mobile version */}
+      <ServicesMobile />
+    </>
   );
 };
 

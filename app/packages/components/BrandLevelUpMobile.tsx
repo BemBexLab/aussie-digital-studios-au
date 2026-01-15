@@ -1,68 +1,62 @@
-import Image from "next/image";
 import React from "react";
-import BrandLevelUpMobile from "./BrandLevelUpMobile";
 
-const BrandLevelUp = () => {
+const BrandLevelUpMobile = () => {
   return (
-    <>
-      <BrandLevelUpMobile />
-      <div
-        className="hidden sm:flex flex-col bg-gradient-to-r mb-20 from-gray-800 via-gray-900 to-black text-white h-80 md:h-106 bg-cover bg-center"
-        data-brandlevelup-bg
-        style={{ backgroundImage: "url(/Home/CTA.svg)" }}
-      >
-      <div className="flex flex-row">
+    <div
+      className="sm:hidden flex flex-col bg-gradient-to-r mb-12 from-gray-800 via-gray-900 to-black text-white min-h-screen px-4 py-12 bg-cover bg-center"
+      data-brandlevelup-bg
+      style={{ backgroundImage: "url(/Home/CTA.svg)" }}
+    >
+      <div className="flex flex-col space-y-8">
         {/* Text Part */}
-        <div className="mt-20 mx-10 w-[600px] px-3 md:px-10 py-8 md:py-0">
-          <h1 className="text-5xl sm:text-5xl font-semibold text-white">
+        <div className="flex flex-col space-y-4">
+          <h1 className="text-2xl sm:text-3xl font-semibold text-white leading-tight">
             Ready to <span className="text-yellow-400">level up</span> your
             brand?
           </h1>
-          <p className="mt-4 text-lg sm:text-xl">
+          <p className="text-sm sm:text-base text-gray-300">
             Let's create something modern, simple, and effective.
           </p>
 
           {/* Button */}
-          <div className="flex flex-row mt-4">
-            <button className="justify-center mt-4 px-3 w-[190px] h-[45px] text-sm bg-teal-500 text-white rounded-full hover:bg-blue-400 transition-all inline-flex items-center group flex flex-row">
-              <span>Book a Strategy Call</span>
-              <span className="ml-3 relative w-6 h-6 flex items-center justify-center">
-                <span
-                  className="absolute inset-0 bg-black rounded-full"
-                  aria-hidden="true"
-                ></span>
-                <svg
-                  className="relative w-4 h-4 z-10 transition-transform duration-300 group-hover:rotate-45 button-arrow-svg"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                  role="img"
-                >
-                  <path
-                    d="M7 17 L17 7"
-                    stroke="#fff"
-                    strokeWidth="1.8"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    fill="none"
-                  />
-                  <path
-                    d="M11 7 H17 V13"
-                    stroke="#fff"
-                    strokeWidth="1.8"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    fill="none"
-                  />
-                </svg>
-              </span>
-            </button>
-          </div>
+          <button className="justify-center mt-4 px-3 w-[160px] h-[40px] text-xs sm:text-sm bg-teal-500 text-white rounded-full hover:bg-blue-400 transition-all inline-flex items-center group">
+            <span>Book a Strategy Call</span>
+            <span className="ml-2 relative w-5 h-5 flex items-center justify-center">
+              <span
+                className="absolute inset-0 bg-black rounded-full"
+                aria-hidden="true"
+              ></span>
+              <svg
+                className="relative w-3 h-3 z-10 transition-transform duration-300 group-hover:rotate-45"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+                role="img"
+              >
+                <path
+                  d="M7 17 L17 7"
+                  stroke="#fff"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  fill="none"
+                />
+                <path
+                  d="M11 7 H17 V13"
+                  stroke="#fff"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  fill="none"
+                />
+              </svg>
+            </span>
+          </button>
         </div>
 
         {/* Image Part */}
         <div
-          className="flex justify-center items-center flex-1 h-[350px] w-[400px] mr-12 mt-10 rounded-lg"
+          className="flex justify-center items-center w-full h-[250px] rounded-lg"
           style={{
             backgroundImage: "url(/Home/Rectangle_1905.webp)",
             backgroundSize: "cover",
@@ -72,11 +66,10 @@ const BrandLevelUp = () => {
           {/* Green Elipse */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="150"
-            height="130"
+            width="100"
+            height="100"
             viewBox="0 0 201 204"
             fill="none"
-            className="flex justify-center items-center"
           >
             <g filter="url(#filter0_dg_1087_1656)">
               <circle cx="100.442" cy="100.442" r="94.6417" fill="#4C8C74" />
@@ -156,8 +149,7 @@ const BrandLevelUp = () => {
         </div>
       </div>
     </div>
-    </>
   );
 };
 
-export default BrandLevelUp;
+export default BrandLevelUpMobile;

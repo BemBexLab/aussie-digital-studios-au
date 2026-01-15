@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import WhyChooseUsMobile from "./WhyChooseUsMobile";
 
 const cardData = [
   {
@@ -22,7 +23,9 @@ const cardData = [
 
 const WhyChooseUs = () => {
   return (
-    <section className="mx-15 my-20 flex justify-center" style={{}}>
+    <>
+      <WhyChooseUsMobile />
+      <section className="hidden sm:flex mx-15 my-20 justify-center" style={{}}>
       <div className="flex flex-row">
         {/* First column */}
         <div className="flex flex-col w-3/5">
@@ -90,7 +93,8 @@ const WhyChooseUs = () => {
             ))}
         </div>
       </div>
-    </section>
+      </section>
+    </>
   );
 };
 

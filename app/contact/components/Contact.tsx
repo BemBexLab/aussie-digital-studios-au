@@ -1,9 +1,12 @@
 import React from "react";
 import Image from "next/image";
+import ContactMobile from "./ContactMobile";
 
 const Contact = () => {
   return (
-    <div className="relative w-full mt-20 py-16 px-4 sm:px-6 md:px-8 overflow-x-hidden">
+    <>
+      <ContactMobile />
+      <div className="hidden sm:block relative w-full mt-20 py-16 px-4 sm:px-6 md:px-8 overflow-x-hidden">
       {/* Background placeholder — if you have a real bg image, add it conditionally */}
       {/* <div className="absolute inset-0 bg-cover bg-center"></div> */}
 
@@ -372,6 +375,7 @@ const Contact = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

@@ -1,5 +1,6 @@
 import React from "react";
 import ThemeToggle from "@/components/ThemeToggle";
+import HeroMobile from "./HeroMobile";
 
 type HeroProps = {
   H: string;
@@ -7,23 +8,28 @@ type HeroProps = {
 
 const Hero = ({ H }: HeroProps) => {
   return (
-    <div
-      className="w-full h-[60vh] md:h-[70vh] flex items-center justify-center relative overflow-hidden"
-      data-hero-bg-about
-      style={{
-        backgroundImage: "url('/About/About Hero BG.png')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        backgroundAttachment: "fixed",
-      }}
-    >
+    <>
+      <HeroMobile H={H} />
+      <div
+        className="hidden sm:flex w-full h-[60vh] md:h-[70vh] items-center justify-center relative overflow-hidden"
+        data-hero-bg-about
+        style={{
+          backgroundImage: "url('/About/About Hero BG.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundAttachment: "fixed",
+        }}
+      >
       {/* Clouds Video Overlay */}
       <video
         autoPlay
         muted
         loop
-        className="absolute inset-0 w-full h-full object-cover hero-video-overlay"
+        playsInline
+        controlsList="nodownload nofullscreen"
+        disablePictureInPicture
+        className="absolute inset-0 w-full h-full object-cover hero-video-overlay pointer-events-none"
         style={{
           mixBlendMode: "overlay",
           filter: "brightness(2) contrast(1.1)",
@@ -46,6 +52,7 @@ const Hero = ({ H }: HeroProps) => {
         </h2>
       </div>
     </div>
+    </>
   );
 };
 

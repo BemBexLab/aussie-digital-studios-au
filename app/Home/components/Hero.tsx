@@ -71,7 +71,7 @@ const Hero = () => {
 
       {/* Mobile Hero (smaller than md) */}
       <section
-        className="md:hidden w-full relative h-[800px] flex flex-col items-center justify-center text-center px-6 hero-bg-section"
+        className="md:hidden w-full relative min-h-screen flex flex-col items-center justify-center text-center px-4 sm:px-6 hero-bg-section"
         data-hero-bg
         style={{
           backgroundImage: "url('/Hero_Section.png')",
@@ -81,7 +81,7 @@ const Hero = () => {
         }}
       >
         {/* Theme Toggle - top right on mobile */}
-        <div className="absolute right-6 bottom-160 top-auto z-50">
+        <div className="absolute right-4 sm:right-6 top-16 sm:top-20 z-50">
           <ThemeToggle />
         </div>
 
@@ -100,26 +100,25 @@ const Hero = () => {
         </div>
 
         {/* Mobile-friendly text */}
-        <div className="relative z-20 space-y-4 mt-16">
-          <br />
-          <br />
-          <span className="text-white text-2xl font-semibold block">
+        <div className="relative z-20 space-y-4 sm:space-y-6 mt-12 sm:mt-16 w-full max-w-sm sm:max-w-md">
+          <br className="hidden sm:block" />
+          <span className="text-white text-xl sm:text-2xl font-semibold block">
             Modern
           </span>
-          <span className="text-white text-4xl md:text-5xl font-extrabold tracking-tight block">
+          <span className="text-white text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight block leading-tight">
             DIGITAL DESIGN
           </span>
-          <span className="text-white text-lg font-medium block max-w-xs mx-auto">
+          <span className="text-white text-base sm:text-lg font-medium block">
             that helps your brand grow.
           </span>
-          <p className="text-[#808c87] text-base mt-6 max-w-xs mx-auto">
+          <p className="text-[#808c87] text-sm sm:text-base mt-4 sm:mt-6">
             Clean visuals, smart strategy and creative work that makes an
             impact.
           </p>
           <img
-            src="/Home/Frame_557.png"
+            src="/Home/Frame_557.webp"
             alt="Geometric_Shape"
-            className="z-30 w-[750px] h-auto mt-6 transform -translate-x-8 mx-auto"
+            className="z-30 w-full sm:w-[400px] h-auto mt-4 sm:mt-6 mx-auto object-contain -translate-x-8"
           />
         </div>
       </section>

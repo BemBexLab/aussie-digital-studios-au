@@ -20,7 +20,7 @@ const AboutPage = () => {
           alt="Decorative Image"
           width={150}
           height={150}
-          className="left-40 -bottom-17 right-3 md:block absolute z-10"
+          className="left-50 -bottom-17 right-3 md:block absolute z-10"
         />
       </div>
       <BrandLevelUp />

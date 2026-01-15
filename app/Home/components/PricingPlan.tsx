@@ -1,4 +1,5 @@
 import React from "react";
+import PricingPlanMobile from "./PricingPlanMobile";
 
 const cardData = [
   {
@@ -49,7 +50,9 @@ const cardData = [
 
 const PricingPlan = () => {
   return (
-    <div className="text-white mt-20 py-0">
+    <>
+      <PricingPlanMobile />
+      <div className="hidden sm:block text-white mt-20 py-0">
       <div className="max-w-7xl mx-auto px-4 justify-center">
         <p className="text-center my-[7px] text-xl font-medium text-[#4C8C74]">
           Pricing Plans
@@ -168,6 +171,7 @@ const PricingPlan = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

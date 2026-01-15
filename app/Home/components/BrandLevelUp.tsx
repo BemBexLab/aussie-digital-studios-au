@@ -1,13 +1,16 @@
 import Image from "next/image";
 import React from "react";
+import BrandLevelUpMobile from "./BrandLevelUpMobile";
 
 const BrandLevelUp = () => {
   return (
-    <div
-      className="flex flex-col bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white h-80 md:h-106 bg-cover bg-center"
-      data-brandlevelup-bg
-      style={{ backgroundImage: "url(/Home/CTA.svg)" }}
-    >
+    <>
+      <BrandLevelUpMobile />
+      <div
+        className="hidden sm:flex flex-col bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white h-80 md:h-106 bg-cover bg-center"
+        data-brandlevelup-bg
+        style={{ backgroundImage: "url(/Home/CTA.svg)" }}
+      >
       <div className="flex flex-row">
         {/* Text Part */}
         <div className="mt-20 mx-10 w-[600px] px-3 md:px-10 py-8 md:py-0">
@@ -152,7 +155,8 @@ const BrandLevelUp = () => {
           </svg>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 };
 
