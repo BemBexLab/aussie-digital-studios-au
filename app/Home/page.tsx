@@ -21,26 +21,10 @@ const HomePage = () => {
       <Hero />
       <LogoSlider />
       <AboutUs />
-      <Image
-        src="/Geometric_Shape_Silver.png"
-        alt="Decorative Image"
-        width={200}
-        height={200}
-        className="left-13 hidden -bottom-180 right-3 md:block absolute z-50"
-      />
       <Services />
       <PortfolioSection />
       <WhyChooseUs />
       <BrandLevelUp />
-      <div className="flex justify-end hidden md:flex">
-        <Image
-          src="/Geometric_Shape_Silver.png"
-          alt="Decorative Image"
-          width={200}
-          height={200}
-          className="absolute z-10 bottom-35 right-0 md:block"
-        />
-      </div>
       <PricingPlan />
       <CustomPlan />
       <Testimonials />

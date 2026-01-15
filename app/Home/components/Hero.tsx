@@ -46,7 +46,7 @@ const Hero = () => {
           </div>
           <div className="w-[700px] h-full mt-[50px] block">
             <img
-              src="/Home/Frame_557.png"
+              src="/Home/Frame_557.webp"
               alt="Geometric_Shape"
               className="z-30 w-[700px] h-auto transform translate-x-20 -translate-y-10 -top-5 relative"
             />

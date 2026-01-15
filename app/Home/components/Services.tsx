@@ -204,7 +204,7 @@ const Services = () => {
       className="relative w-full overflow-hidden py-18 services-bg-section"
       data-services-bg
       style={{
-        backgroundImage: "url('/Home/Service.png')",
+        backgroundImage: "url('/Home/Service.webp')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",

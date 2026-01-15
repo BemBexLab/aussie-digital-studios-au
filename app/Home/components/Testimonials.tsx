@@ -109,13 +109,6 @@ const Testimonials = () => {
           What Client Say About us
         </p>
       </div>
-      <Image
-        src="/Geometric_Shape_Silver.png"
-        alt="Decorative Image"
-        width={120}
-        height={120}
-        className="absolute z-10 bottom-35 top-20 right-30 md:block"
-      />
       <style>{`
             @keyframes marqueeScroll {
                 0% { transform: translateX(0%); }

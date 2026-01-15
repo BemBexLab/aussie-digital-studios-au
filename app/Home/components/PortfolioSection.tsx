@@ -1,16 +1,53 @@
 import Image from "next/image";
 
+const cardData = [
+  {
+    image: "/Home/Rectangle_33.webp",
+    title: "Project Name",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+    tags: ["Web design", "Web development", "Support"],
+  },
+  {
+    image: "/Home/Rectangle_32.webp",
+    title: "Project Name",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+    tags: ["Web design", "Web development", "Support"],
+  },
+  {
+    image: "/Home/Rectangle_34.webp",
+    title: "Project Name",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+    tags: ["Web design", "Web development", "Support"],
+  },
+  {
+    image: "/Home/Rectangle_33.webp",
+    title: "Project Name",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+    tags: ["Web design", "Web development", "Support"],
+  },
+  {
+    image: "/Home/Rectangle_33.webp",
+    title: "Project Name",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+    tags: ["Web design", "Web development", "Support"],
+  },
+  {
+    image: "/Home/Rectangle_32.webp",
+    title: "Project Name",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+    tags: ["Web design", "Web development", "Support"],
+  },
+];
+
 export default function PortfolioSection() {
   return (
     <section className="relative mt-40 my-20">
-      {/* Geometric shape image */}
-        <Image
-          src="/Geometric_Shape_Silver.png"
-          alt="Decorative Image"
-          width={200}
-          height={200}
-          className="absolute z-80 bottom-600 right-0"
-        />
       {/* Heading */}
       <div className="text-center mb-20 px-4">
         {" "}
@@ -25,145 +62,32 @@ export default function PortfolioSection() {
       </div>
 
       {/* Main Container */}
-      <div className="max-w-7xl mx-auto px-4 md:px-[55px]">
-        {/* Top Row (2 Cards) */}
-        <div className="flex flex-col lg:flex-row gap-6 lg:gap-14 mb-6">
-          {/* Card 01*/}
-          <div className="rounded-3xl w-full lg:w-[460px] flex flex-col">
-            <div className="rounded-2xl overflow-visible mb-6 relative">
-              <img
-                src="/Home/Rectangle_32.png"
-                alt="Project"
-                className="w-full h-[400px] object-cover rounded-2xl relative z-10"
+      <div className="max-w-7xl mx-auto flex justify-center">
+        <div className="grid grid-cols-2 gap-20">
+          {/* Portfolio Cards */}
+          {cardData.map((card, index) => (
+            <div
+              key={index}
+              className="h-full w-[480px] overflow-hidden relative"
+            >
+              <Image
+                src={card.image}
+                alt={card.title}
+                className="w-[480px] h-[350px]"
+                width={900}
+                height={900}
               />
-              {/* Fix: Constrain absolute element within parent */}
-              {/* <div className="absolute bottom-[15px] right-0 w-[150px] h-[150px] overflow-hidden pointer-events-none">
-                <Image
-                  src="/Geometric_Shape_Silver.png"
-                  alt="Geometric image"
-                  width={150}
-                  height={150}
-                  className="block translate-x-1/2"
-                />
-              </div> */}
-            </div>
-
-            <div className="flex flex-col flex-grow">
-              <h3 className="text-[#3A6EA5] font-semibold mb-2">
-                Project Name
-              </h3>
-              <p className="text-sm text-gray-400 mb-4">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
+              <h2 className="text-[#3A6EA5] text-lg mt-4">{card.title}</h2>
+              <p className="text-white text-sm mt-2 font-light">
+                {card.description}
               </p>
-              <div className="flex gap-2 flex-wrap">
-                <Tag label="Web design" />
-                <Tag label="Web development" />
-                <Tag label="Support" />
+              <div className="flex gap-2 flex-wrap mt-3">
+                {card.tags.map((tag, tagIndex) => (
+                  <Tag key={tagIndex} label={tag} />
+                ))}
               </div>
             </div>
-          </div>
-
-          {/* Card 2 */}
-          <div className="rounded-3xl w-full lg:w-[670px] p-4 md:p-8 mt-0 lg:mt-[55px] flex flex-col">
-            <div className="rounded-2xl overflow-hidden mb-6">
-              <img
-                src="/Home/Rectangle_33.png"
-                alt="Project"
-                className="w-full h-[460px] object-cover"
-              />
-            </div>
-            <div className="flex flex-col flex-grow">
-              <h3 className="text-[#3A6EA5] font-semibold mb-2">
-                Project Name
-              </h3>
-              <p className="text-sm text-gray-400 mb-4 flex-grow">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
-              </p>
-              <div className="flex gap-2 flex-wrap">
-                <Tag label="Web design" />
-                <Tag label="Web development" />
-                <Tag label="Support" />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Card 03 */}
-        <div className="rounded-3xl p-8 max-w-3xl mx-auto">
-          <div className="rounded-2xl overflow-hidden mb-6">
-            <img
-              src="/Home/Rectangle_34.png"
-              alt="Project"
-              className="w-full h-auto"
-            />
-          </div>
-          <h3 className="text-[#3A6EA5] font-semibold mb-2">Project Name</h3>
-          <p className="text-sm text-gray-400 mb-4 max-w-2xl">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s.
-          </p>
-          <div className="flex gap-2 flex-wrap">
-            <Tag label="Web design" />
-            <Tag label="Web development" />
-            <Tag label="Support" />
-          </div>
-        </div>
-
-        {/* Bottom Row (Cards 04 & 05) */}
-        <div className="flex flex-col lg:flex-row gap-6 lg:gap-14 mt-12">
-          {" "}
-          {/* Fixed: removed nested flex + extra div */}
-          {/* Card 04*/}
-          <div className="rounded-3xl w-full lg:w-[670px] flex flex-col lg:mt-[150px]">
-            <div className="rounded-2xl overflow-hidden mb-6">
-              <img
-                src="/Home/Rectangle_32.png"
-                alt="Project"
-                className="w-full h-[460px] object-cover"
-              />
-            </div>
-            <div className="flex flex-col flex-grow">
-              <h3 className="text-[#3A6EA5] font-semibold mb-2">
-                Project Name
-              </h3>
-              <p className="text-sm text-gray-400 mb-4 flex-grow">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
-              </p>
-              <div className="flex gap-2 flex-wrap">
-                <Tag label="Web design" />
-                <Tag label="Web development" />
-                <Tag label="Support" />
-              </div>
-            </div>
-          </div>
-          {/* Card 05 */}
-          <div className="rounded-3xl w-full lg:w-[460px] p-4 md:p-8 flex flex-col">
-            <div className="rounded-2xl overflow-hidden mb-2">
-              <img
-                src="/Home/Rectangle_33.png"
-                alt="Project"
-                className="w-full h-[400px] object-cover"
-              />
-            </div>
-            <div className="flex flex-col flex-grow">
-              <h3 className="text-[#3A6EA5] font-semibold mt-3 mb-2">
-                Project Name
-              </h3>
-              <p className="text-sm text-gray-400 mb-4">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
-              </p>
-              <div className="flex gap-2 flex-wrap">
-                <Tag label="Web design" />
-                <Tag label="Web development" />
-                <Tag label="Support" />
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
