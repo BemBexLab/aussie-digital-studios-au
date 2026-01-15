@@ -9,6 +9,10 @@ import Cards from "../components/Cards";
 import Hero from "@/components/Hero";
 import WhyChoose from "../components/WhyChoose";
 import Portfolio from "../components/Portfolio";
+import { Testimonials } from "../components/Testimonials";
+import ContactUs from "../components/ContactUs";
+import PricingPlan from "../components/PricingPlan";
+import CustomPlan from "../components/CustomPlan";
 
 // Sample data (can also fetch from API or database)
 const services = [
@@ -77,7 +81,6 @@ export default async function ServicePage({
     <div className="relative w-full p-0 m-0">
       {/* Hero Section */}
       <Hero H={service.title} />
-
       {/* Body Section #01: Image & Description */}
       <div className="flex px-4 md:px-8 ">
         <div className="flex flex-col justify-center items-center gap-6 my-20 w-full max-w-7xl mx-auto md:flex-row">
@@ -124,18 +127,17 @@ export default async function ServicePage({
           </div>
         </div>
       </div>
-
-      {/* Body Section #02 */}
       <Cards />
       <WhyChoose />
-
       <br className="md:hidden" />
       <br className="md:hidden" />
       <br className="md:hidden" />
-
-      {/* Body Section #03 (FAQs) */}
       <Portfolio />
+      <PricingPlan />
+      <CustomPlan />
+      <Testimonials />
       <FAQ />
+      <ContactUs />
     </div>
   );
 }
