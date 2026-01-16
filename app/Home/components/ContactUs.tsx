@@ -1,8 +1,9 @@
 "use client";
 
 import { Button, TextField } from "@mui/material";
-import React, { useState } from "react";
-import ContactUsMobile from "./ContactUsMobile";
+import Image from "next/image";
+import React, { useState, useEffect } from "react";
+import ContactUsSm from "./ContactUsSm";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -12,11 +13,60 @@ const ContactUs = () => {
     phone: "",
     details: "",
   });
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Add your form submission logic here
+  useEffect(() => {
+    // Initial theme detection
+    const theme = typeof window !== "undefined" ? localStorage.getItem("ads_theme") : null;
+    setIsDarkMode(theme !== "light");
+
+    // Listen for theme changes via document class mutations
+    const handleThemeChange = () => {
+      const theme = typeof window !== "undefined" ? localStorage.getItem("ads_theme") : null;
+      setIsDarkMode(theme !== "light");
+    };
+
+    // Watch for class changes on document element
+    const observer = new MutationObserver(handleThemeChange);
+    const htmlElement = typeof document !== "undefined" ? document.documentElement : null;
+    
+    if (htmlElement) {
+      observer.observe(htmlElement, { attributes: true, attributeFilter: ["class"] });
+    }
+
+    // Also listen to storage changes (for cross-tab updates)
+    window.addEventListener("storage", handleThemeChange);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("storage", handleThemeChange);
+    };
+  }, []);
+
+  const textFieldSx = {
+    "& .MuiInput-input": {
+      color: isDarkMode ? "white" : "black",
+    },
+    "& .MuiInput-underline:before": {
+      borderBottomColor: isDarkMode ? "rgba(255,255,255,0.3)" : "black",
+    },
+    "& .MuiInput-underline:hover:before": {
+      borderBottomColor: isDarkMode ? "rgba(255,255,255,0.5)" : "black",
+    },
+    "& .MuiInput-underline:after": {
+      borderBottomColor: isDarkMode ? "white" : "black",
+    },
+    "& .MuiInputBase-input::placeholder": {
+      color: isDarkMode ? "rgba(255,255,255,0.7)" : "rgba(0,0,0,0.7)",
+      opacity: 1,
+    },
+    "& .MuiFormLabel-root": {
+      color: isDarkMode ? "rgba(255,255,255,0.7)" : "black",
+      paddingLeft: "8px",
+    },
+    "& .MuiFormLabel-root.Mui-focused": {
+      color: isDarkMode ? "white" : "black",
+    },
   };
 
   const handleChange = (
@@ -28,8 +78,8 @@ const ContactUs = () => {
 
   return (
     <>
-      <ContactUsMobile />
-      <section className="hidden sm:block my-20 justify-center items-center mx-20">
+      <ContactUsSm />
+      <section className="hidden sm:block mt-20 justify-center items-center mx-20">
       <div className="flex flex-col justify-center text-center items-center">
         <p className="text-xl text-[#4C8C74] font-semibold">Contact Us</p>
         <h2 className="font-semibold text-center text-white text-4xl mt-2">
@@ -41,22 +91,29 @@ const ContactUs = () => {
           engages your audience.
         </p>
       </div>
-      <div className="flex flex-row mt-10">
+      <div className="flex flex-row mt-10 gap-6 items-center">
+
+        {/* Image */}
         <div
-          className="bg-white-800 w-[550px] h-[390px] rounded-2xl"
+          className="flex-shrink-0 h-[500px]"
           style={{
-            backgroundImage: 'url("/Home/Rectangle_1906.svg")',
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
+            background: "transparent",
           }}
-        ></div>
+        >
+          <Image
+            src={isDarkMode ? "/Home/dark_tel.svg" : "/Home/Light_tel.svg"}
+            alt="Contact Us Image"
+            width={1190}
+            height={1190}
+            className="rounded-2xl w-[400px] h-[468px] rounded-xl translate-y-12 object-cover"
+          />
+        </div>
 
         {/* Contact Form */}
         <div
-          className="w-[700px] h-[390px] px-7 py-7 ml-10 rounded-2xl"
+          className="flex-1 h-[400px] px-7 py-7 rounded-2xl"
           style={{
-            backgroundImage: 'url("/Home/Frame_161.svg")',
+            backgroundImage: `url('${isDarkMode ? '/Home/contactus_dark.svg' : '/Home/Frame_163_Light.svg'}')`,
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
@@ -70,31 +127,7 @@ const ContactUs = () => {
               type="text"
               variant="standard"
               fullWidth
-              sx={{
-                "& .MuiInput-input": {
-                  color: "white",
-                },
-                "& .MuiInput-underline:before": {
-                  borderBottomColor: "rgba(255,255,255,0.3)",
-                },
-                "& .MuiInput-underline:hover:before": {
-                  borderBottomColor: "rgba(255,255,255,0.5)",
-                },
-                "& .MuiInput-underline:after": {
-                  borderBottomColor: "white",
-                },
-                "& .MuiInputBase-input::placeholder": {
-                  color: "rgba(255,255,255,0.7)",
-                  opacity: 1,
-                },
-                "& .MuiFormLabel-root": {
-                  color: "rgba(255,255,255,0.7)",
-                  paddingLeft: "8px",
-                },
-                "& .MuiFormLabel-root.Mui-focused": {
-                  color: "white",
-                },
-              }}
+              sx={textFieldSx}
             />
 
             {/* Last Name */}
@@ -104,31 +137,7 @@ const ContactUs = () => {
               type="text"
               variant="standard"
               fullWidth
-              sx={{
-                "& .MuiInput-input": {
-                  color: "white",
-                },
-                "& .MuiInput-underline:before": {
-                  borderBottomColor: "rgba(255,255,255,0.3)",
-                },
-                "& .MuiInput-underline:hover:before": {
-                  borderBottomColor: "rgba(255,255,255,0.5)",
-                },
-                "& .MuiInput-underline:after": {
-                  borderBottomColor: "white",
-                },
-                "& .MuiInputBase-input::placeholder": {
-                  color: "rgba(255,255,255,0.7)",
-                  opacity: 1,
-                },
-                "& .MuiFormLabel-root": {
-                  color: "rgba(255,255,255,0.7)",
-                  paddingLeft: "8px",
-                },
-                "& .MuiFormLabel-root.Mui-focused": {
-                  color: "white",
-                },
-              }}
+              sx={textFieldSx}
             />
 
             {/* Email */}
@@ -138,31 +147,7 @@ const ContactUs = () => {
               type="email"
               variant="standard"
               fullWidth
-              sx={{
-                "& .MuiInput-input": {
-                  color: "white",
-                },
-                "& .MuiInput-underline:before": {
-                  borderBottomColor: "rgba(255,255,255,0.3)",
-                },
-                "& .MuiInput-underline:hover:before": {
-                  borderBottomColor: "rgba(255,255,255,0.5)",
-                },
-                "& .MuiInput-underline:after": {
-                  borderBottomColor: "white",
-                },
-                "& .MuiInputBase-input::placeholder": {
-                  color: "rgba(255,255,255,0.7)",
-                  opacity: 1,
-                },
-                "& .MuiFormLabel-root": {
-                  color: "rgba(255,255,255,0.7)",
-                  paddingLeft: "8px",
-                },
-                "& .MuiFormLabel-root.Mui-focused": {
-                  color: "white",
-                },
-              }}
+              sx={textFieldSx}
             />
 
             {/* Phone */}
@@ -172,31 +157,7 @@ const ContactUs = () => {
               type="number"
               variant="standard"
               fullWidth
-              sx={{
-                "& .MuiInput-input": {
-                  color: "white",
-                },
-                "& .MuiInput-underline:before": {
-                  borderBottomColor: "rgba(255,255,255,0.3)",
-                },
-                "& .MuiInput-underline:hover:before": {
-                  borderBottomColor: "rgba(255,255,255,0.5)",
-                },
-                "& .MuiInput-underline:after": {
-                  borderBottomColor: "white",
-                },
-                "& .MuiInputBase-input::placeholder": {
-                  color: "rgba(255,255,255,0.7)",
-                  opacity: 1,
-                },
-                "& .MuiFormLabel-root": {
-                  color: "rgba(255,255,255,0.7)",
-                  paddingLeft: "8px",
-                },
-                "& .MuiFormLabel-root.Mui-focused": {
-                  color: "white",
-                },
-              }}
+              sx={textFieldSx}
             />
           </div>
 
@@ -210,31 +171,7 @@ const ContactUs = () => {
             defaultValue=""
             variant="standard"
             fullWidth
-            sx={{
-              "& .MuiInput-input": {
-                color: "white",
-              },
-              "& .MuiInput-underline:before": {
-                borderBottomColor: "rgba(255,255,255,0.3)",
-              },
-              "& .MuiInput-underline:hover:before": {
-                borderBottomColor: "rgba(255,255,255,0.5)",
-              },
-              "& .MuiInput-underline:after": {
-                borderBottomColor: "white",
-              },
-              "& .MuiInputBase-input::placeholder": {
-                color: "rgba(255,255,255,0.7)",
-                opacity: 1,
-              },
-              "& .MuiFormLabel-root": {
-                color: "rgba(255,255,255,0.7)",
-                paddingLeft: "8px",
-              },
-              "& .MuiFormLabel-root.Mui-focused": {
-                color: "white",
-              },
-            }}
+            sx={textFieldSx}
           />
 
           <br />

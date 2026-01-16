@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
 const cardData = [
@@ -21,6 +23,36 @@ const cardData = [
 ];
 
 const WhyChooseUsMobile = () => {
+  const [isDarkMode, setIsDarkMode] = useState(true);
+
+  useEffect(() => {
+    // Initial theme detection
+    const theme = typeof window !== "undefined" ? localStorage.getItem("ads_theme") : null;
+    setIsDarkMode(theme !== "light");
+
+    // Listen for theme changes via document class mutations
+    const handleThemeChange = () => {
+      const theme = typeof window !== "undefined" ? localStorage.getItem("ads_theme") : null;
+      setIsDarkMode(theme !== "light");
+    };
+
+    // Watch for class changes on document element
+    const observer = new MutationObserver(handleThemeChange);
+    const htmlElement = typeof document !== "undefined" ? document.documentElement : null;
+    
+    if (htmlElement) {
+      observer.observe(htmlElement, { attributes: true, attributeFilter: ["class"] });
+    }
+
+    // Also listen to storage changes (for cross-tab updates)
+    window.addEventListener("storage", handleThemeChange);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("storage", handleThemeChange);
+    };
+  }, []);
+
   return (
     <section className="sm:hidden my-12 px-4">
       <div className="flex flex-col space-y-6">
@@ -81,7 +113,7 @@ const WhyChooseUsMobile = () => {
             <div 
               key={index} 
               className="w-full h-auto px-4 sm:px-5 py-3 rounded-xl sm:rounded-2xl flex flex-col justify-center" 
-              style={{backgroundImage: "url('/Home/mini_card_dark.svg')", backgroundSize: "cover", backgroundPosition: "center"}}
+              style={isDarkMode ? {backgroundImage: "url('/Home/mini_card_dark.svg')", backgroundSize: "cover", backgroundPosition: "center"} : {backgroundImage: "url('/Home/Frame_163_Light.svg')", backgroundSize: "cover", backgroundPosition: "center"}}
             >
               <h2 className="text-3xl sm:text-5xl font-bold">{card.value}</h2>
               <p className="text-[#AAAAAA] text-xs sm:text-sm mt-1">{card.title}</p>

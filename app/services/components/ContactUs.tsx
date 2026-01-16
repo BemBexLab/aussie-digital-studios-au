@@ -1,10 +1,11 @@
 "use client";
 
 import { Button, TextField } from "@mui/material";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ContactUsMobile from "./ContactUsMobile";
 
 const ContactUs = () => {
+  const [isDarkMode, setIsDarkMode] = useState(true);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -12,6 +13,56 @@ const ContactUs = () => {
     phone: "",
     details: "",
   });
+
+  useEffect(() => {
+    const theme = typeof window !== "undefined" ? localStorage.getItem("ads_theme") : null;
+    setIsDarkMode(theme !== "light");
+
+    const handleThemeChange = () => {
+      const theme = typeof window !== "undefined" ? localStorage.getItem("ads_theme") : null;
+      setIsDarkMode(theme !== "light");
+    };
+
+    const observer = new MutationObserver(handleThemeChange);
+    const htmlElement = typeof document !== "undefined" ? document.documentElement : null;
+
+    if (htmlElement) {
+      observer.observe(htmlElement, { attributes: true, attributeFilter: ["class"] });
+    }
+
+    window.addEventListener("storage", handleThemeChange);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("storage", handleThemeChange);
+    };
+  }, []);
+
+  const textFieldSx = {
+    "& .MuiInput-input": {
+      color: isDarkMode ? "white" : "black",
+    },
+    "& .MuiInput-underline:before": {
+      borderBottomColor: isDarkMode ? "rgba(255,255,255,0.3)" : "black",
+    },
+    "& .MuiInput-underline:hover:before": {
+      borderBottomColor: isDarkMode ? "rgba(255,255,255,0.5)" : "black",
+    },
+    "& .MuiInput-underline:after": {
+      borderBottomColor: isDarkMode ? "white" : "black",
+    },
+    "& .MuiInputBase-input::placeholder": {
+      color: isDarkMode ? "rgba(255,255,255,0.7)" : "rgba(0,0,0,0.7)",
+      opacity: 1,
+    },
+    "& .MuiFormLabel-root": {
+      color: isDarkMode ? "rgba(255,255,255,0.7)" : "black",
+      paddingLeft: "8px",
+    },
+    "& .MuiFormLabel-root.Mui-focused": {
+      color: isDarkMode ? "white" : "black",
+    },
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -51,7 +102,8 @@ const ContactUs = () => {
         <div
           className="w-[700px] h-[390px] px-7 py-7 ml-10 rounded-2xl"
           style={{
-            backgroundImage: 'url("/Home/Frame_161.svg")',
+            backgroundImage: `url('${isDarkMode ? '/Home/contactus_dark.svg' : '/Home/Frame_163_Light.svg'}')`,
+            backgroundColor: "transparent",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
@@ -65,31 +117,7 @@ const ContactUs = () => {
               type="text"
               variant="standard"
               fullWidth
-              sx={{
-                "& .MuiInput-input": {
-                  color: "white",
-                },
-                "& .MuiInput-underline:before": {
-                  borderBottomColor: "rgba(255,255,255,0.3)",
-                },
-                "& .MuiInput-underline:hover:before": {
-                  borderBottomColor: "rgba(255,255,255,0.5)",
-                },
-                "& .MuiInput-underline:after": {
-                  borderBottomColor: "white",
-                },
-                "& .MuiInputBase-input::placeholder": {
-                  color: "rgba(255,255,255,0.7)",
-                  opacity: 1,
-                },
-                "& .MuiFormLabel-root": {
-                  color: "rgba(255,255,255,0.7)",
-                  paddingLeft: "8px",
-                },
-                "& .MuiFormLabel-root.Mui-focused": {
-                  color: "white",
-                },
-              }}
+              sx={textFieldSx}
             />
 
             {/* Last Name */}
@@ -99,31 +127,7 @@ const ContactUs = () => {
               type="text"
               variant="standard"
               fullWidth
-              sx={{
-                "& .MuiInput-input": {
-                  color: "white",
-                },
-                "& .MuiInput-underline:before": {
-                  borderBottomColor: "rgba(255,255,255,0.3)",
-                },
-                "& .MuiInput-underline:hover:before": {
-                  borderBottomColor: "rgba(255,255,255,0.5)",
-                },
-                "& .MuiInput-underline:after": {
-                  borderBottomColor: "white",
-                },
-                "& .MuiInputBase-input::placeholder": {
-                  color: "rgba(255,255,255,0.7)",
-                  opacity: 1,
-                },
-                "& .MuiFormLabel-root": {
-                  color: "rgba(255,255,255,0.7)",
-                  paddingLeft: "8px",
-                },
-                "& .MuiFormLabel-root.Mui-focused": {
-                  color: "white",
-                },
-              }}
+              sx={textFieldSx}
             />
 
             {/* Email */}
@@ -133,31 +137,7 @@ const ContactUs = () => {
               type="email"
               variant="standard"
               fullWidth
-              sx={{
-                "& .MuiInput-input": {
-                  color: "white",
-                },
-                "& .MuiInput-underline:before": {
-                  borderBottomColor: "rgba(255,255,255,0.3)",
-                },
-                "& .MuiInput-underline:hover:before": {
-                  borderBottomColor: "rgba(255,255,255,0.5)",
-                },
-                "& .MuiInput-underline:after": {
-                  borderBottomColor: "white",
-                },
-                "& .MuiInputBase-input::placeholder": {
-                  color: "rgba(255,255,255,0.7)",
-                  opacity: 1,
-                },
-                "& .MuiFormLabel-root": {
-                  color: "rgba(255,255,255,0.7)",
-                  paddingLeft: "8px",
-                },
-                "& .MuiFormLabel-root.Mui-focused": {
-                  color: "white",
-                },
-              }}
+              sx={textFieldSx}
             />
 
             {/* Phone */}
@@ -167,31 +147,7 @@ const ContactUs = () => {
               type="number"
               variant="standard"
               fullWidth
-              sx={{
-                "& .MuiInput-input": {
-                  color: "white",
-                },
-                "& .MuiInput-underline:before": {
-                  borderBottomColor: "rgba(255,255,255,0.3)",
-                },
-                "& .MuiInput-underline:hover:before": {
-                  borderBottomColor: "rgba(255,255,255,0.5)",
-                },
-                "& .MuiInput-underline:after": {
-                  borderBottomColor: "white",
-                },
-                "& .MuiInputBase-input::placeholder": {
-                  color: "rgba(255,255,255,0.7)",
-                  opacity: 1,
-                },
-                "& .MuiFormLabel-root": {
-                  color: "rgba(255,255,255,0.7)",
-                  paddingLeft: "8px",
-                },
-                "& .MuiFormLabel-root.Mui-focused": {
-                  color: "white",
-                },
-              }}
+              sx={textFieldSx}
             />
           </div>
 
@@ -205,31 +161,7 @@ const ContactUs = () => {
             defaultValue=""
             variant="standard"
             fullWidth
-            sx={{
-              "& .MuiInput-input": {
-                color: "white",
-              },
-              "& .MuiInput-underline:before": {
-                borderBottomColor: "rgba(255,255,255,0.3)",
-              },
-              "& .MuiInput-underline:hover:before": {
-                borderBottomColor: "rgba(255,255,255,0.5)",
-              },
-              "& .MuiInput-underline:after": {
-                borderBottomColor: "white",
-              },
-              "& .MuiInputBase-input::placeholder": {
-                color: "rgba(255,255,255,0.7)",
-                opacity: 1,
-              },
-              "& .MuiFormLabel-root": {
-                color: "rgba(255,255,255,0.7)",
-                paddingLeft: "8px",
-              },
-              "& .MuiFormLabel-root.Mui-focused": {
-                color: "white",
-              },
-            }}
+            sx={textFieldSx}
           />
 
           <br />

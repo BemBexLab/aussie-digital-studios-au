@@ -1,17 +1,51 @@
+"use client";
+
 import Image from "next/image";
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const CustomPlanMobile = () => {
+  const [isDarkMode, setIsDarkMode] = useState(true);
+
+  useEffect(() => {
+    // Initial theme detection
+    const theme = typeof window !== "undefined" ? localStorage.getItem("ads_theme") : null;
+    setIsDarkMode(theme !== "light");
+
+    // Listen for theme changes via document class mutations
+    const handleThemeChange = () => {
+      const theme = typeof window !== "undefined" ? localStorage.getItem("ads_theme") : null;
+      setIsDarkMode(theme !== "light");
+    };
+
+    // Watch for class changes on document element
+    const observer = new MutationObserver(handleThemeChange);
+    const htmlElement = typeof document !== "undefined" ? document.documentElement : null;
+    
+    if (htmlElement) {
+      observer.observe(htmlElement, { attributes: true, attributeFilter: ["class"] });
+    }
+
+    // Also listen to storage changes (for cross-tab updates)
+    window.addEventListener("storage", handleThemeChange);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("storage", handleThemeChange);
+    };
+  }, []);
+
   return (
-    <section className="sm:hidden mx-3 my-6 flex justify-center">
-      <div className="flex flex-col w-full">
+    <section className="sm:hidden my-10 justify-center">
+      <div className="flex flex-col h-full w-full px-4">
         {/* Custom Plan Content */}
         <div
-          className="flex flex-col rounded-lg px-4 py-6 w-full"
-          style={{
-            backgroundImage: "url('/Home/Custom_plans.webp')",
+          className="flex flex-col rounded-xl px-6 py-8 w-full"
+          style={isDarkMode ? {
+            backgroundImage: `url('/Home/Custom_plans.webp')`,
             backgroundSize: "cover",
             backgroundPosition: "center",
+          } : {
+            backgroundColor: "#f9f1f1",
           }}
         >
           <h2 className="font-semibold text-2xl text-white">Custom Plan</h2>

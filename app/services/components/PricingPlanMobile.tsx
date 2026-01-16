@@ -97,6 +97,7 @@ const PricingPlanMobile = ({ service }: PricingPlanMobileProps) => {
             <div
               key={index}
               className="bg-cover bg-center rounded-lg p-4 shadow-lg"
+              data-pricing-bg
               style={{
                 backgroundImage: "url('/Home/Frame_161.svg')",
               }}

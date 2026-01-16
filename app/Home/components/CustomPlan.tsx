@@ -1,8 +1,40 @@
+"use client";
+
 import Image from "next/image";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import CustomPlanMobile from "./CustomPlanMobile";
 
 const CustomPlan = () => {
+  const [isDarkMode, setIsDarkMode] = useState(true);
+
+  useEffect(() => {
+    // Initial theme detection
+    const theme = typeof window !== "undefined" ? localStorage.getItem("ads_theme") : null;
+    setIsDarkMode(theme !== "light");
+
+    // Listen for theme changes via document class mutations
+    const handleThemeChange = () => {
+      const theme = typeof window !== "undefined" ? localStorage.getItem("ads_theme") : null;
+      setIsDarkMode(theme !== "light");
+    };
+
+    // Watch for class changes on document element
+    const observer = new MutationObserver(handleThemeChange);
+    const htmlElement = typeof document !== "undefined" ? document.documentElement : null;
+    
+    if (htmlElement) {
+      observer.observe(htmlElement, { attributes: true, attributeFilter: ["class"] });
+    }
+
+    // Also listen to storage changes (for cross-tab updates)
+    window.addEventListener("storage", handleThemeChange);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("storage", handleThemeChange);
+    };
+  }, []);
+
   return (
     <>
       <CustomPlanMobile />
@@ -11,10 +43,13 @@ const CustomPlan = () => {
         {/* Custom Plan Content */}
         <div
           className="flex flex-col rounded-xl px-8 py-10 w-full"
-          style={{
-            backgroundImage: "url('/Home/Custom_plans.webp')",
+          style={isDarkMode ? {
+            backgroundImage: `url('/Home/Custom_plans.webp')`,
             backgroundSize: "fill",
+            backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
+          } : {
+            backgroundColor: "#f9f1f1",
           }}
         >
           <h2 className="font-semibold text-4xl text-white">Custom Plan</h2>

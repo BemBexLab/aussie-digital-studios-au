@@ -1,9 +1,10 @@
 "use client";
 
 import { TextField } from "@mui/material";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const ContactUsMobile = () => {
+  const [isDarkMode, setIsDarkMode] = useState(true);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -12,11 +13,63 @@ const ContactUsMobile = () => {
     details: "",
   });
 
+  useEffect(() => {
+    const theme = typeof window !== "undefined" ? localStorage.getItem("ads_theme") : null;
+    setIsDarkMode(theme !== "light");
+
+    const handleThemeChange = () => {
+      const theme = typeof window !== "undefined" ? localStorage.getItem("ads_theme") : null;
+      setIsDarkMode(theme !== "light");
+    };
+
+    const observer = new MutationObserver(handleThemeChange);
+    const htmlElement = typeof document !== "undefined" ? document.documentElement : null;
+
+    if (htmlElement) {
+      observer.observe(htmlElement, { attributes: true, attributeFilter: ["class"] });
+    }
+
+    window.addEventListener("storage", handleThemeChange);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("storage", handleThemeChange);
+    };
+  }, []);
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const textFieldSx = {
+    "& .MuiInput-input": {
+      color: isDarkMode ? "white" : "black",
+      fontSize: "0.875rem",
+    },
+    "& .MuiInput-underline:before": {
+      borderBottomColor: isDarkMode ? "rgba(255,255,255,0.3)" : "black",
+    },
+    "& .MuiInput-underline:hover:before": {
+      borderBottomColor: isDarkMode ? "rgba(255,255,255,0.5)" : "black",
+    },
+    "& .MuiInput-underline:after": {
+      borderBottomColor: isDarkMode ? "white" : "black",
+    },
+    "& .MuiInputBase-input::placeholder": {
+      color: isDarkMode ? "rgba(255,255,255,0.7)" : "rgba(0,0,0,0.7)",
+      opacity: 1,
+    },
+    "& .MuiFormLabel-root": {
+      color: isDarkMode ? "rgba(255,255,255,0.7)" : "black",
+      paddingLeft: "8px",
+      fontSize: "0.875rem",
+    },
+    "& .MuiFormLabel-root.Mui-focused": {
+      color: isDarkMode ? "white" : "black",
+    },
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -43,7 +96,8 @@ const ContactUsMobile = () => {
         <div
           className="w-full px-4 py-6 rounded-lg"
           style={{
-            backgroundImage: 'url("/Home/Frame_161.svg")',
+            backgroundImage: `url('${isDarkMode ? '/Home/Frame_161.svg' : '/Home/Frame_163_Light.svg'}')`,
+            backgroundColor: "transparent",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
@@ -60,33 +114,7 @@ const ContactUsMobile = () => {
               name="firstName"
               onChange={handleChange}
               value={formData.firstName}
-              sx={{
-                "& .MuiInput-input": {
-                  color: "white",
-                  fontSize: "0.875rem",
-                },
-                "& .MuiInput-underline:before": {
-                  borderBottomColor: "rgba(255,255,255,0.3)",
-                },
-                "& .MuiInput-underline:hover:before": {
-                  borderBottomColor: "rgba(255,255,255,0.5)",
-                },
-                "& .MuiInput-underline:after": {
-                  borderBottomColor: "white",
-                },
-                "& .MuiInputBase-input::placeholder": {
-                  color: "rgba(255,255,255,0.7)",
-                  opacity: 1,
-                },
-                "& .MuiFormLabel-root": {
-                  color: "rgba(255,255,255,0.7)",
-                  paddingLeft: "8px",
-                  fontSize: "0.875rem",
-                },
-                "& .MuiFormLabel-root.Mui-focused": {
-                  color: "white",
-                },
-              }}
+              sx={textFieldSx}
             />
 
             <TextField
@@ -98,33 +126,7 @@ const ContactUsMobile = () => {
               name="lastName"
               onChange={handleChange}
               value={formData.lastName}
-              sx={{
-                "& .MuiInput-input": {
-                  color: "white",
-                  fontSize: "0.875rem",
-                },
-                "& .MuiInput-underline:before": {
-                  borderBottomColor: "rgba(255,255,255,0.3)",
-                },
-                "& .MuiInput-underline:hover:before": {
-                  borderBottomColor: "rgba(255,255,255,0.5)",
-                },
-                "& .MuiInput-underline:after": {
-                  borderBottomColor: "white",
-                },
-                "& .MuiInputBase-input::placeholder": {
-                  color: "rgba(255,255,255,0.7)",
-                  opacity: 1,
-                },
-                "& .MuiFormLabel-root": {
-                  color: "rgba(255,255,255,0.7)",
-                  paddingLeft: "8px",
-                  fontSize: "0.875rem",
-                },
-                "& .MuiFormLabel-root.Mui-focused": {
-                  color: "white",
-                },
-              }}
+              sx={textFieldSx}
             />
 
             <TextField
@@ -136,33 +138,7 @@ const ContactUsMobile = () => {
               name="email"
               onChange={handleChange}
               value={formData.email}
-              sx={{
-                "& .MuiInput-input": {
-                  color: "white",
-                  fontSize: "0.875rem",
-                },
-                "& .MuiInput-underline:before": {
-                  borderBottomColor: "rgba(255,255,255,0.3)",
-                },
-                "& .MuiInput-underline:hover:before": {
-                  borderBottomColor: "rgba(255,255,255,0.5)",
-                },
-                "& .MuiInput-underline:after": {
-                  borderBottomColor: "white",
-                },
-                "& .MuiInputBase-input::placeholder": {
-                  color: "rgba(255,255,255,0.7)",
-                  opacity: 1,
-                },
-                "& .MuiFormLabel-root": {
-                  color: "rgba(255,255,255,0.7)",
-                  paddingLeft: "8px",
-                  fontSize: "0.875rem",
-                },
-                "& .MuiFormLabel-root.Mui-focused": {
-                  color: "white",
-                },
-              }}
+              sx={textFieldSx}
             />
 
             <TextField
@@ -174,33 +150,7 @@ const ContactUsMobile = () => {
               name="phone"
               onChange={handleChange}
               value={formData.phone}
-              sx={{
-                "& .MuiInput-input": {
-                  color: "white",
-                  fontSize: "0.875rem",
-                },
-                "& .MuiInput-underline:before": {
-                  borderBottomColor: "rgba(255,255,255,0.3)",
-                },
-                "& .MuiInput-underline:hover:before": {
-                  borderBottomColor: "rgba(255,255,255,0.5)",
-                },
-                "& .MuiInput-underline:after": {
-                  borderBottomColor: "white",
-                },
-                "& .MuiInputBase-input::placeholder": {
-                  color: "rgba(255,255,255,0.7)",
-                  opacity: 1,
-                },
-                "& .MuiFormLabel-root": {
-                  color: "rgba(255,255,255,0.7)",
-                  paddingLeft: "8px",
-                  fontSize: "0.875rem",
-                },
-                "& .MuiFormLabel-root.Mui-focused": {
-                  color: "white",
-                },
-              }}
+              sx={textFieldSx}
             />
 
             {/* Details Field */}
@@ -214,33 +164,7 @@ const ContactUsMobile = () => {
               name="details"
               onChange={handleChange}
               value={formData.details}
-              sx={{
-                "& .MuiInput-input": {
-                  color: "white",
-                  fontSize: "0.875rem",
-                },
-                "& .MuiInput-underline:before": {
-                  borderBottomColor: "rgba(255,255,255,0.3)",
-                },
-                "& .MuiInput-underline:hover:before": {
-                  borderBottomColor: "rgba(255,255,255,0.5)",
-                },
-                "& .MuiInput-underline:after": {
-                  borderBottomColor: "white",
-                },
-                "& .MuiInputBase-input::placeholder": {
-                  color: "rgba(255,255,255,0.7)",
-                  opacity: 1,
-                },
-                "& .MuiFormLabel-root": {
-                  color: "rgba(255,255,255,0.7)",
-                  paddingLeft: "8px",
-                  fontSize: "0.875rem",
-                },
-                "& .MuiFormLabel-root.Mui-focused": {
-                  color: "white",
-                },
-              }}
+              sx={textFieldSx}
             />
 
             {/* Submit Button */}

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
 type PortfolioMobileProps = {
@@ -25,13 +25,39 @@ const defaultPortfolioData = [
 ];
 
 const PortfolioMobile = ({ service }: PortfolioMobileProps) => {
+  const [isDarkMode, setIsDarkMode] = useState(true);
   const [clickedImageId, setClickedImageId] = useState<string | null>(null);
+
+  useEffect(() => {
+    const theme = typeof window !== "undefined" ? localStorage.getItem("ads_theme") : null;
+    setIsDarkMode(theme !== "light");
+
+    const handleThemeChange = () => {
+      const theme = typeof window !== "undefined" ? localStorage.getItem("ads_theme") : null;
+      setIsDarkMode(theme !== "light");
+    };
+
+    const observer = new MutationObserver(handleThemeChange);
+    const htmlElement = typeof document !== "undefined" ? document.documentElement : null;
+
+    if (htmlElement) {
+      observer.observe(htmlElement, { attributes: true, attributeFilter: ["class"] });
+    }
+
+    window.addEventListener("storage", handleThemeChange);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("storage", handleThemeChange);
+    };
+  }, []);
 
   const images = service.portfolioData || defaultPortfolioData;
 
   return (
     <section className="sm:hidden my-10 py-3" style={{
-        backgroundImage: 'url("/Home/CTA.svg")',
+        backgroundImage: `url('${isDarkMode ? '/Home/CTA.svg' : '/Home/Frame_167_Light.svg'}')`,
+        backgroundColor: "transparent",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
     }}>
