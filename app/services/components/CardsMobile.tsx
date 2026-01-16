@@ -21,7 +21,7 @@ const CardsMobile = ({ service }: CardsMobileProps) => {
       <div className="flex flex-col gap-4 w-full">
         {allCards.map((card, index) => (
           <div
-            key={index}
+            key={`${card.title}-${index}`}
             className="relative rounded-xl w-full border border-white/10 p-4 transition overflow-hidden"
             style={{
               backgroundImage:
@@ -32,7 +32,7 @@ const CardsMobile = ({ service }: CardsMobileProps) => {
             }}
           >
             <div className="flex flex-col">
-              <div className="flex justify-center mb-3">
+              <div className="flex justify-center mb-3" key="svg-icon">
                 {card.svg}
               </div>
               <div className="flex flex-col">

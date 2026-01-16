@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import PortfolioMobile from "./PortfolioMobile";
 
@@ -27,19 +27,48 @@ const defaultPortfolioData = [
 
 const Portfolio = ({ service }: PortfolioProps) => {
   const [clickedImageId, setClickedImageId] = useState<string | null>(null);
+  const [isDarkMode, setIsDarkMode] = useState(true);
+
+  useEffect(() => {
+    // Initial theme detection
+    const theme = typeof window !== "undefined" ? localStorage.getItem("ads_theme") : null;
+    setIsDarkMode(theme !== "light");
+
+    // Listen for theme changes via document class mutations
+    const handleThemeChange = () => {
+      const theme = typeof window !== "undefined" ? localStorage.getItem("ads_theme") : null;
+      setIsDarkMode(theme !== "light");
+    };
+
+    // Watch for class changes on document element
+    const observer = new MutationObserver(handleThemeChange);
+    const htmlElement = typeof document !== "undefined" ? document.documentElement : null;
+    
+    if (htmlElement) {
+      observer.observe(htmlElement, { attributes: true, attributeFilter: ["class"] });
+    }
+
+    // Also listen to storage changes (for cross-tab updates)
+    window.addEventListener("storage", handleThemeChange);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("storage", handleThemeChange);
+    };
+  }, []);
 
   const images = service.portfolioData || defaultPortfolioData;
 
   return (
     <>
       <PortfolioMobile service={service} />
-      <section className="hidden sm:block my-20 py-10" style={{
-        backgroundImage: 'url("/Home/CTA.svg")',
+      <section className="hidden sm:block py-10" style={{
+        backgroundImage: `url("${isDarkMode ? '/Home/CTA.svg' : '/Home/Frame_169_Light.svg'}")`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
     }}>
       {/* Heading */}
-      <div className="text-center mb-16">
+      <div className="text-center mt-10 mb-8 px-4">
         <p className="text-xl font-medium text-[#4C8C74] mb-2">Our Portfolio</p>
         <h2 className="text-4xl md:text-4xl font-semibold text-white">
           Real Websites, Not Just Mockups

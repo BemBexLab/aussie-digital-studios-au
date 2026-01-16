@@ -1,10 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import Divider from "./Divider";
-import ProcessCards from "./ProcessCards";
 
-type OurProcessProps = {
+type ProcessCardsSmProps = {
   service: {
     processCardData?: Array<{
       image: string;
@@ -14,7 +12,7 @@ type OurProcessProps = {
   };
 };
 
-const OurProcess = ({ service }: OurProcessProps) => {
+const ProcessCardsSm = ({ service }: ProcessCardsSmProps) => {
   const [isDarkMode, setIsDarkMode] = useState(true);
 
   useEffect(() => {
@@ -44,25 +42,40 @@ const OurProcess = ({ service }: OurProcessProps) => {
       window.removeEventListener("storage", handleThemeChange);
     };
   }, []);
+
   return (
     <section>
-      <div className="flex flex-col mt-30 justify-center">
-        {/* Heading */}
-        <div className="text-center mb-16">
-          <p className="text-xl font-medium text-[#4C8C74] mb-2">Our Process</p>
-          <h2 className="text-4xl md:text-4xl font-semibold text-white">
-            Our Proven 3-Step Process to Grow Your<br></br> Brand with Web
-            Design and Development
-          </h2>
-        </div>
-
-        {/* Divider */}
-        <Divider />
-
-        <ProcessCards service={service}/>
+      <div className="flex flex-row justify-center gap-5 mb-10">
+        {service.processCardData?.map((item, index) => (
+          <div key={index} className="flex flex-col items-start">
+            <div
+              className="w-[360px] h-[250px] relative my-8 flex flex-col items-start justify-start p-6"
+              style={{
+                backgroundImage: `url("${isDarkMode ? '/Home/mini_card_dark.svg' : '/Home/Frame_163_Light.svg'}")`,
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+              }}
+            >
+              <Image
+                src={item.image}
+                alt={`Process Step ${index + 1}`}
+                width={120}
+                height={120}
+                className="object-contain"
+              />
+              <h2 className={`text-lg ${isDarkMode ? 'text-yellow-500' : 'text-[#3A6EA5]'} mt-2`}>
+                {item.heading}
+              </h2>
+              <p className={`text-md ${isDarkMode ? 'text-white' : 'text-[#777777]'} text-xs`}>
+                {item.paragraph}
+              </p>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
 };
 
-export default OurProcess;
+export default ProcessCardsSm;

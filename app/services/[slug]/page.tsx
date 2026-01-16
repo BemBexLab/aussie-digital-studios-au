@@ -247,12 +247,21 @@ const services = [
     processCardData: [
       {
         image: "/Services/01.svg",
+        heading: "Book a Strategy Call",
+        paragraph:
+          "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
       },
       {
         image: "/Services/02.svg",
+        heading: "Website Audit & Strategy",
+        paragraph:
+          "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
       },
       {
         image: "/Services/03.svg",
+        heading: "Build, Launch & Optimize",
+        paragraph:
+          "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
       },
     ],
     pricingCardData: [

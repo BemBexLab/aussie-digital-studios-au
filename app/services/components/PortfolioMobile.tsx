@@ -30,7 +30,7 @@ const PortfolioMobile = ({ service }: PortfolioMobileProps) => {
   const images = service.portfolioData || defaultPortfolioData;
 
   return (
-    <section className="sm:hidden my-10 py-6" style={{
+    <section className="sm:hidden my-10 py-3" style={{
         backgroundImage: 'url("/Home/CTA.svg")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
@@ -66,7 +66,7 @@ const PortfolioMobile = ({ service }: PortfolioMobileProps) => {
             transform: scale(1.15);
           }
         `}</style>
-        <div className="overflow-hidden mt-6">
+        <div className="overflow-hidden mt-10">
           <div className="flex flex-row gap-2 portfolio-scroll-mobile">
             {images.map((image) => (
               <Image

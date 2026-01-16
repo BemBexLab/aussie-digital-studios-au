@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import CardsMobile from "./CardsMobile";
 
@@ -14,6 +16,35 @@ type CardsProps = {
 
 const Cards = ({ service }: CardsProps) => {
   const allCards = service.strategicCardData || [];
+  const [isDarkMode, setIsDarkMode] = useState(true);
+
+  useEffect(() => {
+    // Initial theme detection
+    const theme = typeof window !== "undefined" ? localStorage.getItem("ads_theme") : null;
+    setIsDarkMode(theme !== "light");
+
+    // Listen for theme changes via document class mutations
+    const handleThemeChange = () => {
+      const theme = typeof window !== "undefined" ? localStorage.getItem("ads_theme") : null;
+      setIsDarkMode(theme !== "light");
+    };
+
+    // Watch for class changes on document element
+    const observer = new MutationObserver(handleThemeChange);
+    const htmlElement = typeof document !== "undefined" ? document.documentElement : null;
+    
+    if (htmlElement) {
+      observer.observe(htmlElement, { attributes: true, attributeFilter: ["class"] });
+    }
+
+    // Also listen to storage changes (for cross-tab updates)
+    window.addEventListener("storage", handleThemeChange);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("storage", handleThemeChange);
+    };
+  }, []);
 
   return (
     <>
@@ -26,7 +57,7 @@ const Cards = ({ service }: CardsProps) => {
       <div
         className="hidden sm:flex flex-col items-center justify-center w-full h-[750px] relative"
         style={{
-          backgroundImage: 'url("/Home/CTA.svg")',
+          backgroundImage: `url("${isDarkMode ? '/Home/CTA.svg' : '/Home/Frame_169_Light.svg'}")`,
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundSize: "cover",
@@ -48,7 +79,7 @@ const Cards = ({ service }: CardsProps) => {
         {/* First 4 cards */}
         {allCards.slice(0, 4).map((card, index) => (
           <div
-            key={index}
+            key={`${card.title}-${index}`}
             className="group relative rounded-2xl w-full max-w-[280px] border border-white/10 p-6 transition overflow-hidden"
             style={{
               backgroundImage:
@@ -59,10 +90,10 @@ const Cards = ({ service }: CardsProps) => {
             }}
           >
             <div className="flex flex-col">
-              {card.svg}
+              <div key="svg-icon">{card.svg}</div>
               <div className="mt-4 flex flex-col">
-                <h2 className="text-xl text-yellow-500">{card.title}</h2>
-                <p className="font-light">{card.desc}</p>
+                <h2 className={`text-xl ${isDarkMode ? 'text-yellow-500' : 'text-[#3A6EA5]'}`}>{card.title}</h2>
+                <p className={`font-light ${isDarkMode ? 'text-white' : 'text-[#777777]'}`}>{card.desc}</p>
               </div>
             </div>
           </div>
@@ -73,7 +104,7 @@ const Cards = ({ service }: CardsProps) => {
         {/* Remaining cards */}
         {allCards.slice(4).map((card, index) => (
           <div
-            key={index + 4}
+            key={`${card.title}-${index + 4}`}
             className="group relative rounded-2xl w-full max-w-[280px] border border-white/10 p-6 transition overflow-hidden"
             style={{
               backgroundImage:
@@ -84,10 +115,10 @@ const Cards = ({ service }: CardsProps) => {
             }}
           >
             <div className="flex flex-col">
-              {card.svg}
+              <div key="svg-icon">{card.svg}</div>
               <div className="mt-4 flex flex-col">
-                <h2 className="text-xl text-yellow-500">{card.title}</h2>
-                <p className="font-light">{card.desc}</p>
+                <h2 className={`text-xl ${isDarkMode ? 'text-yellow-500' : 'text-[#3A6EA5]'}`}>{card.title}</h2>
+                <p className={`font-light ${isDarkMode ? 'text-white' : 'text-[#777777]'}`}>{card.desc}</p>
               </div>
             </div>
           </div>
