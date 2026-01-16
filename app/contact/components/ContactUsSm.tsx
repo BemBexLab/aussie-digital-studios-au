@@ -1,7 +1,9 @@
+"use client";
+
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
-const ContactMobile = () => {
+const ContactUsSm = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
 
   useEffect(() => {
@@ -27,8 +29,9 @@ const ContactMobile = () => {
       window.removeEventListener("storage", handleThemeChange);
     };
   }, []);
+
   return (
-    <div className="sm:hidden relative w-full mt-12 py-8 px-4 overflow-x-hidden">
+    <div className="hidden sm:block md:hidden relative w-full mt-12 py-8 px-4 overflow-x-hidden">
       {/* Main Content */}
       <div className="relative w-full">
         {/* Stacked layout */}
@@ -38,8 +41,8 @@ const ContactMobile = () => {
             <Image
               src="/Contact/Rectangle_1.png"
               alt="Get in Touch Illustration"
-              width={280}
-              height={280}
+              width={300}
+              height={300}
               className="w-full h-auto object-cover rounded-lg"
             />
             {/* Move shape inside bounds on mobile */}
@@ -47,8 +50,8 @@ const ContactMobile = () => {
               <Image
                 src="/Contact/shape.png"
                 alt="decorative shape"
-                width={60}
-                height={60}
+                width={70}
+                height={70}
                 className="object-contain"
               />
             </div>
@@ -56,7 +59,7 @@ const ContactMobile = () => {
 
           {/* Form Section */}
           <div
-            className="relative w-full bg-gray-900 bg-opacity-80 backdrop-blur rounded-lg p-4"
+            className="relative w-full bg-gray-900 bg-opacity-80 backdrop-blur rounded-lg p-5 border border-gray-700"
             style={{
               backgroundImage: isDarkMode
                 ? "radial-gradient(circle at top right, rgba(255, 255, 255, 0.1) 0%, transparent 50%), url('/Home/Frame_161.svg')"
@@ -66,17 +69,17 @@ const ContactMobile = () => {
               backgroundPosition: "center",
             }}
           >
-            {/* Smaller decorative shape */}
+            {/* Decorative shape */}
             <div className="absolute -top-6 -right-4 pointer-events-none opacity-60">
               <Image
                 src="/Geometric_Shape_Silver.png"
                 alt="decorative geometric shape"
-                width={60}
-                height={60}
+                width={70}
+                height={70}
                 className=""
               />
             </div>
-            <h1 className="text-2xl sm:text-3xl font-bold text-white mb-4 text-center">Get In Touch</h1>
+            <h1 className="text-2xl font-bold text-white mb-5 text-center">Get In Touch</h1>
             <form className="space-y-4">
               <input
                 type="text"
@@ -111,11 +114,11 @@ const ContactMobile = () => {
               />
               <textarea
                 placeholder="Details"
-                rows={3}
+                rows={4}
                 className="w-full bg-transparent border-b border-gray-500 text-white text-sm placeholder-gray-500 pb-2 focus:outline-none focus:border-teal-400 resize-none"
               ></textarea>
               <div className="pt-2 text-center">
-                <button className="px-5 py-2 text-xs sm:text-sm bg-teal-500 hover:bg-blue-400 text-white rounded-full transition-all inline-flex items-center justify-center group">
+                <button className="px-5 py-2 text-sm bg-teal-500 hover:bg-blue-400 text-white rounded-full transition-all inline-flex items-center justify-center group">
                   <span>Submit</span>
                   <span className="ml-2 relative w-4 h-4 flex items-center justify-center">
                     <span className="absolute inset-0 bg-black rounded-full" aria-hidden="true"></span>
@@ -187,4 +190,4 @@ const ContactMobile = () => {
   );
 };
 
-export default ContactMobile;
+export default ContactUsSm;

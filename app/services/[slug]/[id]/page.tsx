@@ -1,9 +1,13 @@
+import Hero from '@/components/Hero'
 import React from 'react'
 
-const page = () => {
+const ServiceInnerPage = () => {
   return (
-    <div>page</div>
+    <section>
+      <Hero H='' />
+      
+    </section>
   )
 }
 
-export default page
+export default ServiceInnerPage
