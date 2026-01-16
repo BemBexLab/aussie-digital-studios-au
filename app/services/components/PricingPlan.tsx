@@ -1,55 +1,67 @@
 import React from "react";
+import PricingPlanMobile from "./PricingPlanMobile";
 
-const cardData = [
+type PricingPlanProps = {
+  service: {
+    pricingCardData?: Array<{
+      title: string;
+      price: string;
+      discountedFrom: string;
+      includes: string[];
+    }>;
+  };
+};
+
+const defaultPricingData = [
   {
-    title: "Basic Website Package",
-    price: "$229",
-    discountedFrom: "$499",
-    includes : [
-      "2 Custom Logo Design Concepts",
-      "1 Dedicated Designer",
-      "4 REVISIONS",
-      "48 to 72 hours TAT",
-      "100% Unique Design Guarantee",
+    title: "Basic Package",
+    price: "$99",
+    discountedFrom: "$199",
+    includes: [
+      "5 Revisions",
+      "24 Hours Delivery",
+      "Unique Design",
       "100% Satisfaction Guarantee",
-      "100% Ownership Rights",
-      "100% Money Back Guarantee"
     ],
   },
   {
-    title: "Basic Website Package",
-    price: "$229",
-    discountedFrom: "$499",
-    includes : [
-      "5 Custom Logo Design Concepts",
-      "By 2 Designers",
-      "UNLIMITED Revisions",
-      "48 to 72 hours TAT",
-      "100% Unique Design Guarantee",
+    title: "Standard Package",
+    price: "$199",
+    discountedFrom: "$399",
+    includes: [
+      "Unlimited Revisions",
+      "48 Hours Delivery",
+      "Unique Design",
       "100% Satisfaction Guarantee",
-      "100% Ownership Rights",
-      "100% Money Back Guarantee"
+      "Ownership Rights",
     ],
   },
   {
-    title: "Basic Website Package",
-    price: "$229",
-    discountedFrom: "$499",
-    includes : [
-      "UNLIMITED Logo Design Concepts",
-      "By 4 Designers",
-      "UNLIMITED Revisions",
-      "Stationary Design (Business Card, Letterhead, Envelope)",
-      "48 to 72 hours TAT",
-      "FREE MS Word Letterhead",
-      "All Final Files Format (AI, PSD, EPS, PNG, GIF, jpeg, PDF)",
+    title: "Premium Package",
+    price: "$299",
+    discountedFrom: "$599",
+    includes: [
+      "Unlimited Revisions",
+      "72 Hours Delivery",
+      "Unique Design",
+      "100% Satisfaction Guarantee",
+      "Ownership Rights",
+      "Free Updates",
     ],
   },
 ];
 
-const PricingPlan = () => {
+const PricingPlan = ({ service }: PricingPlanProps) => {
+  const cardData = service.pricingCardData || defaultPricingData;
   return (
-    <div className="text-white mt-20 py-0">
+    <>
+      {/* Mobile View */}
+      <div className="sm:hidden">
+        <PricingPlanMobile service={service} />
+      </div>
+
+      {/* Desktop View */}
+      <div className="hidden sm:block text-white mt-20 py-0">
       <div className="max-w-7xl mx-auto px-4 justify-center">
         <p className="text-center my-[7px] text-xl font-medium text-[#4C8C74]">
           Pricing Plans
@@ -167,7 +179,8 @@ const PricingPlan = () => {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 };
 

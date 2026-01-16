@@ -2,7 +2,15 @@ import React from "react";
 import Image from "next/image";
 import Divider from "./Divider";
 
-const OurProcess = () => {
+type OurProcessProps = {
+  service: {
+    processCardData?: Array<{
+      image: string;
+    }>;
+  };
+};
+
+const OurProcess = ({ service }: OurProcessProps) => {
   return (
     <section>
       <div className="flex flex-col mt-30 justify-center">
@@ -19,27 +27,9 @@ const OurProcess = () => {
         <Divider />
 
         <div className="flex flex-row justify-center gap-5 mb-10">
-          <Image
-            className="w-[400px] h-[400px]"
-            src="/services/01.svg"
-            alt="Our Process"
-            width={1200}
-            height={1500}
-          />
-          <Image
-            className="w-[400px] h-[400px]"
-            src="/services/02.svg"
-            alt="Our Process"
-            width={1200}
-            height={1500}
-          />
-          <Image
-            className="w-[400px] h-[400px]"
-            src="/services/03.svg"
-            alt="Our Process"
-            width={1200}
-            height={1500}
-          />
+          {service.processCardData?.map((item, index) => (
+            <div key={index} className="flex flex-col items-center"></div>
+          ))}
         </div>
       </div>
     </section>

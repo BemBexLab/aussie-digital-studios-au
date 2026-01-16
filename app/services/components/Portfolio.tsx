@@ -4,23 +4,35 @@ import React, { useState } from "react";
 import Image from "next/image";
 import PortfolioMobile from "./PortfolioMobile";
 
-const Portfolio = () => {
+type PortfolioProps = {
+  service: {
+    portfolioData?: Array<{
+      id: string;
+      src: string;
+      translateY: string;
+    }>;
+  };
+};
+
+const defaultPortfolioData = [
+  { id: "1", src: "/services/web_01.svg", translateY: "-translate-y-25" },
+  { id: "2", src: "/services/web_02.svg", translateY: "" },
+  { id: "3", src: "/services/web_02.svg", translateY: "-translate-y-25" },
+  { id: "4", src: "/services/web_03.svg", translateY: "" },
+  { id: "5", src: "/services/web_04.svg", translateY: "-translate-y-25" },
+  { id: "6", src: "/services/web_05.svg", translateY: "" },
+  { id: "7", src: "/services/web_06.svg", translateY: "-translate-y-25" },
+  { id: "8", src: "/services/web_07.svg", translateY: "" },
+];
+
+const Portfolio = ({ service }: PortfolioProps) => {
   const [clickedImageId, setClickedImageId] = useState<string | null>(null);
 
-  const images = [
-    { id: "1", src: "/services/web_01.svg", translateY: "-translate-y-25" },
-    { id: "2", src: "/services/web_02.svg", translateY: "" },
-    { id: "3", src: "/services/web_02.svg", translateY: "-translate-y-25" },
-    { id: "4", src: "/services/web_03.svg", translateY: "" },
-    { id: "5", src: "/services/web_04.svg", translateY: "-translate-y-25" },
-    { id: "6", src: "/services/web_05.svg", translateY: "" },
-    { id: "7", src: "/services/web_06.svg", translateY: "-translate-y-25" },
-    { id: "8", src: "/services/web_07.svg", translateY: "" },
-  ];
+  const images = service.portfolioData || defaultPortfolioData;
 
   return (
     <>
-      <PortfolioMobile />
+      <PortfolioMobile service={service} />
       <section className="hidden sm:block my-20 py-10" style={{
         backgroundImage: 'url("/Home/CTA.svg")',
         backgroundSize: 'cover',

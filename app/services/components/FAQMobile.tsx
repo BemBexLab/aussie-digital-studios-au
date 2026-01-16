@@ -2,7 +2,6 @@
 
 import React from "react";
 import { Poppins } from "next/font/google";
-import FAQMobile from "./FAQMobile";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -10,7 +9,7 @@ const poppins = Poppins({
   display: "swap",
 });
 
-type FAQProps = {
+type FAQMobileProps = {
   service: {
     faqData?: Array<{
       question: string;
@@ -42,29 +41,21 @@ const defaultFAQs = [
   },
 ];
 
-export default function FAQ({ service }: FAQProps) {
+export default function FAQMobile({ service }: FAQMobileProps) {
   const faqs = service.faqData || defaultFAQs;
   const [openIndex, setOpenIndex] = React.useState<number | null>(null);
 
   return (
-    <>
-      {/* Mobile View */}
-      <div className="sm:hidden">
-        <FAQMobile service={service} />
-      </div>
-
-      {/* Desktop View */}
-      <div className="hidden sm:block">
-    <div className="mx-4 sm:mx-8 md:mx-16"> {/* Responsive margin */}
+    <div className="mx-3 sm:mx-4"> {/* Compact mobile margin */}
       <div
-        className={`${poppins.className} max-w-screen-2xl mx-auto flex flex-col items-center justify-center px-4 sm:px-6 md:px-16 lg:px-32`}
+        className={`${poppins.className} flex flex-col items-center justify-center px-3`}
       >
-        <h2 className="text-3xl font-semibold text-center">
+        <h2 className="text-2xl font-semibold text-center mb-6">
           Looking for answers?
         </h2>
 
         <div className="w-full">
-          {faqs.map((faq: { question: string; answer: string }, index: number) => {
+          {faqs.map((faq, index) => {
             const isOpen = openIndex === index;
             const panelId = `faq-panel-${index}`;
             const buttonId = `faq-button-${index}`;
@@ -72,25 +63,25 @@ export default function FAQ({ service }: FAQProps) {
             return (
               <div
                 key={faq.question}
-                className="w-full max-w-screen-xl mx-auto border-b border-slate-200 py-6 md:py-8" // Slightly less vertical padding on mobile
+                className="w-full border-b border-slate-200 py-4" // Compact padding for mobile
               >
                 <button
                   id={buttonId}
                   aria-controls={panelId}
                   aria-expanded={isOpen}
                   onClick={() => setOpenIndex(isOpen ? null : index)}
-                  className="w-full flex items-center justify-between text-left cursor-pointer"
+                  className="w-full flex items-center justify-between text-left cursor-pointer gap-2"
                 >
-                  <h3 className="text-base font-medium">{faq.question}</h3>
+                  <h3 className="text-sm font-medium flex-1">{faq.question}</h3>
                   <svg
-                    width="18"
-                    height="18"
+                    width="16"
+                    height="16"
                     viewBox="0 0 18 18"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                     className={`${
                       isOpen ? "rotate-180" : ""
-                    } transition-transform duration-200 ease-in-out`}
+                    } transition-transform duration-200 ease-in-out flex-shrink-0`}
                   >
                     <path
                       d="m4.5 7.2 3.793 3.793a1 1 0 0 0 1.414 0L13.5 7.2"
@@ -106,8 +97,8 @@ export default function FAQ({ service }: FAQProps) {
                   id={panelId}
                   role="region"
                   aria-labelledby={buttonId}
-                  className={`text-sm text-slate-500 transition-all duration-200 ease-in-out overflow-hidden ${
-                    isOpen ? "opacity-100 max-h-40 mt-3" : "opacity-0 max-h-0"
+                  className={`text-xs text-slate-500 transition-all duration-200 ease-in-out overflow-hidden ${
+                    isOpen ? "opacity-100 max-h-32 mt-2" : "opacity-0 max-h-0"
                   }`}
                 >
                   {faq.answer}
@@ -117,9 +108,7 @@ export default function FAQ({ service }: FAQProps) {
           })}
         </div>
       </div>
-      <div className="my-20 md:my-40"></div> {/* Reduce bottom spacing on mobile */}
+      <div className="my-10"></div> {/* Compact bottom spacing for mobile */}
     </div>
-      </div>
-    </>
   );
 }
