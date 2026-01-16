@@ -14,6 +14,7 @@ import ContactUs from "../components/ContactUs";
 import PricingPlan from "../components/PricingPlan";
 import CustomPlan from "../components/CustomPlan";
 import ServiceBody from "../components/ServiceBody";
+import OurProcess from "../components/OurProcess";
 
 // Sample data (can also fetch from API or database)
 const services = [
@@ -378,6 +379,7 @@ export default async function ServicePage({
       <ServiceBody service={service} />
       <Cards />
       <WhyChoose />
+      <OurProcess />
       <br className="md:hidden" />
       <br className="md:hidden" />
       <br className="md:hidden" />

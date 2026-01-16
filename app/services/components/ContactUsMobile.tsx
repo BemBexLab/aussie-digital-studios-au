@@ -1,10 +1,9 @@
 "use client";
 
-import { Button, TextField } from "@mui/material";
+import { TextField } from "@mui/material";
 import React, { useState } from "react";
-import ContactUsMobile from "./ContactUsMobile";
 
-const ContactUs = () => {
+const ContactUsMobile = () => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -13,12 +12,6 @@ const ContactUs = () => {
     details: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Add your form submission logic here
-  };
-
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -26,30 +19,29 @@ const ContactUs = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log("Form submitted:", formData);
+  };
+
   return (
-    <>
-      <ContactUsMobile />
-      <section className="hidden sm:block my-20 justify-center items-center mx-20">
-      <div className="flex flex-row mt-10">
-        <div
-          className="w-[550px] h-[390px] rounded-2xl"
-        >
-          <div className="flex flex-col">
-            <p className="text-xl text-[#4C8C74] font-semibold">Contact Us</p>
-            <h2 className="font-semibold text-white text-4xl mt-2 uppercase">
-              Looking For Best Design &<br></br> Development Agency In Uk?
-            </h2>
-            <p className="text-md text-[#AAAAAA] mt-5">
-              Ready to bring your business idea to life? Let our experts work for
-              you and create a<br></br> custom website that echoes your brand and
-              engages your audience.
-            </p>
-          </div>
+    <section className="sm:hidden my-8 px-4">
+      <div className="flex flex-col space-y-6">
+        {/* Text Content */}
+        <div className="flex flex-col space-y-3">
+          <p className="text-xs sm:text-sm text-[#4C8C74] font-semibold">Contact Us</p>
+          <h2 className="font-semibold text-white text-xl sm:text-2xl uppercase leading-tight">
+            Looking For Best Design & Development Agency In Uk?
+          </h2>
+          <p className="text-xs sm:text-sm text-[#AAAAAA]">
+            Ready to bring your business idea to life? Let our experts work for
+            you and create a custom website that echoes your brand and engages your audience.
+          </p>
         </div>
 
         {/* Contact Form */}
         <div
-          className="w-[700px] h-[390px] px-7 py-7 ml-10 rounded-2xl"
+          className="w-full px-4 py-6 rounded-lg"
           style={{
             backgroundImage: 'url("/Home/Frame_161.svg")',
             backgroundSize: "cover",
@@ -57,17 +49,21 @@ const ContactUs = () => {
             backgroundPosition: "center",
           }}
         >
-          <div className="flex grid grid-cols-2 gap-4">
-            {/* First Name */}
+          <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
+            {/* Single Column Fields */}
             <TextField
-              id="standard-search"
+              id="firstName"
               label="First Name"
               type="text"
               variant="standard"
               fullWidth
+              name="firstName"
+              onChange={handleChange}
+              value={formData.firstName}
               sx={{
                 "& .MuiInput-input": {
                   color: "white",
+                  fontSize: "0.875rem",
                 },
                 "& .MuiInput-underline:before": {
                   borderBottomColor: "rgba(255,255,255,0.3)",
@@ -85,6 +81,7 @@ const ContactUs = () => {
                 "& .MuiFormLabel-root": {
                   color: "rgba(255,255,255,0.7)",
                   paddingLeft: "8px",
+                  fontSize: "0.875rem",
                 },
                 "& .MuiFormLabel-root.Mui-focused": {
                   color: "white",
@@ -92,16 +89,19 @@ const ContactUs = () => {
               }}
             />
 
-            {/* Last Name */}
             <TextField
-              id="standard-search"
+              id="lastName"
               label="Last Name"
               type="text"
               variant="standard"
               fullWidth
+              name="lastName"
+              onChange={handleChange}
+              value={formData.lastName}
               sx={{
                 "& .MuiInput-input": {
                   color: "white",
+                  fontSize: "0.875rem",
                 },
                 "& .MuiInput-underline:before": {
                   borderBottomColor: "rgba(255,255,255,0.3)",
@@ -119,6 +119,7 @@ const ContactUs = () => {
                 "& .MuiFormLabel-root": {
                   color: "rgba(255,255,255,0.7)",
                   paddingLeft: "8px",
+                  fontSize: "0.875rem",
                 },
                 "& .MuiFormLabel-root.Mui-focused": {
                   color: "white",
@@ -126,16 +127,19 @@ const ContactUs = () => {
               }}
             />
 
-            {/* Email */}
             <TextField
-              id="standard-search"
+              id="email"
               label="Email"
               type="email"
               variant="standard"
               fullWidth
+              name="email"
+              onChange={handleChange}
+              value={formData.email}
               sx={{
                 "& .MuiInput-input": {
                   color: "white",
+                  fontSize: "0.875rem",
                 },
                 "& .MuiInput-underline:before": {
                   borderBottomColor: "rgba(255,255,255,0.3)",
@@ -153,6 +157,7 @@ const ContactUs = () => {
                 "& .MuiFormLabel-root": {
                   color: "rgba(255,255,255,0.7)",
                   paddingLeft: "8px",
+                  fontSize: "0.875rem",
                 },
                 "& .MuiFormLabel-root.Mui-focused": {
                   color: "white",
@@ -160,16 +165,19 @@ const ContactUs = () => {
               }}
             />
 
-            {/* Phone */}
             <TextField
-              id="standard-search"
+              id="phone"
               label="Phone Number"
               type="number"
               variant="standard"
               fullWidth
+              name="phone"
+              onChange={handleChange}
+              value={formData.phone}
               sx={{
                 "& .MuiInput-input": {
                   color: "white",
+                  fontSize: "0.875rem",
                 },
                 "& .MuiInput-underline:before": {
                   borderBottomColor: "rgba(255,255,255,0.3)",
@@ -187,64 +195,67 @@ const ContactUs = () => {
                 "& .MuiFormLabel-root": {
                   color: "rgba(255,255,255,0.7)",
                   paddingLeft: "8px",
+                  fontSize: "0.875rem",
                 },
                 "& .MuiFormLabel-root.Mui-focused": {
                   color: "white",
                 },
               }}
             />
-          </div>
 
-          <br />
-          {/* Details Field */}
-          <TextField
-            id="standard-multiline-static"
-            label="Details"
-            multiline
-            rows={4}
-            defaultValue=""
-            variant="standard"
-            fullWidth
-            sx={{
-              "& .MuiInput-input": {
-                color: "white",
-              },
-              "& .MuiInput-underline:before": {
-                borderBottomColor: "rgba(255,255,255,0.3)",
-              },
-              "& .MuiInput-underline:hover:before": {
-                borderBottomColor: "rgba(255,255,255,0.5)",
-              },
-              "& .MuiInput-underline:after": {
-                borderBottomColor: "white",
-              },
-              "& .MuiInputBase-input::placeholder": {
-                color: "rgba(255,255,255,0.7)",
-                opacity: 1,
-              },
-              "& .MuiFormLabel-root": {
-                color: "rgba(255,255,255,0.7)",
-                paddingLeft: "8px",
-              },
-              "& .MuiFormLabel-root.Mui-focused": {
-                color: "white",
-              },
-            }}
-          />
+            {/* Details Field */}
+            <TextField
+              id="details"
+              label="Details"
+              multiline
+              rows={3}
+              variant="standard"
+              fullWidth
+              name="details"
+              onChange={handleChange}
+              value={formData.details}
+              sx={{
+                "& .MuiInput-input": {
+                  color: "white",
+                  fontSize: "0.875rem",
+                },
+                "& .MuiInput-underline:before": {
+                  borderBottomColor: "rgba(255,255,255,0.3)",
+                },
+                "& .MuiInput-underline:hover:before": {
+                  borderBottomColor: "rgba(255,255,255,0.5)",
+                },
+                "& .MuiInput-underline:after": {
+                  borderBottomColor: "white",
+                },
+                "& .MuiInputBase-input::placeholder": {
+                  color: "rgba(255,255,255,0.7)",
+                  opacity: 1,
+                },
+                "& .MuiFormLabel-root": {
+                  color: "rgba(255,255,255,0.7)",
+                  paddingLeft: "8px",
+                  fontSize: "0.875rem",
+                },
+                "& .MuiFormLabel-root.Mui-focused": {
+                  color: "white",
+                },
+              }}
+            />
 
-          <br />
-
-          {/* Submit Button */}
-          <div className="flex flex-row mt-4">
-            <button className="justify-center mt-4 px-3 w-[113px] h-[50px] text-sm bg-teal-500 text-white rounded-full hover:bg-blue-400 transition-all inline-flex items-center group flex flex-row gap-0">
-              <span className="text-md font-light ml-2">Submit</span>
-              <span className="ml-2 relative w-7 h-7 flex items-center justify-center">
+            {/* Submit Button */}
+            <button
+              type="submit"
+              className="mt-4 px-3 w-full h-[44px] text-xs sm:text-sm bg-teal-500 text-white rounded-full hover:bg-blue-400 transition-all inline-flex items-center justify-center group gap-2"
+            >
+              <span className="text-sm font-light">Submit</span>
+              <span className="relative w-5 h-5 flex items-center justify-center flex-shrink-0">
                 <span
                   className="absolute inset-0 bg-black rounded-full"
                   aria-hidden="true"
                 ></span>
                 <svg
-                  className="relative w-4 h-4 z-10 transition-transform duration-300 group-hover:rotate-45 button-arrow-svg"
+                  className="relative w-3 h-3 z-10 transition-transform duration-300 group-hover:rotate-45"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
                   aria-hidden="true"
@@ -269,12 +280,11 @@ const ContactUs = () => {
                 </svg>
               </span>
             </button>
-          </div>
+          </form>
         </div>
       </div>
-      </section>
-    </>
+    </section>
   );
 };
 
-export default ContactUs;
+export default ContactUsMobile;
