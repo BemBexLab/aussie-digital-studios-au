@@ -57,7 +57,7 @@ export default function FAQ({ service }: FAQProps) {
       <div className="hidden sm:block">
     <div className="mx-4 sm:mx-8 md:mx-16"> {/* Responsive margin */}
       <div
-        className={`${poppins.className} max-w-screen-2xl mx-auto flex flex-col items-center justify-center px-4 sm:px-6 md:px-16 lg:px-32`}
+        className={`${poppins.className} max-w-screen-2xl mx-auto mt-30 flex flex-col items-center justify-center px-4 sm:px-6 md:px-16 lg:px-32`}
       >
         <h2 className="text-3xl font-semibold text-center">
           Looking for answers?
