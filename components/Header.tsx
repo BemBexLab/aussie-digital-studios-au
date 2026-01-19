@@ -58,7 +58,7 @@ const Header = () => {
 
           {/* Desktop Nav - now next to logo */}
           <nav className="hidden md:flex space-x-6">
-            {['Home', 'About', 'Services', 'Portfolio', 'Career', 'Packages', 'Contact'].map((item) => {
+            {['Home', 'About', 'Services', 'Portfolio', 'Packages', 'Contact'].map((item) => {
               const href =
                 item === 'Home'
                   ? '/'
@@ -133,7 +133,7 @@ const Header = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-black/90 pb-4">
           <nav className="flex flex-col space-y-4 px-6 py-4">
-            {['Home', 'About', 'Services', 'Portfolio', 'Career', 'Packages', 'Contact'].map((item) => {
+            {['Home', 'About', 'Services', 'Portfolio', 'Packages', 'Contact'].map((item) => {
               const href =
                 item === 'Home'
                   ? '/'

@@ -1,14 +1,13 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import React from "react";
-import Hero from "./components/Hero";
 import PortfolioSection from "./components/PortfolioSection";
+import Hero from "@/components/Hero";
 
 const PortfolioPage = () => {
   return (
     <div>
-      <Header />
-      <Hero />
+      <Hero H="portfolio" />
       <PortfolioSection />
       <div className="flex justify-end">
         <img
@@ -19,7 +18,6 @@ const PortfolioPage = () => {
           className="relative z-10 bottom-[-103px] right-0 md:block"
         />
       </div>
-      <Footer />
     </div>
   );
 };

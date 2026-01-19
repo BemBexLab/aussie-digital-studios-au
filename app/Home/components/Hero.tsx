@@ -1,85 +1,128 @@
-// components/Hero.tsx
-import Image from "next/image";
 import ThemeToggle from "@/components/ThemeToggle";
+import React from "react";
 
 const Hero = () => {
   return (
-    <div className="overflow-x-hidden">
-      <section className="relative h-[125vh] bg-black pb-40">
-        <div
-          className="absolute inset-0 z-0"
-          style={{
-            backgroundImage: `url('/Hero Section.png')`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-          }}
-        ></div>
+    <>
+      {/* Desktop Hero (md and up) */}
+      <section
+        className="hidden md:block h-[695px] w-full relative hero-bg-section"
+        data-hero-bg
+        style={{
+          backgroundImage: "url('/Hero_Section.png')",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        {/* Theme Toggle - top right, floating */}
+        <div className="absolute top-24 right-16 z-50">
+          <ThemeToggle />
+        </div>
 
-        <div className="absolute inset-0 z-1 opacity-40">
+        {/* Video Overlay */}
+        <div className="absolute inset-0 z-10 flex items-center justify-center p-4 pointer-events-none">
           <video
             autoPlay
             loop
             muted
             playsInline
-            className="w-full h-full object-cover"
+            className="w-full h-[300px] sm:h-[400px] md:w-full md:h-full object-cover mix-blend-overlay opacity-20 smoke-video"
+            aria-label="Video overlay"
+            style={{ position: "absolute", inset: 0, height: "695px" }}
+          >
+            <source src="/Clouds.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        {/* Top content: text + frame */}
+        <div className="flex flex-row justify-center gap-10 h-1/2">
+          <div
+            className="uppercase w-[350px] h-1/5 mt-[250px] text-[#808c87] text-[20px] font-semibold text-xl text-left px-0 transform translate-x-18 -translate-y-20"
+          >
+            Clean visuals, smart strategy and creative work that makes an
+            impact.
+          </div>
+          <div className="w-[700px] h-full mt-[50px] block">
+            <img
+              src="/Home/Frame_557.webp"
+              alt="Geometric_Shape"
+              className="z-30 w-[700px] h-auto transform translate-x-20 -translate-y-10 -top-5 relative"
+            />
+          </div>
+        </div>
+
+        {/* Main headings */}
+        <div className=" mx-auto z-20 justify-center max-w-7xl flex flex-col px-12 w-full mt-[30px]">
+          <div className="justify-center items-center flex flex-col">
+            <span className="text-white text-3xl font-semibold transform -translate-x-132">
+              Modern
+            </span>
+            <span className="text-white text-[160px] leading-[0.95] font-semibold tracking-tight whitespace-nowrap">
+              DIGITAL DESIGN
+            </span>
+            <span className="text-white text-2xl font-medium transform -translate-x-40">
+              that helps your brand grow.
+            </span>
+          </div>
+        </div>
+      </section>
+
+      {/* Mobile Hero (smaller than md) */}
+      <section
+        className="md:hidden w-full relative min-h-screen flex flex-col items-center justify-center text-center px-4 sm:px-6 hero-bg-section"
+        data-hero-bg
+        style={{
+          backgroundImage: "url('/Hero_Section.png')",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        {/* Theme Toggle - top right on mobile */}
+        <div className="absolute right-4 sm:right-6 top-16 sm:top-20 z-50">
+          <ThemeToggle />
+        </div>
+
+        {/* Video on mobile mode */}
+        <div className="absolute inset-0 z-10 pointer-events-none">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover mix-blend-overlay opacity-10 smoke-video"
+            aria-label="Video overlay"
           >
             <source src="/Clouds.mp4" type="video/mp4" />
           </video>
         </div>
 
-        <div
-          className="absolute inset-0 opacity-20 z-2"
-          style={{
-            backgroundImage: `
-            linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px)
-          `,
-            backgroundSize: "20px 20px",
-          }}
-        ></div>
-
-        <div className="relative z-30 container mx-auto px-6 flex flex-col md:flex-row items-center justify-between h-full">
-          <div className="w-full md:w-1/2 flex items-center justify-center mb-10 md:mb-0">
-            <p className="text-white text-2xl opacity-50 font-semibold uppercase tracking-wider text-start max-w-lg px-4 leading-relaxed">
-              CLEAN VISUALS, SMART STRATEGY AND CREATIVE WORK THAT MAKES AN
-              IMPACT.
-            </p>
-          </div>
-
-          <div className="relative w-full md:w-1/2 flex justify-end">
-            <div className="absolute right-0 top-1/2 -translate-y-[40%] z-10 w-[150%] md:w-[130%] max-w-none translate-x-1/4 md:translate-x-1/12">
-              <Image
-                src="/Home/Frame 557.png"
-                alt="3D Abstract Design"
-                width={800}
-                height={600}
-                className="w-full h-auto object-contain"
-                priority
-              />
-            </div>
-          </div>
-        </div>
-
-        <div className="absolute top-26 right-10 md:top-30 md:right-20 z-40">
-          <ThemeToggle />
-        </div>
-
-        <div className="absolute bottom-10 left-0 right-0 z-40 pointer-events-none flex justify-center">
-          <div className="relative pointer-events-auto inline-block">
-            <p className="absolute left-0 -top-6 text-white text-3xl font-bold font-medium">
-              Modern
-            </p>
-            <h1 className="text-white font-semibold font-black text-5xl md:text-[80px] lg:text-[120px] xl:text-[160px] leading-tight tracking-[-0.009em] whitespace-nowrap text-center">
-              DIGITAL DESIGN
-            </h1>
-            <p className=" text-white px-[290px] text-lg sm:text-2xl md:text-4xl font-bold mt-1">
-              that helps your brand grow.
-            </p>
-          </div>
+        {/* Mobile-friendly text */}
+        <div className="relative z-20 space-y-4 sm:space-y-6 mt-12 sm:mt-16 w-full max-w-sm sm:max-w-md">
+          <br className="hidden sm:block" />
+          <span className="text-white text-xl sm:text-2xl font-semibold block">
+            Modern
+          </span>
+          <span className="text-white text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight block leading-tight">
+            DIGITAL DESIGN
+          </span>
+          <span className="text-white text-base sm:text-lg font-medium block">
+            that helps your brand grow.
+          </span>
+          <p className="text-[#808c87] text-sm sm:text-base mt-4 sm:mt-6">
+            Clean visuals, smart strategy and creative work that makes an
+            impact.
+          </p>
+          <img
+            src="/Home/Frame_557.webp"
+            alt="Geometric_Shape"
+            className="z-30 w-full sm:w-[400px] h-auto mt-4 sm:mt-6 mx-auto object-contain -translate-x-8"
+          />
         </div>
       </section>
-    </div>
+    </>
   );
 };
 

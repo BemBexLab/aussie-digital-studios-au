@@ -11,7 +11,6 @@ import Hero from "@/components/Hero";
 const AboutPage = () => {
   return (
     <div>
-      <Header />
       <Hero H="ABOUT US" />
       <About />
       <Values />
@@ -21,12 +20,11 @@ const AboutPage = () => {
           alt="Decorative Image"
           width={150}
           height={150}
-          className="left-13 -bottom-17 right-3 md:block relative z-10"
+          className="left-50 -bottom-17 right-3 md:block absolute z-10"
         />
       </div>
       <BrandLevelUp />
       <Mission />
-      <Footer />
     </div>
   );
 };

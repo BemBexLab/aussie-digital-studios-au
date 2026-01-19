@@ -1,0 +1,20 @@
+{/* Buttons - wrap & stack on mobile */}
+        <div className="flex flex-wrap gap-2 md:gap-4 justify-center">
+          {[
+            "Logo",
+            "E-Commerce",
+            "Website Design",
+            "SMM",
+            "Video Animation",
+            "SEO",
+            "Maintenance",
+            "Branding",
+          ].map((label) => (
+            <div
+              key={label}
+              className="text-gray-400 px-3 py-1.5 md:px-4 md:py-2 rounded-[8px] border border-gray-600 cursor-pointer text-xs md:text-sm hover:border-yellow-400 hover:text-yellow-400 transition"
+            >
+              {label}
+            </div>
+          ))}
+        </div>

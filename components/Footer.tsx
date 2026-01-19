@@ -44,12 +44,12 @@ const Footer = () => {
               >
                 Portfolio
               </a>
-              <a
+              {/* <a
                 href="#"
                 className="text-sm font-extralight hover:text-[#4C8C74] transition-colors"
               >
                 Career
-              </a>
+              </a> */}
             </div>
 
             {/* Second Column */}
