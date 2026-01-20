@@ -24,12 +24,12 @@ const Values = () => {
 
   const backgroundImage = isLight
     ? "url(/About/Frame_163_Light.svg)"
-    : "radial-gradient(circle at top right, rgba(255,255,255,0.3) 0%, transparent 50%), linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%)";
+    : "url(/About/values_card_dark.webp)";
 
   return (
     <>
       <ValuesMobile />
-      <div className="hidden sm:flex flex-col my-30 md:flex-row md:mt-8 mx-4 sm:mx-6 md:mx-10">
+      <div className="hidden sm:flex flex-col my-30 md:flex-row md:mt-8 mx-auto w-full max-w-7xl px-4 sm:px-6 md:px-10">
       {/* Left Content */}
       <div className="flex flex-col w-full">
         {/* On mobile: no max-w, use px-4 for safe padding */}

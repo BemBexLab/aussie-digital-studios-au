@@ -16,8 +16,6 @@ const MobileHeader = () => {
   const [hash, setHash] = useState("");
 
   useEffect(() => {
-    if (typeof window === "undefined") return;
-    
     // Check if document has dark class
     const isDark = document.documentElement.classList.contains("dark");
     setIsDarkMode(isDark);
@@ -37,7 +35,6 @@ const MobileHeader = () => {
   }, []);
 
   useEffect(() => {
-    if (typeof window === "undefined") return;
     setHash(window.location.hash || "");
 
     const onHashChange = () => setHash(window.location.hash || "");

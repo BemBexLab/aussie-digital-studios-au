@@ -5,7 +5,8 @@ const Footer = () => {
   return (
     <div className="justify-center bg-[#151515] items-center">
       <div className="flex flex-col md:flex-row bg-[#151515] h-auto md:h-[250px] gap-6 md:gap-2 text-white mt-12 px-4 md:px-0">
-        <div className="flex flex-col md:flex-row mx-4 md:mx-10 mt-5 gap-8 md:gap-[35px]">
+        {/* Todo: make this div center horizontally */}
+        <div className="flex flex-col md:flex-row mx-auto mt-5 gap-8 md:gap-[35px]">
           {/* Aussie Logo */}
           <div className="mx-auto md:mx-[50px] mt-5 md:mt-5">
             <Image 
@@ -181,9 +182,9 @@ const Footer = () => {
       </div>
 
       {/* Aussie Digital SVGs */}
-      <div className="flex flex-col md:grid md:grid-cols-2 gap-2">
+      <div className="w-full flex flex-col md:grid md:grid-cols-2 gap-2 justify-center items-center mx-auto px-4">
         {/* Aussie SVG div */}
-        <div className="flex">
+        <div className="flex justify-center">
           {/* A */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -348,7 +349,7 @@ const Footer = () => {
         </div>
 
         {/* Digital SVG div*/}
-        <div className="flex">
+        <div className="flex justify-center">
           {/* D */}
           <svg
             xmlns="http://www.w3.org/2000/svg"

@@ -29,20 +29,16 @@ const PortfolioMobile = ({ service }: PortfolioMobileProps) => {
   const [clickedImageId, setClickedImageId] = useState<string | null>(null);
 
   useEffect(() => {
-    const theme = typeof window !== "undefined" ? localStorage.getItem("ads_theme") : null;
+    const theme = localStorage.getItem("ads_theme");
     setIsDarkMode(theme !== "light");
 
     const handleThemeChange = () => {
-      const theme = typeof window !== "undefined" ? localStorage.getItem("ads_theme") : null;
+      const theme = localStorage.getItem("ads_theme");
       setIsDarkMode(theme !== "light");
     };
 
     const observer = new MutationObserver(handleThemeChange);
-    const htmlElement = typeof document !== "undefined" ? document.documentElement : null;
-
-    if (htmlElement) {
-      observer.observe(htmlElement, { attributes: true, attributeFilter: ["class"] });
-    }
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
 
     window.addEventListener("storage", handleThemeChange);
 

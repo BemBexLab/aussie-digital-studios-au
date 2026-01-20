@@ -7,15 +7,14 @@ export default function ThemeToggle() {
 
   useEffect(() => {
     // initialise from localStorage or default to dark
-    const stored = typeof window !== "undefined" ? localStorage.getItem("ads_theme") : null;
+    const stored = localStorage.getItem("ads_theme");
     const initial = stored || "dark";
     setTheme(initial);
     applyTheme(initial);
   }, []);
 
   function applyTheme(t: string) {
-    const el = typeof document !== "undefined" ? document.documentElement : null;
-    if (!el) return;
+    const el = document.documentElement;
     if (t === "light") {
       el.classList.add("light");
       el.classList.remove("dark");

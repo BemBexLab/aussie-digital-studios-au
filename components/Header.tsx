@@ -11,12 +11,34 @@ import MobileHeader from "./MobileHeader";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [logoFallback, setLogoFallback] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
   const pathname = usePathname();
   const currentPath = pathname ?? "";
   const [hash, setHash] = useState("");
 
   useEffect(() => {
-    if (typeof window === "undefined") return;
+    // Detect initial theme
+    const theme = localStorage.getItem("ads_theme");
+    setIsDarkMode(theme !== "light");
+
+    // Listen for theme changes
+    const handleThemeChange = () => {
+      const theme = localStorage.getItem("ads_theme");
+      setIsDarkMode(theme !== "light");
+    };
+
+    const observer = new MutationObserver(handleThemeChange);
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
+
+    window.addEventListener("storage", handleThemeChange);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("storage", handleThemeChange);
+    };
+  }, []);
+
+  useEffect(() => {
     setHash(window.location.hash || "");
 
     const onHashChange = () => setHash(window.location.hash || "");
@@ -46,8 +68,8 @@ const Header = () => {
           <div className="flex items-center">
             {!logoFallback ? (
               <Image
-                src="/Group_1.png"
-                alt="Aussie Digital Studios"
+                src={isDarkMode ? "/Group_1.png" : "/Aussie_Header_Logo_Light.png"}
+                alt="Aussie Digital Studios Header logo"
                 width={140}
                 height={56}
                 className="h-14 w-auto"
@@ -59,7 +81,7 @@ const Header = () => {
               // fallback to plain img if next/image fails for any reason
               // keeps visual classes consistent
               // eslint-disable-next-line @next/next/no-img-element
-              <img src="/Group_1.png" alt="Aussie Digital Studios" className="h-14 w-auto" />
+              <img src={isDarkMode ? "/Group_1.png" : "/Aussie_Header_Logo_Light.webp"} alt="Aussie Digital Studios" className="h-14 w-auto" />
             )}
           </div>
 
