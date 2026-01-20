@@ -3,6 +3,7 @@
 import { TextField } from "@mui/material";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
+import { sendContactEmail } from "@/lib/emailService";
 
 const ContactUsSm = () => {
   const [formData, setFormData] = useState({
@@ -10,9 +11,14 @@ const ContactUsSm = () => {
     lastName: "",
     email: "",
     phone: "",
-    details: "",
+    service: "",
+    subject: "",
+    detail: "",
   });
   const [isDarkMode, setIsDarkMode] = useState(true);
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
+  const [isSuccess, setIsSuccess] = useState(false);
 
   useEffect(() => {
     const theme = typeof window !== "undefined" ? localStorage.getItem("ads_theme") : null;
@@ -73,9 +79,40 @@ const ContactUsSm = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    setLoading(true);
+    setMessage("");
+
+    const result = await sendContactEmail({
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      email: formData.email,
+      phone: formData.phone,
+      service: formData.service || "General Inquiry",
+      subject: formData.subject || "Contact Form Submission",
+      detail: formData.detail,
+    });
+
+    setLoading(false);
+
+    if (result.success) {
+      setMessage("✅ Email sent successfully! We'll be in touch soon.");
+      setIsSuccess(true);
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        service: "",
+        subject: "",
+        detail: "",
+      });
+      setTimeout(() => setMessage(""), 5000);
+    } else {
+      setMessage(`❌ Error: ${result.error}`);
+      setIsSuccess(false);
+    }
   };
 
   return (
@@ -106,7 +143,7 @@ const ContactUsSm = () => {
 
         {/* Contact Form */}
         <div
-          className="w-full px-4 py-6 rounded-lg"
+          className="w-full px-4 py-6 rounded-lg relative"
           style={{
             backgroundImage: `url('${isDarkMode ? '/Home/contactus_dark.svg' : '/Home/Frame_163_Light.svg'}')`,
             backgroundColor: "transparent",
@@ -115,7 +152,7 @@ const ContactUsSm = () => {
             backgroundPosition: "center",
           }}
         >
-          <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
+          <form onSubmit={handleSubmit} className="flex flex-col space-y-4 relative z-10">
             {/* First Name */}
             <TextField
               id="firstName"
@@ -126,6 +163,7 @@ const ContactUsSm = () => {
               name="firstName"
               onChange={handleChange}
               value={formData.firstName}
+              required
               sx={textFieldSx}
             />
 
@@ -139,6 +177,7 @@ const ContactUsSm = () => {
               name="lastName"
               onChange={handleChange}
               value={formData.lastName}
+              required
               sx={textFieldSx}
             />
 
@@ -152,6 +191,7 @@ const ContactUsSm = () => {
               name="email"
               onChange={handleChange}
               value={formData.email}
+              required
               sx={textFieldSx}
             />
 
@@ -159,35 +199,51 @@ const ContactUsSm = () => {
             <TextField
               id="phone"
               label="Phone Number"
-              type="number"
+              type="tel"
               variant="standard"
               fullWidth
               name="phone"
               onChange={handleChange}
               value={formData.phone}
+              required
               sx={textFieldSx}
             />
 
             {/* Details Field */}
             <TextField
-              id="details"
+              id="detail"
               label="Details"
               multiline
               rows={3}
               variant="standard"
               fullWidth
-              name="details"
+              name="detail"
               onChange={handleChange}
-              value={formData.details}
+              value={formData.detail}
+              required
               sx={textFieldSx}
             />
+
+            {/* Message Alert */}
+            {message && (
+              <div
+                className={`p-3 rounded text-sm text-center ${
+                  isSuccess
+                    ? "bg-green-500 bg-opacity-20 text-green-400"
+                    : "bg-red-500 bg-opacity-20 text-red-400"
+                }`}
+              >
+                {message}
+              </div>
+            )}
 
             {/* Submit Button */}
             <button
               type="submit"
-              className="mt-2 px-3 w-full h-[44px] text-xs sm:text-sm bg-teal-500 text-white rounded-full hover:bg-blue-400 transition-all inline-flex items-center justify-center group gap-2"
+              disabled={loading}
+              className="mt-2 px-3 w-full h-[44px] text-xs sm:text-sm bg-teal-500 disabled:opacity-50 disabled:cursor-not-allowed text-white rounded-full hover:bg-blue-400 transition-all inline-flex items-center justify-center group gap-2 relative z-20 pointer-events-auto"
             >
-              <span className="font-light">Submit</span>
+              <span className="font-light">{loading ? "Sending..." : "Submit"}</span>
               <span className="relative w-5 h-5 flex items-center justify-center flex-shrink-0">
                 <span
                   className="absolute inset-0 bg-black rounded-full"
