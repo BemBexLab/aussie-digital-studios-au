@@ -3,12 +3,12 @@ import React from "react";
 
 const LogoSlider = () => {
   const logos = [
-    "/Home/trustpilot.png",
-    "/Home/zoominfo.png",
-    "/Home/clutch.png",
-    "/Home/hashnode.png",
-    "/Home/designrush.png",
-    "/Home/s.png",
+    "/Home/trustpilot.webp",
+    "/Home/zoominfo.webp",
+    "/Home/clutch.webp",
+    "/Home/hashnode.webp",
+    "/Home/designrush.webp",
+    "/Home/s.webp",
   ];
 
   return (

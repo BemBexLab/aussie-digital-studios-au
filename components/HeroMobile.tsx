@@ -8,14 +8,13 @@ type HeroMobileProps = {
 const HeroMobile = ({ H }: HeroMobileProps) => {
   return (
     <div
-      className="sm:hidden w-full h-[50vh] flex items-center justify-center relative overflow-hidden"
+      className="md:hidden w-full h-[45vh] sm:h-[55vh] flex items-center justify-center relative overflow-hidden"
       data-hero-bg-about
       style={{
         backgroundImage: "url('/About/About Hero BG.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
-        backgroundAttachment: "fixed",
       }}
     >
       {/* Clouds Video Overlay */}
@@ -37,14 +36,14 @@ const HeroMobile = ({ H }: HeroMobileProps) => {
       </video>
 
       {/* Content Wrapper */}
-      <div className="flex flex-col items-center justify-end w-full relative z-10 px-4 pb-4 space-y-3">
-        {/* ThemeToggle */}
-        <div className="self-end">
+      <div className="flex flex-col items-center justify-end w-full relative z-10 px-4 pb-6">
+        {/* ThemeToggle: Positioned top-right on mobile */}
+        <div className="self-end mb-3 absolute top-3 right-4 -translate-y-15">
           <ThemeToggle />
         </div>
 
-        {/* Heading - optimized for mobile */}
-        <h2 className="text-2xl sm:text-3xl font-medium text-white text-center leading-tight uppercase">
+        {/* Heading - Responsive text sizes */}
+        <h2 className="text-3xl sm:text-4xl font-medium text-white text-center leading-tight uppercase">
           {H}
         </h2>
       </div>

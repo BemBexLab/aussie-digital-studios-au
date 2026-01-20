@@ -3,10 +3,23 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import ContactMobile from "./ContactMobile";
+import { sendContactEmail } from "@/lib/emailService";
 // import ContactUsSm from "./ContactUsSm";
 
 const Contact = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    service: "",
+    subject: "",
+    detail: "",
+  });
 
   useEffect(() => {
     const theme = typeof window !== "undefined" ? localStorage.getItem("ads_theme") : null;
@@ -31,6 +44,45 @@ const Contact = () => {
       window.removeEventListener("storage", handleThemeChange);
     };
   }, []);
+
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+    setMessage("");
+
+    const result = await sendContactEmail(formData);
+
+    setLoading(false);
+
+    if (result.success) {
+      setMessage("✅ Email sent successfully! We'll be in touch soon.");
+      setIsSuccess(true);
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        service: "",
+        subject: "",
+        detail: "",
+      });
+      setTimeout(() => setMessage(""), 5000);
+    } else {
+      setMessage(`❌ Error: ${result.error}`);
+      setIsSuccess(false);
+    }
+  };
+
   return (
     <>
       <ContactMobile />
@@ -85,50 +137,97 @@ const Contact = () => {
               />
             </div>
             <h1 className="text-5xl font-bold text-white mb-12">Get In Touch</h1>
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-2 gap-6">
                 <input
                   type="text"
+                  name="firstName"
                   placeholder="First Name"
+                  value={formData.firstName}
+                  onChange={handleInputChange}
+                  required
                   className="bg-transparent border-b border-gray-500 text-white placeholder-gray-500 pb-3 focus:outline-none focus:border-teal-400"
                 />
                 <input
                   type="text"
+                  name="lastName"
                   placeholder="Last Name"
+                  value={formData.lastName}
+                  onChange={handleInputChange}
+                  required
                   className="bg-transparent border-b border-gray-500 text-white placeholder-gray-500 pb-3 focus:outline-none focus:border-teal-400"
                 />
               </div>
               <div className="grid grid-cols-2 gap-6">
                 <input
                   type="email"
+                  name="email"
                   placeholder="Email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  required
                   className="bg-transparent border-b border-gray-500 text-white placeholder-gray-500 pb-3 focus:outline-none focus:border-teal-400"
                 />
                 <input
                   type="tel"
+                  name="phone"
                   placeholder="Phone number"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                  required
                   className="bg-transparent border-b border-gray-500 text-white placeholder-gray-500 pb-3 focus:outline-none focus:border-teal-400"
                 />
               </div>
-              <select className="w-full bg-transparent border-b border-gray-500 text-gray-500 placeholder-gray-500 pb-3 focus:outline-none focus:border-teal-400 appearance-none cursor-pointer">
+              <select
+                name="service"
+                value={formData.service}
+                onChange={handleInputChange}
+                required
+                className="w-full bg-transparent border-b border-gray-500 text-gray-500 placeholder-gray-500 pb-3 focus:outline-none focus:border-teal-400 appearance-none cursor-pointer"
+              >
                 <option value="">Select services</option>
-                <option value="web">Web Development</option>
-                <option value="design">Design</option>
-                <option value="consulting">Consulting</option>
+                <option value="Web Development">Web Development</option>
+                <option value="Web Design">Web Design</option>
+                <option value="SEO">SEO</option>
+                <option value="Branding">Branding</option>
+                <option value="Consulting">Consulting</option>
               </select>
               <input
                 type="text"
+                name="subject"
                 placeholder="Subject"
+                value={formData.subject}
+                onChange={handleInputChange}
+                required
                 className="w-full bg-transparent border-b border-gray-500 text-white placeholder-gray-500 pb-3 focus:outline-none focus:border-teal-400"
               />
               <textarea
+                name="detail"
                 placeholder="Details"
                 rows={5}
+                value={formData.detail}
+                onChange={handleInputChange}
+                required
                 className="w-full bg-transparent border-b border-gray-500 text-white placeholder-gray-500 pb-3 focus:outline-none focus:border-teal-400 resize-none"
               ></textarea>
+              {message && (
+                <div
+                  className={`p-3 rounded text-sm text-center ${
+                    isSuccess
+                      ? "bg-green-500 bg-opacity-20 text-green-400"
+                      : "bg-red-500 bg-opacity-20 text-red-400"
+                  }`}
+                >
+                  {message}
+                </div>
+              )}
               <div className="pt-4">
-                <button className="px-4 py-2 text-sm bg-teal-500 hover:bg-blue-400 text-white rounded-full transition-all inline-flex items-center group">
-                  <span>Submit</span>
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="px-4 py-2 text-sm bg-teal-500 hover:bg-blue-400 disabled:opacity-50 disabled:cursor-not-allowed text-white rounded-full transition-all inline-flex items-center group"
+                >
+                  <span>{loading ? "Sending..." : "Submit"}</span>
                   <span className="ml-2 relative w-6 h-6 flex items-center justify-center">
                     <span className="absolute inset-0 bg-black rounded-full" aria-hidden="true"></span>
                     <svg
@@ -204,46 +303,93 @@ const Contact = () => {
               />
             </div>
             <h1 className="text-3xl font-bold text-white mb-6 text-center">Get In Touch</h1>
-            <form className="space-y-5">
+            <form className="space-y-5" onSubmit={handleSubmit}>
               <input
                 type="text"
+                name="firstName"
                 placeholder="First Name"
+                value={formData.firstName}
+                onChange={handleInputChange}
+                required
                 className="w-full bg-transparent border-b border-gray-500 text-white placeholder-gray-500 pb-3 focus:outline-none focus:border-teal-400"
               />
               <input
                 type="text"
+                name="lastName"
                 placeholder="Last Name"
+                value={formData.lastName}
+                onChange={handleInputChange}
+                required
                 className="w-full bg-transparent border-b border-gray-500 text-white placeholder-gray-500 pb-3 focus:outline-none focus:border-teal-400"
               />
               <input
                 type="email"
+                name="email"
                 placeholder="Email"
+                value={formData.email}
+                onChange={handleInputChange}
+                required
                 className="w-full bg-transparent border-b border-gray-500 text-white placeholder-gray-500 pb-3 focus:outline-none focus:border-teal-400"
               />
               <input
                 type="tel"
+                name="phone"
                 placeholder="Phone number"
+                value={formData.phone}
+                onChange={handleInputChange}
+                required
                 className="w-full bg-transparent border-b border-gray-500 text-white placeholder-gray-500 pb-3 focus:outline-none focus:border-teal-400"
               />
-              <select className="w-full bg-transparent border-b border-gray-500 text-gray-500 placeholder-gray-500 pb-3 focus:outline-none focus:border-teal-400 appearance-none cursor-pointer">
+              <select
+                name="service"
+                value={formData.service}
+                onChange={handleInputChange}
+                required
+                className="w-full bg-transparent border-b border-gray-500 text-gray-500 placeholder-gray-500 pb-3 focus:outline-none focus:border-teal-400 appearance-none cursor-pointer"
+              >
                 <option value="">Select services</option>
-                <option value="web">Web Development</option>
-                <option value="design">Design</option>
-                <option value="consulting">Consulting</option>
+                <option value="Web Development">Web Development</option>
+                <option value="Web Design">Web Design</option>
+                <option value="SEO">SEO</option>
+                <option value="Branding">Branding</option>
+                <option value="Consulting">Consulting</option>
               </select>
               <input
                 type="text"
+                name="subject"
                 placeholder="Subject"
+                value={formData.subject}
+                onChange={handleInputChange}
+                required
                 className="w-full bg-transparent border-b border-gray-500 text-white placeholder-gray-500 pb-3 focus:outline-none focus:border-teal-400"
               />
               <textarea
+                name="detail"
                 placeholder="Details"
                 rows={4}
+                value={formData.detail}
+                onChange={handleInputChange}
+                required
                 className="w-full bg-transparent border-b border-gray-500 text-white placeholder-gray-500 pb-3 focus:outline-none focus:border-teal-400 resize-none"
               ></textarea>
+              {message && (
+                <div
+                  className={`p-3 rounded text-sm text-center ${
+                    isSuccess
+                      ? "bg-green-500 bg-opacity-20 text-green-400"
+                      : "bg-red-500 bg-opacity-20 text-red-400"
+                  }`}
+                >
+                  {message}
+                </div>
+              )}
               <div className="pt-2 text-center">
-                <button className="px-6 py-2.5 text-sm bg-teal-500 hover:bg-blue-400 text-white rounded-full transition-all inline-flex items-center justify-center group mx-auto">
-                  <span>Submit</span>
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="px-6 py-2.5 text-sm bg-teal-500 hover:bg-blue-400 disabled:opacity-50 disabled:cursor-not-allowed text-white rounded-full transition-all inline-flex items-center justify-center group mx-auto"
+                >
+                  <span>{loading ? "Sending..." : "Submit"}</span>
                   <span className="ml-2 relative w-5 h-5 flex items-center justify-center">
                     <span className="absolute inset-0 bg-black rounded-full" aria-hidden="true"></span>
                     <svg

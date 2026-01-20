@@ -1,6 +1,4 @@
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import React from "react";
+import Image from "next/image";
 import PortfolioSection from "./components/PortfolioSection";
 import Hero from "@/components/Hero";
 

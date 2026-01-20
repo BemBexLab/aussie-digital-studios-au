@@ -2,7 +2,7 @@ import React from "react";
 
 const EasyExperienceSm = () => {
   return (
-    <section className="hidden sm:block md:hidden my-25">
+    <section className="sm:block md:hidden my-25">
       <div className="w-full">
         <p className="text-lg font-normal text-center text-[#4C8C74]">
           Easy Experience
@@ -16,8 +16,8 @@ const EasyExperienceSm = () => {
             <div className="rounded-full h-16 w-16 items-center justify-center border">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="40"
-                height="40"
+                width="30"
+                height="30"
                 viewBox="0 0 50 50"
                 fill="none"
                 className="transform translate-x-4 translate-y-4"
@@ -73,8 +73,8 @@ const EasyExperienceSm = () => {
             <div className="rounded-full h-16 w-16 border items-center justify-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="40"
-                height="40"
+                width="30"
+                height="30"
                 viewBox="0 0 50 50"
                 fill="none"
                 className="transform translate-x-3.5 translate-y-3.5"
@@ -130,8 +130,8 @@ const EasyExperienceSm = () => {
             <div className="rounded-full h-16 w-16 border items-center justify-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="40"
-                height="40"
+                width="30"
+                height="30"
                 viewBox="0 0 50 50"
                 fill="none"
                 className="transform translate-x-3.5 translate-y-3.5"
