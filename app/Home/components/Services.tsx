@@ -11,8 +11,8 @@ const services = [
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="25"
-        height="25"
+        width="28"
+        height="28"
         viewBox="0 0 50 50"
         fill="none"
       >
@@ -48,8 +48,8 @@ const services = [
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="25"
-        height="25"
+        width="28"
+        height="28"
         viewBox="0 0 50 50"
         fill="none"
       >
@@ -82,8 +82,8 @@ const services = [
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="25"
-        height="25"
+        width="28"
+        height="28"
         viewBox="0 0 50 50"
         fill="none"
       >
@@ -109,8 +109,8 @@ const services = [
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="25"
-        height="25"
+        width="28"
+        height="28"
         viewBox="0 0 50 50"
         fill="none"
       >
@@ -147,8 +147,8 @@ const services = [
     icon: (
       <Image
         src="/Home/Group_26.svg"
-        width={25}
-        height={25}
+        width={28}
+        height={28}
         alt="social media icon"
       />
     ),
@@ -159,8 +159,8 @@ const services = [
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="25"
-        height="25"
+        width="28"
+        height="28"
         viewBox="0 0 50 50"
         fill="none"
       >

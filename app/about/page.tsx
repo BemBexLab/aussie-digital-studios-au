@@ -7,11 +7,13 @@ import BrandLevelUp from "./components/BrandLevelUp";
 import Mission from "./components/Mission";
 import Image from "next/image";
 import Hero from "@/components/Hero";
+import HeroMobile from "@/components/HeroMobile";
 
 const AboutPage = () => {
   return (
     <div>
       <Hero H="ABOUT US" />
+      <HeroMobile H="ABOUT US" />
       <About />
       <Values />
       <div className="relative">

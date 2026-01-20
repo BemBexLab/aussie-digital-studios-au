@@ -49,7 +49,7 @@ const ProcessCardsMobile = ({ service }: ProcessCardsMobileProps) => {
         {service.processCardData?.map((item, index) => (
           <div key={index} className="flex flex-col items-start w-full">
             <div
-              className="w-full h-[200px] relative my-4 flex flex-col items-start justify-start p-4"
+              className="w-full h-[230px] relative my-4 flex flex-col items-start justify-start p-4"
               style={{
                 backgroundImage: `url("${isDarkMode ? '/Home/mini_card_dark.svg' : '/Home/Frame_163_Light.svg'}")`,
                 backgroundSize: "cover",

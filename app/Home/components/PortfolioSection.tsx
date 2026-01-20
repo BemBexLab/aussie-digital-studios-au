@@ -50,7 +50,7 @@ export default function PortfolioSection() {
   return (
     <>
       {/* Desktop version - hidden on sm screens */}
-      <section className="hidden sm:block relative mt-40 my-20">
+      <section className="hidden sm:block relative mt-25 my-20">
         {/* Heading */}
         <div className="text-center mb-20 px-4">
           {" "}

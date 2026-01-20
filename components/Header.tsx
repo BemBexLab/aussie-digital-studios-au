@@ -5,6 +5,8 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import ServicesDropdown from "./ServicesDropdown";
+import MobileHeader from "./MobileHeader";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,7 +33,12 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed w-full z-50">
+    <>
+      {/* Mobile Header - hidden on md and above */}
+      <MobileHeader />
+
+      {/* Desktop Header - hidden on mobile and small tablets */}
+      <header className="hidden md:block fixed w-full z-50">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         {/* Left side: Logo + Nav (grouped together) */}
         <div className="flex items-center space-x-18">
@@ -57,31 +64,33 @@ const Header = () => {
           </div>
 
           {/* Desktop Nav - now next to logo */}
-          <nav className="hidden md:flex space-x-6">
+          <nav className="hidden md:flex flex-row space-x-6 items-center relative">
             {['Home', 'About', 'Services', 'Portfolio', 'Packages', 'Contact'].map((item) => {
               const href =
                 item === 'Home'
                   ? '/'
                   : item === 'Services'
-                    ? '/services'
+                    ? '/services' // Keep this for direct navigation
                     : `/${item.toLowerCase()}`;
 
               const active = isActive(item);
+
+              // Special handling for Services dropdown
+              if (item === 'Services') {
+                return <ServicesDropdown key={item} />;
+              }
 
               return (
                 <Link
                   key={item}
                   href={href}
                   aria-current={active ? 'page' : undefined}
-                  className={`text-sm font-semibold transition-colors whitespace-nowrap ${active
-                    ? 'text-[#4C8C74]'
-                    : 'text-white opacity-50 hover:text-white hover:opacity-100'
+                  className={`text-sm font-semibold transition-colors whitespace-nowrap flex flex-row items-center gap-1 pb-1 border-b-2 ${active
+                    ? 'text-[#4C8C74] border-[#4C8C74]'
+                    : 'text-white opacity-50 hover:text-white hover:opacity-100 border-transparent'
                     }`}
                 >
-                  <div className="flex flex-col items-center">
-                    <span>{item}</span>
-                    <span className={`mt-1 rounded-full w-2 h-2 ${active ? 'bg-[#4C8C74]' : 'bg-transparent'}`} />
-                  </div>
+                  <span>{item}</span>
                 </Link>
               );
             })}
@@ -106,80 +115,9 @@ const Header = () => {
             />
           </svg>
         </button>
-
-        {/* Mobile Menu Button (only visible on mobile) */}
-        <button
-          className="md:hidden text-white"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-        </button>
       </div>
-
-      {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="md:hidden bg-black/90 pb-4">
-          <nav className="flex flex-col space-y-4 px-6 py-4">
-            {['Home', 'About', 'Services', 'Portfolio', 'Packages', 'Contact'].map((item) => {
-              const href =
-                item === 'Home'
-                  ? '/'
-                  : item === 'Services'
-                    ? '/#services'
-                    : `/${item.toLowerCase()}`;
-
-              const active = isActive(item);
-
-              return (
-                <Link
-                  key={item}
-                  href={href}
-                  aria-current={active ? 'page' : undefined}
-                  className={`text-sm font-medium transition-colors ${active ? 'text-[#4C8C74]' : 'text-gray-300 hover:text-white'
-                    }`}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  <div className="flex flex-col items-start md:items-center">
-                    <span>{item}</span>
-                    <span className={`mt-1 rounded-full w-2 h-2 ${active ? 'bg-[#4C8C74]' : 'bg-transparent'}`} />
-                  </div>
-                </Link>
-              );
-            })}
-            <button className="flex items-center space-x-1 text-sm text-white hover:text-green-400 transition-colors pt-2">
-              <span>Get In Touch</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
-            </button>
-          </nav>
-        </div>
-      )}
     </header>
+    </>
   );
 };
 

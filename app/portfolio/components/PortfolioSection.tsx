@@ -1,4 +1,9 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
+import { GoArrowDown } from "react-icons/go";
+import MobilePortfolioSection from "./MobilePortfolioSection";
 
 const cardData = [
   {
@@ -43,11 +48,93 @@ const cardData = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
     tags: ["Web design", "Web development", "Support"],
   },
+  {
+    image: "/Home/Rectangle_32.webp",
+    title: "Project Name",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+    tags: ["Web design", "Web development", "Support"],
+  },
+  {
+    image: "/Home/Rectangle_32.webp",
+    title: "Project Name",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+    tags: ["Web design", "Web development", "Support"],
+  },
+  {
+    image: "/Home/Rectangle_32.webp",
+    title: "Project Name",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+    tags: ["Web design", "Web development", "Support"],
+  },
+  {
+    image: "/Home/Rectangle_32.webp",
+    title: "Project Name",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+    tags: ["Web design", "Web development", "Support"],
+  },
+  {
+    image: "/Home/Rectangle_32.webp",
+    title: "Project Name",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+    tags: ["Web design", "Web development", "Support"],
+  },
+  {
+    image: "/Home/Rectangle_32.webp",
+    title: "Project Name",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+    tags: ["Web design", "Web development", "Support"],
+  },
+  {
+    image: "/Home/Rectangle_32.webp",
+    title: "Project Name",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+    tags: ["Web design", "Web development", "Support"],
+  },
+  {
+    image: "/Home/Rectangle_32.webp",
+    title: "Project Name",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+    tags: ["Web design", "Web development", "Support"],
+  },
+  {
+    image: "/Home/Rectangle_32.webp",
+    title: "Project Name",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+    tags: ["Web design", "Web development", "Support"],
+  },
 ];
 
-export default function PortfolioSection() {
+const ITEMS_PER_PAGE = 6;
+
+export default function PortfolioSectionWrapper() {
   return (
-    <section className="relative mt-40 my-20">
+    <>
+      <MobilePortfolioSection />
+      <PortfolioSection />
+    </>
+  );
+}
+
+function PortfolioSection() {
+  const [displayedItems, setDisplayedItems] = useState(ITEMS_PER_PAGE);
+
+  const handleLoadMore = () => {
+    setDisplayedItems((prev) => prev + ITEMS_PER_PAGE);
+  };
+
+  const visibleData = cardData.slice(0, displayedItems);
+  const hasMoreData = displayedItems < cardData.length;
+  return (
+    <section className="relative mt-25 my-20 hidden md:block">
       {/* Heading */}
       <div className="text-center mb-20">
         {" "}
@@ -59,7 +146,6 @@ export default function PortfolioSection() {
           Proven results,
           <br /> stunning Websites
         </h2>
-
         {/* Buttons - wrap & stack on mobile */}
         <div className="flex flex-wrap gap-2 mt-6 md:gap-4 justify-center">
           {[
@@ -86,7 +172,7 @@ export default function PortfolioSection() {
       <div className="max-w-7xl mx-auto flex justify-center">
         <div className="grid grid-cols-2 gap-20">
           {/* Portfolio Cards */}
-          {cardData.map((card, index) => (
+          {visibleData.map((card, index) => (
             <div
               key={index}
               className="h-full w-[480px] overflow-hidden relative"
@@ -111,6 +197,20 @@ export default function PortfolioSection() {
           ))}
         </div>
       </div>
+
+      {/* Load More Button */}
+      {hasMoreData && (
+        <div className="flex justify-center mt-16">
+          <button
+            onClick={handleLoadMore}
+            className="px-6 py-3 bg-[#4C8C74] text-white rounded-4xl hover:bg-[#3a6a56] transition"
+          >
+            Load More
+            <GoArrowDown className="inline-block ml-2" />
+            {/* <PiArrowCircleUpRightThin className="inline-block ml-2" /> */}
+          </button>
+        </div>
+      )}
     </section>
   );
 }

@@ -4,6 +4,7 @@ import { Button, TextField } from "@mui/material";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import ContactUsSm from "./ContactUsSm";
+import { sendContactEmail } from "@/lib/emailService";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -11,9 +12,14 @@ const ContactUs = () => {
     lastName: "",
     email: "",
     phone: "",
-    details: "",
+    service: "",
+    subject: "",
+    detail: "",
   });
   const [isDarkMode, setIsDarkMode] = useState(true);
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
+  const [isSuccess, setIsSuccess] = useState(false);
 
   useEffect(() => {
     // Initial theme detection
@@ -76,6 +82,42 @@ const ContactUs = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+    setMessage("");
+
+    const result = await sendContactEmail({
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      email: formData.email,
+      phone: formData.phone,
+      service: formData.service || "General Inquiry",
+      subject: formData.subject || "Contact Form Submission",
+      detail: formData.detail,
+    });
+
+    setLoading(false);
+
+    if (result.success) {
+      setMessage("✅ Email sent successfully! We'll be in touch soon.");
+      setIsSuccess(true);
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        service: "",
+        subject: "",
+        detail: "",
+      });
+      setTimeout(() => setMessage(""), 5000);
+    } else {
+      setMessage(`❌ Error: ${result.error}`);
+      setIsSuccess(false);
+    }
+  };
+
   return (
     <>
       <ContactUsSm />
@@ -105,7 +147,7 @@ const ContactUs = () => {
             alt="Contact Us Image"
             width={1190}
             height={1190}
-            className="rounded-2xl w-[400px] h-[468px] rounded-xl translate-y-12 object-cover"
+            className="rounded-2xl w-[550px] h-[468px] rounded-xl translate-y-12"
           />
         </div>
 
@@ -119,99 +161,131 @@ const ContactUs = () => {
             backgroundPosition: "center",
           }}
         >
-          <div className="flex grid grid-cols-2 gap-4">
-            {/* First Name */}
+          <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+            <div className="flex grid grid-cols-2 gap-4">
+              {/* First Name */}
+              <TextField
+                name="firstName"
+                label="First Name"
+                type="text"
+                variant="standard"
+                fullWidth
+                value={formData.firstName}
+                onChange={handleChange}
+                required
+                sx={textFieldSx}
+              />
+
+              {/* Last Name */}
+              <TextField
+                name="lastName"
+                label="Last Name"
+                type="text"
+                variant="standard"
+                fullWidth
+                value={formData.lastName}
+                onChange={handleChange}
+                required
+                sx={textFieldSx}
+              />
+
+              {/* Email */}
+              <TextField
+                name="email"
+                label="Email"
+                type="email"
+                variant="standard"
+                fullWidth
+                value={formData.email}
+                onChange={handleChange}
+                required
+                sx={textFieldSx}
+              />
+
+              {/* Phone */}
+              <TextField
+                name="phone"
+                label="Phone Number"
+                type="tel"
+                variant="standard"
+                fullWidth
+                value={formData.phone}
+                onChange={handleChange}
+                required
+                sx={textFieldSx}
+              />
+            </div>
+
+            {/* Details Field */}
             <TextField
-              id="standard-search"
-              label="First Name"
-              type="text"
+              name="detail"
+              label="Details"
+              multiline
+              rows={4}
               variant="standard"
               fullWidth
+              value={formData.detail}
+              onChange={handleChange}
+              required
               sx={textFieldSx}
             />
 
-            {/* Last Name */}
-            <TextField
-              id="standard-search"
-              label="Last Name"
-              type="text"
-              variant="standard"
-              fullWidth
-              sx={textFieldSx}
-            />
+            {/* Message Alert */}
+            {message && (
+              <div
+                className={`p-3 rounded text-sm text-center ${
+                  isSuccess
+                    ? "bg-green-500 bg-opacity-20 text-green-400"
+                    : "bg-red-500 bg-opacity-20 text-red-400"
+                }`}
+              >
+                {message}
+              </div>
+            )}
 
-            {/* Email */}
-            <TextField
-              id="standard-search"
-              label="Email"
-              type="email"
-              variant="standard"
-              fullWidth
-              sx={textFieldSx}
-            />
-
-            {/* Phone */}
-            <TextField
-              id="standard-search"
-              label="Phone Number"
-              type="number"
-              variant="standard"
-              fullWidth
-              sx={textFieldSx}
-            />
-          </div>
-
-          <br />
-          {/* Details Field */}
-          <TextField
-            id="standard-multiline-static"
-            label="Details"
-            multiline
-            rows={4}
-            defaultValue=""
-            variant="standard"
-            fullWidth
-            sx={textFieldSx}
-          />
-
-          <br />
-
-          {/* Submit Button */}
-          <div className="flex flex-row mt-4">
-            <button className="justify-center mt-4 px-3 w-[113px] h-[50px] text-sm bg-teal-500 text-white rounded-full hover:bg-blue-400 transition-all inline-flex items-center group flex flex-row gap-0">
-              <span className="text-md font-light ml-2">Submit</span>
-              <span className="ml-2 relative w-7 h-7 flex items-center justify-center">
-                <span
-                  className="absolute inset-0 bg-black rounded-full"
-                  aria-hidden="true"
-                ></span>
-                <svg
-                  className="relative w-4 h-4 z-10 transition-transform duration-300 group-hover:rotate-45 button-arrow-svg"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                  role="img"
-                >
-                  <path
-                    d="M7 17 L17 7"
-                    stroke="#fff"
-                    strokeWidth="1.8"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    fill="none"
-                  />
-                  <path
-                    d="M11 7 H17 V13"
-                    stroke="#fff"
-                    strokeWidth="1.8"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    fill="none"
-                  />
-                </svg>
-              </span>
-            </button>
-          </div>
+            {/* Submit Button */}
+            <div className="flex flex-row mt-4">
+              <button
+                type="submit"
+                disabled={loading}
+                className="justify-center mt-4 px-3 w-[113px] h-[50px] text-sm bg-teal-500 disabled:opacity-50 disabled:cursor-not-allowed text-white rounded-full hover:bg-blue-400 transition-all inline-flex items-center group flex flex-row gap-0"
+              >
+                <span className="text-md font-light ml-2">
+                  {loading ? "Sending..." : "Submit"}
+                </span>
+                <span className="ml-2 relative w-7 h-7 flex items-center justify-center">
+                  <span
+                    className="absolute inset-0 bg-black rounded-full"
+                    aria-hidden="true"
+                  ></span>
+                  <svg
+                    className="relative w-4 h-4 z-10 transition-transform duration-300 group-hover:rotate-45 button-arrow-svg"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                    role="img"
+                  >
+                    <path
+                      d="M7 17 L17 7"
+                      stroke="#fff"
+                      strokeWidth="1.8"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      fill="none"
+                    />
+                    <path
+                      d="M11 7 H17 V13"
+                      stroke="#fff"
+                      strokeWidth="1.8"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </section>
