@@ -51,6 +51,17 @@ html.light [data-brandlevelup-bg] {
   background-image: url('/Home/Frame_169_Light.svg') !important;
   background-color: #ffffff !important;
 }
+html.light [data-text-sm-dark-light] {
+  color: #595959 !important;
+}
+html.light [data-text-sm-dark-light].text-\[\#AAA\] {
+  color: #595959 !important;
+}
+
+html.light [data-text-sm-light].text-\[\#AAAAAA\] {
+  color: #595959 !important;
+}
+
 html.light [data-brandlevelup-bg] .text-white {
   color: #000000 !important;
 }

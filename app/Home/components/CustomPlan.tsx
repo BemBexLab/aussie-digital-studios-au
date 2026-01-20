@@ -9,22 +9,18 @@ const CustomPlan = () => {
 
   useEffect(() => {
     // Initial theme detection
-    const theme = typeof window !== "undefined" ? localStorage.getItem("ads_theme") : null;
+    const theme = localStorage.getItem("ads_theme");
     setIsDarkMode(theme !== "light");
 
     // Listen for theme changes via document class mutations
     const handleThemeChange = () => {
-      const theme = typeof window !== "undefined" ? localStorage.getItem("ads_theme") : null;
+      const theme = localStorage.getItem("ads_theme");
       setIsDarkMode(theme !== "light");
     };
 
     // Watch for class changes on document element
     const observer = new MutationObserver(handleThemeChange);
-    const htmlElement = typeof document !== "undefined" ? document.documentElement : null;
-    
-    if (htmlElement) {
-      observer.observe(htmlElement, { attributes: true, attributeFilter: ["class"] });
-    }
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
 
     // Also listen to storage changes (for cross-tab updates)
     window.addEventListener("storage", handleThemeChange);
@@ -38,8 +34,8 @@ const CustomPlan = () => {
   return (
     <>
       <CustomPlanMobile />
-      <section className="hidden sm:flex mx-13 my-10 justify-center">
-      <div className="flex flex-row h-[300px] w-full">
+      <section className="hidden sm:flex w-full mx-auto my-10 justify-center">
+      <div className="flex flex-row h-[300px] w-full max-w-7xl">
         {/* Custom Plan Content */}
         <div
           className="flex flex-col rounded-xl px-8 py-10 w-full"

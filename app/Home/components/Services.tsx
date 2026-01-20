@@ -219,7 +219,7 @@ const Services = () => {
         {/* subtle grid floor */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px] opacity-30" />
 
-        <div className="relative max-w-7xl mx-10">
+        <div className="relative max-w-7xl mx-auto">
           {/* Heading */}
           <div className="text-center mb-16">
             <p className="text-xl font-medium text-[#4C8C74] mb-2">
@@ -259,7 +259,10 @@ const Services = () => {
                     {service.title}
                   </h3>
 
-                  <p className="text-sm text-[#AAA] leading-relaxed">
+                  <p
+                    className="text-sm text-[#AAA] leading-relaxed"
+                    data-text-sm-dark-light
+                  >
                     {service.desc}
                   </p>
                 </div>

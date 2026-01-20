@@ -28,22 +28,18 @@ const WhyChooseUs = () => {
 
   useEffect(() => {
     // Initial theme detection
-    const theme = typeof window !== "undefined" ? localStorage.getItem("ads_theme") : null;
+    const theme = localStorage.getItem("ads_theme");
     setIsDarkMode(theme !== "light");
 
     // Listen for theme changes via document class mutations
     const handleThemeChange = () => {
-      const theme = typeof window !== "undefined" ? localStorage.getItem("ads_theme") : null;
+      const theme = localStorage.getItem("ads_theme");
       setIsDarkMode(theme !== "light");
     };
 
     // Watch for class changes on document element
     const observer = new MutationObserver(handleThemeChange);
-    const htmlElement = typeof document !== "undefined" ? document.documentElement : null;
-    
-    if (htmlElement) {
-      observer.observe(htmlElement, { attributes: true, attributeFilter: ["class"] });
-    }
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
 
     // Also listen to storage changes (for cross-tab updates)
     window.addEventListener("storage", handleThemeChange);
@@ -57,15 +53,15 @@ const WhyChooseUs = () => {
   return (
     <>
       <WhyChooseUsMobile />
-      <section className="hidden sm:flex mx-15 my-20 justify-center" style={{}}>
-      <div className="flex flex-row">
+      <section className="hidden sm:flex w-full px-5 my-20 justify-center" style={{}}>
+      <div className="flex flex-row justify-center mx-auto">
         {/* First column */}
-        <div className="flex flex-col w-3/5">
+        <div className="flex flex-col mx-10 w-3/5">
           <h2 className="text-[#4C8C74] text-xl mb-1">Why Choose Us?</h2>
           <h2 className="text-white text-4xl font-medium mb-5">
             Why Choose Aussie Digital Studio
           </h2>
-          <p className="font-normal text-sm text-[#AAAAAA]">
+          <p className="font-normal text-sm text-[#AAAAAA]" data-text-sm-light>
             We focus on modern, thoughtful design backed by clear strategy.
             Every project is planned with purpose, ensuring your digital
             presence not only looks great but performs well. We value clear
@@ -112,7 +108,7 @@ const WhyChooseUs = () => {
         </div>
 
         {/* Spacing div */}
-        <div className="w-40"></div>
+        <div className="w-5"></div>
 
         {/* Second column */}
         <div className="grid grid-cols-2 w-[500px] h-[220px]" style={{rowGap: '10px'}}>

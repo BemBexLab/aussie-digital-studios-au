@@ -8,22 +8,18 @@ const CustomPlanMobile = () => {
 
   useEffect(() => {
     // Initial theme detection
-    const theme = typeof window !== "undefined" ? localStorage.getItem("ads_theme") : null;
+    const theme = localStorage.getItem("ads_theme");
     setIsDarkMode(theme !== "light");
 
     // Listen for theme changes via document class mutations
     const handleThemeChange = () => {
-      const theme = typeof window !== "undefined" ? localStorage.getItem("ads_theme") : null;
+      const theme = localStorage.getItem("ads_theme");
       setIsDarkMode(theme !== "light");
     };
 
     // Watch for class changes on document element
     const observer = new MutationObserver(handleThemeChange);
-    const htmlElement = typeof document !== "undefined" ? document.documentElement : null;
-    
-    if (htmlElement) {
-      observer.observe(htmlElement, { attributes: true, attributeFilter: ["class"] });
-    }
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
 
     // Also listen to storage changes (for cross-tab updates)
     window.addEventListener("storage", handleThemeChange);

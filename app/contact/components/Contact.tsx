@@ -9,20 +9,16 @@ const Contact = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
 
   useEffect(() => {
-    const theme = typeof window !== "undefined" ? localStorage.getItem("ads_theme") : null;
+    const theme = localStorage.getItem("ads_theme");
     setIsDarkMode(theme !== "light");
 
     const handleThemeChange = () => {
-      const theme = typeof window !== "undefined" ? localStorage.getItem("ads_theme") : null;
+      const theme = localStorage.getItem("ads_theme");
       setIsDarkMode(theme !== "light");
     };
 
     const observer = new MutationObserver(handleThemeChange);
-    const htmlElement = typeof document !== "undefined" ? document.documentElement : null;
-
-    if (htmlElement) {
-      observer.observe(htmlElement, { attributes: true, attributeFilter: ["class"] });
-    }
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
 
     window.addEventListener("storage", handleThemeChange);
 
@@ -130,7 +126,7 @@ const Contact = () => {
                 <button className="px-4 py-2 text-sm bg-teal-500 hover:bg-blue-400 text-white rounded-full transition-all inline-flex items-center group">
                   <span>Submit</span>
                   <span className="ml-2 relative w-6 h-6 flex items-center justify-center">
-                    <span className="absolute inset-0 bg-black rounded-full" aria-hidden="true"></span>
+                    <span className={`absolute inset-0 rounded-full transition-colors ${isDarkMode ? "bg-black" : "bg-white"}`} aria-hidden="true"></span>
                     <svg
                       className="relative w-3 h-3 z-10 transition-transform duration-300 group-hover:rotate-45"
                       viewBox="0 0 24 24"
@@ -140,7 +136,7 @@ const Contact = () => {
                     >
                       <path
                         d="M7 17 L17 7"
-                        stroke="#fff"
+                        stroke={isDarkMode ? "#fff" : "#000"}
                         strokeWidth="1.4"
                         strokeLinecap="round"
                         strokeLinejoin="round"
@@ -148,7 +144,7 @@ const Contact = () => {
                       />
                       <path
                         d="M11 7 H17 V13"
-                        stroke="#fff"
+                        stroke={isDarkMode ? "#fff" : "#000"}
                         strokeWidth="1.4"
                         strokeLinecap="round"
                         strokeLinejoin="round"
@@ -245,7 +241,7 @@ const Contact = () => {
                 <button className="px-6 py-2.5 text-sm bg-teal-500 hover:bg-blue-400 text-white rounded-full transition-all inline-flex items-center justify-center group mx-auto">
                   <span>Submit</span>
                   <span className="ml-2 relative w-5 h-5 flex items-center justify-center">
-                    <span className="absolute inset-0 bg-black rounded-full" aria-hidden="true"></span>
+                    <span className={`absolute inset-0 rounded-full transition-colors ${isDarkMode ? "bg-black" : "bg-white"}`} aria-hidden="true"></span>
                     <svg
                       className="relative w-2.5 h-2.5 z-10 transition-transform duration-300 group-hover:rotate-45"
                       viewBox="0 0 24 24"
@@ -255,7 +251,7 @@ const Contact = () => {
                     >
                       <path
                         d="M7 17 L17 7"
-                        stroke="#fff"
+                        stroke={isDarkMode ? "#fff" : "#000"}
                         strokeWidth="1.4"
                         strokeLinecap="round"
                         strokeLinejoin="round"
@@ -263,7 +259,7 @@ const Contact = () => {
                       />
                       <path
                         d="M11 7 H17 V13"
-                        stroke="#fff"
+                        stroke={isDarkMode ? "#fff" : "#000"}
                         strokeWidth="1.4"
                         strokeLinecap="round"
                         strokeLinejoin="round"

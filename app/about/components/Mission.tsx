@@ -50,7 +50,7 @@ const Mission = () => {
 
           <div className="flex flex-col w-120 h-72 justify-center">
             <h2 className="text-4xl font-bold mb-6">Our Mission</h2>
-            <p className="text-[#AAAAAA] font-normal">
+            <p className="text-[#AAAAAA] font-normal" data-text-sm-light>
               We exist to create digital solutions that drive growth. By combining
               clean design with smart strategies, we help brands reach their full
               potential online. Every project is an opportunity to bring your

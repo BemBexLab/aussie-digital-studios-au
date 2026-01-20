@@ -3,9 +3,9 @@ import Image from "next/image";
 
 const AboutUs = () => {
   return (
-    <div className="mb-0 pb-0 mx-10 mt-5 mb-25 overflow-hidden">
+    <div className="mb-0 pb-0 w-full flex justify-center mt-5 mb-25 overflow-hidden">
       {/* Desktop layout (md and above) */}
-      <section className="w-full hidden md:block">
+      <section className="hidden md:block">
         <div className="max-w-7xl px-3 mt-25">
           <div className="flex flex-col md:flex-row gap-0">
             {/* Left label */}
@@ -28,7 +28,7 @@ const AboutUs = () => {
       </section>
 
       {/* Mobile layout (below md) */}
-      <section className="w-full md:hidden">
+      <section className="md:hidden">
         <div className="max-w-7xl px-3 mt-25">
           <div className="flex flex-col gap-4">
             {/* Label */}

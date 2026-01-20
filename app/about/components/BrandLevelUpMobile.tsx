@@ -1,6 +1,35 @@
-import React from "react";
+"use client";
+
+import React, { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 const BrandLevelUpMobile = () => {
+  const router = useRouter();
+  const [isDarkMode, setIsDarkMode] = useState(true);
+
+  useEffect(() => {
+    const theme = localStorage.getItem("ads_theme");
+    setIsDarkMode(theme !== "light");
+
+    const handleThemeChange = () => {
+      const theme = localStorage.getItem("ads_theme");
+      setIsDarkMode(theme !== "light");
+    };
+
+    const observer = new MutationObserver(handleThemeChange);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+
+    window.addEventListener("storage", handleThemeChange);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("storage", handleThemeChange);
+    };
+  }, []);
+
   return (
     <div
       className="sm:hidden flex flex-col bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white min-h-screen px-4 py-12 bg-cover bg-center"
@@ -19,11 +48,14 @@ const BrandLevelUpMobile = () => {
           </p>
 
           {/* Button */}
-          <button className="justify-center mt-4 px-3 w-[160px] h-[40px] text-xs sm:text-sm bg-teal-500 text-white rounded-full hover:bg-blue-400 transition-all inline-flex items-center group">
+          <button
+            onClick={() => router.push("/contact")}
+            className="justify-center mt-4 px-3 w-[170px] h-[40px] text-xs sm:text-sm bg-teal-500 text-white rounded-full hover:bg-blue-400 transition-all inline-flex items-center group"
+          >
             <span>Book a Strategy Call</span>
             <span className="ml-2 relative w-5 h-5 flex items-center justify-center">
               <span
-                className="absolute inset-0 bg-black rounded-full"
+                className={`absolute inset-0 rounded-full transition-colors ${isDarkMode ? "bg-black" : "bg-white"}`}
                 aria-hidden="true"
               ></span>
               <svg
@@ -35,7 +67,7 @@ const BrandLevelUpMobile = () => {
               >
                 <path
                   d="M7 17 L17 7"
-                  stroke="#fff"
+                  stroke={isDarkMode ? "#fff" : "#000"}
                   strokeWidth="1.8"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -43,7 +75,7 @@ const BrandLevelUpMobile = () => {
                 />
                 <path
                   d="M11 7 H17 V13"
-                  stroke="#fff"
+                  stroke={isDarkMode ? "#fff" : "#000"}
                   strokeWidth="1.8"
                   strokeLinecap="round"
                   strokeLinejoin="round"
