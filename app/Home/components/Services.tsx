@@ -259,7 +259,10 @@ const Services = () => {
                     {service.title}
                   </h3>
 
-                  <p className="text-sm text-[#AAA] leading-relaxed">
+                  <p
+                    className="text-sm text-[#AAA] leading-relaxed"
+                    data-text-sm-dark-light
+                  >
                     {service.desc}
                   </p>
                 </div>

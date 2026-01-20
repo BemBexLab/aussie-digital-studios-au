@@ -1,8 +1,12 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
+import { useRouter } from "next/navigation";
 import BrandLevelUpMobile from "./BrandLevelUpMobile";
 
 const BrandLevelUp = () => {
+  const router = useRouter();
   return (
     <>
       <BrandLevelUpMobile />
@@ -24,7 +28,10 @@ const BrandLevelUp = () => {
 
           {/* Button */}
           <div className="flex flex-row mt-4">
-            <button className="justify-center mt-4 px-3 w-[190px] h-[45px] text-sm bg-teal-500 text-white rounded-full hover:bg-blue-400 transition-all inline-flex items-center group flex flex-row">
+            <button
+              onClick={() => router.push("/contact")}
+              className="justify-center mt-4 px-3 w-[190px] h-[45px] text-sm bg-teal-500 text-white rounded-full hover:bg-blue-400 transition-all inline-flex items-center group flex flex-row"
+            >
               <span>Book a Strategy Call</span>
               <span className="ml-3 relative w-6 h-6 flex items-center justify-center">
                 <span

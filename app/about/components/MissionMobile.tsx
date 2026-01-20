@@ -48,7 +48,7 @@ const MissionMobile = () => {
       {/* Text section — centered */}
       <div className="text-center max-w-sm">
         <h2 className="text-xl sm:text-2xl font-bold mb-3">Our Mission</h2>
-        <p className="text-xs sm:text-sm text-[#AAAAAA] font-normal leading-relaxed">
+        <p className="text-xs sm:text-sm text-[#AAAAAA] font-normal leading-relaxed" data-text-sm-light>
           We exist to create digital solutions that drive growth. By combining
           clean design with smart strategies, we help brands reach their full
           potential online. Every project is an opportunity to bring your

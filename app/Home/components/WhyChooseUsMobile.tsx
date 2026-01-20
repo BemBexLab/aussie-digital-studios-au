@@ -58,7 +58,7 @@ const WhyChooseUsMobile = () => {
           <h2 className="text-white text-2xl sm:text-3xl font-medium leading-tight">
             Why Choose Aussie Digital Studio
           </h2>
-          <p className="font-normal text-xs sm:text-sm text-[#AAAAAA] leading-relaxed">
+          <p className="font-normal text-xs sm:text-sm text-[#AAAAAA] leading-relaxed" data-text-sm-light>
             We focus on modern, thoughtful design backed by clear strategy.
             Every project is planned with purpose, ensuring your digital
             presence not only looks great but performs well. We value clear
@@ -71,7 +71,7 @@ const WhyChooseUsMobile = () => {
             <span>Get Started</span>
             <span className="ml-2 relative w-5 h-5 flex items-center justify-center">
               <span
-                className="absolute inset-0 bg-black rounded-full"
+                className={`absolute inset-0 rounded-full transition-colors ${isDarkMode ? "bg-black" : "bg-white"}`}
                 aria-hidden="true"
               ></span>
               <svg
@@ -83,7 +83,7 @@ const WhyChooseUsMobile = () => {
               >
                 <path
                   d="M7 17 L17 7"
-                  stroke="#fff"
+                  stroke={isDarkMode ? "#fff" : "#000"}
                   strokeWidth="1.8"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -91,7 +91,7 @@ const WhyChooseUsMobile = () => {
                 />
                 <path
                   d="M11 7 H17 V13"
-                  stroke="#fff"
+                  stroke={isDarkMode ? "#fff" : "#000"}
                   strokeWidth="1.8"
                   strokeLinecap="round"
                   strokeLinejoin="round"

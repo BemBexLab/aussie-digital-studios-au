@@ -1,9 +1,12 @@
 import React from "react";
 import Image from "next/image";
+import FooterMobile from "./FooterMobile";
 
 const Footer = () => {
   return (
-    <div className="justify-center bg-[#151515] items-center">
+    <>
+      <FooterMobile />
+      <div className="hidden md:block justify-center bg-[#151515] items-center">
       <div className="flex flex-col md:flex-row bg-[#151515] h-auto md:h-[250px] gap-6 md:gap-2 text-white mt-12 px-4 md:px-0">
         {/* Todo: make this div center horizontally */}
         <div className="flex flex-col md:flex-row mx-auto mt-5 gap-8 md:gap-[35px]">
@@ -540,7 +543,8 @@ const Footer = () => {
           </svg>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 };
 

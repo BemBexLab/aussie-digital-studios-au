@@ -40,7 +40,7 @@ const About = () => {
 
           {/* Right Column */}
           <div className="md:w-[650px]">
-            <p className="text-[#AAAAAA] text-base sm:text-sm leading-relaxed">
+            <p className="text-[#AAAAAA] text-base sm:text-sm leading-relaxed" data-text-sm-light>
               Aussie Digital Studios was born from a passion for design and a
               love for helping businesses grow online. Based in Australia, we
               blend modern design, digital strategy, and creative thinking to

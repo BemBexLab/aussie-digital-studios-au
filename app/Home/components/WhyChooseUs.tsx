@@ -61,7 +61,7 @@ const WhyChooseUs = () => {
           <h2 className="text-white text-4xl font-medium mb-5">
             Why Choose Aussie Digital Studio
           </h2>
-          <p className="font-normal text-sm text-[#AAAAAA]">
+          <p className="font-normal text-sm text-[#AAAAAA]" data-text-sm-light>
             We focus on modern, thoughtful design backed by clear strategy.
             Every project is planned with purpose, ensuring your digital
             presence not only looks great but performs well. We value clear

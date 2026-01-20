@@ -212,7 +212,7 @@ const ContactMobile = () => {
                 >
                   <span>{loading ? "Sending..." : "Submit"}</span>
                   <span className="ml-2 relative w-4 h-4 flex items-center justify-center">
-                    <span className="absolute inset-0 bg-black rounded-full" aria-hidden="true"></span>
+                    <span className={`absolute inset-0 rounded-full transition-colors ${isDarkMode ? "bg-black" : "bg-white"}`} aria-hidden="true"></span>
                     <svg
                       className="relative w-2 h-2 z-10 transition-transform duration-300 group-hover:rotate-45"
                       viewBox="0 0 24 24"
@@ -222,7 +222,7 @@ const ContactMobile = () => {
                     >
                       <path
                         d="M7 17 L17 7"
-                        stroke="#fff"
+                        stroke={isDarkMode ? "#fff" : "#000"}
                         strokeWidth="1.4"
                         strokeLinecap="round"
                         strokeLinejoin="round"
@@ -230,7 +230,7 @@ const ContactMobile = () => {
                       />
                       <path
                         d="M11 7 H17 V13"
-                        stroke="#fff"
+                        stroke={isDarkMode ? "#fff" : "#000"}
                         strokeWidth="1.4"
                         strokeLinecap="round"
                         strokeLinejoin="round"

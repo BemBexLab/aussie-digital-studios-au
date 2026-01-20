@@ -58,7 +58,7 @@ const MobileHeader = () => {
         <div className="flex items-center">
           {!logoFallback ? (
             <Image
-              src="/Group_1.png"
+              src={isDarkMode ? "/Group_1.png" : "/Aussie_Header_Logo_Light.webp"}
               alt="Aussie Digital Studios"
               width={100}
               height={40}
@@ -69,7 +69,7 @@ const MobileHeader = () => {
             />
           ) : (
             // eslint-disable-next-line @next/next/no-img-element
-            <img src="/Group_1.png" alt="Aussie Digital Studios" className="h-10 w-auto" />
+            <img src={isDarkMode ? "/Group_1.png" : "/Aussie_Header_Logo_Light.webp"} alt="Aussie Digital Studios" className="h-10 w-auto" />
           )}
         </div>
 

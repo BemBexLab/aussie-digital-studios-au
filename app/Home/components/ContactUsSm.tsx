@@ -242,7 +242,7 @@ const ContactUsSm = () => {
               <span className="font-light">{loading ? "Sending..." : "Submit"}</span>
               <span className="relative w-5 h-5 flex items-center justify-center flex-shrink-0">
                 <span
-                  className="absolute inset-0 bg-black rounded-full"
+                  className={`absolute inset-0 rounded-full transition-colors ${isDarkMode ? "bg-black" : "bg-white"}`}
                   aria-hidden="true"
                 ></span>
                 <svg
@@ -254,7 +254,7 @@ const ContactUsSm = () => {
                 >
                   <path
                     d="M7 17 L17 7"
-                    stroke="#fff"
+                    stroke={isDarkMode ? "#fff" : "#000"}
                     strokeWidth="1.8"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -262,7 +262,7 @@ const ContactUsSm = () => {
                   />
                   <path
                     d="M11 7 H17 V13"
-                    stroke="#fff"
+                    stroke={isDarkMode ? "#fff" : "#000"}
                     strokeWidth="1.8"
                     strokeLinecap="round"
                     strokeLinejoin="round"

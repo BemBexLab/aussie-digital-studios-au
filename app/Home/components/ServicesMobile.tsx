@@ -240,7 +240,7 @@ const ServicesMobile = () => {
                 {service.title}
               </h3>
 
-              <p className="text-xs text-[#AAA] leading-relaxed">
+              <p className="text-xs text-[#AAA] leading-relaxed" data-text-sm-dark-light>
                 {service.desc}
               </p>
             </div>

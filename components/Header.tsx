@@ -81,7 +81,7 @@ const Header = () => {
               // fallback to plain img if next/image fails for any reason
               // keeps visual classes consistent
               // eslint-disable-next-line @next/next/no-img-element
-              <img src={isDarkMode ? "/Group_1.png" : "/Aussie_Header_Logo_Light.webp"} alt="Aussie Digital Studios" className="h-14 w-auto" />
+              <img src={isDarkMode ? "/Group_1.png" : "/Aussie_Header_Logo_Light.png"} alt="Aussie Digital Studios" className="h-14 w-auto" />
             )}
           </div>
 
