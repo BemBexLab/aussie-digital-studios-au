@@ -170,9 +170,13 @@ const ContactMobile = () => {
                 className="w-full bg-transparent border-b border-gray-500 text-gray-500 text-sm placeholder-gray-500 pb-2 focus:outline-none focus:border-teal-400 appearance-none cursor-pointer"
               >
                 <option value="">Select services</option>
-                <option value="Web Development">Web Development</option>
+                <option value="Logo">Logo</option>
+                <option value="Ecommerce">Ecommerce</option>
                 <option value="Web Design">Web Design</option>
+                <option value="SMM">SMM</option>
+                <option value="Video Animation">Video Animation</option>
                 <option value="SEO">SEO</option>
+                <option value="Maintainance">Maintainance</option>
                 <option value="Branding">Branding</option>
               </select>
               <input

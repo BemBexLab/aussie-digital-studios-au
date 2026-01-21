@@ -39,10 +39,10 @@ const ServiceBody = ({ service }: ServiceBodyProps) => {
             <h2 className="text-2xl mt-5 md:text-3xl font-medium">
               {service.heading || service.title}
             </h2>
-            <p className="whitespace-pre-line mt-4 text-[#AAAAAA] text-sm md:text-base">
+            <p className="whitespace-pre-line mt-4 text-[#AAAAAA] text-sm md:text-base" data-text-sm-light>
               {service.description}
             </p>
-            <ul className="mt-4 text-[#AAAAAA] text-sm md:text-base">
+            <ul className="mt-4 text-[#AAAAAA] text-sm md:text-base" data-text-sm-light>
               {service.points.map((point, index) => (
                 <li
                   key={index}
@@ -53,7 +53,7 @@ const ServiceBody = ({ service }: ServiceBodyProps) => {
                 </li>
               ))}
             </ul>
-            <div className="mt-6 text-[#AAAAAA] text-sm md:text-base">
+            <div className="mt-6 text-[#AAAAAA] text-sm md:text-base" data-text-sm-light>
               {service.footnote}
             </div>
           </div>

@@ -135,31 +135,50 @@ const ServicesDropdown = () => {
       {/* Dropdown Panel */}
       {isServicesDropdownOpen && (
         <div
-          className={`fixed top-20 -translate-y-12 sm:-translate-y-15 -translate-x-1/2 rounded-lg z-50 p-3 sm:p-4 md:p-8 lg:p-18 ${isDarkMode ? 'text-white' : 'text-black'}`}
+          className="fixed -translate-y-12 sm:-translate-y-15 -translate-x-1/2 rounded-xl z-50 overflow-hidden"
           style={{
-            left: 'calc(50% - 20px)',
-            backgroundImage: `url(${isDarkMode ? '/dropdown_dark.webp' : '/dropdown_light.webp'})`,
-            backgroundSize: '100% 100%',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            width: 'clamp(85vw, 95vw, 1320px)',
-            height: 'clamp(350px, 75vh, 580px)',
+            top: "calc(5rem + 50px)",
+            left: "calc(50% - 20px)",
+            width: "1100px",
+            height: "390px",
           }}
           onClick={() => setIsServicesDropdownOpen(false)}
         >
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-1 sm:gap-2 md:gap-5 h-full overflow-y-auto max-h-[350px] sm:max-h-[450px] md:max-h-full px-2 sm:px-0">
+          {/* Background Image Layer using Tailwind */}
+          <div
+            className={`absolute inset-0 bg-cover bg-center bg-no-repeat ${
+              isDarkMode
+                ? "bg-[url('/drop_down_2_dark.webp')]"
+                : "bg-[url('/drop_down_2_light.webp')]"
+            }`}
+            style={{
+              backgroundSize: '100% 100%',
+            }}
+          />
+
+          {/* Content Layer with Semi-transparent Overlay */}
+          <div
+            className={`absolute inset-0 ${isDarkMode ? "bg-black/20" : "bg-white/20"}`}
+          ></div>
+
+          {/* Content Container */}
+          <div
+            className={`relative flex flex-wrap gap-4 h-full overflow-y-auto p-6 ${isDarkMode ? "text-white" : "text-black"}`}
+          >
             {servicesContent.map((col, idx) => (
-              <div key={idx} className="space-y-1">
-                <a className="font-light text-xs sm:text-sm md:text-md uppercase tracking-wide block" href="#">
+              <div key={idx} className="space-y-0.5 flex-1 min-w-fit">
+                <a
+                  className="font-light text-xs sm:text-xs md:text-sm uppercase tracking-tight block leading-tight"
+                  href="#"
+                >
                   {col.title}
                 </a>
-                <ul className="space-y-0.5 text-xs sm:text-sm">
-
+                <ul className="space-y-0.5 text-xs font-light mt-3 text-[#AAAAAA]">
                   {col.items.map((subItem, subIdx) => (
                     <li key={subIdx}>
                       <Link
                         href={`/services#${subItem.toLowerCase().replace(/\s+/g, "-")}`}
-                        className={`hover:text-green-400 transition-colors text-sm ${isDarkMode ? 'text-white' : 'text-black'}`}
+                        className={`hover:text-green-400 transition-colors text-xs ${isDarkMode ? "text-[#AAAAAA]" : "text-[#444444]"}`}
                       >
                         {subItem}
                       </Link>

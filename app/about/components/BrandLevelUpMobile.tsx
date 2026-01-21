@@ -32,7 +32,7 @@ const BrandLevelUpMobile = () => {
 
   return (
     <div
-      className="sm:hidden flex flex-col bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white min-h-screen px-4 py-12 bg-cover bg-center"
+      className="sm:hidden flex flex-col bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white min-h-screen px-4 py-12 bg-cover bg-center w-full overflow-x-hidden"
       data-brandlevelup-bg
       style={{ backgroundImage: "url(/Home/CTA.svg)" }}
     >

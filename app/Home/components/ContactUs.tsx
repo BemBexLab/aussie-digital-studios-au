@@ -123,7 +123,7 @@ const ContactUs = () => {
         <h2 className="font-semibold text-center text-white text-4xl mt-2">
           Looking For Best Design &<br></br> Development Agency In Uk?
         </h2>
-        <p className="text-md text-[#AAAAAA] mt-5">
+        <p className="text-md text-[#AAAAAA] mt-5" data-text-sm-light>
           Ready to bring your business idea to life? Let our experts work for
           you and create a<br></br> custom website that echoes your brand and
           engages your audience.

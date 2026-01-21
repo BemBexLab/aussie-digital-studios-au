@@ -11,12 +11,12 @@ import HeroMobile from "@/components/HeroMobile";
 
 const AboutPage = () => {
   return (
-    <div>
+    <div className="md:overflow-auto overflow-x-hidden">
       <Hero H="ABOUT US" />
       <HeroMobile H="ABOUT US" />
       <About />
       <Values />
-      <div className="relative">
+      {/* <div className="relative">
         <Image
           src="/Geometric_Shape_Silver.png"
           alt="Decorative Image"
@@ -24,7 +24,7 @@ const AboutPage = () => {
           height={150}
           className="left-50 -bottom-17 right-3 md:block absolute z-10"
         />
-      </div>
+      </div> */}
       <BrandLevelUp />
       <Mission />
     </div>

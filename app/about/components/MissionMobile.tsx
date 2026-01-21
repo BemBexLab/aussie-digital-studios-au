@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const MissionMobile = () => {
   return (
-    <div className="sm:hidden flex flex-col items-center px-4 py-8 space-y-6">
+    <div className="sm:hidden flex flex-col items-center px-4 py-8 space-y-6 w-full overflow-x-hidden">
       {/* Images row — wrap and scale down */}
       <div className="flex flex-row flex-wrap justify-center gap-3 max-w-2xl">
         {/* Image 1 */}

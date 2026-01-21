@@ -1,9 +1,120 @@
-import React from "react";
+"use client";
+
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
 const AboutUs = () => {
+  const [isDarkMode, setIsDarkMode] = useState(true);
+
+  useEffect(() => {
+    const theme = localStorage.getItem("ads_theme");
+    setIsDarkMode(theme !== "light");
+
+    const handleThemeChange = () => {
+      const theme = localStorage.getItem("ads_theme");
+      setIsDarkMode(theme !== "light");
+    };
+
+    const observer = new MutationObserver(handleThemeChange);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+
+    window.addEventListener("storage", handleThemeChange);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("storage", handleThemeChange);
+    };
+  }, []);
+
+  const fullText =
+    "AussieDigitalStudios creates modern websites, strong branding and clear digital strategy. We keep things simple, creative and focused on real results.";
+  const highlightText = "branding and clear digital strategy. We keep things";
+
+  const renderAnimatedText = () => {
+    const elements: React.ReactNode[] = [];
+    const highlightStart = fullText.indexOf(highlightText);
+    const highlightEnd = highlightStart + highlightText.length;
+
+    let charIndex = 0;
+    const words = fullText.split(" ");
+
+    words.forEach((word, wordIdx) => {
+      const wordStart = charIndex;
+      const wordEnd = charIndex + word.length;
+
+      // Check if entire word or any part of it is in highlight section
+      const isInHighlight =
+        !(wordEnd <= highlightStart || wordStart >= highlightEnd);
+
+      const wordChars: React.ReactNode[] = [];
+
+      word.split("").forEach((char, charIdx) => {
+        wordChars.push(
+          <span
+            key={`${wordIdx}-${charIdx}`}
+            className={`${
+              isInHighlight ? "animate-colorShiftYellow" : "animate-colorShift"
+            }`}
+            style={{
+              color: "#989998",
+              animationDelay: `${charIndex * 0.05}s`,
+            }}
+          >
+            {char}
+          </span>
+        );
+        charIndex++;
+      });
+
+      // Wrap word in a span with whitespace-nowrap to prevent breaking
+      elements.push(
+        <span key={`word-${wordIdx}`} className="inline-block whitespace-nowrap">
+          {wordChars}
+        </span>
+      );
+
+      // Add space after word (but not after last word)
+      if (wordIdx < words.length - 1) {
+        elements.push(<span key={`space-${wordIdx}`}> </span>);
+        charIndex++; // Account for space in char count
+      }
+    });
+
+    return elements;
+  };
   return (
     <div className="mb-0 pb-0 w-full flex justify-center mt-5 mb-25 overflow-hidden">
+      <style>{`
+        @keyframes colorShift {
+          0% {
+            color: #989998;
+          }
+          100% {
+            color: ${isDarkMode ? 'white' : 'black'};
+          }
+        }
+
+        @keyframes colorShiftYellow {
+          0% {
+            color: #989998;
+          }
+          100% {
+            color: #FBBF24;
+          }
+        }
+
+        .animate-colorShift {
+          animation: colorShift 0.6s ease-out forwards;
+        }
+
+        .animate-colorShiftYellow {
+          animation: colorShiftYellow 0.6s ease-out forwards;
+        }
+      `}</style>
+
       {/* Desktop layout (md and above) */}
       <section className="hidden md:block">
         <div className="max-w-7xl px-3 mt-25">
@@ -17,10 +128,8 @@ const AboutUs = () => {
 
             {/* Right content */}
             <div className="md:w-3/4">
-              <h2 className="text-xl md:text-3xl lg:text-4xl font-semibold text-[#989998] leading-snug">
-                AussieDigitalStudios creates modern websites, strong branding
-                and clear digital strategy. We keep things simple, creative and
-                focused on real results.
+              <h2 className="text-xl md:text-3xl lg:text-4xl font-semibold leading-snug">
+                {renderAnimatedText()}
               </h2>
             </div>
           </div>
@@ -40,10 +149,8 @@ const AboutUs = () => {
 
             {/* Content */}
             <div>
-              <h2 className="text-xl sm:text-2xl font-semibold text-[#989998] leading-snug">
-                AussieDigitalStudios creates modern websites, strong branding
-                and clear digital strategy. We keep things simple, creative and
-                focused on real results.
+              <h2 className="text-xl sm:text-2xl font-semibold leading-snug">
+                {renderAnimatedText()}
               </h2>
             </div>
           </div>

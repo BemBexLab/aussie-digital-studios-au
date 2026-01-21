@@ -2,8 +2,10 @@
 
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 const CustomPlanMobile = () => {
+  const router = useRouter();
   const [isDarkMode, setIsDarkMode] = useState(true);
 
   useEffect(() => {
@@ -55,9 +57,9 @@ const CustomPlanMobile = () => {
             </p>
           </div>
           <div className="mt-6 flex flex-col gap-3">
-            <a
-              href="#"
-              className="flex font-light text-xs items-center justify-center gap-1 bg-[#4C8C74] text-white py-2 px-3 rounded-full hover:bg-blue-300 transition-colors group w-full"
+            <button
+              onClick={() => router.push("/contact")}
+              className="flex font-light text-xs items-center justify-center gap-1 bg-[#4C8C74] text-white py-2 px-3 rounded-full hover:bg-blue-300 transition-colors group w-[300px]"
             >
               Book a consultation call to create your perfect plan
               <svg
@@ -78,7 +80,7 @@ const CustomPlanMobile = () => {
                   transform="rotate(-45 12 12)"
                 />
               </svg>
-            </a>
+            </button>
             <div className="flex flex-row justify-center items-center gap-1">
               <p className="text-xs text-[#4C8C74]">SMM Plans</p>
               <svg

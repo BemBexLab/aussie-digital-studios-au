@@ -17,7 +17,7 @@ const WhyChooseMobile = () => {
           <h2 className="text-2xl font-semibold text-white">
             Why Choose Aussie Digital Studios
           </h2>
-          <p className="text-xs text-[#AAAAAA] mt-3 leading-relaxed">
+          <p className="text-xs text-[#AAAAAA] mt-3 leading-relaxed" data-text-sm-light>
             At AussieDigitalStudios, we deliver more than just websites. We
             create complete digital experiences built around strategy, design
             and performance. Our team manages everything from user experience

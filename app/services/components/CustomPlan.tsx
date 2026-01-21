@@ -36,8 +36,8 @@ const CustomPlan = () => {
   return (
     <>
       <CustomPlanMobile />
-      <section className="hidden sm:flex mx-13 my-10 justify-center">
-      <div className="flex flex-row h-[300px] w-full">
+      <section className="hidden sm:flex w-full my-10 justify-center">
+        <div className="flex flex-row h-[300px] max-w-7xl w-full mx-auto px-4">
         {/* Custom Plan Content */}
         <div
           className="flex flex-col rounded-xl px-8 py-10 w-full"
@@ -62,7 +62,7 @@ const CustomPlan = () => {
           </div>
           <div className="mt-15 flex flex-row">
             <a
-              href="#"
+              href="/contact"
               className="flex font-light text-sm items-center justify-center gap-1 bg-[#4C8C74] text-white py-2 px-3 rounded-full hover:bg-blue-300 transition-colors group w-fit mr-auto"
             >
               Book a consultation call to create your perfect plan
@@ -109,7 +109,7 @@ const CustomPlan = () => {
           height={400}
           className="ml-5"
         />
-      </div>
+        </div>
       </section>
     </>
   );

@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import ContactMobile from "./ContactMobile";
-// import ContactUsSm from "./ContactUsSm";
 
 const Contact = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -108,9 +107,14 @@ const Contact = () => {
               </div>
               <select className="w-full bg-transparent border-b border-gray-500 text-gray-500 placeholder-gray-500 pb-3 focus:outline-none focus:border-teal-400 appearance-none cursor-pointer">
                 <option value="">Select services</option>
-                <option value="web">Web Development</option>
-                <option value="design">Design</option>
-                <option value="consulting">Consulting</option>
+                <option value="Logo">Logo</option>
+                <option value="Ecommerce">Ecommerce</option>
+                <option value="Web Design">Web Design</option>
+                <option value="SMM">SMM</option>
+                <option value="Video Animation">Video Animation</option>
+                <option value="SEO">SEO</option>
+                <option value="Maintainance">Maintainance</option>
+                <option value="Branding">Branding</option>
               </select>
               <input
                 type="text"

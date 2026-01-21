@@ -7,20 +7,20 @@ const WhyChoose = () => {
   return (
     <>
       <WhyChooseMobile />
-      <section className="hidden sm:block mt-25">
-      <div className="flex flex-row justify-center px-4 md:px-19 gap-8">
+      <section className="hidden sm:flex mt-25 w-full justify-center">
+        <div className="flex flex-row justify-center items-center max-w-7xl w-full mx-auto px-4 gap-8">
         <Image
           className="w-[900px] h-[400px]"
           src="/services/Rectangle_52.webp"
           alt="Why Choose Us"
           width={1200}
-          height={1500}
+          height={1000}
         />
-        <div className="flex flex-col mt-20 mx-5">
+        <div className="flex flex-col mt-20 mx-5 -translate-y-7">
           <h2 className="text-4xl font-semibold">
             Why Choose Aussie Digital Studios
           </h2>
-          <p className="text-sm text-[#AAAAAA] mt-4">
+          <p className="text-sm text-[#AAAAAA] mt-4" data-text-sm-light>
             At AussieDigitalStudios, we deliver more than just websites. We
             create complete digital experiences built around strategy, design
             and performance. Our team manages everything from user experience
@@ -34,7 +34,7 @@ const WhyChoose = () => {
             works, and that’s exactly what we build.
           </p>
         </div>
-      </div>
+        </div>
       </section>
     </>
   );
