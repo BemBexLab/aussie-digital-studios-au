@@ -7,6 +7,7 @@ import { sendContactEmail } from "@/lib/emailService";
 
 const ContactUs = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isClient, setIsClient] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -21,6 +22,7 @@ const ContactUs = () => {
   const [isSuccess, setIsSuccess] = useState(false);
 
   useEffect(() => {
+    setIsClient(true);
     const theme = localStorage.getItem("ads_theme");
     setIsDarkMode(theme !== "light");
 
@@ -112,6 +114,7 @@ const ContactUs = () => {
   return (
     <>
       <ContactUsMobile />
+      {isClient && (
       <section className="hidden sm:flex my-20 justify-center items-center w-full">
         <div className="flex flex-row justify-center max-w-7xl w-full mx-auto px-4">
         <div
@@ -141,8 +144,8 @@ const ContactUs = () => {
             backgroundPosition: "center",
           }}
         >
-          <form onSubmit={handleSubmit} className="flex flex-col gap-4 relative z-10">
-            <div className="flex grid grid-cols-2 gap-4">
+          <form onSubmit={handleSubmit} className="flex flex-col gap-4 relative z-10" suppressHydrationWarning>
+            <div className="flex grid grid-cols-2 gap-4" suppressHydrationWarning>
               {/* First Name */}
               <TextField
                 name="firstName"
@@ -269,6 +272,7 @@ const ContactUs = () => {
         </div>
         </div>
       </section>
+      )}
     </>
   );
 };

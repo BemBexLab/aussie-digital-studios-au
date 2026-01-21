@@ -12,44 +12,44 @@ type PricingPlanProps = {
   };
 };
 
-// const defaultPricingData = [
-//   {
-//     title: "Basic Package",
-//     price: "$99",
-//     discountedFrom: "$199",
-//     includes: [
-//       "5 Revisions",
-//       "24 Hours Delivery",
-//       "Unique Design",
-//       "100% Satisfaction Guarantee",
-//     ],
-//   },
-//   {
-//     title: "Standard Package",
-//     price: "$199",
-//     discountedFrom: "$399",
-//     includes: [
-//       "Unlimited Revisions",
-//       "48 Hours Delivery",
-//       "Unique Design",
-//       "100% Satisfaction Guarantee",
-//       "Ownership Rights",
-//     ],
-//   },
-//   {
-//     title: "Premium Package",
-//     price: "$299",
-//     discountedFrom: "$599",
-//     includes: [
-//       "Unlimited Revisions",
-//       "72 Hours Delivery",
-//       "Unique Design",
-//       "100% Satisfaction Guarantee",
-//       "Ownership Rights",
-//       "Free Updates",
-//     ],
-//   },
-// ];
+const defaultPricingData = [
+  {
+    title: "Basic Package",
+    price: "$99",
+    discountedFrom: "$199",
+    includes: [
+      "5 Revisions",
+      "24 Hours Delivery",
+      "Unique Design",
+      "100% Satisfaction Guarantee",
+    ],
+  },
+  {
+    title: "Standard Package",
+    price: "$199",
+    discountedFrom: "$399",
+    includes: [
+      "Unlimited Revisions",
+      "48 Hours Delivery",
+      "Unique Design",
+      "100% Satisfaction Guarantee",
+      "Ownership Rights",
+    ],
+  },
+  {
+    title: "Premium Package",
+    price: "$299",
+    discountedFrom: "$599",
+    includes: [
+      "Unlimited Revisions",
+      "72 Hours Delivery",
+      "Unique Design",
+      "100% Satisfaction Guarantee",
+      "Ownership Rights",
+      "Free Updates",
+    ],
+  },
+];
 
 const PricingPlan = ({ service }: PricingPlanProps) => {
   const cardData = service.pricingCardData || defaultPricingData;
