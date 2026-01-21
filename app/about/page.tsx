@@ -13,7 +13,7 @@ const AboutPage = () => {
   return (
     <div className="md:overflow-auto overflow-x-hidden">
       <Hero H="ABOUT US" />
-      <HeroMobile H="ABOUT US" />
+      {/* <HeroMobile H="ABOUT US" /> */}
       <About />
       <Values />
       {/* <div className="relative">

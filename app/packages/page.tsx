@@ -1,5 +1,4 @@
-import Image from "next/image";
-import PricingPlan from "./components/PricingPlan";
+import PricingPlan from "../Home/components/PricingPlan";
 import BrandLevelUp from "./components/BrandLevelUp";
 import Hero from "@/components/Hero";
 
