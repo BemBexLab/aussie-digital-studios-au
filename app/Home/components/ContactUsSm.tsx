@@ -120,7 +120,7 @@ const ContactUsSm = () => {
           <h2 className="font-semibold text-white text-xl sm:text-2xl uppercase leading-tight">
             Looking For Best Design & Development Agency In Uk?
           </h2>
-          <p className="text-xs sm:text-sm text-[#AAAAAA]">
+          <p className="text-xs sm:text-sm text-[#AAAAAA]" data-text-sm-light>
             Ready to bring your business idea to life? Let our experts work for
             you and create a custom website that echoes your brand and engages your audience.
           </p>

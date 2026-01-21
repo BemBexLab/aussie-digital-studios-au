@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import AboutMobile from "./AboutMobile";
 
 const About = () => {
   const [isLight, setIsLight] = useState(false);
@@ -24,7 +25,9 @@ const About = () => {
     return () => observer.disconnect();
   }, []);
   return (
-    <section className="py-12 px-4 sm:px-6">
+    <>
+      <AboutMobile />
+      <section className="hidden md:block py-12 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
         {/* Top Header Section */}
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 px-4 md:px-6 mb-12">
@@ -131,6 +134,7 @@ const About = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

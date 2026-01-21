@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 
@@ -9,6 +11,7 @@ type CardData = {
 };
 
 const Testimonials = () => {
+  const [isPaused, setIsPaused] = React.useState(false);
   const cardsData = [
     {
       image:
@@ -102,7 +105,7 @@ const Testimonials = () => {
   return (
     <div className="relative py-8">
       <div className="flex flex-col my-8">
-        <p className="text-xl text-[#4C8C74] font-semibold text-center">
+        <p className="text-sm text-[#4C8C74] font-semibold text-center">
           Testimonial
         </p>
         <p className="text-center text-4xl font-semibold text-white mt-1">
@@ -119,14 +122,24 @@ const Testimonials = () => {
                 animation: marqueeScroll 25s linear infinite;
             }
 
+            .marquee-inner.paused {
+                animation-play-state: paused;
+            }
+
             .marquee-reverse {
                 animation-direction: reverse;
             }
         `}</style>
 
-      <div className="marquee-row w-full mx-auto overflow-hidden relative">
+      <div
+        className="marquee-row w-full mx-auto overflow-hidden relative"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+      >
         <div className="absolute left-0 top-0 h-full w-10 z-10 pointer-events-none bg-gradient-to-r from-transparent to-transparent"></div>
-        <div className="marquee-inner flex transform-gpu min-w-[200%] py-4 gap-0">
+        <div
+          className={`marquee-inner flex transform-gpu min-w-[200%] py-4 gap-0 ${isPaused ? "paused" : ""}`}
+        >
           {[...cardsData, ...cardsData].map((card, index) => (
             <CreateCard key={index} card={card} />
           ))}
@@ -134,9 +147,15 @@ const Testimonials = () => {
         <div className="absolute right-0 top-0 h-full w-10 md:w-20 z-10 pointer-events-none bg-gradient-to-l from-transparent to-transparent"></div>
       </div>
 
-      <div className="marquee-row w-full mx-auto overflow-hidden relative -mt-2">
+      <div
+        className="marquee-row w-full mx-auto overflow-hidden relative -mt-2"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+      >
         <div className="absolute left-0 top-0 h-full w-10 z-10 pointer-events-none bg-gradient-to-r from-transparent to-transparent"></div>
-        <div className="marquee-inner marquee-reverse flex transform-gpu min-w-[200%] py-4 gap-0">
+        <div
+          className={`marquee-inner marquee-reverse flex transform-gpu min-w-[200%] py-4 gap-0 ${isPaused ? "paused" : ""}`}
+        >
           {[...cardsData, ...cardsData].map((card, index) => (
             <CreateCard key={index} card={card} />
           ))}

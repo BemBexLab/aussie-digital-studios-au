@@ -63,34 +63,6 @@ const PricingPlanMobile = ({ service }: PricingPlanMobileProps) => {
           Our Packages
         </h1>
 
-        {/* Filter Buttons - Compact for Mobile */}
-        <div className="flex flex-row gap-2 justify-center flex-wrap mb-4">
-          <div className="text-gray-400 px-3 py-1.5 rounded-[6px] border border-gray-600 cursor-pointer text-xs hover:border-yellow-400 hover:text-yellow-400 transition">
-            Logo
-          </div>
-          <div className="text-gray-400 px-3 py-1.5 rounded-[6px] border border-gray-600 cursor-pointer text-xs hover:border-yellow-400 hover:text-yellow-400 transition">
-            E-Commerce
-          </div>
-          <div className="text-gray-400 px-3 py-1.5 rounded-[6px] border border-gray-600 cursor-pointer text-xs hover:border-yellow-400 hover:text-yellow-400 transition">
-            Website
-          </div>
-          <div className="text-gray-400 px-3 py-1.5 rounded-[6px] border border-gray-600 cursor-pointer text-xs hover:border-yellow-400 hover:text-yellow-400 transition">
-            SMM
-          </div>
-          <div className="text-gray-400 px-3 py-1.5 rounded-[6px] border border-gray-600 cursor-pointer text-xs hover:border-yellow-400 hover:text-yellow-400 transition">
-            Video Animation
-          </div>
-          <div className="text-gray-400 px-3 py-1.5 rounded-[6px] border border-gray-600 cursor-pointer text-xs hover:border-yellow-400 hover:text-yellow-400 transition">
-            SEO
-          </div>
-          <div className="text-gray-400 px-3 py-1.5 rounded-[6px] border border-gray-600 cursor-pointer text-xs hover:border-yellow-400 hover:text-yellow-400 transition">
-            Maintenance
-          </div>
-          <div className="text-gray-400 px-3 py-1.5 rounded-[6px] border border-gray-600 cursor-pointer text-xs hover:border-yellow-400 hover:text-yellow-400 transition">
-            Branding
-          </div>
-        </div>
-
         {/* Pricing Cards - Stacked Vertically */}
         <div className="flex flex-col gap-4">
           {cardData.map((card, index) => (

@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import WhyChooseUsMobile from "./WhyChooseUsMobile";
 
 const cardData = [
@@ -24,6 +25,7 @@ const cardData = [
 ];
 
 const WhyChooseUs = () => {
+  const router = useRouter();
   const [isDarkMode, setIsDarkMode] = useState(true);
 
   useEffect(() => {
@@ -71,7 +73,10 @@ const WhyChooseUs = () => {
             help your brand continue to evolve and succeed.
           </p>
           <div className="flex flex-row">
-            <button className="justify-center mt-4 px-3 w-[150px] h-[40px] text-sm bg-teal-500 text-white rounded-full hover:bg-blue-400 transition-all inline-flex items-center group flex flex-row">
+            <button
+              onClick={() => router.push("/contact")}
+              className="justify-center mt-4 px-3 w-[150px] h-[40px] text-sm bg-teal-500 text-white rounded-full hover:bg-blue-400 transition-all inline-flex items-center group flex flex-row"
+            >
               <span>Get Started</span>
               <span className="ml-3 relative w-6 h-6 flex items-center justify-center">
                 <span

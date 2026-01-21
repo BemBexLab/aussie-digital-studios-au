@@ -112,8 +112,8 @@ const ContactUs = () => {
   return (
     <>
       <ContactUsMobile />
-      <section className="hidden sm:block my-20 justify-center items-center mx-20">
-      <div className="flex flex-row mt-10">
+      <section className="hidden sm:flex my-20 justify-center items-center w-full">
+        <div className="flex flex-row justify-center max-w-7xl w-full mx-auto px-4">
         <div
           className="w-[550px] h-[390px] rounded-2xl"
         >
@@ -122,7 +122,7 @@ const ContactUs = () => {
             <h2 className="font-semibold text-white text-4xl mt-2 uppercase">
               Looking For Best Design &<br></br> Development Agency In Uk?
             </h2>
-            <p className="text-md text-[#AAAAAA] mt-5">
+            <p className="text-md text-[#AAAAAA] mt-5" data-text-sm-light>
               Ready to bring your business idea to life? Let our experts work for
               you and create a<br></br> custom website that echoes your brand and
               engages your audience.
@@ -267,7 +267,7 @@ const ContactUs = () => {
             </div>
           </form>
         </div>
-      </div>
+        </div>
       </section>
     </>
   );

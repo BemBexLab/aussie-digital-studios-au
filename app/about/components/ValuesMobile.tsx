@@ -26,13 +26,13 @@ const ValuesMobile = () => {
     : "radial-gradient(circle at top right, rgba(255,255,255,0.3) 0%, transparent 50%), linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%)";
 
   return (
-    <div className="sm:hidden flex flex-col my-12 mx-4 px-0">
+    <div className="sm:hidden flex flex-col my-12 mx-4 px-0  overflow-x-hidden">
       {/* Content */}
-      <div className="flex flex-col w-full space-y-4">
+      <div className="flex flex-col w-full space-y-4 items-center px-2">
         <p className="text-[#4C8C74] text-xs sm:text-sm font-medium">Our Values</p>
-        <h2 className="text-white text-2xl sm:text-3xl font-bold leading-tight">Our Core Values</h2>
+        <h2 className="text-white text-2xl sm:text-3xl font-bold leading-tight text-center">Our Core Values</h2>
 
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 w-full max-w-xs">
           {/* Card 1 */}
           <div
             className="group relative rounded-lg w-full border border-white/10 p-4 transition overflow-hidden"
@@ -133,13 +133,13 @@ const ValuesMobile = () => {
           </div>
 
           {/* Image */}
-          <div className="flex justify-center mt-6">
+          <div className="flex justify-center mt-6 w-full">
             <Image 
               src="/About/Rectangle 43.webp"
               alt="Values Illustration"
               width={400}
               height={250}
-              className="w-full max-w-md h-auto rounded-lg"
+              className="w-full max-w-xs h-auto rounded-lg"
             />
           </div>
         </div>

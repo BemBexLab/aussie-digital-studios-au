@@ -1,56 +1,361 @@
+"use client";
+
 import Image from "next/image";
-import PortfolioSectionMobile from "./PortfolioSectionMobile";
+import React, { useState } from "react";
+import PortfolioSectionMobileNew from "./PortfolioSectionMobileNew";
 
 const cardData = [
   {
-    image: "/Home/Rectangle_33.webp",
-    title: "Project Name",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
-    tags: ["Web design", "Web development", "Support"],
+    title: "Logo",
+    data: [
+      {
+        image: "/Home/Rectangle_33.webp",
+        title: "Project Name",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        tags: ["Web design", "Web development", "Support"],
+      },
+      {
+        image: "/Home/Rectangle_32.webp",
+        title: "Project Name",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        tags: ["Web design", "Web development", "Support"],
+      },
+      {
+        image: "/Home/Rectangle_34.webp",
+        title: "Project Name",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        tags: ["Web design", "Web development", "Support"],
+      },
+      {
+        image: "/Home/Rectangle_33.webp",
+        title: "Project Name",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        tags: ["Web design", "Web development", "Support"],
+      },
+      {
+        image: "/Home/Rectangle_33.webp",
+        title: "Project Name",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        tags: ["Web design", "Web development", "Support"],
+      },
+      {
+        image: "/Home/Rectangle_32.webp",
+        title: "Project Name",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        tags: ["Web design", "Web development", "Support"],
+      },
+    ],
   },
   {
-    image: "/Home/Rectangle_32.webp",
-    title: "Project Name",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
-    tags: ["Web design", "Web development", "Support"],
+    title: "E-Commerce",
+    data: [
+      {
+        image: "/Home/Rectangle_33.webp",
+        title: "Project Name",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        tags: ["Web design", "Web development", "Support"],
+      },
+    ],
   },
   {
-    image: "/Home/Rectangle_34.webp",
-    title: "Project Name",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
-    tags: ["Web design", "Web development", "Support"],
+    title: "Website Design",
+    data: [
+      {
+        image: "/Home/Rectangle_33.webp",
+        title: "Project Name",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        tags: ["Web design", "Web development", "Support"],
+      },
+      {
+        image: "/Home/Rectangle_32.webp",
+        title: "Project Name",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        tags: ["Web design", "Web development", "Support"],
+      },
+      {
+        image: "/Home/Rectangle_34.webp",
+        title: "Project Name",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        tags: ["Web design", "Web development", "Support"],
+      },
+      {
+        image: "/Home/Rectangle_33.webp",
+        title: "Project Name",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        tags: ["Web design", "Web development", "Support"],
+      },
+      {
+        image: "/Home/Rectangle_33.webp",
+        title: "Project Name",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        tags: ["Web design", "Web development", "Support"],
+      },
+      {
+        image: "/Home/Rectangle_32.webp",
+        title: "Project Name",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        tags: ["Web design", "Web development", "Support"],
+      },
+    ],
   },
   {
-    image: "/Home/Rectangle_33.webp",
-    title: "Project Name",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
-    tags: ["Web design", "Web development", "Support"],
+    title: "SMM",
+    data: [
+      {
+        image: "/Home/Rectangle_33.webp",
+        title: "Project Name",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        tags: ["Web design", "Web development", "Support"],
+      },
+      {
+        image: "/Home/Rectangle_32.webp",
+        title: "Project Name",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        tags: ["Web design", "Web development", "Support"],
+      },
+      {
+        image: "/Home/Rectangle_34.webp",
+        title: "Project Name",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        tags: ["Web design", "Web development", "Support"],
+      },
+      {
+        image: "/Home/Rectangle_33.webp",
+        title: "Project Name",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        tags: ["Web design", "Web development", "Support"],
+      },
+      {
+        image: "/Home/Rectangle_33.webp",
+        title: "Project Name",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        tags: ["Web design", "Web development", "Support"],
+      },
+      {
+        image: "/Home/Rectangle_32.webp",
+        title: "Project Name",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        tags: ["Web design", "Web development", "Support"],
+      },
+    ],
   },
   {
-    image: "/Home/Rectangle_33.webp",
-    title: "Project Name",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
-    tags: ["Web design", "Web development", "Support"],
+    title: "Video Animation",
+    data: [
+      {
+        image: "/Home/Rectangle_33.webp",
+        title: "Project Name",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        tags: ["Web design", "Web development", "Support"],
+      },
+      {
+        image: "/Home/Rectangle_32.webp",
+        title: "Project Name",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        tags: ["Web design", "Web development", "Support"],
+      },
+      {
+        image: "/Home/Rectangle_34.webp",
+        title: "Project Name",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        tags: ["Web design", "Web development", "Support"],
+      },
+      {
+        image: "/Home/Rectangle_33.webp",
+        title: "Project Name",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        tags: ["Web design", "Web development", "Support"],
+      },
+      {
+        image: "/Home/Rectangle_33.webp",
+        title: "Project Name",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        tags: ["Web design", "Web development", "Support"],
+      },
+      {
+        image: "/Home/Rectangle_32.webp",
+        title: "Project Name",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        tags: ["Web design", "Web development", "Support"],
+      },
+    ],
   },
   {
-    image: "/Home/Rectangle_32.webp",
-    title: "Project Name",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
-    tags: ["Web design", "Web development", "Support"],
+    title: "SEO",
+    data: [
+      {
+        image: "/Home/Rectangle_33.webp",
+        title: "Project Name",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        tags: ["Web design", "Web development", "Support"],
+      },
+      {
+        image: "/Home/Rectangle_32.webp",
+        title: "Project Name",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        tags: ["Web design", "Web development", "Support"],
+      },
+      {
+        image: "/Home/Rectangle_34.webp",
+        title: "Project Name",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        tags: ["Web design", "Web development", "Support"],
+      },
+      {
+        image: "/Home/Rectangle_33.webp",
+        title: "Project Name",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        tags: ["Web design", "Web development", "Support"],
+      },
+      {
+        image: "/Home/Rectangle_33.webp",
+        title: "Project Name",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        tags: ["Web design", "Web development", "Support"],
+      },
+      {
+        image: "/Home/Rectangle_32.webp",
+        title: "Project Name",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        tags: ["Web design", "Web development", "Support"],
+      },
+    ],
+  },
+  {
+    title: "Maintenance",
+    data: [
+      {
+        image: "/Home/Rectangle_33.webp",
+        title: "Project Name",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        tags: ["Web design", "Web development", "Support"],
+      },
+      {
+        image: "/Home/Rectangle_32.webp",
+        title: "Project Name",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        tags: ["Web design", "Web development", "Support"],
+      },
+      {
+        image: "/Home/Rectangle_34.webp",
+        title: "Project Name",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        tags: ["Web design", "Web development", "Support"],
+      },
+      {
+        image: "/Home/Rectangle_33.webp",
+        title: "Project Name",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        tags: ["Web design", "Web development", "Support"],
+      },
+      {
+        image: "/Home/Rectangle_33.webp",
+        title: "Project Name",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        tags: ["Web design", "Web development", "Support"],
+      },
+      {
+        image: "/Home/Rectangle_32.webp",
+        title: "Project Name",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        tags: ["Web design", "Web development", "Support"],
+      },
+    ],
+  },
+  {
+    title: "Branding",
+    data: [
+      {
+        image: "/Home/Rectangle_33.webp",
+        title: "Project Name",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        tags: ["Web design", "Web development", "Support"],
+      },
+      {
+        image: "/Home/Rectangle_32.webp",
+        title: "Project Name",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        tags: ["Web design", "Web development", "Support"],
+      },
+      {
+        image: "/Home/Rectangle_34.webp",
+        title: "Project Name",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        tags: ["Web design", "Web development", "Support"],
+      },
+      {
+        image: "/Home/Rectangle_33.webp",
+        title: "Project Name",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        tags: ["Web design", "Web development", "Support"],
+      },
+      {
+        image: "/Home/Rectangle_33.webp",
+        title: "Project Name",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        tags: ["Web design", "Web development", "Support"],
+      },
+      {
+        image: "/Home/Rectangle_32.webp",
+        title: "Project Name",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        tags: ["Web design", "Web development", "Support"],
+      },
+    ],
   },
 ];
 
 export default function PortfolioSection() {
+  const [selectedService, setSelectedService] = useState("Logo");
+  const selectedData = cardData.find(item => item.title === selectedService);
   return (
     <>
-      {/* Desktop version - hidden on sm screens */}
-      <section className="hidden sm:block relative mt-25 my-20">
+      <PortfolioSectionMobileNew />
+      {/* Desktop version - hidden on md and below screens */}
+      <section className="hidden md:block relative mt-25 my-20">
         {/* Heading */}
         <div className="text-center mb-20 px-4">
           {" "}
@@ -64,22 +369,18 @@ export default function PortfolioSection() {
           </h2>
           {/* Buttons - wrap & stack on mobile */}
           <div className="flex flex-wrap gap-2 mt-6 md:gap-4 justify-center">
-            {[
-              "Logo",
-              "E-Commerce",
-              "Website Design",
-              "SMM",
-              "Video Animation",
-              "SEO",
-              "Maintenance",
-              "Branding",
-            ].map((label) => (
-              <div
-                key={label}
-                className="text-gray-400 px-3 py-1.5 md:px-4 md:py-2 rounded-[8px] border border-gray-600 cursor-pointer text-xs md:text-sm hover:border-yellow-400 hover:text-yellow-400 transition"
+            {cardData.map((service) => (
+              <button
+                key={service.title}
+                onClick={() => setSelectedService(service.title)}
+                className={`px-3 py-1.5 md:px-4 md:py-2 rounded-[8px] border cursor-pointer text-xs md:text-sm transition ${
+                  selectedService === service.title
+                    ? "border-yellow-400 text-yellow-400 bg-yellow-400/10"
+                    : "text-gray-400 border-gray-600 hover:border-yellow-400 hover:text-yellow-400"
+                }`}
               >
-                {label}
-              </div>
+                {service.title}
+              </button>
             ))}
           </div>
         </div>
@@ -88,7 +389,7 @@ export default function PortfolioSection() {
         <div className="max-w-7xl mx-auto flex justify-center">
           <div className="grid grid-cols-2 gap-20">
             {/* Portfolio Cards */}
-            {cardData.map((card, index) => (
+            {selectedData?.data.map((card, index) => (
               <div
                 key={index}
                 className="h-full w-[480px] overflow-hidden relative"
@@ -114,9 +415,6 @@ export default function PortfolioSection() {
           </div>
         </div>
       </section>
-
-      {/* Mobile version */}
-      <PortfolioSectionMobile />
     </>
   );
 }
