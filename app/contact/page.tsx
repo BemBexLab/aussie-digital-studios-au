@@ -10,7 +10,6 @@ const ContactPage = () => {
   return (
     <div>
       <Hero H="CONTACT US" />
-      <HeroMobile H="CONTACT US" />
       <Contact />
     </div>
 )
