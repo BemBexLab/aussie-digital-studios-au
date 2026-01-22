@@ -1,6 +1,6 @@
 import React from "react";
 import ThemeToggle from "@/components/ThemeToggle";
-import HeroMobile from "./HeroMobile";
+import HeroMobile from "@/components/HeroMobile";
 
 type HeroProps = {
   H: string;
@@ -16,7 +16,7 @@ const Hero = ({ H }: HeroProps) => {
 
       {/* Desktop View */}
       <div
-        className="hidden md:flex w-full h-[60vh] lg:h-[70vh] items-center justify-center relative overflow-hidden"
+        className="hidden md:flex w-full h-[65vh] lg:h-[80vh] items-center justify-center relative overflow-hidden"
         data-hero-bg-about
         style={{
           backgroundImage: "url('/About/About Hero BG.png')",
@@ -47,7 +47,7 @@ const Hero = ({ H }: HeroProps) => {
       {/* Content Wrapper */}
       <div className="flex flex-col items-center justify-end w-full relative z-10 px-4 pb-6">
         {/* ThemeToggle: Stacked above text on small screens, top-right on medium+ */}
-        <div className="self-end mb-3 md:mb-0 md:absolute md:top-3 md:right-4 lg:top-4 lg:right-6 -translate-y-10">
+        <div className="self-end mb-3 md:mb-0 md:absolute md:top-3 md:right-4 lg:top-4 lg:right-6 translate-y-20">
           <ThemeToggle />
         </div>
 

@@ -355,7 +355,7 @@ export default function PortfolioSection() {
     <>
       <PortfolioSectionMobileNew />
       {/* Desktop version - hidden on md and below screens */}
-      <section className="hidden md:block relative mt-25 my-20">
+      <section className="hidden md:block relative mt-25 my-20 max-[1250px]:px-4">
         {/* Heading */}
         <div className="text-center mb-20 px-4">
           {" "}
@@ -387,7 +387,7 @@ export default function PortfolioSection() {
 
         {/* Main Container */}
         <div className="max-w-7xl mx-auto flex justify-center">
-          <div className="grid grid-cols-2 gap-20">
+          <div className="grid grid-cols-2 max-[1250px]:grid-cols-1 gap-20">
             {/* Portfolio Cards */}
             {selectedData?.data.map((card, index) => (
               <div

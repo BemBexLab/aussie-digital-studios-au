@@ -35,10 +35,10 @@ const CustomPlan = () => {
     <>
       <CustomPlanMobile />
       <section className="hidden sm:flex w-full mx-auto my-10 justify-center">
-      <div className="flex flex-row h-[300px] w-full max-w-7xl">
+      <div className="flex flex-col max-[1250px]:flex-col flex-row h-[300px] max-[1250px]:h-auto w-full max-w-7xl">
         {/* Custom Plan Content */}
         <div
-          className="flex flex-col rounded-xl px-8 py-10 w-full"
+          className="flex flex-col rounded-xl px-8 py-10 w-full max-[1250px]:px-6"
           style={isDarkMode ? {
             backgroundImage: `url('/Home/Custom_plans.webp')`,
             backgroundSize: "fill",

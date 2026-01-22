@@ -232,11 +232,11 @@ const Services = () => {
 
           <div className="flex justify-center">
             {/* Cards */}
-            <div className="w-[950px] grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
+            <div className="w-[950px] max-[1250px]:w-full grid grid-cols-3 sm:grid-cols-2 max-[1250px]:grid-cols-1 lg:grid-cols-3 gap-6 justify-center px-4 max-[1250px]:px-0">
               {services.map((service, i) => (
                 <div
                   key={i}
-                  className="group relative rounded-2xl w-[290px] border border-white/10 p-6 transition overflow-hidden"
+                  className="group relative rounded-2xl w-[290px] max-[1250px]:w-full border border-white/10 p-6 transition overflow-hidden"
                   data-service-card
                   style={{
                     backgroundImage: "url('/Home/card_dark.svg')",

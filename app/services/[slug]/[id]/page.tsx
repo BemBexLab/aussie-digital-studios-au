@@ -1,4 +1,4 @@
-import Hero from "@/components/Hero";
+import Hero from "../../components/Hero";
 import React from "react";
 import ServiceBody from "../../components/ServiceBody";
 import Cards from "../../components/Cards";
