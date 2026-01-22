@@ -169,7 +169,7 @@ const ServicesDropdown = () => {
               <div key={idx} className="space-y-0.5 flex-1 min-w-fit">
                 <a
                   className="font-light text-xs sm:text-xs md:text-sm uppercase tracking-tight block leading-tight"
-                  href="#"
+                  href={`/services/${col.title.toLowerCase().replace(/\s+/g, "-")}`}
                 >
                   {col.title}
                 </a>
@@ -177,7 +177,7 @@ const ServicesDropdown = () => {
                   {col.items.map((subItem, subIdx) => (
                     <li key={subIdx}>
                       <Link
-                        href={`/services#${subItem.toLowerCase().replace(/\s+/g, "-")}`}
+                        href={`/services/${col.title.toLowerCase().replace(/\s+/g, "-")}/${subItem.toLowerCase().replace(/\s+/g, "-")}`}
                         className={`hover:text-green-400 transition-colors text-xs ${isDarkMode ? "text-[#AAAAAA]" : "text-[#444444]"}`}
                       >
                         {subItem}

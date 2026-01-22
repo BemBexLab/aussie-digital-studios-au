@@ -18,7 +18,7 @@ import ContactUs from "./components/ContactUs";
 
 const HomePage = () => {
   return (
-    <div>
+    <div className="overflow-hidden relative">
       <Hero />
       <LogoSlider />
       <AboutUs />

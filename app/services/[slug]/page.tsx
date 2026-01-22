@@ -6,7 +6,7 @@ import { FiCheckCircle } from "react-icons/fi";
 import Footer from "@/components/Footer";
 import FAQ from "../components/FAQ";
 import Cards from "../components/Cards";
-import Hero from "@/components/Hero";
+import Hero from "../components/Hero";
 import WhyChoose from "../components/WhyChoose";
 import Portfolio from "../components/Portfolio";
 import { Testimonials } from "../components/Testimonials";

@@ -117,7 +117,7 @@ const ContactUs = () => {
   return (
     <>
       <ContactUsSm />
-      <section className="hidden sm:block mt-20 justify-center items-center mx-20">
+      <section className="hidden sm:block mt-20 justify-center items-center max-[1250px]:px-6 mx-20">
       <div className="flex flex-col justify-center text-center items-center">
         <p className="text-xl text-[#4C8C74] font-semibold">Contact Us</p>
         <h2 className="font-semibold text-center text-white text-4xl mt-2">
@@ -129,11 +129,11 @@ const ContactUs = () => {
           engages your audience.
         </p>
       </div>
-      <div className="flex flex-row mt-10 gap-6 items-center">
+      <div className="flex flex-col max-[1250px]:flex-col flex-row mt-10 gap-6 items-center max-[1250px]:items-stretch">
 
         {/* Image */}
         <div
-          className="flex-shrink-0 h-[500px]"
+          className="flex-shrink-0 max-[1250px]:w-full h-[500px]"
           style={{
             background: "transparent",
           }}
@@ -143,13 +143,13 @@ const ContactUs = () => {
             alt="Contact Us Image"
             width={1190}
             height={1190}
-            className="rounded-2xl w-[550px] h-[468px] rounded-xl translate-y-12"
+            className="rounded-2xl w-[550px] max-[1250px]:w-full h-[468px] rounded-xl translate-y-12"
           />
         </div>
 
         {/* Contact Form */}
         <div
-          className="flex-1 h-[400px] px-7 py-7 rounded-2xl"
+          className="flex-1 max-[1250px]:w-full h-[400px] px-7 py-7 rounded-2xl"
           style={{
             backgroundImage: `url('${isDarkMode ? '/Home/contactus_dark.svg' : '/Home/Frame_163_Light.svg'}')`,
             backgroundSize: "cover",

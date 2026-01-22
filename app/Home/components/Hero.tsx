@@ -4,9 +4,9 @@ import React from "react";
 const Hero = () => {
   return (
     <>
-      {/* Desktop Hero (md and up) */}
+      {/* Desktop Hero (1250px and up) */}
       <section
-        className="hidden md:block h-[695px] w-full relative hero-bg-section"
+        className="hidden min-[1250px]:block h-[695px] w-full relative hero-bg-section"
         data-hero-bg
         style={{
           backgroundImage: "url('/Hero_Section.png')",
@@ -27,7 +27,7 @@ const Hero = () => {
             loop
             muted
             playsInline
-            className="w-full h-[300px] sm:h-[400px] md:w-full md:h-full object-cover mix-blend-overlay opacity-20 smoke-video"
+            className="w-full h-[300px] sm:h-[400px] min-[1250px]:w-full min-[1250px]:h-full object-cover mix-blend-overlay opacity-20 smoke-video"
             aria-label="Video overlay"
             style={{ position: "absolute", inset: 0, height: "695px" }}
           >
@@ -69,9 +69,9 @@ const Hero = () => {
         </div>
       </section>
 
-      {/* Mobile Hero (smaller than md) */}
+      {/* Responsive Hero (smaller than 1250px) */}
       <section
-        className="md:hidden w-full relative min-h-screen flex flex-col items-center justify-center text-center px-4 sm:px-6 hero-bg-section"
+        className="min-[1250px]:hidden w-full relative min-h-screen flex flex-col items-center justify-center text-center px-4 sm:px-6 hero-bg-section"
         data-hero-bg
         style={{
           backgroundImage: "url('/Hero_Section.png')",
@@ -85,7 +85,7 @@ const Hero = () => {
           <ThemeToggle />
         </div>
 
-        {/* Video on mobile mode */}
+        {/* Video overlay */}
         <div className="absolute inset-0 z-10 pointer-events-none">
           <video
             autoPlay
@@ -99,26 +99,26 @@ const Hero = () => {
           </video>
         </div>
 
-        {/* Mobile-friendly text */}
-        <div className="relative z-20 space-y-4 sm:space-y-6 mt-12 sm:mt-16 w-full max-w-sm sm:max-w-md">
+        {/* Responsive text and image layout */}
+        <div className="relative z-20 space-y-4 sm:space-y-6 md:space-y-8 mt-12 sm:mt-16 md:mt-20 w-full max-w-sm sm:max-w-md md:max-w-2xl lg:max-w-3xl">
           <br className="hidden sm:block" />
-          <span className="text-white text-xl sm:text-2xl font-semibold block">
+          <span className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold block">
             Modern
           </span>
-          <span className="text-white text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight block leading-tight">
+          <span className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight block leading-tight">
             DIGITAL DESIGN
           </span>
-          <span className="text-white text-base sm:text-lg font-medium block">
+          <span className="text-white text-base sm:text-lg md:text-xl lg:text-2xl font-medium block">
             that helps your brand grow.
           </span>
-          <p className="text-[#808c87] text-sm sm:text-base mt-4 sm:mt-6">
+          <p className="text-[#808c87] text-sm sm:text-base md:text-lg mt-4 sm:mt-6 md:mt-8">
             Clean visuals, smart strategy and creative work that makes an
             impact.
           </p>
           <img
             src="/Home/Frame_557.webp"
             alt="Geometric_Shape"
-            className="z-30 w-full sm:w-[400px] h-auto mt-4 sm:mt-6 mx-auto object-contain -translate-x-8"
+            className="z-30 w-full sm:w-[400px] md:w-[550px] h-auto mt-4 sm:mt-6 md:mt-8 mx-auto object-contain"
           />
         </div>
       </section>

@@ -1,0 +1,284 @@
+"use client";
+import Link from "next/link";
+import { useState, useEffect, useRef } from "react";
+
+// Category configuration
+const MODAL_CATEGORIES = ["LOGO DESIGN", "BRANDING", "ILLUSTRATION", "PRINT"];
+
+const ROUTE_CATEGORIES = [
+  "WEB DEVELOPMENT",
+  "SHOPIFY",
+  "WORDPRESS",
+  "FIGMA DESIGN",
+];
+
+const categories = [...ROUTE_CATEGORIES, ...MODAL_CATEGORIES];
+
+const FIGMA_CARD_HEIGHT = 500;
+
+interface Post {
+  id: number;
+  slug: string;
+  title: { rendered: string };
+  acf?: {
+    project_image?: { url: string };
+    project_url?: string;
+    catogary?: string | string[];
+  };
+}
+
+const ProjectCardGrid = () => {
+  const [posts, setPosts] = useState<Post[]>([]);
+  const [selectedCategory, setSelectedCategory] = useState("WEB DEVELOPMENT");
+  const [hoveredFigmaCard, setHoveredFigmaCard] = useState<number | null>(null);
+  const [scrollOffsets, setScrollOffsets] = useState<Record<number, number>>({});
+  const imgRefs = useRef<Record<number, HTMLImageElement | null>>({});
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalProject, setModalProject] = useState<Post | null>(null);
+
+  const filteredPosts = posts.filter((post) => {
+    const cat = post.acf?.catogary;
+    if (!cat) return false;
+    if (Array.isArray(cat)) {
+      return cat.some(
+        (c) => c.toLowerCase() === selectedCategory.toLowerCase()
+      );
+    }
+    return cat.toLowerCase() === selectedCategory.toLowerCase();
+  });
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        const ts = Date.now();
+        const res = await fetch(`/api/posts?ts=${ts}`, { cache: "no-store" });
+        const data = await res.json();
+        const projectPosts = data.filter(
+          (post: Post) => post.acf?.project_image?.url && post.slug
+        );
+        setPosts(projectPosts);
+      } catch (err) {
+        console.error("Error fetching posts", err);
+      }
+    };
+    fetchPosts();
+  }, []);
+
+  const isFigmaCard = (post: Post) => {
+    const cat = post.acf?.catogary;
+    if (Array.isArray(cat)) {
+      return cat.some((c) => c.toLowerCase() === "figma design");
+    }
+    return cat?.toLowerCase() === "figma design";
+  };
+
+  const handleImageLoad = (postId: number) => {
+    const img = imgRefs.current[postId];
+    if (img) {
+      setTimeout(() => {
+        const displayedHeight = img.offsetHeight;
+        const maxScroll = Math.max(displayedHeight - FIGMA_CARD_HEIGHT, 0);
+        setScrollOffsets((prev) => ({ ...prev, [postId]: maxScroll }));
+      }, 10);
+    }
+  };
+
+  const handleCardClick = (post: Post) => {
+    if (
+      MODAL_CATEGORIES.some((cat) =>
+        (Array.isArray(post.acf?.catogary)
+          ? post.acf?.catogary
+          : [post.acf?.catogary]
+        )
+          ?.map((c) => c?.toLowerCase())
+          .includes(cat.toLowerCase())
+      )
+    ) {
+      setModalProject(post);
+      setModalOpen(true);
+    }
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setModalProject(null);
+  };
+
+  const isModalCategory = MODAL_CATEGORIES.includes(selectedCategory);
+
+  return (
+    <section className="w-full py-20 px-4 sm:px-6 md:px-8 max-w-7xl mx-auto text-white">
+      {/* Section Heading */}
+      <p className="text-[#4C8C74] font-semibold mb-2 text-center text-xl">
+        Our Portfolio
+      </p>
+      <h2 className="text-white text-4xl md:text-5xl font-semibold mb-10 leading-tight text-center">
+        Proven results,
+        <br /> stunning Websites
+      </h2>
+
+      {/* Category Filter Buttons */}
+      <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-12">
+        {categories.map((label) => (
+          <button
+            key={label}
+            onClick={() => setSelectedCategory(label)}
+            className={`px-3 py-1.5 md:px-4 md:py-2 text-xs md:text-sm rounded-[8px] border cursor-pointer transition ${
+              selectedCategory === label
+                ? "border-yellow-400 text-yellow-400 bg-yellow-400/10"
+                : "text-gray-400 border-gray-600 hover:border-yellow-400 hover:text-yellow-400"
+            }`}
+          >
+            {label}
+          </button>
+        ))}
+      </div>
+
+      {/* Projects Grid or Loading Message */}
+      {posts.length === 0 ? (
+        <div className="text-white text-center py-10">Loading Projects...</div>
+      ) : (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-2">
+          {filteredPosts.map((post) => {
+            const imageUrl = post.acf?.project_image?.url || "/default.jpg";
+            const figma = isFigmaCard(post);
+            const scrollAmount = scrollOffsets[post.id] || 0;
+            const useModal =
+              MODAL_CATEGORIES.some((cat) =>
+                (Array.isArray(post.acf?.catogary)
+                  ? post.acf?.catogary
+                  : [post.acf?.catogary]
+                )
+                  ?.map((c) => c?.toLowerCase())
+                  .includes(cat.toLowerCase())
+              ) && isModalCategory;
+
+            if (useModal) {
+              return (
+                <div
+                  key={post.id}
+                  className={`group relative w-full rounded-2xl overflow-hidden shadow-xl border border-white/10 transition-all duration-300 hover:scale-[1.02] hover:border-yellow-400/60 bg-black cursor-pointer`}
+                  onClick={() => handleCardClick(post)}
+                  style={figma ? { height: `${FIGMA_CARD_HEIGHT}px` } : {}}
+                  onMouseEnter={() => figma && setHoveredFigmaCard(post.id)}
+                  onMouseLeave={() => figma && setHoveredFigmaCard(null)}
+                >
+                  <div
+                    className={`w-full ${
+                      figma ? "h-full overflow-hidden relative" : ""
+                    }`}
+                  >
+                    <img
+                      ref={(el) => {
+                        if (figma) imgRefs.current[post.id] = el;
+                      }}
+                      src={imageUrl}
+                      alt={post.title.rendered}
+                      className={`w-full object-cover object-top transition-transform duration-[2500ms] ease-in-out ${
+                        figma
+                          ? "h-auto"
+                          : "h-auto object-center group-hover:scale-110"
+                      }`}
+                      style={
+                        figma
+                          ? {
+                              minHeight: "100%",
+                              willChange: "transform",
+                              transform:
+                                hoveredFigmaCard === post.id && scrollAmount > 0
+                                  ? `translateY(-${scrollAmount}px)`
+                                  : "translateY(0)",
+                              transition:
+                                "transform 2.5s cubic-bezier(0.4, 0, 0.2, 1)",
+                            }
+                          : {}
+                      }
+                      onLoad={() => figma && handleImageLoad(post.id)}
+                    />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                    <span className="text-white font-medium text-lg text-center w-full truncate">
+                      {post.title.rendered}
+                    </span>
+                  </div>
+                </div>
+              );
+            } else {
+              return (
+                <Link
+                  key={post.id}
+                  href={`/projects/${post.slug}`}
+                  className={`group relative w-full rounded-2xl overflow-hidden shadow-xl border border-white/10 transition-all duration-300 hover:scale-[1.02] hover:border-yellow-400/60 bg-black`}
+                  style={figma ? { height: `${FIGMA_CARD_HEIGHT}px` } : {}}
+                  onMouseEnter={() => figma && setHoveredFigmaCard(post.id)}
+                  onMouseLeave={() => figma && setHoveredFigmaCard(null)}
+                >
+                  <div
+                    className={`w-full ${
+                      figma ? "h-full overflow-hidden relative" : ""
+                    }`}
+                  >
+                    <img
+                      ref={(el) => {
+                        if (figma) imgRefs.current[post.id] = el;
+                      }}
+                      src={imageUrl}
+                      alt={post.title.rendered}
+                      className={`w-full object-cover object-top transition-transform duration-[2500ms] ease-in-out ${
+                        figma
+                          ? "h-auto"
+                          : "h-auto object-center group-hover:scale-110"
+                      }`}
+                      style={
+                        figma
+                          ? {
+                              minHeight: "100%",
+                              willChange: "transform",
+                              transform:
+                                hoveredFigmaCard === post.id && scrollAmount > 0
+                                  ? `translateY(-${scrollAmount}px)`
+                                  : "translateY(0)",
+                              transition:
+                                "transform 2.5s cubic-bezier(0.4, 0, 0.2, 1)",
+                            }
+                          : {}
+                      }
+                      onLoad={() => figma && handleImageLoad(post.id)}
+                    />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                    <span className="text-white font-medium text-lg text-center w-full truncate">
+                      {post.title.rendered}
+                    </span>
+                  </div>
+                </Link>
+              );
+            }
+          })}
+        </div>
+      )}
+
+      {/* MODAL for LOGO/BRANDING/ILLUSTRATION/PRINT */}
+      {modalOpen && modalProject && (
+        <div className="fixed z-50 inset-0 flex items-center justify-center bg-black/70 backdrop-blur-sm transition-all duration-300">
+          <div className="relative p-6 max-w-lg w-full flex flex-col items-center">
+            <button
+              className="absolute top-0 right-0 text-2xl text-yellow-400 hover:text-black transition"
+              onClick={closeModal}
+              aria-label="Close"
+            >
+              &times;
+            </button>
+            <img
+              src={modalProject.acf?.project_image?.url || "/default.jpg"}
+              alt={modalProject.title.rendered}
+              className="w-full h-auto max-h-[620px] rounded-lg mb-4 object-contain"
+            />
+          </div>
+        </div>
+      )}
+    </section>
+  );
+};
+
+export default ProjectCardGrid;

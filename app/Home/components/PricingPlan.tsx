@@ -516,13 +516,13 @@ const PricingPlan = () => {
           </div>
 
           {/* Cards here */}
-          <div className="flex flex-col md:flex-row gap-6 justify-center my-7 px-4">
-            <div className="flex flex-col md:flex-row gap-6">
+          <div className="flex flex-col md:flex-row max-[1250px]:flex-col gap-6 justify-center my-7 px-4">
+            <div className="flex flex-col md:flex-row max-[1250px]:flex-col gap-6">
               {/* Mapped Pricing Plan cards */}
               {selectedData?.data.map((card, index) => (
                 <div
                   key={index}
-                  className="bg-cover h-[500px] bg-center rounded-xl p-6 w-[370px] max-w-md md:max-w-2xl shadow-lg"
+                  className="bg-cover h-[500px] max-[1250px]:h-auto bg-center rounded-xl p-6 w-[370px] max-[1250px]:w-full max-w-md md:max-w-2xl shadow-lg"
                   data-pricing-bg
                   style={{
                     backgroundImage: "url('/Home/Frame_161.svg')",
