@@ -8,15 +8,15 @@ const WhyChoose = () => {
     <>
       <WhyChooseMobile />
       <section className="hidden sm:flex mt-25 w-full justify-center">
-        <div className="flex flex-row justify-center items-center max-w-7xl w-full mx-auto px-4 gap-8">
+        <div className="flex flex-wrap xl:flex-row justify-center items-center max-w-7xl w-full mx-auto px-4 gap-8">
         <Image
-          className="w-[900px] h-[400px]"
+          className="w-full xl:w-[900px] h-auto xl:h-[400px] rounded-lg"
           src="/services/Rectangle_52.webp"
           alt="Why Choose Us"
           width={1200}
           height={1000}
         />
-        <div className="flex flex-col mt-20 mx-5 -translate-y-7">
+        <div className="flex flex-col mt-20 mx-5 xl:-translate-y-7 w-full xl:w-auto">
           <h2 className="text-4xl font-semibold">
             Why Choose Aussie Digital Studios
           </h2>

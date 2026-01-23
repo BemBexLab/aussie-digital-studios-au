@@ -10,10 +10,10 @@ const EasyExperience = () => {
         <h2 className="text-4xl font-semibold text-center text-white mt-2">
           What’s Included in Your<br></br>Custom Website Plan
         </h2>
-        <div className="mt-15 flex flex-row mx-20">
-          <div className="w-full h-[300px] flex justify-center gap-20">
+        <div className="mt-15 flex flex-wrap xl:flex-row mx-20 xl:mx-20">
+          <div className="w-full h-auto xl:h-[300px] flex flex-col xl:flex-row justify-center gap-20 xl:gap-20">
             {/* First Column */}
-            <div className="flex flex-col w-[250px] h-full justify-center items-center">
+            <div className="flex flex-col w-full xl:w-[250px] h-auto xl:h-full justify-center items-center mb-8 xl:mb-0">
               <div className="rounded-full h-20 w-20 items-center justify-center border">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -67,10 +67,10 @@ const EasyExperience = () => {
             </div>
 
             {/* Divider */}
-            <div className="border-r border-gray-400 h-full"></div>
+            <div className="hidden xl:block border-r border-gray-400 h-full"></div>
 
             {/* Second Column */}
-            <div className="flex flex-col w-[250px] items-center h-full">
+            <div className="flex flex-col w-full xl:w-[250px] items-center h-auto xl:h-full mb-8 xl:mb-0">
               <div className="rounded-full h-20 w-20 border">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -124,10 +124,10 @@ const EasyExperience = () => {
             </div>
 
             {/* Divider */}
-            <div className="border-r border-gray-400 h-full"></div>
+            <div className="hidden xl:block border-r border-gray-400 h-full"></div>
 
             {/* Third Column */}
-            <div className="flex flex-col w-[250px] items-center h-full">
+            <div className="flex flex-col w-full xl:w-[250px] items-center h-auto xl:h-full mb-8 xl:mb-0">
               <div className="rounded-full h-20 w-20  border">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
