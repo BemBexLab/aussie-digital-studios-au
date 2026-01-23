@@ -11,13 +11,13 @@ const BrandLevelUp = () => {
     <>
       <BrandLevelUpMobile />
       <div
-        className="hidden sm:flex flex-col bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white h-80 md:h-106 bg-cover bg-center"
+        className="hidden sm:flex flex-col bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white min-h-80 md:min-h-106 bg-cover bg-center"
         data-brandlevelup-bg
         style={{ backgroundImage: "url(/Home/CTA.svg)" }}
       >
-      <div className="flex flex-col max-[1250px]:flex-col flex-row">
+      <div className="flex flex-col lg:flex-row w-full flex-wrap">
         {/* Text Part */}
-        <div className="max-[1250px]:w-full mt-20 mx-10 w-[600px] px-3 md:px-10 py-8 md:py-0">
+        <div className="w-full lg:w-[50%] mt-20 mx-10 px-3 md:px-10 py-8 md:py-0">
           <h1 className="text-5xl sm:text-5xl font-semibold text-white">
             Ready to <span className="text-yellow-400">level up</span> your
             brand?
@@ -69,7 +69,7 @@ const BrandLevelUp = () => {
 
         {/* Image Part */}
         <div
-          className="max-[1200px]:w-full max-[1200px]:mx-10 flex justify-center items-center flex-1 h-[350px] w-[400px] mr-12 mt-10 rounded-lg"
+          className="w-full lg:w-[50%] flex justify-center items-center h-[300px] md:h-[350px] mx-auto lg:mr-12 mt-10 lg:mt-0 rounded-lg"
           style={{
             backgroundImage: "url(/Home/Rectangle_1905.webp)",
             backgroundSize: "cover",

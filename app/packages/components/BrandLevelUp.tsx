@@ -9,15 +9,17 @@ const BrandLevelUp = () => {
   const router = useRouter();
   return (
     <>
-      <BrandLevelUpMobile />
+      <div className="sm:hidden">
+        <BrandLevelUpMobile />
+      </div>
       <div
-        className="hidden sm:flex flex-col bg-gradient-to-r mb-20 from-gray-800 via-gray-900 to-black text-white h-80 md:h-106 bg-cover bg-center"
+        className="hidden sm:flex flex-col bg-gradient-to-r mb-20 from-gray-800 via-gray-900 to-black text-white min-h-80 md:min-h-106 lg:h-80 lg:md:h-106 bg-cover bg-center"
         data-brandlevelup-bg
         style={{ backgroundImage: "url(/Home/CTA.svg)" }}
       >
-      <div className="flex flex-row">
+      <div className="flex flex-wrap">
         {/* Text Part */}
-        <div className="mt-20 mx-10 w-[600px] px-3 md:px-10 py-8 md:py-0">
+        <div className="mt-20 mx-10 w-full lg:w-[600px] px-3 md:px-10 py-8 md:py-0">
           <h1 className="text-5xl sm:text-5xl font-semibold text-white">
             Ready to <span className="text-yellow-400">level up</span> your
             brand?
@@ -69,7 +71,7 @@ const BrandLevelUp = () => {
 
         {/* Image Part */}
         <div
-          className="flex justify-center items-center flex-1 h-[350px] w-[400px] mr-12 mt-10 rounded-lg"
+          className="flex justify-center items-center w-full lg:flex-1 h-[350px] lg:w-[400px] lg:mr-12 mt-10 rounded-lg"
           style={{
             backgroundImage: "url(/Home/Rectangle_1905.webp)",
             backgroundSize: "cover",

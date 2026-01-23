@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -9,6 +9,7 @@ const ServicesDropdown = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
   const pathname = usePathname();
   const currentPath = pathname ?? "";
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Check if document has dark class
@@ -28,6 +29,23 @@ const ServicesDropdown = () => {
 
     return () => observer.disconnect();
   }, []);
+
+  useEffect(() => {
+    // Close dropdown when clicking outside
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsServicesDropdownOpen(false);
+      }
+    };
+
+    if (isServicesDropdownOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isServicesDropdownOpen]);
 
   const isActive = () => {
     return currentPath === "/services" || currentPath.startsWith("/services/");
@@ -110,7 +128,7 @@ const ServicesDropdown = () => {
   const active = isActive();
 
   return (
-    <div className="relative">
+    <div className="relative" ref={dropdownRef}>
       <button
         onClick={(e) => {
           e.preventDefault();

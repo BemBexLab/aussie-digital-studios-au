@@ -16,9 +16,9 @@ const Hero = () => {
         }}
       >
         {/* Theme Toggle - top right, floating */}
-        <div className="absolute top-24 right-16 z-50">
+        {/* <div className="absolute top-24 right-16 z-50">
           <ThemeToggle />
-        </div>
+        </div> */}
 
         {/* Video Overlay */}
         <div className="absolute inset-0 z-10 flex items-center justify-center p-4 pointer-events-none">
