@@ -41,11 +41,11 @@ const ProcessCardsSm = ({ service }: ProcessCardsSmProps) => {
 
   return (
     <section>
-      <div className="flex flex-row justify-center gap-5 mb-10">
+      <div className="flex flex-wrap justify-center gap-5 mb-10 xl:flex-nowrap">
         {service.processCardData?.map((item, index) => (
-          <div key={index} className="flex flex-col items-start">
+          <div key={index} className="flex flex-col items-start flex-shrink-0" style={{ width: "calc((100% - 10px) / 3)" }}>
             <div
-              className="w-[360px] h-[250px] relative my-8 flex flex-col items-start justify-start p-6"
+              className="w-full h-[250px] relative my-8 flex flex-col items-start justify-start p-6 rounded-lg"
               style={{
                 backgroundImage: `url("${isDarkMode ? '/Home/mini_card_dark.svg' : '/Home/Frame_163_Light.svg'}")`,
                 backgroundSize: "cover",

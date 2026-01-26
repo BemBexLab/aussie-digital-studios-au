@@ -28,11 +28,13 @@ const Values = () => {
 
   return (
     <>
-      <ValuesMobile />
+      <div className="sm:hidden">
+        <ValuesMobile />
+      </div>
       <div className="hidden sm:flex flex-col my-30 md:flex-row md:mt-8 mx-auto w-full max-w-7xl px-4 sm:px-6 md:px-10">
       {/* Left Content */}
       <div className="flex flex-col w-full">
-        {/* On mobile: no max-w, use px-4 for safe padding */}
+        {/* Responsive (sm to md): show cards and image below */}
         <div className="md:hidden px-4">
           <p className="text-[#4C8C74] my-20 text-lg font-medium mb-4">Our Values</p>
           <h2 className="text-white text-5xl mb-5 font-bold">Our Core Values</h2>
@@ -138,7 +140,7 @@ const Values = () => {
             </div>
 
             {/* Mobile-only image: centered */}
-            <div className="flex justify-center mt-8">
+            <div className="flex justify-center mt-32">
               <Image 
                 src="/About/Rectangle 43.webp"
                 alt="Values Illustration"
@@ -150,16 +152,16 @@ const Values = () => {
           </div>
         </div>
 
-        {/* Desktop: original layout (unchanged) */}
+        {/* Desktop: original layout (unchanged for 1250px+, responsive below) */}
         <div className="hidden md:block max-w-7xl mx-3">
           <p className="text-[#4C8C74] my-20 text-lg font-medium mb-4">Our Values</p>
           <h2 className="text-white text-5xl mb-5 font-bold">Our Core Values</h2>
 
           {/* First Row */}
-          <div className="flex flex-col sm:flex-row mt-3 gap-3">
+          <div className="flex flex-wrap mt-3 gap-3" style={{ justifyContent: "flex-start" }}>
 
             {/* Card 1 */}
-            <div className="group relative rounded-2xl w-full sm:w-[280px] border border-white/10 p-6 transition overflow-hidden" data-values-card style={{ backgroundImage: backgroundImage, backgroundSize: "cover", backgroundPosition: "center", backdropFilter: "blur(10px)" }}>
+            <div className="group relative rounded-2xl w-[280px] border border-white/10 p-6 transition overflow-hidden" data-values-card style={{ backgroundImage: backgroundImage, backgroundSize: "cover", backgroundPosition: "center", backdropFilter: "blur(10px)" }}>
               {/* ... same as before ... */}
               <div className="flex flex-col">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 50 50" fill="none">
@@ -175,7 +177,7 @@ const Values = () => {
             </div>
 
             {/* Card 2 */}
-            <div className="group relative rounded-2xl w-full sm:w-[280px] border border-white/10 p-6 transition overflow-hidden" data-values-card style={{ backgroundImage: backgroundImage, backgroundSize: "cover", backgroundPosition: "center", backdropFilter: "blur(10px)" }}>
+            <div className="group relative rounded-2xl w-[280px] border border-white/10 p-6 transition overflow-hidden" data-values-card style={{ backgroundImage: backgroundImage, backgroundSize: "cover", backgroundPosition: "center", backdropFilter: "blur(10px)" }}>
               {/* ... same as before ... */}
               <div className="flex flex-col">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 50 50" fill="none">
@@ -195,10 +197,10 @@ const Values = () => {
           </div>
 
           {/* Second Row */}
-          <div className="flex flex-col sm:flex-row mt-3 gap-3">
+          <div className="flex flex-wrap mt-3 gap-3" style={{ justifyContent: "flex-start" }}>
 
             {/* Card 3 */}
-            <div className="group relative rounded-2xl w-full sm:w-[300px] border border-white/10 p-6 transition overflow-hidden" data-values-card style={{ backgroundImage: backgroundImage, backgroundSize: "cover", backgroundPosition: "center", backdropFilter: "blur(10px)" }}>
+            <div className="group relative rounded-2xl w-[300px] border border-white/10 p-6 transition overflow-hidden" data-values-card style={{ backgroundImage: backgroundImage, backgroundSize: "cover", backgroundPosition: "center", backdropFilter: "blur(10px)" }}>
               {/* ... same as before ... */}
               <div className="flex flex-col">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 50 50" fill="none">
@@ -213,7 +215,7 @@ const Values = () => {
             </div>
 
             {/* Card 4 */}
-            <div className="group relative rounded-2xl w-full sm:w-[300px] border border-white/10 p-6 transition overflow-hidden" data-values-card style={{ backgroundImage: backgroundImage, backgroundSize: "cover", backgroundPosition: "center", backdropFilter: "blur(10px)" }}>
+            <div className="group relative rounded-2xl w-[300px] border border-white/10 p-6 transition overflow-hidden" data-values-card style={{ backgroundImage: backgroundImage, backgroundSize: "cover", backgroundPosition: "center", backdropFilter: "blur(10px)" }}>
               {/* ... same as before ... */}
               <div className="flex flex-col">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 50 50" fill="none">
@@ -238,7 +240,7 @@ const Values = () => {
         alt="Values Illustration"
         width={800}
         height={700}
-        className="ml-9 mt-8 md:block max-h-[600px] w-[500px] flex-shrink-0"
+        className="hidden md:block ml-9 mt-15 max-h-[600px] w-[500px] flex-shrink-0"
       />
     </div>
     </>

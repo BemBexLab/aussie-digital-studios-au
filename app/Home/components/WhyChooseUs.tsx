@@ -56,11 +56,11 @@ const WhyChooseUs = () => {
     <>
       <WhyChooseUsMobile />
       <section className="hidden sm:flex w-full px-5 my-20 justify-center" style={{}}>
-      <div className="flex flex-col max-[1250px]:flex-col flex-row justify-center mx-auto max-[1250px]:gap-8">
+      <div className="flex flex-col lg:flex-row justify-center mx-auto gap-8 lg:gap-5 max-w-7xl w-full flex-wrap">
         {/* First column */}
-        <div className="flex flex-col max-[1250px]:w-full mx-10 w-3/5">
+        <div className="flex flex-col w-full lg:w-[45%]">
           <h2 className="text-[#4C8C74] text-xl mb-1">Why Choose Us?</h2>
-          <h2 className="text-white text-4xl font-medium mb-5">
+          <h2 className="text-white text-3xl lg:text-4xl font-medium mb-5">
             Why Choose Aussie Digital Studio
           </h2>
           <p className="font-normal text-sm text-[#AAAAAA]" data-text-sm-light>
@@ -112,16 +112,13 @@ const WhyChooseUs = () => {
           </div>
         </div>
 
-        {/* Spacing div */}
-        <div className="w-5 max-[1250px]:hidden"></div>
-
         {/* Second column */}
-        <div className="grid grid-cols-2 max-[1250px]:grid-cols-2 w-[500px] max-[1250px]:w-full h-[220px] max-[1250px]:h-auto" style={{rowGap: '10px'}}>
+        <div className="grid grid-cols-2 gap-3 lg:gap-[10px] w-full lg:w-[45%]" style={{rowGap: '10px'}}>
             {/* Mapped Cards */}
             {cardData.map((card, index) => (
-                <div key={index} className="w-[200px] h-[120px] px-7 py-2 rounded-2xl" style={isDarkMode ? {backgroundImage: "url('/Home/mini_card_dark.svg')", backgroundSize: "cover", backgroundPosition: "center"} : {backgroundImage: "url('/Home/Frame_163_Light.svg')", backgroundSize: "cover", backgroundPosition: "center"}}>
-                    <h2 className="text-7xl">{card.value}</h2>
-                    <p className="text-[#AAAAAA] text-sm mt-2 text-center">{card.title}</p>
+                <div key={index} className="h-[120px] px-4 lg:px-7 py-2 rounded-2xl flex flex-col justify-between" style={isDarkMode ? {backgroundImage: "url('/Home/mini_card_dark.svg')", backgroundSize: "cover", backgroundPosition: "center"} : {backgroundImage: "url('/Home/Frame_163_Light.svg')", backgroundSize: "cover", backgroundPosition: "center"}}>
+                    <h2 className="text-5xl lg:text-7xl">{card.value}</h2>
+                    <p className="text-[#AAAAAA] text-xs lg:text-sm mt-1 lg:mt-2 text-center">{card.title}</p>
                 </div>
             ))}
         </div>

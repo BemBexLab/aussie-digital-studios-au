@@ -35,10 +35,10 @@ const CustomPlan = () => {
     <>
       <CustomPlanMobile />
       <section className="hidden sm:flex w-full mx-auto my-10 justify-center">
-      <div className="flex flex-col max-[1250px]:flex-col flex-row h-[300px] max-[1250px]:h-auto w-full max-w-7xl">
+      <div className="flex flex-col lg:flex-row w-full max-w-7xl gap-4 lg:gap-0">
         {/* Custom Plan Content */}
         <div
-          className="flex flex-col rounded-xl px-8 py-10 w-full max-[1250px]:px-6"
+          className="flex flex-col rounded-xl px-6 lg:px-8 py-8 lg:py-10 w-full lg:w-[60%]"
           style={isDarkMode ? {
             backgroundImage: `url('/Home/Custom_plans.webp')`,
             backgroundSize: "fill",
@@ -48,8 +48,8 @@ const CustomPlan = () => {
             backgroundColor: "#f9f1f1",
           }}
         >
-          <h2 className="font-semibold text-4xl text-white">Custom Plan</h2>
-          <div className="w-[620px] mt-4">
+          <h2 className="font-semibold text-2xl lg:text-4xl text-white">Custom Plan</h2>
+          <div className="w-full lg:w-[620px] mt-4">
             <p className="text-sm text-[#4C8C74]">
               AussieDigitalStudios is a full-service digital studio built for
               modern, fast-growing brands. From strategy to standout design and
@@ -100,13 +100,15 @@ const CustomPlan = () => {
         </div>
 
         {/* Image on right side */}
-        <Image
-          src="/Home/performance_marketing.webp"
-          alt="Custom Plan Illustration"
-          width={370}
-          height={400}
-          className="ml-5"
-        />
+        <div className="w-full lg:w-[40%] flex justify-center items-center">
+          <Image
+            src="/Home/performance_marketing.webp"
+            alt="Custom Plan Illustration"
+            width={370}
+            height={400}
+            className="w-full h-auto max-w-[370px]"
+          />
+        </div>
       </div>
     </section>
     </>

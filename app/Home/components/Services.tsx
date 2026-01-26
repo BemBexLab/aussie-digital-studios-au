@@ -1,4 +1,7 @@
+"use client";
+
 import React from "react";
+import { useRouter } from "next/navigation";
 import arrowUpRight from "@/public/Home/arrow_up_right_circle_white.svg";
 import { BsArrowUpRightCircle } from "react-icons/bs";
 import Image from "next/image";
@@ -41,6 +44,7 @@ const services = [
         />
       </svg>
     ),
+    route: "services/website-design-and-development",
   },
   {
     title: "Logo Design & Branding",
@@ -200,6 +204,8 @@ const services = [
 ];
 
 const Services = () => {
+  const router = useRouter();
+
   return (
     <>
       {/* Desktop version - hidden on sm screens */}
@@ -250,9 +256,13 @@ const Services = () => {
                     <div className="mb-4">{service.icon}</div>
 
                     {/* arrow: SVG for dark, react-icon for light mode */}
-                    <span className="absolute top-4 right-4 mt-2 w-7 h-7 transition arrow-icon">
+                    <button
+                      onClick={() => router.push(service.route)}
+                      className="absolute top-4 right-4 mt-2 w-7 h-7 transition arrow-icon cursor-pointer hover:opacity-80"
+                      aria-label={`Navigate to ${service.title}`}
+                    >
                       <BsArrowUpRightCircle size={28} />
-                    </span>
+                    </button>
                   </div>
 
                   <h3 className="text-sm font-semibold text-yellow-400 mb-2">

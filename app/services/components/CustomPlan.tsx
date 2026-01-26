@@ -37,10 +37,10 @@ const CustomPlan = () => {
     <>
       <CustomPlanMobile />
       <section className="hidden sm:flex w-full my-10 justify-center">
-        <div className="flex flex-row h-[300px] max-w-7xl w-full mx-auto px-4">
+        <div className="flex flex-wrap xl:flex-row gap-6 xl:gap-0 h-auto xl:h-[300px] max-w-7xl w-full mx-auto px-4">
         {/* Custom Plan Content */}
         <div
-          className="flex flex-col rounded-xl px-8 py-10 w-full"
+          className="flex flex-col rounded-xl px-8 py-10 w-full xl:w-auto flex-1"
           style={isDarkMode ? {
             backgroundImage: `url('/Home/Custom_plans.webp')`,
             backgroundSize: "fill",
@@ -51,7 +51,7 @@ const CustomPlan = () => {
           }}
         >
           <h2 className="font-semibold text-4xl text-white">Custom Plan</h2>
-          <div className="w-[620px] mt-4">
+          <div className="w-full xl:w-[620px] mt-4">
             <p className="text-sm text-[#4C8C74]">
               AussieDigitalStudios is a full-service digital studio built for
               modern, fast-growing brands. From strategy to standout design and
@@ -60,10 +60,10 @@ const CustomPlan = () => {
               team.
             </p>
           </div>
-          <div className="mt-15 flex flex-row">
+          <div className="mt-15 flex flex-col xl:flex-row gap-4 xl:gap-0">
             <a
               href="/contact"
-              className="flex font-light text-sm items-center justify-center gap-1 bg-[#4C8C74] text-white py-2 px-3 rounded-full hover:bg-blue-300 transition-colors group w-fit mr-auto"
+              className="flex font-light text-sm items-center justify-center gap-1 bg-[#4C8C74] text-white py-2 px-3 rounded-full hover:bg-blue-300 transition-colors group w-fit xl:mr-auto"
             >
               Book a consultation call to create your perfect plan
               <svg
@@ -85,7 +85,7 @@ const CustomPlan = () => {
                 />
               </svg>
             </a>
-            <div className="flex flex-row justify-center my-2">
+            <div className="flex flex-row justify-center xl:justify-start my-2">
               <p className="text-[#4C8C74]">SMM Plans</p>
               <svg
                 className="m-2"
@@ -107,7 +107,7 @@ const CustomPlan = () => {
           alt="Custom Plan Illustration"
           width={370}
           height={400}
-          className="ml-5"
+          className="w-full xl:w-auto xl:ml-5 rounded-xl"
         />
         </div>
       </section>

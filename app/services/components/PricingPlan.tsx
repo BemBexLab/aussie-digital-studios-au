@@ -71,18 +71,19 @@ const PricingPlan = ({ service }: PricingPlanProps) => {
           </h1>
 
           {/* Cards here */}
-          <div className="flex flex-col md:flex-row gap-6 justify-center my-7 px-4">
-            <div className="flex flex-col md:flex-row gap-6">
-              {/* Mapped Pricing Plan cards */}
-              {cardData.map((card, index) => (
-                <div
-                  key={index}
-                  className="bg-cover bg-center rounded-xl p-6 w-[370px] max-w-md md:max-w-2xl shadow-lg"
-                  data-pricing-bg
-                  style={{
-                    backgroundImage: "url('/Home/Frame_161.svg')",
-                  }}
-                >
+          <div className="flex flex-wrap gap-6 justify-center my-7 px-4 xl:px-0">
+            {/* Mapped Pricing Plan cards */}
+            {cardData.map((card, index) => (
+              <div
+                key={index}
+                className="bg-cover bg-center rounded-xl p-6 flex-shrink-0"
+                data-pricing-bg
+                style={{
+                  backgroundImage: "url('/Home/Frame_161.svg')",
+                  width: "calc((100% - 12px) / 3)",
+                  minWidth: "300px",
+                }}
+              >
                   <h2 className="text-base text-yellow-400 mb-4 pricing-package-title">
                     {card.title}
                   </h2>
@@ -155,7 +156,7 @@ const PricingPlan = ({ service }: PricingPlanProps) => {
                 </div>
               ))}
             </div>
-          </div>
+
         </div>
       </div>
     </>
