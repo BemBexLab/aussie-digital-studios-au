@@ -1,7 +1,7 @@
 // components/Header.tsx
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -15,6 +15,10 @@ const Header = () => {
   const pathname = usePathname();
   const currentPath = pathname ?? "";
   const [hash, setHash] = useState("");
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const lastScrollY = useRef(0);
+  const ticking = useRef(false);
 
   useEffect(() => {
     // Detect initial theme
@@ -46,6 +50,43 @@ const Header = () => {
     return () => window.removeEventListener("hashchange", onHashChange);
   }, [currentPath]);
 
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    lastScrollY.current = window.scrollY || 0;
+
+    const handleScroll = () => {
+      const currentY = window.scrollY || 0;
+
+      if (!ticking.current) {
+        window.requestAnimationFrame(() => {
+          const delta = currentY - lastScrollY.current;
+
+          // Consider user near top: keep transparent and visible
+          if (currentY <= 50) {
+            setIsScrolled(false);
+            setIsHeaderVisible(true);
+          } else {
+            setIsScrolled(true);
+            // scroll down -> hide header; scroll up -> show header
+            if (delta > 5) {
+              setIsHeaderVisible(false);
+            } else if (delta < -5) {
+              setIsHeaderVisible(true);
+            }
+          }
+
+          lastScrollY.current = currentY;
+          ticking.current = false;
+        });
+        ticking.current = true;
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const isActive = (item: string) => {
     if (item === "Home") return currentPath === "/";
     if (item === "Services") {
@@ -60,7 +101,9 @@ const Header = () => {
       <MobileHeader />
 
       {/* Desktop Header - hidden on mobile and small tablets */}
-      <header className="hidden md:block fixed w-full z-50">
+      <header
+        className={`hidden md:block fixed w-full z-50 transform transition-transform duration-300 ease-in-out ${isHeaderVisible ? 'translate-y-0' : '-translate-y-full'} ${isScrolled && isHeaderVisible ? 'bg-white/5 backdrop-blur-sm' : 'bg-transparent'}`}
+      >
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         {/* Left side: Logo + Nav (grouped together) */}
         <div className="flex items-center space-x-18">

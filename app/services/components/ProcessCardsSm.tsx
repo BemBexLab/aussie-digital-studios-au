@@ -43,7 +43,11 @@ const ProcessCardsSm = ({ service }: ProcessCardsSmProps) => {
     <section>
       <div className="flex flex-wrap justify-center gap-5 mb-10 xl:flex-nowrap">
         {service.processCardData?.map((item, index) => (
-          <div key={index} className="flex flex-col items-start flex-shrink-0" style={{ width: "calc((100% - 10px) / 3)" }}>
+          <div
+            key={index}
+            className="flex flex-col items-start min-w-0"
+            style={{ width: "calc((100% - 2.5rem) / 3)", boxSizing: "border-box" }}
+          >
             <div
               className="w-full h-[250px] relative my-8 flex flex-col items-start justify-start p-6 rounded-lg"
               style={{
