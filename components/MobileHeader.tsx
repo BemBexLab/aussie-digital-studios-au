@@ -52,8 +52,8 @@ const MobileHeader = () => {
 
   return (
     <>
-      <header className="fixed top-0 w-full z-[100] md:hidden bg-black">
-      <div className="flex items-center justify-between px-4 py-3 bg-black backdrop-blur">
+      <header className={`fixed top-0 w-full z-[100] md:hidden ${isDarkMode ? 'bg-black/10' : 'bg-white/60'} backdrop-blur-sm transition-colors`}>
+      <div className={`flex items-center justify-between px-4 py-3 ${isDarkMode ? 'text-white' : 'text-black'}`}>
         {/* Logo */}
         <div className="flex items-center">
           {!logoFallback ? (
@@ -75,7 +75,7 @@ const MobileHeader = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="text-white p-2"
+          className={`${isDarkMode ? 'text-white' : 'text-black'} p-2`}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -98,7 +98,7 @@ const MobileHeader = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="bg-black backdrop-blur pb-4 border-t border-gray-700">
+        <div className={`${isDarkMode ? 'bg-black/60 border-gray-700 text-white' : 'bg-white/60 border-gray-200 text-black'} backdrop-blur-sm pb-4 border-t`}>
           <nav className="flex flex-col space-y-2 px-4 py-4">
             {['Home', 'About'].map((item) => {
               const href = item === 'Home' ? '/' : `/${item.toLowerCase()}`;
@@ -108,10 +108,10 @@ const MobileHeader = () => {
                 <Link
                   key={item}
                   href={href}
-                  className={`px-4 py-2 rounded-lg transition-colors block text-white ${
+                  className={`px-4 py-2 rounded-lg transition-colors block ${isDarkMode ? 'text-white' : 'text-black'} ${
                     active
-                      ? `text-[#4C8C74] ${isDarkMode ? 'bg-green-500' : 'bg-gray-200'}`
-                      : 'hover:bg-gray-300'
+                      ? `text-[#4C8C74] ${isDarkMode ? 'bg-[#4C8C74]' : 'bg-gray-200'}`
+                      : (isDarkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-200')
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -131,10 +131,10 @@ const MobileHeader = () => {
                 <Link
                   key={item}
                   href={href}
-                  className={`px-4 py-2 rounded-lg transition-colors block text-white ${
+                  className={`px-4 py-2 rounded-lg transition-colors block ${isDarkMode ? 'text-white' : 'text-black'} ${
                     active
-                      ? `text-[#4C8C74] ${isDarkMode ? 'bg-blue-500' : 'bg-gray-200'}`
-                      : 'hover:bg-gray-300'
+                      ? `text-[#4C8C74] ${isDarkMode ? 'bg-[#4C8C74]' : 'bg-gray-200'}`
+                      : (isDarkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-200')
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -143,7 +143,7 @@ const MobileHeader = () => {
               );
             })}
 
-            <button className="w-full flex items-center justify-center space-x-1 text-sm text-white hover:text-green-400 transition-colors px-4 py-2 mt-2 rounded-lg hover:bg-gray-900">
+            <button className={`w-full flex items-center justify-center space-x-1 text-sm ${isDarkMode ? 'text-white hover:text-green-400' : 'text-black hover:text-green-600'} transition-colors px-4 py-2 mt-2 rounded-lg ${isDarkMode ? 'hover:bg-gray-900' : 'hover:bg-gray-200'}`}>
               <span>Get In Touch</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"

@@ -256,13 +256,15 @@ const Services = () => {
                     <div className="mb-4">{service.icon}</div>
 
                     {/* arrow: SVG for dark, react-icon for light mode */}
-                    <button
-                      onClick={() => router.push(service.route)}
-                      className="absolute top-4 right-4 mt-2 w-7 h-7 transition arrow-icon cursor-pointer hover:opacity-80"
-                      aria-label={`Navigate to ${service.title}`}
-                    >
-                      <BsArrowUpRightCircle size={28} />
-                    </button>
+                    {service.route ? (
+                      <button
+                        onClick={() => router.push(service.route)}
+                        className="absolute top-4 right-4 mt-2 w-7 h-7 transition arrow-icon cursor-pointer hover:opacity-80"
+                        aria-label={`Navigate to ${service.title}`}
+                      >
+                        <BsArrowUpRightCircle size={28} />
+                      </button>
+                    ) : null}
                   </div>
 
                   <h3 className="text-sm font-semibold text-yellow-400 mb-2">

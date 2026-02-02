@@ -54,25 +54,25 @@ const Footer = () => {
               {/* First Column */}
               <div className="flex flex-col mt-0 md:mt-5 gap-2">
                 <a
-                  href="#"
+                  href="/"
                   className="text-sm font-extralight hover:text-[#4C8C74] transition-colors"
                 >
                   Home
                 </a>
                 <a
-                  href="#"
+                  href="/about"
                   className="text-sm font-extralight hover:text-[#4C8C74] transition-colors"
                 >
                   About
                 </a>
                 <a
-                  href="#"
+                  href="/services"
                   className="text-sm font-extralight hover:text-[#4C8C74] transition-colors"
                 >
                   Services
                 </a>
                 <a
-                  href="#"
+                  href="/portfolio"
                   className="text-sm font-extralight hover:text-[#4C8C74] transition-colors"
                 >
                   Portfolio
@@ -88,25 +88,25 @@ const Footer = () => {
               {/* Second Column */}
               <div className="flex flex-col mt-0 md:mt-5 gap-2">
                 <a
-                  href="#"
+                  href="/packages"
                   className="text-sm font-extralight hover:text-[#4C8C74] transition-colors"
                 >
                   Packages
                 </a>
                 <a
-                  href="#"
+                  href="/contact"
                   className="text-sm font-extralight hover:text-[#4C8C74] transition-colors"
                 >
                   Contact
                 </a>
                 <a
-                  href="#"
+                  href="/terms"
                   className="text-sm font-extralight hover:text-[#4C8C74] transition-colors"
                 >
                   Terms & Conditions
                 </a>
                 <a
-                  href="#"
+                  href="/privacy"
                   className="text-sm font-extralight hover:text-[#4C8C74] transition-colors"
                 >
                   Privacy Policy
