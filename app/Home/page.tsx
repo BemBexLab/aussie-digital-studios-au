@@ -23,13 +23,13 @@ const HomePage = () => {
       <LogoSlider />
       <AboutUs />
       <Services />
-      <Image
+      {/* <Image
         src="/Geometric_Shape_Silver.png"
         alt="Portfolio Background"
         className="hidden md:block absolute w-[250px] translate-y-70 h-[300px] z-30"
         width={1920}
         height={1080}
-      />
+      /> */}
       <PortfolioSection />
       <WhyChooseUs />
       <BrandLevelUp />

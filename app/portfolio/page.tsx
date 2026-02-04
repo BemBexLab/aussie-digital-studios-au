@@ -1,7 +1,7 @@
 import Image from "next/image";
-import PortfolioSection from "./components/PortfolioSection";
 import Hero from "@/components/Hero";
 import ProjectCardGrid from "./components/ProjectCards";
+import PortfolioSection from "../Home/components/PortfolioSection";
 
 const PortfolioPage = () => {
   return (
@@ -17,7 +17,7 @@ const PortfolioPage = () => {
           className="relative z-10 bottom-[-103px] right-0 md:block"
         />
       </div>
-      <ProjectCardGrid />
+      <PortfolioSection />
     </div>
   );
 };
