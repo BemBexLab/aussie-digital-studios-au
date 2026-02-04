@@ -81,9 +81,9 @@ const Hero = () => {
         }}
       >
         {/* Theme Toggle - top right on mobile */}
-        <div className="absolute right-4 sm:right-6 top-16 translate-y-10 sm:top-20 z-50">
+        {/* <div className="absolute right-4 sm:right-6 top-16 translate-y-10 sm:top-20 z-50">
           <ThemeToggle />
-        </div>
+        </div> */}
 
         {/* Video overlay */}
         <div className="absolute inset-0 z-10 pointer-events-none">

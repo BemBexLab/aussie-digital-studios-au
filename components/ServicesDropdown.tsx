@@ -6,29 +6,11 @@ import { usePathname } from "next/navigation";
 
 const ServicesDropdown = () => {
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(true);
   const pathname = usePathname();
   const currentPath = pathname ?? "";
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    // Check if document has dark class
-    const isDark = document.documentElement.classList.contains("dark");
-    setIsDarkMode(isDark);
-
-    // Listen for changes in the dark class
-    const observer = new MutationObserver(() => {
-      const isDark = document.documentElement.classList.contains("dark");
-      setIsDarkMode(isDark);
-    });
-
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ["class"],
-    });
-
-    return () => observer.disconnect();
-  }, []);
+  // Dropdown is dark-only. No theme detection required.
 
   useEffect(() => {
     // Close dropdown when clicking outside
@@ -128,7 +110,7 @@ const ServicesDropdown = () => {
   const active = isActive();
 
   return (
-    <div className="relative" ref={dropdownRef}>
+    <div className="relative flex flex-col items-center" ref={dropdownRef}>
       <button
         onClick={(e) => {
           e.preventDefault();
@@ -164,11 +146,7 @@ const ServicesDropdown = () => {
         >
           {/* Background Image Layer using Tailwind */}
           <div
-            className={`absolute inset-0 bg-cover bg-center bg-no-repeat ${
-              isDarkMode
-                ? "bg-[url('/drop_down_2_dark.webp')]"
-                : "bg-[url('/drop_down_2_light.webp')]"
-            }`}
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-[url('/drop_down_2_dark.webp')]"
             style={{
               backgroundSize: '100% 100%',
             }}
@@ -176,12 +154,12 @@ const ServicesDropdown = () => {
 
           {/* Content Layer with Semi-transparent Overlay */}
           <div
-            className={`absolute inset-0 ${isDarkMode ? "bg-black/20" : "bg-white/20"}`}
+            className="absolute inset-0 bg-black/20"
           ></div>
 
           {/* Content Container */}
           <div
-            className={`relative flex flex-wrap gap-4 h-full overflow-y-auto p-6 ${isDarkMode ? "text-white" : "text-black"}`}
+            className="relative flex flex-wrap gap-4 h-full overflow-y-auto p-6 text-white"
           >
             {servicesContent.map((col, idx) => (
               <div key={idx} className="space-y-0.5 flex-1 min-w-fit">
@@ -196,7 +174,7 @@ const ServicesDropdown = () => {
                     <li key={subIdx}>
                       <Link
                         href={`/services/${col.title.toLowerCase().replace(/\s+/g, "-")}/${subItem.toLowerCase().replace(/\s+/g, "-")}`}
-                        className={`hover:text-green-400 transition-colors text-xs ${isDarkMode ? "text-[#AAAAAA]" : "text-[#444444]"}`}
+                        className="hover:text-green-400 transition-colors text-xs text-[#AAAAAA]"
                       >
                         {subItem}
                       </Link>

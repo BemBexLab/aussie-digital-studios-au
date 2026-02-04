@@ -7,28 +7,10 @@ import { usePathname } from "next/navigation";
 
 const MobileServicesDropdown = () => {
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(true);
   const pathname = usePathname();
   const currentPath = pathname ?? "";
 
-  useEffect(() => {
-    // Check if document has dark class
-    const isDark = document.documentElement.classList.contains("dark");
-    setIsDarkMode(isDark);
-
-    // Listen for changes in the dark class
-    const observer = new MutationObserver(() => {
-      const isDark = document.documentElement.classList.contains("dark");
-      setIsDarkMode(isDark);
-    });
-
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ["class"],
-    });
-
-    return () => observer.disconnect();
-  }, []);
+  // Mobile services dropdown is dark-only. No theme detection required.
 
   const isActive = () => {
     return currentPath === "/services" || currentPath.startsWith("/services/");
@@ -119,8 +101,8 @@ const MobileServicesDropdown = () => {
         }}
         className={`w-full text-left px-4 py-2 rounded-lg transition-colors ${
           active || isServicesDropdownOpen
-            ? `text-[#4C8C74] ${isDarkMode ? "bg-gray-900" : "bg-gray-100"}`
-            : `${isDarkMode ? "text-gray-300 hover:text-white hover:bg-gray-900" : "text-black hover:text-[#4C8C74] hover:bg-gray-100"}`
+            ? "text-[#4C8C74] bg-gray-900"
+            : "text-gray-300 hover:text-white hover:bg-gray-900"
         }`}
       >
         Services
@@ -129,25 +111,23 @@ const MobileServicesDropdown = () => {
       {/* Mobile Dropdown Panel */}
       {isServicesDropdownOpen && (
         <div
-          className={`rounded-lg my-2 overflow-hidden max-h-[70vh] overflow-y-auto ${
-            isDarkMode ? "bg-gray-900 text-white" : "bg-white text-black"
-          }`}
+          className="rounded-lg my-2 overflow-hidden max-h-[70vh] overflow-y-auto bg-black text-white"
         >
           {servicesContent.map((section, idx) => (
-            <div key={idx} className={`px-4 py-3 border-b last:border-b-0 ${
-              isDarkMode ? "border-gray-800" : "border-gray-200"
-            }`}>
-              <h3 className="text-xs font-semibold text-[#4C8C74] uppercase mb-2">
+            <div key={idx} className="px-4 py-3 border-b last:border-b-0 border-gray-800">
+              <Link
+                href={`/services/${section.title.toLowerCase().replace(/\s+/g, "-")}`}
+                className="text-xs font-semibold text-[#4C8C74] uppercase mb-2 block hover:text-green-400 transition-colors"
+                onClick={() => setIsServicesDropdownOpen(false)}
+              >
                 {section.title}
-              </h3>
+              </Link>
               <ul className="space-y-1">
                 {section.items.map((subItem, subIdx) => (
                   <li key={subIdx}>
                     <Link
-                      href={`/services#${subItem.toLowerCase().replace(/\s+/g, "-")}`}
-                      className={`text-xs hover:text-green-400 transition-colors block ${
-                        isDarkMode ? "text-gray-300" : "text-black"
-                      }`}
+                      href={`/services/${section.title.toLowerCase().replace(/\s+/g, "-")}/${subItem.toLowerCase().replace(/\s+/g, "-")}`}
+                      className="text-xs hover:text-green-400 transition-colors block text-gray-300"
                       onClick={() => setIsServicesDropdownOpen(false)}
                     >
                       {subItem}
