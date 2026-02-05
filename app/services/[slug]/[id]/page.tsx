@@ -31,8 +31,8 @@ const ServiceInnerPage = async ({ params }: ServicePageProps) => {
     return <div>Service not found</div>;
   }
   
-  // Find the subcategory service by id
-  const service = parentService.subcategory.find(s => s.slug === id);
+  // Find the subcategory service by id within the parent's subcategory array
+  const service = parentService.subcategory?.find(s => s.slug === id);
   
   if (!service) {
     return <div>Subcategory service not found</div>;
