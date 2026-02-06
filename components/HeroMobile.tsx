@@ -38,9 +38,9 @@ const HeroMobile = ({ H }: HeroMobileProps) => {
       {/* Content Wrapper */}
       <div className="flex flex-col items-center justify-end w-full relative z-10 px-4 pb-6">
         {/* ThemeToggle: Positioned top-right on mobile */}
-        <div className="self-end mb-3 absolute top-3 right-4 -translate-y-15">
+        {/* <div className="self-end mb-3 absolute top-3 right-4 -translate-y-15">
           <ThemeToggle />
-        </div>
+        </div> */}
 
         {/* Heading - Responsive text sizes */}
         <h2 className="text-3xl sm:text-4xl font-medium text-white text-center leading-tight uppercase">

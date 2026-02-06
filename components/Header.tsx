@@ -150,12 +150,13 @@ const Header = () => {
                   key={item}
                   href={href}
                   aria-current={active ? 'page' : undefined}
-                  className={`text-sm font-semibold transition-colors whitespace-nowrap flex flex-row items-center gap-1 pb-1 border-b-2 ${active
-                    ? 'text-[#4C8C74] border-[#4C8C74]'
-                    : 'text-white opacity-50 hover:text-white hover:opacity-100 border-transparent'
+                  className={`text-sm font-semibold transition-colors whitespace-nowrap flex flex-col items-center gap-1 ${active
+                    ? 'text-[#4C8C74]'
+                    : 'text-white opacity-50 hover:text-white hover:opacity-100'
                     }`}
                 >
                   <span>{item}</span>
+                  <span className={`mt-1 rounded-full w-2 h-2 ${active ? 'bg-[#4C8C74]' : 'bg-transparent'}`} />
                 </Link>
               );
             })}
@@ -163,7 +164,7 @@ const Header = () => {
         </div>
 
         {/* Right side: Get In Touch button */}
-        <button className="hidden md:flex items-center space-x-1 text-sm text-white hover:text-green-400 transition-colors">
+        <button className="hidden md:flex items-center space-x-1 text-sm text-white hover:text-green-400 transition-colors" onClick={() => { window.location.href = '/contact'; }}>
           <span>Get In Touch</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"

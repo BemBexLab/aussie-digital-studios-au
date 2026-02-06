@@ -9,30 +9,12 @@ import MobileServicesDropdown from "./MobileServicesDropdown";
 
 const MobileHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(true);
   const [logoFallback, setLogoFallback] = useState(false);
   const pathname = usePathname();
   const currentPath = pathname ?? "";
   const [hash, setHash] = useState("");
 
-  useEffect(() => {
-    // Check if document has dark class
-    const isDark = document.documentElement.classList.contains("dark");
-    setIsDarkMode(isDark);
-
-    // Listen for changes in the dark class
-    const observer = new MutationObserver(() => {
-      const isDark = document.documentElement.classList.contains("dark");
-      setIsDarkMode(isDark);
-    });
-
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ["class"],
-    });
-
-    return () => observer.disconnect();
-  }, []);
+  // Mobile header is dark-only. No theme detection required.
 
   useEffect(() => {
     setHash(window.location.hash || "");
@@ -52,13 +34,13 @@ const MobileHeader = () => {
 
   return (
     <>
-      <header className={`fixed top-0 w-full z-[100] md:hidden ${isDarkMode ? 'bg-black/10' : 'bg-white/60'} backdrop-blur-sm transition-colors`}>
-      <div className={`flex items-center justify-between px-4 py-3 ${isDarkMode ? 'text-white' : 'text-black'}`}>
+      <header className="fixed top-0 w-full z-[100] md:hidden bg-black backdrop-blur-sm transition-colors">
+      <div className="flex items-center justify-between px-4 py-3 text-white">
         {/* Logo */}
         <div className="flex items-center">
           {!logoFallback ? (
             <Image
-              src={isDarkMode ? "/Group_1.png" : "/Aussie_Header_Logo_Light.webp"}
+              src="/Group_1.png"
               alt="Aussie Digital Studios"
               width={100}
               height={40}
@@ -69,13 +51,13 @@ const MobileHeader = () => {
             />
           ) : (
             // eslint-disable-next-line @next/next/no-img-element
-            <img src={isDarkMode ? "/Group_1.png" : "/Aussie_Header_Logo_Light.webp"} alt="Aussie Digital Studios" className="h-10 w-auto" />
+            <img src="/Group_1.png" alt="Aussie Digital Studios" className="h-10 w-auto" />
           )}
         </div>
 
         {/* Mobile Menu Button */}
         <button
-          className={`${isDarkMode ? 'text-white' : 'text-black'} p-2`}
+          className="text-white p-2"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -98,7 +80,7 @@ const MobileHeader = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className={`${isDarkMode ? 'bg-black/60 border-gray-700 text-white' : 'bg-white/60 border-gray-200 text-black'} backdrop-blur-sm pb-4 border-t`}>
+        <div className="bg-black border-gray-700 text-white backdrop-blur-sm pb-4 border-t">
           <nav className="flex flex-col space-y-2 px-4 py-4">
             {['Home', 'About'].map((item) => {
               const href = item === 'Home' ? '/' : `/${item.toLowerCase()}`;
@@ -108,10 +90,10 @@ const MobileHeader = () => {
                 <Link
                   key={item}
                   href={href}
-                  className={`px-4 py-2 rounded-lg transition-colors block ${isDarkMode ? 'text-white' : 'text-black'} ${
+                  className={`px-4 py-2 rounded-lg transition-colors block text-white ${
                     active
-                      ? `text-[#4C8C74] ${isDarkMode ? 'bg-[#4C8C74]' : 'bg-gray-200'}`
-                      : (isDarkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-200')
+                      ? 'text-[#4C8C74] bg-white/5'
+                      : 'hover:bg-gray-800'
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -131,10 +113,10 @@ const MobileHeader = () => {
                 <Link
                   key={item}
                   href={href}
-                  className={`px-4 py-2 rounded-lg transition-colors block ${isDarkMode ? 'text-white' : 'text-black'} ${
+                  className={`px-4 py-2 rounded-lg transition-colors block text-white ${
                     active
-                      ? `text-[#4C8C74] ${isDarkMode ? 'bg-[#4C8C74]' : 'bg-gray-200'}`
-                      : (isDarkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-200')
+                      ? 'text-[#4C8C74] bg-white/5'
+                      : 'hover:bg-gray-800'
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -143,7 +125,7 @@ const MobileHeader = () => {
               );
             })}
 
-            <button className={`w-full flex items-center justify-center space-x-1 text-sm ${isDarkMode ? 'text-white hover:text-green-400' : 'text-black hover:text-green-600'} transition-colors px-4 py-2 mt-2 rounded-lg ${isDarkMode ? 'hover:bg-gray-900' : 'hover:bg-gray-200'}`}>
+            <button className={`w-full flex items-center justify-center space-x-1 text-sm text-white hover:text-green-400 transition-colors px-4 py-2 mt-2 rounded-lg hover:bg-gray-900`}>
               <span>Get In Touch</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
