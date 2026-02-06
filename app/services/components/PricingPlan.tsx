@@ -12,47 +12,52 @@ type PricingPlanProps = {
   };
 };
 
-const defaultPricingData = [
-  {
-    title: "Basic Package",
-    price: "$99",
-    discountedFrom: "$199",
-    includes: [
-      "5 Revisions",
-      "24 Hours Delivery",
-      "Unique Design",
-      "100% Satisfaction Guarantee",
-    ],
-  },
-  {
-    title: "Standard Package",
-    price: "$199",
-    discountedFrom: "$399",
-    includes: [
-      "Unlimited Revisions",
-      "48 Hours Delivery",
-      "Unique Design",
-      "100% Satisfaction Guarantee",
-      "Ownership Rights",
-    ],
-  },
-  {
-    title: "Premium Package",
-    price: "$299",
-    discountedFrom: "$599",
-    includes: [
-      "Unlimited Revisions",
-      "72 Hours Delivery",
-      "Unique Design",
-      "100% Satisfaction Guarantee",
-      "Ownership Rights",
-      "Free Updates",
-    ],
-  },
-];
+// const defaultPricingData = [
+//   {
+//     title: "Basic Package",
+//     price: "$99",
+//     discountedFrom: "$199",
+//     includes: [
+//       "5 Revisions",
+//       "24 Hours Delivery",
+//       "Unique Design",
+//       "100% Satisfaction Guarantee",
+//     ],
+//   },
+//   {
+//     title: "Standard Package",
+//     price: "$199",
+//     discountedFrom: "$399",
+//     includes: [
+//       "Unlimited Revisions",
+//       "48 Hours Delivery",
+//       "Unique Design",
+//       "100% Satisfaction Guarantee",
+//       "Ownership Rights",
+//     ],
+//   },
+//   {
+//     title: "Premium Package",
+//     price: "$299",
+//     discountedFrom: "$599",
+//     includes: [
+//       "Unlimited Revisions",
+//       "72 Hours Delivery",
+//       "Unique Design",
+//       "100% Satisfaction Guarantee",
+//       "Ownership Rights",
+//       "Free Updates",
+//     ],
+//   },
+// ];
 
 const PricingPlan = ({ service }: PricingPlanProps) => {
-  const cardData = service.pricingCardData || defaultPricingData;
+  const cardData = service.pricingCardData;
+  
+  if (!cardData || cardData.length === 0) {
+    return null;
+  }
+  
   return (
     <>
       {/* Mobile View */}
@@ -61,59 +66,61 @@ const PricingPlan = ({ service }: PricingPlanProps) => {
       </div>
 
       {/* Desktop View */}
-      <div className="hidden sm:block text-white mt-20 py-0">
-        <div className="max-w-7xl mx-auto px-4 justify-center">
-          <p className="text-center my-[7px] text-xl font-medium text-[#4C8C74]">
-            Pricing Plans
-          </p>
-          <h1 className="text-center text-4xl font-semibold text-white mb-5">
-            Our Packages
-          </h1>
+      <div className="hidden sm:block text-white py-16">
+        <div className="max-w-7xl mx-auto px-4">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <p className="text-xl font-medium text-[#4C8C74] mb-2">
+              Pricing Plans
+            </p>
+            <h1 className="text-4xl font-semibold text-white">
+              Our Packages
+            </h1>
+          </div>
 
-          {/* Cards here */}
-          <div className="flex flex-wrap gap-6 justify-center my-7 px-4 xl:px-0">
-            {/* Mapped Pricing Plan cards */}
+          {/* Pricing Cards - Single Row */}
+          <div className="flex flex-wrap lg:flex-nowrap justify-center gap-6">
             {cardData.map((card, index) => (
               <div
                 key={index}
-                className="bg-cover bg-center rounded-xl p-6 flex-shrink-0"
-                data-pricing-bg
+                className="bg-cover bg-center rounded-2xl p-8 flex flex-col w-full lg:w-1/3 lg:max-w-[400px]"
                 style={{
                   backgroundImage: "url('/Home/Frame_161.svg')",
-                  width: "calc((100% - 12px) / 3)",
-                  minWidth: "300px",
+                  minHeight: "550px",
                 }}
               >
-                  <h2 className="text-base text-yellow-400 mb-4 pricing-package-title">
-                    {card.title}
-                  </h2>
-                  <p className="text-5xl text-white font-semibold mb-4">
-                    {card.price}
-                    <span className="line-through font-normal text-base mx-[5px] text-[#4C8C74]">
-                      {card.discountedFrom}
-                    </span>
-                  </p>
-                  <p className="text-base text-[#4C8C74]">
-                    Up to{" "}
-                    <span className="font-bold pricing-discount-percent">
-                      $50%
-                    </span>{" "}
-                    referral AAR
-                  </p>
+                {/* Package Title */}
+                <h2 className="text-lg text-yellow-400 font-medium mb-6">
+                  {card.title}
+                </h2>
 
-                  <p className="font-semibold text-md mt-10">Includes:</p>
-                  <ul
-                    role="list"
-                    className="space-y-1 mt-1 mb-6 text-[#4C8C74] overflow-y-auto pr-1 max-h-[180px] [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:bg-[#4C8C74] [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-[#202020] scrollbar-thin scrollbar-thumb-[#4C8C74] scrollbar-track-[#202020]"
-                  >
+                {/* Price */}
+                <div className="mb-2">
+                  <span className="text-5xl text-white font-bold">
+                    {card.price}
+                  </span>
+                  <span className="line-through font-normal text-lg ml-2 text-gray-400">
+                    {card.discountedFrom}
+                  </span>
+                </div>
+
+                {/* Discount Info */}
+                <p className="text-base text-[#4C8C74] mb-8">
+                  Up to{" "}
+                  <span className="font-bold">$50%</span>{" "}
+                  referral AAR
+                </p>
+
+                {/* Includes Section */}
+                <div className="flex-grow">
+                  <p className="font-semibold text-lg mb-4 text-white">Includes:</p>
+                  <ul className="space-y-3 max-h-[200px] overflow-y-auto pr-2 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:bg-[#4C8C74] [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-[#202020] scrollbar-thin scrollbar-thumb-[#4C8C74] scrollbar-track-[#202020]">
                     {card.includes.map((item, i) => (
-                      <li key={i} className="flex items-center">
+                      <li key={i} className="flex items-start gap-2">
                         <svg
-                          className="w-5 h-5 shrink-0 text-fg-brand me-1.5"
+                          className="w-5 h-5 shrink-0 text-[#4C8C74] mt-0.5"
                           aria-hidden="true"
                           xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
                           fill="none"
                           viewBox="0 0 24 24"
                         >
@@ -125,22 +132,25 @@ const PricingPlan = ({ service }: PricingPlanProps) => {
                             d="M8.5 11.5 11 14l4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
                           />
                         </svg>
-                        <span className="text-sm font-normal">{item}</span>
+                        <span className="text-sm text-[#4C8C74] leading-relaxed">
+                          {item}
+                        </span>
                       </li>
                     ))}
                   </ul>
-                  <a
-                    href="#"
-                    className="flex font-light text-sm items-center justify-center gap-1 bg-[#4C8C74] text-white py-2 px-3 rounded-full hover:bg-blue-300 transition-colors group w-fit mr-auto"
-                  >
-                    Place Your Order
+                </div>
+
+                {/* CTA Button */}
+                <div className="mt-8">
+                  <button className="flex items-center justify-center gap-2 bg-[#4C8C74] text-white py-3 px-6 rounded-full hover:bg-[#5da888] transition-all duration-300 group w-fit">
+                    <span className="text-sm font-medium">Place Your Order</span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="28"
-                      height="28"
+                      width="24"
+                      height="24"
                       viewBox="0 0 24 24"
                       fill="none"
-                      className="transition-transform duration-300 group-hover:rotate-[45deg]"
+                      className="transition-transform duration-300 group-hover:translate-x-1"
                     >
                       <circle cx="12" cy="12" r="10" fill="black" />
                       <path
@@ -149,14 +159,13 @@ const PricingPlan = ({ service }: PricingPlanProps) => {
                         strokeWidth="1.5"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        transform="rotate(-45 12 12)"
                       />
                     </svg>
-                  </a>
+                  </button>
                 </div>
-              ))}
-            </div>
-
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </>

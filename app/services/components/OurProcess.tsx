@@ -40,14 +40,15 @@ const OurProcess = ({ service }: OurProcessProps) => {
       window.removeEventListener("storage", handleThemeChange);
     };
   }, []);
+
   return (
-    <section>
-      <div className="flex flex-col mt-30 justify-center">
+    <section className="w-full flex justify-center">
+      <div className="flex flex-col mt-30 justify-center max-w-7xl w-full px-4">
         {/* Heading */}
         <div className="text-center mb-16">
           <p className="text-xl font-medium text-[#4C8C74] mb-2">Our Process</p>
           <h2 className="text-4xl md:text-4xl font-semibold text-white">
-            Our Proven 3-Step Process to Grow Your<br></br> Brand with Web
+            Our Proven 3-Step Process to Grow Your<br /> Brand with Web
             Design and Development
           </h2>
         </div>
@@ -55,7 +56,7 @@ const OurProcess = ({ service }: OurProcessProps) => {
         {/* Divider */}
         <Divider />
 
-        <ProcessCards service={service}/>
+        <ProcessCards service={service} />
       </div>
     </section>
   );

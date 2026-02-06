@@ -1,5 +1,5 @@
 import PricingPlan from "../Home/components/PricingPlan";
-import BrandLevelUp from "./components/BrandLevelUp";
+import BrandLevelUp from "../Home/components/BrandLevelUp";
 import Hero from "@/components/Hero";
 
 const PackagePage = () => {

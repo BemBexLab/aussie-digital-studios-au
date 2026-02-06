@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import dynamic from "next/dynamic";
-import LivePreview from "@/components/LivePreview"; // <--- ADD THIS
+import LivePreview from "@/components/LivePreview";
+import ProjectImage from "@/components/Projectimage";
 
 // Dynamically import the client-only BackButton
 const BackButton = dynamic(() => import("../[slug]/BackButton"));
@@ -8,12 +9,73 @@ const BackButton = dynamic(() => import("../[slug]/BackButton"));
 const API_URL =
   "https://olive-peafowl-546702.hostingersite.com/wp-json/wp/v2/posts?slug=";
 
+// Enhanced URL cleaning function
+function cleanUrl(url: string): string {
+  if (!url) return "";
+  
+  let cleaned = String(url);
+  
+  // Remove escaped backslash sequences (\\a, \\n, \\t, etc.)
+  cleaned = cleaned.replace(/\\[a-z]/gi, '');
+  
+  // Remove all control characters (including \a, \n, \r, \t)
+  cleaned = cleaned.replace(/[\x00-\x1F\x7F-\x9F]/g, '');
+  
+  // Remove all whitespace characters
+  cleaned = cleaned.replace(/\s+/g, '');
+  
+  // Trim any remaining whitespace
+  cleaned = cleaned.trim();
+  
+  return cleaned;
+}
+
+// Recursively clean all URLs in an object
+function cleanObjectUrls(obj: any): any {
+  if (!obj || typeof obj !== 'object') {
+    return obj;
+  }
+
+  if (Array.isArray(obj)) {
+    return obj.map(item => cleanObjectUrls(item));
+  }
+
+  const cleaned: any = {};
+  for (const key in obj) {
+    const value = obj[key];
+    
+    // If it's a URL field, clean it
+    if (typeof value === 'string' && (key === 'url' || key.includes('url') || key.includes('URL') || key.includes('link'))) {
+      cleaned[key] = cleanUrl(value);
+    } 
+    // If it's an object or array, recurse
+    else if (typeof value === 'object' && value !== null) {
+      cleaned[key] = cleanObjectUrls(value);
+    } 
+    // Otherwise, keep as is
+    else {
+      cleaned[key] = value;
+    }
+  }
+  
+  return cleaned;
+}
+
 export async function generateStaticParams() {
-  const res = await fetch(
-    "https://olive-peafowl-546702.hostingersite.com/wp-json/wp/v2/posts"
-  );
-  const posts = await res.json();
-  return posts.map((post: any) => ({ slug: post.slug }));
+  try {
+    const res = await fetch(
+      "https://olive-peafowl-546702.hostingersite.com/wp-json/wp/v2/posts",
+      { cache: 'no-store' }
+    );
+    
+    if (!res.ok) return [];
+    
+    const posts = await res.json();
+    return posts.map((post: any) => ({ slug: post.slug }));
+  } catch (error) {
+    console.error('Error generating static params:', error);
+    return [];
+  }
 }
 
 export default async function ProjectPage({
@@ -22,80 +84,117 @@ export default async function ProjectPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const res = await fetch(`${API_URL}${slug}`, {
-    next: { revalidate: 60 },
-  });
+  
+  try {
+    const res = await fetch(`${API_URL}${slug}`, {
+      cache: 'no-store',
+    });
 
-  if (!res.ok) return notFound();
+    if (!res.ok) return notFound();
 
-  const data = await res.json();
-  const project = data[0];
-  if (!project) return notFound();
+    const data = await res.json();
+    if (!data || data.length === 0) return notFound();
+    
+    const rawProject = data[0];
+    if (!rawProject) return notFound();
 
-  const imageUrl = project.acf?.project_image?.url || "/default.jpg";
-  const acf = project.acf;
+    // Clean all URLs in the project data
+    const project = cleanObjectUrls(rawProject);
 
-  return (
-    <div className="text-white px-4 flex flex-col items-center pt-[80px]">
-      {/* Title */}
-      <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold max-w-4xl text-left w-full text-white bg-clip-text mb-[50px]">
-        {project.title.rendered}
-      </h1>
+    // Safely get image URL with cleaning and fallback
+    let imageUrl = project.acf?.project_image?.url || "/default.jpg";
+    
+    // Additional cleaning for the image URL
+    if (imageUrl !== "/default.jpg") {
+      imageUrl = cleanUrl(imageUrl);
+      
+      // Handle protocol-relative URLs
+      if (imageUrl.startsWith("//")) {
+        imageUrl = `https:${imageUrl}`;
+      }
+      
+      // Force HTTPS
+      if (imageUrl.startsWith("http://")) {
+        imageUrl = imageUrl.replace("http://", "https://");
+      }
+      
+      // Fallback if URL is invalid
+      if (!imageUrl || imageUrl.length < 5) {
+        imageUrl = "/default.jpg";
+      }
+    }
 
-      {/* Project Image */}
-      <div className="w-full max-w-4xl rounded-2xl overflow-hidden shadow-xl mb-12">
-        <img
+    const acf = project.acf;
+
+    return (
+      <div className="text-white px-4 flex flex-col items-center pt-[80px]">
+        {/* Title */}
+        <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold max-w-4xl text-left w-full text-white bg-clip-text mb-[50px]">
+          {project.title?.rendered || 'Untitled Project'}
+        </h1>
+
+        {/* Project Image - Now using Client Component */}
+        <ProjectImage 
           src={imageUrl}
-          alt={project.title.rendered}
-          className="w-full h-auto object-cover"
+          alt={project.title?.rendered || 'Project image'}
+          fallback="/default.jpg"
         />
-      </div>
 
-      {/* Project Content Sections */}
-      <div className="w-full max-w-3xl space-y-12 text-lg sm:text-xl">
-        {acf.introduction && (
-          <Section title="Introduction" text={acf.introduction} />
-        )}
-        {acf.genesis_of_collaboration && (
-          <Section
-            title="Genesis Of Collaboration"
-            text={acf.genesis_of_collaboration}
-          />
-        )}
-        {acf.conceptualization && (
-          <Section title="Conceptualization" text={acf.conceptualization} />
-        )}
-        {acf.design_symphony && (
-          <Section title="Design Symphony" text={acf.design_symphony} />
-        )}
-        {acf.development_overture && (
-          <Section
-            title="Development Overture"
-            text={acf.development_overture}
-          />
-        )}
-        {acf.launch_and_beyond && (
-          <Section title="Launch And Beyond" text={acf.launch_and_beyond} />
-        )}
-        {acf.conclusion && <Section title="Conclusion" text={acf.conclusion} />}
-      </div>
-
-      {/* Live Website Preview (only if project_url exists) */}
-      {acf.project_url && (
-        <div className="w-full max-w-5xl mx-auto my-16 rounded-2xl overflow-hidden ">
-          <div className="text-2xl font-semibold mb-2 px-6 pt-6 text-[#3A6EA5] text-center">
-            www.anybotics.com
-          </div>
-          <LivePreview url={acf.project_url} />
+        {/* Project Content Sections */}
+        <div className="w-full max-w-3xl space-y-12 text-lg sm:text-xl">
+          {acf?.introduction && (
+            <Section title="Introduction" text={acf.introduction} />
+          )}
+          {acf?.genesis_of_collaboration && (
+            <Section
+              title="Genesis Of Collaboration"
+              text={acf.genesis_of_collaboration}
+            />
+          )}
+          {acf?.conceptualization && (
+            <Section title="Conceptualization" text={acf.conceptualization} />
+          )}
+          {acf?.design_symphony && (
+            <Section title="Design Symphony" text={acf.design_symphony} />
+          )}
+          {acf?.development_overture && (
+            <Section
+              title="Development Overture"
+              text={acf.development_overture}
+            />
+          )}
+          {acf?.launch_and_beyond && (
+            <Section title="Launch And Beyond" text={acf.launch_and_beyond} />
+          )}
+          {acf?.conclusion && (
+            <Section title="Conclusion" text={acf.conclusion} />
+          )}
         </div>
-      )}
 
-      {/* Back Button */}
-      <div className="mt-16 text-center">
-        <BackButton />
+        {/* Live Website Preview (only if project_url exists) */}
+        {acf?.project_url && (
+          <div className="w-full max-w-5xl mx-auto my-16 rounded-2xl overflow-hidden">
+            <div className="text-2xl font-semibold mb-2 px-6 pt-6 text-[#3A6EA5] text-center">
+              {/* Extract domain from URL or use default */}
+              {acf.project_url 
+                ? new URL(cleanUrl(acf.project_url)).hostname 
+                : 'Live Preview'
+              }
+            </div>
+            <LivePreview url={cleanUrl(acf.project_url)} />
+          </div>
+        )}
+
+        {/* Back Button */}
+        <div className="mt-16 mb-8 text-center">
+          <BackButton />
+        </div>
       </div>
-    </div>
-  );
+    );
+  } catch (error) {
+    console.error('Error loading project:', error);
+    return notFound();
+  }
 }
 
 function Section({ title, text }: { title: string; text: string }) {

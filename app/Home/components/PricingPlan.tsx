@@ -447,7 +447,7 @@ const PricingPlan = () => {
               </p>
 
               <p className="font-semibold text-xs mb-2">Includes:</p>
-              <ul className="space-y-1 text-[#4C8C74] max-h-[160px] overflow-y-auto pr-2 mb-3">
+              <ul className="space-y-1 text-[#4C8C74] max-h-[160px] overflow-y-auto pr-2 mb-3 [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-thumb]:bg-[#4C8C74] [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-[#202020]">
                 {card.includes.map((item, i) => (
                   <li key={i} className="flex items-start gap-2 text-xs">
                     <svg
@@ -466,7 +466,7 @@ const PricingPlan = () => {
                 ))}
               </ul>
 
-              <button className="w-full flex font-light text-xs items-center justify-center gap-2 bg-[#4C8C74] text-white py-2 rounded-full hover:bg-blue-300 transition-colors">
+              <button className="w-full flex font-light text-xs items-center justify-center gap-2 bg-[#4C8C74] text-white py-2 rounded-full hover:bg-[#5da888] transition-colors">
                 Place Your Order
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -490,22 +490,23 @@ const PricingPlan = () => {
         </div>
       </div>
 
-      <div className="hidden sm:block text-white mt-20 py-0">
-        <div className="max-w-7xl mx-auto px-4 justify-center">
-          <p className="text-center my-[7px] text-xl font-medium text-[#4C8C74]">
+      {/* Tablet and Desktop view */}
+      <div className="hidden sm:block text-white py-12 sm:py-16 lg:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 justify-center">
+          <p className="text-center my-[7px] text-lg sm:text-xl font-medium text-[#4C8C74]">
             Pricing Plans
           </p>
-          <h1 className="text-center text-4xl font-semibold text-white mb-5">
+          <h1 className="text-center text-3xl sm:text-4xl font-semibold text-white mb-5 sm:mb-8">
             Our Packages
           </h1>
 
-          {/* Buttons */}
-          <div className="flex flex-row gap-4 justify-center flex-wrap">
+          {/* Service Buttons - Responsive */}
+          <div className="flex flex-row gap-2 sm:gap-4 justify-center flex-wrap mb-8">
             {cardData.map((service) => (
               <button
                 key={service.service}
                 onClick={() => setSelectedService(service.service)}
-                className={`px-4 py-2 rounded-[8px] border cursor-pointer text-sm transition ${selectedService === service.service
+                className={`px-3 sm:px-4 py-2 rounded-[8px] border cursor-pointer text-xs sm:text-sm transition font-medium ${selectedService === service.service
                     ? "border-yellow-400 text-yellow-400 bg-yellow-400/10"
                     : "text-gray-400 border-gray-600 hover:border-yellow-400 hover:text-yellow-400"
                   }`}
@@ -515,93 +516,91 @@ const PricingPlan = () => {
             ))}
           </div>
 
-          {/* Cards here */}
-          <div className="flex flex-col md:flex-row max-[1250px]:flex-col gap-6 justify-center my-7 px-4">
-            <div className="flex flex-col md:flex-row max-[1250px]:flex-col gap-6">
-              {/* Mapped Pricing Plan cards */}
-              {selectedData?.data.map((card, index) => (
-                <div
-                  key={index}
-                  className="bg-cover h-[500px] max-[1250px]:h-auto bg-center rounded-xl p-6 w-[370px] max-[1250px]:w-full max-w-md md:max-w-2xl shadow-lg"
-                  data-pricing-bg
-                  style={{
-                    backgroundImage: "url('/Home/Frame_161.svg')",
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                  }}
-                >
-                  <h2 className="text-base text-yellow-400 mb-4 pricing-package-title">
-                    {card.title}
-                  </h2>
-                  <p className="text-5xl text-white font-semibold mb-4">
-                    {card.price}
-                    <span className="line-through font-normal text-base mx-[5px] text-[#4C8C74]">
-                      {card.discountedFrom}
-                    </span>
-                  </p>
-                  <p className="text-base text-[#4C8C74]">
-                    Up to{" "}
-                    <span className="font-bold pricing-discount-percent">
-                      $50%
-                    </span>{" "}
-                    referral AAR
-                  </p>
+          {/* Cards - Responsive Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 justify-items-center my-7 px-2 sm:px-4">
+            {selectedData?.data.map((card, index) => (
+              <div
+                key={index}
+                className="bg-cover bg-center rounded-xl p-5 sm:p-6 w-full max-w-md xl:max-w-[370px] shadow-lg flex flex-col"
+                data-pricing-bg
+                style={{
+                  backgroundImage: "url('/Home/Frame_161.svg')",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  minHeight: "480px",
+                }}
+              >
+                <h2 className="text-sm sm:text-base text-yellow-400 mb-3 sm:mb-4 pricing-package-title font-medium">
+                  {card.title}
+                </h2>
+                <p className="text-4xl sm:text-5xl text-white font-semibold mb-3 sm:mb-4">
+                  {card.price}
+                  <span className="line-through font-normal text-sm sm:text-base mx-[5px] text-[#4C8C74]">
+                    {card.discountedFrom}
+                  </span>
+                </p>
+                <p className="text-sm sm:text-base text-[#4C8C74] mb-6 sm:mb-8">
+                  Up to{" "}
+                  <span className="font-bold pricing-discount-percent">
+                    $50%
+                  </span>{" "}
+                  referral AAR
+                </p>
 
-                  <p className="font-semibold text-md mt-10">Includes:</p>
-                  <ul
-                    role="list"
-                    className="space-y-1 mt-1 mb-6 text-[#4C8C74] overflow-y-auto pr-1 max-h-[180px] [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:bg-[#4C8C74] [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-[#202020] scrollbar-thin scrollbar-thumb-[#4C8C74] scrollbar-track-[#202020]"
+                <p className="font-semibold text-sm sm:text-md mb-2 sm:mb-3">Includes:</p>
+                <ul
+                  role="list"
+                  className="space-y-1 sm:space-y-1.5 mt-1 mb-4 sm:mb-6 text-[#4C8C74] overflow-y-auto pr-1 sm:pr-2 max-h-[160px] sm:max-h-[180px] flex-grow [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:bg-[#4C8C74] [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-[#202020] scrollbar-thin scrollbar-thumb-[#4C8C74] scrollbar-track-[#202020]"
+                >
+                  {card.includes.map((item, i) => (
+                    <li key={i} className="flex items-center">
+                      <svg
+                        className="w-4 h-4 sm:w-5 sm:h-5 shrink-0 text-fg-brand me-1.5"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M8.5 11.5 11 14l4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                        />
+                      </svg>
+                      <span className="text-xs sm:text-sm font-normal">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href="#"
+                  className="flex font-light text-xs sm:text-sm items-center justify-center gap-1 sm:gap-2 bg-[#4C8C74] text-white py-2 sm:py-2.5 px-3 sm:px-4 rounded-full hover:bg-[#5da888] transition-colors group w-fit mr-auto mt-auto"
+                >
+                  Place Your Order
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    className="transition-transform duration-300 group-hover:rotate-[45deg] sm:w-[28px] sm:h-[28px]"
                   >
-                    {card.includes.map((item, i) => (
-                      <li key={i} className="flex items-center">
-                        <svg
-                          className="w-5 h-5 shrink-0 text-fg-brand me-1.5"
-                          aria-hidden="true"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            stroke="currentColor"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M8.5 11.5 11 14l4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                          />
-                        </svg>
-                        <span className="text-sm font-normal">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <a
-                    href="#"
-                    className="flex font-light text-sm items-center justify-center gap-1 bg-[#4C8C74] text-white py-2 px-3 rounded-full hover:bg-blue-300 transition-colors group w-fit mr-auto"
-                  >
-                    Place Your Order
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="28"
-                      height="28"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      className="transition-transform duration-300 group-hover:rotate-[45deg]"
-                    >
-                      <circle cx="12" cy="12" r="10" fill="black" />
-                      <path
-                        d="M9 12H15M15 12L12 9M15 12L12 15"
-                        stroke="white"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        transform="rotate(-45 12 12)"
-                      />
-                    </svg>
-                  </a>
-                </div>
-              ))}
-            </div>
+                    <circle cx="12" cy="12" r="10" fill="black" />
+                    <path
+                      d="M9 12H15M15 12L12 9M15 12L12 15"
+                      stroke="white"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      transform="rotate(-45 12 12)"
+                    />
+                  </svg>
+                </a>
+              </div>
+            ))}
           </div>
         </div>
       </div>

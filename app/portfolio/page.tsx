@@ -8,7 +8,7 @@ const PortfolioPage = () => {
     <div>
       <Hero H="portfolio" />
       {/* <PortfolioSection /> */}
-      <div className="flex justify-end">
+      {/* <div className="flex justify-end">
         <img
           src="/Geometric_Shape_Silver.png"
           alt="Decorative Image"
@@ -16,7 +16,7 @@ const PortfolioPage = () => {
           height={100}
           className="relative z-10 bottom-[-103px] right-0 md:block"
         />
-      </div>
+      </div> */}
       <PortfolioSection />
     </div>
   );
