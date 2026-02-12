@@ -142,6 +142,7 @@ const ServicesDropdown = () => {
       {/* Dropdown Panel */}
       {isServicesDropdownOpen && (
         <div
+          data-services-dropdown
           className="fixed -translate-y-12 sm:-translate-y-15 -translate-x-1/2 rounded-xl z-50 overflow-hidden"
           style={{
             top: "calc(5rem + 50px)",
@@ -166,17 +167,18 @@ const ServicesDropdown = () => {
 
           {/* Content Container */}
           <div
-            className="relative flex flex-wrap gap-4 h-full overflow-y-auto p-6 text-white"
+            data-services-content
+            className="relative flex flex-wrap gap-4 md:gap-3 h-full overflow-y-auto p-6 md:p-4 text-white"
           >
             {serviceCategories.map((col, idx) => (
               <div key={idx} className="space-y-0.5 flex-1 min-w-fit">
                 <a
-                  className="font-light text-xs sm:text-xs md:text-sm uppercase tracking-tight block leading-tight hover:text-green-400 transition-colors"
+                  className="font-light text-xs md:text-xs uppercase tracking-tight block leading-tight hover:text-green-400 transition-colors"
                   href={col.title.href}
                 >
                   {col.title.label}
                 </a>
-                <ul className="space-y-0.5 text-xs font-light mt-3 text-[#AAAAAA]">
+                <ul className="space-y-0.5 text-xs font-light mt-2 md:mt-3 text-[#AAAAAA]">
                   {col.items.map((subItem, subIdx) => (
                     <li key={subIdx}>
                       <Link
@@ -193,6 +195,20 @@ const ServicesDropdown = () => {
           </div>
         </div>
       )}
+
+      <style>{`
+        @media (min-width: 768px) and (max-width: 1098px) {
+          [data-services-dropdown] {
+            width: calc(95vw - 20px) !important;
+            max-height: 550px !important;
+            height: auto !important;
+          }
+          [data-services-content] {
+            padding: 1rem !important;
+            gap: 0.75rem !important;
+          }
+        }
+      `}</style>
     </div>
   );
 };

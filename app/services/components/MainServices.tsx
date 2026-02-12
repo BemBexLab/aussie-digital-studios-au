@@ -117,7 +117,7 @@ export default function MainServices() {
                   {item.svg()}
                 </div>
                 <h3 className="title">{item.title}</h3>
-                <p className="para">{item.description}</p>
+                <p className="para transform -translate-y-5 h-[140px] overflow-hidden">{item.description}</p>
               </div>
             </div>
           ))}
