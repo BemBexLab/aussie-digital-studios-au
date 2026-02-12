@@ -114,7 +114,7 @@ const PricingPlanMobile = ({ service }: PricingPlanMobileProps) => {
               </ul>
 
               <a
-                href="#"
+                href="/contact"
                 className="flex font-light text-xs items-center justify-center gap-1 bg-[#4C8C74] text-white py-2 px-3 rounded-full hover:bg-[#3d7a63] transition-colors group w-full"
               >
                 Place Your Order

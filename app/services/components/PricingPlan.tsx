@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import PricingPlanMobile from "./PricingPlanMobile";
 
@@ -142,7 +144,7 @@ const PricingPlan = ({ service }: PricingPlanProps) => {
 
                 {/* CTA Button */}
                 <div className="mt-8">
-                  <button className="flex items-center justify-center gap-2 bg-[#4C8C74] text-white py-3 px-6 rounded-full hover:bg-[#5da888] transition-all duration-300 group w-fit">
+                  <button onClick={() => window.location.href = "/contact"} className="flex items-center justify-center gap-2 bg-[#4C8C74] text-white py-3 px-6 rounded-full hover:bg-[#5da888] transition-all duration-300 group w-fit">
                     <span className="text-sm font-medium">Place Your Order</span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

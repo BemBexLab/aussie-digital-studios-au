@@ -576,7 +576,7 @@ const PricingPlan = () => {
                   ))}
                 </ul>
                 <a
-                  href="#"
+                  href="/contact"
                   className="flex font-light text-xs sm:text-sm items-center justify-center gap-1 sm:gap-2 bg-[#4C8C74] text-white py-2 sm:py-2.5 px-3 sm:px-4 rounded-full hover:bg-[#5da888] transition-colors group w-fit mr-auto mt-auto"
                 >
                   Place Your Order

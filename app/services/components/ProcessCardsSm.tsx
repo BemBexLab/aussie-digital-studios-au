@@ -45,11 +45,11 @@ const ProcessCardsSm = ({ service }: ProcessCardsSmProps) => {
         {service.processCardData?.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col items-start min-w-0"
+            className="flex flex-col items-start min-w-0 min-h-0"
             style={{ width: "calc((100% - 2.5rem) / 3)", boxSizing: "border-box" }}
           >
             <div
-              className="w-full h-[250px] relative my-8 flex flex-col items-start justify-start p-6 rounded-lg"
+              className="w-full min-h-[250px] relative my-8 flex flex-col items-start justify-start p-6 rounded-lg"
               style={{
                 backgroundImage: `url("${isDarkMode ? '/Home/mini_card_dark.svg' : '/Home/Frame_163_Light.svg'}")`,
                 backgroundSize: "cover",
@@ -67,7 +67,8 @@ const ProcessCardsSm = ({ service }: ProcessCardsSmProps) => {
               <h2 className={`text-lg ${isDarkMode ? 'text-yellow-500' : 'text-[#3A6EA5]'} mt-2`}>
                 {item.heading}
               </h2>
-              <p className={`text-md ${isDarkMode ? 'text-white' : 'text-[#777777]'} text-xs`}>
+              <p className={`text-md ${isDarkMode ? 'text-white' : 'text-[#777777]'} text-xs break-words overflow-hidden`}
+                 style={{display: '-webkit-box', WebkitLineClamp: 4, WebkitBoxOrient: 'vertical'}}>
                 {item.paragraph}
               </p>
             </div>

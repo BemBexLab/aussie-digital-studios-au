@@ -15,25 +15,25 @@ const FooterMobile = () => {
           {/* First Column */}
           <div className="flex flex-col gap-3 items-center text-center">
             <a
-              href="#"
+              href="/"
               className="text-xs font-extralight hover:text-[#4C8C74] transition-colors"
             >
               Home
             </a>
             <a
-              href="#"
+              href="/about"
               className="text-xs font-extralight hover:text-[#4C8C74] transition-colors"
             >
               About
             </a>
             <a
-              href="#"
+              href="/services"
               className="text-xs font-extralight hover:text-[#4C8C74] transition-colors"
             >
               Services
             </a>
             <a
-              href="#"
+              href="/portfolio"
               className="text-xs font-extralight hover:text-[#4C8C74] transition-colors"
             >
               Portfolio
@@ -43,25 +43,25 @@ const FooterMobile = () => {
           {/* Second Column */}
           <div className="flex flex-col gap-3 items-center text-center">
             <a
-              href="#"
+              href="/packages"
               className="text-xs font-extralight hover:text-[#4C8C74] transition-colors"
             >
               Packages
             </a>
             <a
-              href="#"
+              href="/contact"
               className="text-xs font-extralight hover:text-[#4C8C74] transition-colors"
             >
               Contact
             </a>
             <a
-              href="#"
+              href="/terms"
               className="text-xs font-extralight hover:text-[#4C8C74] transition-colors"
             >
               Terms & Conditions
             </a>
             <a
-              href="#"
+              href="/privacy"
               className="text-xs font-extralight hover:text-[#4C8C74] transition-colors"
             >
               Privacy Policy
@@ -73,7 +73,7 @@ const FooterMobile = () => {
         <div className="flex justify-center gap-4 mb-8">
           {/* Facebook */}
           <a
-            href="#"
+            href="https://www.facebook.com/" target="_blank"
             className="rounded-md bg-[#1E2B26] w-8 h-8 flex items-center justify-center hover:bg-[#4C8C74] transition-colors"
           >
             <svg
@@ -92,7 +92,7 @@ const FooterMobile = () => {
 
           {/* Instagram */}
           <a
-            href="#"
+            href="https://www.instagram.com/" target="_blank"
             className="rounded-md bg-[#1E2B26] w-8 h-8 flex items-center justify-center hover:bg-[#4C8C74] transition-colors"
           >
             <svg
@@ -119,7 +119,7 @@ const FooterMobile = () => {
 
           {/* TikTok */}
           <a
-            href="#"
+            href="https://www.tiktok.com/" target="_blank"
             className="rounded-md bg-[#1E2B26] w-8 h-8 flex items-center justify-center hover:bg-[#4C8C74] transition-colors"
           >
             <svg

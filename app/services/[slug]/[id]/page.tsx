@@ -6,7 +6,7 @@ import WhyChoose from "../../components/WhyChoose";
 import OurProcess from "../../components/OurProcess";
 import Portfolio from "../../components/Portfolio";
 import PricingPlan from "../../components/PricingPlan";
-import CustomPlan from "../../components/CustomPlan";
+import CustomPlan from "../../../Home/components/CustomPlan";
 import { Testimonials } from "../../components/Testimonials";
 import FAQ from "../../components/FAQ";
 import ContactUs from "../../components/ContactUs";

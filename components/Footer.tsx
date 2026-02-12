@@ -132,7 +132,7 @@ const Footer = () => {
                     </svg>
                   </div>
                   <a
-                    href="#"
+                    href="https://www.facebook.com/" target="_blank" 
                     className="font-extralight hover:text-[#4C8C74] transition-colors"
                   >
                     Facebook
@@ -163,7 +163,7 @@ const Footer = () => {
                     </svg>
                   </div>
                   <a
-                    href="#"
+                    href="https://www.instagram.com/" target="_blank" 
                     className="font-extralight hover:text-[#4C8C74] transition-colors"
                   >
                     Instagram
@@ -186,7 +186,7 @@ const Footer = () => {
                     </svg>
                   </div>
                   <a
-                    href="#"
+                    href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer"
                     className="font-extralight hover:text-[#4C8C74] transition-colors"
                   >
                     Tiktok

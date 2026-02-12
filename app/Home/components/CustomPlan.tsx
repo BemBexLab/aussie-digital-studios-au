@@ -34,11 +34,11 @@ const CustomPlan = () => {
   return (
     <>
       <CustomPlanMobile />
-      <section className="hidden sm:flex w-full mx-auto my-10 justify-center">
-      <div className="flex flex-col lg:flex-row w-full max-w-7xl gap-4 lg:gap-0">
+      <section className="hidden sm:flex w-full mx-auto my-10 justify-center items-center sm:min-h-[60vh]">
+      <div className="flex flex-col lg:flex-row w-[1100px] gap-2 lg:gap-0 items-center">
         {/* Custom Plan Content */}
         <div
-          className="flex flex-col rounded-xl px-6 lg:px-8 py-8 lg:py-10 w-full lg:w-[60%]"
+          className="flex flex-col rounded-xl px-6 lg:px-6 py-8 lg:py-10 w-full lg:w-[60%]"
           style={isDarkMode ? {
             backgroundImage: `url('/Home/Custom_plans.webp')`,
             backgroundSize: "fill",
@@ -60,7 +60,7 @@ const CustomPlan = () => {
           </div>
           <div className="mt-15 flex flex-row">
             <a
-              href="#"
+              href="/contact"
               className="flex font-light text-sm items-center justify-center gap-1 bg-[#4C8C74] text-white py-2 px-3 rounded-full hover:bg-blue-300 transition-colors group w-fit mr-auto"
             >
               Book a consultation call to create your perfect plan
@@ -100,7 +100,7 @@ const CustomPlan = () => {
         </div>
 
         {/* Image on right side */}
-        <div className="w-full lg:w-[40%] flex justify-center items-center">
+        <div className="w-full lg:w-[40%] flex justify-end items-center">
           <Image
             src="/Home/performance_marketing.webp"
             alt="Custom Plan Illustration"

@@ -442,7 +442,7 @@ export default function PortfolioWall() {
                       }}
                     >
                       <div
-                        className="rounded-xl p-4 overflow-hidden shadow-lg transition-transform duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 flex flex-col"
+                        className="rounded-lg p-4 overflow-hidden shadow-lg transition-transform duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 flex flex-col"
                         style={{
                           borderRadius: "30px",
                           background: "transparent",
@@ -500,8 +500,8 @@ export default function PortfolioWall() {
                               alt={title}
                               className={
                                 isFlexible
-                                  ? "w-auto h-auto object-contain transform transition-transform duration-500 ease-out group-hover:scale-105 will-change-transform rounded-3xl"
-                                  : "w-full h-full object-cover transform transition-transform duration-500 ease-out group-hover:scale-105 will-change-transform rounded-3xl"
+                                  ? "w-auto h-auto object-contain transform transition-transform duration-500 ease-out group-hover:scale-105 will-change-transform rounded-xl"
+                                  : "w-full h-full object-cover transform transition-transform duration-500 ease-out group-hover:scale-105 will-change-transform rounded-xl"
                               }
                               onError={(e) => {
                                 const target = e.currentTarget as HTMLImageElement;
@@ -596,12 +596,12 @@ export default function PortfolioWall() {
           Stunning websites
         </h2>
 
-        <div className="flex gap-2 mb-6 overflow-x-auto pb-2 scrollbar-hide">
+        <div className="flex flex-wrap justify-center gap-2 mb-6 pb-2">
           {categories.map((cat, i) => (
             <button
               key={i}
               onClick={() => setSelectedCategory(cat)}
-              className={`px-4 py-2 rounded-[8px] border cursor-pointer text-sm transition whitespace-nowrap ${
+              className={`px-4 py-2 rounded-[8px] border cursor-pointer text-sm transition ${
                 selectedCategory === cat
                   ? "border-yellow-400 text-yellow-400 bg-yellow-400/10"
                   : "text-gray-400 border-gray-600 hover:border-yellow-400 hover:text-yellow-400"
