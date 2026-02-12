@@ -1,19 +1,40 @@
+"use client";
+
 import React from "react";
+import { motion } from "motion/react";
 
 const EasyExperience = () => {
   return (
     <section className="hidden md:block my-25">
       <div className="w-full">
-        <p className="text-xl font-normal text-center text-[#4C8C74]">
+        <motion.p
+          className="text-xl font-normal text-center text-[#4C8C74]"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.5 }}
+        >
           Easy Experience
-        </p>
-        <h2 className="text-4xl font-semibold text-center text-white mt-2">
-          What’s Included in Your<br></br>Custom Website Plan
-        </h2>
+        </motion.p>
+        <motion.h2
+          className="text-4xl font-semibold text-center text-white mt-2"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.5 }}
+        >
+          What's Included in Your<br></br>Custom Website Plan
+        </motion.h2>
         <div className="mt-15 flex flex-wrap xl:flex-row mx-20 xl:mx-20">
           <div className="w-full h-auto xl:h-[300px] flex flex-col xl:flex-row justify-center gap-20 xl:gap-20">
             {/* First Column */}
-            <div className="flex flex-col w-full xl:w-[250px] h-auto xl:h-full justify-center items-center mb-8 xl:mb-0">
+            <motion.div
+              className="flex flex-col w-full xl:w-[250px] h-auto xl:h-full justify-center items-center mb-8 xl:mb-0"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
               <div className="rounded-full h-20 w-20 items-center justify-center border">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -64,13 +85,19 @@ const EasyExperience = () => {
                 templates, no limitations, just thoughtful design focused on
                 performance.
               </p>
-            </div>
+            </motion.div>
 
             {/* Divider */}
             <div className="hidden xl:block border-r border-gray-400 h-full"></div>
 
             {/* Second Column */}
-            <div className="flex flex-col w-full xl:w-[250px] items-center h-auto xl:h-full mb-8 xl:mb-0">
+            <motion.div
+              className="flex flex-col w-full xl:w-[250px] items-center h-auto xl:h-full mb-8 xl:mb-0"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
               <div className="rounded-full h-20 w-20 border">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -121,13 +148,19 @@ const EasyExperience = () => {
                 all devices, with clean structure and SEO-ready foundations
                 designed to support visibility and growth.
               </p>
-            </div>
+            </motion.div>
 
             {/* Divider */}
             <div className="hidden xl:block border-r border-gray-400 h-full"></div>
 
             {/* Third Column */}
-            <div className="flex flex-col w-full xl:w-[250px] items-center h-auto xl:h-full mb-8 xl:mb-0">
+            <motion.div
+              className="flex flex-col w-full xl:w-[250px] items-center h-auto xl:h-full mb-8 xl:mb-0"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
               <div className="rounded-full h-20 w-20  border">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -182,7 +215,7 @@ const EasyExperience = () => {
                 performance improvements, we ensure your website stays fast,
                 secure and running smoothly.
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

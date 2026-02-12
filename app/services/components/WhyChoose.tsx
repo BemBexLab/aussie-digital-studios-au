@@ -1,8 +1,30 @@
-import React from "react";
+"use client";
+
+import React, { useState, useEffect, useRef } from "react";
+import { motion } from "motion/react";
 import Image from "next/image";
 import WhyChooseMobile from "./WhyChooseMobile";
 
 const WhyChoose = () => {
+  const contentRef = useRef<HTMLDivElement | null>(null);
+  const [isContentInView, setIsContentInView] = useState(false);
+
+  useEffect(() => {
+    const el = contentRef.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsContentInView(true);
+          obs.unobserve(el);
+        }
+      },
+      { threshold: 0.15 }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
+
   return (
     <>
       <WhyChooseMobile />
@@ -20,11 +42,21 @@ const WhyChoose = () => {
           </div>
 
           {/* Text Content Section */}
-          <div className="w-full lg:w-1/2 flex flex-col">
-            <h2 className="text-4xl lg:text-5xl font-bold text-white leading-tight">
+          <div ref={contentRef} className="w-full lg:w-1/2 flex flex-col">
+            <motion.h2
+              className="text-4xl lg:text-5xl font-bold text-white leading-tight"
+              initial={{ opacity: 0, y: 10 }}
+              animate={isContentInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+              transition={{ duration: 0.6 }}
+            >
               Why Choose Aussie Digital Studios
-            </h2>
-            <div className="mt-6 space-y-4">
+            </motion.h2>
+            <motion.div
+              className="mt-6 space-y-4"
+              initial={{ opacity: 0, y: 8 }}
+              animate={isContentInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 8 }}
+              transition={{ duration: 0.6, delay: 0.05 }}
+            >
               <p className="text-base text-gray-300 leading-relaxed">
                 At AussieDigitalStudios, we deliver more than just websites. We
                 create complete digital experiences built around strategy, design
@@ -40,7 +72,7 @@ const WhyChoose = () => {
                 just need an online presence. It needs a digital foundation that
                 works, and that's exactly what we build.
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>

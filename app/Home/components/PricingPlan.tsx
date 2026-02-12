@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { motion } from "motion/react";
 // Mobile layout merged below; removed separate PricingPlanMobile file
 
 const cardData = [
@@ -389,19 +390,48 @@ const cardData = [
 ];
 
 const PricingPlan = () => {
+  const wrapperRef = React.useRef<HTMLDivElement | null>(null);
+  const [isInView, setIsInView] = React.useState(false);
+
+  React.useEffect(() => {
+    const el = wrapperRef.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      (entries) => {
+        const e = entries[0];
+        if (e?.isIntersecting) {
+          setIsInView(true);
+          obs.disconnect();
+        }
+      },
+      { threshold: 0.2 }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
   const [selectedService, setSelectedService] = React.useState("Logo");
   const selectedData = cardData.find(item => item.service === selectedService);
 
   return (
-    <>
+    <div ref={wrapperRef}>
       {/* Mobile view (hidden on sm and up) */}
       <div className="sm:hidden text-white mt-10 py-0 px-4">
-        <p className="text-center my-4 text-lg font-medium text-[#4C8C74]">
+        <motion.p
+          className="text-center my-4 text-lg font-medium text-[#4C8C74]"
+          initial={{ opacity: 0, y: 8 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 8 }}
+          transition={{ duration: 0.6 }}
+        >
           Pricing Plans
-        </p>
-        <h1 className="text-center text-2xl font-semibold text-white mb-6">
+        </motion.p>
+        <motion.h1
+          className="text-center text-2xl font-semibold text-white mb-6"
+          initial={{ opacity: 0, y: 10 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+          transition={{ duration: 0.6, delay: 0.05 }}
+        >
           Our Packages
-        </h1>
+        </motion.h1>
 
         {/* Service Buttons Grid */}
         <div className="grid grid-cols-2 gap-2 mb-6">
@@ -493,12 +523,22 @@ const PricingPlan = () => {
       {/* Tablet and Desktop view */}
       <div className="hidden sm:block text-white py-12 sm:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 justify-center">
-          <p className="text-center my-[7px] text-lg sm:text-xl font-medium text-[#4C8C74]">
+          <motion.p
+            className="text-center my-[7px] text-lg sm:text-xl font-medium text-[#4C8C74]"
+            initial={{ opacity: 0, y: 8 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 8 }}
+            transition={{ duration: 0.6 }}
+          >
             Pricing Plans
-          </p>
-          <h1 className="text-center text-3xl sm:text-4xl font-semibold text-white mb-5 sm:mb-8">
+          </motion.p>
+          <motion.h1
+            className="text-center text-3xl sm:text-4xl font-semibold text-white mb-5 sm:mb-8"
+            initial={{ opacity: 0, y: 10 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+            transition={{ duration: 0.6, delay: 0.05 }}
+          >
             Our Packages
-          </h1>
+          </motion.h1>
 
           {/* Service Buttons - Responsive */}
           <div className="flex flex-row gap-2 sm:gap-4 justify-center flex-wrap mb-8">
@@ -604,7 +644,7 @@ const PricingPlan = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

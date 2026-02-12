@@ -7,7 +7,7 @@ import OurProcess from "../../components/OurProcess";
 import Portfolio from "../../components/Portfolio";
 import PricingPlan from "../../components/PricingPlan";
 import CustomPlan from "../../../Home/components/CustomPlan";
-import { Testimonials } from "../../components/Testimonials";
+import { Testimonials } from "../../../Home/components/Testimonials";
 import FAQ from "../../components/FAQ";
 import ContactUs from "../../components/ContactUs";
 import EasyExperience from "../../components/EasyExperience";

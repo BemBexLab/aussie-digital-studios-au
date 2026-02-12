@@ -1,9 +1,12 @@
 "use client";
 
 import React from "react";
+import { motion } from "motion/react";
 import Image from "next/image";
+import { resolveViewport } from "next/dist/lib/metadata/resolve-metadata";
 
 type CardData = {
+  review: string;
   image: string;
   name: string;
   handle: string;
@@ -12,6 +15,8 @@ type CardData = {
 
 const Testimonials = () => {
   const [isPaused, setIsPaused] = React.useState(false);
+  const headingRef = React.useRef<HTMLDivElement | null>(null);
+  const [isHeadingInView, setIsHeadingInView] = React.useState(false);
   const cardsData = [
     {
       image:
@@ -19,6 +24,7 @@ const Testimonials = () => {
       name: "Briar Martin",
       handle: "@neilstellar",
       date: "April 20, 2025",
+      review: "Aussie Digital Studios's design work is phenomenal. They took our vision and turned it into a stunning reality. Our website traffic has doubled since the redesign!"
     },
     {
       image:
@@ -26,6 +32,7 @@ const Testimonials = () => {
       name: "Avery Johnson",
       handle: "@averywrites",
       date: "May 10, 2025",
+      review: "Working with Aussie Digital Studios was a game-changer for our brand. Their team is creative, responsive, and truly cares about delivering results. Highly recommend!"
     },
     {
       image:
@@ -33,6 +40,7 @@ const Testimonials = () => {
       name: "Jordan Lee",
       handle: "@jordantalks",
       date: "June 5, 2025",
+      review: "Aussie Digital Studios exceeded our expectations in every way. Their strategic approach to branding and digital marketing has significantly boosted our online presence and sales."
     },
     {
       image:
@@ -40,12 +48,13 @@ const Testimonials = () => {
       name: "Avery Johnson",
       handle: "@averywrites",
       date: "May 10, 2025",
+      review: "Working with Aussie Digital Studios was a game-changer for our brand. Their team is creative, responsive, and truly cares about delivering results. Highly recommend!"
     },
   ];
 
   const CreateCard = ({ card }: { card: CardData }) => (
     <div
-      className="p-4 rounded-xl mx-2 shadow-lg hover:shadow-xl transition-all duration-200 w-[350px] h-[180px] shrink-0 bg-[#202020] text-white border border-gray-800"
+      className="p-4 rounded-xl mx-2 shadow-lg hover:shadow-xl transition-all duration-200 w-[350px] min-h-[180px] shrink-0 bg-[#202020] text-white border border-gray-800"
       data-testimonial-card
     >
       <div className="flex gap-2">
@@ -86,8 +95,8 @@ const Testimonials = () => {
           {/* <span className="text-xs text-gray-400">{card.handle}</span> */}
         </div>
       </div>
-      <p className="text-sm py-4 text-gray-300">
-        Radiant made undercutting all of our competitors an absolute breeze.
+      <p className="text-sm text-gray-300 mt-2 mb-3 break-words whitespace-normal">
+        {card.review}
       </p>
       <div className="flex items-center justify-between text-gray-500 text-xs">
         <div className="flex items-center gap-1">
@@ -102,15 +111,41 @@ const Testimonials = () => {
     </div>
   );
 
+  React.useEffect(() => {
+    const el = headingRef.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsHeadingInView(true);
+          obs.disconnect();
+        }
+      },
+      { threshold: 0.2 }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
+
   return (
     <div className="relative py-8">
-      <div className="flex flex-col my-8">
-        <p className="text-sm text-[#4C8C74] font-semibold text-center">
+      <div ref={headingRef} className="flex flex-col my-8">
+        <motion.p
+          className="text-sm text-[#4C8C74] font-semibold text-center"
+          initial={{ opacity: 0, y: 8 }}
+          animate={isHeadingInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 8 }}
+          transition={{ duration: 0.6 }}
+        >
           Testimonial
-        </p>
-        <p className="text-center text-4xl font-semibold text-white mt-1">
+        </motion.p>
+        <motion.p
+          className="text-center text-4xl font-semibold text-white mt-1"
+          initial={{ opacity: 0, y: 10 }}
+          animate={isHeadingInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+          transition={{ duration: 0.6, delay: 0.05 }}
+        >
           What Client Say About us
-        </p>
+        </motion.p>
       </div>
       <style>{`
             @keyframes marqueeScroll {
@@ -131,9 +166,11 @@ const Testimonials = () => {
             }
         `}</style>
 
+      {/* observe headings and trigger animation when visible (handled in hook above) */}
+
       <div className="marquee-row w-full mx-auto overflow-hidden relative" onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
         <div className="absolute left-0 top-0 h-full w-10 z-10 pointer-events-none bg-gradient-to-r from-transparent to-transparent"></div>
-        <div className={`marquee-inner flex transform-gpu min-w-[200%] py-4 gap-0 ${isPaused ? 'paused' : ''}`}>
+        <div className={`marquee-inner flex items-start transform-gpu min-w-[200%] py-4 gap-0 ${isPaused ? 'paused' : ''}`}>
           {[...cardsData, ...cardsData].map((card, index) => (
             <CreateCard key={index} card={card} />
           ))}
@@ -143,7 +180,7 @@ const Testimonials = () => {
 
       <div className="marquee-row w-full mx-auto overflow-hidden relative -mt-2" onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
         <div className="absolute left-0 top-0 h-full w-10 z-10 pointer-events-none bg-gradient-to-r from-transparent to-transparent"></div>
-        <div className={`marquee-inner marquee-reverse flex transform-gpu min-w-[200%] py-4 gap-0 ${isPaused ? 'paused' : ''}`}>
+        <div className={`marquee-inner marquee-reverse flex items-start transform-gpu min-w-[200%] py-4 gap-0 ${isPaused ? 'paused' : ''}`}>
           {[...cardsData, ...cardsData].map((card, index) => (
             <CreateCard key={index} card={card} />
           ))}

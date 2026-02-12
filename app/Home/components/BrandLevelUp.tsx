@@ -1,14 +1,35 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import BrandLevelUpMobile from "./BrandLevelUpMobile";
+import { motion } from "motion/react";
 
 const BrandLevelUp = () => {
   const router = useRouter();
+  const wrapperRef = useRef<HTMLDivElement | null>(null);
+  const [isInView, setIsInView] = useState(false);
+  useEffect(() => {
+    const target = wrapperRef.current;
+    if (!target) return;
+
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          obs.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.15 }
+    );
+
+    obs.observe(target);
+    return () => obs.disconnect();
+  }, []);
+
   return (
-    <>
+    <div ref={wrapperRef}>
       <BrandLevelUpMobile />
       <div
         className="hidden sm:flex flex-col bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white h-90 bg-cover bg-center justify-center items-center"
@@ -18,10 +39,15 @@ const BrandLevelUp = () => {
         <div className="flex flex-col lg:flex-row w-full max-w-[1200px] flex-wrap">
           {/* Text Part */}
           <div className="w-full lg:w-[50%] mt-20 mr-10 px-3 md:px-10 py-8 md:py-0 transform translate-y-28">
-            <h1 className="text-5xl sm:text-5xl font-semibold text-white">
+            <motion.h1
+              initial={{ opacity: 0 }}
+              animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+              transition={{ duration: 0.9, ease: "easeInOut" }}
+              className="text-5xl sm:text-5xl font-semibold text-white"
+            >
               Ready to <span className="text-yellow-400">level up</span> your
               brand?
-            </h1>
+            </motion.h1>
             <p className="mt-4 text-lg sm:text-xl">
               Let's create something modern, simple, and effective.
             </p>
@@ -163,7 +189,7 @@ const BrandLevelUp = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

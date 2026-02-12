@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { motion } from "motion/react";
 import PricingPlanMobile from "./PricingPlanMobile";
 
 type PricingPlanProps = {
@@ -72,24 +73,40 @@ const PricingPlan = ({ service }: PricingPlanProps) => {
         <div className="max-w-7xl mx-auto px-4">
           {/* Header */}
           <div className="text-center mb-12">
-            <p className="text-xl font-medium text-[#4C8C74] mb-2">
+            <motion.p
+              className="text-xl font-medium text-[#4C8C74] mb-2"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 1.2, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
               Pricing Plans
-            </p>
-            <h1 className="text-4xl font-semibold text-white">
+            </motion.p>
+            <motion.h1
+              className="text-4xl font-semibold text-white"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
               Our Packages
-            </h1>
+            </motion.h1>
           </div>
 
           {/* Pricing Cards - Single Row */}
           <div className="flex flex-wrap lg:flex-nowrap justify-center gap-6">
             {cardData.map((card, index) => (
-              <div
+              <motion.div
                 key={index}
                 className="bg-cover bg-center rounded-2xl p-8 flex flex-col w-full lg:w-1/3 lg:max-w-[400px]"
                 style={{
                   backgroundImage: "url('/Home/Frame_161.svg')",
                   minHeight: "550px",
                 }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: index * 0.15, ease: "easeOut" }}
+                viewport={{ once: true, amount: 0.5 }}
               >
                 {/* Package Title */}
                 <h2 className="text-lg text-yellow-400 font-medium mb-6">
@@ -165,7 +182,7 @@ const PricingPlan = ({ service }: PricingPlanProps) => {
                     </svg>
                   </button>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

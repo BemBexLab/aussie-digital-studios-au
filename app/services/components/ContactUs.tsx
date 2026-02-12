@@ -2,10 +2,12 @@
 
 import { Button, TextField } from "@mui/material";
 import React, { useState, useEffect } from "react";
+import { motion } from "motion/react";
 import ContactUsMobile from "./ContactUsMobile";
 import { sendContactEmail } from "@/lib/emailService";
 
 const ContactUs = () => {
+  const [isContentInView, setIsContentInView] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [isClient, setIsClient] = useState(false);
   const [formData, setFormData] = useState({
@@ -121,15 +123,36 @@ const ContactUs = () => {
           className="w-[550px] h-[390px] rounded-2xl"
         >
           <div className="flex flex-col">
-            <p className="text-xl text-[#4C8C74] font-semibold">Contact Us</p>
-            <h2 className="font-semibold text-white text-4xl mt-2 uppercase">
+            <motion.p
+              className="text-xl text-[#4C8C74] font-semibold"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 1.2, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
+              Contact Us
+            </motion.p>
+            <motion.h2
+              className="font-semibold text-white text-4xl mt-2 uppercase"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
               Looking For Best Design &<br></br> Development Agency In Uk?
-            </h2>
-            <p className="text-md text-[#AAAAAA] mt-5" data-text-sm-light>
+            </motion.h2>
+            <motion.p
+              className="text-md text-[#AAAAAA] mt-5"
+              data-text-sm-light
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 1.2, delay: 0.4, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
               Ready to bring your business idea to life? Let our experts work for
               you and create a<br></br> custom website that echoes your brand and
               engages your audience.
-            </p>
+            </motion.p>
           </div>
         </div>
 

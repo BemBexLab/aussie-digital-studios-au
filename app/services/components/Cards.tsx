@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import { motion } from "motion/react";
 import CardsMobile from "./CardsMobile";
 
 type CardsProps = {
@@ -63,7 +64,15 @@ const Cards = ({ service }: CardsProps) => {
         }}
       >
         {/* Title */}
-        <h2 className="text-4xl text-center mb-12">Strategic Approach</h2>
+        <motion.h2
+          className="text-4xl text-center mb-12"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.5 }}
+        >
+          Strategic Approach
+        </motion.h2>
 
         {/* Geometric Shape */}
         <div className="hidden md:block absolute top-0 right-0 translate-y-0 -translate-x-32 z-10 pointer-events-none">
@@ -81,7 +90,7 @@ const Cards = ({ service }: CardsProps) => {
           {/* First Row - 4 Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
             {allCards.slice(0, 4).map((card, index) => (
-              <div
+              <motion.div
                 key={`${card.title}-${index}`}
                 className="group relative rounded-2xl border border-white/10 p-6 transition overflow-hidden min-h-[220px] flex flex-col"
                 style={{
@@ -90,6 +99,10 @@ const Cards = ({ service }: CardsProps) => {
                   backgroundPosition: "center",
                   backdropFilter: "blur(10px)",
                 }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: index * 0.1, ease: "easeOut" }}
+                viewport={{ once: true, amount: 0.5 }}
               >
                 <div className="flex flex-col h-full">
                   <div className="mb-4">{card.svg}</div>
@@ -106,14 +119,14 @@ const Cards = ({ service }: CardsProps) => {
                     </p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
 
           {/* Second Row - 3 Cards (Centered) */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
             {allCards.slice(4).map((card, index) => (
-              <div
+              <motion.div
                 key={`${card.title}-${index + 4}`}
                 className="group relative rounded-2xl border border-white/10 p-6 transition overflow-hidden min-h-[220px] flex flex-col"
                 style={{
@@ -122,6 +135,10 @@ const Cards = ({ service }: CardsProps) => {
                   backgroundPosition: "center",
                   backdropFilter: "blur(10px)",
                 }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: index * 0.1, ease: "easeOut" }}
+                viewport={{ once: true, amount: 0.5 }}
               >
                 <div className="flex flex-col h-full">
                   <div className="mb-4">{card.svg}</div>
@@ -138,7 +155,7 @@ const Cards = ({ service }: CardsProps) => {
                     </p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

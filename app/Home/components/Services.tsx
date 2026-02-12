@@ -1,9 +1,10 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { BsArrowUpRightCircle } from "react-icons/bs";
 import Image from "next/image";
+import { motion } from "motion/react";
 import ServicesMobile from "./ServicesMobile";
 
 const services = [
@@ -209,11 +210,36 @@ const services = [
 
 const Services = () => {
   const router = useRouter();
+  const [isInView, setIsInView] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      {
+        threshold: 0.2,
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   return (
     <>
       {/* Desktop version - hidden on sm screens */}
       <section
+        ref={sectionRef}
         className="hidden sm:block relative w-full overflow-hidden py-20 services-bg-section"
         data-services-bg
         style={{
@@ -240,12 +266,22 @@ const Services = () => {
         <div className="relative max-w-7xl mx-auto px-4">
           {/* Heading */}
           <div className="text-center mb-16">
-            <p className="text-lg font-medium text-[#4C8C74] mb-3">
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-lg font-medium text-[#4C8C74] mb-3"
+            >
               Our Services
-            </p>
-            <h2 className="text-5xl font-semibold text-white">
+            </motion.p>
+            <motion.h2
+              initial={{ opacity: 0 }}
+              animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="text-5xl font-semibold text-white"
+            >
               What We Do
-            </h2>
+            </motion.h2>
           </div>
 
           {/* Cards Grid - 3 columns, 2 rows */}
@@ -282,14 +318,24 @@ const Services = () => {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-lg font-semibold text-[#F5A623] mb-3 leading-tight">
+                <motion.h3
+                  initial={{ opacity: 0 }}
+                  animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  className="text-lg font-semibold text-[#F5A623] mb-3 leading-tight"
+                >
                   {service.title}
-                </h3>
+                </motion.h3>
 
                 {/* Description */}
-                <p className="text-sm text-gray-300 leading-relaxed">
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  className="text-sm text-gray-300 leading-relaxed"
+                >
                   {service.desc}
-                </p>
+                </motion.p>
               </div>
             ))}
           </div>

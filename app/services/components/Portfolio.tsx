@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import { motion } from "motion/react";
 import PortfolioMobile from "./PortfolioMobile";
 
 type PortfolioProps = {
@@ -65,10 +66,24 @@ const Portfolio = ({ service }: PortfolioProps) => {
     }}>
       {/* Heading */}
       <div className="text-center mt-10 mb-8 px-4">
-        <p className="text-xl font-medium text-[#4C8C74] mb-2">Our Portfolio</p>
-        <h2 className="text-4xl md:text-4xl font-semibold text-white">
+        <motion.p
+          className="text-xl font-medium text-[#4C8C74] mb-2"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.5 }}
+        >
+          Our Portfolio
+        </motion.p>
+        <motion.h2
+          className="text-4xl md:text-4xl font-semibold text-white"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.5 }}
+        >
           Real Websites, Not Just Mockups
-        </h2>
+        </motion.h2>
 
         {/* Cards slider */}
         <style>{`

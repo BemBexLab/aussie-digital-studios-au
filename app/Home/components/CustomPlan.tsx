@@ -34,7 +34,7 @@ const CustomPlan = () => {
   return (
     <>
       <CustomPlanMobile />
-      <section className="hidden sm:flex w-full mx-auto my-10 justify-center items-center sm:min-h-[60vh]">
+      <section className="hidden sm:flex w-full mx-auto justify-center items-center sm:min-h-[60vh]">
       <div className="flex flex-col lg:flex-row w-[1100px] gap-2 lg:gap-0 items-center">
         {/* Custom Plan Content */}
         <div

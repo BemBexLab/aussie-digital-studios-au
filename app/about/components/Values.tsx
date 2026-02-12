@@ -1,11 +1,16 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { motion } from "motion/react";
 import ValuesMobile from "./ValuesMobile";
 
 const Values = () => {
   const [isLight, setIsLight] = useState(false);
+  const mobileHeadingRef = useRef<HTMLDivElement | null>(null);
+  const desktopHeadingRef = useRef<HTMLDivElement | null>(null);
+  const [isMobileHeadingInView, setIsMobileHeadingInView] = useState(false);
+  const [isDesktopHeadingInView, setIsDesktopHeadingInView] = useState(false);
 
   useEffect(() => {
     // Check initial theme
@@ -22,6 +27,38 @@ const Values = () => {
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    const el = mobileHeadingRef.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsMobileHeadingInView(true);
+          obs.unobserve(el);
+        }
+      },
+      { threshold: 0.15 }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const el = desktopHeadingRef.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsDesktopHeadingInView(true);
+          obs.unobserve(el);
+        }
+      },
+      { threshold: 0.15 }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
+
   const backgroundImage = isLight
     ? "url(/About/Frame_163_Light.svg)"
     : "url(/About/values_card_dark.webp)";
@@ -35,9 +72,23 @@ const Values = () => {
       {/* Left Content */}
       <div className="flex flex-col w-full">
         {/* Responsive (sm to md): show cards and image below */}
-        <div className="md:hidden px-4">
-          <p className="text-[#4C8C74] my-20 text-lg font-medium mb-4">Our Values</p>
-          <h2 className="text-white text-5xl mb-5 font-bold">Our Core Values</h2>
+        <div ref={mobileHeadingRef} className="md:hidden px-4">
+          <motion.p
+            className="text-[#4C8C74] my-20 text-lg font-medium mb-4"
+            initial={{ opacity: 0, y: 8 }}
+            animate={isMobileHeadingInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 8 }}
+            transition={{ duration: 0.6 }}
+          >
+            Our Values
+          </motion.p>
+          <motion.h2
+            className="text-white text-5xl mb-5 font-bold"
+            initial={{ opacity: 0, y: 10 }}
+            animate={isMobileHeadingInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+            transition={{ duration: 0.6, delay: 0.05 }}
+          >
+            Our Core Values
+          </motion.h2>
 
           <div className="flex flex-col gap-4">
             {/* Card 1 */}
@@ -153,9 +204,23 @@ const Values = () => {
         </div>
 
         {/* Desktop: original layout (unchanged for 1250px+, responsive below) */}
-        <div className="hidden md:block max-w-7xl mx-3">
-          <p className="text-[#4C8C74] my-20 text-lg font-medium mb-4">Our Values</p>
-          <h2 className="text-white text-5xl mb-5 font-bold">Our Core Values</h2>
+        <div ref={desktopHeadingRef} className="hidden md:block max-w-7xl mx-3">
+          <motion.p
+            className="text-[#4C8C74] my-20 text-lg font-medium mb-4"
+            initial={{ opacity: 0, y: 8 }}
+            animate={isDesktopHeadingInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 8 }}
+            transition={{ duration: 0.6 }}
+          >
+            Our Values
+          </motion.p>
+          <motion.h2
+            className="text-white text-5xl mb-5 font-bold"
+            initial={{ opacity: 0, y: 10 }}
+            animate={isDesktopHeadingInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+            transition={{ duration: 0.6, delay: 0.05 }}
+          >
+            Our Core Values
+          </motion.h2>
 
           {/* First Row */}
           <div className="flex flex-wrap mt-3 gap-3" style={{ justifyContent: "flex-start" }}>

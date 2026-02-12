@@ -1,10 +1,12 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 
 const AboutUs = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isInView, setIsInView] = useState(false);
+  const componentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const theme = localStorage.getItem("ads_theme");
@@ -23,8 +25,27 @@ const AboutUs = () => {
 
     window.addEventListener("storage", handleThemeChange);
 
+    // Intersection Observer for animation trigger
+    const intersectionObserver = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          // Only observe once, then stop
+          intersectionObserver.unobserve(entry.target);
+        }
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+
+    if (componentRef.current) {
+      intersectionObserver.observe(componentRef.current);
+    }
+
     return () => {
       observer.disconnect();
+      intersectionObserver.disconnect();
       window.removeEventListener("storage", handleThemeChange);
     };
   }, []);
@@ -56,11 +77,15 @@ const AboutUs = () => {
           <span
             key={`${wordIdx}-${charIdx}`}
             className={`${
-              isInHighlight ? "animate-colorShiftYellow" : "animate-colorShift"
+              isInView
+                ? isInHighlight
+                  ? "animate-colorShiftYellow"
+                  : "animate-colorShift"
+                : ""
             }`}
             style={{
               color: "#989998",
-              animationDelay: `${charIndex * 0.05}s`,
+              animationDelay: isInView ? `${charIndex * 0.05}s` : "0s",
             }}
           >
             {char}
@@ -86,7 +111,10 @@ const AboutUs = () => {
     return elements;
   };
   return (
-    <div className="mb-0 pb-0 w-full flex justify-center mt-5 mb-25 overflow-hidden">
+    <div
+      ref={componentRef}
+      className="mb-0 pb-0 w-full flex justify-center mt-5 mb-25 overflow-hidden"
+    >
       <style>{`
         @keyframes colorShift {
           0% {

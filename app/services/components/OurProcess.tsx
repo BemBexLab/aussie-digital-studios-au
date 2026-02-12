@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import { motion } from "motion/react";
 import Divider from "./Divider";
 import ProcessCards from "./ProcessCards";
 
@@ -46,11 +47,25 @@ const OurProcess = ({ service }: OurProcessProps) => {
       <div className="flex flex-col mt-30 justify-center max-w-7xl w-full px-4">
         {/* Heading */}
         <div className="text-center mb-16">
-          <p className="text-xl font-medium text-[#4C8C74] mb-2">Our Process</p>
-          <h2 className="text-4xl md:text-4xl font-semibold text-white">
+          <motion.p
+            className="text-xl font-medium text-[#4C8C74] mb-2"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.5 }}
+          >
+            Our Process
+          </motion.p>
+          <motion.h2
+            className="text-4xl md:text-4xl font-semibold text-white"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.5 }}
+          >
             Our Proven 3-Step Process to Grow Your<br /> Brand with Web
             Design and Development
-          </h2>
+          </motion.h2>
         </div>
 
         {/* Divider */}
