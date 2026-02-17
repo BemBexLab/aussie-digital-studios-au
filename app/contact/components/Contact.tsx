@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import { motion } from "motion/react";
 import ContactMobile from "./ContactMobile";
 
 const Contact = () => {
@@ -79,8 +80,22 @@ const Contact = () => {
                 className="opacity-90"
               />
             </div>
-            <h1 className="text-5xl font-bold text-white mb-12">Get In Touch</h1>
-            <form className="space-y-6">
+            <motion.h1
+              className="text-5xl font-bold text-white mb-12"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 1.2, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
+              Get In Touch
+            </motion.h1>
+            <motion.form
+              className="space-y-6"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
               <div className="grid grid-cols-2 gap-6">
                 <input
                   type="text"
@@ -158,7 +173,7 @@ const Contact = () => {
                   </span>
                 </button>
               </div>
-            </form>
+            </motion.form>
           </div>
         </div>
 
@@ -203,8 +218,22 @@ const Contact = () => {
                 className=""
               />
             </div>
-            <h1 className="text-3xl font-bold text-white mb-6 text-center">Get In Touch</h1>
-            <form className="space-y-5">
+            <motion.h1
+              className="text-3xl font-bold text-white mb-6 text-center"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 1.2, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
+              Get In Touch
+            </motion.h1>
+            <motion.form
+              className="space-y-5"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
               <input
                 type="text"
                 placeholder="First Name"
@@ -273,7 +302,7 @@ const Contact = () => {
                   </span>
                 </button>
               </div>
-            </form>
+            </motion.form>
           </div>
         </div>
       </div>

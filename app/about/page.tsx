@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import React from "react";
 import About from "./components/About";
 import Values from "./components/Values";
-import BrandLevelUp from "./components/BrandLevelUp";
+import BrandLevelUp from "../Home/components/BrandLevelUp";
 import Mission from "./components/Mission";
 import Image from "next/image";
 import Hero from "@/components/Hero";

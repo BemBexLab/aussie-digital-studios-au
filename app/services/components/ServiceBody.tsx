@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
+import { motion } from "motion/react";
 import { FiCheckCircle } from "react-icons/fi";
 
 type ServiceBodyProps = {
@@ -36,13 +39,33 @@ const ServiceBody = ({ service }: ServiceBodyProps) => {
               height={100}
               className="absolute top-0 left-0 -translate-y-24 md:-translate-y-72 translate-x-1 md:translate-x-2 pointer-events-none w-16 h-16 md:w-auto md:h-auto"
             />
-            <h2 className="text-2xl mt-5 md:text-3xl font-medium">
+            <motion.h2
+              className="text-2xl mt-5 md:text-3xl font-medium"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 1.2, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
               {service.heading || service.title}
-            </h2>
-            <p className="whitespace-pre-line mt-4 text-[#AAAAAA] text-sm md:text-base" data-text-sm-light>
+            </motion.h2>
+            <motion.p
+              className="whitespace-pre-line mt-4 text-[#AAAAAA] text-sm md:text-base"
+              data-text-sm-light
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
               {service.description}
-            </p>
-            <ul className="mt-4 text-[#AAAAAA] text-sm md:text-base" data-text-sm-light>
+            </motion.p>
+            <motion.ul
+              className="mt-4 text-[#AAAAAA] text-sm md:text-base"
+              data-text-sm-light
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 1.2, delay: 0.4, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
               {service.points.map((point, index) => (
                 <li
                   key={index}
@@ -52,10 +75,17 @@ const ServiceBody = ({ service }: ServiceBodyProps) => {
                   <span>{point}</span>
                 </li>
               ))}
-            </ul>
-            <div className="mt-6 text-[#AAAAAA] text-sm md:text-base" data-text-sm-light>
+            </motion.ul>
+            <motion.div
+              className="mt-6 text-[#AAAAAA] text-sm md:text-base"
+              data-text-sm-light
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 1.2, delay: 0.6, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
               {service.footnote}
-            </div>
+            </motion.div>
           </div>
 
           {/* Image Column */}

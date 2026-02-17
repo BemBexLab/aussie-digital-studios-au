@@ -1,10 +1,10 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
-import arrowUpRight from "@/public/Home/arrow_up_right_circle_white.svg";
 import { BsArrowUpRightCircle } from "react-icons/bs";
 import Image from "next/image";
+import { motion } from "motion/react";
 import ServicesMobile from "./ServicesMobile";
 
 const services = [
@@ -44,7 +44,7 @@ const services = [
         />
       </svg>
     ),
-    route: "services/website-design-and-development",
+    route: "services/web-design-development",
   },
   {
     title: "Logo Design & Branding",
@@ -79,6 +79,7 @@ const services = [
         />
       </svg>
     ),
+    route: "services/logo-design-branding",
   },
   {
     title: "Search Engine Optimization",
@@ -106,6 +107,7 @@ const services = [
         />
       </svg>
     ),
+    route: "services/search-engine-optimization",
   },
   {
     title: "Performance Marketing",
@@ -144,6 +146,7 @@ const services = [
         />
       </svg>
     ),
+    route: "services/performance-marketing",
   },
   {
     title: "Social Media Marketing",
@@ -156,10 +159,11 @@ const services = [
         alt="social media icon"
       />
     ),
+    route: "services/social-media-marketing-management",
   },
   {
     title: "Content Marketing",
-    desc: "Professional, memorable visuals that define your brand and make a strong first impression.",
+    desc: "Smart optimisation that drives steady growth and keeps your brand visible.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -200,17 +204,43 @@ const services = [
         />
       </svg>
     ),
+    route: "services/content-marketing",
   },
 ];
 
 const Services = () => {
   const router = useRouter();
+  const [isInView, setIsInView] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      {
+        threshold: 0.2,
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   return (
     <>
       {/* Desktop version - hidden on sm screens */}
       <section
-        className="hidden sm:block relative w-full overflow-hidden py-18 services-bg-section"
+        ref={sectionRef}
+        className="hidden sm:block relative w-full overflow-hidden py-20 services-bg-section"
         data-services-bg
         style={{
           backgroundImage: "url('/Home/Service.webp')",
@@ -219,67 +249,95 @@ const Services = () => {
           backgroundAttachment: "fixed",
         }}
       >
-        {/* overlay for content readability */}
-        <div className="absolute inset-0 " />
+        {/* Decorative 3D shape - top left */}
+        <div className="absolute top-12 left-12 opacity-40">
+          <Image
+            src="/Geometric_Shape_Silver.png"
+            alt="Decorative Shape"
+            width={120}
+            height={120}
+            className="opacity-60"
+          />
+        </div>
 
-        {/* subtle grid floor */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px] opacity-30" />
+        {/* Grid floor effect */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(76,140,116,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(76,140,116,0.05)_1px,transparent_1px)] bg-[size:50px_50px]" />
 
-        <div className="relative max-w-7xl mx-auto">
+        <div className="relative max-w-7xl mx-auto px-4">
           {/* Heading */}
           <div className="text-center mb-16">
-            <p className="text-xl font-medium text-[#4C8C74] mb-2">
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-lg font-medium text-[#4C8C74] mb-3"
+            >
               Our Services
-            </p>
-            <h2 className="text-4xl md:text-4xl font-semibold text-white">
+            </motion.p>
+            <motion.h2
+              initial={{ opacity: 0 }}
+              animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="text-5xl font-semibold text-white"
+            >
               What We Do
-            </h2>
+            </motion.h2>
           </div>
 
-          <div className="flex justify-center">
-            {/* Cards */}
-            <div className="w-[950px] max-[1250px]:w-full grid grid-cols-3 sm:grid-cols-2 max-[1250px]:grid-cols-1 lg:grid-cols-3 gap-6 justify-center px-4 max-[1250px]:px-0">
-              {services.map((service, i) => (
-                <div
-                  key={i}
-                  className="group relative rounded-2xl w-[290px] max-[1250px]:w-full border border-white/10 p-6 transition overflow-hidden"
-                  data-service-card
-                  style={{
-                    backgroundImage: "url('/Home/card_dark.svg')",
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                    backdropFilter: "blur(10px)",
-                  }}
-                >
-                  <div className="flex flex-row">
-                    {/* icon - fixed: use the icon directly */}
-                    <div className="mb-4">{service.icon}</div>
-
-                    {/* arrow: SVG for dark, react-icon for light mode */}
-                    {service.route ? (
-                      <button
-                        onClick={() => router.push(service.route)}
-                        className="absolute top-4 right-4 mt-2 w-7 h-7 transition arrow-icon cursor-pointer hover:opacity-80"
-                        aria-label={`Navigate to ${service.title}`}
-                      >
-                        <BsArrowUpRightCircle size={28} />
-                      </button>
-                    ) : null}
+          {/* Cards Grid - 3 columns, 2 rows */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {services.map((service, i) => (
+              <div
+                key={i}
+                className="group relative rounded-2xl border border-[#4C8C74]/20 p-6 transition-all duration-300 hover:border-[#4C8C74]/40 hover:shadow-lg hover:shadow-[#4C8C74]/10"
+                data-service-card
+                style={{
+                  backgroundImage: "url('/Home/card_dark.svg')",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  backdropFilter: "blur(10px)",
+                  minHeight: "200px",
+                }}
+              >
+                {/* Icon and Arrow Container */}
+                <div className="flex justify-between items-start mb-4">
+                  <div className="p-3 rounded-lg bg-[#4C8C74]/10 border border-[#4C8C74]/20">
+                    {service.icon}
                   </div>
 
-                  <h3 className="text-sm font-semibold text-yellow-400 mb-2">
-                    {service.title}
-                  </h3>
-
-                  <p
-                    className="text-sm text-[#AAA] leading-relaxed"
-                    data-text-sm-dark-light
-                  >
-                    {service.desc}
-                  </p>
+                  {/* Arrow button */}
+                  {service.route && (
+                    <button
+                      onClick={() => router.push(service.route)}
+                      className="w-8 h-8 flex items-center justify-center rounded-full border border-[#4C8C74]/30 bg-transparent hover:bg-[#4C8C74]/10 transition-all duration-300 hover:scale-110 arrow-icon cursor-pointer"
+                      aria-label={`Navigate to ${service.title}`}
+                    >
+                      <BsArrowUpRightCircle size={20} className="text-white" />
+                    </button>
+                  )}
                 </div>
-              ))}
-            </div>
+
+                {/* Title */}
+                <motion.h3
+                  initial={{ opacity: 0 }}
+                  animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  className="text-lg font-semibold text-[#F5A623] mb-3 leading-tight"
+                >
+                  {service.title}
+                </motion.h3>
+
+                {/* Description */}
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  className="text-sm text-gray-300 leading-relaxed"
+                >
+                  {service.desc}
+                </motion.p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

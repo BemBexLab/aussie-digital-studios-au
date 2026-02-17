@@ -12,7 +12,7 @@ import Portfolio from "../components/Portfolio";
 import { Testimonials } from "../components/Testimonials";
 import ContactUs from "../components/ContactUs";
 import PricingPlan from "../components/PricingPlan";
-import CustomPlan from "../components/CustomPlan";
+import CustomPlan from "../../Home/components/CustomPlan";
 import ServiceBody from "../components/ServiceBody";
 import OurProcess from "../components/OurProcess";
 import { services } from "./data";

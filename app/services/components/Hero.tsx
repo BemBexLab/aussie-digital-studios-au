@@ -1,4 +1,7 @@
-import React from "react";
+"use client";
+
+import React, { useState, useEffect, useRef } from "react";
+import { motion } from "motion/react";
 import ThemeToggle from "@/components/ThemeToggle";
 import HeroMobile from "@/components/HeroMobile";
 
@@ -7,6 +10,25 @@ type HeroProps = {
 };
 
 const Hero = ({ H }: HeroProps) => {
+  const headingRef = useRef<HTMLDivElement | null>(null);
+  const [isHeadingInView, setIsHeadingInView] = useState(false);
+
+  useEffect(() => {
+    const el = headingRef.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsHeadingInView(true);
+          obs.unobserve(el);
+        }
+      },
+      { threshold: 0.15 }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
+
   return (
     <>
       {/* Mobile View */}
@@ -45,16 +67,21 @@ const Hero = ({ H }: HeroProps) => {
       </video>
 
       {/* Content Wrapper */}
-      <div className="flex flex-col items-center justify-end w-full relative z-10 px-4 pb-6">
+      <div ref={headingRef} className="flex flex-col items-center justify-end w-full relative z-10 px-4 pb-6">
         {/* ThemeToggle: Stacked above text on small screens, top-right on medium+ */}
         {/* <div className="self-end mb-3 md:mb-0 md:absolute md:top-3 md:right-4 lg:top-4 lg:right-6 translate-y-20">
           <ThemeToggle />
         </div> */}
 
         {/* Heading from props */}
-        <h2 className="text-6xl md:text-7xl lg:text-[120px] font-medium text-white text-center leading-tight uppercase">
+        <motion.h2
+          className="text-6xl md:text-7xl lg:text-[120px] font-medium text-white text-center leading-tight uppercase"
+          initial={{ opacity: 0, y: 10 }}
+          animate={isHeadingInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+          transition={{ duration: 0.6 }}
+        >
           {H}
-        </h2>
+        </motion.h2>
       </div>
     </div>
     </>

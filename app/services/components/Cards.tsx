@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import { motion } from "motion/react";
 import CardsMobile from "./CardsMobile";
 
 type CardsProps = {
@@ -54,18 +55,27 @@ const Cards = ({ service }: CardsProps) => {
 
       {/* Desktop View */}
       <div
-        className="hidden sm:flex flex-col items-center justify-center w-full relative"
+        className="hidden sm:flex flex-col items-center justify-center w-full relative py-16"
         style={{
           backgroundImage: `url("${isDarkMode ? "/Home/CTA.svg" : "/Home/Frame_169_Light.svg"}")`,
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundSize: "cover",
-          minHeight: "auto",
         }}
       >
-        <h2 className="text-4xl text-center mb-10 pt-10">Strategic Approach</h2>
-        {/* Geometric Shape - Only show on md and up (optional but recommended to avoid clutter on mobile) */}
-        <div className="hidden md:block absolute top-0 right-0 translate-y-[px] -translate-x-32 z-10 pointer-events-none">
+        {/* Title */}
+        <motion.h2
+          className="text-4xl text-center mb-12"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.5 }}
+        >
+          Strategic Approach
+        </motion.h2>
+
+        {/* Geometric Shape */}
+        <div className="hidden md:block absolute top-0 right-0 translate-y-0 -translate-x-32 z-10 pointer-events-none">
           <Image
             src="/Geometric_Shape_Silver.png"
             alt="Geometric Shape"
@@ -74,71 +84,80 @@ const Cards = ({ service }: CardsProps) => {
             className="opacity-80"
           />
         </div>
-        {/* Responsive Grid */}
-        <div className="flex flex-wrap justify-center gap-3 w-full px-4 xl:w-fit xl:px-0 pb-10">
-          {/* First 4 cards */}
-          {allCards.slice(0, 4).map((card, index) => (
-            <div
-              key={`${card.title}-${index}`}
-              className="group relative rounded-2xl w-full max-w-[280px] xl:max-w-none border border-white/10 p-6 transition overflow-hidden flex-shrink-0"
-              style={{
-                backgroundImage: `url('${isDarkMode ? '/Services/dark_card_md.webp' : '/Services/light_card_md.webp'}')`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                backdropFilter: "blur(10px)",
-                width: "calc((100% - 12px) / 2)",
-              }}
-            >
-              <div className="flex flex-col">
-                <div key="svg-icon">{card.svg}</div>
-                <div className="mt-4 flex flex-col">
-                  <h2
-                    className={`text-xl ${isDarkMode ? "text-yellow-500" : "text-[#3A6EA5]"}`}
-                  >
-                    {card.title}
-                  </h2>
-                  <p
-                    className={`font-light ${isDarkMode ? "text-white" : "text-[#777777]"}`}
-                  >
-                    {card.desc}
-                  </p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
 
-        <div className="flex flex-wrap justify-center gap-3 w-full px-4 xl:w-fit xl:px-0 pb-10">
-          {/* Remaining cards */}
-          {allCards.slice(4).map((card, index) => (
-            <div
-              key={`${card.title}-${index + 4}`}
-              className="group relative rounded-2xl w-full max-w-[280px] xl:max-w-none border border-white/10 p-6 transition overflow-hidden flex-shrink-0"
-              style={{
-                backgroundImage: `url('${isDarkMode ? '/Services/dark_card_md.webp' : '/Services/light_card_md.webp'}')`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                backdropFilter: "blur(10px)",
-                width: "calc((100% - 8px) / 3)",
-              }}
-            >
-              <div className="flex flex-col">
-                <div key="svg-icon">{card.svg}</div>
-                <div className="mt-4 flex flex-col">
-                  <h2
-                    className={`text-xl ${isDarkMode ? "text-yellow-500" : "text-[#3A6EA5]"}`}
-                  >
-                    {card.title}
-                  </h2>
-                  <p
-                    className={`font-light ${isDarkMode ? "text-white" : "text-[#777777]"}`}
-                  >
-                    {card.desc}
-                  </p>
+        {/* Cards Container */}
+        <div className="w-full max-w-7xl px-4">
+          {/* First Row - 4 Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
+            {allCards.slice(0, 4).map((card, index) => (
+              <motion.div
+                key={`${card.title}-${index}`}
+                className="group relative rounded-2xl border border-white/10 p-6 transition overflow-hidden min-h-[220px] flex flex-col"
+                style={{
+                  backgroundImage: `url('${isDarkMode ? '/Services/dark_card_md.webp' : '/Services/light_card_md.webp'}')`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  backdropFilter: "blur(10px)",
+                }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: index * 0.1, ease: "easeOut" }}
+                viewport={{ once: true, amount: 0.5 }}
+              >
+                <div className="flex flex-col h-full">
+                  <div className="mb-4">{card.svg}</div>
+                  <div className="flex flex-col flex-grow">
+                    <h3
+                      className={`text-xl mb-2 ${isDarkMode ? "text-yellow-500" : "text-[#3A6EA5]"}`}
+                    >
+                      {card.title}
+                    </h3>
+                    <p
+                      className={`font-light text-sm ${isDarkMode ? "text-white" : "text-[#777777]"}`}
+                    >
+                      {card.desc}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </div>
-          ))}
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Second Row - 3 Cards (Centered) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
+            {allCards.slice(4).map((card, index) => (
+              <motion.div
+                key={`${card.title}-${index + 4}`}
+                className="group relative rounded-2xl border border-white/10 p-6 transition overflow-hidden min-h-[220px] flex flex-col"
+                style={{
+                  backgroundImage: `url('${isDarkMode ? '/Services/dark_card_md.webp' : '/Services/light_card_md.webp'}')`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  backdropFilter: "blur(10px)",
+                }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: index * 0.1, ease: "easeOut" }}
+                viewport={{ once: true, amount: 0.5 }}
+              >
+                <div className="flex flex-col h-full">
+                  <div className="mb-4">{card.svg}</div>
+                  <div className="flex flex-col flex-grow">
+                    <h3
+                      className={`text-xl mb-2 ${isDarkMode ? "text-yellow-500" : "text-[#3A6EA5]"}`}
+                    >
+                      {card.title}
+                    </h3>
+                    <p
+                      className={`font-light text-sm ${isDarkMode ? "text-white" : "text-[#777777]"}`}
+                    >
+                      {card.desc}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </>

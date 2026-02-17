@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { motion } from "motion/react";
 import { Poppins } from "next/font/google";
 import FAQMobile from "./FAQMobile";
 
@@ -59,9 +60,15 @@ export default function FAQ({ service }: FAQProps) {
       <div
         className={`${poppins.className} max-w-screen-2xl mx-auto mt-30 flex flex-col items-center justify-center px-4 sm:px-6 md:px-16 lg:px-32`}
       >
-        <h2 className="text-3xl font-semibold text-center">
+        <motion.h2
+          className="text-3xl font-semibold text-center"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.5 }}
+        >
           Looking for answers?
-        </h2>
+        </motion.h2>
 
         <div className="w-full">
           {faqs.map((faq: { question: string; answer: string }, index: number) => {
@@ -70,9 +77,13 @@ export default function FAQ({ service }: FAQProps) {
             const buttonId = `faq-button-${index}`;
 
             return (
-              <div
+              <motion.div
                 key={faq.question}
                 className="w-full max-w-screen-xl mx-auto border-b border-slate-200 py-6 md:py-8" // Slightly less vertical padding on mobile
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: true, amount: 0.5 }}
               >
                 <button
                   id={buttonId}
@@ -112,7 +123,7 @@ export default function FAQ({ service }: FAQProps) {
                 >
                   {faq.answer}
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>

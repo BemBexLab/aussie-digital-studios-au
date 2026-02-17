@@ -1,5 +1,8 @@
+"use client";
+
 import ThemeToggle from "@/components/ThemeToggle";
 import React from "react";
+import { motion } from "motion/react";
 
 const Hero = () => {
   return (
@@ -45,7 +48,9 @@ const Hero = () => {
             impact.
           </div>
           <div className="w-[700px] h-full mt-[50px] block">
-            <img
+            <motion.img
+              animate={{ y: [0, -15, 0] }}
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
               src="/Home/Frame_557.webp"
               alt="Geometric_Shape"
               className="z-30 w-[700px] h-auto transform translate-x-20 -translate-y-10 -top-5 relative"
@@ -59,9 +64,14 @@ const Hero = () => {
             <span className="text-white text-3xl font-semibold transform -translate-x-132">
               Modern
             </span>
-            <span className="text-white text-[160px] leading-[0.95] font-semibold tracking-tight whitespace-nowrap">
+            <motion.span
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 0.5 }}
+              className="text-white text-[160px] leading-[0.95] font-semibold tracking-tight whitespace-nowrap"
+            >
               DIGITAL DESIGN
-            </span>
+            </motion.span>
             <span className="text-white text-2xl font-medium transform -translate-x-40">
               that helps your brand grow.
             </span>
@@ -105,9 +115,14 @@ const Hero = () => {
           <span className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold block">
             Modern
           </span>
-          <span className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight block leading-tight">
+          <motion.span
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight block leading-tight"
+          >
             DIGITAL DESIGN
-          </span>
+          </motion.span>
           <span className="text-white text-base sm:text-lg md:text-xl lg:text-2xl font-medium block">
             that helps your brand grow.
           </span>
@@ -115,7 +130,9 @@ const Hero = () => {
             Clean visuals, smart strategy and creative work that makes an
             impact.
           </p>
-          <img
+          <motion.img
+            animate={{ y: [0, -15, 0] }}
+            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
             src="/Home/Frame_557.webp"
             alt="Geometric_Shape"
             className="z-30 w-full sm:w-[400px] md:w-[550px] h-auto mt-4 sm:mt-6 md:mt-8 mx-auto object-contain"

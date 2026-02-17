@@ -1,8 +1,30 @@
-import React from "react";
+"use client";
+
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import { motion } from "motion/react";
 import MissionMobile from "./MissionMobile";
 
 const Mission = () => {
+  const contentRef = useRef<HTMLDivElement | null>(null);
+  const [isContentInView, setIsContentInView] = useState(false);
+
+  useEffect(() => {
+    const el = contentRef.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsContentInView(true);
+          obs.unobserve(el);
+        }
+      },
+      { threshold: 0.15 }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
+
   return (
     <>
       <div className="sm:hidden">
@@ -52,15 +74,28 @@ const Mission = () => {
 
           <div className="hidden lg:block w-15"></div>
 
-          <div className="flex flex-col w-full lg:w-120 lg:h-72 justify-center px-4 sm:px-6 md:px-10">
-            <h2 className="text-4xl font-bold mb-6">Our Mission</h2>
-            <p className="text-[#AAAAAA] font-normal" data-text-sm-light>
+          <div ref={contentRef} className="flex flex-col w-full lg:w-120 lg:h-72 justify-center px-4 sm:px-6 md:px-10">
+            <motion.h2
+              className="text-4xl font-bold mb-6"
+              initial={{ opacity: 0, y: 10 }}
+              animate={isContentInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+              transition={{ duration: 0.6 }}
+            >
+              Our Mission
+            </motion.h2>
+            <motion.p
+              className="text-[#AAAAAA] font-normal"
+              data-text-sm-light
+              initial={{ opacity: 0, y: 8 }}
+              animate={isContentInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 8 }}
+              transition={{ duration: 0.6, delay: 0.05 }}
+            >
               We exist to create digital solutions that drive growth. By combining
               clean design with smart strategies, we help brands reach their full
               potential online. Every project is an opportunity to bring your
               vision to life and make your brand stronger, more impactful, and
               ready for the future.
-            </p>
+            </motion.p>
           </div>
         </div>
       </div>

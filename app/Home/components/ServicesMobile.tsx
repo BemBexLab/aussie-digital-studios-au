@@ -1,4 +1,7 @@
+"use client";
+
 import React from "react";
+import { useRouter } from "next/navigation";
 import { BsArrowUpRightCircle } from "react-icons/bs";
 import Image from "next/image";
 
@@ -39,6 +42,7 @@ const services = [
         />
       </svg>
     ),
+    route: "services/web-design-development",
   },
   {
     title: "Logo Design & Branding",
@@ -73,6 +77,7 @@ const services = [
         />
       </svg>
     ),
+    route: "services/logo-design-branding",
   },
   {
     title: "Search Engine Optimization",
@@ -100,6 +105,7 @@ const services = [
         />
       </svg>
     ),
+    route: "services/search-engine-optimization",
   },
   {
     title: "Performance Marketing",
@@ -138,6 +144,7 @@ const services = [
         />
       </svg>
     ),
+    route: "services/performance-marketing",
   },
   {
     title: "Social Media Marketing",
@@ -150,10 +157,11 @@ const services = [
         alt="Social Media Marketing"
       />
     ),
+    route: "services/social-media-marketing-management",
   },
   {
-    title: "Content Creation",
-    desc: "Compelling content that engages, educates, and drives conversion.",
+    title: "Content Marketing",
+    desc: "Smart optimisation that drives steady growth and keeps your brand visible.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -163,28 +171,44 @@ const services = [
         fill="none"
       >
         <path
-          d="M4.16666 12.5C4.16666 7.89759 7.89762 4.16663 12.5 4.16663H37.5C42.1024 4.16663 45.8333 7.89759 45.8333 12.5V37.5C45.8333 42.1023 42.1024 45.8333 37.5 45.8333H12.5C7.89762 45.8333 4.16666 42.1023 4.16666 37.5V12.5Z"
-          stroke="#4C8C74"
-          strokeWidth="2"
-        />
-        <path
-          d="M14.5833 20.8333H35.4167"
+          d="M37.8751 16.7486L38.8406 15.7831C40.4403 14.1835 43.0339 14.1835 44.6336 15.7831C46.2333 17.3828 46.2333 19.9764 44.6336 21.5761L43.6681 22.5416M37.8751 16.7486C37.8751 16.7486 37.9958 18.8003 39.8061 20.6106C41.6164 22.421 43.6681 22.5416 43.6681 22.5416M37.8751 16.7486L28.9988 25.6249C28.3976 26.2261 28.097 26.5268 27.8384 26.8582C27.5335 27.2492 27.272 27.6722 27.0587 28.1199C26.8778 28.4993 26.7434 28.9026 26.4745 29.7092L25.6137 32.2917L25.3352 33.1272M43.6681 22.5416L34.7918 31.4179C34.1906 32.0191 33.89 32.3197 33.5585 32.5783C33.1675 32.8832 32.7445 33.1447 32.2969 33.358C31.9174 33.5389 31.5141 33.6733 30.7075 33.9422L28.125 34.803L27.2895 35.0815M27.2895 35.0815L26.454 35.36C26.0571 35.4923 25.6194 35.389 25.3236 35.0931C25.0277 34.7973 24.9244 34.3596 25.0567 33.9627L25.3352 33.1272M27.2895 35.0815L25.3352 33.1272"
           stroke="#4C8C74"
           strokeWidth="2"
           strokeLinecap="round"
         />
         <path
-          d="M14.5833 29.1666H35.4167"
+          d="M16.6667 27.0834H21.875"
+          stroke="#4C8C74"
+          strokeWidth="2"
+          strokeLinecap="round"
+        />
+        <path
+          d="M16.6667 18.75H30.2083"
+          stroke="#4C8C74"
+          strokeWidth="2"
+          strokeLinecap="round"
+        />
+        <path
+          d="M16.6667 35.4166H19.7917"
+          stroke="#4C8C74"
+          strokeWidth="2"
+          strokeLinecap="round"
+        />
+        <path
+          d="M41.3092 6.6074C38.8684 4.16663 34.9401 4.16663 27.0833 4.16663H22.9167C15.0599 4.16663 11.1316 4.16663 8.69078 6.6074C6.25 9.04818 6.25 12.9766 6.25 20.8333V29.1666C6.25 37.0234 6.25 40.9517 8.69078 43.3925C11.1316 45.8333 15.0599 45.8333 22.9167 45.8333H27.0833C34.9401 45.8333 38.8684 45.8333 41.3092 43.3925C43.274 41.4278 43.6572 38.4991 43.7319 33.3333"
           stroke="#4C8C74"
           strokeWidth="2"
           strokeLinecap="round"
         />
       </svg>
     ),
+    route: "services/content-marketing",
   },
 ];
 
 const ServicesMobile = () => {
+  const router = useRouter();
+
   return (
     <section
       className="sm:hidden w-full py-12 px-4 services-bg-section"
@@ -217,7 +241,7 @@ const ServicesMobile = () => {
           {services.map((service, i) => (
             <div
               key={i}
-              className="group relative rounded-lg w-full border border-white/10 p-4 transition overflow-hidden hover:border-white/20"
+              className="group relative rounded-lg w-full border border-white/10 p-4 transition overflow-hidden hover:border-white/20 cursor-pointer"
               data-service-card
               style={{
                 backgroundImage: "url('/Home/card_dark.svg')",
@@ -225,15 +249,25 @@ const ServicesMobile = () => {
                 backgroundPosition: "center",
                 backdropFilter: "blur(10px)",
               }}
+              onClick={() => service.route && router.push(service.route)}
             >
               <div className="flex flex-row justify-between items-start">
                 {/* icon */}
                 <div className="mb-3 flex-shrink-0">{service.icon}</div>
 
                 {/* arrow */}
-                <span className="w-5 h-5 transition arrow-icon flex-shrink-0">
-                  <BsArrowUpRightCircle size={20} />
-                </span>
+                {service.route && (
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      router.push(service.route);
+                    }}
+                    className="w-5 h-5 transition arrow-icon flex-shrink-0 hover:opacity-70"
+                    aria-label={`Navigate to ${service.title}`}
+                  >
+                    <BsArrowUpRightCircle size={20} />
+                  </button>
+                )}
               </div>
 
               <h3 className="text-xs font-semibold text-yellow-400 mb-2 pr-6">

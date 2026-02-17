@@ -2,7 +2,8 @@
 
 import { Button, TextField } from "@mui/material";
 import Image from "next/image";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { motion } from "motion/react";
 import ContactUsSm from "./ContactUsSm";
 import { sendContactEmail } from "@/lib/emailService";
 
@@ -20,6 +21,8 @@ const ContactUs = () => {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
   const [isSuccess, setIsSuccess] = useState(false);
+  const headingRef = useRef<HTMLDivElement | null>(null);
+  const [isHeadingInView, setIsHeadingInView] = useState(false);
 
   useEffect(() => {
     // Initial theme detection
@@ -43,6 +46,22 @@ const ContactUs = () => {
       observer.disconnect();
       window.removeEventListener("storage", handleThemeChange);
     };
+  }, []);
+
+  React.useEffect(() => {
+    const el = headingRef.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsHeadingInView(true);
+          obs.disconnect();
+        }
+      },
+      { threshold: 0.2 }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
   }, []);
 
   const textFieldSx = {
@@ -118,16 +137,34 @@ const ContactUs = () => {
     <>
       <ContactUsSm />
       <section className="hidden sm:block mt-20 justify-center items-center max-[1250px]:px-6 mx-20">
-      <div className="flex flex-col justify-center text-center items-center">
-        <p className="text-xl text-[#4C8C74] font-semibold">Contact Us</p>
-        <h2 className="font-semibold text-center text-white text-4xl mt-2">
+      <div ref={headingRef} className="flex flex-col justify-center text-center items-center">
+        <motion.p
+          className="text-xl text-[#4C8C74] font-semibold"
+          initial={{ opacity: 0, y: 8 }}
+          animate={isHeadingInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 8 }}
+          transition={{ duration: 0.6 }}
+        >
+          Contact Us
+        </motion.p>
+        <motion.h2
+          className="font-semibold text-center text-white text-4xl mt-2"
+          initial={{ opacity: 0, y: 10 }}
+          animate={isHeadingInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+          transition={{ duration: 0.6, delay: 0.05 }}
+        >
           Looking For Best Design &<br></br> Development Agency In Uk?
-        </h2>
-        <p className="text-md text-[#AAAAAA] mt-5" data-text-sm-light>
+        </motion.h2>
+        <motion.p
+          className="text-md text-[#AAAAAA] mt-5"
+          data-text-sm-light
+          initial={{ opacity: 0, y: 8 }}
+          animate={isHeadingInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 8 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+        >
           Ready to bring your business idea to life? Let our experts work for
           you and create a<br></br> custom website that echoes your brand and
           engages your audience.
-        </p>
+        </motion.p>
       </div>
       <div className="flex flex-col max-[1250px]:flex-col flex-row mt-10 gap-6 items-center max-[1250px]:items-stretch">
 
