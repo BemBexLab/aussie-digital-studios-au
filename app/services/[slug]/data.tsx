@@ -6,7 +6,7 @@ export const services = [
     slug: "web-design-development",
     title: "Web Design & Development",
     heading: "Web Development That Accelerates Growth",
-    imageUrl: "/services/Rectangle_52.png",
+    imageUrl: "/services/Rectangle_52.webp",
     description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
     points: [
       "Custom Website Design",

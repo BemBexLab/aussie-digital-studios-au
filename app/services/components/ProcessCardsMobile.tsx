@@ -47,7 +47,7 @@ const ProcessCardsMobile = ({ service }: ProcessCardsMobileProps) => {
             <div
               className="w-full h-[230px] relative my-4 flex flex-col items-start justify-start p-4"
               style={{
-                backgroundImage: `url("${isDarkMode ? '/Home/mini_card_dark.svg' : '/Home/Frame_163_Light.svg'}")`,
+                backgroundImage: `url("${isDarkMode ? '/home/mini_card_dark.svg' : '/home/Frame_163_Light.svg'}")`,
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "center",

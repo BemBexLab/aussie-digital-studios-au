@@ -54,7 +54,7 @@ const CardsMobile = ({ service }: CardsMobileProps) => {
             key={`${card.title}-${index}`}
             className="relative rounded-xl w-full border border-white/10 p-4 transition overflow-hidden"
             style={{
-              backgroundImage: `url('${isDarkMode ? '/Services/dark_card_md.webp' : '/Services/light_card_md.webp'}')`,
+              backgroundImage: `url('${isDarkMode ? '/services/dark_card_md.webp' : '/services/light_card_md.webp'}')`,
               backgroundSize: "cover",
               backgroundPosition: "center",
               backdropFilter: "blur(10px)",

@@ -98,7 +98,7 @@ const PricingPlan = ({ service }: PricingPlanProps) => {
                 key={index}
                 className="bg-cover bg-center rounded-2xl p-8 flex flex-col w-full lg:w-1/3 lg:max-w-[400px]"
                 style={{
-                  backgroundImage: "url('/Home/Frame_161.svg')",
+                  backgroundImage: "url('/home/Frame_161.svg')",
                   minHeight: "550px",
                 }}
                 initial={{ opacity: 0 }}

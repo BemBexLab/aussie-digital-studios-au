@@ -71,7 +71,7 @@ const PricingPlanMobile = ({ service }: PricingPlanMobileProps) => {
               className="bg-cover bg-center rounded-lg p-4 shadow-lg"
               data-pricing-bg
               style={{
-                backgroundImage: "url('/Home/Frame_161.svg')",
+                backgroundImage: "url('/home/Frame_161.svg')",
               }}
             >
               <h2 className="text-sm text-yellow-400 mb-3 font-semibold">

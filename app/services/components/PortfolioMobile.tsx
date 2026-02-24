@@ -52,7 +52,7 @@ const PortfolioMobile = ({ service }: PortfolioMobileProps) => {
 
   return (
     <section className="sm:hidden my-10 py-3" style={{
-        backgroundImage: `url('${isDarkMode ? '/Home/CTA.svg' : '/Home/Frame_167_Light.svg'}')`,
+        backgroundImage: `url('${isDarkMode ? '/home/CTA.svg' : '/home/Frame_167_Light.svg'}')`,
         backgroundColor: "transparent",
         backgroundSize: 'cover',
         backgroundPosition: 'center',

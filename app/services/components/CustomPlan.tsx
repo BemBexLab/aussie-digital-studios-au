@@ -42,7 +42,7 @@ const CustomPlan = () => {
         <div
           className="flex flex-col rounded-xl px-8 py-10 w-full xl:w-auto flex-1"
           style={isDarkMode ? {
-            backgroundImage: `url('/Home/Custom_plans.webp')`,
+            backgroundImage: `url('/home/Custom_plans.webp')`,
             backgroundSize: "fill",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
@@ -103,7 +103,7 @@ const CustomPlan = () => {
 
         {/* Image on right side */}
         <Image
-          src="/Home/performance_marketing.webp"
+          src="/home/performance_marketing.webp"
           alt="Custom Plan Illustration"
           width={370}
           height={400}

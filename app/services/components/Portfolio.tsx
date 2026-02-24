@@ -60,7 +60,7 @@ const Portfolio = ({ service }: PortfolioProps) => {
     <>
       <PortfolioMobile service={service} />
       <section className="hidden sm:block py-10" style={{
-        backgroundImage: `url("${isDarkMode ? '/Home/CTA.svg' : '/Home/Frame_167_Light.svg'}")`,
+        backgroundImage: `url("${isDarkMode ? '/home/CTA.svg' : '/home/Frame_167_Light.svg'}")`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
     }}>

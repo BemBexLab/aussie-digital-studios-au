@@ -39,7 +39,7 @@ const CustomPlanMobile = () => {
         <div
           className="flex flex-col rounded-xl px-6 py-8 w-full"
           style={isDarkMode ? {
-            backgroundImage: `url('/Home/Custom_plans.webp')`,
+            backgroundImage: `url('/home/Custom_plans.webp')`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           } : {
@@ -99,7 +99,7 @@ const CustomPlanMobile = () => {
         {/* Image Below on Mobile */}
         <div className="mt-4 flex justify-center">
           <Image
-            src="/Home/performance_marketing.webp"
+            src="/home/performance_marketing.webp"
             alt="Custom Plan Illustration"
             width={300}
             height={280}

@@ -41,7 +41,7 @@ const Hero = ({ H }: HeroProps) => {
         className="hidden md:flex w-full h-[65vh] lg:h-[80vh] items-center justify-center relative overflow-hidden"
         data-hero-bg-about
         style={{
-          backgroundImage: "url('/About/About Hero BG.png')",
+          backgroundImage: "url('/about/About Hero BG.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",

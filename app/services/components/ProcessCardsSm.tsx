@@ -51,7 +51,7 @@ const ProcessCardsSm = ({ service }: ProcessCardsSmProps) => {
             <div
               className="w-full min-h-[250px] relative my-8 flex flex-col items-start justify-start p-6 rounded-lg"
               style={{
-                backgroundImage: `url("${isDarkMode ? '/Home/mini_card_dark.svg' : '/Home/Frame_163_Light.svg'}")`,
+                backgroundImage: `url("${isDarkMode ? '/home/mini_card_dark.svg' : '/home/Frame_163_Light.svg'}")`,
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "center",
