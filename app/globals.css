@@ -213,21 +213,17 @@ html.light .bg-\[\#151515\] {
 @keyframes loading-screen-rotate {
   0% {
     transform: rotate(0deg);
-    opacity: 1;
-  }
-  70% {
-    opacity: 1;
   }
   100% {
     transform: rotate(-90deg);
-    opacity: 0;
   }
 }
 
 .loading-screen {
   transform-origin: left bottom;
-  animation: loading-screen-rotate 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) 1.0s forwards;
-  will-change: transform, opacity;
+  animation: loading-screen-rotate 1s cubic-bezier(0.2, 0.8, 0.2, 1) 0.15s both;
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
 
