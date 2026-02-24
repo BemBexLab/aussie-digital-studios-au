@@ -14,8 +14,6 @@ type PricingPlanProps = {
     }>;
   };
 };
-
-// const defaultPricingData = [
 //   {
 //     title: "Basic Package",
 //     price: "$99",
@@ -69,7 +67,7 @@ const PricingPlan = ({ service }: PricingPlanProps) => {
       </div>
 
       {/* Desktop View */}
-      <div className="hidden sm:block text-white py-16">
+      <div className="hidden sm:block text-white mt-20 mb-4">
         <div className="max-w-7xl mx-auto px-4">
           {/* Header */}
           <div className="text-center mb-12">
