@@ -8,7 +8,7 @@ export default function Home() {
   const [showLoading, setShowLoading] = useState(true);
 
   useEffect(() => {
-    const fallback = setTimeout(() => setShowLoading(false), 2200);
+    const fallback = setTimeout(() => setShowLoading(false), 3200);
     return () => clearTimeout(fallback);
   }, []);
 
