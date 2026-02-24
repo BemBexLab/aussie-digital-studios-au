@@ -221,7 +221,7 @@ html.light .bg-\[\#151515\] {
 
 .loading-screen {
   transform-origin: left bottom;
-  animation: loading-screen-rotate 2.5s cubic-bezier(0.2, 0.8, 0.2, 1) 0s both;
+  animation: loading-screen-rotate 2.5s cubic-bezier(0.2, 0.8, 0.2, 1) 0.2s both;
   will-change: transform;
   backface-visibility: hidden;
 }
