@@ -57,7 +57,7 @@ const Cards = ({ service }: CardsProps) => {
       <div
         className="hidden sm:flex flex-col items-center justify-center w-full relative py-16"
         style={{
-          backgroundImage: `url("${isDarkMode ? "/home/CTA.svg" : "/home/Frame_169_Light.svg"}")`,
+          backgroundImage: `url("${isDarkMode ? "/Home/CTA.svg" : "/Home/Frame_169_Light.svg"}")`,
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundSize: "cover",
@@ -94,7 +94,7 @@ const Cards = ({ service }: CardsProps) => {
                 key={`${card.title}-${index}`}
                 className="group relative rounded-2xl border border-white/10 p-6 transition overflow-hidden min-h-[220px] flex flex-col"
                 style={{
-                  backgroundImage: `url('${isDarkMode ? '/services/dark_card_md.webp' : '/services/light_card_md.webp'}')`,
+                  backgroundImage: `url('${isDarkMode ? '/Services/dark_card_md.webp' : '/Services/light_card_md.webp'}')`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   backdropFilter: "blur(10px)",
@@ -130,7 +130,7 @@ const Cards = ({ service }: CardsProps) => {
                 key={`${card.title}-${index + 4}`}
                 className="group relative rounded-2xl border border-white/10 p-6 transition overflow-hidden min-h-[220px] flex flex-col"
                 style={{
-                  backgroundImage: `url('${isDarkMode ? '/services/dark_card_md.webp' : '/services/light_card_md.webp'}')`,
+                  backgroundImage: `url('${isDarkMode ? '/Services/dark_card_md.webp' : '/Services/light_card_md.webp'}')`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   backdropFilter: "blur(10px)",

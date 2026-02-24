@@ -14,14 +14,14 @@ type PortfolioMobileProps = {
 };
 
 const defaultPortfolioData = [
-  { id: "1", src: "/services/web_01.svg", translateY: "-translate-y-12" },
-  { id: "2", src: "/services/web_02.svg", translateY: "" },
-  { id: "3", src: "/services/web_02.svg", translateY: "-translate-y-12" },
-  { id: "4", src: "/services/web_03.svg", translateY: "" },
-  { id: "5", src: "/services/web_04.svg", translateY: "-translate-y-12" },
-  { id: "6", src: "/services/web_05.svg", translateY: "" },
-  { id: "7", src: "/services/web_06.svg", translateY: "-translate-y-12" },
-  { id: "8", src: "/services/web_07.svg", translateY: "" },
+  { id: "1", src: "/Services/web_01.svg", translateY: "-translate-y-12" },
+  { id: "2", src: "/Services/web_02.svg", translateY: "" },
+  { id: "3", src: "/Services/web_02.svg", translateY: "-translate-y-12" },
+  { id: "4", src: "/Services/web_03.svg", translateY: "" },
+  { id: "5", src: "/Services/web_04.svg", translateY: "-translate-y-12" },
+  { id: "6", src: "/Services/web_05.svg", translateY: "" },
+  { id: "7", src: "/Services/web_06.svg", translateY: "-translate-y-12" },
+  { id: "8", src: "/Services/web_07.svg", translateY: "" },
 ];
 
 const PortfolioMobile = ({ service }: PortfolioMobileProps) => {
@@ -52,7 +52,7 @@ const PortfolioMobile = ({ service }: PortfolioMobileProps) => {
 
   return (
     <section className="sm:hidden my-10 py-3" style={{
-        backgroundImage: `url('${isDarkMode ? '/home/CTA.svg' : '/home/Frame_167_Light.svg'}')`,
+        backgroundImage: `url('${isDarkMode ? '/Home/CTA.svg' : '/Home/Frame_167_Light.svg'}')`,
         backgroundColor: "transparent",
         backgroundSize: 'cover',
         backgroundPosition: 'center',

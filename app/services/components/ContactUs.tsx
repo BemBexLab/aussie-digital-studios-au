@@ -160,7 +160,7 @@ const ContactUs = () => {
         <div
           className="w-[700px] h-[390px] px-7 py-7 ml-10 rounded-2xl relative"
           style={{
-            backgroundImage: `url('${isDarkMode ? '/home/contactus_dark.svg' : '/home/Frame_163_Light.svg'}')`,
+            backgroundImage: `url('${isDarkMode ? '/Home/contactus_dark.svg' : '/Home/Frame_163_Light.svg'}')`,
             backgroundColor: "transparent",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",

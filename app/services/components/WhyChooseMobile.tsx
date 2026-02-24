@@ -8,7 +8,7 @@ const WhyChooseMobile = () => {
       <div className="flex flex-col justify-center px-4 gap-4">
         <Image
           className="w-full h-[250px] object-cover rounded-lg"
-          src="/services/Rectangle_52.webp"
+          src="/Services/Rectangle_52.webp"
           alt="Why Choose Us"
           width={600}
           height={300}

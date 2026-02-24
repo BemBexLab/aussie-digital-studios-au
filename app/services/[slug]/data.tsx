@@ -6,7 +6,7 @@ export const services = [
     slug: "web-design-development",
     title: "Web Design & Development",
     heading: "Web Development That Accelerates Growth",
-    imageUrl: "/services/Rectangle_52.webp",
+    imageUrl: "/Services/Rectangle_52.webp",
     description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
     points: [
       "Custom Website Design",
@@ -230,19 +230,19 @@ export const services = [
     ],
     processCardData: [
       {
-        image: "/services/01.svg",
+        image: "/Services/01.svg",
         heading: "Book a Strategy Call",
         paragraph:
           "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
       },
       {
-        image: "/services/02.svg",
+        image: "/Services/02.svg",
         heading: "Website Audit & Strategy",
         paragraph:
           "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
       },
       {
-        image: "/services/03.svg",
+        image: "/Services/03.svg",
         heading: "Build, Launch & Optimize",
         paragraph:
           "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
@@ -317,14 +317,14 @@ export const services = [
       },
     ],
     portfolioData: [
-      { id: "1", src: "/services/web_01.svg", translateY: "-translate-y-25" },
-      { id: "2", src: "/services/web_02.svg", translateY: "" },
-      { id: "3", src: "/services/web_02.svg", translateY: "-translate-y-25" },
-      { id: "4", src: "/services/web_03.svg", translateY: "" },
-      { id: "5", src: "/services/web_04.svg", translateY: "-translate-y-25" },
-      { id: "6", src: "/services/web_05.svg", translateY: "" },
-      { id: "7", src: "/services/web_06.svg", translateY: "-translate-y-25" },
-      { id: "8", src: "/services/web_07.svg", translateY: "" },
+      { id: "1", src: "/Services/web_01.svg", translateY: "-translate-y-25" },
+      { id: "2", src: "/Services/web_02.svg", translateY: "" },
+      { id: "3", src: "/Services/web_02.svg", translateY: "-translate-y-25" },
+      { id: "4", src: "/Services/web_03.svg", translateY: "" },
+      { id: "5", src: "/Services/web_04.svg", translateY: "-translate-y-25" },
+      { id: "6", src: "/Services/web_05.svg", translateY: "" },
+      { id: "7", src: "/Services/web_06.svg", translateY: "-translate-y-25" },
+      { id: "8", src: "/Services/web_07.svg", translateY: "" },
     ],
     footnote:
       "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
@@ -333,7 +333,7 @@ export const services = [
         slug: "custom-website-design",
         title: "Custom Website Design",
         heading: "Web Development That Accelerates something",
-        imageUrl: "/services/Rectangle_52.png",
+        imageUrl: "/Services/Rectangle_52.png",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -654,19 +654,19 @@ export const services = [
         ],
         processCardData: [
           {
-            image: "/services/01.svg",
+            image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
               "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
-            image: "/services/02.svg",
+            image: "/Services/02.svg",
             heading: "Website Audit & Strategy",
             paragraph:
               "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
           },
           {
-            image: "/services/03.svg",
+            image: "/Services/03.svg",
             heading: "Build, Launch & Optimize",
             paragraph:
               "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
@@ -743,28 +743,28 @@ export const services = [
         portfolioData: [
           {
             id: "1",
-            src: "/services/web_01.svg",
+            src: "/Services/web_01.svg",
             translateY: "-translate-y-25",
           },
-          { id: "2", src: "/services/web_02.svg", translateY: "" },
+          { id: "2", src: "/Services/web_02.svg", translateY: "" },
           {
             id: "3",
-            src: "/services/web_02.svg",
+            src: "/Services/web_02.svg",
             translateY: "-translate-y-25",
           },
-          { id: "4", src: "/services/web_03.svg", translateY: "" },
+          { id: "4", src: "/Services/web_03.svg", translateY: "" },
           {
             id: "5",
-            src: "/services/web_04.svg",
+            src: "/Services/web_04.svg",
             translateY: "-translate-y-25",
           },
-          { id: "6", src: "/services/web_05.svg", translateY: "" },
+          { id: "6", src: "/Services/web_05.svg", translateY: "" },
           {
             id: "7",
-            src: "/services/web_06.svg",
+            src: "/Services/web_06.svg",
             translateY: "-translate-y-25",
           },
-          { id: "8", src: "/services/web_07.svg", translateY: "" },
+          { id: "8", src: "/Services/web_07.svg", translateY: "" },
         ],
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
@@ -773,7 +773,7 @@ export const services = [
         slug: "e-commerce-website-development",
         title: "e-commerce web development",
         heading: "Web Development That Accelerates something",
-        imageUrl: "/services/Rectangle_52.png",
+        imageUrl: "/Services/Rectangle_52.png",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -1094,19 +1094,19 @@ export const services = [
         ],
         processCardData: [
           {
-            image: "/services/01.svg",
+            image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
               "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
-            image: "/services/02.svg",
+            image: "/Services/02.svg",
             heading: "Website Audit & Strategy",
             paragraph:
               "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
           },
           {
-            image: "/services/03.svg",
+            image: "/Services/03.svg",
             heading: "Build, Launch & Optimize",
             paragraph:
               "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
@@ -1183,28 +1183,28 @@ export const services = [
         portfolioData: [
           {
             id: "1",
-            src: "/services/web_01.svg",
+            src: "/Services/web_01.svg",
             translateY: "-translate-y-25",
           },
-          { id: "2", src: "/services/web_02.svg", translateY: "" },
+          { id: "2", src: "/Services/web_02.svg", translateY: "" },
           {
             id: "3",
-            src: "/services/web_02.svg",
+            src: "/Services/web_02.svg",
             translateY: "-translate-y-25",
           },
-          { id: "4", src: "/services/web_03.svg", translateY: "" },
+          { id: "4", src: "/Services/web_03.svg", translateY: "" },
           {
             id: "5",
-            src: "/services/web_04.svg",
+            src: "/Services/web_04.svg",
             translateY: "-translate-y-25",
           },
-          { id: "6", src: "/services/web_05.svg", translateY: "" },
+          { id: "6", src: "/Services/web_05.svg", translateY: "" },
           {
             id: "7",
-            src: "/services/web_06.svg",
+            src: "/Services/web_06.svg",
             translateY: "-translate-y-25",
           },
-          { id: "8", src: "/services/web_07.svg", translateY: "" },
+          { id: "8", src: "/Services/web_07.svg", translateY: "" },
         ],
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
@@ -1213,7 +1213,7 @@ export const services = [
         slug: "magento-development",
         title: "Magento Development",
         heading: "Web Development That Accelerates something",
-        imageUrl: "/services/Rectangle_52.png",
+        imageUrl: "/Services/Rectangle_52.png",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -1534,19 +1534,19 @@ export const services = [
         ],
         processCardData: [
           {
-            image: "/services/01.svg",
+            image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
               "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
-            image: "/services/02.svg",
+            image: "/Services/02.svg",
             heading: "Website Audit & Strategy",
             paragraph:
               "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
           },
           {
-            image: "/services/03.svg",
+            image: "/Services/03.svg",
             heading: "Build, Launch & Optimize",
             paragraph:
               "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
@@ -1623,28 +1623,28 @@ export const services = [
         portfolioData: [
           {
             id: "1",
-            src: "/services/web_01.svg",
+            src: "/Services/web_01.svg",
             translateY: "-translate-y-25",
           },
-          { id: "2", src: "/services/web_02.svg", translateY: "" },
+          { id: "2", src: "/Services/web_02.svg", translateY: "" },
           {
             id: "3",
-            src: "/services/web_02.svg",
+            src: "/Services/web_02.svg",
             translateY: "-translate-y-25",
           },
-          { id: "4", src: "/services/web_03.svg", translateY: "" },
+          { id: "4", src: "/Services/web_03.svg", translateY: "" },
           {
             id: "5",
-            src: "/services/web_04.svg",
+            src: "/Services/web_04.svg",
             translateY: "-translate-y-25",
           },
-          { id: "6", src: "/services/web_05.svg", translateY: "" },
+          { id: "6", src: "/Services/web_05.svg", translateY: "" },
           {
             id: "7",
-            src: "/services/web_06.svg",
+            src: "/Services/web_06.svg",
             translateY: "-translate-y-25",
           },
-          { id: "8", src: "/services/web_07.svg", translateY: "" },
+          { id: "8", src: "/Services/web_07.svg", translateY: "" },
         ],
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
@@ -1653,7 +1653,7 @@ export const services = [
         slug: "opencart",
         title: "OpenCart",
         heading: "Web Development That Accelerates something",
-        imageUrl: "/services/Rectangle_52.png",
+        imageUrl: "/Services/Rectangle_52.png",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -1974,19 +1974,19 @@ export const services = [
         ],
         processCardData: [
           {
-            image: "/services/01.svg",
+            image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
               "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
-            image: "/services/02.svg",
+            image: "/Services/02.svg",
             heading: "Website Audit & Strategy",
             paragraph:
               "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
           },
           {
-            image: "/services/03.svg",
+            image: "/Services/03.svg",
             heading: "Build, Launch & Optimize",
             paragraph:
               "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
@@ -2063,28 +2063,28 @@ export const services = [
         portfolioData: [
           {
             id: "1",
-            src: "/services/web_01.svg",
+            src: "/Services/web_01.svg",
             translateY: "-translate-y-25",
           },
-          { id: "2", src: "/services/web_02.svg", translateY: "" },
+          { id: "2", src: "/Services/web_02.svg", translateY: "" },
           {
             id: "3",
-            src: "/services/web_02.svg",
+            src: "/Services/web_02.svg",
             translateY: "-translate-y-25",
           },
-          { id: "4", src: "/services/web_03.svg", translateY: "" },
+          { id: "4", src: "/Services/web_03.svg", translateY: "" },
           {
             id: "5",
-            src: "/services/web_04.svg",
+            src: "/Services/web_04.svg",
             translateY: "-translate-y-25",
           },
-          { id: "6", src: "/services/web_05.svg", translateY: "" },
+          { id: "6", src: "/Services/web_05.svg", translateY: "" },
           {
             id: "7",
-            src: "/services/web_06.svg",
+            src: "/Services/web_06.svg",
             translateY: "-translate-y-25",
           },
-          { id: "8", src: "/services/web_07.svg", translateY: "" },
+          { id: "8", src: "/Services/web_07.svg", translateY: "" },
         ],
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
@@ -2093,7 +2093,7 @@ export const services = [
         slug: "shopify-development",
         title: "Shopify Development",
         heading: "Web Development That Accelerates something",
-        imageUrl: "/services/Rectangle_52.png",
+        imageUrl: "/Services/Rectangle_52.png",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -2414,19 +2414,19 @@ export const services = [
         ],
         processCardData: [
           {
-            image: "/services/01.svg",
+            image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
               "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
-            image: "/services/02.svg",
+            image: "/Services/02.svg",
             heading: "Website Audit & Strategy",
             paragraph:
               "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
           },
           {
-            image: "/services/03.svg",
+            image: "/Services/03.svg",
             heading: "Build, Launch & Optimize",
             paragraph:
               "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
@@ -2503,28 +2503,28 @@ export const services = [
         portfolioData: [
           {
             id: "1",
-            src: "/services/web_01.svg",
+            src: "/Services/web_01.svg",
             translateY: "-translate-y-25",
           },
-          { id: "2", src: "/services/web_02.svg", translateY: "" },
+          { id: "2", src: "/Services/web_02.svg", translateY: "" },
           {
             id: "3",
-            src: "/services/web_02.svg",
+            src: "/Services/web_02.svg",
             translateY: "-translate-y-25",
           },
-          { id: "4", src: "/services/web_03.svg", translateY: "" },
+          { id: "4", src: "/Services/web_03.svg", translateY: "" },
           {
             id: "5",
-            src: "/services/web_04.svg",
+            src: "/Services/web_04.svg",
             translateY: "-translate-y-25",
           },
-          { id: "6", src: "/services/web_05.svg", translateY: "" },
+          { id: "6", src: "/Services/web_05.svg", translateY: "" },
           {
             id: "7",
-            src: "/services/web_06.svg",
+            src: "/Services/web_06.svg",
             translateY: "-translate-y-25",
           },
-          { id: "8", src: "/services/web_07.svg", translateY: "" },
+          { id: "8", src: "/Services/web_07.svg", translateY: "" },
         ],
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
@@ -2533,7 +2533,7 @@ export const services = [
         slug: "woocommerce-development",
         title: "WooCommerce Development",
         heading: "Web Development That Accelerates something",
-        imageUrl: "/services/Rectangle_52.png",
+        imageUrl: "/Services/Rectangle_52.png",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -2854,19 +2854,19 @@ export const services = [
         ],
         processCardData: [
           {
-            image: "/services/01.svg",
+            image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
               "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
-            image: "/services/02.svg",
+            image: "/Services/02.svg",
             heading: "Website Audit & Strategy",
             paragraph:
               "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
           },
           {
-            image: "/services/03.svg",
+            image: "/Services/03.svg",
             heading: "Build, Launch & Optimize",
             paragraph:
               "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
@@ -2943,28 +2943,28 @@ export const services = [
         portfolioData: [
           {
             id: "1",
-            src: "/services/web_01.svg",
+            src: "/Services/web_01.svg",
             translateY: "-translate-y-25",
           },
-          { id: "2", src: "/services/web_02.svg", translateY: "" },
+          { id: "2", src: "/Services/web_02.svg", translateY: "" },
           {
             id: "3",
-            src: "/services/web_02.svg",
+            src: "/Services/web_02.svg",
             translateY: "-translate-y-25",
           },
-          { id: "4", src: "/services/web_03.svg", translateY: "" },
+          { id: "4", src: "/Services/web_03.svg", translateY: "" },
           {
             id: "5",
-            src: "/services/web_04.svg",
+            src: "/Services/web_04.svg",
             translateY: "-translate-y-25",
           },
-          { id: "6", src: "/services/web_05.svg", translateY: "" },
+          { id: "6", src: "/Services/web_05.svg", translateY: "" },
           {
             id: "7",
-            src: "/services/web_06.svg",
+            src: "/Services/web_06.svg",
             translateY: "-translate-y-25",
           },
-          { id: "8", src: "/services/web_07.svg", translateY: "" },
+          { id: "8", src: "/Services/web_07.svg", translateY: "" },
         ],
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
@@ -2973,7 +2973,7 @@ export const services = [
         slug: "wordpress-development",
         title: "WordPress Development",
         heading: "Web Development That Accelerates something",
-        imageUrl: "/services/Rectangle_52.png",
+        imageUrl: "/Services/Rectangle_52.png",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -3294,19 +3294,19 @@ export const services = [
         ],
         processCardData: [
           {
-            image: "/services/01.svg",
+            image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
               "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
-            image: "/services/02.svg",
+            image: "/Services/02.svg",
             heading: "Website Audit & Strategy",
             paragraph:
               "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
           },
           {
-            image: "/services/03.svg",
+            image: "/Services/03.svg",
             heading: "Build, Launch & Optimize",
             paragraph:
               "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
@@ -3383,28 +3383,28 @@ export const services = [
         portfolioData: [
           {
             id: "1",
-            src: "/services/web_01.svg",
+            src: "/Services/web_01.svg",
             translateY: "-translate-y-25",
           },
-          { id: "2", src: "/services/web_02.svg", translateY: "" },
+          { id: "2", src: "/Services/web_02.svg", translateY: "" },
           {
             id: "3",
-            src: "/services/web_02.svg",
+            src: "/Services/web_02.svg",
             translateY: "-translate-y-25",
           },
-          { id: "4", src: "/services/web_03.svg", translateY: "" },
+          { id: "4", src: "/Services/web_03.svg", translateY: "" },
           {
             id: "5",
-            src: "/services/web_04.svg",
+            src: "/Services/web_04.svg",
             translateY: "-translate-y-25",
           },
-          { id: "6", src: "/services/web_05.svg", translateY: "" },
+          { id: "6", src: "/Services/web_05.svg", translateY: "" },
           {
             id: "7",
-            src: "/services/web_06.svg",
+            src: "/Services/web_06.svg",
             translateY: "-translate-y-25",
           },
-          { id: "8", src: "/services/web_07.svg", translateY: "" },
+          { id: "8", src: "/Services/web_07.svg", translateY: "" },
         ],
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
@@ -3417,7 +3417,7 @@ export const services = [
     slug: "search-engine-optimization",
     title: "Search Engine Optimization (SEO)",
     heading: "Web Development That Accelerates Growth",
-    imageUrl: "/services/Rectangle_52.png",
+    imageUrl: "/Services/Rectangle_52.png",
     description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
     points: [
       "Custom Website Design",
@@ -3641,19 +3641,19 @@ export const services = [
     ],
     processCardData: [
       {
-        image: "/services/01.svg",
+        image: "/Services/01.svg",
         heading: "Book a Strategy Call",
         paragraph:
           "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
       },
       {
-        image: "/services/02.svg",
+        image: "/Services/02.svg",
         heading: "Website Audit & Strategy",
         paragraph:
           "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
       },
       {
-        image: "/services/03.svg",
+        image: "/Services/03.svg",
         heading: "Build, Launch & Optimize",
         paragraph:
           "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
@@ -3728,14 +3728,14 @@ export const services = [
       },
     ],
     portfolioData: [
-      { id: "1", src: "/services/web_01.svg", translateY: "-translate-y-25" },
-      { id: "2", src: "/services/web_02.svg", translateY: "" },
-      { id: "3", src: "/services/web_02.svg", translateY: "-translate-y-25" },
-      { id: "4", src: "/services/web_03.svg", translateY: "" },
-      { id: "5", src: "/services/web_04.svg", translateY: "-translate-y-25" },
-      { id: "6", src: "/services/web_05.svg", translateY: "" },
-      { id: "7", src: "/services/web_06.svg", translateY: "-translate-y-25" },
-      { id: "8", src: "/services/web_07.svg", translateY: "" },
+      { id: "1", src: "/Services/web_01.svg", translateY: "-translate-y-25" },
+      { id: "2", src: "/Services/web_02.svg", translateY: "" },
+      { id: "3", src: "/Services/web_02.svg", translateY: "-translate-y-25" },
+      { id: "4", src: "/Services/web_03.svg", translateY: "" },
+      { id: "5", src: "/Services/web_04.svg", translateY: "-translate-y-25" },
+      { id: "6", src: "/Services/web_05.svg", translateY: "" },
+      { id: "7", src: "/Services/web_06.svg", translateY: "-translate-y-25" },
+      { id: "8", src: "/Services/web_07.svg", translateY: "" },
     ],
     footnote:
       "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
@@ -3744,7 +3744,7 @@ export const services = [
         slug: "seo-strategy-planning",
         title: "SEO Strategy & Planning",
         heading: "Web Development That Accelerates something",
-        imageUrl: "/services/Rectangle_52.png",
+        imageUrl: "/Services/Rectangle_52.png",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -4065,19 +4065,19 @@ export const services = [
         ],
         processCardData: [
           {
-            image: "/services/01.svg",
+            image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
               "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
-            image: "/services/02.svg",
+            image: "/Services/02.svg",
             heading: "Website Audit & Strategy",
             paragraph:
               "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
           },
           {
-            image: "/services/03.svg",
+            image: "/Services/03.svg",
             heading: "Build, Launch & Optimize",
             paragraph:
               "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
@@ -4154,28 +4154,28 @@ export const services = [
         portfolioData: [
           {
             id: "1",
-            src: "/services/web_01.svg",
+            src: "/Services/web_01.svg",
             translateY: "-translate-y-25",
           },
-          { id: "2", src: "/services/web_02.svg", translateY: "" },
+          { id: "2", src: "/Services/web_02.svg", translateY: "" },
           {
             id: "3",
-            src: "/services/web_02.svg",
+            src: "/Services/web_02.svg",
             translateY: "-translate-y-25",
           },
-          { id: "4", src: "/services/web_03.svg", translateY: "" },
+          { id: "4", src: "/Services/web_03.svg", translateY: "" },
           {
             id: "5",
-            src: "/services/web_04.svg",
+            src: "/Services/web_04.svg",
             translateY: "-translate-y-25",
           },
-          { id: "6", src: "/services/web_05.svg", translateY: "" },
+          { id: "6", src: "/Services/web_05.svg", translateY: "" },
           {
             id: "7",
-            src: "/services/web_06.svg",
+            src: "/Services/web_06.svg",
             translateY: "-translate-y-25",
           },
-          { id: "8", src: "/services/web_07.svg", translateY: "" },
+          { id: "8", src: "/Services/web_07.svg", translateY: "" },
         ],
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
@@ -4184,7 +4184,7 @@ export const services = [
         slug: "local-search-dominance",
         title: "Local Search Dominance",
         heading: "Local Search Dominance That Drives Real Results",
-        imageUrl: "/services/Rectangle_52.png",
+        imageUrl: "/Services/Rectangle_52.png",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -4505,19 +4505,19 @@ export const services = [
         ],
         processCardData: [
           {
-            image: "/services/01.svg",
+            image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
               "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
-            image: "/services/02.svg",
+            image: "/Services/02.svg",
             heading: "Website Audit & Strategy",
             paragraph:
               "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
           },
           {
-            image: "/services/03.svg",
+            image: "/Services/03.svg",
             heading: "Build, Launch & Optimize",
             paragraph:
               "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
@@ -4594,28 +4594,28 @@ export const services = [
         portfolioData: [
           {
             id: "1",
-            src: "/services/web_01.svg",
+            src: "/Services/web_01.svg",
             translateY: "-translate-y-25",
           },
-          { id: "2", src: "/services/web_02.svg", translateY: "" },
+          { id: "2", src: "/Services/web_02.svg", translateY: "" },
           {
             id: "3",
-            src: "/services/web_02.svg",
+            src: "/Services/web_02.svg",
             translateY: "-translate-y-25",
           },
-          { id: "4", src: "/services/web_03.svg", translateY: "" },
+          { id: "4", src: "/Services/web_03.svg", translateY: "" },
           {
             id: "5",
-            src: "/services/web_04.svg",
+            src: "/Services/web_04.svg",
             translateY: "-translate-y-25",
           },
-          { id: "6", src: "/services/web_05.svg", translateY: "" },
+          { id: "6", src: "/Services/web_05.svg", translateY: "" },
           {
             id: "7",
-            src: "/services/web_06.svg",
+            src: "/Services/web_06.svg",
             translateY: "-translate-y-25",
           },
-          { id: "8", src: "/services/web_07.svg", translateY: "" },
+          { id: "8", src: "/Services/web_07.svg", translateY: "" },
         ],
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
@@ -4624,7 +4624,7 @@ export const services = [
         slug: "local-listing",
         title: "Local Listing",
         heading: "Local Listing That Drives Real Results",
-        imageUrl: "/services/Rectangle_52.png",
+        imageUrl: "/Services/Rectangle_52.png",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -4945,19 +4945,19 @@ export const services = [
         ],
         processCardData: [
           {
-            image: "/services/01.svg",
+            image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
               "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
-            image: "/services/02.svg",
+            image: "/Services/02.svg",
             heading: "Website Audit & Strategy",
             paragraph:
               "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
           },
           {
-            image: "/services/03.svg",
+            image: "/Services/03.svg",
             heading: "Build, Launch & Optimize",
             paragraph:
               "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
@@ -5034,28 +5034,28 @@ export const services = [
         portfolioData: [
           {
             id: "1",
-            src: "/services/web_01.svg",
+            src: "/Services/web_01.svg",
             translateY: "-translate-y-25",
           },
-          { id: "2", src: "/services/web_02.svg", translateY: "" },
+          { id: "2", src: "/Services/web_02.svg", translateY: "" },
           {
             id: "3",
-            src: "/services/web_02.svg",
+            src: "/Services/web_02.svg",
             translateY: "-translate-y-25",
           },
-          { id: "4", src: "/services/web_03.svg", translateY: "" },
+          { id: "4", src: "/Services/web_03.svg", translateY: "" },
           {
             id: "5",
-            src: "/services/web_04.svg",
+            src: "/Services/web_04.svg",
             translateY: "-translate-y-25",
           },
-          { id: "6", src: "/services/web_05.svg", translateY: "" },
+          { id: "6", src: "/Services/web_05.svg", translateY: "" },
           {
             id: "7",
-            src: "/services/web_06.svg",
+            src: "/Services/web_06.svg",
             translateY: "-translate-y-25",
           },
-          { id: "8", src: "/services/web_07.svg", translateY: "" },
+          { id: "8", src: "/Services/web_07.svg", translateY: "" },
         ],
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
@@ -5064,7 +5064,7 @@ export const services = [
         slug: "onpage-offpage-seo",
         title: "On-Page & Off-Page SEO",
         heading: "SEO That Drives Real Results",
-        imageUrl: "/services/Rectangle_52.png",
+        imageUrl: "/Services/Rectangle_52.png",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -5385,19 +5385,19 @@ export const services = [
         ],
         processCardData: [
           {
-            image: "/services/01.svg",
+            image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
               "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
-            image: "/services/02.svg",
+            image: "/Services/02.svg",
             heading: "Website Audit & Strategy",
             paragraph:
               "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
           },
           {
-            image: "/services/03.svg",
+            image: "/Services/03.svg",
             heading: "Build, Launch & Optimize",
             paragraph:
               "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
@@ -5474,28 +5474,28 @@ export const services = [
         portfolioData: [
           {
             id: "1",
-            src: "/services/web_01.svg",
+            src: "/Services/web_01.svg",
             translateY: "-translate-y-25",
           },
-          { id: "2", src: "/services/web_02.svg", translateY: "" },
+          { id: "2", src: "/Services/web_02.svg", translateY: "" },
           {
             id: "3",
-            src: "/services/web_02.svg",
+            src: "/Services/web_02.svg",
             translateY: "-translate-y-25",
           },
-          { id: "4", src: "/services/web_03.svg", translateY: "" },
+          { id: "4", src: "/Services/web_03.svg", translateY: "" },
           {
             id: "5",
-            src: "/services/web_04.svg",
+            src: "/Services/web_04.svg",
             translateY: "-translate-y-25",
           },
-          { id: "6", src: "/services/web_05.svg", translateY: "" },
+          { id: "6", src: "/Services/web_05.svg", translateY: "" },
           {
             id: "7",
-            src: "/services/web_06.svg",
+            src: "/Services/web_06.svg",
             translateY: "-translate-y-25",
           },
-          { id: "8", src: "/services/web_07.svg", translateY: "" },
+          { id: "8", src: "/Services/web_07.svg", translateY: "" },
         ],
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
@@ -5504,7 +5504,7 @@ export const services = [
         slug: "link-building",
         title: "Link Building",
         heading: "Link Building That Drives Real Results",
-        imageUrl: "/services/Rectangle_52.png",
+        imageUrl: "/Services/Rectangle_52.png",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -5825,19 +5825,19 @@ export const services = [
         ],
         processCardData: [
           {
-            image: "/services/01.svg",
+            image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
               "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
-            image: "/services/02.svg",
+            image: "/Services/02.svg",
             heading: "Website Audit & Strategy",
             paragraph:
               "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
           },
           {
-            image: "/services/03.svg",
+            image: "/Services/03.svg",
             heading: "Build, Launch & Optimize",
             paragraph:
               "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
@@ -5914,28 +5914,28 @@ export const services = [
         portfolioData: [
           {
             id: "1",
-            src: "/services/web_01.svg",
+            src: "/Services/web_01.svg",
             translateY: "-translate-y-25",
           },
-          { id: "2", src: "/services/web_02.svg", translateY: "" },
+          { id: "2", src: "/Services/web_02.svg", translateY: "" },
           {
             id: "3",
-            src: "/services/web_02.svg",
+            src: "/Services/web_02.svg",
             translateY: "-translate-y-25",
           },
-          { id: "4", src: "/services/web_03.svg", translateY: "" },
+          { id: "4", src: "/Services/web_03.svg", translateY: "" },
           {
             id: "5",
-            src: "/services/web_04.svg",
+            src: "/Services/web_04.svg",
             translateY: "-translate-y-25",
           },
-          { id: "6", src: "/services/web_05.svg", translateY: "" },
+          { id: "6", src: "/Services/web_05.svg", translateY: "" },
           {
             id: "7",
-            src: "/services/web_06.svg",
+            src: "/Services/web_06.svg",
             translateY: "-translate-y-25",
           },
-          { id: "8", src: "/services/web_07.svg", translateY: "" },
+          { id: "8", src: "/Services/web_07.svg", translateY: "" },
         ],
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
@@ -5944,7 +5944,7 @@ export const services = [
         slug: "intent-based-keyword-architecture",
         title: "Intent-Based Keywords",
         heading: "SEO That Drives Real Results",
-        imageUrl: "/services/Rectangle_52.png",
+        imageUrl: "/Services/Rectangle_52.png",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -6265,19 +6265,19 @@ export const services = [
         ],
         processCardData: [
           {
-            image: "/services/01.svg",
+            image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
               "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
-            image: "/services/02.svg",
+            image: "/Services/02.svg",
             heading: "Website Audit & Strategy",
             paragraph:
               "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
           },
           {
-            image: "/services/03.svg",
+            image: "/Services/03.svg",
             heading: "Build, Launch & Optimize",
             paragraph:
               "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
@@ -6354,28 +6354,28 @@ export const services = [
         portfolioData: [
           {
             id: "1",
-            src: "/services/web_01.svg",
+            src: "/Services/web_01.svg",
             translateY: "-translate-y-25",
           },
-          { id: "2", src: "/services/web_02.svg", translateY: "" },
+          { id: "2", src: "/Services/web_02.svg", translateY: "" },
           {
             id: "3",
-            src: "/services/web_02.svg",
+            src: "/Services/web_02.svg",
             translateY: "-translate-y-25",
           },
-          { id: "4", src: "/services/web_03.svg", translateY: "" },
+          { id: "4", src: "/Services/web_03.svg", translateY: "" },
           {
             id: "5",
-            src: "/services/web_04.svg",
+            src: "/Services/web_04.svg",
             translateY: "-translate-y-25",
           },
-          { id: "6", src: "/services/web_05.svg", translateY: "" },
+          { id: "6", src: "/Services/web_05.svg", translateY: "" },
           {
             id: "7",
-            src: "/services/web_06.svg",
+            src: "/Services/web_06.svg",
             translateY: "-translate-y-25",
           },
-          { id: "8", src: "/services/web_07.svg", translateY: "" },
+          { id: "8", src: "/Services/web_07.svg", translateY: "" },
         ],
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
@@ -6384,7 +6384,7 @@ export const services = [
         slug: "technical-seo-infrastructure",
         title: "Technical SEO Infrastructure",
         heading: "Technical SEO That Drives Real Results",
-        imageUrl: "/services/Rectangle_52.png",
+        imageUrl: "/Services/Rectangle_52.png",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -6705,19 +6705,19 @@ export const services = [
         ],
         processCardData: [
           {
-            image: "/services/01.svg",
+            image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
               "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
-            image: "/services/02.svg",
+            image: "/Services/02.svg",
             heading: "Website Audit & Strategy",
             paragraph:
               "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
           },
           {
-            image: "/services/03.svg",
+            image: "/Services/03.svg",
             heading: "Build, Launch & Optimize",
             paragraph:
               "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
@@ -6794,28 +6794,28 @@ export const services = [
         portfolioData: [
           {
             id: "1",
-            src: "/services/web_01.svg",
+            src: "/Services/web_01.svg",
             translateY: "-translate-y-25",
           },
-          { id: "2", src: "/services/web_02.svg", translateY: "" },
+          { id: "2", src: "/Services/web_02.svg", translateY: "" },
           {
             id: "3",
-            src: "/services/web_02.svg",
+            src: "/Services/web_02.svg",
             translateY: "-translate-y-25",
           },
-          { id: "4", src: "/services/web_03.svg", translateY: "" },
+          { id: "4", src: "/Services/web_03.svg", translateY: "" },
           {
             id: "5",
-            src: "/services/web_04.svg",
+            src: "/Services/web_04.svg",
             translateY: "-translate-y-25",
           },
-          { id: "6", src: "/services/web_05.svg", translateY: "" },
+          { id: "6", src: "/Services/web_05.svg", translateY: "" },
           {
             id: "7",
-            src: "/services/web_06.svg",
+            src: "/Services/web_06.svg",
             translateY: "-translate-y-25",
           },
-          { id: "8", src: "/services/web_07.svg", translateY: "" },
+          { id: "8", src: "/Services/web_07.svg", translateY: "" },
         ],
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
@@ -6824,7 +6824,7 @@ export const services = [
         slug: "ecommerce-seo",
         title: "Ecommerce SEO",
         heading: "Ecommerce SEO That Drives Real Results",
-        imageUrl: "/services/Rectangle_52.png",
+        imageUrl: "/Services/Rectangle_52.png",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -7145,19 +7145,19 @@ export const services = [
         ],
         processCardData: [
           {
-            image: "/services/01.svg",
+            image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
               "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
-            image: "/services/02.svg",
+            image: "/Services/02.svg",
             heading: "Website Audit & Strategy",
             paragraph:
               "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
           },
           {
-            image: "/services/03.svg",
+            image: "/Services/03.svg",
             heading: "Build, Launch & Optimize",
             paragraph:
               "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
@@ -7234,28 +7234,28 @@ export const services = [
         portfolioData: [
           {
             id: "1",
-            src: "/services/web_01.svg",
+            src: "/Services/web_01.svg",
             translateY: "-translate-y-25",
           },
-          { id: "2", src: "/services/web_02.svg", translateY: "" },
+          { id: "2", src: "/Services/web_02.svg", translateY: "" },
           {
             id: "3",
-            src: "/services/web_02.svg",
+            src: "/Services/web_02.svg",
             translateY: "-translate-y-25",
           },
-          { id: "4", src: "/services/web_03.svg", translateY: "" },
+          { id: "4", src: "/Services/web_03.svg", translateY: "" },
           {
             id: "5",
-            src: "/services/web_04.svg",
+            src: "/Services/web_04.svg",
             translateY: "-translate-y-25",
           },
-          { id: "6", src: "/services/web_05.svg", translateY: "" },
+          { id: "6", src: "/Services/web_05.svg", translateY: "" },
           {
             id: "7",
-            src: "/services/web_06.svg",
+            src: "/Services/web_06.svg",
             translateY: "-translate-y-25",
           },
-          { id: "8", src: "/services/web_07.svg", translateY: "" },
+          { id: "8", src: "/Services/web_07.svg", translateY: "" },
         ],
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
@@ -7264,7 +7264,7 @@ export const services = [
         slug: "google-profile-optimization",
         title: "Google Profile Optimization",
         heading: "Google Profile Optimization That Drives Real Results",
-        imageUrl: "/services/Rectangle_52.png",
+        imageUrl: "/Services/Rectangle_52.png",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -7585,19 +7585,19 @@ export const services = [
         ],
         processCardData: [
           {
-            image: "/services/01.svg",
+            image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
               "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
-            image: "/services/02.svg",
+            image: "/Services/02.svg",
             heading: "Website Audit & Strategy",
             paragraph:
               "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
           },
           {
-            image: "/services/03.svg",
+            image: "/Services/03.svg",
             heading: "Build, Launch & Optimize",
             paragraph:
               "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
@@ -7674,28 +7674,28 @@ export const services = [
         portfolioData: [
           {
             id: "1",
-            src: "/services/web_01.svg",
+            src: "/Services/web_01.svg",
             translateY: "-translate-y-25",
           },
-          { id: "2", src: "/services/web_02.svg", translateY: "" },
+          { id: "2", src: "/Services/web_02.svg", translateY: "" },
           {
             id: "3",
-            src: "/services/web_02.svg",
+            src: "/Services/web_02.svg",
             translateY: "-translate-y-25",
           },
-          { id: "4", src: "/services/web_03.svg", translateY: "" },
+          { id: "4", src: "/Services/web_03.svg", translateY: "" },
           {
             id: "5",
-            src: "/services/web_04.svg",
+            src: "/Services/web_04.svg",
             translateY: "-translate-y-25",
           },
-          { id: "6", src: "/services/web_05.svg", translateY: "" },
+          { id: "6", src: "/Services/web_05.svg", translateY: "" },
           {
             id: "7",
-            src: "/services/web_06.svg",
+            src: "/Services/web_06.svg",
             translateY: "-translate-y-25",
           },
-          { id: "8", src: "/services/web_07.svg", translateY: "" },
+          { id: "8", src: "/Services/web_07.svg", translateY: "" },
         ],
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
@@ -7708,7 +7708,7 @@ export const services = [
     slug: "performance-marketing",
     title: "Performance Marketing",
     heading: "Web Development That Accelerates Growth",
-    imageUrl: "/services/Rectangle_52.png",
+    imageUrl: "/Services/Rectangle_52.png",
     description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
     points: [
       "Custom Website Design",
@@ -7932,19 +7932,19 @@ export const services = [
     ],
     processCardData: [
       {
-        image: "/services/01.svg",
+        image: "/Services/01.svg",
         heading: "Book a Strategy Call",
         paragraph:
           "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
       },
       {
-        image: "/services/02.svg",
+        image: "/Services/02.svg",
         heading: "Website Audit & Strategy",
         paragraph:
           "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
       },
       {
-        image: "/services/03.svg",
+        image: "/Services/03.svg",
         heading: "Build, Launch & Optimize",
         paragraph:
           "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
@@ -8019,14 +8019,14 @@ export const services = [
       },
     ],
     portfolioData: [
-      { id: "1", src: "/services/web_01.svg", translateY: "-translate-y-25" },
-      { id: "2", src: "/services/web_02.svg", translateY: "" },
-      { id: "3", src: "/services/web_02.svg", translateY: "-translate-y-25" },
-      { id: "4", src: "/services/web_03.svg", translateY: "" },
-      { id: "5", src: "/services/web_04.svg", translateY: "-translate-y-25" },
-      { id: "6", src: "/services/web_05.svg", translateY: "" },
-      { id: "7", src: "/services/web_06.svg", translateY: "-translate-y-25" },
-      { id: "8", src: "/services/web_07.svg", translateY: "" },
+      { id: "1", src: "/Services/web_01.svg", translateY: "-translate-y-25" },
+      { id: "2", src: "/Services/web_02.svg", translateY: "" },
+      { id: "3", src: "/Services/web_02.svg", translateY: "-translate-y-25" },
+      { id: "4", src: "/Services/web_03.svg", translateY: "" },
+      { id: "5", src: "/Services/web_04.svg", translateY: "-translate-y-25" },
+      { id: "6", src: "/Services/web_05.svg", translateY: "" },
+      { id: "7", src: "/Services/web_06.svg", translateY: "-translate-y-25" },
+      { id: "8", src: "/Services/web_07.svg", translateY: "" },
     ],
     footnote:
       "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
@@ -8035,7 +8035,7 @@ export const services = [
         slug: "google-ads",
         title: "Google Ads",
         heading: "Web Development That Accelerates something",
-        imageUrl: "/services/Rectangle_52.png",
+        imageUrl: "/Services/Rectangle_52.png",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -8356,19 +8356,19 @@ export const services = [
         ],
         processCardData: [
           {
-            image: "/services/01.svg",
+            image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
               "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
-            image: "/services/02.svg",
+            image: "/Services/02.svg",
             heading: "Website Audit & Strategy",
             paragraph:
               "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
           },
           {
-            image: "/services/03.svg",
+            image: "/Services/03.svg",
             heading: "Build, Launch & Optimize",
             paragraph:
               "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
@@ -8445,28 +8445,28 @@ export const services = [
         portfolioData: [
           {
             id: "1",
-            src: "/services/web_01.svg",
+            src: "/Services/web_01.svg",
             translateY: "-translate-y-25",
           },
-          { id: "2", src: "/services/web_02.svg", translateY: "" },
+          { id: "2", src: "/Services/web_02.svg", translateY: "" },
           {
             id: "3",
-            src: "/services/web_02.svg",
+            src: "/Services/web_02.svg",
             translateY: "-translate-y-25",
           },
-          { id: "4", src: "/services/web_03.svg", translateY: "" },
+          { id: "4", src: "/Services/web_03.svg", translateY: "" },
           {
             id: "5",
-            src: "/services/web_04.svg",
+            src: "/Services/web_04.svg",
             translateY: "-translate-y-25",
           },
-          { id: "6", src: "/services/web_05.svg", translateY: "" },
+          { id: "6", src: "/Services/web_05.svg", translateY: "" },
           {
             id: "7",
-            src: "/services/web_06.svg",
+            src: "/Services/web_06.svg",
             translateY: "-translate-y-25",
           },
-          { id: "8", src: "/services/web_07.svg", translateY: "" },
+          { id: "8", src: "/Services/web_07.svg", translateY: "" },
         ],
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
@@ -8475,7 +8475,7 @@ export const services = [
         slug: "youtube-ads",
         title: "YouTube Ads",
         heading: "YouTube Ads That Convert",
-        imageUrl: "/services/Rectangle_52.png",
+        imageUrl: "/Services/Rectangle_52.png",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -8796,19 +8796,19 @@ export const services = [
         ],
         processCardData: [
           {
-            image: "/services/01.svg",
+            image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
               "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
-            image: "/services/02.svg",
+            image: "/Services/02.svg",
             heading: "Website Audit & Strategy",
             paragraph:
               "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
           },
           {
-            image: "/services/03.svg",
+            image: "/Services/03.svg",
             heading: "Build, Launch & Optimize",
             paragraph:
               "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
@@ -8885,28 +8885,28 @@ export const services = [
         portfolioData: [
           {
             id: "1",
-            src: "/services/web_01.svg",
+            src: "/Services/web_01.svg",
             translateY: "-translate-y-25",
           },
-          { id: "2", src: "/services/web_02.svg", translateY: "" },
+          { id: "2", src: "/Services/web_02.svg", translateY: "" },
           {
             id: "3",
-            src: "/services/web_02.svg",
+            src: "/Services/web_02.svg",
             translateY: "-translate-y-25",
           },
-          { id: "4", src: "/services/web_03.svg", translateY: "" },
+          { id: "4", src: "/Services/web_03.svg", translateY: "" },
           {
             id: "5",
-            src: "/services/web_04.svg",
+            src: "/Services/web_04.svg",
             translateY: "-translate-y-25",
           },
-          { id: "6", src: "/services/web_05.svg", translateY: "" },
+          { id: "6", src: "/Services/web_05.svg", translateY: "" },
           {
             id: "7",
-            src: "/services/web_06.svg",
+            src: "/Services/web_06.svg",
             translateY: "-translate-y-25",
           },
-          { id: "8", src: "/services/web_07.svg", translateY: "" },
+          { id: "8", src: "/Services/web_07.svg", translateY: "" },
         ],
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
@@ -8915,7 +8915,7 @@ export const services = [
         slug: "meta-ads",
         title: "Meta Ads",
         heading: "Meta Ads That Convert",
-        imageUrl: "/services/Rectangle_52.png",
+        imageUrl: "/Services/Rectangle_52.png",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -9236,19 +9236,19 @@ export const services = [
         ],
         processCardData: [
           {
-            image: "/services/01.svg",
+            image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
               "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
-            image: "/services/02.svg",
+            image: "/Services/02.svg",
             heading: "Website Audit & Strategy",
             paragraph:
               "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
           },
           {
-            image: "/services/03.svg",
+            image: "/Services/03.svg",
             heading: "Build, Launch & Optimize",
             paragraph:
               "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
@@ -9325,28 +9325,28 @@ export const services = [
         portfolioData: [
           {
             id: "1",
-            src: "/services/web_01.svg",
+            src: "/Services/web_01.svg",
             translateY: "-translate-y-25",
           },
-          { id: "2", src: "/services/web_02.svg", translateY: "" },
+          { id: "2", src: "/Services/web_02.svg", translateY: "" },
           {
             id: "3",
-            src: "/services/web_02.svg",
+            src: "/Services/web_02.svg",
             translateY: "-translate-y-25",
           },
-          { id: "4", src: "/services/web_03.svg", translateY: "" },
+          { id: "4", src: "/Services/web_03.svg", translateY: "" },
           {
             id: "5",
-            src: "/services/web_04.svg",
+            src: "/Services/web_04.svg",
             translateY: "-translate-y-25",
           },
-          { id: "6", src: "/services/web_05.svg", translateY: "" },
+          { id: "6", src: "/Services/web_05.svg", translateY: "" },
           {
             id: "7",
-            src: "/services/web_06.svg",
+            src: "/Services/web_06.svg",
             translateY: "-translate-y-25",
           },
-          { id: "8", src: "/services/web_07.svg", translateY: "" },
+          { id: "8", src: "/Services/web_07.svg", translateY: "" },
         ],
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
@@ -9355,7 +9355,7 @@ export const services = [
         slug: "tiktok-shop-ads",
         title: "TikTok Shop Ads",
         heading: "TikTok Shop Ads That Convert",
-        imageUrl: "/services/Rectangle_52.png",
+        imageUrl: "/Services/Rectangle_52.png",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -9676,19 +9676,19 @@ export const services = [
         ],
         processCardData: [
           {
-            image: "/services/01.svg",
+            image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
               "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
-            image: "/services/02.svg",
+            image: "/Services/02.svg",
             heading: "Website Audit & Strategy",
             paragraph:
               "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
           },
           {
-            image: "/services/03.svg",
+            image: "/Services/03.svg",
             heading: "Build, Launch & Optimize",
             paragraph:
               "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
@@ -9765,28 +9765,28 @@ export const services = [
         portfolioData: [
           {
             id: "1",
-            src: "/services/web_01.svg",
+            src: "/Services/web_01.svg",
             translateY: "-translate-y-25",
           },
-          { id: "2", src: "/services/web_02.svg", translateY: "" },
+          { id: "2", src: "/Services/web_02.svg", translateY: "" },
           {
             id: "3",
-            src: "/services/web_02.svg",
+            src: "/Services/web_02.svg",
             translateY: "-translate-y-25",
           },
-          { id: "4", src: "/services/web_03.svg", translateY: "" },
+          { id: "4", src: "/Services/web_03.svg", translateY: "" },
           {
             id: "5",
-            src: "/services/web_04.svg",
+            src: "/Services/web_04.svg",
             translateY: "-translate-y-25",
           },
-          { id: "6", src: "/services/web_05.svg", translateY: "" },
+          { id: "6", src: "/Services/web_05.svg", translateY: "" },
           {
             id: "7",
-            src: "/services/web_06.svg",
+            src: "/Services/web_06.svg",
             translateY: "-translate-y-25",
           },
-          { id: "8", src: "/services/web_07.svg", translateY: "" },
+          { id: "8", src: "/Services/web_07.svg", translateY: "" },
         ],
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
@@ -9795,7 +9795,7 @@ export const services = [
         slug: "linkedin-ads",
         title: "LinkedIn Ads",
         heading: "LinkedIn Ads That Convert",
-        imageUrl: "/services/Rectangle_52.png",
+        imageUrl: "/Services/Rectangle_52.png",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -10116,19 +10116,19 @@ export const services = [
         ],
         processCardData: [
           {
-            image: "/services/01.svg",
+            image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
               "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
-            image: "/services/02.svg",
+            image: "/Services/02.svg",
             heading: "Website Audit & Strategy",
             paragraph:
               "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
           },
           {
-            image: "/services/03.svg",
+            image: "/Services/03.svg",
             heading: "Build, Launch & Optimize",
             paragraph:
               "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
@@ -10205,28 +10205,28 @@ export const services = [
         portfolioData: [
           {
             id: "1",
-            src: "/services/web_01.svg",
+            src: "/Services/web_01.svg",
             translateY: "-translate-y-25",
           },
-          { id: "2", src: "/services/web_02.svg", translateY: "" },
+          { id: "2", src: "/Services/web_02.svg", translateY: "" },
           {
             id: "3",
-            src: "/services/web_02.svg",
+            src: "/Services/web_02.svg",
             translateY: "-translate-y-25",
           },
-          { id: "4", src: "/services/web_03.svg", translateY: "" },
+          { id: "4", src: "/Services/web_03.svg", translateY: "" },
           {
             id: "5",
-            src: "/services/web_04.svg",
+            src: "/Services/web_04.svg",
             translateY: "-translate-y-25",
           },
-          { id: "6", src: "/services/web_05.svg", translateY: "" },
+          { id: "6", src: "/Services/web_05.svg", translateY: "" },
           {
             id: "7",
-            src: "/services/web_06.svg",
+            src: "/Services/web_06.svg",
             translateY: "-translate-y-25",
           },
-          { id: "8", src: "/services/web_07.svg", translateY: "" },
+          { id: "8", src: "/Services/web_07.svg", translateY: "" },
         ],
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
@@ -10235,7 +10235,7 @@ export const services = [
         slug: "retargeting-remarketing",
         title: "Retargeting & Remarketing",
         heading: "Retargeting That Converts",
-        imageUrl: "/services/Rectangle_52.png",
+        imageUrl: "/Services/Rectangle_52.png",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -10556,19 +10556,19 @@ export const services = [
         ],
         processCardData: [
           {
-            image: "/services/01.svg",
+            image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
               "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
-            image: "/services/02.svg",
+            image: "/Services/02.svg",
             heading: "Website Audit & Strategy",
             paragraph:
               "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
           },
           {
-            image: "/services/03.svg",
+            image: "/Services/03.svg",
             heading: "Build, Launch & Optimize",
             paragraph:
               "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
@@ -10645,28 +10645,28 @@ export const services = [
         portfolioData: [
           {
             id: "1",
-            src: "/services/web_01.svg",
+            src: "/Services/web_01.svg",
             translateY: "-translate-y-25",
           },
-          { id: "2", src: "/services/web_02.svg", translateY: "" },
+          { id: "2", src: "/Services/web_02.svg", translateY: "" },
           {
             id: "3",
-            src: "/services/web_02.svg",
+            src: "/Services/web_02.svg",
             translateY: "-translate-y-25",
           },
-          { id: "4", src: "/services/web_03.svg", translateY: "" },
+          { id: "4", src: "/Services/web_03.svg", translateY: "" },
           {
             id: "5",
-            src: "/services/web_04.svg",
+            src: "/Services/web_04.svg",
             translateY: "-translate-y-25",
           },
-          { id: "6", src: "/services/web_05.svg", translateY: "" },
+          { id: "6", src: "/Services/web_05.svg", translateY: "" },
           {
             id: "7",
-            src: "/services/web_06.svg",
+            src: "/Services/web_06.svg",
             translateY: "-translate-y-25",
           },
-          { id: "8", src: "/services/web_07.svg", translateY: "" },
+          { id: "8", src: "/Services/web_07.svg", translateY: "" },
         ],
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
@@ -10675,7 +10675,7 @@ export const services = [
         slug: "shopping-ads",
         title: "Shopping Ads",
         heading: "Shopping Ads That Convert",
-        imageUrl: "/services/Rectangle_52.png",
+        imageUrl: "/Services/Rectangle_52.png",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -10996,19 +10996,19 @@ export const services = [
         ],
         processCardData: [
           {
-            image: "/services/01.svg",
+            image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
               "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
-            image: "/services/02.svg",
+            image: "/Services/02.svg",
             heading: "Website Audit & Strategy",
             paragraph:
               "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
           },
           {
-            image: "/services/03.svg",
+            image: "/Services/03.svg",
             heading: "Build, Launch & Optimize",
             paragraph:
               "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
@@ -11085,28 +11085,28 @@ export const services = [
         portfolioData: [
           {
             id: "1",
-            src: "/services/web_01.svg",
+            src: "/Services/web_01.svg",
             translateY: "-translate-y-25",
           },
-          { id: "2", src: "/services/web_02.svg", translateY: "" },
+          { id: "2", src: "/Services/web_02.svg", translateY: "" },
           {
             id: "3",
-            src: "/services/web_02.svg",
+            src: "/Services/web_02.svg",
             translateY: "-translate-y-25",
           },
-          { id: "4", src: "/services/web_03.svg", translateY: "" },
+          { id: "4", src: "/Services/web_03.svg", translateY: "" },
           {
             id: "5",
-            src: "/services/web_04.svg",
+            src: "/Services/web_04.svg",
             translateY: "-translate-y-25",
           },
-          { id: "6", src: "/services/web_05.svg", translateY: "" },
+          { id: "6", src: "/Services/web_05.svg", translateY: "" },
           {
             id: "7",
-            src: "/services/web_06.svg",
+            src: "/Services/web_06.svg",
             translateY: "-translate-y-25",
           },
-          { id: "8", src: "/services/web_07.svg", translateY: "" },
+          { id: "8", src: "/Services/web_07.svg", translateY: "" },
         ],
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
@@ -11115,7 +11115,7 @@ export const services = [
         slug: "affiliate-performance-marketing",
         title: "Affiliate Performance Marketing",
         heading: "Affiliate Performance Marketing That Drives Real Results",
-        imageUrl: "/services/Rectangle_52.png",
+        imageUrl: "/Services/Rectangle_52.png",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -11436,19 +11436,19 @@ export const services = [
         ],
         processCardData: [
           {
-            image: "/services/01.svg",
+            image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
               "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
-            image: "/services/02.svg",
+            image: "/Services/02.svg",
             heading: "Website Audit & Strategy",
             paragraph:
               "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
           },
           {
-            image: "/services/03.svg",
+            image: "/Services/03.svg",
             heading: "Build, Launch & Optimize",
             paragraph:
               "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
@@ -11525,28 +11525,28 @@ export const services = [
         portfolioData: [
           {
             id: "1",
-            src: "/services/web_01.svg",
+            src: "/Services/web_01.svg",
             translateY: "-translate-y-25",
           },
-          { id: "2", src: "/services/web_02.svg", translateY: "" },
+          { id: "2", src: "/Services/web_02.svg", translateY: "" },
           {
             id: "3",
-            src: "/services/web_02.svg",
+            src: "/Services/web_02.svg",
             translateY: "-translate-y-25",
           },
-          { id: "4", src: "/services/web_03.svg", translateY: "" },
+          { id: "4", src: "/Services/web_03.svg", translateY: "" },
           {
             id: "5",
-            src: "/services/web_04.svg",
+            src: "/Services/web_04.svg",
             translateY: "-translate-y-25",
           },
-          { id: "6", src: "/services/web_05.svg", translateY: "" },
+          { id: "6", src: "/Services/web_05.svg", translateY: "" },
           {
             id: "7",
-            src: "/services/web_06.svg",
+            src: "/Services/web_06.svg",
             translateY: "-translate-y-25",
           },
-          { id: "8", src: "/services/web_07.svg", translateY: "" },
+          { id: "8", src: "/Services/web_07.svg", translateY: "" },
         ],
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
@@ -11555,7 +11555,7 @@ export const services = [
         slug: "influencer-performance-marketing",
         title: "Influencer Performance Marketing",
         heading: "Influencer Performance Marketing That Drives Real Results",
-        imageUrl: "/services/Rectangle_52.png",
+        imageUrl: "/Services/Rectangle_52.png",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -11876,19 +11876,19 @@ export const services = [
         ],
         processCardData: [
           {
-            image: "/services/01.svg",
+            image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
               "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
-            image: "/services/02.svg",
+            image: "/Services/02.svg",
             heading: "Website Audit & Strategy",
             paragraph:
               "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
           },
           {
-            image: "/services/03.svg",
+            image: "/Services/03.svg",
             heading: "Build, Launch & Optimize",
             paragraph:
               "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
@@ -11965,28 +11965,28 @@ export const services = [
         portfolioData: [
           {
             id: "1",
-            src: "/services/web_01.svg",
+            src: "/Services/web_01.svg",
             translateY: "-translate-y-25",
           },
-          { id: "2", src: "/services/web_02.svg", translateY: "" },
+          { id: "2", src: "/Services/web_02.svg", translateY: "" },
           {
             id: "3",
-            src: "/services/web_02.svg",
+            src: "/Services/web_02.svg",
             translateY: "-translate-y-25",
           },
-          { id: "4", src: "/services/web_03.svg", translateY: "" },
+          { id: "4", src: "/Services/web_03.svg", translateY: "" },
           {
             id: "5",
-            src: "/services/web_04.svg",
+            src: "/Services/web_04.svg",
             translateY: "-translate-y-25",
           },
-          { id: "6", src: "/services/web_05.svg", translateY: "" },
+          { id: "6", src: "/Services/web_05.svg", translateY: "" },
           {
             id: "7",
-            src: "/services/web_06.svg",
+            src: "/Services/web_06.svg",
             translateY: "-translate-y-25",
           },
-          { id: "8", src: "/services/web_07.svg", translateY: "" },
+          { id: "8", src: "/Services/web_07.svg", translateY: "" },
         ],
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
@@ -11995,7 +11995,7 @@ export const services = [
         slug: "app-performance-marketing",
         title: "App Performance Marketing",
         heading: "App Performance Marketing That Drives Real Results",
-        imageUrl: "/services/Rectangle_52.png",
+        imageUrl: "/Services/Rectangle_52.png",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -12316,19 +12316,19 @@ export const services = [
         ],
         processCardData: [
           {
-            image: "/services/01.svg",
+            image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
               "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
-            image: "/services/02.svg",
+            image: "/Services/02.svg",
             heading: "Website Audit & Strategy",
             paragraph:
               "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
           },
           {
-            image: "/services/03.svg",
+            image: "/Services/03.svg",
             heading: "Build, Launch & Optimize",
             paragraph:
               "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
@@ -12405,28 +12405,28 @@ export const services = [
         portfolioData: [
           {
             id: "1",
-            src: "/services/web_01.svg",
+            src: "/Services/web_01.svg",
             translateY: "-translate-y-25",
           },
-          { id: "2", src: "/services/web_02.svg", translateY: "" },
+          { id: "2", src: "/Services/web_02.svg", translateY: "" },
           {
             id: "3",
-            src: "/services/web_02.svg",
+            src: "/Services/web_02.svg",
             translateY: "-translate-y-25",
           },
-          { id: "4", src: "/services/web_03.svg", translateY: "" },
+          { id: "4", src: "/Services/web_03.svg", translateY: "" },
           {
             id: "5",
-            src: "/services/web_04.svg",
+            src: "/Services/web_04.svg",
             translateY: "-translate-y-25",
           },
-          { id: "6", src: "/services/web_05.svg", translateY: "" },
+          { id: "6", src: "/Services/web_05.svg", translateY: "" },
           {
             id: "7",
-            src: "/services/web_06.svg",
+            src: "/Services/web_06.svg",
             translateY: "-translate-y-25",
           },
-          { id: "8", src: "/services/web_07.svg", translateY: "" },
+          { id: "8", src: "/Services/web_07.svg", translateY: "" },
         ],
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
@@ -12439,7 +12439,7 @@ export const services = [
     slug: "logo-design-branding",
     title: "Logo Design & Branding",
     heading: "Create a Strong Brand Identity",
-    imageUrl: "/services/Rectangle_52.png",
+    imageUrl: "/Services/Rectangle_52.png",
     description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
     points: [
       "Custom Website Design",
@@ -12663,19 +12663,19 @@ export const services = [
     ],
     processCardData: [
       {
-        image: "/services/01.svg",
+        image: "/Services/01.svg",
         heading: "Book a Strategy Call",
         paragraph:
           "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
       },
       {
-        image: "/services/02.svg",
+        image: "/Services/02.svg",
         heading: "Website Audit & Strategy",
         paragraph:
           "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
       },
       {
-        image: "/services/03.svg",
+        image: "/Services/03.svg",
         heading: "Build, Launch & Optimize",
         paragraph:
           "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
@@ -12750,14 +12750,14 @@ export const services = [
       },
     ],
     portfolioData: [
-      { id: "1", src: "/services/web_01.svg", translateY: "-translate-y-25" },
-      { id: "2", src: "/services/web_02.svg", translateY: "" },
-      { id: "3", src: "/services/web_02.svg", translateY: "-translate-y-25" },
-      { id: "4", src: "/services/web_03.svg", translateY: "" },
-      { id: "5", src: "/services/web_04.svg", translateY: "-translate-y-25" },
-      { id: "6", src: "/services/web_05.svg", translateY: "" },
-      { id: "7", src: "/services/web_06.svg", translateY: "-translate-y-25" },
-      { id: "8", src: "/services/web_07.svg", translateY: "" },
+      { id: "1", src: "/Services/web_01.svg", translateY: "-translate-y-25" },
+      { id: "2", src: "/Services/web_02.svg", translateY: "" },
+      { id: "3", src: "/Services/web_02.svg", translateY: "-translate-y-25" },
+      { id: "4", src: "/Services/web_03.svg", translateY: "" },
+      { id: "5", src: "/Services/web_04.svg", translateY: "-translate-y-25" },
+      { id: "6", src: "/Services/web_05.svg", translateY: "" },
+      { id: "7", src: "/Services/web_06.svg", translateY: "-translate-y-25" },
+      { id: "8", src: "/Services/web_07.svg", translateY: "" },
     ],
     footnote:
       "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
@@ -12766,7 +12766,7 @@ export const services = [
         slug: "logo-design-visual-systems",
         title: "Logo Design & Visual Systems",
         heading: "Create a Strong Brand Identity",
-        imageUrl: "/services/Rectangle_52.png",
+        imageUrl: "/Services/Rectangle_52.png",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -13087,19 +13087,19 @@ export const services = [
         ],
         processCardData: [
           {
-            image: "/services/01.svg",
+            image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
               "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
-            image: "/services/02.svg",
+            image: "/Services/02.svg",
             heading: "Website Audit & Strategy",
             paragraph:
               "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
           },
           {
-            image: "/services/03.svg",
+            image: "/Services/03.svg",
             heading: "Build, Launch & Optimize",
             paragraph:
               "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
@@ -13176,28 +13176,28 @@ export const services = [
         portfolioData: [
           {
             id: "1",
-            src: "/services/web_01.svg",
+            src: "/Services/web_01.svg",
             translateY: "-translate-y-25",
           },
-          { id: "2", src: "/services/web_02.svg", translateY: "" },
+          { id: "2", src: "/Services/web_02.svg", translateY: "" },
           {
             id: "3",
-            src: "/services/web_02.svg",
+            src: "/Services/web_02.svg",
             translateY: "-translate-y-25",
           },
-          { id: "4", src: "/services/web_03.svg", translateY: "" },
+          { id: "4", src: "/Services/web_03.svg", translateY: "" },
           {
             id: "5",
-            src: "/services/web_04.svg",
+            src: "/Services/web_04.svg",
             translateY: "-translate-y-25",
           },
-          { id: "6", src: "/services/web_05.svg", translateY: "" },
+          { id: "6", src: "/Services/web_05.svg", translateY: "" },
           {
             id: "7",
-            src: "/services/web_06.svg",
+            src: "/Services/web_06.svg",
             translateY: "-translate-y-25",
           },
-          { id: "8", src: "/services/web_07.svg", translateY: "" },
+          { id: "8", src: "/Services/web_07.svg", translateY: "" },
         ],
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
@@ -13206,7 +13206,7 @@ export const services = [
         slug: "brand-guide-book",
         title: "Brand Guide Book",
         heading: "Create a Strong Brand Identity",
-        imageUrl: "/services/Rectangle_52.png",
+        imageUrl: "/Services/Rectangle_52.png",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -13527,19 +13527,19 @@ export const services = [
         ],
         processCardData: [
           {
-            image: "/services/01.svg",
+            image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
               "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
-            image: "/services/02.svg",
+            image: "/Services/02.svg",
             heading: "Website Audit & Strategy",
             paragraph:
               "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
           },
           {
-            image: "/services/03.svg",
+            image: "/Services/03.svg",
             heading: "Build, Launch & Optimize",
             paragraph:
               "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
@@ -13616,28 +13616,28 @@ export const services = [
         portfolioData: [
           {
             id: "1",
-            src: "/services/web_01.svg",
+            src: "/Services/web_01.svg",
             translateY: "-translate-y-25",
           },
-          { id: "2", src: "/services/web_02.svg", translateY: "" },
+          { id: "2", src: "/Services/web_02.svg", translateY: "" },
           {
             id: "3",
-            src: "/services/web_02.svg",
+            src: "/Services/web_02.svg",
             translateY: "-translate-y-25",
           },
-          { id: "4", src: "/services/web_03.svg", translateY: "" },
+          { id: "4", src: "/Services/web_03.svg", translateY: "" },
           {
             id: "5",
-            src: "/services/web_04.svg",
+            src: "/Services/web_04.svg",
             translateY: "-translate-y-25",
           },
-          { id: "6", src: "/services/web_05.svg", translateY: "" },
+          { id: "6", src: "/Services/web_05.svg", translateY: "" },
           {
             id: "7",
-            src: "/services/web_06.svg",
+            src: "/Services/web_06.svg",
             translateY: "-translate-y-25",
           },
-          { id: "8", src: "/services/web_07.svg", translateY: "" },
+          { id: "8", src: "/Services/web_07.svg", translateY: "" },
         ],
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
@@ -13646,7 +13646,7 @@ export const services = [
         slug: "playbook",
         title: "Playbook",
         heading: "Meta Ads That Convert",
-        imageUrl: "/services/Rectangle_52.png",
+        imageUrl: "/Services/Rectangle_52.png",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -13967,19 +13967,19 @@ export const services = [
         ],
         processCardData: [
           {
-            image: "/services/01.svg",
+            image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
               "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
-            image: "/services/02.svg",
+            image: "/Services/02.svg",
             heading: "Website Audit & Strategy",
             paragraph:
               "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
           },
           {
-            image: "/services/03.svg",
+            image: "/Services/03.svg",
             heading: "Build, Launch & Optimize",
             paragraph:
               "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
@@ -14056,28 +14056,28 @@ export const services = [
         portfolioData: [
           {
             id: "1",
-            src: "/services/web_01.svg",
+            src: "/Services/web_01.svg",
             translateY: "-translate-y-25",
           },
-          { id: "2", src: "/services/web_02.svg", translateY: "" },
+          { id: "2", src: "/Services/web_02.svg", translateY: "" },
           {
             id: "3",
-            src: "/services/web_02.svg",
+            src: "/Services/web_02.svg",
             translateY: "-translate-y-25",
           },
-          { id: "4", src: "/services/web_03.svg", translateY: "" },
+          { id: "4", src: "/Services/web_03.svg", translateY: "" },
           {
             id: "5",
-            src: "/services/web_04.svg",
+            src: "/Services/web_04.svg",
             translateY: "-translate-y-25",
           },
-          { id: "6", src: "/services/web_05.svg", translateY: "" },
+          { id: "6", src: "/Services/web_05.svg", translateY: "" },
           {
             id: "7",
-            src: "/services/web_06.svg",
+            src: "/Services/web_06.svg",
             translateY: "-translate-y-25",
           },
-          { id: "8", src: "/services/web_07.svg", translateY: "" },
+          { id: "8", src: "/Services/web_07.svg", translateY: "" },
         ],
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
@@ -14086,7 +14086,7 @@ export const services = [
         slug: "personal-branding",
         title: "Personal Branding",
         heading: "Build Your Personal Brand",
-        imageUrl: "/services/Rectangle_52.png",
+        imageUrl: "/Services/Rectangle_52.png",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -14407,19 +14407,19 @@ export const services = [
         ],
         processCardData: [
           {
-            image: "/services/01.svg",
+            image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
               "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
-            image: "/services/02.svg",
+            image: "/Services/02.svg",
             heading: "Website Audit & Strategy",
             paragraph:
               "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
           },
           {
-            image: "/services/03.svg",
+            image: "/Services/03.svg",
             heading: "Build, Launch & Optimize",
             paragraph:
               "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
@@ -14496,28 +14496,28 @@ export const services = [
         portfolioData: [
           {
             id: "1",
-            src: "/services/web_01.svg",
+            src: "/Services/web_01.svg",
             translateY: "-translate-y-25",
           },
-          { id: "2", src: "/services/web_02.svg", translateY: "" },
+          { id: "2", src: "/Services/web_02.svg", translateY: "" },
           {
             id: "3",
-            src: "/services/web_02.svg",
+            src: "/Services/web_02.svg",
             translateY: "-translate-y-25",
           },
-          { id: "4", src: "/services/web_03.svg", translateY: "" },
+          { id: "4", src: "/Services/web_03.svg", translateY: "" },
           {
             id: "5",
-            src: "/services/web_04.svg",
+            src: "/Services/web_04.svg",
             translateY: "-translate-y-25",
           },
-          { id: "6", src: "/services/web_05.svg", translateY: "" },
+          { id: "6", src: "/Services/web_05.svg", translateY: "" },
           {
             id: "7",
-            src: "/services/web_06.svg",
+            src: "/Services/web_06.svg",
             translateY: "-translate-y-25",
           },
-          { id: "8", src: "/services/web_07.svg", translateY: "" },
+          { id: "8", src: "/Services/web_07.svg", translateY: "" },
         ],
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
@@ -14526,7 +14526,7 @@ export const services = [
         slug: "video-motion-graphics",
         title: "Video & Motion Graphics",
         heading: "Video & Motion Graphics That Engage",
-        imageUrl: "/services/Rectangle_52.png",
+        imageUrl: "/Services/Rectangle_52.png",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -14847,19 +14847,19 @@ export const services = [
         ],
         processCardData: [
           {
-            image: "/services/01.svg",
+            image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
               "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
-            image: "/services/02.svg",
+            image: "/Services/02.svg",
             heading: "Website Audit & Strategy",
             paragraph:
               "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
           },
           {
-            image: "/services/03.svg",
+            image: "/Services/03.svg",
             heading: "Build, Launch & Optimize",
             paragraph:
               "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
@@ -14936,28 +14936,28 @@ export const services = [
         portfolioData: [
           {
             id: "1",
-            src: "/services/web_01.svg",
+            src: "/Services/web_01.svg",
             translateY: "-translate-y-25",
           },
-          { id: "2", src: "/services/web_02.svg", translateY: "" },
+          { id: "2", src: "/Services/web_02.svg", translateY: "" },
           {
             id: "3",
-            src: "/services/web_02.svg",
+            src: "/Services/web_02.svg",
             translateY: "-translate-y-25",
           },
-          { id: "4", src: "/services/web_03.svg", translateY: "" },
+          { id: "4", src: "/Services/web_03.svg", translateY: "" },
           {
             id: "5",
-            src: "/services/web_04.svg",
+            src: "/Services/web_04.svg",
             translateY: "-translate-y-25",
           },
-          { id: "6", src: "/services/web_05.svg", translateY: "" },
+          { id: "6", src: "/Services/web_05.svg", translateY: "" },
           {
             id: "7",
-            src: "/services/web_06.svg",
+            src: "/Services/web_06.svg",
             translateY: "-translate-y-25",
           },
-          { id: "8", src: "/services/web_07.svg", translateY: "" },
+          { id: "8", src: "/Services/web_07.svg", translateY: "" },
         ],
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
@@ -14966,7 +14966,7 @@ export const services = [
         slug: "brand-identity-development",
         title: "Brand Identity Development",
         heading: "Create a Strong Brand Identity",
-        imageUrl: "/services/Rectangle_52.png",
+        imageUrl: "/Services/Rectangle_52.png",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -15287,19 +15287,19 @@ export const services = [
         ],
         processCardData: [
           {
-            image: "/services/01.svg",
+            image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
               "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
-            image: "/services/02.svg",
+            image: "/Services/02.svg",
             heading: "Website Audit & Strategy",
             paragraph:
               "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
           },
           {
-            image: "/services/03.svg",
+            image: "/Services/03.svg",
             heading: "Build, Launch & Optimize",
             paragraph:
               "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
@@ -15376,28 +15376,28 @@ export const services = [
         portfolioData: [
           {
             id: "1",
-            src: "/services/web_01.svg",
+            src: "/Services/web_01.svg",
             translateY: "-translate-y-25",
           },
-          { id: "2", src: "/services/web_02.svg", translateY: "" },
+          { id: "2", src: "/Services/web_02.svg", translateY: "" },
           {
             id: "3",
-            src: "/services/web_02.svg",
+            src: "/Services/web_02.svg",
             translateY: "-translate-y-25",
           },
-          { id: "4", src: "/services/web_03.svg", translateY: "" },
+          { id: "4", src: "/Services/web_03.svg", translateY: "" },
           {
             id: "5",
-            src: "/services/web_04.svg",
+            src: "/Services/web_04.svg",
             translateY: "-translate-y-25",
           },
-          { id: "6", src: "/services/web_05.svg", translateY: "" },
+          { id: "6", src: "/Services/web_05.svg", translateY: "" },
           {
             id: "7",
-            src: "/services/web_06.svg",
+            src: "/Services/web_06.svg",
             translateY: "-translate-y-25",
           },
-          { id: "8", src: "/services/web_07.svg", translateY: "" },
+          { id: "8", src: "/Services/web_07.svg", translateY: "" },
         ],
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
@@ -15410,7 +15410,7 @@ export const services = [
     slug: "social-media-marketing-management",
     title: "Social Media Marketing Management",
     heading: "Grow Your Brand on Social Platforms",
-    imageUrl: "/services/Rectangle_52.png",
+    imageUrl: "/Services/Rectangle_52.png",
     description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
     points: [
       "Custom Website Design",
@@ -15634,19 +15634,19 @@ export const services = [
     ],
     processCardData: [
       {
-        image: "/services/01.svg",
+        image: "/Services/01.svg",
         heading: "Book a Strategy Call",
         paragraph:
           "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
       },
       {
-        image: "/services/02.svg",
+        image: "/Services/02.svg",
         heading: "Website Audit & Strategy",
         paragraph:
           "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
       },
       {
-        image: "/services/03.svg",
+        image: "/Services/03.svg",
         heading: "Build, Launch & Optimize",
         paragraph:
           "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
@@ -15721,14 +15721,14 @@ export const services = [
       },
     ],
     portfolioData: [
-      { id: "1", src: "/services/web_01.svg", translateY: "-translate-y-25" },
-      { id: "2", src: "/services/web_02.svg", translateY: "" },
-      { id: "3", src: "/services/web_02.svg", translateY: "-translate-y-25" },
-      { id: "4", src: "/services/web_03.svg", translateY: "" },
-      { id: "5", src: "/services/web_04.svg", translateY: "-translate-y-25" },
-      { id: "6", src: "/services/web_05.svg", translateY: "" },
-      { id: "7", src: "/services/web_06.svg", translateY: "-translate-y-25" },
-      { id: "8", src: "/services/web_07.svg", translateY: "" },
+      { id: "1", src: "/Services/web_01.svg", translateY: "-translate-y-25" },
+      { id: "2", src: "/Services/web_02.svg", translateY: "" },
+      { id: "3", src: "/Services/web_02.svg", translateY: "-translate-y-25" },
+      { id: "4", src: "/Services/web_03.svg", translateY: "" },
+      { id: "5", src: "/Services/web_04.svg", translateY: "-translate-y-25" },
+      { id: "6", src: "/Services/web_05.svg", translateY: "" },
+      { id: "7", src: "/Services/web_06.svg", translateY: "-translate-y-25" },
+      { id: "8", src: "/Services/web_07.svg", translateY: "" },
     ],
     footnote:
       "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
@@ -15737,7 +15737,7 @@ export const services = [
         slug: "profile-optimization",
         title: "Profile Optimization",
         heading: "Optimize Your Social Media Presence",
-        imageUrl: "/services/Rectangle_52.png",
+        imageUrl: "/Services/Rectangle_52.png",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -16058,19 +16058,19 @@ export const services = [
         ],
         processCardData: [
           {
-            image: "/services/01.svg",
+            image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
               "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
-            image: "/services/02.svg",
+            image: "/Services/02.svg",
             heading: "Website Audit & Strategy",
             paragraph:
               "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
           },
           {
-            image: "/services/03.svg",
+            image: "/Services/03.svg",
             heading: "Build, Launch & Optimize",
             paragraph:
               "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
@@ -16147,28 +16147,28 @@ export const services = [
         portfolioData: [
           {
             id: "1",
-            src: "/services/web_01.svg",
+            src: "/Services/web_01.svg",
             translateY: "-translate-y-25",
           },
-          { id: "2", src: "/services/web_02.svg", translateY: "" },
+          { id: "2", src: "/Services/web_02.svg", translateY: "" },
           {
             id: "3",
-            src: "/services/web_02.svg",
+            src: "/Services/web_02.svg",
             translateY: "-translate-y-25",
           },
-          { id: "4", src: "/services/web_03.svg", translateY: "" },
+          { id: "4", src: "/Services/web_03.svg", translateY: "" },
           {
             id: "5",
-            src: "/services/web_04.svg",
+            src: "/Services/web_04.svg",
             translateY: "-translate-y-25",
           },
-          { id: "6", src: "/services/web_05.svg", translateY: "" },
+          { id: "6", src: "/Services/web_05.svg", translateY: "" },
           {
             id: "7",
-            src: "/services/web_06.svg",
+            src: "/Services/web_06.svg",
             translateY: "-translate-y-25",
           },
-          { id: "8", src: "/services/web_07.svg", translateY: "" },
+          { id: "8", src: "/Services/web_07.svg", translateY: "" },
         ],
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
@@ -16177,7 +16177,7 @@ export const services = [
         slug: "high-impact-content-systems",
         title: "High-Impact Content Systems",
         heading: "Create a Strong Brand Identity",
-        imageUrl: "/services/Rectangle_52.png",
+        imageUrl: "/Services/Rectangle_52.png",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -16498,19 +16498,19 @@ export const services = [
         ],
         processCardData: [
           {
-            image: "/services/01.svg",
+            image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
               "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
-            image: "/services/02.svg",
+            image: "/Services/02.svg",
             heading: "Website Audit & Strategy",
             paragraph:
               "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
           },
           {
-            image: "/services/03.svg",
+            image: "/Services/03.svg",
             heading: "Build, Launch & Optimize",
             paragraph:
               "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
@@ -16587,28 +16587,28 @@ export const services = [
         portfolioData: [
           {
             id: "1",
-            src: "/services/web_01.svg",
+            src: "/Services/web_01.svg",
             translateY: "-translate-y-25",
           },
-          { id: "2", src: "/services/web_02.svg", translateY: "" },
+          { id: "2", src: "/Services/web_02.svg", translateY: "" },
           {
             id: "3",
-            src: "/services/web_02.svg",
+            src: "/Services/web_02.svg",
             translateY: "-translate-y-25",
           },
-          { id: "4", src: "/services/web_03.svg", translateY: "" },
+          { id: "4", src: "/Services/web_03.svg", translateY: "" },
           {
             id: "5",
-            src: "/services/web_04.svg",
+            src: "/Services/web_04.svg",
             translateY: "-translate-y-25",
           },
-          { id: "6", src: "/services/web_05.svg", translateY: "" },
+          { id: "6", src: "/Services/web_05.svg", translateY: "" },
           {
             id: "7",
-            src: "/services/web_06.svg",
+            src: "/Services/web_06.svg",
             translateY: "-translate-y-25",
           },
-          { id: "8", src: "/services/web_07.svg", translateY: "" },
+          { id: "8", src: "/Services/web_07.svg", translateY: "" },
         ],
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
@@ -16617,7 +16617,7 @@ export const services = [
         slug: "algorithm-optimized-distribution",
         title: "Algorithm Optimized Distribution",
         heading: "Algorithm Optimized Distribution Services",
-        imageUrl: "/services/Rectangle_52.png",
+        imageUrl: "/Services/Rectangle_52.png",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -16938,19 +16938,19 @@ export const services = [
         ],
         processCardData: [
           {
-            image: "/services/01.svg",
+            image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
               "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
-            image: "/services/02.svg",
+            image: "/Services/02.svg",
             heading: "Website Audit & Strategy",
             paragraph:
               "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
           },
           {
-            image: "/services/03.svg",
+            image: "/Services/03.svg",
             heading: "Build, Launch & Optimize",
             paragraph:
               "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
@@ -17027,28 +17027,28 @@ export const services = [
         portfolioData: [
           {
             id: "1",
-            src: "/services/web_01.svg",
+            src: "/Services/web_01.svg",
             translateY: "-translate-y-25",
           },
-          { id: "2", src: "/services/web_02.svg", translateY: "" },
+          { id: "2", src: "/Services/web_02.svg", translateY: "" },
           {
             id: "3",
-            src: "/services/web_02.svg",
+            src: "/Services/web_02.svg",
             translateY: "-translate-y-25",
           },
-          { id: "4", src: "/services/web_03.svg", translateY: "" },
+          { id: "4", src: "/Services/web_03.svg", translateY: "" },
           {
             id: "5",
-            src: "/services/web_04.svg",
+            src: "/Services/web_04.svg",
             translateY: "-translate-y-25",
           },
-          { id: "6", src: "/services/web_05.svg", translateY: "" },
+          { id: "6", src: "/Services/web_05.svg", translateY: "" },
           {
             id: "7",
-            src: "/services/web_06.svg",
+            src: "/Services/web_06.svg",
             translateY: "-translate-y-25",
           },
-          { id: "8", src: "/services/web_07.svg", translateY: "" },
+          { id: "8", src: "/Services/web_07.svg", translateY: "" },
         ],
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
@@ -17057,7 +17057,7 @@ export const services = [
         slug: "conversion-focused-profile-architecture",
         title: "Conversion-Focused Profile Architecture",
         heading: "Conversion-Focused Profile Architecture",
-        imageUrl: "/services/Rectangle_52.png",
+        imageUrl: "/Services/Rectangle_52.png",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -17378,19 +17378,19 @@ export const services = [
         ],
         processCardData: [
           {
-            image: "/services/01.svg",
+            image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
               "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
-            image: "/services/02.svg",
+            image: "/Services/02.svg",
             heading: "Website Audit & Strategy",
             paragraph:
               "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
           },
           {
-            image: "/services/03.svg",
+            image: "/Services/03.svg",
             heading: "Build, Launch & Optimize",
             paragraph:
               "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
@@ -17467,28 +17467,28 @@ export const services = [
         portfolioData: [
           {
             id: "1",
-            src: "/services/web_01.svg",
+            src: "/Services/web_01.svg",
             translateY: "-translate-y-25",
           },
-          { id: "2", src: "/services/web_02.svg", translateY: "" },
+          { id: "2", src: "/Services/web_02.svg", translateY: "" },
           {
             id: "3",
-            src: "/services/web_02.svg",
+            src: "/Services/web_02.svg",
             translateY: "-translate-y-25",
           },
-          { id: "4", src: "/services/web_03.svg", translateY: "" },
+          { id: "4", src: "/Services/web_03.svg", translateY: "" },
           {
             id: "5",
-            src: "/services/web_04.svg",
+            src: "/Services/web_04.svg",
             translateY: "-translate-y-25",
           },
-          { id: "6", src: "/services/web_05.svg", translateY: "" },
+          { id: "6", src: "/Services/web_05.svg", translateY: "" },
           {
             id: "7",
-            src: "/services/web_06.svg",
+            src: "/Services/web_06.svg",
             translateY: "-translate-y-25",
           },
-          { id: "8", src: "/services/web_07.svg", translateY: "" },
+          { id: "8", src: "/Services/web_07.svg", translateY: "" },
         ],
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
@@ -17497,7 +17497,7 @@ export const services = [
         slug: "trend-intelligence-reach-amplification",
         title: "Trend Intelligence & Reach Amplification",
         heading: "Trend Intelligence & Reach Amplification That Engages",
-        imageUrl: "/services/Rectangle_52.png",
+        imageUrl: "/Services/Rectangle_52.png",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -17818,19 +17818,19 @@ export const services = [
         ],
         processCardData: [
           {
-            image: "/services/01.svg",
+            image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
               "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
-            image: "/services/02.svg",
+            image: "/Services/02.svg",
             heading: "Website Audit & Strategy",
             paragraph:
               "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
           },
           {
-            image: "/services/03.svg",
+            image: "/Services/03.svg",
             heading: "Build, Launch & Optimize",
             paragraph:
               "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
@@ -17907,28 +17907,28 @@ export const services = [
         portfolioData: [
           {
             id: "1",
-            src: "/services/web_01.svg",
+            src: "/Services/web_01.svg",
             translateY: "-translate-y-25",
           },
-          { id: "2", src: "/services/web_02.svg", translateY: "" },
+          { id: "2", src: "/Services/web_02.svg", translateY: "" },
           {
             id: "3",
-            src: "/services/web_02.svg",
+            src: "/Services/web_02.svg",
             translateY: "-translate-y-25",
           },
-          { id: "4", src: "/services/web_03.svg", translateY: "" },
+          { id: "4", src: "/Services/web_03.svg", translateY: "" },
           {
             id: "5",
-            src: "/services/web_04.svg",
+            src: "/Services/web_04.svg",
             translateY: "-translate-y-25",
           },
-          { id: "6", src: "/services/web_05.svg", translateY: "" },
+          { id: "6", src: "/Services/web_05.svg", translateY: "" },
           {
             id: "7",
-            src: "/services/web_06.svg",
+            src: "/Services/web_06.svg",
             translateY: "-translate-y-25",
           },
-          { id: "8", src: "/services/web_07.svg", translateY: "" },
+          { id: "8", src: "/Services/web_07.svg", translateY: "" },
         ],
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
@@ -17941,7 +17941,7 @@ export const services = [
     slug: "content-marketing",
     title: "Content Marketing Management",
     heading: "Grow Your Brand with Strategic Content",
-    imageUrl: "/services/Rectangle_52.png",
+    imageUrl: "/Services/Rectangle_52.png",
     description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
     points: [
       "Custom Website Design",
@@ -18165,19 +18165,19 @@ export const services = [
     ],
     processCardData: [
       {
-        image: "/services/01.svg",
+        image: "/Services/01.svg",
         heading: "Book a Strategy Call",
         paragraph:
           "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
       },
       {
-        image: "/services/02.svg",
+        image: "/Services/02.svg",
         heading: "Website Audit & Strategy",
         paragraph:
           "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
       },
       {
-        image: "/services/03.svg",
+        image: "/Services/03.svg",
         heading: "Build, Launch & Optimize",
         paragraph:
           "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
@@ -18252,14 +18252,14 @@ export const services = [
       },
     ],
     portfolioData: [
-      { id: "1", src: "/services/web_01.svg", translateY: "-translate-y-25" },
-      { id: "2", src: "/services/web_02.svg", translateY: "" },
-      { id: "3", src: "/services/web_02.svg", translateY: "-translate-y-25" },
-      { id: "4", src: "/services/web_03.svg", translateY: "" },
-      { id: "5", src: "/services/web_04.svg", translateY: "-translate-y-25" },
-      { id: "6", src: "/services/web_05.svg", translateY: "" },
-      { id: "7", src: "/services/web_06.svg", translateY: "-translate-y-25" },
-      { id: "8", src: "/services/web_07.svg", translateY: "" },
+      { id: "1", src: "/Services/web_01.svg", translateY: "-translate-y-25" },
+      { id: "2", src: "/Services/web_02.svg", translateY: "" },
+      { id: "3", src: "/Services/web_02.svg", translateY: "-translate-y-25" },
+      { id: "4", src: "/Services/web_03.svg", translateY: "" },
+      { id: "5", src: "/Services/web_04.svg", translateY: "-translate-y-25" },
+      { id: "6", src: "/Services/web_05.svg", translateY: "" },
+      { id: "7", src: "/Services/web_06.svg", translateY: "-translate-y-25" },
+      { id: "8", src: "/Services/web_07.svg", translateY: "" },
     ],
     footnote:
       "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
@@ -18268,7 +18268,7 @@ export const services = [
         slug: "email-marketing",
         title: "Email Marketing",
         heading: "Engage Your Audience with Targeted Email Campaigns",
-        imageUrl: "/services/Rectangle_52.png",
+        imageUrl: "/Services/Rectangle_52.png",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -18589,19 +18589,19 @@ export const services = [
         ],
         processCardData: [
           {
-            image: "/services/01.svg",
+            image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
               "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
-            image: "/services/02.svg",
+            image: "/Services/02.svg",
             heading: "Website Audit & Strategy",
             paragraph:
               "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
           },
           {
-            image: "/services/03.svg",
+            image: "/Services/03.svg",
             heading: "Build, Launch & Optimize",
             paragraph:
               "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
@@ -18678,28 +18678,28 @@ export const services = [
         portfolioData: [
           {
             id: "1",
-            src: "/services/web_01.svg",
+            src: "/Services/web_01.svg",
             translateY: "-translate-y-25",
           },
-          { id: "2", src: "/services/web_02.svg", translateY: "" },
+          { id: "2", src: "/Services/web_02.svg", translateY: "" },
           {
             id: "3",
-            src: "/services/web_02.svg",
+            src: "/Services/web_02.svg",
             translateY: "-translate-y-25",
           },
-          { id: "4", src: "/services/web_03.svg", translateY: "" },
+          { id: "4", src: "/Services/web_03.svg", translateY: "" },
           {
             id: "5",
-            src: "/services/web_04.svg",
+            src: "/Services/web_04.svg",
             translateY: "-translate-y-25",
           },
-          { id: "6", src: "/services/web_05.svg", translateY: "" },
+          { id: "6", src: "/Services/web_05.svg", translateY: "" },
           {
             id: "7",
-            src: "/services/web_06.svg",
+            src: "/Services/web_06.svg",
             translateY: "-translate-y-25",
           },
-          { id: "8", src: "/services/web_07.svg", translateY: "" },
+          { id: "8", src: "/Services/web_07.svg", translateY: "" },
         ],
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
@@ -18708,7 +18708,7 @@ export const services = [
         slug: "seo-content-writing",
         title: "SEO & Content Writing",
         heading: "SEO & Content Writing Services",
-        imageUrl: "/services/Rectangle_52.png",
+        imageUrl: "/Services/Rectangle_52.png",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -19029,19 +19029,19 @@ export const services = [
         ],
         processCardData: [
           {
-            image: "/services/01.svg",
+            image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
               "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
-            image: "/services/02.svg",
+            image: "/Services/02.svg",
             heading: "Website Audit & Strategy",
             paragraph:
               "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
           },
           {
-            image: "/services/03.svg",
+            image: "/Services/03.svg",
             heading: "Build, Launch & Optimize",
             paragraph:
               "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
@@ -19118,28 +19118,28 @@ export const services = [
         portfolioData: [
           {
             id: "1",
-            src: "/services/web_01.svg",
+            src: "/Services/web_01.svg",
             translateY: "-translate-y-25",
           },
-          { id: "2", src: "/services/web_02.svg", translateY: "" },
+          { id: "2", src: "/Services/web_02.svg", translateY: "" },
           {
             id: "3",
-            src: "/services/web_02.svg",
+            src: "/Services/web_02.svg",
             translateY: "-translate-y-25",
           },
-          { id: "4", src: "/services/web_03.svg", translateY: "" },
+          { id: "4", src: "/Services/web_03.svg", translateY: "" },
           {
             id: "5",
-            src: "/services/web_04.svg",
+            src: "/Services/web_04.svg",
             translateY: "-translate-y-25",
           },
-          { id: "6", src: "/services/web_05.svg", translateY: "" },
+          { id: "6", src: "/Services/web_05.svg", translateY: "" },
           {
             id: "7",
-            src: "/services/web_06.svg",
+            src: "/Services/web_06.svg",
             translateY: "-translate-y-25",
           },
-          { id: "8", src: "/services/web_07.svg", translateY: "" },
+          { id: "8", src: "/Services/web_07.svg", translateY: "" },
         ],
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
@@ -19148,7 +19148,7 @@ export const services = [
         slug: "copywriting",
         title: "Copywriting",
         heading: "Professional Copywriting Services",
-        imageUrl: "/services/Rectangle_52.png",
+        imageUrl: "/Services/Rectangle_52.png",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -19469,19 +19469,19 @@ export const services = [
         ],
         processCardData: [
           {
-            image: "/services/01.svg",
+            image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
               "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
-            image: "/services/02.svg",
+            image: "/Services/02.svg",
             heading: "Website Audit & Strategy",
             paragraph:
               "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
           },
           {
-            image: "/services/03.svg",
+            image: "/Services/03.svg",
             heading: "Build, Launch & Optimize",
             paragraph:
               "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
@@ -19558,28 +19558,28 @@ export const services = [
         portfolioData: [
           {
             id: "1",
-            src: "/services/web_01.svg",
+            src: "/Services/web_01.svg",
             translateY: "-translate-y-25",
           },
-          { id: "2", src: "/services/web_02.svg", translateY: "" },
+          { id: "2", src: "/Services/web_02.svg", translateY: "" },
           {
             id: "3",
-            src: "/services/web_02.svg",
+            src: "/Services/web_02.svg",
             translateY: "-translate-y-25",
           },
-          { id: "4", src: "/services/web_03.svg", translateY: "" },
+          { id: "4", src: "/Services/web_03.svg", translateY: "" },
           {
             id: "5",
-            src: "/services/web_04.svg",
+            src: "/Services/web_04.svg",
             translateY: "-translate-y-25",
           },
-          { id: "6", src: "/services/web_05.svg", translateY: "" },
+          { id: "6", src: "/Services/web_05.svg", translateY: "" },
           {
             id: "7",
-            src: "/services/web_06.svg",
+            src: "/Services/web_06.svg",
             translateY: "-translate-y-25",
           },
-          { id: "8", src: "/services/web_07.svg", translateY: "" },
+          { id: "8", src: "/Services/web_07.svg", translateY: "" },
         ],
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
@@ -19588,7 +19588,7 @@ export const services = [
         slug: "conversion-rate-optimization-cro",
         title: "Conversion Rate Optimization (CRO)",
         heading: "Conversion Rate Optimization (CRO)",
-        imageUrl: "/services/Rectangle_52.png",
+        imageUrl: "/Services/Rectangle_52.png",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -19909,19 +19909,19 @@ export const services = [
         ],
         processCardData: [
           {
-            image: "/services/01.svg",
+            image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
               "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
-            image: "/services/02.svg",
+            image: "/Services/02.svg",
             heading: "Website Audit & Strategy",
             paragraph:
               "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
           },
           {
-            image: "/services/03.svg",
+            image: "/Services/03.svg",
             heading: "Build, Launch & Optimize",
             paragraph:
               "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
@@ -19998,28 +19998,28 @@ export const services = [
         portfolioData: [
           {
             id: "1",
-            src: "/services/web_01.svg",
+            src: "/Services/web_01.svg",
             translateY: "-translate-y-25",
           },
-          { id: "2", src: "/services/web_02.svg", translateY: "" },
+          { id: "2", src: "/Services/web_02.svg", translateY: "" },
           {
             id: "3",
-            src: "/services/web_02.svg",
+            src: "/Services/web_02.svg",
             translateY: "-translate-y-25",
           },
-          { id: "4", src: "/services/web_03.svg", translateY: "" },
+          { id: "4", src: "/Services/web_03.svg", translateY: "" },
           {
             id: "5",
-            src: "/services/web_04.svg",
+            src: "/Services/web_04.svg",
             translateY: "-translate-y-25",
           },
-          { id: "6", src: "/services/web_05.svg", translateY: "" },
+          { id: "6", src: "/Services/web_05.svg", translateY: "" },
           {
             id: "7",
-            src: "/services/web_06.svg",
+            src: "/Services/web_06.svg",
             translateY: "-translate-y-25",
           },
-          { id: "8", src: "/services/web_07.svg", translateY: "" },
+          { id: "8", src: "/Services/web_07.svg", translateY: "" },
         ],
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",

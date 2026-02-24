@@ -129,7 +129,7 @@ const ContactUsMobile = () => {
         <div
           className="w-full px-4 py-6 rounded-lg relative"
           style={{
-            backgroundImage: `url('${isDarkMode ? '/home/Frame_161.svg' : '/home/Frame_163_Light.svg'}')`,
+            backgroundImage: `url('${isDarkMode ? '/Home/Frame_161.svg' : '/Home/Frame_163_Light.svg'}')`,
             backgroundColor: "transparent",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",

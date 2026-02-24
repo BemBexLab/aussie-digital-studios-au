@@ -16,14 +16,14 @@ type PortfolioProps = {
 };
 
 const defaultPortfolioData = [
-  { id: "1", src: "/services/web_01.svg", translateY: "-translate-y-25" },
-  { id: "2", src: "/services/web_02.svg", translateY: "" },
-  { id: "3", src: "/services/web_02.svg", translateY: "-translate-y-25" },
-  { id: "4", src: "/services/web_03.svg", translateY: "" },
-  { id: "5", src: "/services/web_04.svg", translateY: "-translate-y-25" },
-  { id: "6", src: "/services/web_05.svg", translateY: "" },
-  { id: "7", src: "/services/web_06.svg", translateY: "-translate-y-25" },
-  { id: "8", src: "/services/web_07.svg", translateY: "" },
+  { id: "1", src: "/Services/web_01.svg", translateY: "-translate-y-25" },
+  { id: "2", src: "/Services/web_02.svg", translateY: "" },
+  { id: "3", src: "/Services/web_02.svg", translateY: "-translate-y-25" },
+  { id: "4", src: "/Services/web_03.svg", translateY: "" },
+  { id: "5", src: "/Services/web_04.svg", translateY: "-translate-y-25" },
+  { id: "6", src: "/Services/web_05.svg", translateY: "" },
+  { id: "7", src: "/Services/web_06.svg", translateY: "-translate-y-25" },
+  { id: "8", src: "/Services/web_07.svg", translateY: "" },
 ];
 
 const Portfolio = ({ service }: PortfolioProps) => {
@@ -60,7 +60,7 @@ const Portfolio = ({ service }: PortfolioProps) => {
     <>
       <PortfolioMobile service={service} />
       <section className="hidden sm:block py-10" style={{
-        backgroundImage: `url("${isDarkMode ? '/home/CTA.svg' : '/home/Frame_167_Light.svg'}")`,
+        backgroundImage: `url("${isDarkMode ? '/Home/CTA.svg' : '/Home/Frame_167_Light.svg'}")`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
     }}>

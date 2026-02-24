@@ -19,7 +19,7 @@ export default function MainServices() {
             <path d="M20 9V5H4V9H20ZM20 11H4V19H20V11ZM3 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3ZM5 12H8V17H5V12ZM5 6H7V8H5V6ZM9 6H11V8H9V6Z" />
           </svg>
         ),
-        link: "/services/web-design-development"
+        link: "/Services/web-design-development"
     },
     {
         title: "Search Engine Optimization",
@@ -33,7 +33,7 @@ export default function MainServices() {
             <path d="M15.5 1h-8C6.12 1 5 2.12 5 3.5v17C5 21.88 6.12 23 7.5 23h8c1.38 0 2.5-1.12 2.5-2.5v-17C18 2.12 16.88 1 15.5 1zm-4 21c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4.5-4H7V4h9v14z" />
           </svg>
         ),
-        link: "/services/search-engine-optimization"
+        link: "/Services/search-engine-optimization"
     },
     {
         title: "Performance Marketing",
@@ -47,7 +47,7 @@ export default function MainServices() {
             <path d="M5 9.2h3V19H5zM10.6 5h2.9v14h-2.9zm5.6 8H19v6h-2.8z" />
           </svg>
         ),
-        link: "/services/performance-marketing"
+        link: "/Services/performance-marketing"
     },
     {
         title: "Logo Design & Branding",
@@ -61,7 +61,7 @@ export default function MainServices() {
             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5-9h10v2H7z" />
           </svg>
         ),
-        link: "/services/logo-design-branding"
+        link: "/Services/logo-design-branding"
     },
     {
         title: "Social Media Marketing & Management",
@@ -75,7 +75,7 @@ export default function MainServices() {
             <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5.04-6.71l-2.75 3.54-1.3-1.54c-.2-.24-.58-.27-.85-.07-.27.2-.3.58-.1.85l1.48 1.76c.2.24.58.27.85.07L16.6 9.5c.27-.2.3-.58.1-.85-.27-.2-.61-.17-.85.05z" />
           </svg>
         ),
-        link: "/services/social-media-marketing-management"
+        link: "/Services/social-media-marketing-management"
     },
     {
         title: "Content Marketing",
@@ -89,7 +89,7 @@ export default function MainServices() {
             <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm0-4H8V8h8v2z" />
           </svg>
         ),
-        link: "/services/content-marketing"
+        link: "/Services/content-marketing"
     },
     
   

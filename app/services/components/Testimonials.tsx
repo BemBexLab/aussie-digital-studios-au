@@ -53,31 +53,31 @@ const Testimonials = () => {
           {/* Stars goes here */}
           <div className="flex items-center flex-row gap-1">
             <Image
-              src="/home/Star_5.svg"
+              src="/Home/Star_5.svg"
               width={25}
               height={25}
               alt="Description of my image"
             />
             <Image
-              src="/home/Star_5.svg"
+              src="/Home/Star_5.svg"
               width={25}
               height={25}
               alt="Description of my image"
             />
             <Image
-              src="/home/Star_5.svg"
+              src="/Home/Star_5.svg"
               width={25}
               height={25}
               alt="Description of my image"
             />
             <Image
-              src="/home/Star_5.svg"
+              src="/Home/Star_5.svg"
               width={25}
               height={25}
               alt="Description of my image"
             />
             <Image
-              src="/home/Star_5.svg"
+              src="/Home/Star_5.svg"
               width={25}
               height={25}
               alt="Description of my image"

@@ -34,7 +34,7 @@ const WhyChoose = () => {
           <div className="w-full lg:w-1/2 flex-shrink-0">
             <Image
               className="w-full h-auto rounded-2xl object-cover"
-              src="/services/Rectangle_52.webp"
+              src="/Services/Rectangle_52.webp"
               alt="Why Choose Us"
               width={600}
               height={400}
