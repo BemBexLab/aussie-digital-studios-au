@@ -123,20 +123,18 @@ const ServicesDropdown = () => {
           e.preventDefault();
           setIsServicesDropdownOpen(!isServicesDropdownOpen);
         }}
-        className={`text-sm font-semibold transition-colors whitespace-nowrap ${
+        className={`text-sm font-semibold transition-colors whitespace-nowrap flex flex-col items-center gap-1 leading-none ${
           active
             ? "text-[#4C8C74]"
             : "text-white opacity-50 hover:text-white hover:opacity-100"
         }`}
       >
-        <div className="flex flex-col items-center">
-          <span>Services</span>
-          <span
-            className={`mt-1 rounded-full w-2 h-2 ${
-              active ? "bg-[#4C8C74]" : "bg-transparent"
-            }`}
-          />
-        </div>
+        <span>Services</span>
+        <span
+          className={`mt-1 rounded-full w-2 h-2 ${
+            active ? "bg-[#4C8C74]" : "bg-transparent"
+          }`}
+        />
       </button>
 
       {/* Dropdown Panel */}

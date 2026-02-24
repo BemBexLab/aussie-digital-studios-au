@@ -116,6 +116,9 @@ export default function PortfolioWall() {
   const [isMobileInView, setIsMobileInView] = useState(false);
   const desktopHeadingRef = useRef<HTMLDivElement>(null);
   const mobileHeadingRef = useRef<HTMLDivElement>(null);
+  const isCompactCategory = ["logo design", "branding", "illustration"].includes(
+    selectedCategory.toLowerCase(),
+  );
 
   const filteredPosts = posts.filter((post) => {
     const cat = post.acf?.catogary;
@@ -305,6 +308,12 @@ export default function PortfolioWall() {
   };
 
   const handleNavigateOrOpen = (post: Post) => {
+    if (
+      selectedCategory.toLowerCase() === "figma design" &&
+      isFigmaCard(post)
+    ) {
+      return;
+    }
     const isModal = MODAL_CATEGORIES.some((cat) =>
       (Array.isArray(post.acf?.catogary)
         ? post.acf?.catogary
@@ -379,7 +388,11 @@ export default function PortfolioWall() {
         </div>
       )}
 
-      <section className="hidden md:block relative mt-25 my-20 max-[1250px]:px-4">
+      <section
+        className={`hidden md:block relative mt-25 my-20 max-[1250px]:px-4 ${
+          isCompactCategory ? "pb-16" : ""
+        }`}
+      >
         {/* Heading */}
         <div ref={desktopHeadingRef}>
           <motion.p
@@ -459,7 +472,11 @@ export default function PortfolioWall() {
               </button>
             </div>
           ) : (
-            <div className="grid grid-cols-2 max-[1250px]:grid-cols-1 gap-20">
+            <div
+              className={`grid grid-cols-2 max-[1250px]:grid-cols-1 gap-20 ${
+                isCompactCategory ? "mb-8" : ""
+              }`}
+            >
               {/* Portfolio Cards */}
               {filteredPosts.slice(0, itemsToShow).map((post: Post) => {
                 const image =
@@ -527,7 +544,7 @@ export default function PortfolioWall() {
                           isFigma
                             ? "overflow-hidden rounded-md"
                             : isCompact
-                              ? "overflow-hidden rounded-md h-[270px]"
+                              ? "overflow-hidden rounded-md h-[350px]"
                               : isFlexible
                                 ? "overflow-hidden rounded-md"
                                 : "overflow-hidden rounded-md h-[350px]"
@@ -548,7 +565,7 @@ export default function PortfolioWall() {
                             onLoad={() =>
                               handleImageLoad(post.id, FIGMA_VISIBLE_HEIGHT)
                             }
-                            className="w-full block will-change-transform rounded-3xl"
+                            className="w-full block will-change-transform rounded-lg"
                             style={{
                               transform:
                                 hoveredFigmaCard === post.id
@@ -577,8 +594,8 @@ export default function PortfolioWall() {
                             alt={title}
                             className={
                               isFlexible
-                                ? "w-auto h-auto object-contain transform transition-transform duration-500 ease-out group-hover:scale-105 will-change-transform rounded-xl"
-                                : "w-full h-full object-cover transform transition-transform duration-500 ease-out group-hover:scale-105 will-change-transform rounded-xl"
+                                ? "w-auto h-auto object-contain transform transition-transform duration-500 ease-out group-hover:scale-105 will-change-transform "
+                                : "w-full h-full object-cover transform transition-transform duration-500 ease-out group-hover:scale-105 will-change-transform "
                             }
                             onError={(e) => {
                               const target =
@@ -597,17 +614,19 @@ export default function PortfolioWall() {
                       </div>
 
                       <div className="mt-2 flex-1 flex flex-col justify-start overflow-hidden">
-                        <h2
-                          className="text-[#3A6EA5] text-lg font-semibold mt-2"
-                          style={{
-                            display: "-webkit-box",
-                            WebkitLineClamp: 2,
-                            WebkitBoxOrient: "vertical",
-                            overflow: "hidden",
-                          }}
-                        >
-                          {title}
-                        </h2>
+                        {categoryLabel?.toLowerCase() !== "print" && (
+                          <h2
+                            className="text-[#3A6EA5] text-lg font-semibold mt-2"
+                            style={{
+                              display: "-webkit-box",
+                              WebkitLineClamp: 2,
+                              WebkitBoxOrient: "vertical",
+                              overflow: "hidden",
+                            }}
+                          >
+                            {title}
+                          </h2>
+                        )}
                         <div className="flex gap-2 flex-wrap mt-1">
                           {categoryLabel && <Tag label={categoryLabel} />}
                         </div>
@@ -622,10 +641,14 @@ export default function PortfolioWall() {
 
         {/* Load more button */}
         {shouldRenderContent && filteredPosts.length > itemsToShow && (
-          <div className="mt-8 flex justify-center">
+          <div
+            className={`flex justify-center ${
+              isCompactCategory ? "mt-[102px]" : "mt-8"
+            }`}
+          >
             <button
               onClick={handleLoadMore}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-white bg-white/8 backdrop-blur-md border border-white/20 hover:bg-white/12 transition-shadow duration-150 shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#DE2F04]"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-white bg-white/8 backdrop-blur-md border border-white/20 hover:bg-white/12 transition-shadow duration-150 shadow-lg"
             >
               Load more
               <GoArrowDown />

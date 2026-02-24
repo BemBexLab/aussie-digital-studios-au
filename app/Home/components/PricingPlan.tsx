@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { motion } from "motion/react";
 // Mobile layout merged below; removed separate PricingPlanMobile file
 
@@ -19,7 +20,7 @@ const cardData = [
           "48–72 Hour Delivery",
           "PNG, JPG, PDF Files",
           "100% Ownership Rights",
-          "Money-Back Guarantee"
+          "Money-Back Guarantee",
         ],
       },
       {
@@ -34,7 +35,7 @@ const cardData = [
           "AI, EPS, PSD, PNG, SVG, PDF",
           "Social Media Kit (Profile + Cover)",
           "Brand Color Palette",
-          "Full Copyright Ownership"
+          "Full Copyright Ownership",
         ],
       },
       {
@@ -49,7 +50,7 @@ const cardData = [
           "MS Word & Print Templates",
           "All Source + Web Files",
           "Dedicated Project Manager",
-          "30-Day Post-Delivery Support"
+          "30-Day Post-Delivery Support",
         ],
       },
     ],
@@ -69,7 +70,7 @@ const cardData = [
           "PayPal + Stripe Integration",
           "Contact Form",
           "Basic SEO Setup",
-          "1 Week Support"
+          "1 Week Support",
         ],
       },
       {
@@ -84,7 +85,7 @@ const cardData = [
           "Google Analytics + Meta Pixel",
           "Inventory Management",
           "Speed Optimization",
-          "30-Day Support"
+          "30-Day Support",
         ],
       },
       {
@@ -99,7 +100,7 @@ const cardData = [
           "Abandoned Cart Recovery",
           "Multi-Currency & Language",
           "Advanced Reporting",
-          "90-Day Developer Support"
+          "90-Day Developer Support",
         ],
       },
     ],
@@ -118,7 +119,7 @@ const cardData = [
           "Basic SEO (Meta Tags, Sitemap)",
           "Fast Loading (Optimized Images)",
           "1 Email Address Setup",
-          "1 Week Support"
+          "1 Week Support",
         ],
       },
       {
@@ -132,7 +133,7 @@ const cardData = [
           "Social Media Integration",
           "Google Analytics",
           "SSL Certificate",
-          "30-Day Support & Training"
+          "30-Day Support & Training",
         ],
       },
       {
@@ -146,7 +147,7 @@ const cardData = [
           "API Connections",
           "Admin Panel",
           "Performance & Security Audit",
-          "60-Day Bug Fixing"
+          "60-Day Bug Fixing",
         ],
       },
     ],
@@ -164,7 +165,7 @@ const cardData = [
           "Basic Graphics",
           "Caption Writing",
           "Monthly Performance Report",
-          "Community Engagement (5 hrs/week)"
+          "Community Engagement (5 hrs/week)",
         ],
       },
       {
@@ -178,7 +179,7 @@ const cardData = [
           "Hashtag Strategy",
           "Competitor Analysis",
           "Engagement (10 hrs/week)",
-          "Bi-Weekly Reports"
+          "Bi-Weekly Reports",
         ],
       },
       {
@@ -193,7 +194,7 @@ const cardData = [
           "Ad Campaign Monitoring",
           "Dedicated Account Manager",
           "Weekly Strategy Calls",
-          "Full Analytics Dashboard"
+          "Full Analytics Dashboard",
         ],
       },
     ],
@@ -212,7 +213,7 @@ const cardData = [
           "2D Animation",
           "Background Music",
           "1 Revision",
-          "MP4 Delivery (HD)"
+          "MP4 Delivery (HD)",
         ],
       },
       {
@@ -226,7 +227,7 @@ const cardData = [
           "Smooth 2D Motion",
           "Sound Effects + Music",
           "Unlimited Revisions",
-          "Source Files + MP4"
+          "Source Files + MP4",
         ],
       },
       {
@@ -241,7 +242,7 @@ const cardData = [
           "Original Soundtrack",
           "Vertical + Horizontal Formats",
           "YouTube, Instagram, TikTok Cuts",
-          "30-Day Edits Included"
+          "30-Day Edits Included",
         ],
       },
     ],
@@ -259,7 +260,7 @@ const cardData = [
           "On-Page SEO (5 Pages)",
           "Keyword Research (5 Keywords)",
           "Monthly Ranking Report",
-          "Review Generation Strategy"
+          "Review Generation Strategy",
         ],
       },
       {
@@ -273,7 +274,7 @@ const cardData = [
           "Backlink Building (10 High-Quality Links)",
           "Competitor Gap Analysis",
           "Rank Tracking (20 Keywords)",
-          "Bi-Monthly Strategy Call"
+          "Bi-Monthly Strategy Call",
         ],
       },
       {
@@ -288,7 +289,7 @@ const cardData = [
           "Schema Markup Implementation",
           "E-A-T Optimization",
           "Dedicated SEO Manager",
-          "Custom Dashboard & Weekly Reports"
+          "Custom Dashboard & Weekly Reports",
         ],
       },
     ],
@@ -306,7 +307,7 @@ const cardData = [
           "Uptime Monitoring",
           "Security Scans",
           "1 Hour of Edits/Month",
-          "Malware Removal (If Detected)"
+          "Malware Removal (If Detected)",
         ],
       },
       {
@@ -320,7 +321,7 @@ const cardData = [
           "Broken Link Fixes",
           "Performance Optimization",
           "SSL Renewal Handling",
-          "Monthly Health Report"
+          "Monthly Health Report",
         ],
       },
       {
@@ -334,7 +335,7 @@ const cardData = [
           "Speed & Core Web Vitals Tuning",
           "Staging Environment Access",
           "Quarterly Strategy Review",
-          "Dedicated Tech Manager"
+          "Dedicated Tech Manager",
         ],
       },
     ],
@@ -352,7 +353,7 @@ const cardData = [
           "Typography Pairing",
           "Brand Voice Guidelines",
           "Social Media Banners",
-          "Basic Stationery (Card + Letterhead)"
+          "Basic Stationery (Card + Letterhead)",
         ],
       },
       {
@@ -367,7 +368,7 @@ const cardData = [
           "Email Signature Template",
           "Presentation (PPT) Template",
           "Social Media Content Templates",
-          "Print + Digital Asset Library"
+          "Print + Digital Asset Library",
         ],
       },
       {
@@ -382,7 +383,7 @@ const cardData = [
           "Internal Brand Playbook",
           "Merchandise Design Mockups",
           "Voice & Tone Handbook",
-          "Ongoing Brand Consultation (3 Sessions)"
+          "Ongoing Brand Consultation (3 Sessions)",
         ],
       },
     ],
@@ -404,13 +405,15 @@ const PricingPlan = () => {
           obs.disconnect();
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.2 },
     );
     obs.observe(el);
     return () => obs.disconnect();
   }, []);
   const [selectedService, setSelectedService] = React.useState("Logo");
-  const selectedData = cardData.find(item => item.service === selectedService);
+  const selectedData = cardData.find(
+    (item) => item.service === selectedService,
+  );
 
   return (
     <div ref={wrapperRef}>
@@ -439,10 +442,11 @@ const PricingPlan = () => {
             <button
               key={service.service}
               onClick={() => setSelectedService(service.service)}
-              className={`px-3 py-2 rounded-[6px] border cursor-pointer text-xs transition font-medium ${selectedService === service.service
+              className={`px-3 py-2 rounded-[6px] border cursor-pointer text-xs transition font-medium ${
+                selectedService === service.service
                   ? "border-[#4C8C74] text-white bg-[#4C8C74]"
                   : "text-gray-300 border-gray-600 hover:border-[#4C8C74] hover:text-[#4C8C74]"
-                }`}
+              }`}
             >
               {service.service}
             </button>
@@ -472,8 +476,7 @@ const PricingPlan = () => {
                 </span>
               </p>
               <p className="text-xs text-[#4C8C74] mb-3">
-                Up to {" "}
-                <span className="font-bold">$50%</span> referral AAR
+                Up to <span className="font-bold">$50%</span> referral AAR
               </p>
 
               <p className="font-semibold text-xs mb-2">Includes:</p>
@@ -521,7 +524,7 @@ const PricingPlan = () => {
       </div>
 
       {/* Tablet and Desktop view */}
-      <div className="hidden sm:block text-white py-12 sm:py-16 lg:py-20">
+      <div className="hidden sm:block text-white mt-5 sm:mt-4 lg:mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 justify-center">
           <motion.p
             className="text-center my-[7px] text-lg sm:text-xl font-medium text-[#4C8C74]"
@@ -546,10 +549,11 @@ const PricingPlan = () => {
               <button
                 key={service.service}
                 onClick={() => setSelectedService(service.service)}
-                className={`px-3 sm:px-4 py-2 rounded-[8px] border cursor-pointer text-xs sm:text-sm transition font-medium ${selectedService === service.service
+                className={`px-3 sm:px-4 py-2 rounded-[8px] border cursor-pointer text-xs sm:text-sm transition font-medium ${
+                  selectedService === service.service
                     ? "border-yellow-400 text-yellow-400 bg-yellow-400/10"
                     : "text-gray-400 border-gray-600 hover:border-yellow-400 hover:text-yellow-400"
-                  }`}
+                }`}
               >
                 {service.service}
               </button>
@@ -587,7 +591,9 @@ const PricingPlan = () => {
                   referral AAR
                 </p>
 
-                <p className="font-semibold text-sm sm:text-md mb-2 sm:mb-3">Includes:</p>
+                <p className="font-semibold text-sm sm:text-md mb-2 sm:mb-3">
+                  Includes:
+                </p>
                 <ul
                   role="list"
                   className="space-y-1 sm:space-y-1.5 mt-1 mb-4 sm:mb-6 text-[#4C8C74] overflow-y-auto pr-1 sm:pr-2 max-h-[160px] sm:max-h-[180px] flex-grow [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:bg-[#4C8C74] [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-[#202020] scrollbar-thin scrollbar-thumb-[#4C8C74] scrollbar-track-[#202020]"
@@ -611,7 +617,9 @@ const PricingPlan = () => {
                           d="M8.5 11.5 11 14l4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
                         />
                       </svg>
-                      <span className="text-xs sm:text-sm font-normal">{item}</span>
+                      <span className="text-xs sm:text-sm font-normal">
+                        {item}
+                      </span>
                     </li>
                   ))}
                 </ul>

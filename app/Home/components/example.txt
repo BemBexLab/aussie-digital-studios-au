@@ -1,55 +1,18 @@
-"use client";
-
-import Image from "next/image";
-import React, { useState, useEffect } from "react";
-import CustomPlanMobile from "./CustomPlanMobile";
-
-const CustomPlan = () => {
-  const [isDarkMode, setIsDarkMode] = useState(true);
-
-  useEffect(() => {
-    // Initial theme detection
-    const theme = localStorage.getItem("ads_theme");
-    setIsDarkMode(theme !== "light");
-
-    // Listen for theme changes via document class mutations
-    const handleThemeChange = () => {
-      const theme = localStorage.getItem("ads_theme");
-      setIsDarkMode(theme !== "light");
-    };
-
-    // Watch for class changes on document element
-    const observer = new MutationObserver(handleThemeChange);
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
-
-    // Also listen to storage changes (for cross-tab updates)
-    window.addEventListener("storage", handleThemeChange);
-
-    return () => {
-      observer.disconnect();
-      window.removeEventListener("storage", handleThemeChange);
-    };
-  }, []);
-
-  return (
-    <>
-      <CustomPlanMobile />
-      <section className="hidden sm:flex w-full justify-center items-center">
-      <div className="flex flex-col lg:flex-row w-[1200px] gap-2 lg:gap-4 items-center">
+<div className="flex flex-col lg:flex-row w-[1100px] gap-2 lg:gap-0 items-center">
         {/* Custom Plan Content */}
         <div
-          className="flex flex-col rounded-xl px-6 lg:px-6 py-8 lg:py-10 w-full lg:h-[250px] lg:w-[90%]"
-          style={isDarkMode ? {
+          className="flex flex-col rounded-xl px-6 lg:px-6 py-8 lg:py-10 w-full lg:w-[60%]"
+          style={{
             backgroundImage: `url('/Home/Custom_plans.webp')`,
             backgroundSize: "fill",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
-          } : {
-            backgroundColor: "#f9f1f1",
           }}
         >
-          <h2 className="font-semibold text-2xl lg:text-4xl text-white">Custom Plan</h2>
-          <div className="w-full lg:w-[720px] mt-4">
+          <h2 className="font-semibold text-2xl lg:text-4xl text-white">
+            Custom Plan
+          </h2>
+          <div className="w-full lg:w-[620px] mt-4">
             <p className="text-sm text-[#4C8C74]">
               AussieDigitalStudios is a full-service digital studio built for
               modern, fast-growing brands. From strategy to standout design and
@@ -58,7 +21,7 @@ const CustomPlan = () => {
               team.
             </p>
           </div>
-          <div className="mt-8 flex flex-row">
+          <div className="mt-15 flex flex-row">
             <a
               href="/contact"
               className="flex font-light text-sm items-center justify-center gap-1 bg-[#4C8C74] text-white py-2 px-3 rounded-full hover:bg-blue-300 transition-colors group w-fit mr-auto"
@@ -110,9 +73,3 @@ const CustomPlan = () => {
           />
         </div>
       </div>
-    </section>
-    </>
-  );
-};
-
-export default CustomPlan;

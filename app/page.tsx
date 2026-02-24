@@ -1,19 +1,21 @@
-import Header from "@/components/Header";
-import Image from "next/image";
-import Hero from "./Home/components/Hero_old";
-import AboutUs from "./Home/components/AboutUs";
-import Services from "./Home/components/Services";
-import PortfolioSection from "./Home/components/PortfolioSection";
-import BrandLevelUp from "./Home/components/BrandLevelUp";
-import PricingPlan from "./Home/components/PricingPlan";
-import { Testimonials } from "./Home/components/Testimonials";
-import Footer from "@/components/Footer";
+"use client";
+
+import { useEffect, useState } from "react";
 import HomePage from "./Home/page";
+import LoadingScreen from "@/components/LoadingScreen";
 
 export default function Home() {
+  const [showLoading, setShowLoading] = useState(true);
+
+  useEffect(() => {
+    const fallback = setTimeout(() => setShowLoading(false), 2000);
+    return () => clearTimeout(fallback);
+  }, []);
+
   return (
-    <div >
+    <div className="relative">
       <HomePage />
+      {showLoading && <LoadingScreen onComplete={() => setShowLoading(false)} />}
     </div>
   );
 }

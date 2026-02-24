@@ -166,27 +166,19 @@ const ContactUs = () => {
           engages your audience.
         </motion.p>
       </div>
-      <div className="flex flex-col max-[1250px]:flex-col flex-row mt-10 gap-6 items-center max-[1250px]:items-stretch">
-
+      <div className="flex flex-row justify-center mt-10 gap-6">
         {/* Image */}
-        <div
-          className="flex-shrink-0 max-[1250px]:w-full h-[500px]"
-          style={{
-            background: "transparent",
-          }}
-        >
           <Image
             src={isDarkMode ? "/Home/dark_tel.svg" : "/Home/Light_tel.svg"}
             alt="Contact Us Image"
             width={1190}
             height={1190}
-            className="rounded-2xl w-[550px] max-[1250px]:w-full h-[468px] rounded-xl translate-y-12"
+            className="w-[450px] h-[365px] object-contain"
           />
-        </div>
 
         {/* Contact Form */}
         <div
-          className="flex-1 max-[1250px]:w-full h-[400px] px-7 py-7 rounded-2xl"
+          className="w-[700px] h-[310px] px-7 py-3 rounded-2xl"
           style={{
             backgroundImage: `url('${isDarkMode ? '/Home/contactus_dark.svg' : '/Home/Frame_163_Light.svg'}')`,
             backgroundSize: "cover",
@@ -255,7 +247,7 @@ const ContactUs = () => {
               name="detail"
               label="Details"
               multiline
-              rows={4}
+              rows={3}
               variant="standard"
               fullWidth
               value={formData.detail}
@@ -278,11 +270,11 @@ const ContactUs = () => {
             )}
 
             {/* Submit Button */}
-            <div className="flex flex-row mt-4">
+            <div className="flex flex-row mt-2 justify-start">
               <button
                 type="submit"
                 disabled={loading}
-                className="justify-center mt-4 px-3 w-[113px] h-[50px] text-sm bg-teal-500 disabled:opacity-50 disabled:cursor-not-allowed text-white rounded-full hover:bg-blue-400 transition-all inline-flex items-center group flex flex-row gap-0"
+                className="justify-center w-[108px] h-[35px] text-sm bg-teal-500 disabled:opacity-50 disabled:cursor-not-allowed text-white rounded-full hover:bg-blue-400 transition-all inline-flex items-center group flex flex-row gap-0"
               >
                 <span className="text-md font-light ml-2">
                   {loading ? "Sending..." : "Submit"}
