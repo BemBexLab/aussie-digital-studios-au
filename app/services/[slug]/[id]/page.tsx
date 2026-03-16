@@ -42,8 +42,8 @@ const ServiceInnerPage = async ({ params }: ServicePageProps) => {
     <section>
       <Hero H={service.title} />
       <ServiceBody
-        data={service.serviceBodyData || []}
-        footnote={service.footnote}
+        data={parentService.serviceBodyData ?? []}
+        footnote={parentService.footnote}
       />
       <OurProcess service={service} />
       <PricingPlan service={service} />
