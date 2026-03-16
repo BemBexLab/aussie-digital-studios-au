@@ -7,7 +7,7 @@ type ProcessCardsSmProps = {
     processCardData?: Array<{
       image: string;
       heading: string;
-      paragraph: string;
+      paragraph: React.ReactNode;
     }>;
   };
 };
@@ -49,7 +49,7 @@ const ProcessCardsSm = ({ service }: ProcessCardsSmProps) => {
             style={{ width: "calc((100% - 2.5rem) / 3)", boxSizing: "border-box" }}
           >
             <div
-              className="w-full min-h-[250px] relative my-8 flex flex-col items-start justify-start p-6 rounded-lg"
+              className="w-full h-[320px] relative my-8 flex flex-col items-start justify-start p-6 rounded-lg"
               style={{
                 backgroundImage: `url("${isDarkMode ? '/Home/mini_card_dark.svg' : '/Home/Frame_163_Light.svg'}")`,
                 backgroundSize: "cover",
@@ -67,8 +67,9 @@ const ProcessCardsSm = ({ service }: ProcessCardsSmProps) => {
               <h2 className={`text-lg ${isDarkMode ? 'text-yellow-500' : 'text-[#3A6EA5]'} mt-2`}>
                 {item.heading}
               </h2>
-              <p className={`text-md ${isDarkMode ? 'text-white' : 'text-[#777777]'} text-xs break-words overflow-hidden`}
-                 style={{display: '-webkit-box', WebkitLineClamp: 4, WebkitBoxOrient: 'vertical'}}>
+              <p
+                className={`text-md ${isDarkMode ? 'text-white' : 'text-[#777777]'} text-xs break-words mt-2 flex-1 overflow-y-auto pr-1`}
+              >
                 {item.paragraph}
               </p>
             </div>

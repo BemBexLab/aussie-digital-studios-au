@@ -7,10 +7,12 @@ import ProcessCards from "./ProcessCards";
 
 type OurProcessProps = {
   service: {
+    processHeading?: React.ReactNode,
+    processPara?: React.ReactNode,
     processCardData?: Array<{
       image: string;
       heading: string;
-      paragraph: string;
+      paragraph: React.ReactNode;
     }>;
   };
 };
@@ -63,9 +65,15 @@ const OurProcess = ({ service }: OurProcessProps) => {
             transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.5 }}
           >
-            Our Proven 3-Step Process to Grow Your<br /> Brand with Web
-            Design and Development
+            {service.processHeading || (
+              <>
+                Our Proven 3-Step Process to Grow Your
+                <br />
+                Brand with Web Design and Development
+              </>
+            )}
           </motion.h2>
+          <p className="text-xl text-[#AAAAAA] mt-3">{service.processPara}</p>
         </div>
 
         {/* Divider */}

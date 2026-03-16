@@ -5,16 +5,17 @@ import { Testimonials } from "../Home/components/Testimonials";
 import CustomPlan from "../Home/components/CustomPlan";
 import ContactUs from "./components/ContactUs";
 import MainServices from "./components/MainServices";
+import { services } from "./[slug]/data";
 
 const ServicePage = () => {
   return (
     <section>
       <Hero H="Our Services" />
-      <WhyChoose />
+      <WhyChoose data={services[0]?.whyChooseData} />
       <MainServices />
       <CustomPlan />
       <Testimonials />
-      <ContactUs />
+      <ContactUs data={services[0]?.contactData} />
     </section>
   );
 };

@@ -3,7 +3,16 @@
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 
-const CustomPlanMobile = () => {
+type CustomPlanData = {
+  heading?: React.ReactNode;
+  body?: React.ReactNode;
+};
+
+type CustomPlanMobileProps = {
+  data?: CustomPlanData;
+};
+
+const CustomPlanMobile = ({ data }: CustomPlanMobileProps) => {
   const [isDarkMode, setIsDarkMode] = useState(true);
 
   useEffect(() => {
@@ -44,15 +53,23 @@ const CustomPlanMobile = () => {
             backgroundColor: "#f9f1f1",
           }}
         >
-          <h2 className="font-semibold text-2xl sm:text-3xl text-white leading-tight">Custom Plan</h2>
+          <h2 className="font-semibold text-2xl sm:text-3xl text-white leading-tight">
+            {data?.heading || "Custom Plan"}
+          </h2>
           <div className="mt-3">
-            <p className="text-xs sm:text-sm text-[#4C8C74] leading-relaxed">
-              AussieDigitalStudios is a full-service digital studio built for
-              modern, fast-growing brands. From strategy to standout design and
-              digital execution, everything you need to build and grow your
-              online presence lives here, powered by a creative, results-focused
-              team.
-            </p>
+            {data?.body ? (
+              <div className="text-xs sm:text-sm text-[#4C8C74] leading-relaxed">
+                {data.body}
+              </div>
+            ) : (
+              <p className="text-xs sm:text-sm text-[#4C8C74] leading-relaxed">
+                AussieDigitalStudios is a full-service digital studio built for
+                modern, fast-growing brands. From strategy to standout design and
+                digital execution, everything you need to build and grow your
+                online presence lives here, powered by a creative, results-focused
+                team.
+              </p>
+            )}
           </div>
           <div className="mt-6 flex flex-col gap-3">
             <a

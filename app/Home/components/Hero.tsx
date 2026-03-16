@@ -41,11 +41,9 @@ const Hero = () => {
 
         {/* Top content: text + frame */}
         <div className="flex flex-row justify-center gap-10 h-1/2">
-          <div
-            className="uppercase w-[350px] h-1/5 mt-[250px] text-[#808c87] text-[20px] font-semibold text-xl text-left px-0 transform translate-x-18 -translate-y-20"
-          >
-            Clean visuals, smart strategy and creative work that makes an
-            impact.
+          <div className="uppercase w-[355px] h-1/5 mt-[250px] text-[#808c87] text-[20px] font-semibold text-xl text-left px-0 transform translate-x-18 -translate-y-20">
+            Complete Digital Solutions for Australian Businesses Strategy,
+            Design, Development, and Growth
           </div>
           <div className="w-[700px] h-full mt-[50px] block">
             <motion.img
@@ -61,19 +59,19 @@ const Hero = () => {
         {/* Main headings */}
         <div className=" mx-auto z-20 justify-center max-w-7xl flex flex-col px-12 w-full mt-[30px]">
           <div className="justify-center items-center flex flex-col">
-            <span className="text-white text-3xl font-semibold transform -translate-x-132">
-              Modern
+            <span className="text-white text-3xl font-semibold transform -translate-x-165">
+              We help
             </span>
             <motion.span
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.5 }}
-              className="text-white text-[160px] leading-[0.95] font-semibold tracking-tight whitespace-nowrap"
+              className="text-white uppercase text-[125px] leading-[0.95] font-semibold tracking-tight whitespace-nowrap"
             >
-              DIGITAL DESIGN
+              Australian businesses
             </motion.span>
-            <span className="text-white text-2xl font-medium transform -translate-x-40">
-              that helps your brand grow.
+            <span className="text-white text-2xl font-medium transform -translate-x-90">
+              build websites that actually bring in work.
             </span>
           </div>
         </div>
@@ -113,22 +111,22 @@ const Hero = () => {
         <div className="relative z-20 space-y-4 sm:space-y-6 md:space-y-8 mt-12 sm:mt-16 md:mt-20 w-full max-w-sm sm:max-w-md md:max-w-2xl lg:max-w-3xl">
           <br className="hidden sm:block" />
           <span className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold block">
-            Modern
+            We help
           </span>
           <motion.span
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight block leading-tight"
+            className="text-white uppercase text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight block leading-tight"
           >
-            DIGITAL DESIGN
+            Australian businesses
           </motion.span>
           <span className="text-white text-base sm:text-lg md:text-xl lg:text-2xl font-medium block">
-            that helps your brand grow.
+            build websites that actually bring in work.
           </span>
           <p className="text-[#808c87] text-sm sm:text-base md:text-lg mt-4 sm:mt-6 md:mt-8">
-            Clean visuals, smart strategy and creative work that makes an
-            impact.
+            Complete Digital Solutions for Australian Businesses Strategy,
+            Design, Development, and Growth
           </p>
           <motion.img
             animate={{ y: [0, -15, 0] }}

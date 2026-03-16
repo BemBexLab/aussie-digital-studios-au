@@ -7,7 +7,7 @@ type ProcessCardsMobileProps = {
     processCardData?: Array<{
       image: string;
       heading: string;
-      paragraph: string;
+      paragraph: React.ReactNode;
     }>;
   };
 };
@@ -45,7 +45,7 @@ const ProcessCardsMobile = ({ service }: ProcessCardsMobileProps) => {
         {service.processCardData?.map((item, index) => (
           <div key={index} className="flex flex-col items-start w-full">
             <div
-              className="w-full h-[230px] relative my-4 flex flex-col items-start justify-start p-4"
+              className="w-full h-[260px] relative my-4 flex flex-col items-start justify-start p-4"
               style={{
                 backgroundImage: `url("${isDarkMode ? '/Home/mini_card_dark.svg' : '/Home/Frame_163_Light.svg'}")`,
                 backgroundSize: "cover",
@@ -63,7 +63,9 @@ const ProcessCardsMobile = ({ service }: ProcessCardsMobileProps) => {
               <h2 className={`text-base ${isDarkMode ? 'text-yellow-500' : 'text-[#3A6EA5]'} mt-2`}>
                 {item.heading}
               </h2>
-              <p className={`text-sm ${isDarkMode ? 'text-white' : 'text-[#777777]'}`}>
+              <p
+                className={`text-sm ${isDarkMode ? 'text-white' : 'text-[#777777]'} mt-2 flex-1 overflow-y-auto pr-1`}
+              >
                 {item.paragraph}
               </p>
             </div>

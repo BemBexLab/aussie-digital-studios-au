@@ -6,7 +6,17 @@ import { motion } from "motion/react";
 import ContactUsMobile from "./ContactUsMobile";
 import { sendContactEmail } from "@/lib/emailService";
 
-const ContactUs = () => {
+type ContactUsData = {
+  heading?: React.ReactNode;
+  body?: React.ReactNode;
+  buttonText?: string;
+};
+
+type ContactUsProps = {
+  data?: ContactUsData;
+};
+
+const ContactUs = ({ data }: ContactUsProps) => {
   const [isContentInView, setIsContentInView] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [isClient, setIsClient] = useState(false);
@@ -115,7 +125,7 @@ const ContactUs = () => {
 
   return (
     <>
-      <ContactUsMobile />
+      <ContactUsMobile data={data} />
       {isClient && (
       <section className="hidden sm:flex my-20 justify-center items-center w-full">
         <div className="flex flex-row justify-center max-w-7xl w-full mx-auto px-4">
@@ -139,7 +149,12 @@ const ContactUs = () => {
               transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
               viewport={{ once: true, amount: 0.5 }}
             >
-              Looking For Best Design &<br></br> Development Agency In Uk?
+              {data?.heading || (
+                <>
+                  Looking For Best Design &<br />
+                  Development Agency In Uk?
+                </>
+              )}
             </motion.h2>
             <motion.p
               className="text-md text-[#AAAAAA] mt-5"
@@ -149,9 +164,13 @@ const ContactUs = () => {
               transition={{ duration: 1.2, delay: 0.4, ease: "easeOut" }}
               viewport={{ once: true, amount: 0.5 }}
             >
-              Ready to bring your business idea to life? Let our experts work for
-              you and create a<br></br> custom website that echoes your brand and
-              engages your audience.
+              {data?.body || (
+                <>
+                  Ready to bring your business idea to life? Let our experts work
+                  for you and create a custom website that echoes your brand and
+                  engages your audience.
+                </>
+              )}
             </motion.p>
           </div>
         </div>
@@ -254,10 +273,10 @@ const ContactUs = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="justify-center mt-4 px-3 w-[113px] h-[50px] text-sm bg-teal-500 disabled:opacity-50 disabled:cursor-not-allowed text-white rounded-full hover:bg-blue-400 transition-all inline-flex items-center group flex flex-row gap-0 relative z-20 pointer-events-auto"
+                className="justify-center mt-4 px-3 w-auto h-[50px] text-sm bg-teal-500 disabled:opacity-50 disabled:cursor-not-allowed text-white rounded-full hover:bg-blue-400 transition-all inline-flex items-center group flex flex-row gap-0 relative z-20 pointer-events-auto"
               >
                 <span className="text-md font-light ml-2">
-                  {loading ? "Sending..." : "Submit"}
+                  {loading ? "Sending..." : data?.buttonText || "Submit"}
                 </span>
                 <span className="ml-2 relative w-7 h-7 flex items-center justify-center">
                   <span

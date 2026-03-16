@@ -10,7 +10,15 @@ import ServicesMobile from "./ServicesMobile";
 const services = [
   {
     title: "Web Design & Development",
-    desc: "Fast, clean and designed to convert. Modern websites built around your brand and goals.",
+    desc: (
+      <>
+        <ul className="list-inside list-disc">
+          <li>Your website is your hardest-working employee. We make sure it actually shows up.</li>
+          <li>Built fast, built clean, built to turn visitors into customers.</li>
+          <li>Most websites sit there. Yours should be selling.</li>
+        </ul>
+      </>
+    ),
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -48,7 +56,13 @@ const services = [
   },
   {
     title: "Logo Design & Branding",
-    desc: "Professional, memorable visuals that define your brand and make a strong first impression.",
+    desc: (<>
+      <ul className="list-inside list-disc">
+        <li>A great brand isn't designed. It's built — deliberately, strategically, and memorably.</li>
+        <li>People forget names. They don't forget brands. Let's make yours unforgettable.</li>
+        <li>Your logo is the first thing they see. Make it count.</li>
+      </ul>
+    </>),
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +97,13 @@ const services = [
   },
   {
     title: "Search Engine Optimization",
-    desc: "Smart optimisation that drives steady growth and keeps your brand visible.",
+    desc: (<>
+      <ul className="list-inside list-disc">
+        <li>Your customers are searching for you right now. The question is whether they're finding you or your competitor.</li>
+        <li>Page one isn't luck. It's a strategy.</li>
+        <li>Rank higher. Get found. Stay there.</li>
+      </ul>
+    </>),
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -111,7 +131,13 @@ const services = [
   },
   {
     title: "Performance Marketing",
-    desc: "Fast, clean and designed to convert. Modern websites built around your brand and goals.",
+    desc: (<>
+      <ul className="list-inside list-disc">
+        <li>Every dollar you spend on ads should be working. If it's not, that's a fixable problem.</li>
+        <li>Stop paying for clicks that go nowhere. We run campaigns that pay for themselves.</li>
+        <li>We don't run ads. We run campaigns that return more than they cost.</li>
+      </ul>
+    </>),
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -150,7 +176,13 @@ const services = [
   },
   {
     title: "Social Media Marketing",
-    desc: "Professional, memorable visuals that define your brand and make a strong first impression.",
+    desc: (<>
+      <ul className="list-inside list-disc">
+        <li>Posting without a strategy is just making noise. We build social media that actually builds your business.</li>
+        <li>Followers are fine. Customers are better. We focus on the second one.</li>
+        <li>Your audience is already on social. The question is whether they're finding you there.</li>
+      </ul>
+    </>),
     icon: (
       <Image
         src="/Home/Group_26.svg"
@@ -163,7 +195,13 @@ const services = [
   },
   {
     title: "Content Marketing",
-    desc: "Smart optimisation that drives steady growth and keeps your brand visible.",
+    desc: (<>
+      <ul className="list-inside list-disc">
+        <li>Content that ranks on Google, sounds like a real person wrote it, and actually makes people buy.</li>
+        <li>Bad content gets ignored. Great content compounds. We write the second kind.</li>
+        <li>The words on your site are either working for you or against you. We make sure it's the first one.</li>
+      </ul>
+    </>),
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -223,7 +261,7 @@ const Services = () => {
       },
       {
         threshold: 0.2,
-      }
+      },
     );
 
     if (sectionRef.current) {
@@ -328,14 +366,14 @@ const Services = () => {
                 </motion.h3>
 
                 {/* Description */}
-                <motion.p
+                <motion.div
                   initial={{ opacity: 0 }}
                   animate={isInView ? { opacity: 1 } : { opacity: 0 }}
                   transition={{ duration: 0.6, delay: 0.3 }}
                   className="text-sm text-gray-300 leading-relaxed"
                 >
                   {service.desc}
-                </motion.p>
+                </motion.div>
               </div>
             ))}
           </div>

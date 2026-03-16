@@ -51,16 +51,16 @@ export default async function ServicePage({
   return (
     <div className="relative w-full p-0 m-0">
       <Hero H={service.title} />
-      <ServiceBody service={service} />
+      <ServiceBody data={service.serviceBodyData ?? []} footnote={service.footnote} />
       <Cards service={service} />
-      <WhyChoose />
+      <WhyChoose data={service.whyChooseData} />
       <OurProcess service={service} />
       <Portfolio service={service} />
       <PricingPlan service={service} />
-      <CustomPlan />
+      <CustomPlan data={service.customplanData} />
       <Testimonials />
       <FAQ service={service} />
-      <ContactUs />
+      <ContactUs data={service.contactData} />
     </div>
   );
 }
