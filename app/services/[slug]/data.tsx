@@ -1,29 +1,114 @@
 import { title } from "process";
+import { FiCheckCircle } from "react-icons/fi";
 
 export const services = [
   // Web Design & Development
   {
     slug: "web-design-development",
     title: "Web Design & Development",
-    heading: "Web Development That Accelerates Growth",
-    imageUrl: "/Services/Rectangle_52.webp",
-    description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
-    points: [
-      "Custom Website Design",
-      "Responsive Development",
-      "E-commerce Solutions",
-      "Content Management Systems",
-      "Performance Optimization",
+    // heading: "Web Development Services in Australia",
+    serviceBodyData: [
+      {
+        imageUrl: "/Services/Rectangle_52.webp",
+        description: (
+          <>
+            <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
+              Web Development Services in Australia
+            </h2>
+            Your website is often the first impression your business makes. At
+            Aussie Digital Solutions, we design and develop high-performance
+            websites for businesses across Australia. From custom web
+            development and eCommerce platforms to SEO optimized WordPress and
+            Shopify sites, our team builds websites designed to attract traffic,
+            convert visitors, and grow your business online.
+          </>
+        ),
+      },
+      {
+        imageUrl: "/Services/Rectangle_52.webp",
+        description: (
+          <>
+            <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
+              What We Build For You
+            </h2>
+            Every project we take is created according to the business goals.
+            Here's what's included as standard across our web development
+            engagements:
+            <ul className="mt-3">
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span>Responsive & mobile first design</span>
+              </li>
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span>Custom development for unique business requirements</span>
+              </li>
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span>
+                  SEO and Core Web Vitals optimisation built in from the ground
+                  up
+                </span>
+              </li>
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span>
+                  Seamless CMS integration so your team can manage content with
+                  ease
+                </span>
+              </li>
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span>eCommerce and web application capabilities</span>
+              </li>
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span>Secure hosting and SSL certification</span>
+              </li>
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span>Third party API and payment gateway integration</span>
+              </li>
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span>Ongoing maintenance and support after launch</span>
+              </li>
+            </ul>
+            <p className="italic">
+              A website that only looks good is a missed opportunity. We build
+              websites that look great and bring real results.—Aussie Digital
+              Solutions Team
+            </p>
+          </>
+        ),
+      },
     ],
+    whyChooseData: {
+      image: "/Services/Rectangle_52.webp",
+      heading: "Why Choose Our Web Development Company in Australia",
+      paragraphs: [
+        "We help you create a polished business website, a high converting eCommerce store, a scalable web app, and a Shopify or WordPress platform your team can manage without a developer on speed dial. We deliver it with precision, speed, and long term performance in mind.\n\nWe follow Google's Core Web Vitals standards and build every project as a mobile first solution ready for progressive web app capabilities. Because your customers are searching on every device, your website needs to perform on all of them.\n\nOur team manages everything. The UI/UX planning, front end development, back end architecture, PHP development, eCommerce builds, and post launch support are all handled by the same people who built your site. No outsourcing. No miscommunication. No gaps in accountability.",
+      ],
+    },
+    // footnote: (
+    //   <>
+    //     <p className="italic">
+    //       A website that only looks good is a missed opportunity. We build
+    //       websites that look great and bring real results.—Aussie Digital
+    //       Solutions Team
+    //     </p>
+    //   </>
+    // ),
+    strategicHeading: <>Our Development Services</>,
     strategicCardData: [
       {
         title: "Custom Website Design",
-        desc: "Understand your vision, business goals, and target audience to create a clear project roadmap.",
+        desc: "We start by getting under the skin of your business, your goals, your customers, your competitors, and what makes you different. Only then do we start designing. The result is a website that's uniquely yours to engage, to rank on different platforms and to make true customers.",
         svg: (
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
+            width="35"
+            height="35"
             viewBox="0 0 50 50"
             fill="none"
           >
@@ -50,12 +135,12 @@ export const services = [
       },
       {
         title: "E-commerce Website Development",
-        desc: "Iteratively develop robust, scalable websites with regular testing and your feedback at every stage.",
+        desc: "We create fast, secure eCommerce websites that make buying simple for your customers and managing inventory straightforward for your team. From product pages to checkout flows and payment gateway integration, every detail is designed to bring buyers from browsers.",
         svg: (
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
+            width="35"
+            height="35"
             viewBox="0 0 50 50"
             fill="none"
           >
@@ -94,12 +179,12 @@ export const services = [
       },
       {
         title: "Magento Development",
-        desc: "Design modern, user-centric interfaces for an exceptional digital experience.",
+        desc: "For businesses with large catalogues, complex pricing structures, and serious traffic volumes, Magento delivers the power you need. We build Magento solutions that are robust, scalable, and designed around a user experience that keeps customers coming back.",
         svg: (
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
+            width="35"
+            height="35"
             viewBox="0 0 50 50"
             fill="none"
           >
@@ -132,12 +217,12 @@ export const services = [
       },
       {
         title: "Wordpress Development",
-        desc: "Design modern, user-centric interfaces for an exceptional digital experience.",
+        desc: "WordPress powers over 40% of the internet, and when it's built properly, it's one of the most capable platforms available. We develop WordPress websites that look great, load fast, rank well in search, and give your team full control over content without needing a developer for every change.",
         svg: (
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
+            width="35"
+            height="35"
             viewBox="0 0 52 52"
             fill="none"
           >
@@ -160,12 +245,12 @@ export const services = [
       },
       {
         title: "Opencart",
-        desc: "Thoroughly test for responsiveness, performance, and security before seamless launch and handover.",
+        desc: "We are here to provide a clean and reliable OpenCart. Our OpenCart builds deliver fully tested, mobile-responsive eCommerce solutions, rigorously checked for speed, security, and usability before a single customer lands on your page.",
         svg: (
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
+            width="35"
+            height="35"
             viewBox="0 0 50 50"
             fill="none"
           >
@@ -186,12 +271,12 @@ export const services = [
       },
       {
         title: "Shopify Development",
-        desc: "Incorporate compelling, SEO-optimized content and visuals that support your brand story.",
+        desc: "We are proud to say that Shopify is one of the world’s most trusted commerce platforms, and we have worked with it for years. We design engaging, SEO-rich Shopify stores that embody your brand and offer customers an experience they'll want to repeat.",
         svg: (
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
+            width="35"
+            height="35"
             viewBox="0 0 47 52"
             fill="none"
           >
@@ -211,12 +296,12 @@ export const services = [
       },
       {
         title: "Woocommerce Development",
-        desc: "Provide maintenance, updates, and performance enhancements to keep your site running at its best.",
+        desc: "WooCommerce is the ultimate platform for building a robust online store with the functionality and environment your team is already comfortable with in WordPress. We design, configure, and optimize your WooCommerce store for ease of use, scalability, and ongoing support when you need it.",
         svg: (
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
+            width="35"
+            height="35"
             viewBox="0 0 86 52"
             fill="none"
           >
@@ -228,24 +313,59 @@ export const services = [
         ),
       },
     ],
+    processHeading: <>Our Process: How We Go From Brief to Results</>,
+    processPara: (
+      <>
+        No guesswork. No confusion. Just a clear, structured path from your
+        first conversation
+        <br />
+        to a website that performs from day one.
+      </>
+    ),
     processCardData: [
       {
         image: "/Services/01.svg",
-        heading: "Book a Strategy Call",
-        paragraph:
-          "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
+        heading: "Discovery & Strategy Call",
+        paragraph: (
+          <>
+            Every great website starts with a genuine conversation, and not a
+            sales pitch. We initiate things with a free strategy call to
+            understand your business, your target audience, your competitors,
+            and what success actually looks like for you.
+            <br />
+            By the end of this call, you will have a clear picture of what we
+            will build, how long it will take, and exactly what it will cost,
+            and no surprises.
+          </>
+        ),
       },
       {
         image: "/Services/02.svg",
-        heading: "Website Audit & Strategy",
-        paragraph:
-          "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
+        heading: "Design, Audit & Custom Development",
+        paragraph: (
+          <>
+            If you already have a website, we start with a thorough audit,
+            reviewing your UX, site structure, page speed, and SEO performance
+            to identify exactly what's holding you back. For new builds, we
+            start from a blank canvas with your goals front and centre.
+            <br />
+            Our designers and developers then craft a website that reflects your
+            brand identity and speaks directly to your customers. Every element
+            is purposeful.
+          </>
+        ),
       },
       {
         image: "/Services/03.svg",
-        heading: "Build, Launch & Optimize",
-        paragraph:
-          "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
+        heading: "Launch, Optimise & Scale",
+        paragraph: (
+          <>
+            Going live is just the start. Once your site is launched, we don't
+            disappear. We monitor the website performance, run post launch SEO
+            optimisation, and make sure everything is firing the way it should:
+            traffic, speed, rankings, and conversions.
+          </>
+        ),
       },
     ],
     pricingCardData: [
@@ -294,26 +414,57 @@ export const services = [
         ],
       },
     ],
+    customplanData: {
+      heading: "Custom Plans According to Your Business",
+      body: (
+        <>
+          At Aussie Digital Solutions, we know that every business is different,
+          and so are their digital needs. We will build a plan that fits your
+          goals, your budget, and your timeline, if that means a full rebrand, a
+          high performance eCommerce build, an end to end SEO strategy, or all
+          of the above.<br /><br />Our custom solutions have helped new businesses launch
+          with confidence, helped established brands break into new markets, and
+          helped local Australian businesses compete on a national stage. Tell
+          us where you want to go, and we will map out exactly how to get you
+          there.
+        </>
+      ),
+    },
     faqData: [
       {
-        question: "How to use this component?",
+        question: "What does Aussie Digital Solutions actually do?",
         answer:
-          "Import the FAQ component and place it in your page. Click any question to expand or collapse the answer.",
+          "We are an Australian web design and development agency that builds websites that are worth it, people actually want to use. That ranks on Google. From the custom websites creation to eCommerce platforms, we take care of design, development, SEO, and ongoing support all in one place.",
       },
       {
-        question: "Are there any other components available?",
+        question: "Do you work with small businesses and startups?",
         answer:
-          "Yes — check the Components section of the repo or documentation for more reusable UI pieces.",
+          "Absolutely. Some of our favourite projects have been with startups and small businesses that needed a website to generate leads, build trust among people, and compete with bigger players.",
       },
       {
-        question: "Are components responsive?",
+        question: "Which platforms do you build on?",
         answer:
-          "Yes, components are designed to be responsive across screen sizes.",
+          "We work with WordPress, Shopify, WooCommerce, Magento, OpenCart, PHP, Laravel, CodeIgniter, and fully custom solutions where nothing off the shelf will do. We will give you our honest recommendation on what's best for your specific situation during our strategy call.",
       },
       {
-        question: "Can I customize the components?",
+        question: "How much does web development cost in Australia?",
         answer:
-          "Yes, pass props or override styles to adapt components to your design.",
+          "Website development costs vary depending on the project scope.",
+      },
+      {
+        question: "Is everything done in house?",
+        answer:
+          "Yes, always. Your project is handled by our own dedicated team of designers, developers, and a project lead who knows your brief inside out. We don't pass work to contractors or offshore teams. You get one point of contact and clear communication throughout.",
+      },
+      {
+        question: "Can I request changes after my site goes live?",
+        answer:
+          "Of course. Your website should evolve as your business does. We offer flexible maintenance and support plans that cover content updates, security patches, speed optimisation, and more. Communicate with us, no matter if it's a small tweak or a bigger change, just reach out; we are always here.",
+      },
+      {
+        question: "Is there a lock-in contract?",
+        answer:
+          "No lock in traps. One off builds are project based with a clearly defined scope and pricing. Ongoing maintenance plans are flexible. We lay out all terms clearly before anything starts, no hidden clauses, no pressure. We would far rather earn your trust through great work than hold you in through a contract.",
       },
     ],
     portfolioData: [
@@ -326,8 +477,13 @@ export const services = [
       { id: "7", src: "/Services/web_06.svg", translateY: "-translate-y-25" },
       { id: "8", src: "/Services/web_07.svg", translateY: "" },
     ],
-    footnote:
-      "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
+    contactData: {
+      heading: (<>Ready to Build Something That Works as Hard as You Do?</>),
+      body: (<>If you are starting fresh, rebuilding an outdated site, or ready to take your digital presence to the next level, our team is ready to help. Get in touch, and one of our specialists will get back to you within one business day.<br /><br />No scripts. Nor pushy sales calls. Just a genuine conversation about your business and how we can move it forward.</>),
+      buttonText: "Book Your Free Strategy Call",
+    },
+    // footnote:
+    //   "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
     subcategory: [
       {
         slug: "custom-website-design",

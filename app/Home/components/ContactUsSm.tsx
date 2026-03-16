@@ -116,9 +116,9 @@ const ContactUsSm = () => {
       <div className="flex flex-col space-y-6">
         {/* Text Content */}
         <div className="flex flex-col space-y-3">
-          <p className="text-xs sm:text-sm text-[#4C8C74] font-semibold">Contact Us</p>
+          <p className="text-xs sm:text-sm text-[#4C8C74] font-semibold">Let's Talk</p>
           <h2 className="font-semibold text-white text-xl sm:text-2xl uppercase leading-tight">
-            Looking For Best Design & Development Agency In Uk?
+            If the site is not bringing in the work it should, or you're starting from scratch and want to do it right the first time, get in touch.
           </h2>
           <p className="text-xs sm:text-sm text-[#AAAAAA]" data-text-sm-light>
             Ready to bring your business idea to life? Let our experts work for

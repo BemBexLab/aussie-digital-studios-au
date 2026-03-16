@@ -144,7 +144,7 @@ const ContactUs = () => {
           animate={isHeadingInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 8 }}
           transition={{ duration: 0.6 }}
         >
-          Contact Us
+          Let's Talk
         </motion.p>
         <motion.h2
           className="font-semibold text-center text-white text-4xl mt-2"
@@ -152,7 +152,7 @@ const ContactUs = () => {
           animate={isHeadingInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
           transition={{ duration: 0.6, delay: 0.05 }}
         >
-          Looking For Best Design &<br></br> Development Agency In Uk?
+          If the site is not bringing in the work it should, or you're starting <br />from scratch and want to do it right the first time, get in touch.
         </motion.h2>
         <motion.p
           className="text-md text-[#AAAAAA] mt-5"
@@ -161,9 +161,7 @@ const ContactUs = () => {
           animate={isHeadingInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 8 }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          Ready to bring your business idea to life? Let our experts work for
-          you and create a<br></br> custom website that echoes your brand and
-          engages your audience.
+          Book a Free Strategy Call. No pitch. No pressure. Just a conversation about your business.<br />Looking for a web design and development agency in Australia that actually delivers? We'd love to hear what you're working on.
         </motion.p>
       </div>
       <div className="flex flex-row justify-center mt-10 gap-6">

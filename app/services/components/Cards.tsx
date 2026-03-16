@@ -7,6 +7,7 @@ import CardsMobile from "./CardsMobile";
 
 type CardsProps = {
   service: {
+    strategicHeading?: React.ReactNode;
     strategicCardData?: Array<{
       title: string;
       desc: string;
@@ -71,7 +72,7 @@ const Cards = ({ service }: CardsProps) => {
           transition={{ duration: 1.2, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.5 }}
         >
-          Strategic Approach
+          {service.strategicHeading || "Our Strategic Services"}
         </motion.h2>
 
         {/* Geometric Shape */}

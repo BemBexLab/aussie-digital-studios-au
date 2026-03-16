@@ -4,7 +4,16 @@ import { TextField } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import { sendContactEmail } from "@/lib/emailService";
 
-const ContactUsMobile = () => {
+type ContactUsData = {
+  heading?: React.ReactNode;
+  body?: React.ReactNode;
+};
+
+type ContactUsMobileProps = {
+  data?: ContactUsData;
+};
+
+const ContactUsMobile = ({ data }: ContactUsMobileProps) => {
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [formData, setFormData] = useState({
     firstName: "",
@@ -117,11 +126,16 @@ const ContactUsMobile = () => {
         <div className="flex flex-col space-y-3">
           <p className="text-xs sm:text-sm text-[#4C8C74] font-semibold">Contact Us</p>
           <h2 className="font-semibold text-white text-xl sm:text-2xl uppercase leading-tight">
-            Looking For Best Design & Development Agency In Uk?
+            {data?.heading || "Looking For Best Design & Development Agency In Uk?"}
           </h2>
           <p className="text-xs sm:text-sm text-[#AAAAAA]" data-text-sm-light>
-            Ready to bring your business idea to life? Let our experts work for
-            you and create a custom website that echoes your brand and engages your audience.
+            {data?.body || (
+              <>
+                Ready to bring your business idea to life? Let our experts work
+                for you and create a custom website that echoes your brand and
+                engages your audience.
+              </>
+            )}
           </p>
         </div>
 

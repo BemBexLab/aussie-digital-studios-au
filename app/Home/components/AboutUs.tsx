@@ -51,8 +51,8 @@ const AboutUs = () => {
   }, []);
 
   const fullText =
-    "AussieDigitalStudios creates modern websites, strong branding and clear digital strategy. We keep things simple, creative and focused on real results.";
-  const highlightText = "branding and clear digital strategy. We keep things";
+    "Aussie Digital Solutions started with a simple frustration: too many Australian businesses were paying good money for websites that looked fine but did nothing. No enquiries, No leads, and No return. \nWe handle web design, web development, SEO, digital marketing, and branding. Not as separate offerings bolted together, but as one connected strategy built around your goals.";
+  const highlightText = "No enquiries, No leads, and No return. \nWe handle web design, web development, SEO, digital marketing, and branding.";
 
   const renderAnimatedText = () => {
     const elements: React.ReactNode[] = [];
@@ -60,51 +60,64 @@ const AboutUs = () => {
     const highlightEnd = highlightStart + highlightText.length;
 
     let charIndex = 0;
-    const words = fullText.split(" ");
+    const lines = fullText.split("\n");
 
-    words.forEach((word, wordIdx) => {
-      const wordStart = charIndex;
-      const wordEnd = charIndex + word.length;
+    lines.forEach((line, lineIdx) => {
+      const words = line.split(" ");
 
-      // Check if entire word or any part of it is in highlight section
-      const isInHighlight =
-        !(wordEnd <= highlightStart || wordStart >= highlightEnd);
+      words.forEach((word, wordIdx) => {
+        const wordStart = charIndex;
+        const wordEnd = charIndex + word.length;
 
-      const wordChars: React.ReactNode[] = [];
+        // Check if entire word or any part of it is in highlight section
+        const isInHighlight =
+          !(wordEnd <= highlightStart || wordStart >= highlightEnd);
 
-      word.split("").forEach((char, charIdx) => {
-        wordChars.push(
+        const wordChars: React.ReactNode[] = [];
+
+        word.split("").forEach((char, charIdx) => {
+          wordChars.push(
+            <span
+              key={`${lineIdx}-${wordIdx}-${charIdx}`}
+              className={`${
+                isInView
+                  ? isInHighlight
+                    ? "animate-colorShiftYellow"
+                    : "animate-colorShift"
+                  : ""
+              }`}
+              style={{
+                color: "#989998",
+                animationDelay: isInView ? `${charIndex * 0.05}s` : "0s",
+              }}
+            >
+              {char}
+            </span>
+          );
+          charIndex++;
+        });
+
+        // Wrap word in a span with whitespace-nowrap to prevent breaking
+        elements.push(
           <span
-            key={`${wordIdx}-${charIdx}`}
-            className={`${
-              isInView
-                ? isInHighlight
-                  ? "animate-colorShiftYellow"
-                  : "animate-colorShift"
-                : ""
-            }`}
-            style={{
-              color: "#989998",
-              animationDelay: isInView ? `${charIndex * 0.05}s` : "0s",
-            }}
+            key={`word-${lineIdx}-${wordIdx}`}
+            className="inline-block whitespace-nowrap"
           >
-            {char}
+            {wordChars}
           </span>
         );
-        charIndex++;
+
+        // Add space after word (but not after last word in the line)
+        if (wordIdx < words.length - 1) {
+          elements.push(<span key={`space-${lineIdx}-${wordIdx}`}> </span>);
+          charIndex++; // Account for space in char count
+        }
       });
 
-      // Wrap word in a span with whitespace-nowrap to prevent breaking
-      elements.push(
-        <span key={`word-${wordIdx}`} className="inline-block whitespace-nowrap">
-          {wordChars}
-        </span>
-      );
-
-      // Add space after word (but not after last word)
-      if (wordIdx < words.length - 1) {
-        elements.push(<span key={`space-${wordIdx}`}> </span>);
-        charIndex++; // Account for space in char count
+      // Add a line break between lines (but not after last line)
+      if (lineIdx < lines.length - 1) {
+        elements.push(<br key={`br-${lineIdx}`} />);
+        charIndex++; // Account for newline in char count
       }
     });
 

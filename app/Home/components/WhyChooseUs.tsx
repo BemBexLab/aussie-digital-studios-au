@@ -98,7 +98,7 @@ const WhyChooseUs = () => {
           obs.unobserve(entry.target);
         }
       },
-      { threshold: 0.15 }
+      { threshold: 0.15 },
     );
 
     obs.observe(target);
@@ -116,22 +116,16 @@ const WhyChooseUs = () => {
         <div className="flex flex-col lg:flex-row justify-center mx-auto gap-8 lg:gap-5 max-w-7xl w-full flex-wrap">
           {/* First column */}
           <div className="flex flex-col w-full lg:w-[45%]">
-            <h2 className="text-[#4C8C74] text-xl mb-1">Why Choose Us?</h2>
+            <h2 className="text-[#4C8C74] text-xl mb-1">Why Work With Us</h2>
             <h2 className="text-white text-3xl lg:text-4xl font-medium mb-5">
-              Why Choose Aussie Digital Studio
+              Honestly? Because we don't disappear after launch.
             </h2>
-            <p
-              className="font-normal text-sm text-[#AAAAAA]"
-              data-text-sm-light
-            >
-              We focus on modern, thoughtful design backed by clear strategy.
-              Every project is planned with purpose, ensuring your digital
-              presence not only looks great but performs well. We value clear
-              communication, keeping the process simple and transparent from
-              start to finish. Our work is built around real results, with
-              usability and growth always in mind. Beyond launch, we provide
-              ongoing support to help your brand continue to evolve and succeed.
-            </p>
+            <ul className="list-inside font-normal text-sm text-[#AAAAAA] space-y-3">
+              <li>A lot of agencies are great at winning the job and average at everything after. We've structured our whole business around the opposite. Your site goes live, and that's when we start paying attention to what's working, what is not, and what needs to change.</li>
+              <li>We also don't outsource. Every person working on your project is part of our team. You will deal with the same people from the first call to the final handover, and beyond if you need ongoing support.</li>
+              <li>We are not going to promise you page one of Google by next Tuesday. What we will do is build your website the right way, optimise it properly, and keep improving it over time. That's what actually works.</li>
+              <li>We have done it for new businesses finding their feet, for established brands trying to break into new parts of the market, and for local Australian businesses that wanted to compete well beyond their postcode.</li>
+            </ul>
             <div className="flex flex-row">
               <button
                 onClick={() => router.push("/contact")}
@@ -173,7 +167,7 @@ const WhyChooseUs = () => {
           </div>
 
           {/* Second column */}
-          <div className="grid grid-cols-2 gap-6 w-full lg:w-[38%] max-w-[520px]">
+          <div className="grid grid-cols-2 gap-x-3 w-full lg:w-[38%] max-w-[520px] max-h-[300px]">
             {/* Mapped Cards */}
             {cardData.map((card, index) => (
               <div

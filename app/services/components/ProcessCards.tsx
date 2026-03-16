@@ -7,7 +7,7 @@ type ProcessCardsProps = {
     processCardData?: Array<{
       image: string;
       heading: string;
-      paragraph: string;
+      paragraph: React.ReactNode;
     }>;
   };
 };
