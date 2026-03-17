@@ -117,7 +117,7 @@ const WhyChoose = ({ data }: WhyChooseProps) => {
               {data.heading}
             </motion.h2>
             <motion.div
-              className="mt-6 max-h-[420px] space-y-4 overflow-y-auto pr-3 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:w-0"
+              className="mt-6 max-h-[420px] space-y-4 overflow-y-auto pr-3 scrollbar-thin scrollbar-thumb-[#AAAAAA]/60 scrollbar-track-white/10 [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-[#ffffff14] [&::-webkit-scrollbar-track]:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.08)] [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:border [&::-webkit-scrollbar-thumb]:border-solid [&::-webkit-scrollbar-thumb]:border-[#ffffff33] [&::-webkit-scrollbar-thumb]:bg-[#AAAAAA99]"
               initial={{ opacity: 0, y: 8 }}
               animate={isContentInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 8 }}
               transition={{ duration: 0.6, delay: 0.05 }}

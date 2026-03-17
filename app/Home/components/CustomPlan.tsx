@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import CustomPlanMobile from "./CustomPlanMobile";
 
 type CustomPlanData = {
@@ -19,7 +19,16 @@ type CustomPlanProps = {
 
 const CustomPlan = ({ data }: CustomPlanProps) => {
   const [isDarkMode, setIsDarkMode] = useState(true);
+  const [hasBodyOverflow, setHasBodyOverflow] = useState(false);
+  const [hasRightContentOverflow, setHasRightContentOverflow] = useState(false);
   const defaultButtonText = "Book a consultation call to create your perfect plan";
+  const bodyContentRef = useRef<HTMLDivElement | null>(null);
+  const bodyContentInnerRef = useRef<HTMLDivElement | null>(null);
+  const rightContentRef = useRef<HTMLDivElement | null>(null);
+  const rightContentInnerRef = useRef<HTMLDivElement | null>(null);
+
+  const glassScrollbarClasses =
+    "scrollbar-thin scrollbar-thumb-[#AAAAAA]/60 scrollbar-track-white/10 [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-[#ffffff14] [&::-webkit-scrollbar-track]:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.08)] [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:border [&::-webkit-scrollbar-thumb]:border-solid [&::-webkit-scrollbar-thumb]:border-[#ffffff33] [&::-webkit-scrollbar-thumb]:bg-[#AAAAAA99]";
 
   useEffect(() => {
     // Initial theme detection
@@ -48,6 +57,53 @@ const CustomPlan = ({ data }: CustomPlanProps) => {
     };
   }, []);
 
+  useEffect(() => {
+    const updateOverflowState = () => {
+      const bodyEl = bodyContentRef.current;
+      const bodyInnerEl = bodyContentInnerRef.current;
+      const rightEl = rightContentRef.current;
+      const rightInnerEl = rightContentInnerRef.current;
+
+      setHasBodyOverflow(
+        bodyEl && bodyInnerEl
+          ? bodyInnerEl.scrollHeight > bodyEl.clientHeight + 6
+          : false
+      );
+      setHasRightContentOverflow(
+        rightEl && rightInnerEl
+          ? rightInnerEl.scrollHeight > rightEl.clientHeight + 10
+          : false
+      );
+    };
+
+    updateOverflowState();
+
+    const resizeObserver = new ResizeObserver(updateOverflowState);
+
+    if (bodyContentRef.current) {
+      resizeObserver.observe(bodyContentRef.current);
+    }
+
+    if (bodyContentInnerRef.current) {
+      resizeObserver.observe(bodyContentInnerRef.current);
+    }
+
+    if (rightContentRef.current) {
+      resizeObserver.observe(rightContentRef.current);
+    }
+
+    if (rightContentInnerRef.current) {
+      resizeObserver.observe(rightContentInnerRef.current);
+    }
+
+    window.addEventListener("resize", updateOverflowState);
+
+    return () => {
+      resizeObserver.disconnect();
+      window.removeEventListener("resize", updateOverflowState);
+    };
+  }, [data]);
+
   return (
     <>
       <CustomPlanMobile data={data} />
@@ -72,7 +128,14 @@ const CustomPlan = ({ data }: CustomPlanProps) => {
             <h2 className="font-semibold text-2xl lg:text-4xl text-white">
               {data?.heading || "Your Plan, Not Ours"}
             </h2>
-            <div className="w-full lg:w-[720px] max-h-[170px] overflow-y-auto text-sm text-[#4C8C74] mt-4 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:w-0">
+            <div
+              ref={bodyContentRef}
+              className={`w-full lg:w-[720px] max-h-[170px] text-sm text-[#4C8C74] mt-4 ${
+                hasBodyOverflow
+                  ? `overflow-y-auto ${glassScrollbarClasses}`
+                  : "overflow-y-hidden"
+              }`}
+            >
               {/* <p className="text-sm text-[#4C8C74]">
               AussieDigitalStudios is a full-service digital studio built for
               modern, fast-growing brands. From strategy to standout design and
@@ -80,28 +143,30 @@ const CustomPlan = ({ data }: CustomPlanProps) => {
               online presence lives here, powered by a creative, results-focused
               team.
             </p> */}
-              {data?.body || (
-                <>
-                  <ul className="text-sm text-[#4C8C74] space-y-3">
-                    <li>
-                      We don't sell packages. We sit down with you, work out
-                      what your business needs right now and where you want it
-                      to be in two years, and build a plan around that.
-                    </li>
-                    <li>
-                      For some businesses, that's a brand new website. For
-                      others, it's fixing what's already there and putting a
-                      proper SEO strategy behind it. For others, it's the whole
-                      thing, new brand, new site, new digital direction.
-                    </li>
-                    <li>
-                      Whatever it looks like for you, we'll be upfront about
-                      what it involves, what it costs, and how long it takes. No
-                      vague proposals. No hidden extras halfway through.
-                    </li>
-                  </ul>
-                </>
-              )}
+              <div ref={bodyContentInnerRef}>
+                {data?.body || (
+                  <>
+                    <ul className="text-sm text-[#4C8C74] space-y-3">
+                      <li>
+                        We don't sell packages. We sit down with you, work out
+                        what your business needs right now and where you want it
+                        to be in two years, and build a plan around that.
+                      </li>
+                      <li>
+                        For some businesses, that's a brand new website. For
+                        others, it's fixing what's already there and putting a
+                        proper SEO strategy behind it. For others, it's the whole
+                        thing, new brand, new site, new digital direction.
+                      </li>
+                      <li>
+                        Whatever it looks like for you, we'll be upfront about
+                        what it involves, what it costs, and how long it takes. No
+                        vague proposals. No hidden extras halfway through.
+                      </li>
+                    </ul>
+                  </>
+                )}
+              </div>
             </div>
             <div className="mt-8 flex flex-row">
               <a
@@ -152,8 +217,17 @@ const CustomPlan = ({ data }: CustomPlanProps) => {
           {/* Image on right side */}
           <div className="w-full lg:w-[40%] flex justify-end items-center">
             {data?.rightContent ? (
-              <div className="w-full h-[350px] max-w-[370px] overflow-y-auto rounded-xl border border-white/10 bg-[#08110e] px-6 py-5 text-[#AAAAAA] [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:w-0">
-                {data.rightContent}
+              <div
+                ref={rightContentRef}
+                className={`w-full h-[350px] max-w-[370px] rounded-xl border border-white/10 bg-[#08110e] px-6 py-5 text-[#AAAAAA] ${
+                  hasRightContentOverflow
+                    ? `overflow-y-auto ${glassScrollbarClasses}`
+                    : "overflow-y-hidden"
+                }`}
+              >
+                <div ref={rightContentInnerRef} className="flow-root">
+                  {data.rightContent}
+                </div>
               </div>
             ) : (
               <Image
