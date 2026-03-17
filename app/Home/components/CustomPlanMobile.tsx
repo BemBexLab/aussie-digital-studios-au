@@ -6,6 +6,10 @@ import React, { useState, useEffect } from "react";
 type CustomPlanData = {
   heading?: React.ReactNode;
   body?: React.ReactNode;
+  buttonText?: React.ReactNode;
+  rightImageUrl?: string;
+  rightImageAlt?: string;
+  rightContent?: React.ReactNode;
 };
 
 type CustomPlanMobileProps = {
@@ -14,6 +18,7 @@ type CustomPlanMobileProps = {
 
 const CustomPlanMobile = ({ data }: CustomPlanMobileProps) => {
   const [isDarkMode, setIsDarkMode] = useState(true);
+  const defaultButtonText = "Book a consultation call to create your perfect plan";
 
   useEffect(() => {
     // Initial theme detection
@@ -76,7 +81,9 @@ const CustomPlanMobile = ({ data }: CustomPlanMobileProps) => {
               href="#"
               className="flex font-light text-xs sm:text-sm items-center justify-center gap-2 bg-[#4C8C74] text-white py-2 px-3 rounded-full hover:bg-blue-300 transition-colors group w-full"
             >
-              <span className="text-center">Book a consultation call</span>
+              <span className="text-center">
+                {data?.buttonText || defaultButtonText}
+              </span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -113,13 +120,19 @@ const CustomPlanMobile = ({ data }: CustomPlanMobileProps) => {
         </div>
 
         {/* Image */}
-        <Image
-          src="/Home/performance_marketing.webp"
-          alt="Custom Plan Illustration"
-          width={300}
-          height={300}
-          className="w-full h-auto rounded-lg"
-        />
+        {data?.rightContent ? (
+          <div className="w-full rounded-lg border border-white/10 bg-[#08110e] px-4 py-4 text-[#AAAAAA]">
+            {data.rightContent}
+          </div>
+        ) : (
+          <Image
+            src={data?.rightImageUrl || "/Home/performance_marketing.webp"}
+            alt={data?.rightImageAlt || "Custom Plan Illustration"}
+            width={300}
+            height={300}
+            className="w-full h-auto rounded-lg"
+          />
+        )}
       </div>
     </section>
   );
