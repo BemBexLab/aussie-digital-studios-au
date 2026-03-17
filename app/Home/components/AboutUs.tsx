@@ -51,8 +51,8 @@ const AboutUs = () => {
   }, []);
 
   const fullText =
-    "Aussie Digital Solutions started with a simple frustration: too many Australian businesses were paying good money for websites that looked fine but did nothing. No enquiries, No leads, and No return. \nWe handle web design, web development, SEO, digital marketing, and branding. Not as separate offerings bolted together, but as one connected strategy built around your goals.";
-  const highlightText = "No enquiries, No leads, and No return. \nWe handle web design, web development, SEO, digital marketing, and branding.";
+    "Built for Australian businesses that are tired of paying for websites that look good, but don’t get the best results. \nWe handle web design, web development, SEO, digital marketing, and branding. Not as separate offerings bolted together, but as one connected strategy built around your goals.";
+  const highlightText = "\nWe handle web design, web development, SEO, digital marketing, and branding.";
 
   const renderAnimatedText = () => {
     const elements: React.ReactNode[] = [];

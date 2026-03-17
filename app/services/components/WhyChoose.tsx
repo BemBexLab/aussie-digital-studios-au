@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion } from "motion/react";
 import Image from "next/image";
 import WhyChooseMobile from "./WhyChooseMobile";
@@ -18,6 +18,57 @@ type WhyChooseProps = {
 const WhyChoose = ({ data }: WhyChooseProps) => {
   const contentRef = useRef<HTMLDivElement | null>(null);
   const [isContentInView, setIsContentInView] = useState(false);
+  const bodyClassName = "text-base text-gray-300 leading-relaxed whitespace-pre-line";
+
+  const extractText = (node: React.ReactNode): string => {
+    if (typeof node === "string" || typeof node === "number") {
+      return String(node);
+    }
+
+    if (Array.isArray(node)) {
+      return node.map(extractText).join("");
+    }
+
+    if (React.isValidElement(node)) {
+      const element = node as React.ReactElement<{ children?: React.ReactNode }>;
+      const children = React.Children.toArray(element.props?.children);
+      return children.map(extractText).join("");
+    }
+
+    return "";
+  };
+
+  const isHeadingElement = (node: React.ReactNode) =>
+    React.isValidElement(node) &&
+    typeof node.type === "string" &&
+    /^h[1-6]$/.test(node.type);
+
+  const getTopLevelNodes = (nodes: React.ReactNode[]) =>
+    nodes.flatMap((node) => {
+      if (React.isValidElement(node) && node.type === React.Fragment) {
+        const element = node as React.ReactElement<{ children?: React.ReactNode }>;
+        return React.Children.toArray(element.props?.children).filter(
+          (child) => !(typeof child === "string" && child.trim() === "")
+        );
+      }
+      if (typeof node === "string" && node.trim() === "") {
+        return [];
+      }
+      return [node];
+    });
+
+  const renderFullContent = (nodes: React.ReactNode[]) =>
+    getTopLevelNodes(nodes).map((node, index) => {
+      if (typeof node === "string" || typeof node === "number") {
+        return (
+          <p key={`full-${index}`} className={bodyClassName}>
+            {node}
+          </p>
+        );
+      }
+
+      return <React.Fragment key={`full-${index}`}>{node}</React.Fragment>;
+    });
 
   if (!data) {
     return null;
@@ -66,19 +117,12 @@ const WhyChoose = ({ data }: WhyChooseProps) => {
               {data.heading}
             </motion.h2>
             <motion.div
-              className="mt-6 space-y-4"
+              className="mt-6 max-h-[420px] space-y-4 overflow-y-auto pr-3 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:w-0"
               initial={{ opacity: 0, y: 8 }}
               animate={isContentInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 8 }}
               transition={{ duration: 0.6, delay: 0.05 }}
             >
-              {data.paragraphs.map((text, index) => (
-                <p
-                  key={index}
-                  className="text-base text-gray-300 leading-relaxed whitespace-pre-line"
-                >
-                  {text}
-                </p>
-              ))}
+              {renderFullContent(data.paragraphs)}
             </motion.div>
           </div>
         </div>

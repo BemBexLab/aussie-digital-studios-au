@@ -6,7 +6,7 @@ type CardsMobileProps = {
   service: {
     strategicCardData?: Array<{
       title: string;
-      desc: string;
+      desc: React.ReactNode;
       svg: React.ReactNode;
     }>;
   };
@@ -52,7 +52,7 @@ const CardsMobile = ({ service }: CardsMobileProps) => {
         {allCards.map((card, index) => (
           <div
             key={`${card.title}-${index}`}
-            className="relative rounded-xl w-full border border-white/10 p-4 transition overflow-hidden"
+            className="relative rounded-xl w-full border border-white/10 p-4 pb-24 min-h-[240px] transition overflow-hidden"
             style={{
               backgroundImage: `url('${isDarkMode ? '/Services/dark_card_md.webp' : '/Services/light_card_md.webp'}')`,
               backgroundSize: "cover",
@@ -66,7 +66,7 @@ const CardsMobile = ({ service }: CardsMobileProps) => {
               </div>
               <div className="flex flex-col">
                 <h3 className={`text-lg ${isDarkMode ? "text-yellow-500" : "text-[#3A6EA5]"} font-semibold`}>{card.title}</h3>
-                <p className={`font-light text-sm mt-2 ${isDarkMode ? "text-white" : "text-[#777777]"}`}>{card.desc}</p>
+                <div className={`font-light text-sm mt-2 mb-4 ${isDarkMode ? "text-white" : "text-[#777777]"}`}>{card.desc}</div>
               </div>
             </div>
           </div>

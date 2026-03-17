@@ -1,3 +1,4 @@
+import React from "react";
 import { title } from "process";
 import { FiCheckCircle } from "react-icons/fi";
 
@@ -416,6 +417,7 @@ export const services = [
     ],
     customplanData: {
       heading: "Custom Plans According to Your Business",
+      buttonText: "Book a consultation call to create your perfect plan",
       body: (
         <>
           At Aussie Digital Solutions, we know that every business is different,
@@ -12594,247 +12596,306 @@ export const services = [
   {
     slug: "logo-design-branding",
     title: "Logo Design & Branding",
-    heading: "Create a Strong Brand Identity",
-    imageUrl: "/Services/Rectangle_52.png",
-    description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
-    points: [
-      "Custom Website Design",
-      "Responsive Development",
-      "E-commerce Solutions",
-      "Content Management Systems",
-      "Performance Optimization",
+    // heading: "Web Development Services in Australia",
+    serviceBodyData: [
+      {
+        imageUrl: "/Services/Rectangle_52.webp",
+        description: (
+          <>
+            <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
+              Your Brand Deserves to Be Remembered.
+            </h2>
+            Most businesses underestimate what a logo actually does. It's not decoration. It's the first thing someone sees before they read a word about you, and if it doesn't land, they're already forming the wrong opinion.<br /><br />
+At Aussie Digital Solution, we don't hand you a generic mark and call it a day. We build brand identities that actually mean something, ones that grow with your business and make people remember you for the right reasons.
+
+<h3 className="text-white text-3xl mt-5 md:text-2xl font-medium">CTA: Start Your Brand Journey | See Our Services</h3>
+500+ Brands Designed 98% Client Retention 8+ Years in Business AUS Based & Operated
+          </>
+        ),
+      },
     ],
+    whyChooseData: {
+      image: "/Services/Rectangle_52.webp",
+      heading: "Why Aussie Digital Solution",
+      paragraphs: [
+        <React.Fragment key="why-aussie-branding">
+        <h3 className="text-2xl text-white">We Don't Just Design, We Build Brands</h3>
+        <p className="text-[#AAAAAA]">Getting a cheap logo made is easy. There are dozens of places to do it in under 10 minutes. <br />
+But that's not a brand. A brand is what people think and feel when they come across your business, and building that properly takes more than a quick design file. We've spent years working with Australian businesses across different industries, and we've seen firsthand what separates the brands that stick from the ones that get ignored.</p>
+
+<h3 className="text-2xl text-white mt-5">Strategy Before Design</h3>
+        <p className="text-[#AAAAAA]">We start with your business goals and audience before we ever open a design tool. </p>
+
+        <h3 className="text-2xl text-white mt-5">Built for Australian Markets</h3>
+        <p className="text-[#AAAAAA]">We understand local business culture, buyer behaviour, and what resonates with Australian audiences, not a generic international template.</p>
+
+        <h3 className="text-2xl text-white mt-5">End to End Delivery</h3>
+        <p className="text-[#AAAAAA]">From initial brief to final brand file handover, everything happens under one roof. No outsourcing,  confusion, or any compromise in quality.</p>
+
+        <h3 className="text-2xl text-white mt-5">You Own Everything</h3>
+        <p className="text-[#AAAAAA]">All files, all rights, all yours. We hand over source files and full ownership of every asset we create, no strings attached.</p>
+</React.Fragment>,
+      ],
+    },
+    // footnote: (
+    //   <>
+    //     <p className="italic">
+    //       A website that only looks good is a missed opportunity. We build
+    //       websites that look great and bring real results.—Aussie Digital
+    //       Solutions Team
+    //     </p>
+    //   </>
+    // ),
+    strategicHeading: <>What We Offer</>,
     strategicCardData: [
       {
-        title: "Custom Website Design",
-        desc: "Understand your vision, business goals, and target audience to create a clear project roadmap.",
+        title: "Full Spectrum Branding Services",
+        desc: <>A logo is just the beginning. Your brand is every single thing a customer experiences when they come across your business, the colours, the tone, the feeling, the consistency. Get that right, and people trust you faster. Get it wrong, and even a great product struggles to sell.
+        {/* <div className="absolute bottom-4 left-0 right-0 flex flex-col items-center text-[10px] gap-y-3">
+          <div className="flex items-center justify-center gap-2">
+            <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
+  WORDPRESS
+</button>
+            <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
+  Icon Design
+</button>
+          </div>
+          <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
+  Visual System
+</button>
+        </div> */}
+        </>,
         svg: (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
-            viewBox="0 0 50 50"
-            fill="none"
-          >
-            <path
-              d="M4.1665 22.9167C4.1665 15.0599 4.1665 11.1316 6.60728 8.69078C9.04806 6.25 12.9764 6.25 20.8332 6.25H29.1665C37.0232 6.25 40.9516 6.25 43.3924 8.69078C45.8332 11.1316 45.8332 15.0599 45.8332 22.9167V27.0833C45.8332 34.9401 45.8332 38.8684 43.3924 41.3092C40.9516 43.75 37.0232 43.75 29.1665 43.75H20.8332C12.9764 43.75 9.04806 43.75 6.60728 41.3092C4.1665 38.8684 4.1665 34.9401 4.1665 27.0833V22.9167Z"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-            <path
-              d="M31.25 43.75L31.25 6.25"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-            <path
-              d="M12.4998 29.1666L10.4165 31.25L12.4998 33.3333M21.8748 33.3333L23.9582 35.4166L21.8748 37.5M18.7498 29.1666L15.6248 37.5"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-          </svg>
+          <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fillRule="evenodd" clipRule="evenodd" d="M10.6628 3.25L13.3962 3.25C14.4775 3.24999 15.3438 3.24998 16.0539 3.32024C16.7893 3.393 17.4138 3.54511 18.0018 3.88204C18.5885 4.21826 19.0412 4.68264 19.4875 5.28464C19.9201 5.86804 20.3781 6.62574 20.9521 7.57545L21.6722 8.7667C22.1517 9.55986 22.5408 10.2035 22.8055 10.7633C23.0815 11.3467 23.25 11.8935 23.25 12.5C23.25 13.1065 23.0815 13.6533 22.8055 14.2367C22.5408 14.7965 22.1517 15.4401 21.6722 16.2333L20.9521 17.4246C20.3781 18.3743 19.9201 19.132 19.4875 19.7154C19.0412 20.3174 18.5885 20.7817 18.0018 21.118C17.4138 21.4549 16.7893 21.607 16.0539 21.6798C15.3438 21.75 14.4775 21.75 13.3962 21.75H10.6628C8.77448 21.75 7.27837 21.75 6.10742 21.5873C4.90024 21.4194 3.92827 21.0659 3.16484 20.2766C2.4048 19.4908 2.06748 18.4962 1.90675 17.2601C1.74998 16.0544 1.74999 14.5118 1.75 12.555V12.445C1.74999 10.4882 1.74998 8.94556 1.90675 7.73988C2.06748 6.50385 2.4048 5.50922 3.16484 4.72339C3.92827 3.93405 4.90024 3.58055 6.10742 3.41274C7.27838 3.24997 8.7745 3.24998 10.6628 3.25ZM6.31395 4.89846C5.28243 5.04185 4.68356 5.31074 4.24305 5.76621C3.79914 6.22517 3.53449 6.85468 3.39423 7.93331C3.25149 9.03102 3.25 10.476 3.25 12.5C3.25 14.524 3.25149 15.969 3.39423 17.0667C3.53449 18.1453 3.79914 18.7748 4.24305 19.2338C4.68356 19.6893 5.28243 19.9582 6.31395 20.1015C7.36968 20.2483 8.76142 20.25 10.721 20.25H13.358C14.4863 20.25 15.2785 20.2492 15.9062 20.187C16.517 20.1266 16.9142 20.0123 17.256 19.8165C17.599 19.6199 17.9062 19.3297 18.2826 18.822C18.668 18.3022 19.09 17.6055 19.6875 16.617L20.3683 15.4908C20.8728 14.6562 21.2214 14.0778 21.4495 13.5954C21.6702 13.1287 21.75 12.8077 21.75 12.5C21.75 12.1923 21.6702 11.8713 21.4495 11.4046C21.2214 10.9222 20.8728 10.3438 20.3683 9.50924L19.6875 8.383C19.09 7.39452 18.668 6.69782 18.2826 6.17798C17.9062 5.6703 17.599 5.38005 17.256 5.1835C16.9142 4.98766 16.517 4.87339 15.9062 4.81295C15.2785 4.75084 14.4863 4.75 13.358 4.75H10.721C8.76142 4.75 7.36968 4.7517 6.31395 4.89846ZM7.5 7.24512C7.91421 7.24512 8.25 7.5809 8.25 7.99512V17C8.25 17.4142 7.91421 17.75 7.5 17.75C7.08579 17.75 6.75 17.4142 6.75 17V7.99512C6.75 7.5809 7.08579 7.24512 7.5 7.24512Z" fill="#4C8C74"></path> </g></svg>
         ),
       },
       {
-        title: "E-commerce Website Development",
-        desc: "Iteratively develop robust, scalable websites with regular testing and your feedback at every stage.",
+        title: "Logo Design & Visual Systems",
+        descText:
+          "People decide whether they trust a brand in seconds. Your logo carries a lot of that weight. We design logos that actually say something, not just look nice, but communicate what you do and give people a reason to pay attention. From there, we build out a full visual system around it: icons, colour rules, spacing, and everything your team needs so the brand stays consistent across every platform and piece of material you put out.",
+        desc: (<>People decide whether they trust a brand in seconds. Your logo carries a lot of that weight.<br />
+	We design logos that actually say something, not just look nice, but communicate what you do and give people a reason to pay attention. From there, we build out a full visual system around it: icons, colour rules, spacing, and everything your team needs so the brand stays consistent across every platform and piece of material you put out.
+        <div className="absolute bottom-4 left-0 right-0 flex flex-col items-center text-[10px] gap-y-3">
+          <div className="flex items-center justify-center gap-2">
+            <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
+  Logo Design
+</button>
+            <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
+  Icon Design
+</button>
+          </div>
+          <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
+  Visual System
+</button>
+        </div>
+</>),
         svg: (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
-            viewBox="0 0 50 50"
-            fill="none"
-          >
-            <path
-              d="M45.8332 45.8334H4.1665"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-            <path
-              d="M41.6665 45.8333V22.9166"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-            <path
-              d="M8.3335 45.8333V22.9166"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-            <path
-              d="M34.4332 4.16663H15.5673C13.0614 4.16663 11.8085 4.16663 10.8016 4.78891C9.7947 5.4112 9.23437 6.53186 8.11372 8.77318L4.16699 18.75C4.16699 21.0511 6.03229 22.9166 8.33348 22.9166C10.6347 22.9166 12.5001 21.0511 12.5001 18.75C12.5001 21.0511 14.3656 22.9166 16.6668 22.9166C18.968 22.9166 20.8335 21.0511 20.8335 18.75C20.8335 21.0511 22.699 22.9166 25.0001 22.9166C27.3013 22.9166 29.1668 21.0511 29.1668 18.75C29.1668 21.0511 31.0323 22.9166 33.3335 22.9166C35.6347 22.9166 37.5001 21.0511 37.5001 18.75C37.5001 21.0511 39.3656 22.9166 41.6668 22.9166C43.968 22.9166 45.8335 21.0511 45.8335 18.75L41.8868 8.77318L41.8867 8.77314C40.7661 6.53185 40.2058 5.4112 39.1989 4.78891C38.192 4.16663 36.9391 4.16663 34.4332 4.16663Z"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-            <path
-              d="M19.7915 44.7917V38.5417C19.7915 36.5946 19.7915 35.621 20.2102 34.8959C20.4845 34.4208 20.8789 34.0263 21.354 33.752C22.0792 33.3334 23.0527 33.3334 24.9998 33.3334C26.947 33.3334 27.9205 33.3334 28.6457 33.752C29.1207 34.0263 29.5152 34.4208 29.7895 34.8959C30.2082 35.621 30.2082 36.5946 30.2082 38.5417V44.7917"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-          </svg>
+          <svg version="1.1" id="DESIGN" xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 1800 1800" enableBackground="new 0 0 1800 1800" fill="#000000"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Layer"> <g> <path fill="#4C8C74" d="M1541.606,1540.146l0.009-0.008c35.598-35.594,35.598-93.52,0-129.121 c-17.24-17.236-40.178-26.745-64.569-26.745c-24.378,0-47.314,9.509-64.564,26.763c-35.588,35.584-35.588,93.51,0.009,129.104 C1448.096,1575.73,1506.014,1575.73,1541.606,1540.146z M1440.885,1511.743c-9.656-9.655-14.975-22.498-14.975-36.165 c0-13.659,5.318-26.511,14.975-36.167c9.665-9.655,22.512-14.979,36.175-14.979c13.659,0,26.497,5.323,36.161,14.979 c19.938,19.945,19.938,52.387-0.008,72.332C1493.271,1531.689,1460.831,1531.681,1440.885,1511.743z"></path> <path fill="#4C8C74" d="M1700.934,402.736c0.021-0.026,0.047-0.043,0.068-0.065c0.044-0.043,0.083-0.091,0.127-0.134l5.504-5.505 l-0.138-0.139c81.836-87.814,80.038-225.814-5.507-311.356c-42.353-42.357-98.664-65.685-158.565-65.685 c-57.228,0-111.154,21.339-152.792,60.18l-0.134-0.134l-5.511,5.507c-0.043,0.046-0.09,0.085-0.134,0.131 c-0.021,0.021-0.039,0.045-0.061,0.069L66.371,1403.02l0.513,0.513c-7.364,4.749-12.699,12.548-13.98,21.907L9.578,1741.903 c-1.319,9.647,1.95,19.347,8.831,26.232c5.875,5.87,13.807,9.108,22.004,9.108c1.402,0,2.813-0.095,4.224-0.286l316.451-43.338 c9.365-1.276,17.163-6.617,21.912-13.98l0.512,0.513L1700.934,402.736z M1542.423,82.094c43.272,0,83.954,16.852,114.551,47.452 c55.643,55.638,62.276,142.02,19.897,204.983L1451.973,109.64C1478.482,91.724,1509.717,82.094,1542.423,82.094z M1389.497,167.919l229.113,229.112L383.512,1632.129l-86.195-86.19l991.423-991.409l-59.351-59.342l-991.41,991.418 l-83.585-83.586L1389.497,167.919z M76.804,1709.731l35.68-260.604l224.915,224.916L76.804,1709.731z"></path> <path fill="#4C8C74" d="M506.941,804.479l56.789-56.789l-454.446-454.45l185.432-185.437l87.924,87.932l-63.792,63.783 l50.362,50.359l63.792-63.779l51.262,51.258l-63.792,63.788l50.363,50.354l63.797-63.779l51.257,51.267l-94.375,94.353 l50.376,50.363l94.362-94.362l62.502,62.498l-63.792,63.801l50.363,50.354l63.792-63.792l0.043,0.047l56.789-56.789 L323.106,22.622c-15.682-15.686-41.102-15.686-56.784,0L24.102,264.845c-15.687,15.683-15.687,41.107,0,56.789L506.941,804.479z"></path> <path fill="#4C8C74" d="M1778.944,1478.287c-0.726-0.729-1.478-1.424-2.241-2.085l-505.282-505.273l-151.159,151.159l50.259,50.26 l94.371-94.37l428.79,428.782l-185.441,185.432l-479.045-479.041l-56.789,56.798l507.437,507.427 c15.682,15.69,41.102,15.69,56.788,0l242.234-242.213c0.021-0.034,0.048-0.052,0.079-0.086 C1794.63,1519.402,1794.63,1493.969,1778.944,1478.287z"></path> </g> </g> </g></svg>
         ),
       },
       {
-        title: "Magento Development",
-        desc: "Design modern, user-centric interfaces for an exceptional digital experience.",
+        title: "Brand Guide & Standards",
+        descText:
+          "Here's what happens without one: your website uses one shade of blue, your printed flyers use another, your social posts look like they belong to a different company entirely. Customers notice. It makes you look unorganised even when you're not. A brand guide fixes that. It gives everyone, your staff, your designers, your print supplier, one clear document to work from. Colours, fonts, logo usage, tone of voice. Everything in one place, clearly explained, easy to follow.",
+        desc: (<>Here's what happens without one: your website uses one shade of blue, your printed flyers use another, your social posts look like they belong to a different company entirely. Customers notice. It makes you look unorganised even when you're not.<br />
+A brand guide fixes that. It gives everyone, your staff, your designers, your print supplier, one clear document to work from. Colours, fonts, logo usage, tone of voice. Everything in one place, clearly explained, easy to follow.
+	<div className="absolute bottom-4 left-0 right-0 flex flex-col items-center text-[10px] gap-y-3">
+          <div className="flex items-center justify-center gap-2">
+            <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
+  Brand Standards
+</button>
+            <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
+  Colour Palette
+</button>
+          </div>
+          <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
+  Typography
+</button>
+        </div>
+</>),
         svg: (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
-            viewBox="0 0 50 50"
-            fill="none"
-          >
-            <path
-              d="M25.0003 45.8333C36.5063 45.8333 45.8337 36.5059 45.8337 25C45.8337 13.494 36.5063 4.16663 25.0003 4.16663C13.4944 4.16663 4.16699 13.494 4.16699 25C4.16699 36.5059 13.4944 45.8333 25.0003 45.8333Z"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-            <path
-              d="M32.292 18.75L32.6494 19.1074C35.4272 21.8852 36.8161 23.2741 36.8161 25C36.8161 26.7259 35.4272 28.1148 32.6494 30.8926L32.292 31.25"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-            <path
-              d="M27.6963 14.9382L25.0003 25L22.3042 35.0617"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-            <path
-              d="M17.7087 18.75L17.3512 19.1074C14.5735 21.8852 13.1846 23.2741 13.1846 25C13.1846 26.7259 14.5735 28.1148 17.3512 30.8926L17.7087 31.25"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-          </svg>
+          <svg width="40px" height="40px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill="#4C8C74" fillRule="evenodd" d="M1.25 2C.56 2 0 2.56 0 3.25v8.5C0 12.44.56 13 1.25 13H5c.896 0 1.475.205 1.809.448.317.23.441.51.441.802a.75.75 0 001.5 0c0-.292.124-.572.441-.802.334-.243.913-.448 1.809-.448h3.75c.69 0 1.25-.56 1.25-1.25v-8.5C16 2.56 15.44 2 14.75 2H11c-1.154 0-2.106.354-2.772 1-.081.08-.157.161-.228.246A3.131 3.131 0 007.772 3C7.106 2.354 6.154 2 5 2H1.25zm7.5 9.967c.61-.309 1.372-.467 2.25-.467h3.5v-8H11c-.846 0-1.394.253-1.728.577-.335.325-.522.787-.522 1.34v6.55zm-1.5 0v-6.55c0-.553-.187-1.015-.522-1.34C6.394 3.753 5.846 3.5 5 3.5H1.5v8H5c.878 0 1.64.158 2.25.467z" clipRule="evenodd"></path></g></svg>
         ),
       },
       {
-        title: "Wordpress Development",
-        desc: "Design modern, user-centric interfaces for an exceptional digital experience.",
+        title: "Playbook Development",
+        descText:
+          "A brand guide tells people what your brand looks like. A playbook tells people how it behaves. How does your team talk to customers? What's the tone in your emails? How does your brand come across on social versus in a proposal? These things matter more than most businesses realise, and when they're inconsistent, customers feel it even if they can't name it. We build playbooks that turn your brand values into real, everyday decisions, so no matter who's speaking on behalf of your business, it always feels like the same company.",
+        desc: (<>A brand guide tells people what your brand looks like. A playbook tells people how it behaves.<br />
+How does your team talk to customers? What's the tone in your emails? How does your brand come across on social versus in a proposal? These things matter more than most businesses realise, and when they're inconsistent, customers feel it even if they can't name it.<br />
+We build playbooks that turn your brand values into real, everyday decisions, so no matter who's speaking on behalf of your business, it always feels like the same company.
+<div className="absolute bottom-4 left-0 right-0 flex flex-col items-center text-[10px] gap-y-3">
+          <div className="flex items-center justify-center gap-2">
+            <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
+  Brand Voice
+</button>
+            <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
+  Messaging
+</button>
+          </div>
+          <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
+  Touchpoints
+</button>
+        </div>
+</>),
         svg: (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
-            viewBox="0 0 52 52"
-            fill="none"
-          >
-            <circle
-              cx="26"
-              cy="26"
-              r="25"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-            <path
-              d="M4.5166 13.8746H6.74371M14.3476 13.8746H6.74371M6.74371 13.8746L18.8623 47.0621L27.6542 23.3794M27.6542 23.3794L24.2483 13.8746M27.6542 23.3794L36.2877 47.0621L45.0166 23.3794M24.2483 13.8746H18.3078M24.2483 13.8746H32.8026M45.0166 23.3794L45.9508 20.8448C47.1125 16.6468 47.9785 8.42521 42.1489 9.12223C39.7836 9.67667 37.0457 13.3043 45.0166 23.3794Z"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-          </svg>
+          <svg width="40px" height="40px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"  fill="#000000"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>book-album</title> <desc>Created with Sketch Beta.</desc> <defs> </defs> <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd" > <g id="Icon-Set"  transform="translate(-412.000000, -99.000000)" fill="#4C8C74"> <path d="M442,124 C442,125.104 441.073,125.656 440,126 C440,126 434.557,127.515 429,128.977 L429,104 L440,101 C441.104,101 442,101.896 442,103 L442,124 L442,124 Z M427,128.998 C421.538,127.53 416,126 416,126 C414.864,125.688 414,125.104 414,124 L414,103 C414,101.896 414.896,101 416,101 L427,104 L427,128.998 L427,128.998 Z M440,99 C440,99 434.211,100.594 428.95,102 C428.291,102.025 427.627,102 426.967,102 C421.955,100.656 416,99 416,99 C413.791,99 412,100.791 412,103 L412,124 C412,126.209 413.885,127.313 416,128 C416,128 421.393,129.5 426.967,131 L428.992,131 C434.612,129.5 440,128 440,128 C442.053,127.469 444,126.209 444,124 L444,103 C444,100.791 442.209,99 440,99 L440,99 Z" id="book-album" > </path> </g> </g> </g></svg>
         ),
       },
       {
-        title: "Opencart",
-        desc: "Thoroughly test for responsiveness, performance, and security before seamless launch and handover.",
+        title: "Personal Branding",
+        descText:
+          "If you're a founder, consultant, coach, or creative, you are part of the product. People buy from people they trust, and that trust starts with how you present yourself. We help individuals build a personal brand that's genuinely theirs. Not a polished corporate version of themselves, but something clear, credible, and consistent - across LinkedIn, their website, and wherever their audience actually spends time.",
+        desc: (<>If you're a founder, consultant, coach, or creative, you are part of the product. People buy from people they trust, and that trust starts with how you present yourself.<br />
+We help individuals build a personal brand that's genuinely theirs. Not a polished corporate version of themselves, but something clear, credible, and consistent — across LinkedIn, their website, and wherever their audience actually spends time.
+<div className="absolute bottom-4 left-0 right-0 flex flex-col items-center text-[10px] gap-y-3">
+          <div className="flex items-center justify-center gap-2">
+            <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
+  Personal Brand
+</button>
+            <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
+  Founder Brand
+</button>
+          </div>
+          <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
+  Online Presence
+</button>
+        </div>
+</>),
         svg: (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
-            viewBox="0 0 50 50"
-            fill="none"
-          >
-            <path
-              d="M2.01594 9.46583C4.54545 13.647 7.6255 15.745 13.2351 17.1287C17.1632 18.0959 20.8236 18.4084 29.1412 18.4828C33.6199 18.5125 36.1643 18.6018 37.3993 18.7506C42.5178 19.3904 43.8867 20.5808 42.3541 23.1252C42.0863 23.5716 40.8216 25.0595 39.5568 26.3986C36.6256 29.5233 35.7179 30.55 34.9442 31.6809C34.468 32.3355 34.3936 32.529 34.6168 32.4099C34.7805 32.3207 34.9739 32.1719 35.0335 32.0826C35.0781 31.9933 37.2059 30.1334 39.7651 27.961C46.4906 22.2026 48.4101 20.2534 48.916 18.6613C49.1689 17.8876 48.916 17.1585 48.2167 16.6972C46.4609 15.5366 43.1874 15.1647 34.5127 15.12C17.6245 15.0159 11.5686 14.3612 6.8964 12.0995C5.00671 11.177 3.62292 10.2396 2.09034 8.79625L0.989258 7.78445L2.01594 9.46583Z"
-              fill="#4C8C74"
-            />
-            <path
-              d="M12.5803 35.5792C11.6875 35.9066 10.9882 36.5464 10.6013 37.3648C9.51512 39.6859 11.0923 42.2155 13.6218 42.2155C16.3597 42.2006 17.9666 39.3437 16.5531 37.0523C15.7347 35.728 13.9641 35.0584 12.5803 35.5792Z"
-              fill="#4C8C74"
-            />
-            <path
-              d="M28.2332 35.5643C26.9387 36.0554 26.0757 37.1267 25.9269 38.4361C25.8078 39.433 26.0757 40.3406 26.7304 41.0549C27.4595 41.8583 28.2481 42.2155 29.364 42.2155C32.2507 42.2155 33.7684 38.8229 31.8787 36.5761C31.0752 35.609 29.364 35.1477 28.2332 35.5643Z"
-              fill="#4C8C74"
-            />
-          </svg>
+          <svg width="40px" height="40px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#4C8C74"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M0 0h48v48H0z" fill="none"></path> <g id="Shopicon"> <path d="M44,22V4H26L4,26l18,18L44,22z M32,14c1.105,0,2,0.895,2,2c0,1.105-0.895,2-2,2c-1.105,0-2-0.895-2-2 C30,14.895,30.895,14,32,14z"></path> </g> </g></svg>
         ),
       },
       {
-        title: "Shopify Development",
-        desc: "Incorporate compelling, SEO-optimized content and visuals that support your brand story.",
+        title: "Video & Motion Graphics",
+        descText:
+          "A static logo on a white background tells part of the story. Motion tells the rest. Animated brand intros, explainer videos, social reels, promotional content - when it's done well, motion makes people stop and actually watch. We create motion content built around your brand, not generic templates. Every frame has a reason to be there.",
+        desc: (<>A static logo on a white background tells part of the story. Motion tells the rest.<br />
+Animated brand intros, explainer videos, social reels, promotional content — when it's done well, motion makes people stop and actually watch. We create motion content built around your brand, not generic templates. Every frame has a reason to be there.
+<div className="absolute bottom-4 left-0 right-0 flex flex-col items-center text-[10px] gap-y-3">
+          <div className="flex items-center justify-center gap-2">
+            <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
+  Brand Animation
+</button>
+            <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
+  Explainer Video
+</button>
+          </div>
+          <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
+  Social Reels
+</button>
+        </div>
+</>),
         svg: (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
-            viewBox="0 0 47 52"
-            fill="none"
-          >
+          <svg width="40px" height="40px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="none">
             <path
-              d="M32.2417 51.0001L1 45.5771L5.12642 14.4532L11.9727 12.3993M32.2417 51.0001V6.31849M32.2417 51.0001L45.7994 47.5812L40.0227 9.73743H36.2501L32.2417 6.31849M32.2417 6.31849L28.6995 7.38117M11.9727 12.3993C12.4414 8.44675 15.0528 0.636051 21.7492 1.01331C22.9995 0.936865 25.4315 2.31595 25.1572 8.44384M11.9727 12.3993L18.565 10.4216M25.1572 8.44384L18.565 10.4216M25.1572 8.44384L28.6995 7.38117M18.565 10.4216C19.1941 7.63916 21.6313 2.19228 26.347 2.66385C27.2472 2.56359 28.9781 3.36669 28.6995 7.38117"
+              d="M23.9092,33.9928l-8.68-5.1065.0919-10.0541,8.7723-4.9476,8.68,5.1065-.092,10.054Z"
               stroke="#4C8C74"
-              strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
-              d="M16.8005 16.8122C13.8515 18.2867 11.2471 21.1821 11.2471 24.8013C11.2471 27.2141 11.2396 28.563 13.5854 30.8418C16.8025 33.9919 18.3111 35.4209 16.0323 36.542C15.0269 36.676 12.0514 36.1154 11.2471 35.7132C10.1077 35.043 10.2013 35.8717 9.7321 36.542C7.92248 39.424 10.8045 41.9708 16.0323 42.0379C18.9813 42.1049 20.4835 41.5844 22.159 39.7078C23.7676 37.8981 23.523 37.0668 23.523 34.2518C23.523 30.7666 22.8686 30.3758 18.3111 26.6226C15.0939 23.9416 16.5685 21.3948 21.193 21.8639C23.6059 22.065 23.874 21.9309 24.5442 20.1213C24.8793 19.049 25.2144 17.7755 25.2144 17.3064C25.2144 15.9659 19.6155 15.4047 16.8005 16.8122Z"
-              fill="#4C8C74"
+              d="M15.521,19.052,23.89,23.9688l8.7784-4.7867"
+              stroke="#4C8C74"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <path
+              d="M23.89,24.074l-.0012,9.9016"
+              stroke="#4C8C74"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <path
+              d="M23.962,34.288v8.0351"
+              stroke="#4C8C74"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <path
+              d="M32.863,19.133l9.5984-5.6212"
+              stroke="#4C8C74"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <path
+              d="M15.125,19.046l-9.54-5.5273"
+              stroke="#4C8C74"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <path
+              d="M40.5,5.5H7.5a2,2,0,0,0-2,2v33a2,2,0,0,0,2,2h33a2,2,0,0,0,2-2V7.5A2,2,0,0,0,40.5,5.5Z"
+              stroke="#4C8C74"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
           </svg>
         ),
       },
       {
-        title: "Woocommerce Development",
-        desc: "Provide maintenance, updates, and performance enhancements to keep your site running at its best.",
+        title: "Brand Identity Development",
+        descText:
+          "This is the whole thing, built properly, from scratch. We start by actually getting to know your business. Not the surface stuff, but the real picture: what you're trying to achieve, who you're selling to, who you're up against, and what's going to make someone choose you over the next option. That takes a real conversation. We have it. Then we build every visual and verbal element of your brand around what we learn. Logo, colour palette, typography, tone of voice, messaging, brand presentation, everything. When it's done, you've got a brand that's ready to compete and built to hold up over time.",
+        desc: (<>This is the whole thing, built properly, from scratch.<br />
+We start by actually getting to know your business. Not the surface stuff, but the real picture: what you're trying to achieve, who you're selling to, who you're up against, and what's going to make someone choose you over the next option. That takes a real conversation. We have it.<br />
+Then we build every visual and verbal element of your brand around what we learn. Logo, colour palette, typography, tone of voice, messaging, brand presentation, everything. When it's done, you've got a brand that's ready to compete and built to hold up over time.
+<div className="absolute bottom-4 left-0 right-0 flex flex-col items-center text-[10px] gap-y-3">
+          <div className="flex items-center justify-center gap-2">
+            <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
+  Full Identity
+</button>
+            <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
+  Brand Strategy
+</button>
+          </div>
+          <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
+  Market Positioning
+</button>
+        </div>
+</>),
         svg: (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
-            viewBox="0 0 86 52"
-            fill="none"
-          >
-            <path
-              d="M81.4189 1L81.419 0H81.4189V1ZM81.4189 42.8379V43.8379H81.419L81.4189 42.8379ZM52.7529 42.8379V41.8379C52.4199 41.8379 52.1088 42.0037 51.923 42.28C51.7372 42.5564 51.7012 42.9071 51.827 43.2155L52.7529 42.8379ZM56.0811 51L55.5933 51.873C55.9642 52.0802 56.4254 52.0305 56.7436 51.749C57.0618 51.4675 57.1674 51.0158 57.007 50.6224L56.0811 51ZM41.4717 42.8379L41.9594 41.9649C41.8103 41.8816 41.6424 41.8379 41.4717 41.8379V42.8379ZM39.46 6.21875L40.1671 5.51164C40.1632 5.50775 40.1593 5.50389 40.1553 5.50006L39.46 6.21875ZM36.0469 5.62891L35.5479 4.76228C35.5434 4.76489 35.5389 4.76753 35.5344 4.77021L36.0469 5.62891ZM31.0264 21.6426L30.0365 21.5006L30.0357 21.5059L31.0264 21.6426ZM30.4355 25.2197L31.0807 25.9838C31.1021 25.9657 31.1228 25.9467 31.1427 25.9268L30.4355 25.2197ZM27.6465 16.1299L26.6731 16.3589L26.6733 16.3598L27.6465 16.1299ZM26.1699 11.5684L25.4479 12.2603C25.4661 12.2792 25.485 12.2975 25.5046 12.315L26.1699 11.5684ZM22.8555 11.8633L22.1357 11.169C22.1306 11.1743 22.1256 11.1796 22.1207 11.185L22.8555 11.8633ZM18.3926 19.707L17.5073 19.2419L17.5057 19.245L18.3926 19.707ZM14.3232 26.8604L15.0303 26.1532C15.0165 26.1394 15.0022 26.126 14.9876 26.1129L14.3232 26.8604ZM11.5342 13.3076L12.52 13.1398L12.5199 13.1391L11.5342 13.3076ZM7.92383 6.71191L8.08399 7.69901L8.08584 7.6987L7.92383 6.71191ZM5.29883 9.13965L4.29883 9.13947V9.13965H5.29883ZM8.54785 27.1885L7.57146 27.4046L7.57308 27.4117L8.54785 27.1885ZM20.1318 28.7314L21.024 29.1832L21.0263 29.1787L20.1318 28.7314ZM23.3799 22.6602V21.6602C23.3642 21.6602 23.3485 21.6605 23.3328 21.6613L23.3799 22.6602ZM24.2988 25.0225L23.3431 25.3166C23.3445 25.3213 23.346 25.3261 23.3476 25.3308L24.2988 25.0225ZM31.7158 37.5586L31.1672 38.3947L31.1726 38.3982L31.7158 37.5586ZM35.0303 37.3945L35.7662 38.0716C35.7701 38.0674 35.7739 38.0631 35.7777 38.0589L35.0303 37.3945ZM35.8506 31.2246L34.8514 31.1842L34.8512 31.1901L35.8506 31.2246ZM39.5586 10.3545L38.6473 9.94254L38.6427 9.95296L39.5586 10.3545ZM53.0791 9.36914L53.3655 8.41103L53.3621 8.41003L53.0791 9.36914ZM47.8281 9.40234L47.5394 8.44486L47.5275 8.44861L47.8281 9.40234ZM40.5762 18.7549L41.5424 19.0125L41.5433 19.009L40.5762 18.7549ZM40.6748 28.3047L41.6142 27.9619L41.6118 27.9553L40.6748 28.3047ZM44.875 33.5225L44.4278 34.417L44.4388 34.4223L44.875 33.5225ZM52.3896 33.5879L52.8548 34.4731L52.8554 34.4728L52.3896 33.5879ZM57.542 27.7461L58.4482 28.169L58.4489 28.1675L57.542 27.7461ZM74.5078 9.40234L74.2232 10.361L74.2237 10.3611L74.5078 9.40234ZM69.1592 9.40234L68.8746 8.44365L68.8651 8.44656L69.1592 9.40234ZM61.9062 18.9521L62.874 19.204L62.8747 19.2012L61.9062 18.9521ZM61.9062 27.7793L62.8661 27.4987L62.8649 27.4947L61.9062 27.7793ZM70.1104 34.3096L70.1103 35.3096H70.1104V34.3096ZM73.7207 33.6533L73.2818 32.7547L73.2735 32.7589L73.7207 33.6533ZM80.6777 18.6895L79.6797 18.7514L79.6798 18.7531L80.6777 18.6895ZM68.7324 17.0488L69.5624 17.6067L69.5694 17.5961L68.7324 17.0488ZM73.4902 15.2109L72.758 15.8921L72.7632 15.8976L73.4902 15.2109ZM74.7051 23.5459L75.6627 23.8341L75.664 23.8296L74.7051 23.5459ZM69.1592 28.5342L68.7401 29.4422L68.7517 29.4474L69.1592 28.5342ZM66.9277 23.1855H65.9277V23.1856L66.9277 23.1855ZM46.6465 18.1973L45.757 17.7403L45.755 17.7442L46.6465 18.1973ZM52.3242 15.4404L51.5603 16.0858L51.5618 16.0876L52.3242 15.4404ZM51.0117 27.418L51.7107 28.1332L51.7111 28.1328L51.0117 27.418ZM45.5312 22.9551H46.5312C46.5312 22.9502 46.5312 22.9453 46.5311 22.9404L45.5312 22.9551ZM81.4189 1L81.4188 2C82.8493 2.00015 84.0088 3.15993 84.0088 4.59082H85.0088H86.0088C86.0088 2.05586 83.9544 0.000258327 81.419 0L81.4189 1ZM85.0088 4.59082H84.0088V39.2471H85.0088H86.0088V4.59082H85.0088ZM85.0088 39.2471H84.0088C84.0088 40.678 82.8493 41.8377 81.4188 41.8379L81.4189 42.8379L81.419 43.8379C83.9544 43.8376 86.0088 41.782 86.0088 39.2471H85.0088ZM81.4189 42.8379V41.8379H52.7529V42.8379V43.8379H81.4189V42.8379ZM52.7529 42.8379L51.827 43.2155L55.1551 51.3776L56.0811 51L57.007 50.6224L53.6789 42.4603L52.7529 42.8379ZM56.0811 51L56.5688 50.127L41.9594 41.9649L41.4717 42.8379L40.9839 43.7109L55.5933 51.873L56.0811 51ZM41.4717 42.8379V41.8379H4.59082V42.8379V43.8379H41.4717V42.8379ZM4.59082 42.8379V41.8379C3.16005 41.8379 2 40.6778 2 39.2471H1H0C0 41.7824 2.05549 43.8379 4.59082 43.8379V42.8379ZM1 39.2471H2V4.59082H1H0V39.2471H1ZM1 4.59082H2C2 3.16006 3.16006 2 4.59082 2V1V0C2.05549 0 0 2.05549 0 4.59082H1ZM4.59082 1V2H81.4189V1V0H4.59082V1ZM39.46 6.21875L40.1553 5.50006C38.8773 4.26361 37.0849 3.87734 35.5479 4.76228L36.0469 5.62891L36.5458 6.49553C37.1744 6.1336 38.0081 6.2055 38.7646 6.93744L39.46 6.21875ZM36.0469 5.62891L35.5344 4.77021C34.8416 5.18369 34.2812 6.03281 33.8165 6.9509C33.3244 7.92302 32.8419 9.17703 32.3857 10.6295C31.4717 13.539 30.6329 17.3425 30.0365 21.5006L31.0264 21.6426L32.0162 21.7846C32.6011 17.7068 33.4193 14.0126 34.2938 11.2289C34.7317 9.83468 35.1762 8.69315 35.6009 7.8541C36.0529 6.96101 36.399 6.58332 36.5594 6.4876L36.0469 5.62891ZM31.0264 21.6426L30.0357 21.5059C29.9053 22.4519 29.7753 23.3207 29.6704 23.9579C29.6177 24.2779 29.5727 24.5315 29.5381 24.7046C29.5203 24.7932 29.5079 24.8475 29.5009 24.8746C29.4969 24.89 29.4989 24.8802 29.5071 24.8569C29.511 24.8459 29.5223 24.8146 29.542 24.7738C29.5512 24.7548 29.6078 24.6333 29.7284 24.5126L30.4355 25.2197L31.1427 25.9268C31.2674 25.802 31.3285 25.6735 31.3426 25.6444C31.3671 25.5936 31.3836 25.5493 31.3931 25.5224C31.4125 25.4674 31.4271 25.4145 31.4371 25.3759C31.458 25.295 31.479 25.1981 31.4992 25.0969C31.5405 24.8906 31.5898 24.6109 31.6438 24.2827C31.7523 23.6235 31.8849 22.7366 32.017 21.7792L31.0264 21.6426ZM30.4355 25.2197L29.7904 24.4556C29.9241 24.3428 30.103 24.2543 30.3143 24.231C30.5167 24.2087 30.6847 24.2532 30.798 24.3009C30.9975 24.3848 31.1072 24.5114 31.1286 24.5357C31.1883 24.6037 31.2044 24.6471 31.178 24.5962C31.1389 24.5206 31.0713 24.3652 30.9766 24.1142C30.7922 23.6257 30.5501 22.8972 30.2797 22.0166C29.7403 20.2603 29.1064 17.9605 28.6197 15.9L27.6465 16.1299L26.6733 16.3598C27.1708 18.4659 27.8164 20.8083 28.3678 22.6038C28.6428 23.4992 28.8991 24.274 29.1055 24.8206C29.2061 25.0871 29.307 25.3322 29.4019 25.5155C29.4425 25.5941 29.5171 25.7316 29.6256 25.8552C29.6714 25.9073 29.8032 26.0521 30.0222 26.1443C30.1452 26.1961 30.3223 26.2422 30.5333 26.219C30.753 26.1948 30.9398 26.1027 31.0807 25.9838L30.4355 25.2197ZM27.6465 16.1299L28.6199 15.9008C28.3527 14.765 28.0505 13.664 27.7741 12.8049C27.6365 12.3772 27.5005 11.9946 27.3738 11.6921C27.3109 11.5418 27.2438 11.3957 27.1733 11.2673C27.1174 11.1655 27.0075 10.9753 26.8352 10.8218L26.1699 11.5684L25.5046 12.315C25.4062 12.2273 25.3814 12.1593 25.42 12.2296C25.444 12.2733 25.4807 12.3493 25.5291 12.4647C25.6249 12.6936 25.7412 13.0166 25.8702 13.4175C26.127 14.2156 26.4154 15.2637 26.6731 16.3589L27.6465 16.1299ZM26.1699 11.5684L26.8919 10.8765C26.235 10.191 25.282 10.0056 24.4704 10.0802C23.6432 10.1563 22.7682 10.5134 22.1357 11.169L22.8555 11.8633L23.5752 12.5575C23.8289 12.2946 24.2337 12.1104 24.6535 12.0718C25.089 12.0318 25.3502 12.1582 25.4479 12.2603L26.1699 11.5684ZM22.8555 11.8633L22.1207 11.185C21.9411 11.3796 21.6851 11.7787 21.4258 12.2012C21.1402 12.6666 20.7796 13.2808 20.3707 13.9975C19.5523 15.432 18.5295 17.2965 17.5073 19.2419L18.3926 19.707L19.2778 20.1722C20.2903 18.2452 21.302 16.4012 22.1079 14.9886C22.5112 14.2817 22.8602 13.6876 23.1304 13.2474C23.2658 13.0267 23.3779 12.8504 23.4651 12.7203C23.5638 12.5728 23.6001 12.531 23.5903 12.5416L22.8555 11.8633ZM18.3926 19.707L17.5057 19.245C15.4636 23.1646 14.5172 24.9839 14.0497 25.8028C13.9337 26.006 13.8598 26.125 13.8141 26.1917C13.7449 26.2927 13.7894 26.1991 13.9282 26.1064C14.0198 26.0452 14.2077 25.947 14.4673 25.9553C14.7328 25.9637 14.9194 26.0786 15.0112 26.15C15.0878 26.2096 15.1353 26.2691 15.1195 26.2507C15.1172 26.2481 15.1175 26.2483 15.1118 26.2418C15.1078 26.2371 15.1016 26.2299 15.0944 26.2217C15.0801 26.2055 15.058 26.1809 15.0303 26.1532L14.3232 26.8604L13.6161 27.5675C13.5969 27.5482 13.5767 27.5242 13.6047 27.5567C13.6127 27.566 13.6829 27.6506 13.7831 27.7285C13.8985 27.8183 14.1099 27.9449 14.4035 27.9543C14.6911 27.9634 14.9106 27.8553 15.0394 27.7693C15.2525 27.6269 15.3942 27.4239 15.4636 27.3228C15.5565 27.1873 15.6626 27.0115 15.7866 26.7944C16.2791 25.9317 17.2525 24.0594 19.2794 20.1691L18.3926 19.707ZM14.3232 26.8604L14.9876 26.1129C15.1165 26.2275 15.1739 26.344 15.174 26.3442C15.1871 26.3687 15.1903 26.3789 15.1841 26.3634C15.1724 26.334 15.1508 26.2722 15.1192 26.1675C15.0574 25.962 14.9778 25.6592 14.8826 25.265C14.6933 24.4805 14.455 23.386 14.1914 22.0985C13.6647 19.5259 13.0433 16.2143 12.52 13.1398L11.5342 13.3076L10.5484 13.4754C11.0752 16.5703 11.7006 19.9038 12.2321 22.4996C12.4976 23.7963 12.7412 24.9168 12.9384 25.7341C13.0366 26.1408 13.1264 26.4856 13.2041 26.7439C13.2424 26.871 13.283 26.9952 13.3255 27.1019C13.3464 27.1545 13.3745 27.2204 13.4104 27.2875C13.4334 27.3305 13.5115 27.4768 13.6589 27.6078L14.3232 26.8604ZM11.5342 13.3076L12.5199 13.1391C12.2493 11.5565 12.0215 10.3043 11.7968 9.32972C11.5758 8.37057 11.3404 7.59793 11.0252 7.02034C10.6884 6.40297 10.2223 5.9424 9.54945 5.74139C8.95484 5.56377 8.32173 5.6332 7.76182 5.72512L7.92383 6.71191L8.08584 7.6987C8.62526 7.61014 8.85775 7.6221 8.97701 7.65772C9.01797 7.66996 9.11408 7.69334 9.26959 7.97833C9.44681 8.3031 9.6341 8.85122 9.84794 9.77894C10.0582 10.6913 10.2776 11.892 10.5485 13.4762L11.5342 13.3076ZM7.92383 6.71191L7.76366 5.72482C6.91204 5.86301 6.08389 6.35132 5.47965 6.90633C5.16974 7.19098 4.8874 7.52126 4.67666 7.87909C4.47074 8.22872 4.29891 8.66372 4.29883 9.13947L5.29883 9.13965L6.29883 9.13982C6.29883 9.14355 6.29837 9.12415 6.31319 9.07841C6.32795 9.03286 6.35483 8.97072 6.39999 8.89404C6.49175 8.73823 6.63801 8.55799 6.83257 8.37928C7.23727 8.00757 7.72154 7.75782 8.08399 7.699L7.92383 6.71191ZM5.29883 9.13965H4.29883C4.29883 9.36039 4.34781 9.75433 4.40921 10.1895C4.47537 10.6584 4.57015 11.267 4.68578 11.9736C4.91724 13.388 5.23519 15.213 5.58237 17.1357C6.27586 20.9762 7.09106 25.2344 7.57149 27.4046L8.54785 27.1885L9.52421 26.9723C9.05296 24.8435 8.24365 20.6188 7.55054 16.7803C7.20443 14.8636 6.88857 13.0502 6.65953 11.6506C6.54492 10.9502 6.45279 10.358 6.38959 9.91006C6.35794 9.68576 6.33428 9.50272 6.31873 9.36299C6.31096 9.29315 6.30565 9.23803 6.30239 9.1964C6.29886 9.15135 6.29883 9.13568 6.29883 9.13965H5.29883ZM8.54785 27.1885L7.57308 27.4117C8.37767 30.9256 9.11431 33.6448 9.87908 35.5265C10.2607 36.4655 10.6721 37.2545 11.1415 37.8402C11.6116 38.4266 12.2166 38.9016 12.9889 39.005C13.7644 39.1089 14.4706 38.8064 15.0717 38.3577C15.6701 37.9112 16.259 37.2522 16.8531 36.4423C18.0439 34.819 19.4066 32.3769 21.024 29.1832L20.1318 28.7314L19.2397 28.2796C17.6247 31.4686 16.3252 33.7806 15.2405 35.2593C14.6968 36.0004 14.2446 36.4794 13.8755 36.7549C13.5093 37.0282 13.3217 37.0318 13.2543 37.0227C13.1836 37.0133 12.9964 36.9565 12.7021 36.5893C12.4071 36.2213 12.082 35.6348 11.7319 34.7735C11.0333 33.0546 10.326 30.4739 9.52262 26.9653L8.54785 27.1885ZM20.1318 28.7314L21.0263 29.1787C21.8599 27.5115 22.6341 26.0037 23.2148 24.9151C23.506 24.3691 23.7439 23.9373 23.9142 23.6459C24.0009 23.4976 24.061 23.4013 24.0969 23.3486C24.1171 23.3189 24.1145 23.3256 24.0944 23.3487C24.0861 23.3582 24.0507 23.399 23.9928 23.4458C23.9806 23.4557 23.7678 23.643 23.4269 23.659L23.3799 22.6602L23.3328 21.6613C22.9836 21.6777 22.7598 21.8707 22.7342 21.8915C22.6629 21.9492 22.6115 22.006 22.585 22.0366C22.5282 22.1019 22.4792 22.171 22.4438 22.2228C22.3686 22.3332 22.281 22.4767 22.1875 22.6367C21.9975 22.9618 21.7452 23.4206 21.4501 23.9738C20.8582 25.0834 20.0755 26.6081 19.2374 28.2842L20.1318 28.7314ZM23.3799 22.6602V23.6602C23.1558 23.6602 22.9886 23.5849 22.8993 23.5346C22.8072 23.4827 22.7444 23.4272 22.7114 23.3958C22.6469 23.3342 22.6112 23.2812 22.6049 23.272C22.5878 23.2469 22.59 23.2456 22.613 23.2921C22.6543 23.3758 22.7171 23.5204 22.7972 23.7253C22.9546 24.1285 23.1518 24.6952 23.3431 25.3166L24.2988 25.0225L25.2546 24.7284C25.0521 24.0701 24.839 23.4557 24.6601 22.9976C24.5719 22.7718 24.4849 22.5658 24.4062 22.4065C24.3692 22.3315 24.3189 22.2357 24.2581 22.1464C24.2299 22.105 24.1745 22.0276 24.0928 21.9495C24.057 21.9153 23.8009 21.6602 23.3799 21.6602V22.6602ZM24.2988 25.0225L23.3476 25.3308C24.1468 27.7964 25.5109 30.6535 26.9372 33.0669C27.6519 34.2761 28.3921 35.3907 29.0976 36.3004C29.7867 37.1889 30.4988 37.9561 31.1672 38.3946L31.7158 37.5586L32.2645 36.7225C31.8827 36.472 31.3354 35.9223 30.678 35.0746C30.0369 34.248 29.3432 33.207 28.659 32.0492C27.2875 29.7286 25.9933 27.0068 25.2501 24.7141L24.2988 25.0225ZM31.7158 37.5586L31.1726 38.3982C32.5777 39.3073 34.5937 39.3461 35.7662 38.0716L35.0303 37.3945L34.2943 36.7175C33.9574 37.0837 33.0854 37.2536 32.259 36.719L31.7158 37.5586ZM35.0303 37.3945L35.7777 38.0589C36.2289 37.5513 36.4354 36.9715 36.5666 36.0072C36.6937 35.0737 36.7684 33.6256 36.85 31.2591L35.8506 31.2246L34.8512 31.1901C34.7687 33.5818 34.6957 34.9232 34.5849 35.7375C34.4783 36.5209 34.3567 36.6471 34.2828 36.7302L35.0303 37.3945ZM35.8506 31.2246L36.8498 31.2651C37.1761 23.2059 38.6781 14.8533 40.4744 10.756L39.5586 10.3545L38.6427 9.95296C36.6983 14.388 35.1815 23.033 34.8514 31.1842L35.8506 31.2246ZM39.5586 10.3545L40.4698 10.7664C40.9914 9.61265 41.3761 8.66342 41.3582 7.81025C41.3372 6.81469 40.7942 6.1388 40.1671 5.51164L39.46 6.21875L38.7529 6.92586C39.3071 7.48008 39.3549 7.67427 39.3586 7.85234C39.3654 8.17281 39.2087 8.70076 38.6474 9.94257L39.5586 10.3545ZM53.0791 9.36914L53.3621 8.41003C52.3105 8.09971 51.411 7.92553 50.473 7.93043C49.5363 7.93532 48.6218 8.11848 47.5394 8.44494L47.8281 9.40234L48.1169 10.3598C49.1018 10.0627 49.812 9.93391 50.4834 9.93041C51.1536 9.92691 51.8459 10.0479 52.7961 10.3283L53.0791 9.36914ZM47.8281 9.40234L47.5275 8.44861C45.7564 9.00693 44.0838 10.3856 42.7235 12.136C41.3519 13.9007 40.2337 16.1235 39.609 18.5007L40.5762 18.7549L41.5433 19.009C42.1 16.8906 43.0983 14.9129 44.3026 13.3633C45.5181 11.7993 46.8808 10.7495 48.1288 10.3561L47.8281 9.40234ZM40.5762 18.7549L39.6099 18.4972C39.2479 19.8548 39.0919 21.8617 39.1087 23.7356C39.1252 25.5862 39.3113 27.5102 39.7378 28.6541L40.6748 28.3047L41.6118 27.9553C41.3164 27.163 41.1249 25.5427 41.1086 23.7177C41.0925 21.9161 41.2481 20.1162 41.5424 19.0125L40.5762 18.7549ZM40.6748 28.3047L39.7354 28.6475C40.6829 31.2442 42.3673 33.3866 44.4278 34.4169L44.875 33.5225L45.3222 32.628C43.8388 31.8863 42.4388 30.2216 41.6142 27.9619L40.6748 28.3047ZM44.875 33.5225L44.4388 34.4223C45.6863 35.0271 47.2348 35.3171 48.7095 35.3303C50.1771 35.3435 51.6932 35.0834 52.8548 34.4731L52.3896 33.5879L51.9245 32.7026C51.15 33.1096 49.9917 33.3418 48.7275 33.3304C47.4703 33.3191 46.2296 33.0678 45.3112 32.6226L44.875 33.5225ZM52.3896 33.5879L52.8554 34.4728C54.9632 33.3635 57.2307 30.7779 58.4482 28.169L57.542 27.7461L56.6358 27.3232C55.5562 29.6367 53.5572 31.8434 51.9239 32.703L52.3896 33.5879ZM57.542 27.7461L58.4489 28.1675C60.3718 24.0296 60.8039 19.6553 59.9247 16.0329C59.0458 12.4114 56.8165 9.44263 53.3655 8.41103L53.0791 9.36914L52.7927 10.3272C55.3797 11.1006 57.2194 13.3661 57.9812 16.5046C58.7427 19.6424 58.3873 23.5541 56.6351 27.3247L57.542 27.7461ZM74.5078 9.40234L74.7924 8.4437C73.6969 8.11847 72.781 7.93476 71.8335 7.93477C70.8859 7.93477 69.9701 8.11849 68.8746 8.44369L69.1592 9.40234L69.4438 10.361C70.4483 10.0628 71.1567 9.93477 71.8335 9.93477C72.5102 9.93476 73.2186 10.0628 74.2232 10.361L74.5078 9.40234ZM69.1592 9.40234L68.8651 8.44656C67.0962 8.99086 65.4202 10.406 64.0601 12.1934C62.6863 13.9988 61.5614 16.278 60.9378 18.7031L61.9062 18.9521L62.8747 19.2012C63.4325 17.032 64.4409 14.9957 65.6517 13.4045C66.8761 11.7954 68.2359 10.7327 69.4533 10.3581L69.1592 9.40234ZM61.9062 18.9521L60.9385 18.7003C60.5972 20.0119 60.4387 21.7871 60.4387 23.4765C60.4387 25.1578 60.5955 26.8776 60.9476 28.0639L61.9062 27.7793L62.8649 27.4947C62.5936 26.5808 62.4387 25.0849 62.4387 23.4765C62.4387 21.8763 62.5919 20.288 62.874 19.204L61.9062 18.9521ZM61.9062 27.7793L60.9464 28.0599C61.614 30.3437 62.7365 32.1714 64.3153 33.4269C65.8999 34.6869 67.8678 35.3095 70.1103 35.3096L70.1104 34.3096L70.1104 33.3096C68.251 33.3095 66.7403 32.8 65.5601 31.8615C64.3741 30.9183 63.4455 29.4809 62.8661 27.4987L61.9062 27.7793ZM70.1104 34.3096V35.3096C71.7945 35.3096 73.0535 35.105 74.1679 34.5477L73.7207 33.6533L73.2735 32.7589C72.5502 33.1205 71.6422 33.3096 70.1104 33.3096V34.3096ZM73.7207 33.6533L74.1596 34.5519C76.5541 33.3823 78.5253 30.9638 79.8412 28.1307C81.165 25.2805 81.884 21.8905 81.6757 18.6258L80.6777 18.6895L79.6798 18.7531C79.8651 21.6576 79.2221 24.7157 78.0273 27.2882C76.8245 29.8779 75.1204 31.8567 73.2818 32.7548L73.7207 33.6533ZM80.6777 18.6895L81.6758 18.6275C81.3635 13.596 78.8631 9.64981 74.7919 8.44355L74.5078 9.40234L74.2237 10.3611C77.2409 11.2551 79.4013 14.2662 79.6797 18.7514L80.6777 18.6895ZM68.7324 17.0488L69.5694 17.5961C70.3619 16.3841 71.0792 15.778 71.6076 15.5735C71.8514 15.4791 72.0371 15.476 72.1868 15.5133C72.3404 15.5515 72.5349 15.6522 72.7581 15.8921L73.4902 15.2109L74.2224 14.5298C73.7893 14.0642 73.2701 13.7219 72.67 13.5725C72.066 13.4222 71.4581 13.4868 70.8857 13.7083C69.7818 14.1356 68.7766 15.154 67.8955 16.5016L68.7324 17.0488ZM73.4902 15.2109L72.7632 15.8976C74.1052 17.3184 74.6387 20.2459 73.7462 23.2622L74.7051 23.5459L75.664 23.8296C76.6746 20.414 76.2225 16.6475 74.2172 14.5243L73.4902 15.2109ZM74.7051 23.5459L73.7475 23.2577C73.2858 24.7916 72.4502 26.0799 71.5707 26.8719C70.6417 27.7083 69.9357 27.7856 69.5667 27.621L69.1592 28.5342L68.7517 29.4474C70.2204 30.1027 71.7787 29.3759 72.9089 28.3581C74.0886 27.2959 75.1071 25.6801 75.6627 23.8341L74.7051 23.5459ZM69.1592 28.5342L69.5782 27.6262C69.2717 27.4847 68.8449 27.0371 68.4868 26.1769C68.1438 25.353 67.9278 24.2954 67.9277 23.1855L66.9277 23.1855L65.9277 23.1856C65.9278 24.5367 66.1877 25.8581 66.6404 26.9456C67.078 27.9968 67.7669 28.993 68.7401 29.4421L69.1592 28.5342ZM66.9277 23.1855H67.9277C67.9277 20.8412 68.3366 19.4304 69.5624 17.6067L68.7324 17.0488L67.9025 16.491C66.4375 18.6707 65.9277 20.4764 65.9277 23.1855H66.9277ZM46.6465 18.1973L47.536 18.6542C48.4197 16.9341 49.3108 16.0019 50.0082 15.6633C50.3322 15.5061 50.5834 15.49 50.7861 15.5381C50.9952 15.5878 51.2616 15.7322 51.5603 16.0858L52.3242 15.4404L53.0881 14.7951C52.5829 14.197 51.9673 13.763 51.2482 13.5923C50.5226 13.42 49.7995 13.5414 49.1348 13.8641C47.8547 14.4856 46.711 15.8835 45.757 17.7403L46.6465 18.1973ZM52.3242 15.4404L51.5618 16.0876C52.5129 17.208 52.9385 19.1439 52.7043 21.2704C52.4722 23.3781 51.6152 25.4285 50.3124 26.7032L51.0117 27.418L51.7111 28.1328C53.4271 26.4538 54.424 23.9265 54.6923 21.4893C54.9586 19.071 54.531 16.4949 53.0866 14.7933L52.3242 15.4404ZM51.0117 27.418L50.3128 26.7028C49.6788 27.3224 49.1468 27.5853 48.7568 27.6568C48.4018 27.7218 48.1021 27.6431 47.8194 27.4133C47.1706 26.8858 46.5312 25.4609 46.5312 22.9551H45.5312H44.5312C44.5312 25.6342 45.1882 27.8518 46.5578 28.9651C47.2842 29.5557 48.1741 29.7969 49.1174 29.624C50.0257 29.4575 50.9008 28.9246 51.7107 28.1332L51.0117 27.418ZM45.5312 22.9551L46.5311 22.9404C46.5148 21.8286 46.5436 21.2488 46.6684 20.7196C46.7938 20.1881 47.029 19.6518 47.538 18.6503L46.6465 18.1973L45.755 17.7442C45.2468 18.7442 44.908 19.4712 44.7219 20.2605C44.5351 21.0521 44.5149 21.8505 44.5314 22.9698L45.5312 22.9551Z"
-              fill="#4C8C74"
-            />
-          </svg>
+          <svg width="40px" height="40px" viewBox="-0.5 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M21 18.5H3C2.72 18.5 2.5 18.28 2.5 18V7C2.5 6.72 2.72 6.5 3 6.5H21C21.28 6.5 21.5 6.72 21.5 7V18C21.5 18.28 21.28 18.5 21 18.5Z" stroke="#4C8C74" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M15.2201 12.74C16.2419 12.74 17.0701 11.9028 17.0701 10.87C17.0701 9.83722 16.2419 9 15.2201 9C14.1984 9 13.3701 9.83722 13.3701 10.87C13.3701 11.9028 14.1984 12.74 15.2201 12.74Z" stroke="#4C8C74" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M18.5901 14.01C18.9001 14.54 19.0901 15.14 19.1201 15.78C19.1301 15.9 19.0301 16 18.9101 16H11.5201C11.4001 16 11.3101 15.9 11.3101 15.78C11.3501 15.14 11.5401 14.54 11.8401 14.01" stroke="#4C8C74" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M4.5 12.5H8.92999" stroke="#4C8C74" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M4.5 10.5H7.92999" stroke="#4C8C74" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M4.5 14.5H6.92999" stroke="#4C8C74" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"></path> </g></svg>
         ),
       },
     ],
+    processHeading: <>How We Build Your Brand: Three Clear Steps</>,
+    processPara: (
+      <>
+        We keep things simple, transparent, and collaborative. 
+      </>
+    ),
     processCardData: [
       {
         image: "/Services/01.svg",
-        heading: "Book a Strategy Call",
-        paragraph:
-          "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
+        heading: "Discovery & Brand Strategy",
+        paragraph: (
+          <>
+            Before we design anything, we need to understand your business properly. We get on a call, ask the questions most agencies don't bother with, and dig into your goals, your customers, your competitors, and what story your brand needs to tell. <br /><br />
+Most agencies skip this step and go straight to design. That's why most brands end up looking like everyone else.
+
+          </>
+        ),
       },
       {
         image: "/Services/02.svg",
-        heading: "Website Audit & Strategy",
-        paragraph:
-          "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
+        heading: "Design & Creative Development",
+        paragraph: (
+          <>
+            Once we know what we're building and why, our designers get to work. We develop concepts, show you the thinking behind each one, and refine based on your feedback. You're part of every stage, not shown a finished result at the end and asked to sign off on something cold. <br /><br />
+We go back and forth until you're genuinely happy with it. That's not a throwaway line, it's how we actually work.
+
+          </>
+        ),
       },
       {
         image: "/Services/03.svg",
-        heading: "Build, Launch & Optimize",
-        paragraph:
-          "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
+        heading: "Delivery & Brand Launch Support",
+        paragraph: (
+          <>
+            When everything's finalised, we hand over everything you need — source files, brand guides, digital assets, print-ready files, all of it. And if you need help rolling the brand out across your website, socials, or marketing materials, we're here for that too.
+          </>
+        ),
       },
     ],
     pricingCardData: [
@@ -12883,26 +12944,65 @@ export const services = [
         ],
       },
     ],
+    customplanData: {
+      heading: "Customise the approach for you.",
+      buttonText: "Get a Custom Quote",
+      body: (
+        <>
+          A three-person startup doesn't need the same thing as a 50-person firm. A solo consultant has completely different needs from both. We've seen what happens when businesses are forced into a package that doesn't quite fit — it shows in the result. <br /><br />
+So we don't do that. Every project starts with a conversation about where your business is now and where you're trying to take it. From there, we put together a scope that actually makes sense for you — honest about what's involved and what it'll cost before anything starts.
+
+<ul className="list-disc list-inside mt-1">
+  <li>Logo-only for businesses just getting started</li>
+  <li>Full brand identity for companies ready to scale up properly</li>
+  <li>Brand refresh for businesses that have outgrown their current look</li>
+  <li>Personal branding for founders and professionals building their name</li>
+  <li>Ongoing brand support for teams that need a creative partner long term</li>
+</ul>
+        </>
+      ),
+      rightContent: <><h3 className="text-2xl text-white mt-3">What's Typically Included</h3>
+<p>Depending on what we agree on, your project might include:</p>
+<ul className="list-disc list-inside mt-1">
+  <li>Custom logo design, primary mark plus variations</li>
+  <li>Full colour palette and typography system</li>
+  <li>Brand guide or complete playbook</li>
+  <li>Business card and stationery design</li>
+  <li>Social media profile branding</li>
+  <li>Motion graphics and brand animations</li>
+  <li>All source files and full IP ownership</li>
+</ul></>,
+    },
     faqData: [
       {
-        question: "How to use this component?",
+        question: "How long does a branding project take?",
         answer:
-          "Import the FAQ component and place it in your page. Click any question to expand or collapse the answer.",
+          "Depends on the scope. A logo only project is usually done in one to two weeks. A full brand identity, guide, visual system, and supporting assets typically run three to six weeks. We'll give you a straight timeline before we start, based on what's actually involved in your specific project.",
       },
       {
-        question: "Are there any other components available?",
+        question: "What if I just need a logo for now?",
         answer:
-          "Yes — check the Components section of the repo or documentation for more reusable UI pieces.",
+          "That's fine, honestly. Plenty of our clients start with a logo and build the rest out later. We design with that in mind, so when you're ready to expand into a full identity, nothing clashes or needs redoing.",
       },
       {
-        question: "Are components responsive?",
+        question: "Do I own the logo and brand files?",
         answer:
-          "Yes, components are designed to be responsive across screen sizes.",
+          "Yes, fully. Once the project's done and payment's settled, everything is yours: vector files, source files, font licences where they apply, and every variation of the mark. No usage fees, no ongoing costs, nothing held back.",
       },
       {
-        question: "Can I customize the components?",
+        question: "I have a logo already, but it looks dated. Can you help?",
         answer:
-          "Yes, pass props or override styles to adapt components to your design.",
+          "This is actually one of the most common briefs we get. We look at what you've got, figure out what's working and what's holding you back, and work out the best way to move it forward without throwing away the recognition you've already built up.",
+      },
+      {
+        question: "Do you work with small businesses?",
+        answer:
+          "Always have. Some of our best work has been with small businesses and sole traders who needed a brand that helped them compete with bigger names. The size of your business doesn't change the quality of what we deliver.",
+      },
+      {
+        question: "What do you need from me to get started? ",
+        answer:
+          "Honestly, not much. A conversation is enough to begin. We talk about your business, your customers, what you're going after, and who you're up against. If you've got existing brand materials or references you like, bring them along, but don't stress if you haven't. We've built great brands starting from nothing but a good brief.",
       },
     ],
     portfolioData: [
@@ -12915,8 +13015,15 @@ export const services = [
       { id: "7", src: "/Services/web_06.svg", translateY: "-translate-y-25" },
       { id: "8", src: "/Services/web_07.svg", translateY: "" },
     ],
-    footnote:
-      "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
+    contactData: {
+      heading: (<>Ready to Build a Brand</>),
+      body: (<>
+      <h3 className="text-xl font-bold mb-4">Does that actually work?</h3>
+      Our team wants to know about your business. If you plan to create a new brand or update an existing one, we are here to help. You can schedule a complimentary brand consultation, which has no strings attached, to discuss potential opportunities with us.</>),
+      buttonText: "Book a Free Consultation View All Services",
+    },
+    // footnote:
+    //   "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
     subcategory: [
       {
         slug: "logo-design-visual-systems",
@@ -20183,3 +20290,6 @@ export const services = [
     ],
   },
 ];
+
+
+

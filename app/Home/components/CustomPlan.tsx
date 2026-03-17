@@ -7,6 +7,10 @@ import CustomPlanMobile from "./CustomPlanMobile";
 type CustomPlanData = {
   heading?: React.ReactNode;
   body?: React.ReactNode;
+  buttonText?: React.ReactNode;
+  rightImageUrl?: string;
+  rightImageAlt?: string;
+  rightContent?: React.ReactNode;
 };
 
 type CustomPlanProps = {
@@ -15,6 +19,7 @@ type CustomPlanProps = {
 
 const CustomPlan = ({ data }: CustomPlanProps) => {
   const [isDarkMode, setIsDarkMode] = useState(true);
+  const defaultButtonText = "Book a consultation call to create your perfect plan";
 
   useEffect(() => {
     // Initial theme detection
@@ -65,9 +70,9 @@ const CustomPlan = ({ data }: CustomPlanProps) => {
             }
           >
             <h2 className="font-semibold text-2xl lg:text-4xl text-white">
-              {data?.heading || "Let's Talk"}
+              {data?.heading || "Your Plan, Not Ours"}
             </h2>
-            <div className="w-full lg:w-[720px] text-sm text-[#4C8C74] mt-4">
+            <div className="w-full lg:w-[720px] max-h-[170px] overflow-y-auto text-sm text-[#4C8C74] mt-4 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:w-0">
               {/* <p className="text-sm text-[#4C8C74]">
               AussieDigitalStudios is a full-service digital studio built for
               modern, fast-growing brands. From strategy to standout design and
@@ -103,7 +108,7 @@ const CustomPlan = ({ data }: CustomPlanProps) => {
                 href="/contact"
                 className="flex font-light text-sm items-center justify-center gap-1 bg-[#4C8C74] text-white py-2 px-3 rounded-full hover:bg-blue-300 transition-colors group w-fit mr-auto"
               >
-                Book a consultation call to create your perfect plan
+                {data?.buttonText || defaultButtonText}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="28"
@@ -146,13 +151,19 @@ const CustomPlan = ({ data }: CustomPlanProps) => {
 
           {/* Image on right side */}
           <div className="w-full lg:w-[40%] flex justify-end items-center">
-            <Image
-              src="/Home/performance_marketing.webp"
-              alt="Custom Plan Illustration"
-              width={370}
-              height={400}
-              className="w-full h-[350px] max-w-[370px]"
-            />
+            {data?.rightContent ? (
+              <div className="w-full h-[350px] max-w-[370px] overflow-y-auto rounded-xl border border-white/10 bg-[#08110e] px-6 py-5 text-[#AAAAAA] [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:w-0">
+                {data.rightContent}
+              </div>
+            ) : (
+              <Image
+                src={data?.rightImageUrl || "/Home/performance_marketing.webp"}
+                alt={data?.rightImageAlt || "Custom Plan Illustration"}
+                width={370}
+                height={400}
+                className="w-full h-[350px] max-w-[370px]"
+              />
+            )}
           </div>
         </div>
       </section>
