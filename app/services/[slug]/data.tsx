@@ -12608,7 +12608,26 @@ export const services = [
             Most businesses underestimate what a logo actually does. It's not decoration. It's the first thing someone sees before they read a word about you, and if it doesn't land, they're already forming the wrong opinion.<br /><br />
 At Aussie Digital Solution, we don't hand you a generic mark and call it a day. We build brand identities that actually mean something, ones that grow with your business and make people remember you for the right reasons.
 
-<h3 className="text-white text-3xl mt-5 md:text-2xl font-medium">CTA: Start Your Brand Journey | See Our Services</h3>
+{/* <h3 className="text-white text-3xl mt-5 md:text-2xl font-medium">CTA: Start Your Brand Journey | See Our Services</h3> */}
+<div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
+  <a
+    className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15"
+    href=""
+  >
+    Start Your Brand Journey
+  </a>
+  <span
+    aria-hidden="true"
+    className="h-10 w-px bg-white/30 max-sm:h-px max-sm:w-full"
+  />
+  <a
+    className="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/10"
+    href=""
+  >
+    See Our Services
+  </a>
+</div>
+<br />
 500+ Brands Designed 98% Client Retention 8+ Years in Business AUS Based & Operated
           </>
         ),
@@ -13017,9 +13036,17 @@ So we don't do that. Every project starts with a conversation about where your b
     ],
     contactData: {
       heading: (<>Ready to Build a Brand</>),
-      body: (<>
-      <h3 className="text-xl font-bold mb-4">Does that actually work?</h3>
-      Our team wants to know about your business. If you plan to create a new brand or update an existing one, we are here to help. You can schedule a complimentary brand consultation, which has no strings attached, to discuss potential opportunities with us.</>),
+      body: (
+        <>
+          <span className="mb-4 block text-xl font-bold text-white">
+            Does that actually work?
+          </span>
+          Our team wants to know about your business. If you plan to create a new
+          brand or update an existing one, we are here to help. You can schedule a
+          complimentary brand consultation, which has no strings attached, to
+          discuss potential opportunities with us.
+        </>
+      ),
       buttonText: "Book a Free Consultation View All Services",
     },
     // footnote:
