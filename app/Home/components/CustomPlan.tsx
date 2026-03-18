@@ -130,7 +130,7 @@ const CustomPlan = ({ data }: CustomPlanProps) => {
             </h2>
             <div
               ref={bodyContentRef}
-              className={`w-full lg:w-[720px] max-h-[170px] text-sm text-[#4C8C74] mt-4 ${
+              className={`w-full lg:w-[720px] max-h-[170px] px-2 text-md text-[#AAAAAA] mt-4 ${
                 hasBodyOverflow
                   ? `overflow-y-auto ${glassScrollbarClasses}`
                   : "overflow-y-hidden"
@@ -215,11 +215,11 @@ const CustomPlan = ({ data }: CustomPlanProps) => {
           </div>
 
           {/* Image on right side */}
-          <div className="w-full lg:w-[40%] flex justify-end items-center">
+          <div className="w-full lg:w-[50%] flex justify-end items-center">
             {data?.rightContent ? (
               <div
                 ref={rightContentRef}
-                className={`w-full h-[350px] max-w-[370px] rounded-xl border border-white/10 bg-[#08110e] px-6 py-5 text-[#AAAAAA] ${
+                className={`w-full h-[350px] max-w-[430px] rounded-xl border border-white/10 bg-[#08110e] px-6 py-5 text-[#AAAAAA] ${
                   hasRightContentOverflow
                     ? `overflow-y-auto ${glassScrollbarClasses}`
                     : "overflow-y-hidden"
@@ -233,9 +233,9 @@ const CustomPlan = ({ data }: CustomPlanProps) => {
               <Image
                 src={data?.rightImageUrl || "/Home/performance_marketing.webp"}
                 alt={data?.rightImageAlt || "Custom Plan Illustration"}
-                width={370}
+                width={430}
                 height={400}
-                className="w-full h-[350px] max-w-[370px]"
+                className="w-full h-[350px] max-w-[430px]"
               />
             )}
           </div>

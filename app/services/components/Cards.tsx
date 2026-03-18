@@ -4,10 +4,12 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { motion } from "motion/react";
 import CardsMobile from "./CardsMobile";
+import { AiOutlineArrowDown, AiOutlineArrowUp } from "react-icons/ai";
 
 type CardsProps = {
   service: {
     strategicHeading?: React.ReactNode;
+    strategicHeadingText?: React.ReactNode;
     strategicCardData?: Array<{
       title: string;
       desc: React.ReactNode;
@@ -19,6 +21,9 @@ type CardsProps = {
 
 const Cards = ({ service }: CardsProps) => {
   const allCards = service.strategicCardData || [];
+  const cardRows = Array.from({ length: Math.ceil(allCards.length / 4) }, (_, index) =>
+    allCards.slice(index * 4, index * 4 + 4)
+  );
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [expandedCards, setExpandedCards] = useState<Record<string, boolean>>({});
 
@@ -98,6 +103,22 @@ const Cards = ({ service }: CardsProps) => {
     setExpandedCards((prev) => ({ ...prev, [key]: !prev[key] }));
   };
 
+  const getDesktopCardPosition = (rowCount: number, index: number) => {
+    if (rowCount === 1) {
+      return "lg:col-span-3 lg:col-start-5";
+    }
+
+    if (rowCount === 2) {
+      return index === 0 ? "lg:col-span-3 lg:col-start-4" : "lg:col-span-3";
+    }
+
+    if (rowCount === 3) {
+      return index === 0 ? "lg:col-span-3 lg:col-start-2" : "lg:col-span-3";
+    }
+
+    return "lg:col-span-3";
+  };
+
   useEffect(() => {
     // Initial theme detection
     const theme = localStorage.getItem("ads_theme");
@@ -144,7 +165,7 @@ const Cards = ({ service }: CardsProps) => {
       >
         {/* Title */}
         <motion.h2
-          className="text-4xl text-center mb-12"
+          className="text-4xl text-center mb-8"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
@@ -152,6 +173,15 @@ const Cards = ({ service }: CardsProps) => {
         >
           {service.strategicHeading || "Our Strategic Services"}
         </motion.h2>
+        <motion.div
+          className="mb-5"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.5 }}
+        >
+          {service.strategicHeadingText}
+        </motion.div>
 
         {/* Geometric Shape */}
         <div className="hidden md:block absolute top-0 right-0 translate-y-0 -translate-x-32 z-10 pointer-events-none">
@@ -166,157 +196,89 @@ const Cards = ({ service }: CardsProps) => {
 
         {/* Cards Container */}
         <div className="w-full max-w-7xl px-4">
-          {/* First Row - 4 Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
-            {allCards.slice(0, 4).map((card, index) => {
-              const cardKey = `${card.title}-${index}`;
-              const isExpanded = expandedCards[cardKey];
-              const { textNode, buttonNode } = splitDesc(card.desc);
-              const descText = card.descText?.trim();
-              const fullText = descText || extractText(textNode) || extractText(card.desc);
-              const { text: previewText, truncated } = truncateWords(fullText, WORD_LIMIT);
-              const hasPreviewText = previewText.trim().length > 0;
-              return (
-              <motion.div
-                key={cardKey}
-                className={`group relative rounded-2xl border border-white/10 p-6 pb-28 transition overflow-hidden flex flex-col ${isExpanded ? "min-h-[300px] h-auto" : "h-[300px]"}`}
-                style={{
-                  backgroundImage: `url('${isDarkMode ? '/Services/dark_card_md.webp' : '/Services/light_card_md.webp'}')`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  backdropFilter: "blur(10px)",
-                }}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.8, delay: index * 0.1, ease: "easeOut" }}
-                viewport={{ once: true, amount: 0.5 }}
-              >
-                <div className="flex flex-col h-full">
-                  <div className="mb-4">{card.svg}</div>
-                  <div className="flex flex-col flex-1">
-                    <h3
-                      className={`text-xl mb-2 ${isDarkMode ? "text-yellow-500" : "text-[#3A6EA5]"}`}
-                    >
-                      {card.title}
-                    </h3>
-                    <div
-                      className={`font-light text-sm ${isDarkMode ? "text-white" : "text-[#777777]"}`}
-                    >
-                      {isExpanded ? (
-                        textNode
-                      ) : (
-                        <>
-                          {descText ? (
-                            <p>{previewText}</p>
-                          ) : hasPreviewText ? (
-                            <p>{previewText}</p>
-                          ) : (
-                            textNode
-                          )}
-                        </>
-                      )}
-                    </div>
-                    {!isExpanded && truncated && (
-                      <button
-                        type="button"
-                        onClick={() => toggleExpand(cardKey)}
-                        className={`absolute bottom-6 left-6 z-10 text-xs font-semibold underline underline-offset-4 ${isDarkMode ? "text-yellow-400" : "text-[#3A6EA5]"}`}
-                      >
-                        See more
-                      </button>
-                    )}
-                    {isExpanded && truncated && (
-                      <button
-                        type="button"
-                        onClick={() => toggleExpand(cardKey)}
-                        className={`absolute bottom-6 left-6 z-10 text-xs font-semibold underline underline-offset-4 ${isDarkMode ? "text-yellow-400" : "text-[#3A6EA5]"}`}
-                      >
-                        See less
-                      </button>
-                    )}
-                    {buttonNode}
-                  </div>
-                </div>
-              </motion.div>
-            );
-            })}
-          </div>
+          {cardRows.map((rowCards, rowIndex) => (
+            <div
+              key={`row-${rowIndex}`}
+              className={`grid grid-cols-1 gap-4 max-w-7xl mx-auto sm:grid-cols-2 lg:grid-cols-12 ${rowIndex < cardRows.length - 1 ? "mb-4" : ""}`}
+            >
+              {rowCards.map((card, index) => {
+                const cardIndex = rowIndex * 4 + index;
+                const cardKey = `${card.title}-${cardIndex}`;
+                const isExpanded = expandedCards[cardKey];
+                const { textNode, buttonNode } = splitDesc(card.desc);
+                const descText = card.descText?.trim();
+                const fullText = descText || extractText(textNode) || extractText(card.desc);
+                const { text: previewText, truncated } = truncateWords(fullText, WORD_LIMIT);
+                const hasPreviewText = previewText.trim().length > 0;
 
-          {/* Second Row - 3 Cards (Centered) */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
-            {allCards.slice(4).map((card, index) => {
-              const cardKey = `${card.title}-${index + 4}`;
-              const isExpanded = expandedCards[cardKey];
-              const { textNode, buttonNode } = splitDesc(card.desc);
-              const descText = card.descText?.trim();
-              const fullText = descText || extractText(textNode) || extractText(card.desc);
-              const { text: previewText, truncated } = truncateWords(fullText, WORD_LIMIT);
-              const hasPreviewText = previewText.trim().length > 0;
-              return (
-              <motion.div
-                key={cardKey}
-                className={`group relative rounded-2xl border border-white/10 p-6 pb-28 transition overflow-hidden flex flex-col ${isExpanded ? "min-h-[300px] h-auto" : "h-[300px]"}`}
-                style={{
-                  backgroundImage: `url('${isDarkMode ? '/Services/dark_card_md.webp' : '/Services/light_card_md.webp'}')`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  backdropFilter: "blur(10px)",
-                }}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.8, delay: index * 0.1, ease: "easeOut" }}
-                viewport={{ once: true, amount: 0.5 }}
-              >
-                <div className="flex flex-col h-full">
-                  <div className="mb-4">{card.svg}</div>
-                  <div className="flex flex-col flex-1">
-                    <h3
-                      className={`text-xl mb-2 ${isDarkMode ? "text-yellow-500" : "text-[#3A6EA5]"}`}
-                    >
-                      {card.title}
-                    </h3>
-                    <div
-                      className={`font-light text-sm ${isDarkMode ? "text-white" : "text-[#777777]"}`}
-                    >
-                      {isExpanded ? (
-                        textNode
-                      ) : (
-                        <>
-                          {descText ? (
-                            <p>{previewText}</p>
-                          ) : hasPreviewText ? (
-                            <p>{previewText}</p>
-                          ) : (
+                return (
+                  <motion.div
+                    key={cardKey}
+                    className={`group relative rounded-2xl border border-white/10 p-6 pb-28 transition overflow-hidden flex flex-col sm:col-span-1 ${getDesktopCardPosition(rowCards.length, index)} ${isExpanded ? "min-h-[300px] h-auto" : "h-[300px]"}`}
+                    style={{
+                      backgroundImage: `url('${isDarkMode ? "/Services/dark_card_md.webp" : "/Services/light_card_md.webp"}')`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                      backdropFilter: "blur(10px)",
+                    }}
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 0.8, delay: index * 0.1, ease: "easeOut" }}
+                    viewport={{ once: true, amount: 0.5 }}
+                  >
+                    <div className="flex flex-col h-full">
+                      <div className="mb-4">{card.svg}</div>
+                      <div className="flex flex-col flex-1">
+                        <h3
+                          className={`text-xl mb-2 ${isDarkMode ? "text-yellow-500" : "text-[#3A6EA5]"}`}
+                        >
+                          {card.title}
+                        </h3>
+                        <div
+                          className={`font-light text-sm ${isDarkMode ? "text-white" : "text-[#777777]"}`}
+                        >
+                          {isExpanded ? (
                             textNode
+                          ) : (
+                            <>
+                              {descText ? (
+                                <p>{previewText}</p>
+                              ) : hasPreviewText ? (
+                                <p>{previewText}</p>
+                              ) : (
+                                textNode
+                              )}
+                            </>
                           )}
-                        </>
-                      )}
+                        </div>
+                        {!isExpanded && truncated && (
+                          <button
+                            type="button"
+                            onClick={() => toggleExpand(cardKey)}
+                            className={`absolute bottom-6 left-6 z-10 flex items-center gap-1 text-xs font-semibold ${isDarkMode ? "text-yellow-400" : "text-[#3A6EA5]"}`}
+                          >
+                            <span>Read More</span>
+                            <AiOutlineArrowDown />
+                          </button>
+                        )}
+                        {isExpanded && truncated && (
+                          <button
+                            type="button"
+                            onClick={() => toggleExpand(cardKey)}
+                            className={`absolute bottom-6 left-6 z-10 flex items-center gap-1 text-xs font-semibold ${isDarkMode ? "text-yellow-400" : "text-[#3A6EA5]"}`}
+                          >
+                            <span>Read Less</span>
+                            <AiOutlineArrowUp />
+                          </button>
+                        )}
+                        {buttonNode}
+                      </div>
                     </div>
-                    {!isExpanded && truncated && (
-                      <button
-                        type="button"
-                        onClick={() => toggleExpand(cardKey)}
-                        className={`absolute bottom-6 left-6 z-10 text-xs font-semibold underline underline-offset-4 ${isDarkMode ? "text-yellow-400" : "text-[#3A6EA5]"}`}
-                      >
-                        See more
-                      </button>
-                    )}
-                    {isExpanded && truncated && (
-                      <button
-                        type="button"
-                        onClick={() => toggleExpand(cardKey)}
-                        className={`absolute bottom-6 left-6 z-10 text-xs font-semibold underline underline-offset-4 ${isDarkMode ? "text-yellow-400" : "text-[#3A6EA5]"}`}
-                      >
-                        See less
-                      </button>
-                    )}
-                    {buttonNode}
-                  </div>
-                </div>
-              </motion.div>
-            );
-            })}
-          </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+          ))}
         </div>
       </div>
     </>
@@ -324,4 +286,3 @@ const Cards = ({ service }: CardsProps) => {
 };
 
 export default Cards;
-
