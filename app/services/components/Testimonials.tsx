@@ -8,10 +8,15 @@ type CardData = {
   name: string;
   handle: string;
   date: string;
+  review: string;
 };
 
 const Testimonials = () => {
   const [isPaused, setIsPaused] = React.useState(false);
+  const [repeatCount, setRepeatCount] = React.useState(4);
+  const [groupWidth, setGroupWidth] = React.useState(0);
+  const marqueeContainerRef = React.useRef<HTMLDivElement | null>(null);
+  const measureGroupRef = React.useRef<HTMLDivElement | null>(null);
   const cardsData = [
     {
       image:
@@ -19,6 +24,7 @@ const Testimonials = () => {
       name: "Briar Martin",
       handle: "@neilstellar",
       date: "April 20, 2025",
+      review: "Aussie made my day!"
     },
     {
       image:
@@ -26,6 +32,7 @@ const Testimonials = () => {
       name: "Avery Johnson",
       handle: "@averywrites",
       date: "May 10, 2025",
+      review: "Aussie's great!"
     },
     {
       image:
@@ -33,6 +40,7 @@ const Testimonials = () => {
       name: "Jordan Lee",
       handle: "@jordantalks",
       date: "June 5, 2025",
+      review: "Aussie solved my problems big time!"
     },
     {
       image:
@@ -40,8 +48,60 @@ const Testimonials = () => {
       name: "Avery Johnson",
       handle: "@averywrites",
       date: "May 10, 2025",
+      review: "I don't know what I would have donw without Aussie's help"
     },
   ];
+
+  React.useEffect(() => {
+    const updateMarqueeMetrics = () => {
+      const containerWidth = marqueeContainerRef.current?.offsetWidth ?? 0;
+      const singleGroupWidth = measureGroupRef.current?.scrollWidth ?? 0;
+
+      if (!containerWidth || !singleGroupWidth) {
+        return;
+      }
+
+      setGroupWidth(singleGroupWidth);
+
+      // Keep enough copies on the track so the viewport is always filled
+      // before and after shifting by exactly one group width.
+      const requiredCopies = Math.max(
+        3,
+        Math.ceil((containerWidth * 2) / singleGroupWidth) + 2
+      );
+
+      setRepeatCount((current) =>
+        current === requiredCopies ? current : requiredCopies
+      );
+    };
+
+    updateMarqueeMetrics();
+
+    const resizeObserver = new ResizeObserver(updateMarqueeMetrics);
+
+    if (marqueeContainerRef.current) {
+      resizeObserver.observe(marqueeContainerRef.current);
+    }
+
+    if (measureGroupRef.current) {
+      resizeObserver.observe(measureGroupRef.current);
+    }
+
+    window.addEventListener("resize", updateMarqueeMetrics);
+
+    return () => {
+      resizeObserver.disconnect();
+      window.removeEventListener("resize", updateMarqueeMetrics);
+    };
+  }, []);
+
+  const renderCardGroup = (groupKey: string) => (
+    <div key={groupKey} className="flex w-max shrink-0 items-start py-4">
+      {cardsData.map((card, index) => (
+        <CreateCard key={`${groupKey}-${card.name}-${index}`} card={card} />
+      ))}
+    </div>
+  );
 
   const CreateCard = ({ card }: { card: CardData }) => (
     <div
@@ -87,7 +147,7 @@ const Testimonials = () => {
         </div>
       </div>
       <p className="text-sm py-4 text-gray-300">
-        Radiant made undercutting all of our competitors an absolute breeze.
+        {card.review}
       </p>
       <div className="flex items-center justify-between text-gray-500 text-xs">
         <div className="flex items-center gap-1">
@@ -113,36 +173,57 @@ const Testimonials = () => {
         </p>
       </div>
       <style>{`
-            @keyframes marqueeScroll {
-                0% { transform: translateX(0%); }
-                100% { transform: translateX(-50%); }
-                }
-                
-            .marquee-inner {
-                animation: marqueeScroll 25s linear infinite;
+            @keyframes marqueeLeft {
+                0% { transform: translate3d(0, 0, 0); }
+                100% { transform: translate3d(calc(-1 * var(--marquee-distance, 0px)), 0, 0); }
             }
 
-            .marquee-inner.paused {
+            @keyframes marqueeRight {
+                0% { transform: translate3d(calc(-1 * var(--marquee-distance, 0px)), 0, 0); }
+                100% { transform: translate3d(0, 0, 0); }
+            }
+
+            .marquee-track {
+                display: flex;
+                width: max-content;
+                will-change: transform;
+            }
+
+            .marquee-left {
+                animation: marqueeLeft 25s linear infinite;
+            }
+
+            .marquee-right {
+                animation: marqueeRight 25s linear infinite;
+            }
+
+            .marquee-track.paused {
                 animation-play-state: paused;
-            }
-
-            .marquee-reverse {
-                animation-direction: reverse;
             }
         `}</style>
 
+      <div className="absolute invisible pointer-events-none -z-10 overflow-hidden">
+        <div ref={measureGroupRef}>{renderCardGroup("measure")}</div>
+      </div>
+
       <div
+        ref={marqueeContainerRef}
         className="marquee-row w-full mx-auto overflow-hidden relative"
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
       >
         <div className="absolute left-0 top-0 h-full w-10 z-10 pointer-events-none bg-gradient-to-r from-transparent to-transparent"></div>
         <div
-          className={`marquee-inner flex transform-gpu min-w-[200%] py-4 gap-0 ${isPaused ? "paused" : ""}`}
+          className={`marquee-track marquee-left transform-gpu ${isPaused ? "paused" : ""}`}
+          style={
+            {
+              "--marquee-distance": `${groupWidth}px`,
+            } as React.CSSProperties
+          }
         >
-          {[...cardsData, ...cardsData].map((card, index) => (
-            <CreateCard key={index} card={card} />
-          ))}
+          {Array.from({ length: repeatCount }, (_, index) =>
+            renderCardGroup(`top-${index}`)
+          )}
         </div>
         <div className="absolute right-0 top-0 h-full w-10 md:w-20 z-10 pointer-events-none bg-gradient-to-l from-transparent to-transparent"></div>
       </div>
@@ -154,11 +235,16 @@ const Testimonials = () => {
       >
         <div className="absolute left-0 top-0 h-full w-10 z-10 pointer-events-none bg-gradient-to-r from-transparent to-transparent"></div>
         <div
-          className={`marquee-inner marquee-reverse flex transform-gpu min-w-[200%] py-4 gap-0 ${isPaused ? "paused" : ""}`}
+          className={`marquee-track marquee-right transform-gpu ${isPaused ? "paused" : ""}`}
+          style={
+            {
+              "--marquee-distance": `${groupWidth}px`,
+            } as React.CSSProperties
+          }
         >
-          {[...cardsData, ...cardsData].map((card, index) => (
-            <CreateCard key={index} card={card} />
-          ))}
+          {Array.from({ length: repeatCount }, (_, index) =>
+            renderCardGroup(`bottom-${index}`)
+          )}
         </div>
         <div className="absolute right-0 top-0 h-full w-10 md:w-20 z-10 pointer-events-none bg-gradient-to-l from-transparent to-transparent"></div>
       </div>

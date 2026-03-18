@@ -1,6 +1,16 @@
 import React from "react";
 import { title } from "process";
-import { FiCheckCircle } from "react-icons/fi";
+import { FiCheckCircle, FiTarget } from "react-icons/fi";
+import { SiGoogleads } from "react-icons/si";
+import { FaLinkedin, FaTiktok, FaYoutube } from "react-icons/fa";
+import { FaArrowTrendUp, FaMeta } from "react-icons/fa6";
+import { CiShoppingCart } from "react-icons/ci";
+import { TbAffiliate } from "react-icons/tb";
+import { CgPerformance, CgProfile } from "react-icons/cg";
+import { GrDocumentPerformance } from "react-icons/gr";
+import { GiAnvilImpact } from "react-icons/gi";
+import { MdCenterFocusWeak } from "react-icons/md";
+
 
 export const services = [
   // Web Design & Development
@@ -3574,247 +3584,369 @@ export const services = [
   {
     slug: "search-engine-optimization",
     title: "Search Engine Optimization (SEO)",
-    heading: "Web Development That Accelerates Growth",
-    imageUrl: "/Services/Rectangle_52.png",
-    description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
-    points: [
-      "Custom Website Design",
-      "Responsive Development",
-      "E-commerce Solutions",
-      "Content Management Systems",
-      "Performance Optimization",
+    // heading: "Web Development Services in Australia",
+    serviceBodyData: [
+      {
+        imageUrl: "/Services/Rectangle_52.webp",
+        description: (
+          <>
+            <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
+              Aussie Digital Solution | SEO Services Australia
+            </h2>
+            <ul className="list-disc list-inside my-2">
+              <li>Rank Higher.</li>
+              <li>Get Found Locally.</li>
+              <li>Grow Faster.</li>
+            </ul>
+            Most Australian businesses are not on Google’s top rank and are invisible to customers. It is not because their product is bad, but because their SEO is. We fix that. Our professional SEO agency works from the technical foundation to local search dominance, providing services that are built around one thing, and that is, getting your business in front of the people already looking for it. 
+<div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
+  <a
+    className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15"
+    href="/contact"
+  >
+    Get Your Free SEO Audit
+  </a>
+  <span
+    aria-hidden="true"
+    className="h-10 w-px bg-white/30 max-sm:h-px max-sm:w-full"
+  />
+  <a
+    className="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/10"
+    href="/services"
+  >
+    See What We Do
+  </a>
+</div>
+          </>
+        ),
+      },
     ],
+    whyChooseData: {
+      image: "/Services/Rectangle_52.webp",
+      heading: "Why Aussie Digital Solution",
+      paragraphs: [
+        <React.Fragment key="why-aussie-branding">
+        <h3 className="text-2xl text-white">We've Seen What Bad SEO Does to a Business</h3>
+Wasted spend. Stalled growth. Rankings that never move. We've fixed the aftermath of bad SEO enough times to know exactly what separates the agencies that deliver from the ones that just send monthly reports and take the retainer.
+<h3 className="text-2xl text-white">We Know the Australian Market</h3>
+We're not applying a global playbook to an Australian audience. We understand how local buyers search, what Google prioritises in Australian results, and how to position your business in the specific market you're actually competing in.
+<br />
+<h3 className="text-2xl text-white">Strategy Comes Before Tactics</h3>
+We don't start writing content or building links until we understand your business properly. The strategy shapes everything. That's why our results hold up over time rather than spiking and disappearing.
+<br />
+<h3 className="text-2xl text-white">Full Transparency on What We're Doing</h3>
+You'll always know what we're working on, why, and what it's producing. No black box. No vague updates. Clear reporting, straight conversations, and real numbers.
+<br />
+<h3 className="text-2xl text-white">One Team, Start to Finish</h3>
+Your SEO is handled by our in-house team, not handed off to contractors or overseas. The people who built your strategy are the ones executing it and reporting back to you.
+</React.Fragment>,
+      ],
+    },
+    strategicHeading: <div className="font-semibold">What We Do</div>,
+    strategicHeadingText: (
+      <div className="mt-3 mx-auto flex w-full justify-center px-4">
+        <div className="w-full rounded-3xl border border-white/10 bg-white/5 px-6 py-6 text-center shadow-[0_18px_60px_rgba(0,0,0,0.18)] backdrop-blur-sm sm:px-10 sm:py-8">
+          <h3 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+            Every SEO Service Your Business Actually Needs
+          </h3>
+          <p className="mx-auto mt-4 max-w-6xl text-sm leading-7 text-[#AAAAAA] sm:text-base">
+            SEO is not something you simply switch on to gain visibility. It is
+            the combination of strategy, technical work, content, authority
+            building, and local presence. When all of those parts work together,
+            your business earns stronger visibility and better Google rankings.
+            Our team handles the entire process as one connected unit, not as a
+            scattered group of freelancers.
+          </p>
+        </div>
+      </div>
+    ),
     strategicCardData: [
       {
-        title: "Custom Website Design",
-        desc: "Understand your vision, business goals, and target audience to create a clear project roadmap.",
-        svg: (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
-            viewBox="0 0 50 50"
-            fill="none"
-          >
-            <path
-              d="M4.1665 22.9167C4.1665 15.0599 4.1665 11.1316 6.60728 8.69078C9.04806 6.25 12.9764 6.25 20.8332 6.25H29.1665C37.0232 6.25 40.9516 6.25 43.3924 8.69078C45.8332 11.1316 45.8332 15.0599 45.8332 22.9167V27.0833C45.8332 34.9401 45.8332 38.8684 43.3924 41.3092C40.9516 43.75 37.0232 43.75 29.1665 43.75H20.8332C12.9764 43.75 9.04806 43.75 6.60728 41.3092C4.1665 38.8684 4.1665 34.9401 4.1665 27.0833V22.9167Z"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-            <path
-              d="M31.25 43.75L31.25 6.25"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-            <path
-              d="M12.4998 29.1666L10.4165 31.25L12.4998 33.3333M21.8748 33.3333L23.9582 35.4166L21.8748 37.5M18.7498 29.1666L15.6248 37.5"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-          </svg>
+        title: "SEO Strategy & Planning",
+        descText:
+          "Jumping into SEO without a proper plan is how budgets get wasted. Before we do anything, we build a strategy around your business, your goals, your audience, your competitors, and where the real search opportunities are. Every decision we make from that point has a clear reason behind it.",
+        desc: (
+          <>
+            Jumping into SEO without a proper plan is how budgets get wasted. Before we do anything, we build a strategy around your business, your goals, your audience, your competitors, and where the real search opportunities are. Every decision we make from that point has a clear reason behind it.
+            <ul className="list-disc list-inside mt-1">
+              <li>Competitor Analysis</li>
+              <li>Keyword Research</li>
+              <li>SEO Roadmap</li>
+            </ul>
+          </>
         ),
-      },
-      {
-        title: "E-commerce Website Development",
-        desc: "Iteratively develop robust, scalable websites with regular testing and your feedback at every stage.",
         svg: (
           <svg
+            height="40px"
+            width="40px"
+            version="1.1"
+            id="_x32_"
             xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
-            viewBox="0 0 50 50"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 512 512"
+            xmlSpace="preserve"
             fill="none"
           >
-            <path
-              d="M45.8332 45.8334H4.1665"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-            <path
-              d="M41.6665 45.8333V22.9166"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-            <path
-              d="M8.3335 45.8333V22.9166"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-            <path
-              d="M34.4332 4.16663H15.5673C13.0614 4.16663 11.8085 4.16663 10.8016 4.78891C9.7947 5.4112 9.23437 6.53186 8.11372 8.77318L4.16699 18.75C4.16699 21.0511 6.03229 22.9166 8.33348 22.9166C10.6347 22.9166 12.5001 21.0511 12.5001 18.75C12.5001 21.0511 14.3656 22.9166 16.6668 22.9166C18.968 22.9166 20.8335 21.0511 20.8335 18.75C20.8335 21.0511 22.699 22.9166 25.0001 22.9166C27.3013 22.9166 29.1668 21.0511 29.1668 18.75C29.1668 21.0511 31.0323 22.9166 33.3335 22.9166C35.6347 22.9166 37.5001 21.0511 37.5001 18.75C37.5001 21.0511 39.3656 22.9166 41.6668 22.9166C43.968 22.9166 45.8335 21.0511 45.8335 18.75L41.8868 8.77318L41.8867 8.77314C40.7661 6.53185 40.2058 5.4112 39.1989 4.78891C38.192 4.16663 36.9391 4.16663 34.4332 4.16663Z"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-            <path
-              d="M19.7915 44.7917V38.5417C19.7915 36.5946 19.7915 35.621 20.2102 34.8959C20.4845 34.4208 20.8789 34.0263 21.354 33.752C22.0792 33.3334 23.0527 33.3334 24.9998 33.3334C26.947 33.3334 27.9205 33.3334 28.6457 33.752C29.1207 34.0263 29.5152 34.4208 29.7895 34.8959C30.2082 35.621 30.2082 36.5946 30.2082 38.5417V44.7917"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-          </svg>
-        ),
-      },
-      {
-        title: "Magento Development",
-        desc: "Design modern, user-centric interfaces for an exceptional digital experience.",
-        svg: (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
-            viewBox="0 0 50 50"
-            fill="none"
-          >
-            <path
-              d="M25.0003 45.8333C36.5063 45.8333 45.8337 36.5059 45.8337 25C45.8337 13.494 36.5063 4.16663 25.0003 4.16663C13.4944 4.16663 4.16699 13.494 4.16699 25C4.16699 36.5059 13.4944 45.8333 25.0003 45.8333Z"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-            <path
-              d="M32.292 18.75L32.6494 19.1074C35.4272 21.8852 36.8161 23.2741 36.8161 25C36.8161 26.7259 35.4272 28.1148 32.6494 30.8926L32.292 31.25"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-            <path
-              d="M27.6963 14.9382L25.0003 25L22.3042 35.0617"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-            <path
-              d="M17.7087 18.75L17.3512 19.1074C14.5735 21.8852 13.1846 23.2741 13.1846 25C13.1846 26.7259 14.5735 28.1148 17.3512 30.8926L17.7087 31.25"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-          </svg>
-        ),
-      },
-      {
-        title: "Wordpress Development",
-        desc: "Design modern, user-centric interfaces for an exceptional digital experience.",
-        svg: (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
-            viewBox="0 0 52 52"
-            fill="none"
-          >
-            <circle
-              cx="26"
-              cy="26"
-              r="25"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-            <path
-              d="M4.5166 13.8746H6.74371M14.3476 13.8746H6.74371M6.74371 13.8746L18.8623 47.0621L27.6542 23.3794M27.6542 23.3794L24.2483 13.8746M27.6542 23.3794L36.2877 47.0621L45.0166 23.3794M24.2483 13.8746H18.3078M24.2483 13.8746H32.8026M45.0166 23.3794L45.9508 20.8448C47.1125 16.6468 47.9785 8.42521 42.1489 9.12223C39.7836 9.67667 37.0457 13.3043 45.0166 23.3794Z"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-          </svg>
-        ),
-      },
-      {
-        title: "Opencart",
-        desc: "Thoroughly test for responsiveness, performance, and security before seamless launch and handover.",
-        svg: (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
-            viewBox="0 0 50 50"
-            fill="none"
-          >
-            <path
-              d="M2.01594 9.46583C4.54545 13.647 7.6255 15.745 13.2351 17.1287C17.1632 18.0959 20.8236 18.4084 29.1412 18.4828C33.6199 18.5125 36.1643 18.6018 37.3993 18.7506C42.5178 19.3904 43.8867 20.5808 42.3541 23.1252C42.0863 23.5716 40.8216 25.0595 39.5568 26.3986C36.6256 29.5233 35.7179 30.55 34.9442 31.6809C34.468 32.3355 34.3936 32.529 34.6168 32.4099C34.7805 32.3207 34.9739 32.1719 35.0335 32.0826C35.0781 31.9933 37.2059 30.1334 39.7651 27.961C46.4906 22.2026 48.4101 20.2534 48.916 18.6613C49.1689 17.8876 48.916 17.1585 48.2167 16.6972C46.4609 15.5366 43.1874 15.1647 34.5127 15.12C17.6245 15.0159 11.5686 14.3612 6.8964 12.0995C5.00671 11.177 3.62292 10.2396 2.09034 8.79625L0.989258 7.78445L2.01594 9.46583Z"
-              fill="#4C8C74"
-            />
-            <path
-              d="M12.5803 35.5792C11.6875 35.9066 10.9882 36.5464 10.6013 37.3648C9.51512 39.6859 11.0923 42.2155 13.6218 42.2155C16.3597 42.2006 17.9666 39.3437 16.5531 37.0523C15.7347 35.728 13.9641 35.0584 12.5803 35.5792Z"
-              fill="#4C8C74"
-            />
-            <path
-              d="M28.2332 35.5643C26.9387 36.0554 26.0757 37.1267 25.9269 38.4361C25.8078 39.433 26.0757 40.3406 26.7304 41.0549C27.4595 41.8583 28.2481 42.2155 29.364 42.2155C32.2507 42.2155 33.7684 38.8229 31.8787 36.5761C31.0752 35.609 29.364 35.1477 28.2332 35.5643Z"
-              fill="#4C8C74"
-            />
-          </svg>
-        ),
-      },
-      {
-        title: "Shopify Development",
-        desc: "Incorporate compelling, SEO-optimized content and visuals that support your brand story.",
-        svg: (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
-            viewBox="0 0 47 52"
-            fill="none"
-          >
-            <path
-              d="M32.2417 51.0001L1 45.5771L5.12642 14.4532L11.9727 12.3993M32.2417 51.0001V6.31849M32.2417 51.0001L45.7994 47.5812L40.0227 9.73743H36.2501L32.2417 6.31849M32.2417 6.31849L28.6995 7.38117M11.9727 12.3993C12.4414 8.44675 15.0528 0.636051 21.7492 1.01331C22.9995 0.936865 25.4315 2.31595 25.1572 8.44384M11.9727 12.3993L18.565 10.4216M25.1572 8.44384L18.565 10.4216M25.1572 8.44384L28.6995 7.38117M18.565 10.4216C19.1941 7.63916 21.6313 2.19228 26.347 2.66385C27.2472 2.56359 28.9781 3.36669 28.6995 7.38117"
-              stroke="#4C8C74"
-              strokeWidth="2"
+            <g id="SVGRepo_bgCarrier" strokeWidth="0" />
+            <g
+              id="SVGRepo_tracerCarrier"
               strokeLinecap="round"
               strokeLinejoin="round"
             />
-            <path
-              d="M16.8005 16.8122C13.8515 18.2867 11.2471 21.1821 11.2471 24.8013C11.2471 27.2141 11.2396 28.563 13.5854 30.8418C16.8025 33.9919 18.3111 35.4209 16.0323 36.542C15.0269 36.676 12.0514 36.1154 11.2471 35.7132C10.1077 35.043 10.2013 35.8717 9.7321 36.542C7.92248 39.424 10.8045 41.9708 16.0323 42.0379C18.9813 42.1049 20.4835 41.5844 22.159 39.7078C23.7676 37.8981 23.523 37.0668 23.523 34.2518C23.523 30.7666 22.8686 30.3758 18.3111 26.6226C15.0939 23.9416 16.5685 21.3948 21.193 21.8639C23.6059 22.065 23.874 21.9309 24.5442 20.1213C24.8793 19.049 25.2144 17.7755 25.2144 17.3064C25.2144 15.9659 19.6155 15.4047 16.8005 16.8122Z"
-              fill="#4C8C74"
-            />
+            <g id="SVGRepo_iconCarrier">
+              <g>
+                <path
+                  fill="#4C8C74"
+                  d="M61.936,345.186h388.128c14.81,0,26.822-12.019,26.822-26.828V89.967c0-14.797-12.012-26.81-26.822-26.81 H61.936c-14.81,0-26.81,12.012-26.81,26.81v228.39C35.127,333.167,47.126,345.186,61.936,345.186z M76.126,99.189h359.749v203.649 H76.126V99.189z"
+                />
+                <path
+                  fill="#4C8C74"
+                  d="M508.025,419.609l-47.841-42.468c-3.076-2.722-7.5-4.266-12.171-4.266H63.98 c-4.664,0-9.095,1.544-12.164,4.266L3.968,419.609C1.405,421.874,0,424.792,0,427.811v14.797c0,3.456,3.608,6.234,8.064,6.234 h495.874c4.468,0,8.063-2.778,8.063-6.234v-14.797C512,424.792,510.588,421.874,508.025,419.609z M201.137,424.621l13.848-18.721 h87.733l13.829,18.721H201.137z"
+                />
+                <path
+                  fill="#4C8C74"
+                  d="M189.143,200.96l-4.442-0.633c-11.374-1.588-15.449-5.55-15.449-11.354c0-6.545,4.69-11.241,13.221-11.241 c7.038,0,13.342,2.095,20.139,6.544l1.728-0.373l5.936-9.146l-0.253-1.721c-6.671-5.069-16.683-8.392-27.177-8.392 c-17.297,0-28.417,10.113-28.417,25.322c0,13.956,9.139,21.74,25.322,23.962l4.456,0.62c11.608,1.601,15.31,5.55,15.31,11.607 c0,7.032-5.804,12.108-15.81,12.108c-9.392,0-17.423-4.57-22.854-8.886l-1.728,0.114l-7.664,8.899l0.246,1.861 c6.551,6.17,18.538,11.101,30.886,11.101c20.892,0,31.638-11.101,31.638-26.05C214.232,210.833,205.327,203.168,189.143,200.96z"
+                />
+                <polygon
+                  fill="#4C8C74"
+                  points="229.928,165.986 228.693,167.219 228.693,248.776 229.928,250.01 282.554,250.01 283.794,248.776 283.794,238.149 282.554,236.915 244.016,236.915 243.275,236.162 243.275,214.915 244.016,214.175 276.51,214.175 277.75,212.94 277.75,202.314 276.51,201.08 244.016,201.08 243.275,200.326 243.275,179.827 244.016,179.087 282.554,179.087 283.794,177.846 283.794,167.219 282.554,165.986"
+                />
+                <path
+                  fill="#4C8C74"
+                  d="M328.54,164.644c-14.462,0-25.329,6.905-29.658,20.246c-1.728,5.19-2.228,9.886-2.228,23.107 c0,13.222,0.5,17.918,2.228,23.108c4.329,13.342,15.196,20.246,29.658,20.246c14.576,0,25.436-6.905,29.766-20.246 c1.734-5.19,2.234-9.886,2.234-23.108c0-13.221-0.5-17.917-2.234-23.107C353.977,171.549,343.116,164.644,328.54,164.644z M344.224,227.263c-2.348,6.81-7.284,11-15.683,11c-8.284,0-13.221-4.19-15.576-11c-0.981-3.089-1.481-7.412-1.481-19.266 c0-11.987,0.5-16.177,1.481-19.278c2.354-6.797,7.291-10.987,15.576-10.987c8.399,0,13.335,4.19,15.683,10.987 c0.981,3.101,1.494,7.291,1.494,19.278C345.718,219.852,345.205,224.174,344.224,227.263z"
+                />
+              </g>
+            </g>
           </svg>
         ),
       },
       {
-        title: "Woocommerce Development",
-        desc: "Provide maintenance, updates, and performance enhancements to keep your site running at its best.",
+        title: "Local Search Dominance",
+        descText:
+          "If your customers are searching for SEO services near them or in a specific suburb or city, local SEO is what gets you in front of them. Our process includes; optimisation of your Google Business Profile local citations, and providing a structure to your site so Google knows exactly where you operate and who you serve. For local businesses, this is the fastest path to more enquiries most of the time.",
+        desc: (<>If your customers are searching for SEO services near them or in a specific suburb or city, local SEO is what gets you in front of them. Our process includes; optimisation of your Google Business Profile local citations, and providing a structure to your site so Google knows exactly where you operate and who you serve. For local businesses, this is the fastest path to more enquiries most of the time. 
+        <ul className="list-disc list-inside mt-2">
+          <li>Local SEO</li>
+          <li>Google Maps</li>
+          <li>Citation Building</li>
+        </ul>
+</>),
+        svg: (
+         <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z" stroke="#4C8C74" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path> </g></svg>
+        ),
+      },
+      {
+        title: "Local Landing Pages",
+        descText:
+          "Ranking in one suburb is good. Ranking across every area you service is better. We build geo-targeted landing pages that are genuinely useful, not thin, copy-paste pages that Google ignores, but real pages with real content that rank for the locations that matter to your business.",
+        desc: (<>Ranking in one suburb is good. Ranking across every area you service is better. We build geo-targeted landing pages that are genuinely useful, not thin, copy-paste pages that Google ignores, but real pages with real content that rank for the locations that matter to your business.
+        <ul className="list-disc list-inside mt-2">
+          <li>Geo Pages</li>
+          <li>Location SEO</li>
+          <li>Service Areas</li>
+        </ul>
+</>),
+        svg: (
+          <svg width="40px" height="40px" version="1.1" id="PAGE" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1800" enableBackground="new 0 0 1800 1800" fill="#000000"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="#4C8C74" d="M1720.335,5.563H85.245c-43.937,0-79.679,35.739-79.679,79.667v1635.1c0,43.928,35.743,79.67,79.679,79.67 h1635.09c43.927,0,79.665-35.742,79.665-79.67V85.23C1800,41.302,1764.262,5.563,1720.335,5.563z M85.245,68.575h1635.09 c9.182,0,16.653,7.473,16.653,16.655v195.532H68.578V85.23C68.578,76.048,76.055,68.575,85.245,68.575z M1720.335,1736.988H85.245 c-9.19,0-16.667-7.472-16.667-16.658V343.774h1668.41V1720.33C1736.988,1729.517,1729.517,1736.988,1720.335,1736.988z"></path> <path fill="#4C8C74" d="M1518.679,1150.928H333.948c-47.154,0-85.517,38.363-85.517,85.517v315.061 c0,47.152,38.363,85.516,85.517,85.516h1184.73c47.154,0,85.518-38.363,85.518-85.516v-315.061 C1604.196,1189.291,1565.833,1150.928,1518.679,1150.928z M1541.184,1551.505c0,12.403-10.096,22.504-22.505,22.504H333.948 c-12.409,0-22.504-10.101-22.504-22.504v-315.061c0-12.412,10.096-22.505,22.504-22.505h1184.73 c12.409,0,22.505,10.093,22.505,22.505V1551.505z"></path> <path fill="#4C8C74" d="M333.948,913.886h305.565c47.153,0,85.517-38.365,85.517-85.519V522.802 c0-47.154-38.363-85.516-85.517-85.516H333.948c-47.154,0-85.517,38.362-85.517,85.516v305.565 C248.432,875.521,286.794,913.886,333.948,913.886z M311.444,522.802c0-12.408,10.096-22.504,22.504-22.504h305.565 c12.408,0,22.505,10.096,22.505,22.504v305.565c0,12.408-10.097,22.505-22.505,22.505H333.948 c-12.409,0-22.504-10.097-22.504-22.505V522.802z"></path> <path fill="#4C8C74" d="M1572.689,996.396H279.938c-17.401,0-31.506,14.108-31.506,31.505c0,17.406,14.105,31.507,31.506,31.507 h1292.751c17.401,0,31.507-14.101,31.507-31.507C1604.196,1010.505,1590.091,996.396,1572.689,996.396z"></path> <path fill="#4C8C74" d="M1572.689,832.116H858.558c-17.402,0-31.507,14.105-31.507,31.507c0,17.401,14.105,31.505,31.507,31.505 h714.132c17.401,0,31.507-14.104,31.507-31.505C1604.196,846.222,1590.091,832.116,1572.689,832.116z"></path> <path fill="#4C8C74" d="M1572.689,643.081H858.558c-17.402,0-31.507,14.105-31.507,31.506c0,17.401,14.105,31.505,31.507,31.505 h714.132c17.401,0,31.507-14.104,31.507-31.505C1604.196,657.186,1590.091,643.081,1572.689,643.081z"></path> <path fill="#4C8C74" d="M1572.689,454.044H858.558c-17.402,0-31.507,14.105-31.507,31.507c0,17.401,14.105,31.505,31.507,31.505 h714.132c17.401,0,31.507-14.104,31.507-31.505C1604.196,468.15,1590.091,454.044,1572.689,454.044z"></path> <circle fill="#4C8C74" cx="204.913" cy="171.616" r="50.635"></circle> <circle fill="#4C8C74" cx="364.694" cy="171.616" r="50.635"></circle> <circle fill="#4C8C74" cx="524.474" cy="171.616" r="50.635"></circle> </g> </g></svg>
+        ),
+      },
+      {
+        title: "On-Page & Off-Page SEO",
+        descText:
+          "On-page is what appears on your website, including content, structure, metadata, and internal linking. On the other side, Off-page is the authority you build outside of it, such as backlinks, mentions, and brand signals. Both has graeteast improratnce and have to be done properly for higher visibility. At Aussie Digital Solutions, the team of exeors manage the complete picture, so nothing gets left unattended. ",
+        desc: (<>On-page is what appears on your website, including content, structure, metadata, and internal linking. On the other side, Off-page is the authority you build outside of it, such as backlinks, mentions, and brand signals. Both has graeteast improratnce and have to be done properly for higher visibility. At Aussie Digital Solutions, the team of exeors manage the complete picture, so nothing gets left unattended. 
+        <ul className="list-inside list-disc mt-2">
+          <li>On-Page SEO</li>
+          <li>Off-Page SEO</li>
+          <li>Content Optimisation</li>
+        </ul>
+</>),
         svg: (
           <svg
+            fill="#4C8C74"
+            height="40px"
+            width="40px"
+            version="1.0"
+            id="Layer_1"
             xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
-            viewBox="0 0 86 52"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 24 24"
+            enableBackground="new 0 0 24 24"
+            xmlSpace="preserve"
+          >
+            <g id="SVGRepo_bgCarrier" strokeWidth="0" />
+            <g
+              id="SVGRepo_tracerCarrier"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <g id="SVGRepo_iconCarrier">
+              <g>
+                <g>
+                  <path d="M5.5,5h-3C2.2,5,2,4.8,2,4.5S2.2,4,2.5,4h3C5.8,4,6,4.2,6,4.5S5.8,5,5.5,5z" />
+                </g>
+                <g>
+                  <path d="M4.5,19h-2C2.2,19,2,18.8,2,18.5S2.2,18,2.5,18h2C4.8,18,5,18.2,5,18.5S4.8,19,4.5,19z" />
+                </g>
+                <g>
+                  <path d="M10.5,19h-4C6.2,19,6,18.8,6,18.5S6.2,18,6.5,18h4c0.3,0,0.5,0.2,0.5,0.5S10.8,19,10.5,19z" />
+                </g>
+                <g>
+                  <path d="M10.5,5h-3C7.2,5,7,4.8,7,4.5S7.2,4,7.5,4h3C10.8,4,11,4.2,11,4.5S10.8,5,10.5,5z" />
+                </g>
+                <g>
+                  <path d="M10.5,7h-1C9.2,7,9,6.8,9,6.5S9.2,6,9.5,6h1C10.8,6,11,6.2,11,6.5S10.8,7,10.5,7z" />
+                </g>
+                <g>
+                  <path d="M10.5,9h-1C9.2,9,9,8.8,9,8.5S9.2,8,9.5,8h1C10.8,8,11,8.2,11,8.5S10.8,9,10.5,9z" />
+                </g>
+                <g>
+                  <path d="M10.5,11h-1C9.2,11,9,10.8,9,10.5S9.2,10,9.5,10h1c0.3,0,0.5,0.2,0.5,0.5S10.8,11,10.5,11z" />
+                </g>
+                <g>
+                  <path d="M10.5,13h-1C9.2,13,9,12.8,9,12.5S9.2,12,9.5,12h1c0.3,0,0.5,0.2,0.5,0.5S10.8,13,10.5,13z" />
+                </g>
+                <g>
+                  <path d="M10.5,15h-1C9.2,15,9,14.8,9,14.5S9.2,14,9.5,14h1c0.3,0,0.5,0.2,0.5,0.5S10.8,15,10.5,15z" />
+                </g>
+                <g>
+                  <path d="M10.5,17h-1C9.2,17,9,16.8,9,16.5S9.2,16,9.5,16h1c0.3,0,0.5,0.2,0.5,0.5S10.8,17,10.5,17z" />
+                </g>
+                <g>
+                  <path d="M7.5,7h-5C2.2,7,2,6.8,2,6.5S2.2,6,2.5,6h5C7.8,6,8,6.2,8,6.5S7.8,7,7.5,7z" />
+                </g>
+                <g>
+                  <path d="M6.5,17h-3C2.7,17,2,16.3,2,15.5v-6C2,8.7,2.7,8,3.5,8h3C7.3,8,8,8.7,8,9.5v6C8,16.3,7.3,17,6.5,17z M3.5,9 C3.2,9,3,9.2,3,9.5v6C3,15.8,3.2,16,3.5,16h3C6.8,16,7,15.8,7,15.5v-6C7,9.2,6.8,9,6.5,9H3.5z" />
+                </g>
+                <path d="M23.3,14.6l-1.4-0.8c-0.2-0.1-0.3-0.3-0.2-0.5c0.1-0.4,0.1-0.9,0.1-1.3s0-0.9-0.1-1.3c0-0.2,0.1-0.4,0.2-0.5l1.5-0.8 c0.7-0.4,1-1.3,0.6-2l-1.5-2.6c-0.2-0.4-0.5-0.6-0.9-0.7c-0.4-0.1-0.8-0.1-1.1,0.2L18.8,5c-0.2,0.1-0.4,0.1-0.6-0.1 c-0.7-0.5-1.4-1-2.2-1.3c-0.2-0.1-0.3-0.3-0.3-0.5V1.5C15.7,0.7,15,0,14.2,0H1.5C0.7,0,0,0.7,0,1.5v21C0,23.3,0.7,24,1.5,24h12.7 c0.8,0,1.5-0.7,1.5-1.5v-1.7c0-0.2,0.1-0.4,0.3-0.5c0.8-0.3,1.5-0.7,2.2-1.3c0.2-0.1,0.4-0.2,0.6-0.1l1.4,0.8 c0.3,0.2,0.8,0.3,1.1,0.2s0.7-0.4,0.9-0.7l1.5-2.6C24.2,16,24,15.1,23.3,14.6z M13,6.5c2.9,0.2,5.2,2.6,5.2,5.5 c0,2.9-2.3,5.3-5.2,5.5V6.5z M6,1h4v0.5C10,1.8,9.8,2,9.5,2h-3C6.2,2,6,1.8,6,1.5V1z M1.5,1H5v0.5C5,2.3,5.7,3,6.5,3h3 C10.3,3,11,2.3,11,1.5V1h1v19H1V1.5C1,1.2,1.2,1,1.5,1z M1.5,23C1.2,23,1,22.8,1,22.5V21h11v2H1.5z M22.9,16.2l-1.5,2.6 c-0.1,0.1-0.2,0.2-0.3,0.2c-0.1,0-0.3,0-0.4-0.1l-1.5-0.8c-0.5-0.3-1.2-0.2-1.7,0.1c-0.6,0.5-1.3,0.9-2,1.1c-0.6,0.2-1,0.8-1,1.4 v1.7c0,0.3-0.2,0.5-0.5,0.5H13v-4.5c3.4-0.2,6.2-3,6.2-6.5S16.4,5.7,13,5.5V1h1.2c0.3,0,0.5,0.2,0.5,0.5v1.7c0,0.6,0.4,1.2,1,1.4 c0.7,0.3,1.4,0.7,2,1.1c0.5,0.4,1.2,0.5,1.7,0.1L20.8,5C20.9,4.9,21,4.9,21.1,5c0.1,0,0.2,0.1,0.3,0.2l1.5,2.6 C23.1,8,23,8.3,22.7,8.5l-1.5,0.8c-0.5,0.3-0.8,0.9-0.7,1.5c0.1,0.4,0.1,0.8,0.1,1.2s0,0.8-0.1,1.2c-0.1,0.6,0.2,1.2,0.7,1.5 l1.4,0.8C23,15.7,23.1,16,22.9,16.2z" />
+              </g>
+            </g>
+          </svg>
+        ),
+      },
+      {
+        title: "Link Building",
+        descText:
+          "Not all links plays same role. A handful of genuinely relevant, high-authority backlinks will play and bring a much higher success rate for your rankings than hundreds of low-quality ones. We build links that actually move the needle, through content, outreach, and relationships with real sites in your industry and geography.",
+        desc: (<>Not all links plays same role. A handful of genuinely relevant, high-authority backlinks will play and bring a much higher success rate for your rankings than hundreds of low-quality ones. We build links that actually move the needle, through content, outreach, and relationships with real sites in your industry and geography.
+        <ul className="list-inside list-disc mt-2">
+          <li>Authority Links</li>
+          <li>Outreach</li>
+          <li>Digital PR</li>
+        </ul>
+</>),
+        svg: (
+          <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#4C8C74"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9.16488 17.6505C8.92513 17.8743 8.73958 18.0241 8.54996 18.1336C7.62175 18.6695 6.47816 18.6695 5.54996 18.1336C5.20791 17.9361 4.87912 17.6073 4.22153 16.9498C3.56394 16.2922 3.23514 15.9634 3.03767 15.6213C2.50177 14.6931 2.50177 13.5495 3.03767 12.6213C3.23514 12.2793 3.56394 11.9505 4.22153 11.2929L7.04996 8.46448C7.70755 7.80689 8.03634 7.47809 8.37838 7.28062C9.30659 6.74472 10.4502 6.74472 11.3784 7.28061C11.7204 7.47809 12.0492 7.80689 12.7068 8.46448C13.3644 9.12207 13.6932 9.45086 13.8907 9.7929C14.4266 10.7211 14.4266 11.8647 13.8907 12.7929C13.7812 12.9825 13.6314 13.1681 13.4075 13.4078M10.5919 10.5922C10.368 10.8319 10.2182 11.0175 10.1087 11.2071C9.57284 12.1353 9.57284 13.2789 10.1087 14.2071C10.3062 14.5492 10.635 14.878 11.2926 15.5355C11.9502 16.1931 12.279 16.5219 12.621 16.7194C13.5492 17.2553 14.6928 17.2553 15.621 16.7194C15.9631 16.5219 16.2919 16.1931 16.9495 15.5355L19.7779 12.7071C20.4355 12.0495 20.7643 11.7207 20.9617 11.3787C21.4976 10.4505 21.4976 9.30689 20.9617 8.37869C20.7643 8.03665 20.4355 7.70785 19.7779 7.05026C19.1203 6.39267 18.7915 6.06388 18.4495 5.8664C17.5212 5.3305 16.3777 5.3305 15.4495 5.8664C15.2598 5.97588 15.0743 6.12571 14.8345 6.34955" stroke="#4C8C74" strokeWidth="2" strokeLinecap="round"></path> </g></svg>
+        ),
+      },
+      {
+        title: "Keyword Architecture",
+        descText:
+          "Which keywords are suitable for which pages, whether long tail or short keywords are more visible, and why, is a question most sites never answer properly. We build a structured keyword architecture across your entire site so every page targets the right terms, content doesn't compete against itself, and Google understands exactly what each page is about, through organic keyword integration.",
+        desc: (<>Which keywords are suitable for which pages, whether long tail or short keywords are more visible, and why, is a question most sites never answer properly. We build a structured keyword architecture across your entire site so every page targets the right terms, content doesn't compete against itself, and Google understands exactly what each page is about, through organic keyword integration.
+        <ul className="list-disc list-inside mt-2">
+          <li>Keyword Mapping</li>
+          <li>Silo Structure</li>
+          <li>Intent Targeting</li>
+        </ul>
+</>),
+        svg: (
+          <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M10 14.0505C9.36474 13.4022 8.47934 13 7.5 13C5.567 13 4 14.567 4 16.5C4 18.433 5.567 20 7.5 20C9.433 20 11 18.433 11 16.5C11 15.5463 10.6186 14.6818 10 14.0505ZM10 14.0505L15.0316 9.01894M18.5 5.5L17.2689 6.75631M15.0316 9.01894L16.0379 8.01263L17.2689 6.75631M15.0316 9.01894L17.0126 11M17.2689 6.75631L20.0126 9.5" stroke="#4C8C74" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path> </g></svg>
+        ),
+      },
+      {
+        title: "Technical SEO",
+        descText:
+          "If your site has crawl issues, slow load times, broken links, or poor Core Web Vitals scores, your rankings are being held back, no matter how good your content is. We run a full technical audit and fix what's actually causing the problems, not just flag them in a report and leave you to it.it's done, you've got a brand that's ready to compete and built to hold up over time.",
+        desc: (<>If your site has crawl issues, slow load times, broken links, or poor Core Web Vitals scores, your rankings are being held back, no matter how good your content is. We run a full technical audit and fix what's actually causing the problems, not just flag them in a report and leave you to it.it's done, you've got a brand that's ready to compete and built to hold up over time.
+        <ul className="mt-2 list-dissc list-inside">
+          <li>Site Audit</li>
+          <li>Core Web Vitals</li>
+          <li>Crawlability</li>
+        </ul>
+</>),
+        svg: (
+          <svg fill="#4C8C74" height="40px" width="40px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 392 392" xmlSpace="preserve" stroke="#4C8C74"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M142.311,89.495c2.175,4.469,0.412,9.856-4.058,12.031C92.025,124.025,63.5,169.919,63.5,221.298v36.332 c0,4.971-4.415,9.371-9.386,9.371H35.354C20.045,267,7.5,254.176,7.5,238.869v-41.042c0-12.095,7.786-22.717,19.325-26.432 c4.729-1.522,9.836,1.078,11.359,5.809c1.522,4.731-1.101,9.802-5.832,11.325c-4.008,1.291-6.852,5.114-6.852,9.298v41.042 c0,5.382,4.471,10.131,9.854,10.131H45.5v-27.702c0-28.889,7.988-56.972,23.464-81.214c15.06-23.589,36.102-42.519,61.219-54.743 C134.655,83.166,140.135,85.025,142.311,89.495z M384.5,197.827v41.042c0,15.307-12.045,28.131-27.353,28.131h-16.621 c-5.46,17-14.122,33.477-25.788,48.188c-19.169,24.173-45.546,41.749-74.88,50.601c-1.319,14.807-13.792,26.21-28.933,26.21h-29.35 c-16.017,0-29.047-12.982-29.047-28.999c0-16.02,13.03-29.001,29.047-29.001h29.35c10.542,0,19.791,5.837,24.882,14.264 c55.474-17.165,93.579-68.2,93.579-126.966c0-13.307-1.934-26.329-5.761-38.862c-17.421,13.779-39.419,22.015-63.304,22.015 c-49.121,0-90.261-34.832-100.021-81.092c-0.021-0.089-0.042-0.179-0.061-0.27c-0.612-2.944-1.094-5.926-1.443-8.929 c-0.457-3.915-0.691-7.892-0.691-11.927c0-17.125,4.234-33.282,11.708-47.476c0.099-0.226,0.206-0.451,0.322-0.669 c14.619-27.331,40.46-46.183,70.106-52.1C246.594,0.718,253.152,0,259.863,0c0.021,0,0.042,0,0.064,0c0.027,0,0.058,0,0.085,0 c0.024,0,0.053,0,0.075,0c0.027,0,0.052,0,0.079,0c0.025,0,0.059,0,0.083,0c0.047,0,0.098,0,0.145,0c0.024,0,0.058,0,0.083,0 c0.03,0,0.052,0,0.079,0c0.022,0,0.052,0,0.075,0c0.027,0,0.057,0,0.086,0c0.02,0,0.042,0,0.063,0c6.671,0,13.19,0.71,19.504,1.965 c29.694,5.891,55.586,24.762,70.223,52.128c0.115,0.215,0.221,0.436,0.317,0.658c7.478,14.196,11.714,30.359,11.714,47.488 c0,4.245-0.26,8.432-0.765,12.543c-0.343,2.795-0.799,5.583-1.368,8.327c-0.021,0.103-0.045,0.228-0.069,0.33 c-3.598,17.026-11.447,32.549-22.38,45.31c6.26,16.819,9.43,34.594,9.43,52.734c0,9.278-0.819,18.517-2.434,27.517h12.194 c5.383,0,9.353-4.749,9.353-10.131v-41.042c0-4.185-2.645-8.008-6.653-9.298c-4.73-1.523-7.178-6.594-5.654-11.325 c1.522-4.731,6.491-7.331,11.223-5.809C376.953,175.109,384.5,185.732,384.5,197.827z M221.974,363.146 c0-0.734-0.072-1.258-0.209-1.952c-0.024-0.106-0.047-0.309-0.067-0.415c-1.123-4.912-5.526-8.779-10.771-8.779h-29.35 c-6.091,0-11.047,4.906-11.047,10.998c0,6.095,4.956,11.002,11.047,11.002h29.35C217.018,374,221.974,369.238,221.974,363.146z M304.605,78.207c0.774,7.773,1.174,15.829,1.174,24.027c0,8.349-0.414,16.551-1.217,24.457 c13.817-2.665,26.936-6.598,39.018-11.732c0.292-1.923,0.52-3.868,0.68-5.831c0.186-2.29,0.279-4.592,0.279-6.894 c0-11.559-2.339-22.577-6.571-32.613C327.375,73.27,316.185,76.144,304.605,78.207z M290.156,23.474 c1.535,2.933,2.981,6.125,4.327,9.567c3.171,8.109,5.723,17.347,7.593,27.336c9.328-1.689,18.365-3.948,26.982-6.754 C319.444,40.067,305.928,29.467,290.156,23.474z M236.402,62.875c15.713,1.575,32.129,1.576,47.84,0 c-1.641-8.538-3.831-16.396-6.522-23.278c-6.229-15.929-13.266-21.581-17.397-21.581s-11.168,5.652-17.397,21.581 C240.233,46.479,238.043,54.337,236.402,62.875z M177.167,114.958c12.081,5.134,25.101,9.067,38.918,11.732 c-0.803-7.905-1.214-16.108-1.214-24.457c0-8.198,0.406-16.254,1.18-24.027c-11.579-2.063-22.756-4.937-33.35-8.586 c-4.229,10.034-6.545,21.057-6.545,32.613c0,1.899,0.114,3.797,0.24,5.688c0.001,0.011,0.104,0.022,0.104,0.034 c0,0.005,0,0.012,0,0.018C176.5,110.331,176.817,112.656,177.167,114.958z M230.488,180.993c-1.535-2.933-2.98-6.125-4.327-9.567 c-3.025-7.736-5.486-16.5-7.33-25.963c-12.294-2.036-24.148-4.986-35.367-8.81C192.6,156.971,209.561,173.041,230.488,180.993z M230.488,23.474c-15.771,5.993-29.287,16.594-38.902,30.15c8.617,2.806,17.654,5.064,26.983,6.753 c1.869-9.99,4.421-19.228,7.592-27.336C227.508,29.599,228.953,26.407,230.488,23.474z M282.915,147.84 c-14.853,1.294-30.331,1.294-45.186,0c1.436,6.143,3.174,11.862,5.195,17.03c6.229,15.929,13.266,21.581,17.397,21.581 s11.168-5.652,17.397-21.581C279.741,159.702,281.479,153.983,282.915,147.84z M287.779,102.233c0-7.365-0.342-14.581-1.007-21.526 c-17.387,1.797-35.514,1.797-52.9,0c-0.665,6.945-1.007,14.162-1.007,21.526c0,9.397,0.557,18.55,1.63,27.209 c8.438,0.909,17.071,1.371,25.827,1.371s17.389-0.461,25.827-1.371C287.223,120.784,287.779,111.631,287.779,102.233z M337.182,136.653c-11.222,3.825-23.072,6.774-35.368,8.81c-1.844,9.463-4.305,18.228-7.33,25.963 c-1.346,3.442-2.792,6.634-4.327,9.567C311.084,173.041,328.046,156.971,337.182,136.653z"></path> </g></svg>
+        ),
+      },
+      {
+        title: "eCommerce SEO",
+        descText:
+          "eCommerce SEO has its own set of challenges, including product page optimisation, category structure, duplicate content, faceted navigation, and schema markup. We've worked across Shopify, WooCommerce, Magento, and custom platforms. We know what it takes to get product pages ranking and turning search traffic into sales.",
+        desc: (<>eCommerce SEO has its own set of challenges, including product page optimisation, category structure, duplicate content, faceted navigation, and schema markup. We've worked across Shopify, WooCommerce, Magento, and custom platforms. We know what it takes to get product pages ranking and turning search traffic into sales.
+<ul className="mt-2 list-inside list-disc">
+  <li>Product Page SEO</li>
+  <li>Shopify SEO</li>
+  <li>WooCommerce SEO</li>
+</ul>
+</>),
+        svg: (
+          <svg fill="#4C8C74" width="40px" height="40px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <g data-name="12 site" id="_12_site"> <path d="M17.5,9.08a2,2,0,1,1-2-2.03A2.021,2.021,0,0,1,17.5,9.08Z"></path> <path d="M11.5,9.08a2,2,0,1,1-2-2.03A2.021,2.021,0,0,1,11.5,9.08Z"></path> <path d="M23.5,9.08a2,2,0,1,1-2-2.03A2.021,2.021,0,0,1,23.5,9.08Z"></path> <path d="M58.5,3.5H5.5a2.006,2.006,0,0,0-2,2v53a2.006,2.006,0,0,0,2,2h53a2.006,2.006,0,0,0,2-2V5.5A2.006,2.006,0,0,0,58.5,3.5Zm0,55H5.5V14.67h53Zm0-45.83H5.5V5.5h53Z"></path> <path d="M56.21,9.91a1,1,0,0,1-.01,1.41.96.96,0,0,1-.7.29.976.976,0,0,1-.71-.3l-.79-.8-.79.8a.976.976,0,0,1-.71.3.96.96,0,0,1-.7-.29,1,1,0,0,1-.01-1.41l.81-.83-.81-.82a1.008,1.008,0,0,1,.01-1.42,1,1,0,0,1,1.41.01l.79.81.79-.81a1,1,0,0,1,1.41-.01,1.008,1.008,0,0,1,.01,1.42l-.81.82Z"></path> <path d="M49.5,9.08a1,1,0,0,1-1,1h-4a1,1,0,0,1,0-2h4A1,1,0,0,1,49.5,9.08Z"></path> <path d="M20.15,42.89l3.63-2.09H41.45A2.889,2.889,0,0,0,44,39.24l5.67-10.71a3.089,3.089,0,0,0-.22-3.22l-.72-1.02a2.906,2.906,0,0,0-2.34-1.22h-.01l-23.57.06-.15-1.54a3.084,3.084,0,0,0-3.03-2.81H13.98a1,1,0,0,0,0,2h5.65a1.09,1.09,0,0,1,1.04,1.02l1.78,17.46-3.37,1.95a3.158,3.158,0,0,0-1.34,2.6v.28a3.113,3.113,0,0,0,2.83,3.13,4.653,4.653,0,0,0-.78,2.59,4.408,4.408,0,1,0,8.81,0,4.684,4.684,0,0,0-.77-2.57H36.9a4.6,4.6,0,0,0-.77,2.57,4.408,4.408,0,1,0,8.81,0,4.684,4.684,0,0,0-.77-2.57h1.81a1,1,0,0,0,0-2H20.79a1.107,1.107,0,0,1-1.05-1.15v-.28A1.211,1.211,0,0,1,20.15,42.89ZM42.24,38.3a.915.915,0,0,1-.79.5H24.41L23.38,28.66l23.96-.01Zm4.14-13.23h.01a.87.87,0,0,1,.71.38l.73,1.02c.03.05.06.11.09.17l-24.75.02-.15-1.53ZM40.53,47.24a2.581,2.581,0,1,1-2.4,2.57A2.494,2.494,0,0,1,40.53,47.24Zm-16.34,0a2.581,2.581,0,1,1-2.4,2.57A2.494,2.494,0,0,1,24.19,47.24Z"></path> </g> </g></svg>
+        ),
+      },
+      {
+        title: "Google Profile Optimisation",
+        descText:
+          "Your Google Business Profile is often the first thing a local customer sees, before they even reach your website. We optimise it properly: categories, services, photos, Q&A, review strategy, and posting. A well-managed profile drives calls, directions, and visits directly from Google Search and Maps.",
+        desc: (<>Your Google Business Profile is often the first thing a local customer sees, before they even reach your website. We optimise it properly: categories, services, photos, Q&A, review strategy, and posting. A well-managed profile drives calls, directions, and visits directly from Google Search and Maps.
+        <ul className="list-disc list-inside mt-2">
+          <li>GBP Optimisation</li>
+          <li>Review Strategy</li>
+          <li>Local Visibility</li>
+        </ul>
+</>),
+        svg: (
+          <svg
+            width="40px"
+            height="40px"
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
             fill="none"
           >
             <path
-              d="M81.4189 1L81.419 0H81.4189V1ZM81.4189 42.8379V43.8379H81.419L81.4189 42.8379ZM52.7529 42.8379V41.8379C52.4199 41.8379 52.1088 42.0037 51.923 42.28C51.7372 42.5564 51.7012 42.9071 51.827 43.2155L52.7529 42.8379ZM56.0811 51L55.5933 51.873C55.9642 52.0802 56.4254 52.0305 56.7436 51.749C57.0618 51.4675 57.1674 51.0158 57.007 50.6224L56.0811 51ZM41.4717 42.8379L41.9594 41.9649C41.8103 41.8816 41.6424 41.8379 41.4717 41.8379V42.8379ZM39.46 6.21875L40.1671 5.51164C40.1632 5.50775 40.1593 5.50389 40.1553 5.50006L39.46 6.21875ZM36.0469 5.62891L35.5479 4.76228C35.5434 4.76489 35.5389 4.76753 35.5344 4.77021L36.0469 5.62891ZM31.0264 21.6426L30.0365 21.5006L30.0357 21.5059L31.0264 21.6426ZM30.4355 25.2197L31.0807 25.9838C31.1021 25.9657 31.1228 25.9467 31.1427 25.9268L30.4355 25.2197ZM27.6465 16.1299L26.6731 16.3589L26.6733 16.3598L27.6465 16.1299ZM26.1699 11.5684L25.4479 12.2603C25.4661 12.2792 25.485 12.2975 25.5046 12.315L26.1699 11.5684ZM22.8555 11.8633L22.1357 11.169C22.1306 11.1743 22.1256 11.1796 22.1207 11.185L22.8555 11.8633ZM18.3926 19.707L17.5073 19.2419L17.5057 19.245L18.3926 19.707ZM14.3232 26.8604L15.0303 26.1532C15.0165 26.1394 15.0022 26.126 14.9876 26.1129L14.3232 26.8604ZM11.5342 13.3076L12.52 13.1398L12.5199 13.1391L11.5342 13.3076ZM7.92383 6.71191L8.08399 7.69901L8.08584 7.6987L7.92383 6.71191ZM5.29883 9.13965L4.29883 9.13947V9.13965H5.29883ZM8.54785 27.1885L7.57146 27.4046L7.57308 27.4117L8.54785 27.1885ZM20.1318 28.7314L21.024 29.1832L21.0263 29.1787L20.1318 28.7314ZM23.3799 22.6602V21.6602C23.3642 21.6602 23.3485 21.6605 23.3328 21.6613L23.3799 22.6602ZM24.2988 25.0225L23.3431 25.3166C23.3445 25.3213 23.346 25.3261 23.3476 25.3308L24.2988 25.0225ZM31.7158 37.5586L31.1672 38.3947L31.1726 38.3982L31.7158 37.5586ZM35.0303 37.3945L35.7662 38.0716C35.7701 38.0674 35.7739 38.0631 35.7777 38.0589L35.0303 37.3945ZM35.8506 31.2246L34.8514 31.1842L34.8512 31.1901L35.8506 31.2246ZM39.5586 10.3545L38.6473 9.94254L38.6427 9.95296L39.5586 10.3545ZM53.0791 9.36914L53.3655 8.41103L53.3621 8.41003L53.0791 9.36914ZM47.8281 9.40234L47.5394 8.44486L47.5275 8.44861L47.8281 9.40234ZM40.5762 18.7549L41.5424 19.0125L41.5433 19.009L40.5762 18.7549ZM40.6748 28.3047L41.6142 27.9619L41.6118 27.9553L40.6748 28.3047ZM44.875 33.5225L44.4278 34.417L44.4388 34.4223L44.875 33.5225ZM52.3896 33.5879L52.8548 34.4731L52.8554 34.4728L52.3896 33.5879ZM57.542 27.7461L58.4482 28.169L58.4489 28.1675L57.542 27.7461ZM74.5078 9.40234L74.2232 10.361L74.2237 10.3611L74.5078 9.40234ZM69.1592 9.40234L68.8746 8.44365L68.8651 8.44656L69.1592 9.40234ZM61.9062 18.9521L62.874 19.204L62.8747 19.2012L61.9062 18.9521ZM61.9062 27.7793L62.8661 27.4987L62.8649 27.4947L61.9062 27.7793ZM70.1104 34.3096L70.1103 35.3096H70.1104V34.3096ZM73.7207 33.6533L73.2818 32.7547L73.2735 32.7589L73.7207 33.6533ZM80.6777 18.6895L79.6797 18.7514L79.6798 18.7531L80.6777 18.6895ZM68.7324 17.0488L69.5624 17.6067L69.5694 17.5961L68.7324 17.0488ZM73.4902 15.2109L72.758 15.8921L72.7632 15.8976L73.4902 15.2109ZM74.7051 23.5459L75.6627 23.8341L75.664 23.8296L74.7051 23.5459ZM69.1592 28.5342L68.7401 29.4422L68.7517 29.4474L69.1592 28.5342ZM66.9277 23.1855H65.9277V23.1856L66.9277 23.1855ZM46.6465 18.1973L45.757 17.7403L45.755 17.7442L46.6465 18.1973ZM52.3242 15.4404L51.5603 16.0858L51.5618 16.0876L52.3242 15.4404ZM51.0117 27.418L51.7107 28.1332L51.7111 28.1328L51.0117 27.418ZM45.5312 22.9551H46.5312C46.5312 22.9502 46.5312 22.9453 46.5311 22.9404L45.5312 22.9551ZM81.4189 1L81.4188 2C82.8493 2.00015 84.0088 3.15993 84.0088 4.59082H85.0088H86.0088C86.0088 2.05586 83.9544 0.000258327 81.419 0L81.4189 1ZM85.0088 4.59082H84.0088V39.2471H85.0088H86.0088V4.59082H85.0088ZM85.0088 39.2471H84.0088C84.0088 40.678 82.8493 41.8377 81.4188 41.8379L81.4189 42.8379L81.419 43.8379C83.9544 43.8376 86.0088 41.782 86.0088 39.2471H85.0088ZM81.4189 42.8379V41.8379H52.7529V42.8379V43.8379H81.4189V42.8379ZM52.7529 42.8379L51.827 43.2155L55.1551 51.3776L56.0811 51L57.007 50.6224L53.6789 42.4603L52.7529 42.8379ZM56.0811 51L56.5688 50.127L41.9594 41.9649L41.4717 42.8379L40.9839 43.7109L55.5933 51.873L56.0811 51ZM41.4717 42.8379V41.8379H4.59082V42.8379V43.8379H41.4717V42.8379ZM4.59082 42.8379V41.8379C3.16005 41.8379 2 40.6778 2 39.2471H1H0C0 41.7824 2.05549 43.8379 4.59082 43.8379V42.8379ZM1 39.2471H2V4.59082H1H0V39.2471H1ZM1 4.59082H2C2 3.16006 3.16006 2 4.59082 2V1V0C2.05549 0 0 2.05549 0 4.59082H1ZM4.59082 1V2H81.4189V1V0H4.59082V1ZM39.46 6.21875L40.1553 5.50006C38.8773 4.26361 37.0849 3.87734 35.5479 4.76228L36.0469 5.62891L36.5458 6.49553C37.1744 6.1336 38.0081 6.2055 38.7646 6.93744L39.46 6.21875ZM36.0469 5.62891L35.5344 4.77021C34.8416 5.18369 34.2812 6.03281 33.8165 6.9509C33.3244 7.92302 32.8419 9.17703 32.3857 10.6295C31.4717 13.539 30.6329 17.3425 30.0365 21.5006L31.0264 21.6426L32.0162 21.7846C32.6011 17.7068 33.4193 14.0126 34.2938 11.2289C34.7317 9.83468 35.1762 8.69315 35.6009 7.8541C36.0529 6.96101 36.399 6.58332 36.5594 6.4876L36.0469 5.62891ZM31.0264 21.6426L30.0357 21.5059C29.9053 22.4519 29.7753 23.3207 29.6704 23.9579C29.6177 24.2779 29.5727 24.5315 29.5381 24.7046C29.5203 24.7932 29.5079 24.8475 29.5009 24.8746C29.4969 24.89 29.4989 24.8802 29.5071 24.8569C29.511 24.8459 29.5223 24.8146 29.542 24.7738C29.5512 24.7548 29.6078 24.6333 29.7284 24.5126L30.4355 25.2197L31.1427 25.9268C31.2674 25.802 31.3285 25.6735 31.3426 25.6444C31.3671 25.5936 31.3836 25.5493 31.3931 25.5224C31.4125 25.4674 31.4271 25.4145 31.4371 25.3759C31.458 25.295 31.479 25.1981 31.4992 25.0969C31.5405 24.8906 31.5898 24.6109 31.6438 24.2827C31.7523 23.6235 31.8849 22.7366 32.017 21.7792L31.0264 21.6426ZM30.4355 25.2197L29.7904 24.4556C29.9241 24.3428 30.103 24.2543 30.3143 24.231C30.5167 24.2087 30.6847 24.2532 30.798 24.3009C30.9975 24.3848 31.1072 24.5114 31.1286 24.5357C31.1883 24.6037 31.2044 24.6471 31.178 24.5962C31.1389 24.5206 31.0713 24.3652 30.9766 24.1142C30.7922 23.6257 30.5501 22.8972 30.2797 22.0166C29.7403 20.2603 29.1064 17.9605 28.6197 15.9L27.6465 16.1299L26.6733 16.3598C27.1708 18.4659 27.8164 20.8083 28.3678 22.6038C28.6428 23.4992 28.8991 24.274 29.1055 24.8206C29.2061 25.0871 29.307 25.3322 29.4019 25.5155C29.4425 25.5941 29.5171 25.7316 29.6256 25.8552C29.6714 25.9073 29.8032 26.0521 30.0222 26.1443C30.1452 26.1961 30.3223 26.2422 30.5333 26.219C30.753 26.1948 30.9398 26.1027 31.0807 25.9838L30.4355 25.2197ZM27.6465 16.1299L28.6199 15.9008C28.3527 14.765 28.0505 13.664 27.7741 12.8049C27.6365 12.3772 27.5005 11.9946 27.3738 11.6921C27.3109 11.5418 27.2438 11.3957 27.1733 11.2673C27.1174 11.1655 27.0075 10.9753 26.8352 10.8218L26.1699 11.5684L25.5046 12.315C25.4062 12.2273 25.3814 12.1593 25.42 12.2296C25.444 12.2733 25.4807 12.3493 25.5291 12.4647C25.6249 12.6936 25.7412 13.0166 25.8702 13.4175C26.127 14.2156 26.4154 15.2637 26.6731 16.3589L27.6465 16.1299ZM26.1699 11.5684L26.8919 10.8765C26.235 10.191 25.282 10.0056 24.4704 10.0802C23.6432 10.1563 22.7682 10.5134 22.1357 11.169L22.8555 11.8633L23.5752 12.5575C23.8289 12.2946 24.2337 12.1104 24.6535 12.0718C25.089 12.0318 25.3502 12.1582 25.4479 12.2603L26.1699 11.5684ZM22.8555 11.8633L22.1207 11.185C21.9411 11.3796 21.6851 11.7787 21.4258 12.2012C21.1402 12.6666 20.7796 13.2808 20.3707 13.9975C19.5523 15.432 18.5295 17.2965 17.5073 19.2419L18.3926 19.707L19.2778 20.1722C20.2903 18.2452 21.302 16.4012 22.1079 14.9886C22.5112 14.2817 22.8602 13.6876 23.1304 13.2474C23.2658 13.0267 23.3779 12.8504 23.4651 12.7203C23.5638 12.5728 23.6001 12.531 23.5903 12.5416L22.8555 11.8633ZM18.3926 19.707L17.5057 19.245C15.4636 23.1646 14.5172 24.9839 14.0497 25.8028C13.9337 26.006 13.8598 26.125 13.8141 26.1917C13.7449 26.2927 13.7894 26.1991 13.9282 26.1064C14.0198 26.0452 14.2077 25.947 14.4673 25.9553C14.7328 25.9637 14.9194 26.0786 15.0112 26.15C15.0878 26.2096 15.1353 26.2691 15.1195 26.2507C15.1172 26.2481 15.1175 26.2483 15.1118 26.2418C15.1078 26.2371 15.1016 26.2299 15.0944 26.2217C15.0801 26.2055 15.058 26.1809 15.0303 26.1532L14.3232 26.8604L13.6161 27.5675C13.5969 27.5482 13.5767 27.5242 13.6047 27.5567C13.6127 27.566 13.6829 27.6506 13.7831 27.7285C13.8985 27.8183 14.1099 27.9449 14.4035 27.9543C14.6911 27.9634 14.9106 27.8553 15.0394 27.7693C15.2525 27.6269 15.3942 27.4239 15.4636 27.3228C15.5565 27.1873 15.6626 27.0115 15.7866 26.7944C16.2791 25.9317 17.2525 24.0594 19.2794 20.1691L18.3926 19.707ZM14.3232 26.8604L14.9876 26.1129C15.1165 26.2275 15.1739 26.344 15.174 26.3442C15.1871 26.3687 15.1903 26.3789 15.1841 26.3634C15.1724 26.334 15.1508 26.2722 15.1192 26.1675C15.0574 25.962 14.9778 25.6592 14.8826 25.265C14.6933 24.4805 14.455 23.386 14.1914 22.0985C13.6647 19.5259 13.0433 16.2143 12.52 13.1398L11.5342 13.3076L10.5484 13.4754C11.0752 16.5703 11.7006 19.9038 12.2321 22.4996C12.4976 23.7963 12.7412 24.9168 12.9384 25.7341C13.0366 26.1408 13.1264 26.4856 13.2041 26.7439C13.2424 26.871 13.283 26.9952 13.3255 27.1019C13.3464 27.1545 13.3745 27.2204 13.4104 27.2875C13.4334 27.3305 13.5115 27.4768 13.6589 27.6078L14.3232 26.8604ZM11.5342 13.3076L12.5199 13.1391C12.2493 11.5565 12.0215 10.3043 11.7968 9.32972C11.5758 8.37057 11.3404 7.59793 11.0252 7.02034C10.6884 6.40297 10.2223 5.9424 9.54945 5.74139C8.95484 5.56377 8.32173 5.6332 7.76182 5.72512L7.92383 6.71191L8.08584 7.6987C8.62526 7.61014 8.85775 7.6221 8.97701 7.65772C9.01797 7.66996 9.11408 7.69334 9.26959 7.97833C9.44681 8.3031 9.6341 8.85122 9.84794 9.77894C10.0582 10.6913 10.2776 11.892 10.5485 13.4762L11.5342 13.3076ZM7.92383 6.71191L7.76366 5.72482C6.91204 5.86301 6.08389 6.35132 5.47965 6.90633C5.16974 7.19098 4.8874 7.52126 4.67666 7.87909C4.47074 8.22872 4.29891 8.66372 4.29883 9.13947L5.29883 9.13965L6.29883 9.13982C6.29883 9.14355 6.29837 9.12415 6.31319 9.07841C6.32795 9.03286 6.35483 8.97072 6.39999 8.89404C6.49175 8.73823 6.63801 8.55799 6.83257 8.37928C7.23727 8.00757 7.72154 7.75782 8.08399 7.699L7.92383 6.71191ZM5.29883 9.13965H4.29883C4.29883 9.36039 4.34781 9.75433 4.40921 10.1895C4.47537 10.6584 4.57015 11.267 4.68578 11.9736C4.91724 13.388 5.23519 15.213 5.58237 17.1357C6.27586 20.9762 7.09106 25.2344 7.57149 27.4046L8.54785 27.1885L9.52421 26.9723C9.05296 24.8435 8.24365 20.6188 7.55054 16.7803C7.20443 14.8636 6.88857 13.0502 6.65953 11.6506C6.54492 10.9502 6.45279 10.358 6.38959 9.91006C6.35794 9.68576 6.33428 9.50272 6.31873 9.36299C6.31096 9.29315 6.30565 9.23803 6.30239 9.1964C6.29886 9.15135 6.29883 9.13568 6.29883 9.13965H5.29883ZM8.54785 27.1885L7.57308 27.4117C8.37767 30.9256 9.11431 33.6448 9.87908 35.5265C10.2607 36.4655 10.6721 37.2545 11.1415 37.8402C11.6116 38.4266 12.2166 38.9016 12.9889 39.005C13.7644 39.1089 14.4706 38.8064 15.0717 38.3577C15.6701 37.9112 16.259 37.2522 16.8531 36.4423C18.0439 34.819 19.4066 32.3769 21.024 29.1832L20.1318 28.7314L19.2397 28.2796C17.6247 31.4686 16.3252 33.7806 15.2405 35.2593C14.6968 36.0004 14.2446 36.4794 13.8755 36.7549C13.5093 37.0282 13.3217 37.0318 13.2543 37.0227C13.1836 37.0133 12.9964 36.9565 12.7021 36.5893C12.4071 36.2213 12.082 35.6348 11.7319 34.7735C11.0333 33.0546 10.326 30.4739 9.52262 26.9653L8.54785 27.1885ZM20.1318 28.7314L21.0263 29.1787C21.8599 27.5115 22.6341 26.0037 23.2148 24.9151C23.506 24.3691 23.7439 23.9373 23.9142 23.6459C24.0009 23.4976 24.061 23.4013 24.0969 23.3486C24.1171 23.3189 24.1145 23.3256 24.0944 23.3487C24.0861 23.3582 24.0507 23.399 23.9928 23.4458C23.9806 23.4557 23.7678 23.643 23.4269 23.659L23.3799 22.6602L23.3328 21.6613C22.9836 21.6777 22.7598 21.8707 22.7342 21.8915C22.6629 21.9492 22.6115 22.006 22.585 22.0366C22.5282 22.1019 22.4792 22.171 22.4438 22.2228C22.3686 22.3332 22.281 22.4767 22.1875 22.6367C21.9975 22.9618 21.7452 23.4206 21.4501 23.9738C20.8582 25.0834 20.0755 26.6081 19.2374 28.2842L20.1318 28.7314ZM23.3799 22.6602V23.6602C23.1558 23.6602 22.9886 23.5849 22.8993 23.5346C22.8072 23.4827 22.7444 23.4272 22.7114 23.3958C22.6469 23.3342 22.6112 23.2812 22.6049 23.272C22.5878 23.2469 22.59 23.2456 22.613 23.2921C22.6543 23.3758 22.7171 23.5204 22.7972 23.7253C22.9546 24.1285 23.1518 24.6952 23.3431 25.3166L24.2988 25.0225L25.2546 24.7284C25.0521 24.0701 24.839 23.4557 24.6601 22.9976C24.5719 22.7718 24.4849 22.5658 24.4062 22.4065C24.3692 22.3315 24.3189 22.2357 24.2581 22.1464C24.2299 22.105 24.1745 22.0276 24.0928 21.9495C24.057 21.9153 23.8009 21.6602 23.3799 21.6602V22.6602ZM24.2988 25.0225L23.3476 25.3308C24.1468 27.7964 25.5109 30.6535 26.9372 33.0669C27.6519 34.2761 28.3921 35.3907 29.0976 36.3004C29.7867 37.1889 30.4988 37.9561 31.1672 38.3946L31.7158 37.5586L32.2645 36.7225C31.8827 36.472 31.3354 35.9223 30.678 35.0746C30.0369 34.248 29.3432 33.207 28.659 32.0492C27.2875 29.7286 25.9933 27.0068 25.2501 24.7141L24.2988 25.0225ZM31.7158 37.5586L31.1726 38.3982C32.5777 39.3073 34.5937 39.3461 35.7662 38.0716L35.0303 37.3945L34.2943 36.7175C33.9574 37.0837 33.0854 37.2536 32.259 36.719L31.7158 37.5586ZM35.0303 37.3945L35.7777 38.0589C36.2289 37.5513 36.4354 36.9715 36.5666 36.0072C36.6937 35.0737 36.7684 33.6256 36.85 31.2591L35.8506 31.2246L34.8512 31.1901C34.7687 33.5818 34.6957 34.9232 34.5849 35.7375C34.4783 36.5209 34.3567 36.6471 34.2828 36.7302L35.0303 37.3945ZM35.8506 31.2246L36.8498 31.2651C37.1761 23.2059 38.6781 14.8533 40.4744 10.756L39.5586 10.3545L38.6427 9.95296C36.6983 14.388 35.1815 23.033 34.8514 31.1842L35.8506 31.2246ZM39.5586 10.3545L40.4698 10.7664C40.9914 9.61265 41.3761 8.66342 41.3582 7.81025C41.3372 6.81469 40.7942 6.1388 40.1671 5.51164L39.46 6.21875L38.7529 6.92586C39.3071 7.48008 39.3549 7.67427 39.3586 7.85234C39.3654 8.17281 39.2087 8.70076 38.6474 9.94257L39.5586 10.3545ZM53.0791 9.36914L53.3621 8.41003C52.3105 8.09971 51.411 7.92553 50.473 7.93043C49.5363 7.93532 48.6218 8.11848 47.5394 8.44494L47.8281 9.40234L48.1169 10.3598C49.1018 10.0627 49.812 9.93391 50.4834 9.93041C51.1536 9.92691 51.8459 10.0479 52.7961 10.3283L53.0791 9.36914ZM47.8281 9.40234L47.5275 8.44861C45.7564 9.00693 44.0838 10.3856 42.7235 12.136C41.3519 13.9007 40.2337 16.1235 39.609 18.5007L40.5762 18.7549L41.5433 19.009C42.1 16.8906 43.0983 14.9129 44.3026 13.3633C45.5181 11.7993 46.8808 10.7495 48.1288 10.3561L47.8281 9.40234ZM40.5762 18.7549L39.6099 18.4972C39.2479 19.8548 39.0919 21.8617 39.1087 23.7356C39.1252 25.5862 39.3113 27.5102 39.7378 28.6541L40.6748 28.3047L41.6118 27.9553C41.3164 27.163 41.1249 25.5427 41.1086 23.7177C41.0925 21.9161 41.2481 20.1162 41.5424 19.0125L40.5762 18.7549ZM40.6748 28.3047L39.7354 28.6475C40.6829 31.2442 42.3673 33.3866 44.4278 34.4169L44.875 33.5225L45.3222 32.628C43.8388 31.8863 42.4388 30.2216 41.6142 27.9619L40.6748 28.3047ZM44.875 33.5225L44.4388 34.4223C45.6863 35.0271 47.2348 35.3171 48.7095 35.3303C50.1771 35.3435 51.6932 35.0834 52.8548 34.4731L52.3896 33.5879L51.9245 32.7026C51.15 33.1096 49.9917 33.3418 48.7275 33.3304C47.4703 33.3191 46.2296 33.0678 45.3112 32.6226L44.875 33.5225ZM52.3896 33.5879L52.8554 34.4728C54.9632 33.3635 57.2307 30.7779 58.4482 28.169L57.542 27.7461L56.6358 27.3232C55.5562 29.6367 53.5572 31.8434 51.9239 32.703L52.3896 33.5879ZM57.542 27.7461L58.4489 28.1675C60.3718 24.0296 60.8039 19.6553 59.9247 16.0329C59.0458 12.4114 56.8165 9.44263 53.3655 8.41103L53.0791 9.36914L52.7927 10.3272C55.3797 11.1006 57.2194 13.3661 57.9812 16.5046C58.7427 19.6424 58.3873 23.5541 56.6351 27.3247L57.542 27.7461ZM74.5078 9.40234L74.7924 8.4437C73.6969 8.11847 72.781 7.93476 71.8335 7.93477C70.8859 7.93477 69.9701 8.11849 68.8746 8.44369L69.1592 9.40234L69.4438 10.361C70.4483 10.0628 71.1567 9.93477 71.8335 9.93477C72.5102 9.93476 73.2186 10.0628 74.2232 10.361L74.5078 9.40234ZM69.1592 9.40234L68.8651 8.44656C67.0962 8.99086 65.4202 10.406 64.0601 12.1934C62.6863 13.9988 61.5614 16.278 60.9378 18.7031L61.9062 18.9521L62.8747 19.2012C63.4325 17.032 64.4409 14.9957 65.6517 13.4045C66.8761 11.7954 68.2359 10.7327 69.4533 10.3581L69.1592 9.40234ZM61.9062 18.9521L60.9385 18.7003C60.5972 20.0119 60.4387 21.7871 60.4387 23.4765C60.4387 25.1578 60.5955 26.8776 60.9476 28.0639L61.9062 27.7793L62.8649 27.4947C62.5936 26.5808 62.4387 25.0849 62.4387 23.4765C62.4387 21.8763 62.5919 20.288 62.874 19.204L61.9062 18.9521ZM61.9062 27.7793L60.9464 28.0599C61.614 30.3437 62.7365 32.1714 64.3153 33.4269C65.8999 34.6869 67.8678 35.3095 70.1103 35.3096L70.1104 34.3096L70.1104 33.3096C68.251 33.3095 66.7403 32.8 65.5601 31.8615C64.3741 30.9183 63.4455 29.4809 62.8661 27.4987L61.9062 27.7793ZM70.1104 34.3096V35.3096C71.7945 35.3096 73.0535 35.105 74.1679 34.5477L73.7207 33.6533L73.2735 32.7589C72.5502 33.1205 71.6422 33.3096 70.1104 33.3096V34.3096ZM73.7207 33.6533L74.1596 34.5519C76.5541 33.3823 78.5253 30.9638 79.8412 28.1307C81.165 25.2805 81.884 21.8905 81.6757 18.6258L80.6777 18.6895L79.6798 18.7531C79.8651 21.6576 79.2221 24.7157 78.0273 27.2882C76.8245 29.8779 75.1204 31.8567 73.2818 32.7548L73.7207 33.6533ZM80.6777 18.6895L81.6758 18.6275C81.3635 13.596 78.8631 9.64981 74.7919 8.44355L74.5078 9.40234L74.2237 10.3611C77.2409 11.2551 79.4013 14.2662 79.6797 18.7514L80.6777 18.6895ZM68.7324 17.0488L69.5694 17.5961C70.3619 16.3841 71.0792 15.778 71.6076 15.5735C71.8514 15.4791 72.0371 15.476 72.1868 15.5133C72.3404 15.5515 72.5349 15.6522 72.7581 15.8921L73.4902 15.2109L74.2224 14.5298C73.7893 14.0642 73.2701 13.7219 72.67 13.5725C72.066 13.4222 71.4581 13.4868 70.8857 13.7083C69.7818 14.1356 68.7766 15.154 67.8955 16.5016L68.7324 17.0488ZM73.4902 15.2109L72.7632 15.8976C74.1052 17.3184 74.6387 20.2459 73.7462 23.2622L74.7051 23.5459L75.664 23.8296C76.6746 20.414 76.2225 16.6475 74.2172 14.5243L73.4902 15.2109ZM74.7051 23.5459L73.7475 23.2577C73.2858 24.7916 72.4502 26.0799 71.5707 26.8719C70.6417 27.7083 69.9357 27.7856 69.5667 27.621L69.1592 28.5342L68.7517 29.4474C70.2204 30.1027 71.7787 29.3759 72.9089 28.3581C74.0886 27.2959 75.1071 25.6801 75.6627 23.8341L74.7051 23.5459ZM69.1592 28.5342L69.5782 27.6262C69.2717 27.4847 68.8449 27.0371 68.4868 26.1769C68.1438 25.353 67.9278 24.2954 67.9277 23.1855L66.9277 23.1855L65.9277 23.1856C65.9278 24.5367 66.1877 25.8581 66.6404 26.9456C67.078 27.9968 67.7669 28.993 68.7401 29.4421L69.1592 28.5342ZM66.9277 23.1855H67.9277C67.9277 20.8412 68.3366 19.4304 69.5624 17.6067L68.7324 17.0488L67.9025 16.491C66.4375 18.6707 65.9277 20.4764 65.9277 23.1855H66.9277ZM46.6465 18.1973L47.536 18.6542C48.4197 16.9341 49.3108 16.0019 50.0082 15.6633C50.3322 15.5061 50.5834 15.49 50.7861 15.5381C50.9952 15.5878 51.2616 15.7322 51.5603 16.0858L52.3242 15.4404L53.0881 14.7951C52.5829 14.197 51.9673 13.763 51.2482 13.5923C50.5226 13.42 49.7995 13.5414 49.1348 13.8641C47.8547 14.4856 46.711 15.8835 45.757 17.7403L46.6465 18.1973ZM52.3242 15.4404L51.5618 16.0876C52.5129 17.208 52.9385 19.1439 52.7043 21.2704C52.4722 23.3781 51.6152 25.4285 50.3124 26.7032L51.0117 27.418L51.7111 28.1328C53.4271 26.4538 54.424 23.9265 54.6923 21.4893C54.9586 19.071 54.531 16.4949 53.0866 14.7933L52.3242 15.4404ZM51.0117 27.418L50.3128 26.7028C49.6788 27.3224 49.1468 27.5853 48.7568 27.6568C48.4018 27.7218 48.1021 27.6431 47.8194 27.4133C47.1706 26.8858 46.5312 25.4609 46.5312 22.9551H45.5312H44.5312C44.5312 25.6342 45.1882 27.8518 46.5578 28.9651C47.2842 29.5557 48.1741 29.7969 49.1174 29.624C50.0257 29.4575 50.9008 28.9246 51.7107 28.1332L51.0117 27.418ZM45.5312 22.9551L46.5311 22.9404C46.5148 21.8286 46.5436 21.2488 46.6684 20.7196C46.7938 20.1881 47.029 19.6518 47.538 18.6503L46.6465 18.1973L45.755 17.7442C45.2468 18.7442 44.908 19.4712 44.7219 20.2605C44.5351 21.0521 44.5149 21.8505 44.5314 22.9698L45.5312 22.9551Z"
-              fill="#4C8C74"
+              d="M19.69,2.5a1.09,1.09,0,0,0-1.06.9l-.8,5.7a15.6,15.6,0,0,0-3.64,2.12L8.84,9.06a1.07,1.07,0,0,0-1.31.46L3.23,17a1.09,1.09,0,0,0,.25,1.38L8,21.9A18.53,18.53,0,0,0,7.87,24,18.21,18.21,0,0,0,8,26.1L3.48,29.65A1.09,1.09,0,0,0,3.23,31l4.3,7.45a1.06,1.06,0,0,0,1.31.46l5.35-2.16a16.28,16.28,0,0,0,3.64,2.12l.8,5.7a1.09,1.09,0,0,0,1.06.9H28.3a1.09,1.09,0,0,0,1.06-.9l.8-5.7a15.4,15.4,0,0,0,3.64-2.12l5.35,2.16a1.06,1.06,0,0,0,1.31-.46L44.76,31a1.09,1.09,0,0,0-.25-1.38L40,26.1a14.77,14.77,0,0,0,0-4.2l4.55-3.55A1.09,1.09,0,0,0,44.77,17L40.48,9.52a1.08,1.08,0,0,0-1.32-.46l-5.35,2.16A16.43,16.43,0,0,0,30.18,9.1l-.81-5.7a1.11,1.11,0,0,0-1.07-.9ZM24.13,24H33a8.88,8.88,0,0,1-8.83,9.09,9.09,9.09,0,1,1,4.5-17"
+              fill="none"
+              stroke="#4C8C74"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
           </svg>
         ),
       },
     ],
+    processHeading: <>How It Works</>,
+    processPara: (
+      <>
+        Three Steps From Audit to Rankings. No mystery timelines. No confusing jargon.<br />Here's exactly what happens when you start with us.
+      </>
+    ),
     processCardData: [
       {
         image: "/Services/01.svg",
-        heading: "Book a Strategy Call",
-        paragraph:
-          "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
+        heading: "Audit, Research & Strategy",
+        paragraph: (
+          <>
+We start by pulling your site apart, technically, content wise, and in terms of how it sits against your competitors. From there, we build a proper SEO strategy: which keywords to target, which pages to prioritise, what needs fixing, and what needs building from scratch. You see the full plan before we start anything.
+          </>
+        ),
       },
       {
         image: "/Services/02.svg",
-        heading: "Website Audit & Strategy",
-        paragraph:
-          "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
+        heading: "Implementation & Optimisation",
+        paragraph: (
+          <>
+This is where the actual work happens. Technical fixes go in, on-page optimisation gets done, content gets built or improved, and link building kicks off. Everything follows the strategy we agreed on. You're kept updated throughout, not left wondering what's happening with your site.
+          </>
+        ),
       },
       {
         image: "/Services/03.svg",
-        heading: "Build, Launch & Optimize",
-        paragraph:
-          "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
+        heading: "Track, Report & Keep Growing",
+        paragraph: (
+          <>
+Rankings improve, but we don't stop there. SEO is an ongoing process; Google updates its algorithm, competitors adjust their strategy, and search behaviour shifts. We monitor everything, report clearly, and keep refining so your rankings don't just reach the top but stay there.
+          </>
+        ),
       },
     ],
     pricingCardData: [
@@ -3863,26 +3995,69 @@ export const services = [
         ],
       },
     ],
+    customplanData: {
+      heading: "Built Around Your Business",
+      buttonText: "Get a Custom Quote",
+      body: (
+        <>
+          <h3 className="text-2xl text-white">Your SEO Plan Should Fit Your Business, Not the Other Way Around</h3>
+<p className="mt-2">A local tradie in Brisbane needs something completely different from a national eCommerce brand or a B2B SaaS company. Fixed packages rarely fit anyone properly. That's why we don't use them.
+We talk first, understand what you're trying to achieve, and then put together a scope that makes sense for your goals, your market, and your budget. You'll know exactly what you're getting and what it costs before anything starts.</p>
+
+<ul className="list-disc list-inside mt-1">
+  <li>Local SEO for small businesses and service-area businesses</li>
+  <li>Technical SEO for sites that have been neglected or rebuilt</li>
+  <li>eCommerce SEO for Shopify, WooCommerce, and Magento stores</li>
+  <li>Content-led SEO for businesses targeting informational keywords</li>
+  <li>Enterprise SEO for larger sites with complex structures</li>
+  <li>Ongoing monthly SEO management with clear deliverables</li>
+</ul>
+
+        </>
+      ),
+      rightContent: <><h3 className="text-2xl text-white mt-3">What's Typically Inside an Engagement</h3>
+<p className="text-sm">Depending on what we agree on, your SEO project may include any combination of:</p>
+<ul className="list-disc list-inside mt-1 text-sm">
+  <li>Full technical SEO audit and fix list</li>
+  <li>Keyword research and site-wide architecture</li>
+  <li>On-page optimisation across key pages</li>
+  <li>Local SEO and Google Profile setup and management</li>
+  <li>Location landing page creation</li>
+  <li>Link building and authority development</li>
+  <li>Monthly reporting with real numbers, not vanity metrics</li>
+  <li>eCommerce SEO for product and category pages</li>
+</ul></>,
+    },
     faqData: [
       {
-        question: "How to use this component?",
+        question: "How long does SEO actually take to show results?",
         answer:
-          "Import the FAQ component and place it in your page. Click any question to expand or collapse the answer.",
+          "Honestly, it depends on where your site is starting from. A brand new site with no authority will take a comparatively longer time than a site that's already established, which just needs technical fixes. In general, most clients start seeing meaningful movement in three to six months. Local SEO often moves faster. Competitive national terms take longer. We'll give you a realistic expectation at the start, not just tell you what you want to hear.",
       },
       {
-        question: "Are there any other components available?",
+        question: "Is there a lock-in contract?",
         answer:
-          "Yes — check the Components section of the repo or documentation for more reusable UI pieces.",
+          "No. Our ongoing SEO engagements are monthly. We're not interested in holding clients in through paperwork; we'd rather keep your business because the results make it an easy decision to stay. We do ask for a minimum initial period on project-based work, but that's always agreed upon upfront with full transparency.",
       },
       {
-        question: "Are components responsive?",
+        question: "Do you work with small businesses, or is this only for bigger companies?",
         answer:
-          "Yes, components are designed to be responsive across screen sizes.",
+          "Small businesses make up a big part of our client base. Our strongest expertise area exists in local SEO and small business SEO. We have complete knowledge about local business SEO since we have successfully implemented this process more than one hundred times to help businesses attract nearby customers.",
       },
       {
-        question: "Can I customize the components?",
+        question: "What's the difference between local SEO and regular SEO?",
         answer:
-          "Yes, pass props or override styles to adapt components to your design.",
+          "Regular SEO targets broader search terms, which people use for national and international searches. Local SEO focuses on getting your business visible to people searching in specific locations, such as your suburb, city, or service area. The process includes managing your Google Business Profile together with local citations, geo-targeted content and map pack rankings. Local SEO becomes essential for businesses that operate from physical locations or provide services to particular regions.",
+      },
+      {
+        question: "Can you help if my site has already been penalised or had bad SEO done to it?",
+        answer:
+          "Yes, and it's something we deal with fairly regularly. We begin our work with an entire system examination, which helps us find all present problems and create a solution to restore operations. The process of damage reversal requires time, but through the correct methods, we can achieve complete restoration.",
+      },
+      {
+        question: "Do you do eCommerce SEO specifically?",
+        answer:
+          "Yes. eCommerce SEO exists as a separate field of study, which requires experts to implement product page optimization, design category structures, develop methods for managing duplicate content, create schema markup and build site architectures that enable Google to comprehend their product catalogue. The company has completed projects for Shopify, WooCommerce and Magento platforms, which serve businesses of all sizes.",
       },
     ],
     portfolioData: [
@@ -3895,8 +4070,20 @@ export const services = [
       { id: "7", src: "/Services/web_06.svg", translateY: "-translate-y-25" },
       { id: "8", src: "/Services/web_07.svg", translateY: "" },
     ],
-    footnote:
-      "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
+    contactData: {
+      heading: (<>Let's Get Started</>),
+      body: (
+        <>
+          <span className="block text-xl font-bold text-white">
+            Your Customers Are Searching<br />Make Sure They Find You
+          </span>
+Get in touch today, and one of our SEO specialists will get back to you within one business day. No scripts, no pressure, just a straight conversation about your business.
+        </>
+      ),
+      buttonText: "Book a Free Strategy Call",
+    },
+    // footnote:
+    //   "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
     subcategory: [
       {
         slug: "seo-strategy-planning",
@@ -7865,247 +8052,272 @@ export const services = [
   {
     slug: "performance-marketing",
     title: "Performance Marketing",
-    heading: "Web Development That Accelerates Growth",
-    imageUrl: "/Services/Rectangle_52.png",
-    description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
-    points: [
-      "Custom Website Design",
-      "Responsive Development",
-      "E-commerce Solutions",
-      "Content Management Systems",
-      "Performance Optimization",
+    // heading: "Web Development Services in Australia",
+    serviceBodyData: [
+      {
+        imageUrl: "/Services/Rectangle_52.webp",
+        description: (
+          <>
+            <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
+              Stop Spending | Start Performing
+            </h2>
+It's seen that most paid advertising budgets get wasted, wrong audiences, weak creatives, and campaigns are set up once and then never touched again. Our way of working is different. Every dollar we spend on your behalf is monitored, tested, and working toward a real return. No vanity metrics. No mystery reports. But campaigns that grow your business. 
+<div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
+  <a
+    className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15"
+    href="/contact"
+  >
+    Book a Free Strategy Call
+  </a>
+  <span
+    aria-hidden="true"
+    className="h-10 w-px bg-white/30 max-sm:h-px max-sm:w-full"
+  />
+  <a
+    className="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/10"
+    href="/services"
+  >
+    See All Services
+  </a>
+</div>
+          </>
+        ),
+      },
     ],
+    whyChooseData: {
+      image: "/Services/Rectangle_52.webp",
+      heading: "Why Aussie Digital Solution",
+      paragraphs: [
+        <React.Fragment key="why-aussie-branding">
+        <h3 className="text-2xl text-white">We've Inherited Enough Broken Ad Accounts to Know What Not to Do</h3>
+Too many unnecessary campaign complications. Difficult to manage and optimise. Budgets are divided into too many places. Tracking that doesn't fire properly. Reporting that looks busy but says nothing useful. We've seen it all, and we've fixed most of it.
+
+<h3 className="text-2xl text-white">We Optimise for Revenue, Not Clicks</h3>
+We set up proper conversion tracking from day one, so every decision is practical and based on what's actually generating revenue for your business, and not just the activity in the account.
+
+<h3 className="text-2xl text-white">Constant Testing, Not Set and Forget</h3>
+Ad performance decays over time. Audiences get fatigued. Competitors change their bids. We're in the accounts regularly, testing new creatives, adjusting audiences, and making sure performance doesn't quietly slide.
+
+<h3 className="text-2xl text-white">Built for Australian Audiences</h3>
+We understand how Australians search, browse, and buy, and our campaigns are built around local consumer behaviour.
+
+<h3 className="text-2xl text-white">Transparent Reporting You'll Actually Read</h3>
+We tell you what's working, what isn't, what we're doing about it, and what it's costing you per lead or sale. Straight numbers, straight talk.
+</React.Fragment>,
+      ],
+    },
+    strategicHeading: <div className="font-semibold">What We Run</div>,
+    strategicHeadingText: (
+      <div className="mt-3 mx-auto flex w-full justify-center px-4">
+        <div className="w-full rounded-3xl border border-white/10 bg-white/5 px-6 py-6 text-center shadow-[0_18px_60px_rgba(0,0,0,0.18)] backdrop-blur-sm sm:px-10 sm:py-8">
+          <h3 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+            Every Platform, One Focused Team.
+          </h3>
+          <p className="mx-auto mt-4 max-w-6xl text-sm leading-7 text-[#AAAAAA] sm:text-base">           
+We do a lot more than just "managing ads." We build performance systems, with the strategy that is: the right message, on the right platform, in front of the right person, at the right time. 
+          </p>
+        </div>
+      </div>
+    ),
     strategicCardData: [
       {
-        title: "Custom Website Design",
-        desc: "Understand your vision, business goals, and target audience to create a clear project roadmap.",
+        title: "Google Ads",
+        descText:
+          "Google Ads puts your business in front of many people with real purchase intent, and not just browsers. We handle the complete process, from campaign architecture and keyword strategy to ad copy, bidding management, and ongoing optimisation.",
+        desc: (
+          <>
+Google Ads puts your business in front of many people with real purchase intent, and not just browsers. We handle the complete process, from campaign architecture and keyword strategy to ad copy, bidding management, and ongoing optimisation. 
+            <ul className="list-disc list-inside mt-1">
+              <li>Search Ads</li>
+              <li>DisplayPPC</li>
+              <li>Bid Strategy</li>
+            </ul>
+          </>
+        ),
         svg: (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
-            viewBox="0 0 50 50"
-            fill="none"
-          >
-            <path
-              d="M4.1665 22.9167C4.1665 15.0599 4.1665 11.1316 6.60728 8.69078C9.04806 6.25 12.9764 6.25 20.8332 6.25H29.1665C37.0232 6.25 40.9516 6.25 43.3924 8.69078C45.8332 11.1316 45.8332 15.0599 45.8332 22.9167V27.0833C45.8332 34.9401 45.8332 38.8684 43.3924 41.3092C40.9516 43.75 37.0232 43.75 29.1665 43.75H20.8332C12.9764 43.75 9.04806 43.75 6.60728 41.3092C4.1665 38.8684 4.1665 34.9401 4.1665 27.0833V22.9167Z"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-            <path
-              d="M31.25 43.75L31.25 6.25"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-            <path
-              d="M12.4998 29.1666L10.4165 31.25L12.4998 33.3333M21.8748 33.3333L23.9582 35.4166L21.8748 37.5M18.7498 29.1666L15.6248 37.5"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-          </svg>
+          <SiGoogleads color="#4C8C74" size="40px" />
         ),
       },
       {
-        title: "E-commerce Website Development",
-        desc: "Iteratively develop robust, scalable websites with regular testing and your feedback at every stage.",
+        title: "YouTube Ads",
+        descText:
+          "We plan, place, and optimise YouTube campaigns that fit into your broader funnel. No matter if that's awareness at the top or hard conversion at the bottom.",
+        desc: (<>
+We plan, place, and optimise YouTube campaigns that fit into your broader funnel. No matter if that's awareness at the top or hard conversion at the bottom.
+        <ul className="list-disc list-inside mt-2">
+          <li>Pre-RollIn-Stream</li>
+          <li>Video Ads</li>
+          <li>YouTube SEO</li>
+        </ul>
+</>),
         svg: (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
-            viewBox="0 0 50 50"
-            fill="none"
-          >
-            <path
-              d="M45.8332 45.8334H4.1665"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-            <path
-              d="M41.6665 45.8333V22.9166"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-            <path
-              d="M8.3335 45.8333V22.9166"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-            <path
-              d="M34.4332 4.16663H15.5673C13.0614 4.16663 11.8085 4.16663 10.8016 4.78891C9.7947 5.4112 9.23437 6.53186 8.11372 8.77318L4.16699 18.75C4.16699 21.0511 6.03229 22.9166 8.33348 22.9166C10.6347 22.9166 12.5001 21.0511 12.5001 18.75C12.5001 21.0511 14.3656 22.9166 16.6668 22.9166C18.968 22.9166 20.8335 21.0511 20.8335 18.75C20.8335 21.0511 22.699 22.9166 25.0001 22.9166C27.3013 22.9166 29.1668 21.0511 29.1668 18.75C29.1668 21.0511 31.0323 22.9166 33.3335 22.9166C35.6347 22.9166 37.5001 21.0511 37.5001 18.75C37.5001 21.0511 39.3656 22.9166 41.6668 22.9166C43.968 22.9166 45.8335 21.0511 45.8335 18.75L41.8868 8.77318L41.8867 8.77314C40.7661 6.53185 40.2058 5.4112 39.1989 4.78891C38.192 4.16663 36.9391 4.16663 34.4332 4.16663Z"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-            <path
-              d="M19.7915 44.7917V38.5417C19.7915 36.5946 19.7915 35.621 20.2102 34.8959C20.4845 34.4208 20.8789 34.0263 21.354 33.752C22.0792 33.3334 23.0527 33.3334 24.9998 33.3334C26.947 33.3334 27.9205 33.3334 28.6457 33.752C29.1207 34.0263 29.5152 34.4208 29.7895 34.8959C30.2082 35.621 30.2082 36.5946 30.2082 38.5417V44.7917"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-          </svg>
+        <FaYoutube color="#4C8C74" size={40} />
         ),
       },
       {
-        title: "Magento Development",
-        desc: "Design modern, user-centric interfaces for an exceptional digital experience.",
+        title: "Meta Ads",
+        descText:
+          "We build Meta campaigns around your real customer data, use creatives that actually stop people scrolling, and constantly test what's working. ",
+        desc: (<>
+We build Meta campaigns around your real customer data, use creatives that actually stop people scrolling, and constantly test what's working. 
+        <ul className="list-disc list-inside mt-2">
+          <li>Facebook Ads</li>
+          <li>Instagram Ads</li>
+          <li>Creative Testing</li>
+          <li>ROAS</li>
+        </ul>
+</>),
         svg: (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
-            viewBox="0 0 50 50"
-            fill="none"
-          >
-            <path
-              d="M25.0003 45.8333C36.5063 45.8333 45.8337 36.5059 45.8337 25C45.8337 13.494 36.5063 4.16663 25.0003 4.16663C13.4944 4.16663 4.16699 13.494 4.16699 25C4.16699 36.5059 13.4944 45.8333 25.0003 45.8333Z"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-            <path
-              d="M32.292 18.75L32.6494 19.1074C35.4272 21.8852 36.8161 23.2741 36.8161 25C36.8161 26.7259 35.4272 28.1148 32.6494 30.8926L32.292 31.25"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-            <path
-              d="M27.6963 14.9382L25.0003 25L22.3042 35.0617"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-            <path
-              d="M17.7087 18.75L17.3512 19.1074C14.5735 21.8852 13.1846 23.2741 13.1846 25C13.1846 26.7259 14.5735 28.1148 17.3512 30.8926L17.7087 31.25"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-          </svg>
+          <FaMeta color="#4C8C74" size={40} />
         ),
       },
       {
-        title: "Wordpress Development",
-        desc: "Design modern, user-centric interfaces for an exceptional digital experience.",
+        title: "TikTok Shop Ads",
+        descText:
+          "We run TikTok Shop ad campaigns that blend into the feed naturally, result in product discovery, and make right inside the app without friction. If your product is visual and your audience is on TikTok, this is a channel worth taking seriously.",
+        desc: (<>
+We run TikTok Shop ad campaigns that blend into the feed naturally, result in product discovery, and make right inside the app without friction. If your product is visual and your audience is on TikTok, this is a channel worth taking seriously.
+        <ul className="list-inside list-disc mt-2">
+          <li>TikTok Shop</li>
+          <li>In-Feed Ads</li>
+          <li>Product Discovery</li>
+        </ul>
+</>),
         svg: (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
-            viewBox="0 0 52 52"
-            fill="none"
-          >
-            <circle
-              cx="26"
-              cy="26"
-              r="25"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-            <path
-              d="M4.5166 13.8746H6.74371M14.3476 13.8746H6.74371M6.74371 13.8746L18.8623 47.0621L27.6542 23.3794M27.6542 23.3794L24.2483 13.8746M27.6542 23.3794L36.2877 47.0621L45.0166 23.3794M24.2483 13.8746H18.3078M24.2483 13.8746H32.8026M45.0166 23.3794L45.9508 20.8448C47.1125 16.6468 47.9785 8.42521 42.1489 9.12223C39.7836 9.67667 37.0457 13.3043 45.0166 23.3794Z"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-          </svg>
+          <FaTiktok color="#4C8C74" size={40} />
         ),
       },
       {
-        title: "Opencart",
-        desc: "Thoroughly test for responsiveness, performance, and security before seamless launch and handover.",
+        title: "LinkedIn Ads",
+        descText:
+          "Our team of professionals runs LinkedIn campaigns for businesses that sell to other businesses: lead generation forms, sponsored content, message ads, and account-based targeting.",
+        desc: (<>
+Our team of professionals runs LinkedIn campaigns for businesses that sell to other businesses: lead generation forms, sponsored content, message ads, and account-based targeting.
+        <ul className="list-inside list-disc mt-2">
+          <li>B2B Ads</li>
+          <li>Lead Gen</li>
+          <li>Sponsored Content</li>
+        </ul>
+</>),
         svg: (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
-            viewBox="0 0 50 50"
-            fill="none"
-          >
-            <path
-              d="M2.01594 9.46583C4.54545 13.647 7.6255 15.745 13.2351 17.1287C17.1632 18.0959 20.8236 18.4084 29.1412 18.4828C33.6199 18.5125 36.1643 18.6018 37.3993 18.7506C42.5178 19.3904 43.8867 20.5808 42.3541 23.1252C42.0863 23.5716 40.8216 25.0595 39.5568 26.3986C36.6256 29.5233 35.7179 30.55 34.9442 31.6809C34.468 32.3355 34.3936 32.529 34.6168 32.4099C34.7805 32.3207 34.9739 32.1719 35.0335 32.0826C35.0781 31.9933 37.2059 30.1334 39.7651 27.961C46.4906 22.2026 48.4101 20.2534 48.916 18.6613C49.1689 17.8876 48.916 17.1585 48.2167 16.6972C46.4609 15.5366 43.1874 15.1647 34.5127 15.12C17.6245 15.0159 11.5686 14.3612 6.8964 12.0995C5.00671 11.177 3.62292 10.2396 2.09034 8.79625L0.989258 7.78445L2.01594 9.46583Z"
-              fill="#4C8C74"
-            />
-            <path
-              d="M12.5803 35.5792C11.6875 35.9066 10.9882 36.5464 10.6013 37.3648C9.51512 39.6859 11.0923 42.2155 13.6218 42.2155C16.3597 42.2006 17.9666 39.3437 16.5531 37.0523C15.7347 35.728 13.9641 35.0584 12.5803 35.5792Z"
-              fill="#4C8C74"
-            />
-            <path
-              d="M28.2332 35.5643C26.9387 36.0554 26.0757 37.1267 25.9269 38.4361C25.8078 39.433 26.0757 40.3406 26.7304 41.0549C27.4595 41.8583 28.2481 42.2155 29.364 42.2155C32.2507 42.2155 33.7684 38.8229 31.8787 36.5761C31.0752 35.609 29.364 35.1477 28.2332 35.5643Z"
-              fill="#4C8C74"
-            />
-          </svg>
+          <FaLinkedin color="#4C8C74" size={40} />
         ),
       },
       {
-        title: "Shopify Development",
-        desc: "Incorporate compelling, SEO-optimized content and visuals that support your brand story.",
+        title: "Retargeting & Remarketing",
+        descText:
+          "We build retargeting audiences based on real behaviour, pages visited, products viewed, cart abandonment, time on site, and serve those people specific ads designed to finish the job.",
+        desc: (<>
+We build retargeting audiences based on real behaviour, pages visited, products viewed, cart abandonment, time on site, and serve those people specific ads designed to finish the job. 
+        <ul className="list-disc list-inside mt-2">
+          <li>Retargeting</li>
+          <li>Cart Recovery</li>
+          <li>Audience Segments</li>
+        </ul>
+</>),
         svg: (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
-            viewBox="0 0 47 52"
-            fill="none"
-          >
-            <path
-              d="M32.2417 51.0001L1 45.5771L5.12642 14.4532L11.9727 12.3993M32.2417 51.0001V6.31849M32.2417 51.0001L45.7994 47.5812L40.0227 9.73743H36.2501L32.2417 6.31849M32.2417 6.31849L28.6995 7.38117M11.9727 12.3993C12.4414 8.44675 15.0528 0.636051 21.7492 1.01331C22.9995 0.936865 25.4315 2.31595 25.1572 8.44384M11.9727 12.3993L18.565 10.4216M25.1572 8.44384L18.565 10.4216M25.1572 8.44384L28.6995 7.38117M18.565 10.4216C19.1941 7.63916 21.6313 2.19228 26.347 2.66385C27.2472 2.56359 28.9781 3.36669 28.6995 7.38117"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M16.8005 16.8122C13.8515 18.2867 11.2471 21.1821 11.2471 24.8013C11.2471 27.2141 11.2396 28.563 13.5854 30.8418C16.8025 33.9919 18.3111 35.4209 16.0323 36.542C15.0269 36.676 12.0514 36.1154 11.2471 35.7132C10.1077 35.043 10.2013 35.8717 9.7321 36.542C7.92248 39.424 10.8045 41.9708 16.0323 42.0379C18.9813 42.1049 20.4835 41.5844 22.159 39.7078C23.7676 37.8981 23.523 37.0668 23.523 34.2518C23.523 30.7666 22.8686 30.3758 18.3111 26.6226C15.0939 23.9416 16.5685 21.3948 21.193 21.8639C23.6059 22.065 23.874 21.9309 24.5442 20.1213C24.8793 19.049 25.2144 17.7755 25.2144 17.3064C25.2144 15.9659 19.6155 15.4047 16.8005 16.8122Z"
-              fill="#4C8C74"
-            />
-          </svg>
+          <FiTarget color="#4C8C74" size={40} />
         ),
       },
       {
-        title: "Woocommerce Development",
-        desc: "Provide maintenance, updates, and performance enhancements to keep your site running at its best.",
+        title: "Shopping Ads",
+        descText:
+          "The expert team operates Google Shopping campaigns by implementing feed optimisation techniques and product segmentation methods, and using bidding strategies which focus on your most profitable items.",
+        desc: (<>
+The expert team operates Google Shopping campaigns by implementing feed optimisation techniques and product segmentation methods, and using bidding strategies which focus on your most profitable items.
+        <ul className="mt-2 list-dissc list-inside">
+          <li>Google Shopping</li>
+          <li>Product Feed</li>
+          <li>eCommerce Ads</li>
+        </ul>
+</>),
         svg: (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
-            viewBox="0 0 86 52"
-            fill="none"
-          >
-            <path
-              d="M81.4189 1L81.419 0H81.4189V1ZM81.4189 42.8379V43.8379H81.419L81.4189 42.8379ZM52.7529 42.8379V41.8379C52.4199 41.8379 52.1088 42.0037 51.923 42.28C51.7372 42.5564 51.7012 42.9071 51.827 43.2155L52.7529 42.8379ZM56.0811 51L55.5933 51.873C55.9642 52.0802 56.4254 52.0305 56.7436 51.749C57.0618 51.4675 57.1674 51.0158 57.007 50.6224L56.0811 51ZM41.4717 42.8379L41.9594 41.9649C41.8103 41.8816 41.6424 41.8379 41.4717 41.8379V42.8379ZM39.46 6.21875L40.1671 5.51164C40.1632 5.50775 40.1593 5.50389 40.1553 5.50006L39.46 6.21875ZM36.0469 5.62891L35.5479 4.76228C35.5434 4.76489 35.5389 4.76753 35.5344 4.77021L36.0469 5.62891ZM31.0264 21.6426L30.0365 21.5006L30.0357 21.5059L31.0264 21.6426ZM30.4355 25.2197L31.0807 25.9838C31.1021 25.9657 31.1228 25.9467 31.1427 25.9268L30.4355 25.2197ZM27.6465 16.1299L26.6731 16.3589L26.6733 16.3598L27.6465 16.1299ZM26.1699 11.5684L25.4479 12.2603C25.4661 12.2792 25.485 12.2975 25.5046 12.315L26.1699 11.5684ZM22.8555 11.8633L22.1357 11.169C22.1306 11.1743 22.1256 11.1796 22.1207 11.185L22.8555 11.8633ZM18.3926 19.707L17.5073 19.2419L17.5057 19.245L18.3926 19.707ZM14.3232 26.8604L15.0303 26.1532C15.0165 26.1394 15.0022 26.126 14.9876 26.1129L14.3232 26.8604ZM11.5342 13.3076L12.52 13.1398L12.5199 13.1391L11.5342 13.3076ZM7.92383 6.71191L8.08399 7.69901L8.08584 7.6987L7.92383 6.71191ZM5.29883 9.13965L4.29883 9.13947V9.13965H5.29883ZM8.54785 27.1885L7.57146 27.4046L7.57308 27.4117L8.54785 27.1885ZM20.1318 28.7314L21.024 29.1832L21.0263 29.1787L20.1318 28.7314ZM23.3799 22.6602V21.6602C23.3642 21.6602 23.3485 21.6605 23.3328 21.6613L23.3799 22.6602ZM24.2988 25.0225L23.3431 25.3166C23.3445 25.3213 23.346 25.3261 23.3476 25.3308L24.2988 25.0225ZM31.7158 37.5586L31.1672 38.3947L31.1726 38.3982L31.7158 37.5586ZM35.0303 37.3945L35.7662 38.0716C35.7701 38.0674 35.7739 38.0631 35.7777 38.0589L35.0303 37.3945ZM35.8506 31.2246L34.8514 31.1842L34.8512 31.1901L35.8506 31.2246ZM39.5586 10.3545L38.6473 9.94254L38.6427 9.95296L39.5586 10.3545ZM53.0791 9.36914L53.3655 8.41103L53.3621 8.41003L53.0791 9.36914ZM47.8281 9.40234L47.5394 8.44486L47.5275 8.44861L47.8281 9.40234ZM40.5762 18.7549L41.5424 19.0125L41.5433 19.009L40.5762 18.7549ZM40.6748 28.3047L41.6142 27.9619L41.6118 27.9553L40.6748 28.3047ZM44.875 33.5225L44.4278 34.417L44.4388 34.4223L44.875 33.5225ZM52.3896 33.5879L52.8548 34.4731L52.8554 34.4728L52.3896 33.5879ZM57.542 27.7461L58.4482 28.169L58.4489 28.1675L57.542 27.7461ZM74.5078 9.40234L74.2232 10.361L74.2237 10.3611L74.5078 9.40234ZM69.1592 9.40234L68.8746 8.44365L68.8651 8.44656L69.1592 9.40234ZM61.9062 18.9521L62.874 19.204L62.8747 19.2012L61.9062 18.9521ZM61.9062 27.7793L62.8661 27.4987L62.8649 27.4947L61.9062 27.7793ZM70.1104 34.3096L70.1103 35.3096H70.1104V34.3096ZM73.7207 33.6533L73.2818 32.7547L73.2735 32.7589L73.7207 33.6533ZM80.6777 18.6895L79.6797 18.7514L79.6798 18.7531L80.6777 18.6895ZM68.7324 17.0488L69.5624 17.6067L69.5694 17.5961L68.7324 17.0488ZM73.4902 15.2109L72.758 15.8921L72.7632 15.8976L73.4902 15.2109ZM74.7051 23.5459L75.6627 23.8341L75.664 23.8296L74.7051 23.5459ZM69.1592 28.5342L68.7401 29.4422L68.7517 29.4474L69.1592 28.5342ZM66.9277 23.1855H65.9277V23.1856L66.9277 23.1855ZM46.6465 18.1973L45.757 17.7403L45.755 17.7442L46.6465 18.1973ZM52.3242 15.4404L51.5603 16.0858L51.5618 16.0876L52.3242 15.4404ZM51.0117 27.418L51.7107 28.1332L51.7111 28.1328L51.0117 27.418ZM45.5312 22.9551H46.5312C46.5312 22.9502 46.5312 22.9453 46.5311 22.9404L45.5312 22.9551ZM81.4189 1L81.4188 2C82.8493 2.00015 84.0088 3.15993 84.0088 4.59082H85.0088H86.0088C86.0088 2.05586 83.9544 0.000258327 81.419 0L81.4189 1ZM85.0088 4.59082H84.0088V39.2471H85.0088H86.0088V4.59082H85.0088ZM85.0088 39.2471H84.0088C84.0088 40.678 82.8493 41.8377 81.4188 41.8379L81.4189 42.8379L81.419 43.8379C83.9544 43.8376 86.0088 41.782 86.0088 39.2471H85.0088ZM81.4189 42.8379V41.8379H52.7529V42.8379V43.8379H81.4189V42.8379ZM52.7529 42.8379L51.827 43.2155L55.1551 51.3776L56.0811 51L57.007 50.6224L53.6789 42.4603L52.7529 42.8379ZM56.0811 51L56.5688 50.127L41.9594 41.9649L41.4717 42.8379L40.9839 43.7109L55.5933 51.873L56.0811 51ZM41.4717 42.8379V41.8379H4.59082V42.8379V43.8379H41.4717V42.8379ZM4.59082 42.8379V41.8379C3.16005 41.8379 2 40.6778 2 39.2471H1H0C0 41.7824 2.05549 43.8379 4.59082 43.8379V42.8379ZM1 39.2471H2V4.59082H1H0V39.2471H1ZM1 4.59082H2C2 3.16006 3.16006 2 4.59082 2V1V0C2.05549 0 0 2.05549 0 4.59082H1ZM4.59082 1V2H81.4189V1V0H4.59082V1ZM39.46 6.21875L40.1553 5.50006C38.8773 4.26361 37.0849 3.87734 35.5479 4.76228L36.0469 5.62891L36.5458 6.49553C37.1744 6.1336 38.0081 6.2055 38.7646 6.93744L39.46 6.21875ZM36.0469 5.62891L35.5344 4.77021C34.8416 5.18369 34.2812 6.03281 33.8165 6.9509C33.3244 7.92302 32.8419 9.17703 32.3857 10.6295C31.4717 13.539 30.6329 17.3425 30.0365 21.5006L31.0264 21.6426L32.0162 21.7846C32.6011 17.7068 33.4193 14.0126 34.2938 11.2289C34.7317 9.83468 35.1762 8.69315 35.6009 7.8541C36.0529 6.96101 36.399 6.58332 36.5594 6.4876L36.0469 5.62891ZM31.0264 21.6426L30.0357 21.5059C29.9053 22.4519 29.7753 23.3207 29.6704 23.9579C29.6177 24.2779 29.5727 24.5315 29.5381 24.7046C29.5203 24.7932 29.5079 24.8475 29.5009 24.8746C29.4969 24.89 29.4989 24.8802 29.5071 24.8569C29.511 24.8459 29.5223 24.8146 29.542 24.7738C29.5512 24.7548 29.6078 24.6333 29.7284 24.5126L30.4355 25.2197L31.1427 25.9268C31.2674 25.802 31.3285 25.6735 31.3426 25.6444C31.3671 25.5936 31.3836 25.5493 31.3931 25.5224C31.4125 25.4674 31.4271 25.4145 31.4371 25.3759C31.458 25.295 31.479 25.1981 31.4992 25.0969C31.5405 24.8906 31.5898 24.6109 31.6438 24.2827C31.7523 23.6235 31.8849 22.7366 32.017 21.7792L31.0264 21.6426ZM30.4355 25.2197L29.7904 24.4556C29.9241 24.3428 30.103 24.2543 30.3143 24.231C30.5167 24.2087 30.6847 24.2532 30.798 24.3009C30.9975 24.3848 31.1072 24.5114 31.1286 24.5357C31.1883 24.6037 31.2044 24.6471 31.178 24.5962C31.1389 24.5206 31.0713 24.3652 30.9766 24.1142C30.7922 23.6257 30.5501 22.8972 30.2797 22.0166C29.7403 20.2603 29.1064 17.9605 28.6197 15.9L27.6465 16.1299L26.6733 16.3598C27.1708 18.4659 27.8164 20.8083 28.3678 22.6038C28.6428 23.4992 28.8991 24.274 29.1055 24.8206C29.2061 25.0871 29.307 25.3322 29.4019 25.5155C29.4425 25.5941 29.5171 25.7316 29.6256 25.8552C29.6714 25.9073 29.8032 26.0521 30.0222 26.1443C30.1452 26.1961 30.3223 26.2422 30.5333 26.219C30.753 26.1948 30.9398 26.1027 31.0807 25.9838L30.4355 25.2197ZM27.6465 16.1299L28.6199 15.9008C28.3527 14.765 28.0505 13.664 27.7741 12.8049C27.6365 12.3772 27.5005 11.9946 27.3738 11.6921C27.3109 11.5418 27.2438 11.3957 27.1733 11.2673C27.1174 11.1655 27.0075 10.9753 26.8352 10.8218L26.1699 11.5684L25.5046 12.315C25.4062 12.2273 25.3814 12.1593 25.42 12.2296C25.444 12.2733 25.4807 12.3493 25.5291 12.4647C25.6249 12.6936 25.7412 13.0166 25.8702 13.4175C26.127 14.2156 26.4154 15.2637 26.6731 16.3589L27.6465 16.1299ZM26.1699 11.5684L26.8919 10.8765C26.235 10.191 25.282 10.0056 24.4704 10.0802C23.6432 10.1563 22.7682 10.5134 22.1357 11.169L22.8555 11.8633L23.5752 12.5575C23.8289 12.2946 24.2337 12.1104 24.6535 12.0718C25.089 12.0318 25.3502 12.1582 25.4479 12.2603L26.1699 11.5684ZM22.8555 11.8633L22.1207 11.185C21.9411 11.3796 21.6851 11.7787 21.4258 12.2012C21.1402 12.6666 20.7796 13.2808 20.3707 13.9975C19.5523 15.432 18.5295 17.2965 17.5073 19.2419L18.3926 19.707L19.2778 20.1722C20.2903 18.2452 21.302 16.4012 22.1079 14.9886C22.5112 14.2817 22.8602 13.6876 23.1304 13.2474C23.2658 13.0267 23.3779 12.8504 23.4651 12.7203C23.5638 12.5728 23.6001 12.531 23.5903 12.5416L22.8555 11.8633ZM18.3926 19.707L17.5057 19.245C15.4636 23.1646 14.5172 24.9839 14.0497 25.8028C13.9337 26.006 13.8598 26.125 13.8141 26.1917C13.7449 26.2927 13.7894 26.1991 13.9282 26.1064C14.0198 26.0452 14.2077 25.947 14.4673 25.9553C14.7328 25.9637 14.9194 26.0786 15.0112 26.15C15.0878 26.2096 15.1353 26.2691 15.1195 26.2507C15.1172 26.2481 15.1175 26.2483 15.1118 26.2418C15.1078 26.2371 15.1016 26.2299 15.0944 26.2217C15.0801 26.2055 15.058 26.1809 15.0303 26.1532L14.3232 26.8604L13.6161 27.5675C13.5969 27.5482 13.5767 27.5242 13.6047 27.5567C13.6127 27.566 13.6829 27.6506 13.7831 27.7285C13.8985 27.8183 14.1099 27.9449 14.4035 27.9543C14.6911 27.9634 14.9106 27.8553 15.0394 27.7693C15.2525 27.6269 15.3942 27.4239 15.4636 27.3228C15.5565 27.1873 15.6626 27.0115 15.7866 26.7944C16.2791 25.9317 17.2525 24.0594 19.2794 20.1691L18.3926 19.707ZM14.3232 26.8604L14.9876 26.1129C15.1165 26.2275 15.1739 26.344 15.174 26.3442C15.1871 26.3687 15.1903 26.3789 15.1841 26.3634C15.1724 26.334 15.1508 26.2722 15.1192 26.1675C15.0574 25.962 14.9778 25.6592 14.8826 25.265C14.6933 24.4805 14.455 23.386 14.1914 22.0985C13.6647 19.5259 13.0433 16.2143 12.52 13.1398L11.5342 13.3076L10.5484 13.4754C11.0752 16.5703 11.7006 19.9038 12.2321 22.4996C12.4976 23.7963 12.7412 24.9168 12.9384 25.7341C13.0366 26.1408 13.1264 26.4856 13.2041 26.7439C13.2424 26.871 13.283 26.9952 13.3255 27.1019C13.3464 27.1545 13.3745 27.2204 13.4104 27.2875C13.4334 27.3305 13.5115 27.4768 13.6589 27.6078L14.3232 26.8604ZM11.5342 13.3076L12.5199 13.1391C12.2493 11.5565 12.0215 10.3043 11.7968 9.32972C11.5758 8.37057 11.3404 7.59793 11.0252 7.02034C10.6884 6.40297 10.2223 5.9424 9.54945 5.74139C8.95484 5.56377 8.32173 5.6332 7.76182 5.72512L7.92383 6.71191L8.08584 7.6987C8.62526 7.61014 8.85775 7.6221 8.97701 7.65772C9.01797 7.66996 9.11408 7.69334 9.26959 7.97833C9.44681 8.3031 9.6341 8.85122 9.84794 9.77894C10.0582 10.6913 10.2776 11.892 10.5485 13.4762L11.5342 13.3076ZM7.92383 6.71191L7.76366 5.72482C6.91204 5.86301 6.08389 6.35132 5.47965 6.90633C5.16974 7.19098 4.8874 7.52126 4.67666 7.87909C4.47074 8.22872 4.29891 8.66372 4.29883 9.13947L5.29883 9.13965L6.29883 9.13982C6.29883 9.14355 6.29837 9.12415 6.31319 9.07841C6.32795 9.03286 6.35483 8.97072 6.39999 8.89404C6.49175 8.73823 6.63801 8.55799 6.83257 8.37928C7.23727 8.00757 7.72154 7.75782 8.08399 7.699L7.92383 6.71191ZM5.29883 9.13965H4.29883C4.29883 9.36039 4.34781 9.75433 4.40921 10.1895C4.47537 10.6584 4.57015 11.267 4.68578 11.9736C4.91724 13.388 5.23519 15.213 5.58237 17.1357C6.27586 20.9762 7.09106 25.2344 7.57149 27.4046L8.54785 27.1885L9.52421 26.9723C9.05296 24.8435 8.24365 20.6188 7.55054 16.7803C7.20443 14.8636 6.88857 13.0502 6.65953 11.6506C6.54492 10.9502 6.45279 10.358 6.38959 9.91006C6.35794 9.68576 6.33428 9.50272 6.31873 9.36299C6.31096 9.29315 6.30565 9.23803 6.30239 9.1964C6.29886 9.15135 6.29883 9.13568 6.29883 9.13965H5.29883ZM8.54785 27.1885L7.57308 27.4117C8.37767 30.9256 9.11431 33.6448 9.87908 35.5265C10.2607 36.4655 10.6721 37.2545 11.1415 37.8402C11.6116 38.4266 12.2166 38.9016 12.9889 39.005C13.7644 39.1089 14.4706 38.8064 15.0717 38.3577C15.6701 37.9112 16.259 37.2522 16.8531 36.4423C18.0439 34.819 19.4066 32.3769 21.024 29.1832L20.1318 28.7314L19.2397 28.2796C17.6247 31.4686 16.3252 33.7806 15.2405 35.2593C14.6968 36.0004 14.2446 36.4794 13.8755 36.7549C13.5093 37.0282 13.3217 37.0318 13.2543 37.0227C13.1836 37.0133 12.9964 36.9565 12.7021 36.5893C12.4071 36.2213 12.082 35.6348 11.7319 34.7735C11.0333 33.0546 10.326 30.4739 9.52262 26.9653L8.54785 27.1885ZM20.1318 28.7314L21.0263 29.1787C21.8599 27.5115 22.6341 26.0037 23.2148 24.9151C23.506 24.3691 23.7439 23.9373 23.9142 23.6459C24.0009 23.4976 24.061 23.4013 24.0969 23.3486C24.1171 23.3189 24.1145 23.3256 24.0944 23.3487C24.0861 23.3582 24.0507 23.399 23.9928 23.4458C23.9806 23.4557 23.7678 23.643 23.4269 23.659L23.3799 22.6602L23.3328 21.6613C22.9836 21.6777 22.7598 21.8707 22.7342 21.8915C22.6629 21.9492 22.6115 22.006 22.585 22.0366C22.5282 22.1019 22.4792 22.171 22.4438 22.2228C22.3686 22.3332 22.281 22.4767 22.1875 22.6367C21.9975 22.9618 21.7452 23.4206 21.4501 23.9738C20.8582 25.0834 20.0755 26.6081 19.2374 28.2842L20.1318 28.7314ZM23.3799 22.6602V23.6602C23.1558 23.6602 22.9886 23.5849 22.8993 23.5346C22.8072 23.4827 22.7444 23.4272 22.7114 23.3958C22.6469 23.3342 22.6112 23.2812 22.6049 23.272C22.5878 23.2469 22.59 23.2456 22.613 23.2921C22.6543 23.3758 22.7171 23.5204 22.7972 23.7253C22.9546 24.1285 23.1518 24.6952 23.3431 25.3166L24.2988 25.0225L25.2546 24.7284C25.0521 24.0701 24.839 23.4557 24.6601 22.9976C24.5719 22.7718 24.4849 22.5658 24.4062 22.4065C24.3692 22.3315 24.3189 22.2357 24.2581 22.1464C24.2299 22.105 24.1745 22.0276 24.0928 21.9495C24.057 21.9153 23.8009 21.6602 23.3799 21.6602V22.6602ZM24.2988 25.0225L23.3476 25.3308C24.1468 27.7964 25.5109 30.6535 26.9372 33.0669C27.6519 34.2761 28.3921 35.3907 29.0976 36.3004C29.7867 37.1889 30.4988 37.9561 31.1672 38.3946L31.7158 37.5586L32.2645 36.7225C31.8827 36.472 31.3354 35.9223 30.678 35.0746C30.0369 34.248 29.3432 33.207 28.659 32.0492C27.2875 29.7286 25.9933 27.0068 25.2501 24.7141L24.2988 25.0225ZM31.7158 37.5586L31.1726 38.3982C32.5777 39.3073 34.5937 39.3461 35.7662 38.0716L35.0303 37.3945L34.2943 36.7175C33.9574 37.0837 33.0854 37.2536 32.259 36.719L31.7158 37.5586ZM35.0303 37.3945L35.7777 38.0589C36.2289 37.5513 36.4354 36.9715 36.5666 36.0072C36.6937 35.0737 36.7684 33.6256 36.85 31.2591L35.8506 31.2246L34.8512 31.1901C34.7687 33.5818 34.6957 34.9232 34.5849 35.7375C34.4783 36.5209 34.3567 36.6471 34.2828 36.7302L35.0303 37.3945ZM35.8506 31.2246L36.8498 31.2651C37.1761 23.2059 38.6781 14.8533 40.4744 10.756L39.5586 10.3545L38.6427 9.95296C36.6983 14.388 35.1815 23.033 34.8514 31.1842L35.8506 31.2246ZM39.5586 10.3545L40.4698 10.7664C40.9914 9.61265 41.3761 8.66342 41.3582 7.81025C41.3372 6.81469 40.7942 6.1388 40.1671 5.51164L39.46 6.21875L38.7529 6.92586C39.3071 7.48008 39.3549 7.67427 39.3586 7.85234C39.3654 8.17281 39.2087 8.70076 38.6474 9.94257L39.5586 10.3545ZM53.0791 9.36914L53.3621 8.41003C52.3105 8.09971 51.411 7.92553 50.473 7.93043C49.5363 7.93532 48.6218 8.11848 47.5394 8.44494L47.8281 9.40234L48.1169 10.3598C49.1018 10.0627 49.812 9.93391 50.4834 9.93041C51.1536 9.92691 51.8459 10.0479 52.7961 10.3283L53.0791 9.36914ZM47.8281 9.40234L47.5275 8.44861C45.7564 9.00693 44.0838 10.3856 42.7235 12.136C41.3519 13.9007 40.2337 16.1235 39.609 18.5007L40.5762 18.7549L41.5433 19.009C42.1 16.8906 43.0983 14.9129 44.3026 13.3633C45.5181 11.7993 46.8808 10.7495 48.1288 10.3561L47.8281 9.40234ZM40.5762 18.7549L39.6099 18.4972C39.2479 19.8548 39.0919 21.8617 39.1087 23.7356C39.1252 25.5862 39.3113 27.5102 39.7378 28.6541L40.6748 28.3047L41.6118 27.9553C41.3164 27.163 41.1249 25.5427 41.1086 23.7177C41.0925 21.9161 41.2481 20.1162 41.5424 19.0125L40.5762 18.7549ZM40.6748 28.3047L39.7354 28.6475C40.6829 31.2442 42.3673 33.3866 44.4278 34.4169L44.875 33.5225L45.3222 32.628C43.8388 31.8863 42.4388 30.2216 41.6142 27.9619L40.6748 28.3047ZM44.875 33.5225L44.4388 34.4223C45.6863 35.0271 47.2348 35.3171 48.7095 35.3303C50.1771 35.3435 51.6932 35.0834 52.8548 34.4731L52.3896 33.5879L51.9245 32.7026C51.15 33.1096 49.9917 33.3418 48.7275 33.3304C47.4703 33.3191 46.2296 33.0678 45.3112 32.6226L44.875 33.5225ZM52.3896 33.5879L52.8554 34.4728C54.9632 33.3635 57.2307 30.7779 58.4482 28.169L57.542 27.7461L56.6358 27.3232C55.5562 29.6367 53.5572 31.8434 51.9239 32.703L52.3896 33.5879ZM57.542 27.7461L58.4489 28.1675C60.3718 24.0296 60.8039 19.6553 59.9247 16.0329C59.0458 12.4114 56.8165 9.44263 53.3655 8.41103L53.0791 9.36914L52.7927 10.3272C55.3797 11.1006 57.2194 13.3661 57.9812 16.5046C58.7427 19.6424 58.3873 23.5541 56.6351 27.3247L57.542 27.7461ZM74.5078 9.40234L74.7924 8.4437C73.6969 8.11847 72.781 7.93476 71.8335 7.93477C70.8859 7.93477 69.9701 8.11849 68.8746 8.44369L69.1592 9.40234L69.4438 10.361C70.4483 10.0628 71.1567 9.93477 71.8335 9.93477C72.5102 9.93476 73.2186 10.0628 74.2232 10.361L74.5078 9.40234ZM69.1592 9.40234L68.8651 8.44656C67.0962 8.99086 65.4202 10.406 64.0601 12.1934C62.6863 13.9988 61.5614 16.278 60.9378 18.7031L61.9062 18.9521L62.8747 19.2012C63.4325 17.032 64.4409 14.9957 65.6517 13.4045C66.8761 11.7954 68.2359 10.7327 69.4533 10.3581L69.1592 9.40234ZM61.9062 18.9521L60.9385 18.7003C60.5972 20.0119 60.4387 21.7871 60.4387 23.4765C60.4387 25.1578 60.5955 26.8776 60.9476 28.0639L61.9062 27.7793L62.8649 27.4947C62.5936 26.5808 62.4387 25.0849 62.4387 23.4765C62.4387 21.8763 62.5919 20.288 62.874 19.204L61.9062 18.9521ZM61.9062 27.7793L60.9464 28.0599C61.614 30.3437 62.7365 32.1714 64.3153 33.4269C65.8999 34.6869 67.8678 35.3095 70.1103 35.3096L70.1104 34.3096L70.1104 33.3096C68.251 33.3095 66.7403 32.8 65.5601 31.8615C64.3741 30.9183 63.4455 29.4809 62.8661 27.4987L61.9062 27.7793ZM70.1104 34.3096V35.3096C71.7945 35.3096 73.0535 35.105 74.1679 34.5477L73.7207 33.6533L73.2735 32.7589C72.5502 33.1205 71.6422 33.3096 70.1104 33.3096V34.3096ZM73.7207 33.6533L74.1596 34.5519C76.5541 33.3823 78.5253 30.9638 79.8412 28.1307C81.165 25.2805 81.884 21.8905 81.6757 18.6258L80.6777 18.6895L79.6798 18.7531C79.8651 21.6576 79.2221 24.7157 78.0273 27.2882C76.8245 29.8779 75.1204 31.8567 73.2818 32.7548L73.7207 33.6533ZM80.6777 18.6895L81.6758 18.6275C81.3635 13.596 78.8631 9.64981 74.7919 8.44355L74.5078 9.40234L74.2237 10.3611C77.2409 11.2551 79.4013 14.2662 79.6797 18.7514L80.6777 18.6895ZM68.7324 17.0488L69.5694 17.5961C70.3619 16.3841 71.0792 15.778 71.6076 15.5735C71.8514 15.4791 72.0371 15.476 72.1868 15.5133C72.3404 15.5515 72.5349 15.6522 72.7581 15.8921L73.4902 15.2109L74.2224 14.5298C73.7893 14.0642 73.2701 13.7219 72.67 13.5725C72.066 13.4222 71.4581 13.4868 70.8857 13.7083C69.7818 14.1356 68.7766 15.154 67.8955 16.5016L68.7324 17.0488ZM73.4902 15.2109L72.7632 15.8976C74.1052 17.3184 74.6387 20.2459 73.7462 23.2622L74.7051 23.5459L75.664 23.8296C76.6746 20.414 76.2225 16.6475 74.2172 14.5243L73.4902 15.2109ZM74.7051 23.5459L73.7475 23.2577C73.2858 24.7916 72.4502 26.0799 71.5707 26.8719C70.6417 27.7083 69.9357 27.7856 69.5667 27.621L69.1592 28.5342L68.7517 29.4474C70.2204 30.1027 71.7787 29.3759 72.9089 28.3581C74.0886 27.2959 75.1071 25.6801 75.6627 23.8341L74.7051 23.5459ZM69.1592 28.5342L69.5782 27.6262C69.2717 27.4847 68.8449 27.0371 68.4868 26.1769C68.1438 25.353 67.9278 24.2954 67.9277 23.1855L66.9277 23.1855L65.9277 23.1856C65.9278 24.5367 66.1877 25.8581 66.6404 26.9456C67.078 27.9968 67.7669 28.993 68.7401 29.4421L69.1592 28.5342ZM66.9277 23.1855H67.9277C67.9277 20.8412 68.3366 19.4304 69.5624 17.6067L68.7324 17.0488L67.9025 16.491C66.4375 18.6707 65.9277 20.4764 65.9277 23.1855H66.9277ZM46.6465 18.1973L47.536 18.6542C48.4197 16.9341 49.3108 16.0019 50.0082 15.6633C50.3322 15.5061 50.5834 15.49 50.7861 15.5381C50.9952 15.5878 51.2616 15.7322 51.5603 16.0858L52.3242 15.4404L53.0881 14.7951C52.5829 14.197 51.9673 13.763 51.2482 13.5923C50.5226 13.42 49.7995 13.5414 49.1348 13.8641C47.8547 14.4856 46.711 15.8835 45.757 17.7403L46.6465 18.1973ZM52.3242 15.4404L51.5618 16.0876C52.5129 17.208 52.9385 19.1439 52.7043 21.2704C52.4722 23.3781 51.6152 25.4285 50.3124 26.7032L51.0117 27.418L51.7111 28.1328C53.4271 26.4538 54.424 23.9265 54.6923 21.4893C54.9586 19.071 54.531 16.4949 53.0866 14.7933L52.3242 15.4404ZM51.0117 27.418L50.3128 26.7028C49.6788 27.3224 49.1468 27.5853 48.7568 27.6568C48.4018 27.7218 48.1021 27.6431 47.8194 27.4133C47.1706 26.8858 46.5312 25.4609 46.5312 22.9551H45.5312H44.5312C44.5312 25.6342 45.1882 27.8518 46.5578 28.9651C47.2842 29.5557 48.1741 29.7969 49.1174 29.624C50.0257 29.4575 50.9008 28.9246 51.7107 28.1332L51.0117 27.418ZM45.5312 22.9551L46.5311 22.9404C46.5148 21.8286 46.5436 21.2488 46.6684 20.7196C46.7938 20.1881 47.029 19.6518 47.538 18.6503L46.6465 18.1973L45.755 17.7442C45.2468 18.7442 44.908 19.4712 44.7219 20.2605C44.5351 21.0521 44.5149 21.8505 44.5314 22.9698L45.5312 22.9551Z"
-              fill="#4C8C74"
-            />
-          </svg>
+          <CiShoppingCart color="#4C8C74" size={40} />
+        ),
+      },
+      {
+        title: "Affiliate Performance Marketing",
+        descText:
+          "We build and manage affiliate programs that recruit the best quality publishers, within the right commission structures, and track overall performance properly.",
+        desc: (<>
+We build and manage affiliate programs that recruit the best quality publishers, within the right commission structures, and track overall performance properly. 
+<ul className="mt-2 list-inside list-disc">
+  <li>Affiliate Program</li>
+  <li>Publisher Recruitment</li>
+  <li>Commission Strategy</li>
+</ul>
+</>),
+        svg: (
+          <TbAffiliate color="#4C8C74" size={40} />
+        ),
+      },
+      {
+        title: "Influencer Performance Marketing",
+        descText:
+          "We approach them differently, with tracked links, promo codes, clear KPIs, and performance-based structures where possible. ",
+        desc: (<>
+We approach them differently, with tracked links, promo codes, clear KPIs, and performance-based structures where possible. 
+        <ul className="list-disc list-inside mt-2">
+          <li>Creator Partnerships</li>
+          <li>Tracked Campaigns</li>
+          <li>Micro Influencers</li>
+        </ul>
+</>),
+        svg: (
+          <CgPerformance color="#4C8C74" size={40} />
+        ),
+      },
+      {
+        title: "App Performance Marketing",
+        descText:
+          "We approach them differently, with tracked links, promo codes, clear KPIs, and performance-based structures where possible. ",
+        desc: (<>
+We run app marketing campaigns across Google UAC, Meta App Ads, and TikTok that optimise for post-install events, not just downloads. 
+        <ul className="list-disc list-inside mt-2">
+          <li>App Installs</li>
+          <li>UAC</li>
+          <li>Post-Install Events</li>
+          <li>ROAS</li>
+        </ul>
+</>),
+        svg: (
+          <GrDocumentPerformance color="#4C8C74" size={40} />
         ),
       },
     ],
+    processHeading: <>How We Work</>,
+    processPara: (
+      <>
+        <b>From First Brief to Live Campaigns in Three Clear Steps</b><br />No drawn-out onboarding. No mystery. Here's exactly what the first few weeks look like.
+      </>
+    ),
     processCardData: [
       {
         image: "/Services/01.svg",
-        heading: "Book a Strategy Call",
-        paragraph:
-          "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
+        heading: "Audit, Research & Strategy",
+        paragraph: (
+          <>
+We start by doing a complete, detailed audit by getting into your existing accounts, or starting fresh if you haven't run ads before. We dig into your competitors, analyse your audience data, and build a campaign strategy around your actual business goals to engage the customers. You see the full plan before we spend a dollar.
+          </>
+        ),
       },
       {
         image: "/Services/02.svg",
-        heading: "Website Audit & Strategy",
-        paragraph:
-          "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
+        heading: "Build, Launch & Track",
+        paragraph: (
+          <>
+We monitor the live campaigns from day one. Conversion events, UTMs, attribution, all set up correctly, so the data we use to make decisions is actually reliable. We don't launch until the measurement is right. A lot of agencies skip this step. We never do.
+          </>
+        ),
       },
       {
         image: "/Services/03.svg",
-        heading: "Build, Launch & Optimize",
-        paragraph:
-          "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
+        heading: "Optimise, Report & Scale",
+        paragraph: (
+          <>
+Once campaigns are live, the work actually starts. We test creatives, adjust bids, refine audiences, eliminate what's not working, and scale what is. Monthly reporting gives you a clear picture of performance, not just numbers, but what they mean and what we're doing next.
+          </>
+        ),
       },
     ],
     pricingCardData: [
@@ -8154,26 +8366,70 @@ export const services = [
         ],
       },
     ],
+    customplanData: {
+      heading: "Customise According to Your Business",
+      buttonText: "Get a Custom Quote",
+      body: (
+        <>
+<p className="mt-2">Your Ad Strategy Should Fit Your Business; Not a Generic Package
+A local service business in Sydney needs a completely different approach from a national eCommerce brand or a B2B SaaS company trying to generate enterprise leads. Fixed packages don’t work that well because every business has different goals, different margins, and different audiences.<br />
+We start with a conversation about where you are, what you've tried, and what you're actually trying to achieve. Then we put together a scope that makes sense for your situation, no pressure to take channels you don't need.
+</p>
+
+<ul className="list-disc list-inside mt-1">
+  <li>Google Ads for businesses that want to capture existing search demand</li>
+  <li>Meta and TikTok for brands building awareness and driving direct sales</li>
+  <li>LinkedIn for B2B businesses targeting specific industries or job roles</li>
+  <li>Full funnel strategies combining multiple platforms into one system</li>
+  <li>eCommerce-specific setups for Shopping, Dynamic Ads, and TikTok Shop</li>
+  <li>App campaigns for mobile products needing quality installs at scale</li>
+  <li>Affiliate and influencer programs for performance-based growth</li>
+</ul>
+        </>
+      ),
+      rightContent: <><h3 className="text-2xl text-white mt-3">What's Typically Inside an Engagement</h3>
+<p className="text-sm">Depending on which channels and goals we agree on, your performance marketing project may include:</p>
+<ul className="list-disc list-inside mt-1 text-sm">
+  <li>Full account audit and competitor analysis</li>
+  <li>Campaign strategy and platform recommendations</li>
+  <li>Campaign build, ad copy, and creative direction</li>
+  <li>Conversion tracking and attribution setup</li>
+  <li>Audience building and retargeting setup</li>
+  <li>Shopping feed management for eCommerce</li>
+  <li>Weekly optimisation and monthly reporting</li>
+  <li>Influencer or affiliate program management</li>
+</ul></>,
+    },
     faqData: [
       {
-        question: "How to use this component?",
+        question: "How quickly will I see results from paid advertising?",
         answer:
-          "Import the FAQ component and place it in your page. Click any question to expand or collapse the answer.",
+          "Much faster. Search campaigns like Google Ads can start generating leads within the first week once they're set up properly. Social campaigns usually need two to four weeks to finish the learning phase before performance stabilises. We'll set realistic expectations at the start based on your specific goals and budget.",
       },
       {
-        question: "Are there any other components available?",
+        question: "Do you take a percentage of ad spend, or a flat management fee?",
         answer:
-          "Yes — check the Components section of the repo or documentation for more reusable UI pieces.",
+          "We work on a flat, month-wise management fee rather than a percentage of spend. This means our incentive is to make your budget work harder, not force you to spend more, so our fee goes up. We create a list of exactly what's included in management before anything starts.",
       },
       {
-        question: "Are components responsive?",
+        question: "What budget do I need to get started with paid ads?",
         answer:
-          "Yes, components are designed to be responsive across screen sizes.",
+          "It genuinely depends on the platform and your goals. Google Search can work with a modest budget in less competitive industries. Meta and TikTok generally need a bit more to get through the learning phase quickly. We'll tell you honestly what budget is realistic for what you're trying to achieve, and if we don't think the numbers work, we'll say so upfront.",
       },
       {
-        question: "Can I customize the components?",
+        question: "Is there a lock-in contract?",
         answer:
-          "Yes, pass props or override styles to adapt components to your design.",
+          "No. Once campaigns are set up and running, we work month-to-month. The initial setup phase is project-based with a defined scope and cost, but ongoing management has no lock-in. We prefer to earn your business every month through performance, not paperwork.",
+      },
+      {
+        question: "Can you take over campaigns that are already running?",
+        answer:
+          "Yes, and it's something we do regularly. We start with a full audit of what's already there, what's working, what's wasting money, and what's missing entirely. From there, we either rebuild or restructure, depending on the state of the account. We'll tell you honestly what we find, including if the existing setup is actually in decent shape.",
+      },
+      {
+        question: "Do you handle the creative side, ad design, and copy?",
+        answer:
+          "Yes. Ad copy and creative direction are part of our service. For video content or more involved creative production, we'll discuss what's needed and factor it into the scope. Good creative is one of the biggest levers in paid advertising performance, so we don't treat it as an afterthought.",
       },
     ],
     portfolioData: [
@@ -8186,8 +8442,20 @@ export const services = [
       { id: "7", src: "/Services/web_06.svg", translateY: "-translate-y-25" },
       { id: "8", src: "/Services/web_07.svg", translateY: "" },
     ],
-    footnote:
-      "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
+    contactData: {
+      heading: (<>Let's Get Started</>),
+      body: (
+        <>
+          <span className="block text-xl font-bold text-white">
+            Your Competitors Are Running Ads Right Now.
+          </span>
+Get in touch today, and one of our performance marketing specialists will get back to you within one business day. Straight conversation, no scripts.
+        </>
+      ),
+      buttonText: "Book a Free Strategy Call",
+    },
+    // footnote:
+    //   "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
     subcategory: [
       {
         slug: "google-ads",
@@ -12612,7 +12880,7 @@ At Aussie Digital Solution, we don't hand you a generic mark and call it a day. 
 <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
   <a
     className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15"
-    href=""
+    href="/contact"
   >
     Start Your Brand Journey
   </a>
@@ -12622,13 +12890,11 @@ At Aussie Digital Solution, we don't hand you a generic mark and call it a day. 
   />
   <a
     className="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/10"
-    href=""
+    href="/services"
   >
     See Our Services
   </a>
 </div>
-<br />
-500+ Brands Designed 98% Client Retention 8+ Years in Business AUS Based & Operated
           </>
         ),
       },
@@ -15686,248 +15952,192 @@ So we don't do that. Every project starts with a conversation about where your b
   // Social Media Marketing
   {
     slug: "social-media-marketing-management",
-    title: "Social Media Marketing Management",
-    heading: "Grow Your Brand on Social Platforms",
-    imageUrl: "/Services/Rectangle_52.png",
-    description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
-    points: [
-      "Custom Website Design",
-      "Responsive Development",
-      "E-commerce Solutions",
-      "Content Management Systems",
-      "Performance Optimization",
+    title: "Social Media Marketing Services in Australia",
+    // heading: "Web Development Services in Australia",
+    serviceBodyData: [
+      {
+        imageUrl: "/Services/Rectangle_52.webp",
+        description: (
+          <>
+            <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
+              Social Media That Actually Grows Your Business.
+            </h2>
+Making ads, posting consistently, and getting zero results and appearing nowhere is one of the most frustrating things in digital marketing. Most businesses aren't failing because they're not trying, but they're failing because they don't have a proper strategy behind what they're putting out. We fix that. At Aussie Digital Solutions, we handle profile optimisation and content systems built around your audience, and we manage social media that moves the needle.
+<br />
+<p className="mt-2 font-bold text-white">We manage:</p>
+<ul className="list-disc list-inside">
+  <li>Instagram</li>
+  <li>Facebook</li>
+  <li>LinkedIn</li>
+  <li>TikTok</li>
+  <li>YouTube</li>
+  <li>Pinterest</li>
+  <li>X / Twitter</li>
+</ul>
+
+<div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
+  <a
+    className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15"
+    href="/contact"
+  >
+    Get a Free Social Audit
+  </a>
+  <span
+    aria-hidden="true"
+    className="h-10 w-px bg-white/30 max-sm:h-px max-sm:w-full"
+  />
+  <a
+    className="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/10"
+    href="/services"
+  >
+    See What We Do
+  </a>
+</div>
+          </>
+        ),
+      },
     ],
+    whyChooseData: {
+      image: "/Services/Rectangle_52.webp",
+      heading: "Why Aussie Digital Solution",
+      paragraphs: [
+        <React.Fragment key="why-aussie-branding">
+        <h3 className="text-2xl text-white">We've Inherited Enough Broken Ad Accounts to Know What Not to Do</h3>
+Too many unnecessary campaign complications. Difficult to manage and optimise. Budgets are divided into too many places. Tracking that doesn't fire properly. Reporting that looks busy but says nothing useful. We've seen it all, and we've fixed most of it.
+
+<h3 className="text-2xl text-white">We Optimise for Revenue, Not Clicks</h3>
+We set up proper conversion tracking from day one, so every decision is practical and based on what's actually generating revenue for your business, and not just the activity in the account.
+
+<h3 className="text-2xl text-white">Constant Testing, Not Set and Forget</h3>
+Ad performance decays over time. Audiences get fatigued. Competitors change their bids. We're in the accounts regularly, testing new creatives, adjusting audiences, and making sure performance doesn't quietly slide.
+
+<h3 className="text-2xl text-white">Built for Australian Audiences</h3>
+We understand how Australians search, browse, and buy, and our campaigns are built around local consumer behaviour.
+
+<h3 className="text-2xl text-white">Transparent Reporting You'll Actually Read</h3>
+We tell you what's working, what isn't, what we're doing about it, and what it's costing you per lead or sale. Straight numbers, straight talk.
+</React.Fragment>,
+      ],
+    },
+    strategicHeading: <div className="font-semibold">What We Do</div>,
+    strategicHeadingText: (
+      <div className="mt-3 mx-auto flex w-full justify-center px-4">
+        <div className="w-full rounded-3xl border border-white/10 bg-white/5 px-6 py-6 text-center shadow-[0_18px_60px_rgba(0,0,0,0.18)] backdrop-blur-sm sm:px-10 sm:py-8">
+          <h3 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+            Four Systems. One Social Presence That Works.
+          </h3>
+          <p className="mx-auto mt-4 max-w-6xl text-sm leading-7 text-[#AAAAAA] sm:text-base">           
+Social media management isn't just scheduling posts. Their team is actually creating an online presence that attracts the right people, keeps them engaged, and eventually makes them true customers. Every service we offer is designed to do exactly that, not just fill a content calendar.
+          </p>
+        </div>
+      </div>
+    ),
     strategicCardData: [
       {
-        title: "Custom Website Design",
-        desc: "Understand your vision, business goals, and target audience to create a clear project roadmap.",
+        title: "Profile Optimisation",
+        descText:
+          "We audit every element of your profile across each platform and rebuild it properly. That means a bio that clearly explains what you do and who it's for, a consistent visual identity, a link strategy that actually causes action, and platform-specific optimisations that help you show up in search within the apps. First impressions on social are fast. We make sure yours lands right.",
+        desc: (
+          <>
+We audit every element of your profile across each platform and rebuild it properly. That means a bio that clearly explains what you do and who it's for, a consistent visual identity, a link strategy that actually causes action, and platform-specific optimisations that help you show up in search within the apps. First impressions on social are fast. We make sure yours lands right.
+            <ul className="list-disc list-inside mt-1">
+              <li>Bio Optimisation</li>
+              <li>Visual Identity</li>
+              <li>Link Strategy</li>
+              <li>Platform SEO</li>
+            </ul>
+          </>
+        ),
         svg: (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
-            viewBox="0 0 50 50"
-            fill="none"
-          >
-            <path
-              d="M4.1665 22.9167C4.1665 15.0599 4.1665 11.1316 6.60728 8.69078C9.04806 6.25 12.9764 6.25 20.8332 6.25H29.1665C37.0232 6.25 40.9516 6.25 43.3924 8.69078C45.8332 11.1316 45.8332 15.0599 45.8332 22.9167V27.0833C45.8332 34.9401 45.8332 38.8684 43.3924 41.3092C40.9516 43.75 37.0232 43.75 29.1665 43.75H20.8332C12.9764 43.75 9.04806 43.75 6.60728 41.3092C4.1665 38.8684 4.1665 34.9401 4.1665 27.0833V22.9167Z"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-            <path
-              d="M31.25 43.75L31.25 6.25"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-            <path
-              d="M12.4998 29.1666L10.4165 31.25L12.4998 33.3333M21.8748 33.3333L23.9582 35.4166L21.8748 37.5M18.7498 29.1666L15.6248 37.5"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-          </svg>
+          <CgProfile color="#4C8C74" size="40px" />
         ),
       },
       {
-        title: "E-commerce Website Development",
-        desc: "Iteratively develop robust, scalable websites with regular testing and your feedback at every stage.",
+        title: "High-Impact Content Systems",
+        descText:
+          "We create content systems according to your brand and audience. That includes content pillars, posting schedules, format mixes (carousels, Reels, Stories, long-form video, static), caption frameworks, and a production workflow your team can actually maintain. The result is a content engine that runs consistently, stays on brand, and compounds over time.",
+        desc: (<>
+We create content systems according to your brand and audience. That includes content pillars, posting schedules, format mixes (carousels, Reels, Stories, long-form video, static), caption frameworks, and a production workflow your team can actually maintain. The result is a content engine that runs consistently, stays on brand, and compounds over time.
+        <ul className="list-disc list-inside mt-2">
+          <li>Content Pillars</li>
+          <li>Reels & Video Content</li>
+          <li>Calendar</li>
+          <li>Copywriting</li>
+        </ul>
+</>),
         svg: (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
-            viewBox="0 0 50 50"
-            fill="none"
-          >
-            <path
-              d="M45.8332 45.8334H4.1665"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-            <path
-              d="M41.6665 45.8333V22.9166"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-            <path
-              d="M8.3335 45.8333V22.9166"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-            <path
-              d="M34.4332 4.16663H15.5673C13.0614 4.16663 11.8085 4.16663 10.8016 4.78891C9.7947 5.4112 9.23437 6.53186 8.11372 8.77318L4.16699 18.75C4.16699 21.0511 6.03229 22.9166 8.33348 22.9166C10.6347 22.9166 12.5001 21.0511 12.5001 18.75C12.5001 21.0511 14.3656 22.9166 16.6668 22.9166C18.968 22.9166 20.8335 21.0511 20.8335 18.75C20.8335 21.0511 22.699 22.9166 25.0001 22.9166C27.3013 22.9166 29.1668 21.0511 29.1668 18.75C29.1668 21.0511 31.0323 22.9166 33.3335 22.9166C35.6347 22.9166 37.5001 21.0511 37.5001 18.75C37.5001 21.0511 39.3656 22.9166 41.6668 22.9166C43.968 22.9166 45.8335 21.0511 45.8335 18.75L41.8868 8.77318L41.8867 8.77314C40.7661 6.53185 40.2058 5.4112 39.1989 4.78891C38.192 4.16663 36.9391 4.16663 34.4332 4.16663Z"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-            <path
-              d="M19.7915 44.7917V38.5417C19.7915 36.5946 19.7915 35.621 20.2102 34.8959C20.4845 34.4208 20.8789 34.0263 21.354 33.752C22.0792 33.3334 23.0527 33.3334 24.9998 33.3334C26.947 33.3334 27.9205 33.3334 28.6457 33.752C29.1207 34.0263 29.5152 34.4208 29.7895 34.8959C30.2082 35.621 30.2082 36.5946 30.2082 38.5417V44.7917"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-          </svg>
+        <GiAnvilImpact color="#4C8C74" size={40} />
         ),
       },
       {
-        title: "Magento Development",
-        desc: "Design modern, user-centric interfaces for an exceptional digital experience.",
+        title: "Conversion Focused Strategy",
+        descText:
+          "We build Meta campaigns around your real customer data, use creatives that actually stop people scrolling, and constantly test what's working. ",
+        desc: (<>
+Followers are nice. Customers are better. A lot of social media management stops at engagement, likes, comments, and shares. We push it further. Every piece of content we create has a role in moving your audience from casual follower to paying customer.
+        <ul className="list-disc list-inside mt-2">
+          <li>Social Funnel</li>
+          <li>CTA Strategy</li>
+          <li>Lead Generation</li>
+          <li>DM Campaigns</li>
+        </ul>
+</>),
         svg: (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
-            viewBox="0 0 50 50"
-            fill="none"
-          >
-            <path
-              d="M25.0003 45.8333C36.5063 45.8333 45.8337 36.5059 45.8337 25C45.8337 13.494 36.5063 4.16663 25.0003 4.16663C13.4944 4.16663 4.16699 13.494 4.16699 25C4.16699 36.5059 13.4944 45.8333 25.0003 45.8333Z"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-            <path
-              d="M32.292 18.75L32.6494 19.1074C35.4272 21.8852 36.8161 23.2741 36.8161 25C36.8161 26.7259 35.4272 28.1148 32.6494 30.8926L32.292 31.25"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-            <path
-              d="M27.6963 14.9382L25.0003 25L22.3042 35.0617"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-            <path
-              d="M17.7087 18.75L17.3512 19.1074C14.5735 21.8852 13.1846 23.2741 13.1846 25C13.1846 26.7259 14.5735 28.1148 17.3512 30.8926L17.7087 31.25"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-          </svg>
+          <MdCenterFocusWeak color="#4C8C74" size={40} />
         ),
       },
       {
-        title: "Wordpress Development",
-        desc: "Design modern, user-centric interfaces for an exceptional digital experience.",
+        title: "Trend Intelligence & Reach Amplification",
+        descText:
+          "We run TikTok Shop ad campaigns that blend into the feed naturally, result in product discovery, and make right inside the app without friction. If your product is visual and your audience is on TikTok, this is a channel worth taking seriously.",
+        desc: (<>
+We track trending sounds, formats, hashtags, and topics relevant to your industry and your audience, then create content that capitalises on them quickly, in a way that fits your brand. We also use hashtag strategy, posting time optimisation, cross-platform amplification, and community engagement to push your reach beyond your existing following.
+
+        <ul className="list-inside list-disc mt-2">
+          <li>Trend Monitoring</li>
+          <li>Hashtag Strategy</li>
+          <li>Algorithm Reach</li>
+          <li>Community Management</li>
+        </ul>
+</>),
         svg: (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
-            viewBox="0 0 52 52"
-            fill="none"
-          >
-            <circle
-              cx="26"
-              cy="26"
-              r="25"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-            <path
-              d="M4.5166 13.8746H6.74371M14.3476 13.8746H6.74371M6.74371 13.8746L18.8623 47.0621L27.6542 23.3794M27.6542 23.3794L24.2483 13.8746M27.6542 23.3794L36.2877 47.0621L45.0166 23.3794M24.2483 13.8746H18.3078M24.2483 13.8746H32.8026M45.0166 23.3794L45.9508 20.8448C47.1125 16.6468 47.9785 8.42521 42.1489 9.12223C39.7836 9.67667 37.0457 13.3043 45.0166 23.3794Z"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-          </svg>
-        ),
-      },
-      {
-        title: "Opencart",
-        desc: "Thoroughly test for responsiveness, performance, and security before seamless launch and handover.",
-        svg: (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
-            viewBox="0 0 50 50"
-            fill="none"
-          >
-            <path
-              d="M2.01594 9.46583C4.54545 13.647 7.6255 15.745 13.2351 17.1287C17.1632 18.0959 20.8236 18.4084 29.1412 18.4828C33.6199 18.5125 36.1643 18.6018 37.3993 18.7506C42.5178 19.3904 43.8867 20.5808 42.3541 23.1252C42.0863 23.5716 40.8216 25.0595 39.5568 26.3986C36.6256 29.5233 35.7179 30.55 34.9442 31.6809C34.468 32.3355 34.3936 32.529 34.6168 32.4099C34.7805 32.3207 34.9739 32.1719 35.0335 32.0826C35.0781 31.9933 37.2059 30.1334 39.7651 27.961C46.4906 22.2026 48.4101 20.2534 48.916 18.6613C49.1689 17.8876 48.916 17.1585 48.2167 16.6972C46.4609 15.5366 43.1874 15.1647 34.5127 15.12C17.6245 15.0159 11.5686 14.3612 6.8964 12.0995C5.00671 11.177 3.62292 10.2396 2.09034 8.79625L0.989258 7.78445L2.01594 9.46583Z"
-              fill="#4C8C74"
-            />
-            <path
-              d="M12.5803 35.5792C11.6875 35.9066 10.9882 36.5464 10.6013 37.3648C9.51512 39.6859 11.0923 42.2155 13.6218 42.2155C16.3597 42.2006 17.9666 39.3437 16.5531 37.0523C15.7347 35.728 13.9641 35.0584 12.5803 35.5792Z"
-              fill="#4C8C74"
-            />
-            <path
-              d="M28.2332 35.5643C26.9387 36.0554 26.0757 37.1267 25.9269 38.4361C25.8078 39.433 26.0757 40.3406 26.7304 41.0549C27.4595 41.8583 28.2481 42.2155 29.364 42.2155C32.2507 42.2155 33.7684 38.8229 31.8787 36.5761C31.0752 35.609 29.364 35.1477 28.2332 35.5643Z"
-              fill="#4C8C74"
-            />
-          </svg>
-        ),
-      },
-      {
-        title: "Shopify Development",
-        desc: "Incorporate compelling, SEO-optimized content and visuals that support your brand story.",
-        svg: (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
-            viewBox="0 0 47 52"
-            fill="none"
-          >
-            <path
-              d="M32.2417 51.0001L1 45.5771L5.12642 14.4532L11.9727 12.3993M32.2417 51.0001V6.31849M32.2417 51.0001L45.7994 47.5812L40.0227 9.73743H36.2501L32.2417 6.31849M32.2417 6.31849L28.6995 7.38117M11.9727 12.3993C12.4414 8.44675 15.0528 0.636051 21.7492 1.01331C22.9995 0.936865 25.4315 2.31595 25.1572 8.44384M11.9727 12.3993L18.565 10.4216M25.1572 8.44384L18.565 10.4216M25.1572 8.44384L28.6995 7.38117M18.565 10.4216C19.1941 7.63916 21.6313 2.19228 26.347 2.66385C27.2472 2.56359 28.9781 3.36669 28.6995 7.38117"
-              stroke="#4C8C74"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M16.8005 16.8122C13.8515 18.2867 11.2471 21.1821 11.2471 24.8013C11.2471 27.2141 11.2396 28.563 13.5854 30.8418C16.8025 33.9919 18.3111 35.4209 16.0323 36.542C15.0269 36.676 12.0514 36.1154 11.2471 35.7132C10.1077 35.043 10.2013 35.8717 9.7321 36.542C7.92248 39.424 10.8045 41.9708 16.0323 42.0379C18.9813 42.1049 20.4835 41.5844 22.159 39.7078C23.7676 37.8981 23.523 37.0668 23.523 34.2518C23.523 30.7666 22.8686 30.3758 18.3111 26.6226C15.0939 23.9416 16.5685 21.3948 21.193 21.8639C23.6059 22.065 23.874 21.9309 24.5442 20.1213C24.8793 19.049 25.2144 17.7755 25.2144 17.3064C25.2144 15.9659 19.6155 15.4047 16.8005 16.8122Z"
-              fill="#4C8C74"
-            />
-          </svg>
-        ),
-      },
-      {
-        title: "Woocommerce Development",
-        desc: "Provide maintenance, updates, and performance enhancements to keep your site running at its best.",
-        svg: (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
-            viewBox="0 0 86 52"
-            fill="none"
-          >
-            <path
-              d="M81.4189 1L81.419 0H81.4189V1ZM81.4189 42.8379V43.8379H81.419L81.4189 42.8379ZM52.7529 42.8379V41.8379C52.4199 41.8379 52.1088 42.0037 51.923 42.28C51.7372 42.5564 51.7012 42.9071 51.827 43.2155L52.7529 42.8379ZM56.0811 51L55.5933 51.873C55.9642 52.0802 56.4254 52.0305 56.7436 51.749C57.0618 51.4675 57.1674 51.0158 57.007 50.6224L56.0811 51ZM41.4717 42.8379L41.9594 41.9649C41.8103 41.8816 41.6424 41.8379 41.4717 41.8379V42.8379ZM39.46 6.21875L40.1671 5.51164C40.1632 5.50775 40.1593 5.50389 40.1553 5.50006L39.46 6.21875ZM36.0469 5.62891L35.5479 4.76228C35.5434 4.76489 35.5389 4.76753 35.5344 4.77021L36.0469 5.62891ZM31.0264 21.6426L30.0365 21.5006L30.0357 21.5059L31.0264 21.6426ZM30.4355 25.2197L31.0807 25.9838C31.1021 25.9657 31.1228 25.9467 31.1427 25.9268L30.4355 25.2197ZM27.6465 16.1299L26.6731 16.3589L26.6733 16.3598L27.6465 16.1299ZM26.1699 11.5684L25.4479 12.2603C25.4661 12.2792 25.485 12.2975 25.5046 12.315L26.1699 11.5684ZM22.8555 11.8633L22.1357 11.169C22.1306 11.1743 22.1256 11.1796 22.1207 11.185L22.8555 11.8633ZM18.3926 19.707L17.5073 19.2419L17.5057 19.245L18.3926 19.707ZM14.3232 26.8604L15.0303 26.1532C15.0165 26.1394 15.0022 26.126 14.9876 26.1129L14.3232 26.8604ZM11.5342 13.3076L12.52 13.1398L12.5199 13.1391L11.5342 13.3076ZM7.92383 6.71191L8.08399 7.69901L8.08584 7.6987L7.92383 6.71191ZM5.29883 9.13965L4.29883 9.13947V9.13965H5.29883ZM8.54785 27.1885L7.57146 27.4046L7.57308 27.4117L8.54785 27.1885ZM20.1318 28.7314L21.024 29.1832L21.0263 29.1787L20.1318 28.7314ZM23.3799 22.6602V21.6602C23.3642 21.6602 23.3485 21.6605 23.3328 21.6613L23.3799 22.6602ZM24.2988 25.0225L23.3431 25.3166C23.3445 25.3213 23.346 25.3261 23.3476 25.3308L24.2988 25.0225ZM31.7158 37.5586L31.1672 38.3947L31.1726 38.3982L31.7158 37.5586ZM35.0303 37.3945L35.7662 38.0716C35.7701 38.0674 35.7739 38.0631 35.7777 38.0589L35.0303 37.3945ZM35.8506 31.2246L34.8514 31.1842L34.8512 31.1901L35.8506 31.2246ZM39.5586 10.3545L38.6473 9.94254L38.6427 9.95296L39.5586 10.3545ZM53.0791 9.36914L53.3655 8.41103L53.3621 8.41003L53.0791 9.36914ZM47.8281 9.40234L47.5394 8.44486L47.5275 8.44861L47.8281 9.40234ZM40.5762 18.7549L41.5424 19.0125L41.5433 19.009L40.5762 18.7549ZM40.6748 28.3047L41.6142 27.9619L41.6118 27.9553L40.6748 28.3047ZM44.875 33.5225L44.4278 34.417L44.4388 34.4223L44.875 33.5225ZM52.3896 33.5879L52.8548 34.4731L52.8554 34.4728L52.3896 33.5879ZM57.542 27.7461L58.4482 28.169L58.4489 28.1675L57.542 27.7461ZM74.5078 9.40234L74.2232 10.361L74.2237 10.3611L74.5078 9.40234ZM69.1592 9.40234L68.8746 8.44365L68.8651 8.44656L69.1592 9.40234ZM61.9062 18.9521L62.874 19.204L62.8747 19.2012L61.9062 18.9521ZM61.9062 27.7793L62.8661 27.4987L62.8649 27.4947L61.9062 27.7793ZM70.1104 34.3096L70.1103 35.3096H70.1104V34.3096ZM73.7207 33.6533L73.2818 32.7547L73.2735 32.7589L73.7207 33.6533ZM80.6777 18.6895L79.6797 18.7514L79.6798 18.7531L80.6777 18.6895ZM68.7324 17.0488L69.5624 17.6067L69.5694 17.5961L68.7324 17.0488ZM73.4902 15.2109L72.758 15.8921L72.7632 15.8976L73.4902 15.2109ZM74.7051 23.5459L75.6627 23.8341L75.664 23.8296L74.7051 23.5459ZM69.1592 28.5342L68.7401 29.4422L68.7517 29.4474L69.1592 28.5342ZM66.9277 23.1855H65.9277V23.1856L66.9277 23.1855ZM46.6465 18.1973L45.757 17.7403L45.755 17.7442L46.6465 18.1973ZM52.3242 15.4404L51.5603 16.0858L51.5618 16.0876L52.3242 15.4404ZM51.0117 27.418L51.7107 28.1332L51.7111 28.1328L51.0117 27.418ZM45.5312 22.9551H46.5312C46.5312 22.9502 46.5312 22.9453 46.5311 22.9404L45.5312 22.9551ZM81.4189 1L81.4188 2C82.8493 2.00015 84.0088 3.15993 84.0088 4.59082H85.0088H86.0088C86.0088 2.05586 83.9544 0.000258327 81.419 0L81.4189 1ZM85.0088 4.59082H84.0088V39.2471H85.0088H86.0088V4.59082H85.0088ZM85.0088 39.2471H84.0088C84.0088 40.678 82.8493 41.8377 81.4188 41.8379L81.4189 42.8379L81.419 43.8379C83.9544 43.8376 86.0088 41.782 86.0088 39.2471H85.0088ZM81.4189 42.8379V41.8379H52.7529V42.8379V43.8379H81.4189V42.8379ZM52.7529 42.8379L51.827 43.2155L55.1551 51.3776L56.0811 51L57.007 50.6224L53.6789 42.4603L52.7529 42.8379ZM56.0811 51L56.5688 50.127L41.9594 41.9649L41.4717 42.8379L40.9839 43.7109L55.5933 51.873L56.0811 51ZM41.4717 42.8379V41.8379H4.59082V42.8379V43.8379H41.4717V42.8379ZM4.59082 42.8379V41.8379C3.16005 41.8379 2 40.6778 2 39.2471H1H0C0 41.7824 2.05549 43.8379 4.59082 43.8379V42.8379ZM1 39.2471H2V4.59082H1H0V39.2471H1ZM1 4.59082H2C2 3.16006 3.16006 2 4.59082 2V1V0C2.05549 0 0 2.05549 0 4.59082H1ZM4.59082 1V2H81.4189V1V0H4.59082V1ZM39.46 6.21875L40.1553 5.50006C38.8773 4.26361 37.0849 3.87734 35.5479 4.76228L36.0469 5.62891L36.5458 6.49553C37.1744 6.1336 38.0081 6.2055 38.7646 6.93744L39.46 6.21875ZM36.0469 5.62891L35.5344 4.77021C34.8416 5.18369 34.2812 6.03281 33.8165 6.9509C33.3244 7.92302 32.8419 9.17703 32.3857 10.6295C31.4717 13.539 30.6329 17.3425 30.0365 21.5006L31.0264 21.6426L32.0162 21.7846C32.6011 17.7068 33.4193 14.0126 34.2938 11.2289C34.7317 9.83468 35.1762 8.69315 35.6009 7.8541C36.0529 6.96101 36.399 6.58332 36.5594 6.4876L36.0469 5.62891ZM31.0264 21.6426L30.0357 21.5059C29.9053 22.4519 29.7753 23.3207 29.6704 23.9579C29.6177 24.2779 29.5727 24.5315 29.5381 24.7046C29.5203 24.7932 29.5079 24.8475 29.5009 24.8746C29.4969 24.89 29.4989 24.8802 29.5071 24.8569C29.511 24.8459 29.5223 24.8146 29.542 24.7738C29.5512 24.7548 29.6078 24.6333 29.7284 24.5126L30.4355 25.2197L31.1427 25.9268C31.2674 25.802 31.3285 25.6735 31.3426 25.6444C31.3671 25.5936 31.3836 25.5493 31.3931 25.5224C31.4125 25.4674 31.4271 25.4145 31.4371 25.3759C31.458 25.295 31.479 25.1981 31.4992 25.0969C31.5405 24.8906 31.5898 24.6109 31.6438 24.2827C31.7523 23.6235 31.8849 22.7366 32.017 21.7792L31.0264 21.6426ZM30.4355 25.2197L29.7904 24.4556C29.9241 24.3428 30.103 24.2543 30.3143 24.231C30.5167 24.2087 30.6847 24.2532 30.798 24.3009C30.9975 24.3848 31.1072 24.5114 31.1286 24.5357C31.1883 24.6037 31.2044 24.6471 31.178 24.5962C31.1389 24.5206 31.0713 24.3652 30.9766 24.1142C30.7922 23.6257 30.5501 22.8972 30.2797 22.0166C29.7403 20.2603 29.1064 17.9605 28.6197 15.9L27.6465 16.1299L26.6733 16.3598C27.1708 18.4659 27.8164 20.8083 28.3678 22.6038C28.6428 23.4992 28.8991 24.274 29.1055 24.8206C29.2061 25.0871 29.307 25.3322 29.4019 25.5155C29.4425 25.5941 29.5171 25.7316 29.6256 25.8552C29.6714 25.9073 29.8032 26.0521 30.0222 26.1443C30.1452 26.1961 30.3223 26.2422 30.5333 26.219C30.753 26.1948 30.9398 26.1027 31.0807 25.9838L30.4355 25.2197ZM27.6465 16.1299L28.6199 15.9008C28.3527 14.765 28.0505 13.664 27.7741 12.8049C27.6365 12.3772 27.5005 11.9946 27.3738 11.6921C27.3109 11.5418 27.2438 11.3957 27.1733 11.2673C27.1174 11.1655 27.0075 10.9753 26.8352 10.8218L26.1699 11.5684L25.5046 12.315C25.4062 12.2273 25.3814 12.1593 25.42 12.2296C25.444 12.2733 25.4807 12.3493 25.5291 12.4647C25.6249 12.6936 25.7412 13.0166 25.8702 13.4175C26.127 14.2156 26.4154 15.2637 26.6731 16.3589L27.6465 16.1299ZM26.1699 11.5684L26.8919 10.8765C26.235 10.191 25.282 10.0056 24.4704 10.0802C23.6432 10.1563 22.7682 10.5134 22.1357 11.169L22.8555 11.8633L23.5752 12.5575C23.8289 12.2946 24.2337 12.1104 24.6535 12.0718C25.089 12.0318 25.3502 12.1582 25.4479 12.2603L26.1699 11.5684ZM22.8555 11.8633L22.1207 11.185C21.9411 11.3796 21.6851 11.7787 21.4258 12.2012C21.1402 12.6666 20.7796 13.2808 20.3707 13.9975C19.5523 15.432 18.5295 17.2965 17.5073 19.2419L18.3926 19.707L19.2778 20.1722C20.2903 18.2452 21.302 16.4012 22.1079 14.9886C22.5112 14.2817 22.8602 13.6876 23.1304 13.2474C23.2658 13.0267 23.3779 12.8504 23.4651 12.7203C23.5638 12.5728 23.6001 12.531 23.5903 12.5416L22.8555 11.8633ZM18.3926 19.707L17.5057 19.245C15.4636 23.1646 14.5172 24.9839 14.0497 25.8028C13.9337 26.006 13.8598 26.125 13.8141 26.1917C13.7449 26.2927 13.7894 26.1991 13.9282 26.1064C14.0198 26.0452 14.2077 25.947 14.4673 25.9553C14.7328 25.9637 14.9194 26.0786 15.0112 26.15C15.0878 26.2096 15.1353 26.2691 15.1195 26.2507C15.1172 26.2481 15.1175 26.2483 15.1118 26.2418C15.1078 26.2371 15.1016 26.2299 15.0944 26.2217C15.0801 26.2055 15.058 26.1809 15.0303 26.1532L14.3232 26.8604L13.6161 27.5675C13.5969 27.5482 13.5767 27.5242 13.6047 27.5567C13.6127 27.566 13.6829 27.6506 13.7831 27.7285C13.8985 27.8183 14.1099 27.9449 14.4035 27.9543C14.6911 27.9634 14.9106 27.8553 15.0394 27.7693C15.2525 27.6269 15.3942 27.4239 15.4636 27.3228C15.5565 27.1873 15.6626 27.0115 15.7866 26.7944C16.2791 25.9317 17.2525 24.0594 19.2794 20.1691L18.3926 19.707ZM14.3232 26.8604L14.9876 26.1129C15.1165 26.2275 15.1739 26.344 15.174 26.3442C15.1871 26.3687 15.1903 26.3789 15.1841 26.3634C15.1724 26.334 15.1508 26.2722 15.1192 26.1675C15.0574 25.962 14.9778 25.6592 14.8826 25.265C14.6933 24.4805 14.455 23.386 14.1914 22.0985C13.6647 19.5259 13.0433 16.2143 12.52 13.1398L11.5342 13.3076L10.5484 13.4754C11.0752 16.5703 11.7006 19.9038 12.2321 22.4996C12.4976 23.7963 12.7412 24.9168 12.9384 25.7341C13.0366 26.1408 13.1264 26.4856 13.2041 26.7439C13.2424 26.871 13.283 26.9952 13.3255 27.1019C13.3464 27.1545 13.3745 27.2204 13.4104 27.2875C13.4334 27.3305 13.5115 27.4768 13.6589 27.6078L14.3232 26.8604ZM11.5342 13.3076L12.5199 13.1391C12.2493 11.5565 12.0215 10.3043 11.7968 9.32972C11.5758 8.37057 11.3404 7.59793 11.0252 7.02034C10.6884 6.40297 10.2223 5.9424 9.54945 5.74139C8.95484 5.56377 8.32173 5.6332 7.76182 5.72512L7.92383 6.71191L8.08584 7.6987C8.62526 7.61014 8.85775 7.6221 8.97701 7.65772C9.01797 7.66996 9.11408 7.69334 9.26959 7.97833C9.44681 8.3031 9.6341 8.85122 9.84794 9.77894C10.0582 10.6913 10.2776 11.892 10.5485 13.4762L11.5342 13.3076ZM7.92383 6.71191L7.76366 5.72482C6.91204 5.86301 6.08389 6.35132 5.47965 6.90633C5.16974 7.19098 4.8874 7.52126 4.67666 7.87909C4.47074 8.22872 4.29891 8.66372 4.29883 9.13947L5.29883 9.13965L6.29883 9.13982C6.29883 9.14355 6.29837 9.12415 6.31319 9.07841C6.32795 9.03286 6.35483 8.97072 6.39999 8.89404C6.49175 8.73823 6.63801 8.55799 6.83257 8.37928C7.23727 8.00757 7.72154 7.75782 8.08399 7.699L7.92383 6.71191ZM5.29883 9.13965H4.29883C4.29883 9.36039 4.34781 9.75433 4.40921 10.1895C4.47537 10.6584 4.57015 11.267 4.68578 11.9736C4.91724 13.388 5.23519 15.213 5.58237 17.1357C6.27586 20.9762 7.09106 25.2344 7.57149 27.4046L8.54785 27.1885L9.52421 26.9723C9.05296 24.8435 8.24365 20.6188 7.55054 16.7803C7.20443 14.8636 6.88857 13.0502 6.65953 11.6506C6.54492 10.9502 6.45279 10.358 6.38959 9.91006C6.35794 9.68576 6.33428 9.50272 6.31873 9.36299C6.31096 9.29315 6.30565 9.23803 6.30239 9.1964C6.29886 9.15135 6.29883 9.13568 6.29883 9.13965H5.29883ZM8.54785 27.1885L7.57308 27.4117C8.37767 30.9256 9.11431 33.6448 9.87908 35.5265C10.2607 36.4655 10.6721 37.2545 11.1415 37.8402C11.6116 38.4266 12.2166 38.9016 12.9889 39.005C13.7644 39.1089 14.4706 38.8064 15.0717 38.3577C15.6701 37.9112 16.259 37.2522 16.8531 36.4423C18.0439 34.819 19.4066 32.3769 21.024 29.1832L20.1318 28.7314L19.2397 28.2796C17.6247 31.4686 16.3252 33.7806 15.2405 35.2593C14.6968 36.0004 14.2446 36.4794 13.8755 36.7549C13.5093 37.0282 13.3217 37.0318 13.2543 37.0227C13.1836 37.0133 12.9964 36.9565 12.7021 36.5893C12.4071 36.2213 12.082 35.6348 11.7319 34.7735C11.0333 33.0546 10.326 30.4739 9.52262 26.9653L8.54785 27.1885ZM20.1318 28.7314L21.0263 29.1787C21.8599 27.5115 22.6341 26.0037 23.2148 24.9151C23.506 24.3691 23.7439 23.9373 23.9142 23.6459C24.0009 23.4976 24.061 23.4013 24.0969 23.3486C24.1171 23.3189 24.1145 23.3256 24.0944 23.3487C24.0861 23.3582 24.0507 23.399 23.9928 23.4458C23.9806 23.4557 23.7678 23.643 23.4269 23.659L23.3799 22.6602L23.3328 21.6613C22.9836 21.6777 22.7598 21.8707 22.7342 21.8915C22.6629 21.9492 22.6115 22.006 22.585 22.0366C22.5282 22.1019 22.4792 22.171 22.4438 22.2228C22.3686 22.3332 22.281 22.4767 22.1875 22.6367C21.9975 22.9618 21.7452 23.4206 21.4501 23.9738C20.8582 25.0834 20.0755 26.6081 19.2374 28.2842L20.1318 28.7314ZM23.3799 22.6602V23.6602C23.1558 23.6602 22.9886 23.5849 22.8993 23.5346C22.8072 23.4827 22.7444 23.4272 22.7114 23.3958C22.6469 23.3342 22.6112 23.2812 22.6049 23.272C22.5878 23.2469 22.59 23.2456 22.613 23.2921C22.6543 23.3758 22.7171 23.5204 22.7972 23.7253C22.9546 24.1285 23.1518 24.6952 23.3431 25.3166L24.2988 25.0225L25.2546 24.7284C25.0521 24.0701 24.839 23.4557 24.6601 22.9976C24.5719 22.7718 24.4849 22.5658 24.4062 22.4065C24.3692 22.3315 24.3189 22.2357 24.2581 22.1464C24.2299 22.105 24.1745 22.0276 24.0928 21.9495C24.057 21.9153 23.8009 21.6602 23.3799 21.6602V22.6602ZM24.2988 25.0225L23.3476 25.3308C24.1468 27.7964 25.5109 30.6535 26.9372 33.0669C27.6519 34.2761 28.3921 35.3907 29.0976 36.3004C29.7867 37.1889 30.4988 37.9561 31.1672 38.3946L31.7158 37.5586L32.2645 36.7225C31.8827 36.472 31.3354 35.9223 30.678 35.0746C30.0369 34.248 29.3432 33.207 28.659 32.0492C27.2875 29.7286 25.9933 27.0068 25.2501 24.7141L24.2988 25.0225ZM31.7158 37.5586L31.1726 38.3982C32.5777 39.3073 34.5937 39.3461 35.7662 38.0716L35.0303 37.3945L34.2943 36.7175C33.9574 37.0837 33.0854 37.2536 32.259 36.719L31.7158 37.5586ZM35.0303 37.3945L35.7777 38.0589C36.2289 37.5513 36.4354 36.9715 36.5666 36.0072C36.6937 35.0737 36.7684 33.6256 36.85 31.2591L35.8506 31.2246L34.8512 31.1901C34.7687 33.5818 34.6957 34.9232 34.5849 35.7375C34.4783 36.5209 34.3567 36.6471 34.2828 36.7302L35.0303 37.3945ZM35.8506 31.2246L36.8498 31.2651C37.1761 23.2059 38.6781 14.8533 40.4744 10.756L39.5586 10.3545L38.6427 9.95296C36.6983 14.388 35.1815 23.033 34.8514 31.1842L35.8506 31.2246ZM39.5586 10.3545L40.4698 10.7664C40.9914 9.61265 41.3761 8.66342 41.3582 7.81025C41.3372 6.81469 40.7942 6.1388 40.1671 5.51164L39.46 6.21875L38.7529 6.92586C39.3071 7.48008 39.3549 7.67427 39.3586 7.85234C39.3654 8.17281 39.2087 8.70076 38.6474 9.94257L39.5586 10.3545ZM53.0791 9.36914L53.3621 8.41003C52.3105 8.09971 51.411 7.92553 50.473 7.93043C49.5363 7.93532 48.6218 8.11848 47.5394 8.44494L47.8281 9.40234L48.1169 10.3598C49.1018 10.0627 49.812 9.93391 50.4834 9.93041C51.1536 9.92691 51.8459 10.0479 52.7961 10.3283L53.0791 9.36914ZM47.8281 9.40234L47.5275 8.44861C45.7564 9.00693 44.0838 10.3856 42.7235 12.136C41.3519 13.9007 40.2337 16.1235 39.609 18.5007L40.5762 18.7549L41.5433 19.009C42.1 16.8906 43.0983 14.9129 44.3026 13.3633C45.5181 11.7993 46.8808 10.7495 48.1288 10.3561L47.8281 9.40234ZM40.5762 18.7549L39.6099 18.4972C39.2479 19.8548 39.0919 21.8617 39.1087 23.7356C39.1252 25.5862 39.3113 27.5102 39.7378 28.6541L40.6748 28.3047L41.6118 27.9553C41.3164 27.163 41.1249 25.5427 41.1086 23.7177C41.0925 21.9161 41.2481 20.1162 41.5424 19.0125L40.5762 18.7549ZM40.6748 28.3047L39.7354 28.6475C40.6829 31.2442 42.3673 33.3866 44.4278 34.4169L44.875 33.5225L45.3222 32.628C43.8388 31.8863 42.4388 30.2216 41.6142 27.9619L40.6748 28.3047ZM44.875 33.5225L44.4388 34.4223C45.6863 35.0271 47.2348 35.3171 48.7095 35.3303C50.1771 35.3435 51.6932 35.0834 52.8548 34.4731L52.3896 33.5879L51.9245 32.7026C51.15 33.1096 49.9917 33.3418 48.7275 33.3304C47.4703 33.3191 46.2296 33.0678 45.3112 32.6226L44.875 33.5225ZM52.3896 33.5879L52.8554 34.4728C54.9632 33.3635 57.2307 30.7779 58.4482 28.169L57.542 27.7461L56.6358 27.3232C55.5562 29.6367 53.5572 31.8434 51.9239 32.703L52.3896 33.5879ZM57.542 27.7461L58.4489 28.1675C60.3718 24.0296 60.8039 19.6553 59.9247 16.0329C59.0458 12.4114 56.8165 9.44263 53.3655 8.41103L53.0791 9.36914L52.7927 10.3272C55.3797 11.1006 57.2194 13.3661 57.9812 16.5046C58.7427 19.6424 58.3873 23.5541 56.6351 27.3247L57.542 27.7461ZM74.5078 9.40234L74.7924 8.4437C73.6969 8.11847 72.781 7.93476 71.8335 7.93477C70.8859 7.93477 69.9701 8.11849 68.8746 8.44369L69.1592 9.40234L69.4438 10.361C70.4483 10.0628 71.1567 9.93477 71.8335 9.93477C72.5102 9.93476 73.2186 10.0628 74.2232 10.361L74.5078 9.40234ZM69.1592 9.40234L68.8651 8.44656C67.0962 8.99086 65.4202 10.406 64.0601 12.1934C62.6863 13.9988 61.5614 16.278 60.9378 18.7031L61.9062 18.9521L62.8747 19.2012C63.4325 17.032 64.4409 14.9957 65.6517 13.4045C66.8761 11.7954 68.2359 10.7327 69.4533 10.3581L69.1592 9.40234ZM61.9062 18.9521L60.9385 18.7003C60.5972 20.0119 60.4387 21.7871 60.4387 23.4765C60.4387 25.1578 60.5955 26.8776 60.9476 28.0639L61.9062 27.7793L62.8649 27.4947C62.5936 26.5808 62.4387 25.0849 62.4387 23.4765C62.4387 21.8763 62.5919 20.288 62.874 19.204L61.9062 18.9521ZM61.9062 27.7793L60.9464 28.0599C61.614 30.3437 62.7365 32.1714 64.3153 33.4269C65.8999 34.6869 67.8678 35.3095 70.1103 35.3096L70.1104 34.3096L70.1104 33.3096C68.251 33.3095 66.7403 32.8 65.5601 31.8615C64.3741 30.9183 63.4455 29.4809 62.8661 27.4987L61.9062 27.7793ZM70.1104 34.3096V35.3096C71.7945 35.3096 73.0535 35.105 74.1679 34.5477L73.7207 33.6533L73.2735 32.7589C72.5502 33.1205 71.6422 33.3096 70.1104 33.3096V34.3096ZM73.7207 33.6533L74.1596 34.5519C76.5541 33.3823 78.5253 30.9638 79.8412 28.1307C81.165 25.2805 81.884 21.8905 81.6757 18.6258L80.6777 18.6895L79.6798 18.7531C79.8651 21.6576 79.2221 24.7157 78.0273 27.2882C76.8245 29.8779 75.1204 31.8567 73.2818 32.7548L73.7207 33.6533ZM80.6777 18.6895L81.6758 18.6275C81.3635 13.596 78.8631 9.64981 74.7919 8.44355L74.5078 9.40234L74.2237 10.3611C77.2409 11.2551 79.4013 14.2662 79.6797 18.7514L80.6777 18.6895ZM68.7324 17.0488L69.5694 17.5961C70.3619 16.3841 71.0792 15.778 71.6076 15.5735C71.8514 15.4791 72.0371 15.476 72.1868 15.5133C72.3404 15.5515 72.5349 15.6522 72.7581 15.8921L73.4902 15.2109L74.2224 14.5298C73.7893 14.0642 73.2701 13.7219 72.67 13.5725C72.066 13.4222 71.4581 13.4868 70.8857 13.7083C69.7818 14.1356 68.7766 15.154 67.8955 16.5016L68.7324 17.0488ZM73.4902 15.2109L72.7632 15.8976C74.1052 17.3184 74.6387 20.2459 73.7462 23.2622L74.7051 23.5459L75.664 23.8296C76.6746 20.414 76.2225 16.6475 74.2172 14.5243L73.4902 15.2109ZM74.7051 23.5459L73.7475 23.2577C73.2858 24.7916 72.4502 26.0799 71.5707 26.8719C70.6417 27.7083 69.9357 27.7856 69.5667 27.621L69.1592 28.5342L68.7517 29.4474C70.2204 30.1027 71.7787 29.3759 72.9089 28.3581C74.0886 27.2959 75.1071 25.6801 75.6627 23.8341L74.7051 23.5459ZM69.1592 28.5342L69.5782 27.6262C69.2717 27.4847 68.8449 27.0371 68.4868 26.1769C68.1438 25.353 67.9278 24.2954 67.9277 23.1855L66.9277 23.1855L65.9277 23.1856C65.9278 24.5367 66.1877 25.8581 66.6404 26.9456C67.078 27.9968 67.7669 28.993 68.7401 29.4421L69.1592 28.5342ZM66.9277 23.1855H67.9277C67.9277 20.8412 68.3366 19.4304 69.5624 17.6067L68.7324 17.0488L67.9025 16.491C66.4375 18.6707 65.9277 20.4764 65.9277 23.1855H66.9277ZM46.6465 18.1973L47.536 18.6542C48.4197 16.9341 49.3108 16.0019 50.0082 15.6633C50.3322 15.5061 50.5834 15.49 50.7861 15.5381C50.9952 15.5878 51.2616 15.7322 51.5603 16.0858L52.3242 15.4404L53.0881 14.7951C52.5829 14.197 51.9673 13.763 51.2482 13.5923C50.5226 13.42 49.7995 13.5414 49.1348 13.8641C47.8547 14.4856 46.711 15.8835 45.757 17.7403L46.6465 18.1973ZM52.3242 15.4404L51.5618 16.0876C52.5129 17.208 52.9385 19.1439 52.7043 21.2704C52.4722 23.3781 51.6152 25.4285 50.3124 26.7032L51.0117 27.418L51.7111 28.1328C53.4271 26.4538 54.424 23.9265 54.6923 21.4893C54.9586 19.071 54.531 16.4949 53.0866 14.7933L52.3242 15.4404ZM51.0117 27.418L50.3128 26.7028C49.6788 27.3224 49.1468 27.5853 48.7568 27.6568C48.4018 27.7218 48.1021 27.6431 47.8194 27.4133C47.1706 26.8858 46.5312 25.4609 46.5312 22.9551H45.5312H44.5312C44.5312 25.6342 45.1882 27.8518 46.5578 28.9651C47.2842 29.5557 48.1741 29.7969 49.1174 29.624C50.0257 29.4575 50.9008 28.9246 51.7107 28.1332L51.0117 27.418ZM45.5312 22.9551L46.5311 22.9404C46.5148 21.8286 46.5436 21.2488 46.6684 20.7196C46.7938 20.1881 47.029 19.6518 47.538 18.6503L46.6465 18.1973L45.755 17.7442C45.2468 18.7442 44.908 19.4712 44.7219 20.2605C44.5351 21.0521 44.5149 21.8505 44.5314 22.9698L45.5312 22.9551Z"
-              fill="#4C8C74"
-            />
-          </svg>
+          <FaArrowTrendUp color="#4C8C74" size={40} />
         ),
       },
     ],
+    processHeading: <>How We Work</>,
+    processPara: (
+      <>
+        <b>From First Brief to Live Campaigns in Three Clear Steps</b><br />No drawn-out onboarding. No mystery. Here's exactly what the first few weeks look like.
+      </>
+    ),
     processCardData: [
       {
         image: "/Services/01.svg",
-        heading: "Book a Strategy Call",
-        paragraph:
-          "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
+        heading: "Audit, Research & Strategy",
+        paragraph: (
+          <>
+We start by doing a complete, detailed audit by getting into your existing accounts, or starting fresh if you haven't run ads before. We dig into your competitors, analyse your audience data, and build a campaign strategy around your actual business goals to engage the customers. You see the full plan before we spend a dollar.
+          </>
+        ),
       },
       {
         image: "/Services/02.svg",
-        heading: "Website Audit & Strategy",
-        paragraph:
-          "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
+        heading: "Build, Launch & Track",
+        paragraph: (
+          <>
+We monitor the live campaigns from day one. Conversion events, UTMs, attribution, all set up correctly, so the data we use to make decisions is actually reliable. We don't launch until the measurement is right. A lot of agencies skip this step. We never do.
+          </>
+        ),
       },
       {
         image: "/Services/03.svg",
-        heading: "Build, Launch & Optimize",
-        paragraph:
-          "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
+        heading: "Optimise, Report & Scale",
+        paragraph: (
+          <>
+Once campaigns are live, the work actually starts. We test creatives, adjust bids, refine audiences, eliminate what's not working, and scale what is. Monthly reporting gives you a clear picture of performance, not just numbers, but what they mean and what we're doing next.
+          </>
+        ),
       },
     ],
     pricingCardData: [
@@ -15976,26 +16186,70 @@ So we don't do that. Every project starts with a conversation about where your b
         ],
       },
     ],
+    customplanData: {
+      heading: "Customise According to Your Business",
+      buttonText: "Get a Custom Quote",
+      body: (
+        <>
+<p className="mt-2">Your Ad Strategy Should Fit Your Business; Not a Generic Package
+A local service business in Sydney needs a completely different approach from a national eCommerce brand or a B2B SaaS company trying to generate enterprise leads. Fixed packages don’t work that well because every business has different goals, different margins, and different audiences.<br />
+We start with a conversation about where you are, what you've tried, and what you're actually trying to achieve. Then we put together a scope that makes sense for your situation, no pressure to take channels you don't need.
+</p>
+
+<ul className="list-disc list-inside mt-1">
+  <li>Google Ads for businesses that want to capture existing search demand</li>
+  <li>Meta and TikTok for brands building awareness and driving direct sales</li>
+  <li>LinkedIn for B2B businesses targeting specific industries or job roles</li>
+  <li>Full funnel strategies combining multiple platforms into one system</li>
+  <li>eCommerce-specific setups for Shopping, Dynamic Ads, and TikTok Shop</li>
+  <li>App campaigns for mobile products needing quality installs at scale</li>
+  <li>Affiliate and influencer programs for performance-based growth</li>
+</ul>
+        </>
+      ),
+      rightContent: <><h3 className="text-2xl text-white mt-3">What's Typically Inside an Engagement</h3>
+<p className="text-sm">Depending on which channels and goals we agree on, your performance marketing project may include:</p>
+<ul className="list-disc list-inside mt-1 text-sm">
+  <li>Full account audit and competitor analysis</li>
+  <li>Campaign strategy and platform recommendations</li>
+  <li>Campaign build, ad copy, and creative direction</li>
+  <li>Conversion tracking and attribution setup</li>
+  <li>Audience building and retargeting setup</li>
+  <li>Shopping feed management for eCommerce</li>
+  <li>Weekly optimisation and monthly reporting</li>
+  <li>Influencer or affiliate program management</li>
+</ul></>,
+    },
     faqData: [
       {
-        question: "How to use this component?",
+        question: "How quickly will I see results from paid advertising?",
         answer:
-          "Import the FAQ component and place it in your page. Click any question to expand or collapse the answer.",
+          "Much faster. Search campaigns like Google Ads can start generating leads within the first week once they're set up properly. Social campaigns usually need two to four weeks to finish the learning phase before performance stabilises. We'll set realistic expectations at the start based on your specific goals and budget.",
       },
       {
-        question: "Are there any other components available?",
+        question: "Do you take a percentage of ad spend, or a flat management fee?",
         answer:
-          "Yes — check the Components section of the repo or documentation for more reusable UI pieces.",
+          "We work on a flat, month-wise management fee rather than a percentage of spend. This means our incentive is to make your budget work harder, not force you to spend more, so our fee goes up. We create a list of exactly what's included in management before anything starts.",
       },
       {
-        question: "Are components responsive?",
+        question: "What budget do I need to get started with paid ads?",
         answer:
-          "Yes, components are designed to be responsive across screen sizes.",
+          "It genuinely depends on the platform and your goals. Google Search can work with a modest budget in less competitive industries. Meta and TikTok generally need a bit more to get through the learning phase quickly. We'll tell you honestly what budget is realistic for what you're trying to achieve, and if we don't think the numbers work, we'll say so upfront.",
       },
       {
-        question: "Can I customize the components?",
+        question: "Is there a lock-in contract?",
         answer:
-          "Yes, pass props or override styles to adapt components to your design.",
+          "No. Once campaigns are set up and running, we work month-to-month. The initial setup phase is project-based with a defined scope and cost, but ongoing management has no lock-in. We prefer to earn your business every month through performance, not paperwork.",
+      },
+      {
+        question: "Can you take over campaigns that are already running?",
+        answer:
+          "Yes, and it's something we do regularly. We start with a full audit of what's already there, what's working, what's wasting money, and what's missing entirely. From there, we either rebuild or restructure, depending on the state of the account. We'll tell you honestly what we find, including if the existing setup is actually in decent shape.",
+      },
+      {
+        question: "Do you handle the creative side, ad design, and copy?",
+        answer:
+          "Yes. Ad copy and creative direction are part of our service. For video content or more involved creative production, we'll discuss what's needed and factor it into the scope. Good creative is one of the biggest levers in paid advertising performance, so we don't treat it as an afterthought.",
       },
     ],
     portfolioData: [
@@ -16008,8 +16262,20 @@ So we don't do that. Every project starts with a conversation about where your b
       { id: "7", src: "/Services/web_06.svg", translateY: "-translate-y-25" },
       { id: "8", src: "/Services/web_07.svg", translateY: "" },
     ],
-    footnote:
-      "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
+    contactData: {
+      heading: (<>Let's Get Started</>),
+      body: (
+        <>
+          <span className="block text-xl font-bold text-white">
+            Your Competitors Are Running Ads Right Now.
+          </span>
+Get in touch today, and one of our performance marketing specialists will get back to you within one business day. Straight conversation, no scripts.
+        </>
+      ),
+      buttonText: "Book a Free Strategy Call",
+    },
+    // footnote:
+    //   "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
     subcategory: [
       {
         slug: "profile-optimization",
@@ -18213,6 +18479,7 @@ So we don't do that. Every project starts with a conversation about where your b
       },
     ],
   },
+  
 
   // Content Marketing Service Data
   {
@@ -20305,6 +20572,7 @@ So we don't do that. Every project starts with a conversation about where your b
     ],
   },
 ];
+
 
 
 
