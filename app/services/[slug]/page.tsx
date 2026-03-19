@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import Header from "@/components/Header";
 import Image from "next/image";
 import { notFound } from "next/navigation";
@@ -10,6 +11,7 @@ import Hero from "../components/Hero";
 import WhyChoose from "../components/WhyChoose";
 import Portfolio from "../components/Portfolio";
 import { Testimonials } from "../components/Testimonials";
+import SocialAuditCta from "../components/SocialAuditCta";
 import ContactUs from "../components/ContactUs";
 import PricingPlan from "../components/PricingPlan";
 import CustomPlan from "../../Home/components/CustomPlan";
@@ -51,9 +53,17 @@ export default async function ServicePage({
   return (
     <div className="relative w-full p-0 m-0">
       <Hero H={service.title} />
-      <ServiceBody data={service.serviceBodyData ?? []} footnote={service.footnote} />
+      <ServiceBody
+        data={service.serviceBodyData ?? []}
+        footnote={"footnote" in service ? (service.footnote as ReactNode) : undefined}
+      />
       <Cards service={service} />
       <WhyChoose data={service.whyChooseData} />
+      {"ctaData" in service && service.ctaData ? (
+        <SocialAuditCta data={service.ctaData} />
+      ) : "ctaDiv" in service ? (
+        (service.ctaDiv as ReactNode)
+      ) : null}
       <OurProcess service={service} />
       <Portfolio service={service} />
       <PricingPlan service={service} />
