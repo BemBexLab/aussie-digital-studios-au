@@ -11,6 +11,7 @@ type CustomPlanData = {
   rightImageUrl?: string;
   rightImageAlt?: string;
   rightContent?: React.ReactNode;
+  miniTagData?: React.ReactNode;
 };
 
 type CustomPlanProps = {
@@ -194,7 +195,7 @@ const CustomPlan = ({ data }: CustomPlanProps) => {
                 </svg>
               </a>
               <div className="flex flex-row justify-center my-2">
-                <p className="text-[#4C8C74]">SMM Plans</p>
+                <p className="text-[#4C8C74]">{data?.miniTagData}</p>
                 <svg
                   className="m-2"
                   xmlns="http://www.w3.org/2000/svg"
