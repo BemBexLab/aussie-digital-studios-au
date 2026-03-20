@@ -1,5 +1,5 @@
+import type { ComponentProps, ReactNode } from "react";
 import Hero from "../../components/Hero";
-import React from "react";
 import ServiceBody from "../../components/ServiceBody";
 import Cards from "../../components/Cards";
 import WhyChoose from "../../components/WhyChoose";
@@ -11,8 +11,9 @@ import { Testimonials } from "../../../Home/components/Testimonials";
 import FAQ from "../../components/FAQ";
 import ContactUs from "../../components/ContactUs";
 import EasyExperience from "../../components/EasyExperience";
-import EasyExperienceSm from "../../components/EasyExperienceSm";
+import { notFound } from "next/navigation";
 import { services } from "../data";
+import SocialAuditCta from "../../components/SocialAuditCta";
 
 interface ServicePageProps {
   params: Promise<{
@@ -23,41 +24,103 @@ interface ServicePageProps {
 
 const ServiceInnerPage = async ({ params }: ServicePageProps) => {
   const { slug, id } = await params;
-  
-  // Find the parent service by slug
-  const parentService = services.find(s => s.slug === slug);
-  
+
+  const parentService = services.find((s) => s.slug === slug);
+
   if (!parentService) {
-    return <div>Service not found</div>;
+    notFound();
   }
-  
-  // Find the subcategory service by id within the parent's subcategory array
-  const service = parentService.subcategory?.find(s => s.slug === id);
-  
+
+  const service = parentService.subcategory?.find((subcategory) => subcategory.slug === id);
+
   if (!service) {
-    return <div>Subcategory service not found</div>;
+    notFound();
   }
-  
+
+  const serviceBodyData =
+    "serviceBodyData" in service && Array.isArray(service.serviceBodyData)
+      ? service.serviceBodyData
+      : "imageUrl" in service &&
+          typeof service.imageUrl === "string" &&
+          "description" in service &&
+          service.description
+        ? [
+            {
+              heading:
+                "heading" in service && typeof service.heading === "string"
+                  ? service.heading
+                  : undefined,
+              imageUrl: service.imageUrl,
+              description: service.description as ReactNode,
+              points:
+                "points" in service && Array.isArray(service.points)
+                  ? service.points
+                  : undefined,
+            },
+          ]
+        : [];
+  const serviceBodyData2 =
+    "serviceBodyData2" in service && Array.isArray(service.serviceBodyData2)
+      ? service.serviceBodyData2
+      : [];
+
+  const whyChooseData = ("whyChooseData" in service
+    ? service.whyChooseData
+    : undefined) as ComponentProps<typeof WhyChoose>["data"];
+  const easyExperienceSectionData =
+    "easyExperienceData" in service ? service.easyExperienceData : null;
+  const contactData = ("contactData" in service
+    ? service.contactData
+    : undefined) as ComponentProps<typeof ContactUs>["data"];
+
   return (
     <section>
       <Hero H={service.title} />
       <ServiceBody
-        data={parentService.serviceBodyData ?? []}
+        data={serviceBodyData}
         footnote={
-          "footnote" in parentService
-            ? (parentService.footnote as React.ReactNode)
+          "footnote" in service
+            ? (service.footnote as ReactNode)
             : undefined
         }
       />
-      <OurProcess service={service} />
-      <PricingPlan service={service} />
-      <CustomPlan />
-      <EasyExperience />
-      <EasyExperienceSm />
-      <Portfolio service={service} />
-      <FAQ service={service} />
+      {"strategicCardData" in service && service.strategicCardData?.length ? (
+        <Cards service={service} />
+      ) : null}
+      {whyChooseData ? <WhyChoose data={whyChooseData} /> : null}
+      {"processCardData" in service && service.processCardData?.length ? (
+        <OurProcess service={service} />
+      ) : null}
+      {"pricingCardData" in service && service.pricingCardData?.length ? (
+        <PricingPlan service={service} />
+      ) : null}
+      {"customplanData" in service && service.customplanData ? (
+        <CustomPlan data={service.customplanData} />
+      ) : null}
+      {easyExperienceSectionData ? (
+        <EasyExperience sectionData={easyExperienceSectionData} />
+      ) : null}
+      {"ctaData" in service && service.ctaData ? (
+        <SocialAuditCta data={service.ctaData} />
+      ) : "ctaDiv" in service ? (
+        (service.ctaDiv as ReactNode)
+      ) : null}
+      <ServiceBody
+        data={serviceBodyData2}
+        footnote={
+          "footnote" in service
+            ? (service.footnote as ReactNode)
+            : undefined
+        }
+      />
+      {"portfolioData" in service && service.portfolioData?.length ? (
+        <Portfolio service={service} />
+      ) : null}
+      {"faqData" in service && service.faqData?.length ? (
+        <FAQ service={service} />
+      ) : null}
       <Testimonials />
-      <ContactUs data={parentService.contactData} />
+      {contactData ? <ContactUs data={contactData} /> : null}
     </section>
   );
 };

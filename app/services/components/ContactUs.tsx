@@ -156,7 +156,7 @@ const ContactUs = ({ data }: ContactUsProps) => {
                 </>
               )}
             </motion.h2>
-            <motion.p
+            <motion.span
               className="text-md text-[#AAAAAA] mt-5"
               data-text-sm-light
               initial={{ opacity: 0 }}
@@ -171,7 +171,7 @@ const ContactUs = ({ data }: ContactUsProps) => {
                   engages your audience.
                 </>
               )}
-            </motion.p>
+            </motion.span>
           </div>
         </div>
 
