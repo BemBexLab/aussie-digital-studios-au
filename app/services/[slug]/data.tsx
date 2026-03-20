@@ -2,14 +2,19 @@ import React from "react";
 import { title } from "process";
 import { FiCheckCircle, FiTarget } from "react-icons/fi";
 import { SiGoogleads } from "react-icons/si";
-import { FaLinkedin, FaTiktok, FaYoutube } from "react-icons/fa";
-import { FaArrowTrendUp, FaFilterCircleDollar, FaMeta } from "react-icons/fa6";
-import { CiShoppingCart } from "react-icons/ci";
-import { TbAffiliate, TbSeo, TbWriting } from "react-icons/tb";
-import { CgPerformance, CgProfile } from "react-icons/cg";
+import { FaFunnelDollar, FaLinkedin, FaTiktok, FaYoutube } from "react-icons/fa";
+import { FaArrowTrendUp, FaDisplay, FaFilterCircleDollar, FaMeta } from "react-icons/fa6";
+import { CiSearch, CiShoppingCart } from "react-icons/ci";
+import { TbAffiliate, TbReport, TbSeo, TbWriting } from "react-icons/tb";
+import { CgPerformance, CgProfile, CgWebsite } from "react-icons/cg";
 import { GrDocumentPerformance } from "react-icons/gr";
 import { GiAnvilImpact } from "react-icons/gi";
-import { MdAttachEmail, MdCenterFocusWeak } from "react-icons/md";
+import { MdAttachEmail, MdCampaign, MdCenterFocusWeak, MdViewQuilt } from "react-icons/md";
+import { IoSpeedometerOutline } from "react-icons/io5";
+import { RiTeamFill } from "react-icons/ri";
+import { LuTv } from "react-icons/lu";
+import { BiReflectVertical } from "react-icons/bi";
+import { IoIosFunnel } from "react-icons/io";
 
 
 export const services = [
@@ -492,112 +497,109 @@ export const services = [
         slug: "custom-website-design",
         title: "Custom Website Design",
         heading: "Web Development That Accelerates something",
-        imageUrl: "/Services/Rectangle_52.png",
-        description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
-        points: [
-          "Custom Website Design",
-          "Responsive Development",
-          "E-commerce Solutions",
-          "Content Management Systems",
-          "Performance Optimization",
+       serviceBodyData: [
+      {
+        imageUrl: "/Services/Rectangle_52.webp",
+        description: (
+          <>
+            <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
+              What Is Custom Website Development
+            </h2>
+            Templates are shortcuts that cost you in the long run, in performance, in credibility, and in conversions. We build custom websites from the ground up, around your brand, your audience, and your actual goals.<br />
+A custom website is created particularly for your business, not any already existing theme, no borrowed layout, no compromises. Every page, feature, and design decision exists because it serves your brand or your customer.<br />
+The difference shows up fast. Visitors feel it in the clarity and flow. Google rewards it in rankings and Core Web Vitals. Your business benefits in trust, leads, and sales that generic templates consistently fail to produce.<br />
+            <ul className="mt-3">
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span>Designed Around Your Audience,  built for your actual customer, not a general visitor</span>
+              </li>
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span>No Functionality Ceiling, booking systems, configurators, portals, we build what templates can't</span>
+              </li>
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span>
+                  Security From the Ground Up, hardened from day one, not patched afterward
+                </span>
+              </li>
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span>
+                  You Own Everything, code, design, files, no lock-in, no licence fees
+                </span>
+              </li>
+            </ul>
+            <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
+  <a
+    className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15"
+    href="/contact"
+  >
+    Get a Free Project Quote
+  </a>
+  <span
+    aria-hidden="true"
+    className="h-10 w-px bg-white/30 max-sm:h-px max-sm:w-full"
+  />
+  <a
+    className="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/10"
+    href="/services"
+  >
+    See What We Build
+  </a>
+</div>
+          </>
+        ),
+      },
+      ],
+        easyExperienceData: {
+          eyebrow: "Custom Development Services",
+          headingLine1: <>Four Ways We Build Custom Websites For You</>,
+          headingLine2: <div className="text-sm">Custom development isn't one thing; it's a range of specialisations depending on what your business actually needs. Here's what we offer and what each one is really about.</div>,
+          cards: [
+            {
+              title: "Fully Custom Website Design & Build",
+              description:
+                <>We design and develop your site entirely around your brand and your customers, from the first wireframe to the final line of code.<br />Every element has a reason behind it. The layout earns attention. The copy brings action. The design builds trust before a word is read.</>,
+              icon: (<CgWebsite color="#4C8C74" size={40} />),
+            },
+            {
+              title: "Speed, Responsiveness & Ongoing Support",
+              description:
+                <>Already have a custom site but it's slow, breaking on mobile, or starting to look dated? Our team of professionals rebuild and improve existing sites without discarding what's already working.<br />Beyond that, we provide an end-to-end maintenance,  security updates, performance monitoring, content changes, and technical support services. To stay your site current and running properly without you chasing developers.</>,
+              icon: (<IoSpeedometerOutline color="#4C8C74" size={40} />),
+            },
+            {
+              title: "SEO for Custom Websites",
+              description:
+                <>A custom website no one finds on Google is a missed opportunity. We provide full SEO services built specifically around custom-built sites, technical auditing, keyword architecture, on-page optimisation, local SEO, and ranking campaigns.<br />Custom sites have a structural SEO advantage when built properly. We make sure you use it fully.</>,
+              icon: (<TbSeo color="#4C8C74" size={40} />),
+            },
+            {
+              title: "UI/UX Design & Experience Enhancement",
+              description:
+                <>UI is what your site looks like. UX is how it feels to use. Both determine whether visitors stay, engage, and convert, or leave. We design and improve both, whether as part of a new build or as a standalone audit and redesign.<br />If your site has traffic but not conversions, the problem is usually UX. We find the friction and fix it.</>,
+              icon: (<MdViewQuilt color="#4C8C74" size={40} />),
+            },
+          ],
+        },
+        ctaData: {
+        badgeText: "Free Consultation, No Obligation",
+        title: "Ready to Build a Website",
+        highlightedTitle: "That Work as Hard as You Do?",
+        description:
+        "Tell us what you're trying to build. We'll tell you exactly what's involved, what it'll cost, and how long it'll take, honestly, before you commit to anything.",
+        primaryAction: {
+          label: "Book Your Free Audit",
+          href: "/contact",
+        },
+        secondaryAction: {
+          label: "View All Services",
+          href: "/services",
+        },
+        trustItems: [
         ],
-        experienceCardData: [
-          {
-            title: "End-to-End Support, Hosting & Maintenance",
-            description:
-              "We take care of everything behind the scenes. From secure hosting and regular updates to ongoing maintenance and performance improvements, we ensure your website stays fast, secure and running smoothly.",
-            svgelement: (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="50"
-                height="50"
-                viewBox="0 0 50 50"
-                fill="none"
-                className="transform translate-x-3.5 translate-y-3.5"
-              >
-                <path
-                  d="M4.16699 25.0545C4.16699 35.7758 12.2235 44.6105 22.5978 45.8048C24.1286 45.9811 25.6124 45.3285 26.702 44.2361C28.0634 42.8712 28.0634 40.6582 26.702 39.2933C25.6124 38.2008 24.7242 36.5712 25.5459 35.2643C28.8306 30.0401 45.8337 42.0376 45.8337 25.0545C45.8337 13.5185 36.5063 4.16675 25.0003 4.16675C13.4944 4.16675 4.16699 13.5185 4.16699 25.0545Z"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <circle
-                  cx="36.458"
-                  cy="23.9583"
-                  r="3.125"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <circle
-                  cx="13.542"
-                  cy="23.9583"
-                  r="3.125"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M23.0937 14.5828C23.0937 16.3087 21.6946 17.7078 19.9687 17.7078C18.2429 17.7078 16.8438 16.3087 16.8438 14.5828C16.8438 12.8569 18.2429 11.4578 19.9687 11.4578C21.6946 11.4578 23.0937 12.8569 23.0937 14.5828Z"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M33.333 14.5833C33.333 16.3091 31.9339 17.7083 30.208 17.7083C28.4821 17.7083 27.083 16.3091 27.083 14.5833C27.083 12.8574 28.4821 11.4583 30.208 11.4583C31.9339 11.4583 33.333 12.8574 33.333 14.5833Z"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-              </svg>
-            ),
-          },
-          {
-            title: "Fully Custom Design & Conversion-Focused Pages",
-            description:
-              "We design fully custom websites tailored to your brand and built with purpose. Every page is carefully crafted to guide users smoothly, encourage engagement and drive meaningful actions. No templates, no limitations, just thoughtful design focused on performance.",
-            svgelement: (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="50"
-                height="50"
-                viewBox="0 0 50 50"
-                fill="none"
-                className="transform translate-x-4 translate-y-4"
-              >
-                <circle
-                  cx="18.7503"
-                  cy="12.5001"
-                  r="8.33333"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M31.25 18.75C34.7018 18.75 37.5 15.9518 37.5 12.5C37.5 9.04822 34.7018 6.25 31.25 6.25"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <ellipse
-                  cx="18.7503"
-                  cy="35.4166"
-                  rx="14.5833"
-                  ry="8.33333"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M37.5 29.1667C41.1547 29.9682 43.75 31.9979 43.75 34.3751C43.75 36.5195 41.6381 38.3811 38.5417 39.3135"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-              </svg>
-            ),
-          },
-        ],
+      },
         strategicCardData: [
           {
             title: "Custom Website Design",
@@ -811,233 +813,294 @@ export const services = [
             ),
           },
         ],
+        processHeading: <>Our Process</>,
+        processPara: (
+          <>
+            Three Steps From Brief to a Live Website That Performs
+          </>
+        ),
         processCardData: [
           {
             image: "/Services/01.svg",
-            heading: "Book a Strategy Call",
-            paragraph:
-              "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
+            heading: "Discovery, Strategy & Brief",
+            paragraph: (
+              <>
+                Its very important to start the process by knowing your goals, audience, your brand, and ofcourse your competitors. From that real conversation, we build a detailed project brief covering site structure, design direction, technical requirements, and SEO foundations. You approve it before anything gets designed. No surprises later.
+              </>
+            ),
           },
           {
             image: "/Services/02.svg",
-            heading: "Website Audit & Strategy",
-            paragraph:
-              "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
+            heading: "Design, Build & Review",
+            paragraph: (
+              <>
+                Wireframes first. Then, the visual mockups. You see exactly what the site will look like before a line of code is written, and you give feedback at every stage. Once the design is locked, development begins. You get a staging site to review before anything goes live. Go-live is clean and confident.
+              </>
+            ),
           },
           {
             image: "/Services/03.svg",
-            heading: "Build, Launch & Optimize",
-            paragraph:
-              "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
+            heading: "Launch, Monitor & Support",
+            paragraph: (
+              <>
+                Post-launch we run full performance checks, confirm SEO setup, verify analytics, and handle any immediate tweaks fast. Then we stay available for maintenance, for SEO, for growth. Going live is the start of the relationship, not the end of it.
+              </>
+            ),
           },
         ],
         pricingCardData: [
-          {
-            title: "Basic Website Package",
-            price: "$229",
-            discountedFrom: "$499",
-            includes: [
-              "2 Custom Logo Design Concepts",
-              "1 Dedicated Designer",
-              "4 REVISIONS",
-              "48 to 72 hours TAT",
-              "100% Unique Design Guarantee",
-              "100% Satisfaction Guarantee",
-              "100% Ownership Rights",
-              "100% Money Back Guarantee",
-            ],
-          },
-          {
-            title: "Basic Website Package",
-            price: "$229",
-            discountedFrom: "$499",
-            includes: [
-              "5 Custom Logo Design Concepts",
-              "By 2 Designers",
-              "UNLIMITED Revisions",
-              "48 to 72 hours TAT",
-              "100% Unique Design Guarantee",
-              "100% Satisfaction Guarantee",
-              "100% Ownership Rights",
-              "100% Money Back Guarantee",
-            ],
-          },
-          {
-            title: "Basic Website Package",
-            price: "$229",
-            discountedFrom: "$499",
-            includes: [
-              "UNLIMITED Logo Design Concepts",
-              "By 4 Designers",
-              "UNLIMITED Revisions",
-              "Stationary Design (Business Card, Letterhead, Envelope)",
-              "48 to 72 hours TAT",
-              "FREE MS Word Letterhead",
-              "All Final Files Format (AI, PSD, EPS, PNG, GIF, jpeg, PDF)",
-            ],
-          },
+      {
+        title: "Basic Website Package",
+        price: "$229",
+        discountedFrom: "$499",
+        includes: [
+          "2 Custom Logo Design Concepts",
+          "1 Dedicated Designer",
+          "4 REVISIONS",
+          "48 to 72 hours TAT",
+          "100% Unique Design Guarantee",
+          "100% Satisfaction Guarantee",
+          "100% Ownership Rights",
+          "100% Money Back Guarantee",
         ],
-        faqData: [
-          {
-            question: "How to use this component?",
-            answer:
-              "Import the FAQ component and place it in your page. Click any question to expand or collapse the answer.",
-          },
-          {
-            question: "Are there any other components available?",
-            answer:
-              "Yes — check the Components section of the repo or documentation for more reusable UI pieces.",
-          },
-          {
-            question: "Are components responsive?",
-            answer:
-              "Yes, components are designed to be responsive across screen sizes.",
-          },
-          {
-            question: "Can I customize the components?",
-            answer:
-              "Yes, pass props or override styles to adapt components to your design.",
-          },
-        ],
-        portfolioData: [
-          {
-            id: "1",
-            src: "/Services/web_01.svg",
-            translateY: "-translate-y-25",
-          },
-          { id: "2", src: "/Services/web_02.svg", translateY: "" },
-          {
-            id: "3",
-            src: "/Services/web_02.svg",
-            translateY: "-translate-y-25",
-          },
-          { id: "4", src: "/Services/web_03.svg", translateY: "" },
-          {
-            id: "5",
-            src: "/Services/web_04.svg",
-            translateY: "-translate-y-25",
-          },
-          { id: "6", src: "/Services/web_05.svg", translateY: "" },
-          {
-            id: "7",
-            src: "/Services/web_06.svg",
-            translateY: "-translate-y-25",
-          },
-          { id: "8", src: "/Services/web_07.svg", translateY: "" },
-        ],
-        footnote:
-          "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
       },
       {
-        slug: "e-commerce-website-development",
-        title: "e-commerce web development",
-        heading: "Web Development That Accelerates something",
-        imageUrl: "/Services/Rectangle_52.png",
-        description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
-        points: [
-          "Custom Website Design",
-          "Responsive Development",
-          "E-commerce Solutions",
-          "Content Management Systems",
-          "Performance Optimization",
+        title: "Basic Website Package",
+        price: "$229",
+        discountedFrom: "$499",
+        includes: [
+          "5 Custom Logo Design Concepts",
+          "By 2 Designers",
+          "UNLIMITED Revisions",
+          "48 to 72 hours TAT",
+          "100% Unique Design Guarantee",
+          "100% Satisfaction Guarantee",
+          "100% Ownership Rights",
+          "100% Money Back Guarantee",
         ],
-        experienceCardData: [
+      },
+      {
+        title: "Basic Website Package",
+        price: "$229",
+        discountedFrom: "$499",
+        includes: [
+          "UNLIMITED Logo Design Concepts",
+          "By 4 Designers",
+          "UNLIMITED Revisions",
+          "Stationary Design (Business Card, Letterhead, Envelope)",
+          "48 to 72 hours TAT",
+          "FREE MS Word Letterhead",
+          "All Final Files Format (AI, PSD, EPS, PNG, GIF, jpeg, PDF)",
+        ],
+      },
+        ],
+        customplanData: {
+          heading: "Why Custom Stands Out",
+          buttonText: "Book a consultation call to create your perfect plan",
+          body: (
+            <>
+              Every custom website we build centres on three things: your target audience, your business goals, and the trust signals your customers need before they act. That's what consistently separates custom from template.
+              <ul className="list-disc list-inside mt-2">
+                <li>Audience-First Design: we understand your customers before a pixel is placed</li>
+                <li>Goal-Driven Structure: every page has a job, leads, sales, or bookings</li>
+                <li>Trust Built In: design, speed, messaging, and social proof from the brief stage</li>
+                <li>Mobile-Firs: 60%+ of Australian traffic is mobile, we design for that first</li>
+                <li>Speed Without Compromise: lean, fast, no bloated plugin overhead</li>
+                <li>SEO From the Foundation: clean code, schema, Core Web Vitals, day one, not retrofitted</li>
+              </ul>
+
+            </>
+          ),
+          // rightContent: <><h3 className="text-2xl text-white mt-3"></h3>
+          // <p className="text-sm"></p>
+          // <ul className="list-disc list-inside mt-1 text-sm">
+          //   <li></li>
+          // </ul></>,
+          miniTagData: <></>,
+        },
+        faqData: [
           {
-            title: "End-to-End Support, Hosting & Maintenance",
-            description:
-              "We take care of everything behind the scenes. From secure hosting and regular updates to ongoing maintenance and performance improvements, we ensure your website stays fast, secure and running smoothly.",
-            svgelement: (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="50"
-                height="50"
-                viewBox="0 0 50 50"
-                fill="none"
-                className="transform translate-x-3.5 translate-y-3.5"
-              >
-                <path
-                  d="M4.16699 25.0545C4.16699 35.7758 12.2235 44.6105 22.5978 45.8048C24.1286 45.9811 25.6124 45.3285 26.702 44.2361C28.0634 42.8712 28.0634 40.6582 26.702 39.2933C25.6124 38.2008 24.7242 36.5712 25.5459 35.2643C28.8306 30.0401 45.8337 42.0376 45.8337 25.0545C45.8337 13.5185 36.5063 4.16675 25.0003 4.16675C13.4944 4.16675 4.16699 13.5185 4.16699 25.0545Z"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <circle
-                  cx="36.458"
-                  cy="23.9583"
-                  r="3.125"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <circle
-                  cx="13.542"
-                  cy="23.9583"
-                  r="3.125"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M23.0937 14.5828C23.0937 16.3087 21.6946 17.7078 19.9687 17.7078C18.2429 17.7078 16.8438 16.3087 16.8438 14.5828C16.8438 12.8569 18.2429 11.4578 19.9687 11.4578C21.6946 11.4578 23.0937 12.8569 23.0937 14.5828Z"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M33.333 14.5833C33.333 16.3091 31.9339 17.7083 30.208 17.7083C28.4821 17.7083 27.083 16.3091 27.083 14.5833C27.083 12.8574 28.4821 11.4583 30.208 11.4583C31.9339 11.4583 33.333 12.8574 33.333 14.5833Z"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-              </svg>
-            ),
+            question: "How much does custom website design and development cost in Australia?",
+            answer:
+              "It depends on the scope; a clean five-page custom site sits at a very different price point from a custom eCommerce platform. We give you a detailed quote after a free strategy call. No vague ranges, no hidden extras.",
           },
           {
-            title: "Fully Custom Design & Conversion-Focused Pages",
-            description:
-              "We design fully custom websites tailored to your brand and built with purpose. Every page is carefully crafted to guide users smoothly, encourage engagement and drive meaningful actions. No templates, no limitations, just thoughtful design focused on performance.",
-            svgelement: (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="50"
-                height="50"
-                viewBox="0 0 50 50"
-                fill="none"
-                className="transform translate-x-4 translate-y-4"
-              >
-                <circle
-                  cx="18.7503"
-                  cy="12.5001"
-                  r="8.33333"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M31.25 18.75C34.7018 18.75 37.5 15.9518 37.5 12.5C37.5 9.04822 34.7018 6.25 31.25 6.25"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <ellipse
-                  cx="18.7503"
-                  cy="35.4166"
-                  rx="14.5833"
-                  ry="8.33333"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M37.5 29.1667C41.1547 29.9682 43.75 31.9979 43.75 34.3751C43.75 36.5195 41.6381 38.3811 38.5417 39.3135"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-              </svg>
-            ),
+            question: "How long does it take to build a custom website?",
+            answer:
+              "A standard business website typically takes four to eight weeks from brief to launch. Larger builds take longer. We give you a realistic timeline in the project brief before work begins — not an optimistic one.",
+          },
+          {
+            question: "Do I own the website once it's built?",
+            answer:
+              "Yes, completely. Code, design files, domain, and content are all yours once the project is complete and paid. No ongoing licences just to own your own website.",
+          },
+          {
+            question: "Can you improve my existing custom website instead of rebuilding it?",
+            answer:
+              "Yes, and we do this regularly. We start with an audit to understand what's actually causing the problem, slow speed, poor mobile UX, and low conversions, then recommend the most efficient path to fix it. Sometimes a full rebuild isn't necessary.",
+          },
+          {
+            question: "Do you build custom WordPress websites?",
+            answer:
+              "Yes. There's a big difference between a WordPress site built on a purchased theme and a genuinely custom WordPress build. We build the latter, custom themes, built specifically for the client, with no pre-made design underneath it.",
+          },
+          {
+            question: "Is SEO included in the website build?",
+            answer:
+              "On-page SEO setup is included in every build, heading structure, metadata, URL structure, schema, image optimisation, and Core Web Vitals. For ongoing SEO campaigns and link building, that's a separate service we can manage as a retainer.",
           },
         ],
+        portfolioData: [
+          {
+            id: "1",
+            src: "/Services/web_01.svg",
+            translateY: "-translate-y-25",
+          },
+          { id: "2", src: "/Services/web_02.svg", translateY: "" },
+          {
+            id: "3",
+            src: "/Services/web_02.svg",
+            translateY: "-translate-y-25",
+          },
+          { id: "4", src: "/Services/web_03.svg", translateY: "" },
+          {
+            id: "5",
+            src: "/Services/web_04.svg",
+            translateY: "-translate-y-25",
+          },
+          { id: "6", src: "/Services/web_05.svg", translateY: "" },
+          {
+            id: "7",
+            src: "/Services/web_06.svg",
+            translateY: "-translate-y-25",
+          },
+          { id: "8", src: "/Services/web_07.svg", translateY: "" },
+        ],
+        footnote:
+          "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
+        contactData: {
+        heading: (<>Let's Build Something</>),
+        body: (<><h3 className="text-2xl font-semibold">Your Competitors Are Getting,<br />Better Websites Every Year.</h3>
+        <p>Every month your current site underperforms is a month of leads and credibility going elsewhere. One business day turnaround on enquiries. No scripts, no pressure, just a straight conversation about your project.</p>
+        </>),
+        buttonText: "Book a Free CallView Packages",
+      },
+      },
+      {
+        slug: "ecommerce-website-development",
+        title: "eCommerce Website Development in Australia",
+        heading: "eCommerce Website Development in Australia",
+       serviceBodyData: [
+      {
+        imageUrl: "/Services/Rectangle_52.webp",
+        description: (
+          <>
+            <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
+              What Is eCommerce Website Development
+            </h2>
+            <ul className="mt-3">
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <div className="flex flex-col"><span className="font-semibold">More Than an Online Store: A Revenue Engine.</span>
+An eCommerce website is your best salesperson, the one who never calls in sick, works every hour of every day, and can handle thousands of customers at once. But only if it's built properly. 
+Custom eCommerce development means your store is built around your products, your customers, and how your business actually operates, not crammed into a generic template someone else's business already uses. Every feature, page, and checkout step is designed to reduce friction and increase the likelihood of a sale.
+Australian eCommerce is growing fast. Consumers expect fast loading, seamless mobile experiences, and a checkout process that doesn't make them think twice. We build stores that meet those expectations, and then some.
+</div>
+              </li>
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span className="font-semibold">Built Around Your Products & Customers</span>
+              </li>
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span className="font-semibold">
+                  Designed to Reduce Cart Abandonment
+                </span>
+              </li>
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span className="font-semibold">
+                  Secure Payments, Full Stop
+                </span>
+              </li>
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span className="font-semibold">
+                  Scales as You Grow
+                </span>
+              </li>
+            </ul>
+            <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
+  <a
+    className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15"
+    href="/contact"
+  >
+    Get a Free eCommerce Quote
+  </a>
+  <span
+    aria-hidden="true"
+    className="h-10 w-px bg-white/30 max-sm:h-px max-sm:w-full"
+  />
+  <a
+    className="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/10"
+    href="/services"
+  >
+    See What We Build
+  </a>
+</div>
+          </>
+        ),
+      },
+      ],
+        easyExperienceData: {
+          eyebrow: <>Easy Experience</>,
+          headingLine1: <>eCommerce Website Development Services</>,
+          // headingLine2: <div className="text-sm">Custom development isn't one thing; it's a range of specialisations depending on what your business actually needs. Here's what we offer and what each one is really about.</div>,
+          cards: [
+            {
+              title: "Custom eCommerce Design & Build",
+              description:
+                <>A store built from scratch, no borrowed theme, no generic layout. We design every page around your products and your customers, from the homepage to the thank-you screen.<br />
+The result is a store that feels like it belongs to your brand. One that builds trust on the first visit and keeps customers coming back because the experience is genuinely good.</>,
+              icon: (<CgWebsite color="#4C8C74" size={40} />),
+            },
+            {
+              title: "eCommerce SEO",
+              description:
+                <>Your products can't sell if no one finds them. eCommerce SEO is a specific discipline, including product page optimisation, category architecture, duplicate content management, and schema markup that gets your products appearing in rich results.<br />We build and run SEO strategies for Australian eCommerce stores that want to rank for the terms their customers are actually searching, and convert those visits into sales.</>,
+              icon: (<TbSeo color="#4C8C74" size={40} />),
+            },
+            {
+              title: "Speed, Responsiveness & Maintenance",
+              description:
+                <>Already have an eCommerce store, but it's slow, breaking on mobile, or losing customers somewhere in the funnel? We audit what's wrong and fix it, without rebuilding what's working.<br />We also offer ongoing maintenance, security patches, performance monitoring, platform updates, and technical support. Your store stays fast, secure, and running properly.</>,
+              icon: (<IoSpeedometerOutline color="#4C8C74" size={40} />),
+            },
+            {
+              title: "UI/UX Enhancement & CRO",
+              description:
+                <>Traffic that doesn't convert is expensive traffic. If people are landing on your store and leaving without buying, that's a UX problem, and it's costing you revenue every single day.<br />We audit your customer journey, identify every friction point from landing page to checkout, and redesign those areas to remove the barriers between your visitor and their purchase.</>,
+              icon: (<MdViewQuilt color="#4C8C74" size={40} />),
+            },
+          ],
+        },
+        ctaData: {
+        badgeText: "Free eCommerce Consultation",
+        title: "Ready to Build an Online Store",
+        highlightedTitle: "That Actually Converts?",
+        description:
+        "Tell us about your products, your customers, and your goals. We'll tell you exactly what's involved and what it'll cost, honestly, before you commit to anything.",
+        primaryAction: {
+          label: "Book a Free Strategy",
+          href: "/contact",
+        },
+        secondaryAction: {
+          label: "Call View Packages",
+          href: "/services",
+        },
+        trustItems: [
+        ],
+      },
         strategicCardData: [
           {
             title: "Custom Website Design",
@@ -1251,92 +1314,146 @@ export const services = [
             ),
           },
         ],
+        processHeading: <>From Product Brief to Live Store in Three Steps</>,
+        processPara: (
+          <>
+            
+          </>
+        ),
         processCardData: [
           {
             image: "/Services/01.svg",
-            heading: "Book a Strategy Call",
-            paragraph:
-              "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
+            heading: "Discovery, Strategy & Store Architecture",
+            paragraph: (
+              <>
+                We start with your business, product range, customers, competitors, and goals. From there, we start planning store architecture: category structure, product page layout, checkout flow, payment options, and SEO foundations. You see and approve the full plan before any design begins.
+              </>
+            ),
           },
           {
             image: "/Services/02.svg",
-            heading: "Website Audit & Strategy",
-            paragraph:
-              "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
+            heading: "Design, Build & Test",
+            paragraph: (
+              <>
+                Design mockups first: homepage, category page, product page, checkout. You review them before a line of code is written. Then we build and test everything: desktop, mobile, all major browsers, payment flows, and speed. You get a staging store to review before anything goes live. No surprises on launch day.
+              </>
+            ),
           },
           {
             image: "/Services/03.svg",
-            heading: "Build, Launch & Optimize",
-            paragraph:
-              "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
+            heading: "Launch, Monitor & Grow",
+            paragraph: (
+              <>
+                Post launch, we monitor performance, confirm SEO setup, verify analytics and conversion tracking, and handle any immediate adjustments fast. Then we stay involved, for maintenance, for SEO, for conversion rate improvements as your store grows. Going live is where the real work starts.
+              </>
+            ),
           },
         ],
         pricingCardData: [
-          {
-            title: "Basic Website Package",
-            price: "$229",
-            discountedFrom: "$499",
-            includes: [
-              "2 Custom Logo Design Concepts",
-              "1 Dedicated Designer",
-              "4 REVISIONS",
-              "48 to 72 hours TAT",
-              "100% Unique Design Guarantee",
-              "100% Satisfaction Guarantee",
-              "100% Ownership Rights",
-              "100% Money Back Guarantee",
-            ],
-          },
-          {
-            title: "Basic Website Package",
-            price: "$229",
-            discountedFrom: "$499",
-            includes: [
-              "5 Custom Logo Design Concepts",
-              "By 2 Designers",
-              "UNLIMITED Revisions",
-              "48 to 72 hours TAT",
-              "100% Unique Design Guarantee",
-              "100% Satisfaction Guarantee",
-              "100% Ownership Rights",
-              "100% Money Back Guarantee",
-            ],
-          },
-          {
-            title: "Basic Website Package",
-            price: "$229",
-            discountedFrom: "$499",
-            includes: [
-              "UNLIMITED Logo Design Concepts",
-              "By 4 Designers",
-              "UNLIMITED Revisions",
-              "Stationary Design (Business Card, Letterhead, Envelope)",
-              "48 to 72 hours TAT",
-              "FREE MS Word Letterhead",
-              "All Final Files Format (AI, PSD, EPS, PNG, GIF, jpeg, PDF)",
-            ],
-          },
+      {
+        title: "Basic Website Package",
+        price: "$229",
+        discountedFrom: "$499",
+        includes: [
+          "2 Custom Logo Design Concepts",
+          "1 Dedicated Designer",
+          "4 REVISIONS",
+          "48 to 72 hours TAT",
+          "100% Unique Design Guarantee",
+          "100% Satisfaction Guarantee",
+          "100% Ownership Rights",
+          "100% Money Back Guarantee",
         ],
+      },
+      {
+        title: "Basic Website Package",
+        price: "$229",
+        discountedFrom: "$499",
+        includes: [
+          "5 Custom Logo Design Concepts",
+          "By 2 Designers",
+          "UNLIMITED Revisions",
+          "48 to 72 hours TAT",
+          "100% Unique Design Guarantee",
+          "100% Satisfaction Guarantee",
+          "100% Ownership Rights",
+          "100% Money Back Guarantee",
+        ],
+      },
+      {
+        title: "Basic Website Package",
+        price: "$229",
+        discountedFrom: "$499",
+        includes: [
+          "UNLIMITED Logo Design Concepts",
+          "By 4 Designers",
+          "UNLIMITED Revisions",
+          "Stationary Design (Business Card, Letterhead, Envelope)",
+          "48 to 72 hours TAT",
+          "FREE MS Word Letterhead",
+          "All Final Files Format (AI, PSD, EPS, PNG, GIF, jpeg, PDF)",
+        ],
+      },
+        ],
+        customplanData: {
+          heading: "Why Custom eCommerce Stands Out",
+          buttonText: "Book a consultation call to create your perfect plan",
+          body: (
+            <>
+              <h3>What Separates a Store That Sells From One That Sits There</h3>
+              Every custom eCommerce site we build is engineered around your target audience, your product range, and the trust signals Australian buyers need before they hand over their payment details. That's what makes the difference between traffic and revenue.
+              <ul className="list-disc list-inside mt-2">
+                <li>Audience-First Design</li>
+                <li>Mobile-First, Always</li>
+                <li>Trust Built Into Every Step</li>
+                <li>Speed That Keeps People Shopping</li>
+                <li>SEO Architecture From Scratch</li>
+                <li>Social Media Integration</li>
+              </ul>
+            </>
+          ),
+          rightContent: <><h3 className="text-2xl text-white mt-3">What Makes an eCommerce Site Successful</h3>
+          <p className="text-sm"></p>
+          <ul className="list-disc list-inside mt-1 text-sm">
+            <li>Mobile-Responsive Design</li>
+            <li>Secure Payment Gateways</li>
+            <li>Smart Product Search & Filtering</li>
+            <li>Product Reviews & Social Proof</li>
+            <li>Email Marketing Integration</li>
+            <li>Inventory & Order Management</li>
+          </ul></>,
+          miniTagData: <></>,
+        },
         faqData: [
           {
-            question: "How to use this component?",
+            question: "How much does an eCommerce website cost in Australia?",
             answer:
-              "Import the FAQ component and place it in your page. Click any question to expand or collapse the answer.",
+              "It completely depends on the size of your catalogue, the complexity of the features, and the platform. A straightforward starter store sits at a very different price point from a B2B platform with custom integrations. We give you a clear, itemised quote after a free strategy call, no vague ranges, no hidden costs.",
           },
           {
-            question: "Are there any other components available?",
+            question: "Which platform do you recommend, Shopify, WooCommerce, or Magento?",
             answer:
-              "Yes — check the Components section of the repo or documentation for more reusable UI pieces.",
+              "It genuinely depends on your business. Shopify is excellent for product-focused retail stores that want reliability and ease of management. WooCommerce suits businesses already on WordPress who need flexibility. Magento is the right call for large catalogues and complex B2B requirements. We'll give you an honest recommendation after understanding your situation, not just build on whatever we prefer.",
           },
           {
-            question: "Are components responsive?",
+            question: "How long does it take to build a custom eCommerce website?",
             answer:
-              "Yes, components are designed to be responsive across screen sizes.",
+              "A standard eCommerce store typically takes six to ten weeks from brief to launch. Larger B2B platforms or stores with complex custom features take longer. We give you a realistic timeline in the project brief, not an optimistic one that slips.",
           },
           {
-            question: "Can I customize the components?",
+            question: "Do you handle eCommerce SEO as part of the build?",
             answer:
-              "Yes, pass props or override styles to adapt components to your design.",
+              "On-page SEO setup is included in every build, product page structure, category architecture, metadata, schema markup, and Core Web Vitals. For ongoing eCommerce SEO, ranking campaigns, product keyword targeting, and link building, that's a separate service we can manage as a retainer.",
+          },
+          {
+            question: "Can you migrate my existing store to a new platform?",
+            answer:
+              "Yes. We manage eCommerce platform migrations regularly, from one CMS to another, from a hosted builder to a custom build, or from an outdated theme to a fully custom design. We handle product data migration, redirect setup, and SEO continuity so rankings aren't lost in the move.",
+          },
+          {
+            question: "Do you offer ongoing support after the store launches?",
+            answer:
+              "Yes. We offer flexible maintenance and support plans covering security updates, performance monitoring, platform updates, content changes, and technical support. Your store keeps running properly without you needing a developer on speed dial for every small issue.",
           },
         ],
         portfolioData: [
@@ -1367,117 +1484,186 @@ export const services = [
         ],
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
+        contactData: {
+        heading: (<>Let's Build Your Store</>),
+        body: (<><h3 className="text-2xl font-semibold">Every Day Without a Proper<br />Store Is Revenue Left Behind.</h3>
+        <p>Get in touch today, and one of our eCommerce specialists will respond within one business day. No scripts, no pressure. Just a straight conversation about your store and what it could be doing.</p>
+        </>),
+        buttonText: "Book a Free Call",
+      },
       },
       {
         slug: "magento-development",
-        title: "Magento Development",
-        heading: "Web Development That Accelerates something",
-        imageUrl: "/Services/Rectangle_52.png",
-        description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
-        points: [
-          "Custom Website Design",
-          "Responsive Development",
-          "E-commerce Solutions",
-          "Content Management Systems",
-          "Performance Optimization",
+        title: "Magento Development in Australia",
+        // heading: "eCommerce Website Development in Australia",
+       serviceBodyData: [
+      {
+        imageUrl: "/Services/Rectangle_52.webp",
+        description: (
+          <>
+            <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
+              Big Catalogues, Complex Requirements Magento Handles It.
+            </h2>
+            <p>When your eCommerce business has outgrown simpler platforms, too many products, too many rules, too many integrations, Magento is where serious merchants go. We build Magento stores for Australian businesses that mean business online.</p>
+            {/* <ul className="mt-3">
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <div className="flex flex-col"><span className="font-semibold">More Than an Online Store: A Revenue Engine.</span>
+An eCommerce website is your best salesperson, the one who never calls in sick, works every hour of every day, and can handle thousands of customers at once. But only if it's built properly. 
+Custom eCommerce development means your store is built around your products, your customers, and how your business actually operates, not crammed into a generic template someone else's business already uses. Every feature, page, and checkout step is designed to reduce friction and increase the likelihood of a sale.
+Australian eCommerce is growing fast. Consumers expect fast loading, seamless mobile experiences, and a checkout process that doesn't make them think twice. We build stores that meet those expectations, and then some.
+</div>
+              </li>
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span className="font-semibold">Built Around Your Products & Customers</span>
+              </li>
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span className="font-semibold">
+                  Designed to Reduce Cart Abandonment
+                </span>
+              </li>
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span className="font-semibold">
+                  Secure Payments, Full Stop
+                </span>
+              </li>
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span className="font-semibold">
+                  Scales as You Grow
+                </span>
+              </li>
+            </ul> */}
+            <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
+  <a
+    className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15"
+    href="/contact"
+  >
+    Get a Free Magento Quote
+  </a>
+  <span
+    aria-hidden="true"
+    className="h-10 w-px bg-white/30 max-sm:h-px max-sm:w-full"
+  />
+  <a
+    className="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/10"
+    href="/services"
+  >
+    See What We Build
+  </a>
+</div>
+          </>
+        ),
+      },
+      {
+        imageUrl: "/Services/Rectangle_52.webp",
+        description: (
+          <>
+            {/* <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
+              Big Catalogues, Complex Requirements Magento Handles It.
+            </h2> */}
+            <p>It's not the right choice for every business, and we'll tell you that honestly. But for businesses that have hit the ceiling on simpler platforms, or that need serious customisation, serious scalability, and serious performance from day one, Magento is the right foundation.<br />We build on it properly, which makes all the difference.</p>
+            <ul className="mt-3">
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span className="font-semibold">Built for Large, Complex Catalogues</span>
+              </li>
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span className="font-semibold">B2B and B2C from One Platform</span>
+              </li>
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span className="font-semibold">
+                  Customisation Without a Ceiling
+                </span>
+              </li>
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span className="font-semibold">
+                  You Own the Platform
+                </span>
+              </li>
+            </ul>
+            {/* <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
+  <a
+    className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15"
+    href="/contact"
+  >
+    Get a Free Magento Quote
+  </a>
+  <span
+    aria-hidden="true"
+    className="h-10 w-px bg-white/30 max-sm:h-px max-sm:w-full"
+  />
+  <a
+    className="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/10"
+    href="/services"
+  >
+    See What We Build
+  </a>
+</div> */}
+          </>
+        ),
+      },
+      ],
+        easyExperienceData: {
+          eyebrow: <>Easy Experience</>,
+          headingLine1: <>Our Magento Development Services</>,
+          headingLine2: <div className="text-sm">Magento development covers more ground than most people realise. Here's exactly what we offer and what each service actually does for your eCommerce business.</div>,
+          cards: [
+            {
+              title: "Custom Magento Store Design & Build",
+              description:
+                <>We design every page completely according to your products, brand, and how your customers actually shop. Homepage, category pages, product pages, checkout, all created custom.<br />
+The result is a store that performs technically and converts commercially. Built on Magento's powerful open-source platform, but looking and working nothing like a default installation.
+</>,
+              icon: (<CgWebsite color="#4C8C74" size={40} />),
+            },
+            {
+              title: "Magento eCommerce SEO",
+              description:
+                <>Magento has powerful SEO capabilities, but only when configured and managed properly. Layered navigation, faceted search, duplicate product URLs, and crawl budget are all common problems on Magento stores that aren't set up correctly.<br />
+Our team of professionals resolves the technical SEO foundation, builds the keyword architecture, optimises product and category pages, and runs ongoing SEO to grow organic traffic and rankings for your store.
+</>,
+              icon: (<TbSeo color="#4C8C74" size={40} />),
+            },
+            {
+              title: "Speed, Responsiveness & Maintenance",
+              description:
+                <>We audit, optimise, and maintain existing Magento stores: caching, CDN configuration, image optimisation, mobile responsiveness, and security patches.<br />
+Our company also offer end-to-end ongoing maintenance so your store stays updated, secure, and running fast without you needing to manage it yourself.</>,
+              icon: (<IoSpeedometerOutline color="#4C8C74" size={40} />),
+            },
+            {
+              title: "UI/UX Enhancement & Conversion Optimisation",
+              description:
+                <>We audit the user journey end to end, product discovery, filtering, product pages, cart, checkout, and redesign the friction points that are costing you sales.<br />
+For high-traffic stores, we back this up with A/B testing so every change is driven by data from your actual customers, not assumptions.</>,
+              icon: (<MdViewQuilt color="#4C8C74" size={40} />),
+            },
+          ],
+        },
+        ctaData: {
+        badgeText: "Free Magento Consultation",
+        title: "Ready to Build a Magento Store ",
+        highlightedTitle: "That Actually Scales?",
+        description:
+        "Tell us about your catalogue, your requirements, and your goals. We'll tell you exactly what's involved and what it'll cost, before you commit to anything.",
+        primaryAction: {
+          label: "Book a Free Strategy",
+          href: "/contact",
+        },
+        secondaryAction: {
+          label: "Call View Packages",
+          href: "/services",
+        },
+        trustItems: [
         ],
-        experienceCardData: [
-          {
-            title: "End-to-End Support, Hosting & Maintenance",
-            description:
-              "We take care of everything behind the scenes. From secure hosting and regular updates to ongoing maintenance and performance improvements, we ensure your website stays fast, secure and running smoothly.",
-            svgelement: (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="50"
-                height="50"
-                viewBox="0 0 50 50"
-                fill="none"
-                className="transform translate-x-3.5 translate-y-3.5"
-              >
-                <path
-                  d="M4.16699 25.0545C4.16699 35.7758 12.2235 44.6105 22.5978 45.8048C24.1286 45.9811 25.6124 45.3285 26.702 44.2361C28.0634 42.8712 28.0634 40.6582 26.702 39.2933C25.6124 38.2008 24.7242 36.5712 25.5459 35.2643C28.8306 30.0401 45.8337 42.0376 45.8337 25.0545C45.8337 13.5185 36.5063 4.16675 25.0003 4.16675C13.4944 4.16675 4.16699 13.5185 4.16699 25.0545Z"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <circle
-                  cx="36.458"
-                  cy="23.9583"
-                  r="3.125"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <circle
-                  cx="13.542"
-                  cy="23.9583"
-                  r="3.125"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M23.0937 14.5828C23.0937 16.3087 21.6946 17.7078 19.9687 17.7078C18.2429 17.7078 16.8438 16.3087 16.8438 14.5828C16.8438 12.8569 18.2429 11.4578 19.9687 11.4578C21.6946 11.4578 23.0937 12.8569 23.0937 14.5828Z"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M33.333 14.5833C33.333 16.3091 31.9339 17.7083 30.208 17.7083C28.4821 17.7083 27.083 16.3091 27.083 14.5833C27.083 12.8574 28.4821 11.4583 30.208 11.4583C31.9339 11.4583 33.333 12.8574 33.333 14.5833Z"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-              </svg>
-            ),
-          },
-          {
-            title: "Fully Custom Design & Conversion-Focused Pages",
-            description:
-              "We design fully custom websites tailored to your brand and built with purpose. Every page is carefully crafted to guide users smoothly, encourage engagement and drive meaningful actions. No templates, no limitations, just thoughtful design focused on performance.",
-            svgelement: (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="50"
-                height="50"
-                viewBox="0 0 50 50"
-                fill="none"
-                className="transform translate-x-4 translate-y-4"
-              >
-                <circle
-                  cx="18.7503"
-                  cy="12.5001"
-                  r="8.33333"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M31.25 18.75C34.7018 18.75 37.5 15.9518 37.5 12.5C37.5 9.04822 34.7018 6.25 31.25 6.25"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <ellipse
-                  cx="18.7503"
-                  cy="35.4166"
-                  rx="14.5833"
-                  ry="8.33333"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M37.5 29.1667C41.1547 29.9682 43.75 31.9979 43.75 34.3751C43.75 36.5195 41.6381 38.3811 38.5417 39.3135"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-              </svg>
-            ),
-          },
-        ],
+      },
         strategicCardData: [
           {
             title: "Custom Website Design",
@@ -1691,92 +1877,145 @@ export const services = [
             ),
           },
         ],
+        processHeading: <>From Brief to Live Magento Store in Three Clear Steps</>,
+        processPara: (
+          <>
+          </>
+        ),
         processCardData: [
           {
             image: "/Services/01.svg",
-            heading: "Book a Strategy Call",
-            paragraph:
-              "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
+            heading: "Discovery, Strategy & Store Architecture",
+            paragraph: (
+              <>
+                We start by understanding your business properly, which includes your catalogue structure, customer types, competitors, integrations, and what success looks like. From there, we build a detailed store architecture: category hierarchy, product page types, checkout flow, B2B requirements if applicable, and full SEO foundations. You approve the plan before design begins.
+              </>
+            ),
           },
           {
             image: "/Services/02.svg",
-            heading: "Website Audit & Strategy",
-            paragraph:
-              "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
+            heading: "Design, Build & Catalogue Setup",
+            paragraph: (
+              <>
+                Custom design mockups first, homepage, category pages, product pages, checkout. Your review and sign-off before a line of code is written. Then, full Magento development, product catalogue setup, payment gateway integration, third-party connections, and thorough testing across all devices and browsers. You review on a staging environment before anything goes live.
+              </>
+            ),
           },
           {
             image: "/Services/03.svg",
-            heading: "Build, Launch & Optimize",
-            paragraph:
-              "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
+            heading: "Launch, Optimise & Support",
+            paragraph: (
+              <>
+                Launch day is handled carefully, including performance checks, SEO verification, payment flow testing, and analytics confirmation. Once live, we monitor, optimise, and stay available. Magento stores benefit from ongoing SEO, performance tuning, and conversion rate work. We're the partner who sticks around after the build to help the store actually grow.
+              </>
+            ),
           },
         ],
         pricingCardData: [
-          {
-            title: "Basic Website Package",
-            price: "$229",
-            discountedFrom: "$499",
-            includes: [
-              "2 Custom Logo Design Concepts",
-              "1 Dedicated Designer",
-              "4 REVISIONS",
-              "48 to 72 hours TAT",
-              "100% Unique Design Guarantee",
-              "100% Satisfaction Guarantee",
-              "100% Ownership Rights",
-              "100% Money Back Guarantee",
-            ],
-          },
-          {
-            title: "Basic Website Package",
-            price: "$229",
-            discountedFrom: "$499",
-            includes: [
-              "5 Custom Logo Design Concepts",
-              "By 2 Designers",
-              "UNLIMITED Revisions",
-              "48 to 72 hours TAT",
-              "100% Unique Design Guarantee",
-              "100% Satisfaction Guarantee",
-              "100% Ownership Rights",
-              "100% Money Back Guarantee",
-            ],
-          },
-          {
-            title: "Basic Website Package",
-            price: "$229",
-            discountedFrom: "$499",
-            includes: [
-              "UNLIMITED Logo Design Concepts",
-              "By 4 Designers",
-              "UNLIMITED Revisions",
-              "Stationary Design (Business Card, Letterhead, Envelope)",
-              "48 to 72 hours TAT",
-              "FREE MS Word Letterhead",
-              "All Final Files Format (AI, PSD, EPS, PNG, GIF, jpeg, PDF)",
-            ],
-          },
+      {
+        title: "Basic Website Package",
+        price: "$229",
+        discountedFrom: "$499",
+        includes: [
+          "2 Custom Logo Design Concepts",
+          "1 Dedicated Designer",
+          "4 REVISIONS",
+          "48 to 72 hours TAT",
+          "100% Unique Design Guarantee",
+          "100% Satisfaction Guarantee",
+          "100% Ownership Rights",
+          "100% Money Back Guarantee",
         ],
+      },
+      {
+        title: "Basic Website Package",
+        price: "$229",
+        discountedFrom: "$499",
+        includes: [
+          "5 Custom Logo Design Concepts",
+          "By 2 Designers",
+          "UNLIMITED Revisions",
+          "48 to 72 hours TAT",
+          "100% Unique Design Guarantee",
+          "100% Satisfaction Guarantee",
+          "100% Ownership Rights",
+          "100% Money Back Guarantee",
+        ],
+      },
+      {
+        title: "Basic Website Package",
+        price: "$229",
+        discountedFrom: "$499",
+        includes: [
+          "UNLIMITED Logo Design Concepts",
+          "By 4 Designers",
+          "UNLIMITED Revisions",
+          "Stationary Design (Business Card, Letterhead, Envelope)",
+          "48 to 72 hours TAT",
+          "FREE MS Word Letterhead",
+          "All Final Files Format (AI, PSD, EPS, PNG, GIF, jpeg, PDF)",
+        ],
+      },
+        ],
+        customplanData: {
+          heading: "Why Magento Stands Out",
+          buttonText: "Book a consultation call to create your perfect plan",
+          body: (
+            <>
+              Every Magento store we build is engineered around your catalogue, your customers, and the specific trust signals Australian buyers need. That's what makes Magento stores consistently outperform generic eCommerce setups for businesses with serious volume and requirements.
+              <ul className="list-disc list-inside mt-2">
+                <li><b>Scalability That Grows With You:</b> Grow from 500 to 50,000 products.</li>
+                <li><b>Mobile-First Shopping Experience:</b> Mobile-first Magento stores built for Aussie shoppers.</li>
+                <li><b>Enterprise-Grade Security:</b> Magento secured, your store and customers protected.</li>
+                <li><b>Performance at Scale:</b> Magento optimised for speed, even under peak traffic.</li>
+                <li><b>Deep SEO Capabilities:</b> Magento gives full SEO control; we use it all.</li>
+                <li><b>Integration-Ready Architecture:</b> Magento connects effortlessly to your business tools.</li>
+              </ul>
+            </>
+          ),
+          rightContent: <><h3 className="text-2xl text-white mt-3">What Makes a Magento Store Successful</h3>
+          <p className="text-sm"></p>
+          <ul className="list-disc list-inside mt-1 text-sm">
+            <li>Real eCommerce Results</li>
+            <li>Mobile-Responsive Design</li>
+            <li>Secure Payment Integration</li>
+            <li>Advanced Product Management</li>
+            <li>Customer Segmentation & Personalisation</li>
+            <li>Email Marketing Integration</li>
+            <li>Analytics & Reporting</li>
+          </ul></>,
+          miniTagData: <></>,
+        },
         faqData: [
           {
-            question: "How to use this component?",
+            question: "For what is Magento the right platform?",
             answer:
-              "Import the FAQ component and place it in your page. Click any question to expand or collapse the answer.",
+              "Magento is the right call when your business has a large or complex catalogue, needs B2B and B2C functionality from one platform, requires deep customisation, or has outgrown what Shopify or WooCommerce can handle. Our team will properly guide you with an honest assessment during the strategy call, including whether Magento isn't the right fit.",
           },
           {
-            question: "Are there any other components available?",
+            question: "What's the difference between Magento Open Source and Adobe Commerce?",
             answer:
-              "Yes — check the Components section of the repo or documentation for more reusable UI pieces.",
+              "Magento Open Source is free to use and extremely capable for most businesses. On the other side, Adobe Commerce (formerly Magento Commerce) adds enterprise features like advanced B2B tools, customer loyalty, and cloud hosting. We work with both and will recommend which one makes sense for your specific requirements and budget.",
           },
           {
-            question: "Are components responsive?",
+            question: "How long does a Magento build take?",
             answer:
-              "Yes, components are designed to be responsive across screen sizes.",
+              "Depending on catalogue size, custom functionality, and the complexity of integrations. Larger enterprise builds take longer. We give you a realistic timeline in the project brief, based on your actual scope, not an estimate designed to win the work.",
           },
           {
-            question: "Can I customize the components?",
+            question: "Can you migrate our existing store to Magento?",
             answer:
-              "Yes, pass props or override styles to adapt components to your design.",
+              "Yes. We manage Magento migrations from Magento 1, Shopify, WooCommerce, and custom-built platforms. That includes product data migration, customer records, order history, and careful SEO redirect handling so rankings aren't lost in the move.",
+          },
+          {
+            question: "Is Magento good for SEO?",
+            answer:
+              "Magento has strong SEO capabilities when configured correctly, but it has specific challenges like duplicate content from layered navigation, faceted search crawl issues, and complex URL structures. We address all of these at the build stage, so your store starts life with solid SEO foundations rather than problems to fix later.",
+          },
+          {
+            question: "Do you offer ongoing Magento support after launch?",
+            answer:
+              "Yes. We offer flexible maintenance and support retainers covering security patches, Magento version updates, performance monitoring, extension management, and technical support. Magento requires more active maintenance than simpler platforms — having a reliable technical partner matters.",
           },
         ],
         portfolioData: [
@@ -1807,6 +2046,13 @@ export const services = [
         ],
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
+        contactData: {
+        heading: (<>Let's Build Your Magento Store</>),
+        body: (<><h3 className="text-2xl font-semibold">Your Business Has Outgrown<br />Simpler Platforms. Magento Hasn't.</h3>
+        <p>Get in touch today, and one of our Magento specialists will respond within one business day. No scripts, no pressure. Just a straight conversation about your store and what it needs.</p>
+        </>),
+        buttonText: "Book a Free Call",
+      },
       },
       {
         slug: "opencart",
@@ -3130,114 +3376,177 @@ export const services = [
       },
       {
         slug: "wordpress-development",
-        title: "WordPress Development",
-        heading: "Web Development That Accelerates something",
-        imageUrl: "/Services/Rectangle_52.png",
-        description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
-        points: [
-          "Custom Website Design",
-          "Responsive Development",
-          "E-commerce Solutions",
-          "Content Management Systems",
-          "Performance Optimization",
+        title: "WordPress Website Development in Australia",
+        // heading: "eCommerce Website Development in Australia",
+       serviceBodyData: [
+      {
+        imageUrl: "/Services/Rectangle_52.webp",
+        description: (
+          <>
+            <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
+              The World's Most Used Platform. Built the Right Way.
+            </h2>
+            <p>WordPress powers over 40% of the internet, but there's a massive difference between a WordPress site slapped together with a bought theme and one built properly from scratch. We build the second kind. Custom themes, clean code, fast load times, and a site your team can actually manage.</p>
+            {/* <ul className="mt-3">
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <div className="flex flex-col"><span className="font-semibold">More Than an Online Store: A Revenue Engine.</span>
+An eCommerce website is your best salesperson, the one who never calls in sick, works every hour of every day, and can handle thousands of customers at once. But only if it's built properly. 
+Custom eCommerce development means your store is built around your products, your customers, and how your business actually operates, not crammed into a generic template someone else's business already uses. Every feature, page, and checkout step is designed to reduce friction and increase the likelihood of a sale.
+Australian eCommerce is growing fast. Consumers expect fast loading, seamless mobile experiences, and a checkout process that doesn't make them think twice. We build stores that meet those expectations, and then some.
+</div>
+              </li>
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span className="font-semibold">Built Around Your Products & Customers</span>
+              </li>
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span className="font-semibold">
+                  Designed to Reduce Cart Abandonment
+                </span>
+              </li>
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span className="font-semibold">
+                  Secure Payments, Full Stop
+                </span>
+              </li>
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span className="font-semibold">
+                  Scales as You Grow
+                </span>
+              </li>
+            </ul> */}
+            <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
+  <a
+    className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15"
+    href="/contact"
+  >
+    Get a Free WordPress Quote
+  </a>
+  <span
+    aria-hidden="true"
+    className="h-10 w-px bg-white/30 max-sm:h-px max-sm:w-full"
+  />
+  <a
+    className="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/10"
+    href="/services"
+  >
+    See What We Build
+  </a>
+</div>
+          </>
+        ),
+      },
+      {
+        imageUrl: "/Services/Rectangle_52.webp",
+        description: (
+          <>
+            <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
+              What Is Custom WordPress Development
+            </h2>
+            <p>WordPress is powerful when created properly. The platform itself is not the problem. The problem is the way most WordPress sites get built: a pre-made theme downloaded from a marketplace, a bunch of plugins stacked on top of each other, and a site that loads slowly, breaks under updates, and looks similar to twenty other businesses in your industry.
+Custom WordPress development means your site is built on WordPress's solid foundation, but everything on top of it, the theme, the layout, the functionality, is made specifically for your business, and completely reflects your brand. Your team gets complete control over content through WordPress's familiar interface. But the site itself is unique, fast, and built to perform rather than just exist.</p>
+            <ul className="mt-3">
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span className="font-semibold">Custom Theme Nothing Borrowed</span>
+              </li>
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span className="font-semibold">Your Team Manages the Content</span>
+              </li>
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span className="font-semibold">
+                  Plugin Power, Done Right
+                </span>
+              </li>
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span className="font-semibold">
+                  SEO-Friendly From the Start
+                </span>
+              </li>
+            </ul>
+            {/* <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
+  <a
+    className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15"
+    href="/contact"
+  >
+    Get a Free WordPress Quote
+  </a>
+  <span
+    aria-hidden="true"
+    className="h-10 w-px bg-white/30 max-sm:h-px max-sm:w-full"
+  />
+  <a
+    className="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/10"
+    href="/services"
+  >
+    See What We Build
+  </a>
+</div> */}
+          </>
+        ),
+      },
+      ],
+        easyExperienceData: {
+          eyebrow: <>Easy Experience</>,
+          headingLine1: <>Our WordPress Development Services</>,
+          headingLine2: <div className="text-sm">WordPress development involves a lot more technicalities than building a site and handing it over. Below is a mention of what exactly we offer and what each service does for your business in the long term.</div>,
+          cards: [
+            {
+              title: "Custom WordPress Design & Build",
+              description:
+                <>A WordPress site built from scratch, with a custom theme, custom layout, and nothing borrowed. Our designers will design every page around your brand and customers, then develop it on a clean, well-structured WordPress foundation.<br />
+Your team gets a site that looks genuinely unique and a CMS they can manage without needing a developer on standby for every content update.
+</>,
+              icon: (<CgWebsite color="#4C8C74" size={40} />),
+            },
+            {
+              title: "Mobile Responsiveness & Speed",
+              description:
+                <>Have an existing WordPress site that's slow, breaking on mobile, or failing Core Web Vitals? Our team will audit and resolve it, without discarding what's working. Speed optimisation, responsive fixes, caching setup, image compression, and performance tuning.<br />
+With that, we also offer end-to-end ongoing maintenance, security patches, plugin updates, uptime monitoring, and technical support so your site stays healthy without you having to manage it.
+</>,
+              icon: (<IoSpeedometerOutline color="#4C8C74" size={40} />),
+            },
+            {
+              title: "WordPress SEO Services",
+              description:
+                <>WordPress has excellent SEO potential, but potential isn't the same as performance. We build the full SEO picture: technical audit, keyword research and architecture, on page optimisation, schema markup, local SEO for Australian businesses, and ongoing ranking campaigns.<br />
+A well-optimised WordPress site compounds over time, building authority, ranking for more terms, and delivering organic traffic that doesn't require ongoing ad spend.
+</>,
+              icon: (<TbSeo color="#4C8C74" size={40} />),
+            },
+            {
+              title: "UI/UX Enhancement & CRO",
+              description:
+                <>Traffic that doesn't convert is expensive traffic. If your WordPress site has visitors but not enquiries or sales, the problem is almost always UX, and it's fixable. We audit the full user journey, identify where people are dropping off, and redesign those areas to reduce friction and increase conversions.</>,
+              icon: (<MdViewQuilt color="#4C8C74" size={40} />),
+            },
+          ],
+        },
+        ctaData: {
+        badgeText: "Free Magento Consultation",
+        title: "Ready to Build a Magento Store ",
+        highlightedTitle: "That Actually Scales?",
+        description:
+        "Tell us about your catalogue, your requirements, and your goals. We'll tell you exactly what's involved and what it'll cost, before you commit to anything.",
+        primaryAction: {
+          label: "Book a Free Strategy",
+          href: "/contact",
+        },
+        secondaryAction: {
+          label: "Call View Packages",
+          href: "/services",
+        },
+        trustItems: [
         ],
-        experienceCardData: [
-          {
-            title: "End-to-End Support, Hosting & Maintenance",
-            description:
-              "We take care of everything behind the scenes. From secure hosting and regular updates to ongoing maintenance and performance improvements, we ensure your website stays fast, secure and running smoothly.",
-            svgelement: (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="50"
-                height="50"
-                viewBox="0 0 50 50"
-                fill="none"
-                className="transform translate-x-3.5 translate-y-3.5"
-              >
-                <path
-                  d="M4.16699 25.0545C4.16699 35.7758 12.2235 44.6105 22.5978 45.8048C24.1286 45.9811 25.6124 45.3285 26.702 44.2361C28.0634 42.8712 28.0634 40.6582 26.702 39.2933C25.6124 38.2008 24.7242 36.5712 25.5459 35.2643C28.8306 30.0401 45.8337 42.0376 45.8337 25.0545C45.8337 13.5185 36.5063 4.16675 25.0003 4.16675C13.4944 4.16675 4.16699 13.5185 4.16699 25.0545Z"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <circle
-                  cx="36.458"
-                  cy="23.9583"
-                  r="3.125"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <circle
-                  cx="13.542"
-                  cy="23.9583"
-                  r="3.125"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M23.0937 14.5828C23.0937 16.3087 21.6946 17.7078 19.9687 17.7078C18.2429 17.7078 16.8438 16.3087 16.8438 14.5828C16.8438 12.8569 18.2429 11.4578 19.9687 11.4578C21.6946 11.4578 23.0937 12.8569 23.0937 14.5828Z"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M33.333 14.5833C33.333 16.3091 31.9339 17.7083 30.208 17.7083C28.4821 17.7083 27.083 16.3091 27.083 14.5833C27.083 12.8574 28.4821 11.4583 30.208 11.4583C31.9339 11.4583 33.333 12.8574 33.333 14.5833Z"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-              </svg>
-            ),
-          },
-          {
-            title: "Fully Custom Design & Conversion-Focused Pages",
-            description:
-              "We design fully custom websites tailored to your brand and built with purpose. Every page is carefully crafted to guide users smoothly, encourage engagement and drive meaningful actions. No templates, no limitations, just thoughtful design focused on performance.",
-            svgelement: (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="50"
-                height="50"
-                viewBox="0 0 50 50"
-                fill="none"
-                className="transform translate-x-4 translate-y-4"
-              >
-                <circle
-                  cx="18.7503"
-                  cy="12.5001"
-                  r="8.33333"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M31.25 18.75C34.7018 18.75 37.5 15.9518 37.5 12.5C37.5 9.04822 34.7018 6.25 31.25 6.25"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <ellipse
-                  cx="18.7503"
-                  cy="35.4166"
-                  rx="14.5833"
-                  ry="8.33333"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M37.5 29.1667C41.1547 29.9682 43.75 31.9979 43.75 34.3751C43.75 36.5195 41.6381 38.3811 38.5417 39.3135"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-              </svg>
-            ),
-          },
-        ],
+      },
         strategicCardData: [
           {
             title: "Custom Website Design",
@@ -3451,92 +3760,140 @@ export const services = [
             ),
           },
         ],
+        processHeading: <>From Consultation to Live Site in Three Clear Steps</>,
+        processPara: (
+          <>
+          </>
+        ),
         processCardData: [
           {
             image: "/Services/01.svg",
-            heading: "Book a Strategy Call",
-            paragraph:
-              "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
+            heading: "Consultation, Strategy & Project Plan",
+            paragraph: (
+              <>
+                We start with a proper conversation, your business goals, your audience, your competitors, and what your current site is failing to deliver. From that, we build a detailed project plan: site structure, page goals, design direction, plugin requirements, SEO foundations, and CMS training needs. You review and approve the plan before design begins. No guesswork, no assumptions.
+              </>
+            ),
           },
           {
             image: "/Services/02.svg",
-            heading: "Website Audit & Strategy",
-            paragraph:
-              "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
+            heading: "Design, Prototype & Development",
+            paragraph: (
+              <>
+                Wireframes first, the site structure and layout, before any visual design. Then design mockups you review and approve. Then, development on a custom WordPress theme with clean code, proper plugin setup, and full mobile responsiveness. You get access to a staging site for review before anything goes live. Changes happen here, so launch day is smooth.
+              </>
+            ),
           },
           {
             image: "/Services/03.svg",
-            heading: "Build, Launch & Optimize",
-            paragraph:
-              "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
+            heading: "Launch, Training & Ongoing Support",
+            paragraph: (
+              <>
+                Post-launch, we run full performance checks, verify SEO setup, confirm analytics, and handle any immediate fixes fast. We also provide CMS training so your team knows exactly how to manage your new WordPress site, adding pages, updating content, and managing blog posts, without needing us for every small change. Then we stay available for ongoing support.
+              </>
+            ),
           },
         ],
         pricingCardData: [
-          {
-            title: "Basic Website Package",
-            price: "$229",
-            discountedFrom: "$499",
-            includes: [
-              "2 Custom Logo Design Concepts",
-              "1 Dedicated Designer",
-              "4 REVISIONS",
-              "48 to 72 hours TAT",
-              "100% Unique Design Guarantee",
-              "100% Satisfaction Guarantee",
-              "100% Ownership Rights",
-              "100% Money Back Guarantee",
-            ],
-          },
-          {
-            title: "Basic Website Package",
-            price: "$229",
-            discountedFrom: "$499",
-            includes: [
-              "5 Custom Logo Design Concepts",
-              "By 2 Designers",
-              "UNLIMITED Revisions",
-              "48 to 72 hours TAT",
-              "100% Unique Design Guarantee",
-              "100% Satisfaction Guarantee",
-              "100% Ownership Rights",
-              "100% Money Back Guarantee",
-            ],
-          },
-          {
-            title: "Basic Website Package",
-            price: "$229",
-            discountedFrom: "$499",
-            includes: [
-              "UNLIMITED Logo Design Concepts",
-              "By 4 Designers",
-              "UNLIMITED Revisions",
-              "Stationary Design (Business Card, Letterhead, Envelope)",
-              "48 to 72 hours TAT",
-              "FREE MS Word Letterhead",
-              "All Final Files Format (AI, PSD, EPS, PNG, GIF, jpeg, PDF)",
-            ],
-          },
+      {
+        title: "Basic Website Package",
+        price: "$229",
+        discountedFrom: "$499",
+        includes: [
+          "2 Custom Logo Design Concepts",
+          "1 Dedicated Designer",
+          "4 REVISIONS",
+          "48 to 72 hours TAT",
+          "100% Unique Design Guarantee",
+          "100% Satisfaction Guarantee",
+          "100% Ownership Rights",
+          "100% Money Back Guarantee",
         ],
+      },
+      {
+        title: "Basic Website Package",
+        price: "$229",
+        discountedFrom: "$499",
+        includes: [
+          "5 Custom Logo Design Concepts",
+          "By 2 Designers",
+          "UNLIMITED Revisions",
+          "48 to 72 hours TAT",
+          "100% Unique Design Guarantee",
+          "100% Satisfaction Guarantee",
+          "100% Ownership Rights",
+          "100% Money Back Guarantee",
+        ],
+      },
+      {
+        title: "Basic Website Package",
+        price: "$229",
+        discountedFrom: "$499",
+        includes: [
+          "UNLIMITED Logo Design Concepts",
+          "By 4 Designers",
+          "UNLIMITED Revisions",
+          "Stationary Design (Business Card, Letterhead, Envelope)",
+          "48 to 72 hours TAT",
+          "FREE MS Word Letterhead",
+          "All Final Files Format (AI, PSD, EPS, PNG, GIF, jpeg, PDF)",
+        ],
+      },
+        ],
+        customplanData: {
+          heading: "Why WordPress Stands Out",
+          buttonText: "Book a consultation call to create your perfect plan",
+          body: (
+            <>
+              <span className="font-semibold">What a Properly Built WordPress Site Actually Delivers</span>
+              <p>Every WordPress site we build is engineered around your audience, goals, and the trust signals your visitors need before they pick up the phone or fill in a form. That's what makes your site unique and performs from one that just takes up digital space.</p>
+              <ul className="list-disc list-inside mt-2">
+                <li>Custom Design That Reflects Your Brand</li>
+                <li>Mobile-First, Fully Responsive</li>
+                <li>Fast Load Times That Hold Rankings</li>
+                <li>SEO Built Into the Foundation</li>
+                <li>Secure by Design</li>
+                <li>Integrates With Everything</li>
+              </ul>
+            </>
+          ),
+          rightContent: <><h3 className="text-2xl text-white mt-3">Why Work With Us</h3>
+          <p className="text-sm"></p>
+          <ul className="list-disc list-inside mt-1 text-sm">
+            <li>Strategy Before Design</li>
+            <li>Built for Australian Audiences</li>
+            <li>One In-House Team Throughout</li>
+            <li>Conversion-First Thinking</li>
+            <li>CMS Training Included</li>
+            <li>No Lock-In, Full Ownership</li>
+          </ul></>,
+          miniTagData: <></>,
+        },
         faqData: [
           {
-            question: "How to use this component?",
+            question: "What's the difference between custom WordPress development and a theme?",
             answer:
-              "Import the FAQ component and place it in your page. Click any question to expand or collapse the answer.",
+              "A theme gives you a pre designed layout with limitations. Custom WordPress development is built specifically for your business, offering better performance, flexibility, and a unique design.",
           },
           {
-            question: "Are there any other components available?",
+            question: "How much does custom WordPress development cost in Australia?",
             answer:
-              "Yes — check the Components section of the repo or documentation for more reusable UI pieces.",
+              "Pricing depends on the scope. We provide a clear, detailed quote after a free strategy call, with no hidden costs.",
           },
           {
-            question: "Are components responsive?",
+            question: "How long does it take to build a custom WordPress website?",
             answer:
-              "Yes, components are designed to be responsive across screen sizes.",
+              "Most custom sites take a few weeks. More complex projects may take longer. Timelines are based on your actual requirements.",
           },
           {
-            question: "Can I customize the components?",
+            question: "Will I be able to manage the site myself?",
             answer:
-              "Yes, pass props or override styles to adapt components to your design.",
+              "Yes. We provide training so you can easily update content, pages, and images without needing a developer.",
+          },
+          {
+            question: "Do you offer ongoing support after launch?",
+            answer:
+              "Yes. We offer maintenance plans covering updates, security, performance, and technical support.",
           },
         ],
         portfolioData: [
@@ -3567,6 +3924,13 @@ export const services = [
         ],
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
+        contactData: {
+        heading: (<>Let's Build Your WordPress Site</>),
+        body: (<><h3 className="text-2xl font-semibold">40% of the Internet Runs WordPress.<br />Make Sure Yours Runs It Well.</h3>
+        <p>Get in touch today, and one of our WordPress specialists will get back to you within one business day. No scripts, no pressure. Just a straight conversation about what your site needs to do.</p>
+        </>),
+        buttonText: "Book a Free Call",
+      },
       },
     ],
   },
@@ -8482,556 +8846,213 @@ Get in touch today, and one of our performance marketing specialists will get ba
     // footnote:
     //   "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
     subcategory: [
+      // Google Ads
       {
         slug: "google-ads",
-        title: "Google Ads",
-        heading: "Web Development That Accelerates something",
-        imageUrl: "/Services/Rectangle_52.png",
-        description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
-        points: [
-          "Custom Website Design",
-          "Responsive Development",
-          "E-commerce Solutions",
-          "Content Management Systems",
-          "Performance Optimization",
-        ],
-        experienceCardData: [
-          {
-            title: "End-to-End Support, Hosting & Maintenance",
-            description:
-              "We take care of everything behind the scenes. From secure hosting and regular updates to ongoing maintenance and performance improvements, we ensure your website stays fast, secure and running smoothly.",
-            svgelement: (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="50"
-                height="50"
-                viewBox="0 0 50 50"
-                fill="none"
-                className="transform translate-x-3.5 translate-y-3.5"
-              >
-                <path
-                  d="M4.16699 25.0545C4.16699 35.7758 12.2235 44.6105 22.5978 45.8048C24.1286 45.9811 25.6124 45.3285 26.702 44.2361C28.0634 42.8712 28.0634 40.6582 26.702 39.2933C25.6124 38.2008 24.7242 36.5712 25.5459 35.2643C28.8306 30.0401 45.8337 42.0376 45.8337 25.0545C45.8337 13.5185 36.5063 4.16675 25.0003 4.16675C13.4944 4.16675 4.16699 13.5185 4.16699 25.0545Z"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <circle
-                  cx="36.458"
-                  cy="23.9583"
-                  r="3.125"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <circle
-                  cx="13.542"
-                  cy="23.9583"
-                  r="3.125"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M23.0937 14.5828C23.0937 16.3087 21.6946 17.7078 19.9687 17.7078C18.2429 17.7078 16.8438 16.3087 16.8438 14.5828C16.8438 12.8569 18.2429 11.4578 19.9687 11.4578C21.6946 11.4578 23.0937 12.8569 23.0937 14.5828Z"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M33.333 14.5833C33.333 16.3091 31.9339 17.7083 30.208 17.7083C28.4821 17.7083 27.083 16.3091 27.083 14.5833C27.083 12.8574 28.4821 11.4583 30.208 11.4583C31.9339 11.4583 33.333 12.8574 33.333 14.5833Z"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-              </svg>
-            ),
-          },
-          {
-            title: "Fully Custom Design & Conversion-Focused Pages",
-            description:
-              "We design fully custom websites tailored to your brand and built with purpose. Every page is carefully crafted to guide users smoothly, encourage engagement and drive meaningful actions. No templates, no limitations, just thoughtful design focused on performance.",
-            svgelement: (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="50"
-                height="50"
-                viewBox="0 0 50 50"
-                fill="none"
-                className="transform translate-x-4 translate-y-4"
-              >
-                <circle
-                  cx="18.7503"
-                  cy="12.5001"
-                  r="8.33333"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M31.25 18.75C34.7018 18.75 37.5 15.9518 37.5 12.5C37.5 9.04822 34.7018 6.25 31.25 6.25"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <ellipse
-                  cx="18.7503"
-                  cy="35.4166"
-                  rx="14.5833"
-                  ry="8.33333"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M37.5 29.1667C41.1547 29.9682 43.75 31.9979 43.75 34.3751C43.75 36.5195 41.6381 38.3811 38.5417 39.3135"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-              </svg>
-            ),
-          },
-        ],
-        strategicCardData: [
-          {
-            title: "Custom Website Design",
-            desc: "Understand your vision, business goals, and target audience to create a clear project roadmap.",
-            svg: (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="25"
-                height="25"
-                viewBox="0 0 50 50"
-                fill="none"
-              >
-                <path
-                  d="M4.1665 22.9167C4.1665 15.0599 4.1665 11.1316 6.60728 8.69078C9.04806 6.25 12.9764 6.25 20.8332 6.25H29.1665C37.0232 6.25 40.9516 6.25 43.3924 8.69078C45.8332 11.1316 45.8332 15.0599 45.8332 22.9167V27.0833C45.8332 34.9401 45.8332 38.8684 43.3924 41.3092C40.9516 43.75 37.0232 43.75 29.1665 43.75H20.8332C12.9764 43.75 9.04806 43.75 6.60728 41.3092C4.1665 38.8684 4.1665 34.9401 4.1665 27.0833V22.9167Z"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M31.25 43.75L31.25 6.25"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M12.4998 29.1666L10.4165 31.25L12.4998 33.3333M21.8748 33.3333L23.9582 35.4166L21.8748 37.5M18.7498 29.1666L15.6248 37.5"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-              </svg>
-            ),
-          },
-          {
-            title: "E-commerce Website Development",
-            desc: "Iteratively develop robust, scalable websites with regular testing and your feedback at every stage.",
-            svg: (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="25"
-                height="25"
-                viewBox="0 0 50 50"
-                fill="none"
-              >
-                <path
-                  d="M45.8332 45.8334H4.1665"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M41.6665 45.8333V22.9166"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M8.3335 45.8333V22.9166"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M34.4332 4.16663H15.5673C13.0614 4.16663 11.8085 4.16663 10.8016 4.78891C9.7947 5.4112 9.23437 6.53186 8.11372 8.77318L4.16699 18.75C4.16699 21.0511 6.03229 22.9166 8.33348 22.9166C10.6347 22.9166 12.5001 21.0511 12.5001 18.75C12.5001 21.0511 14.3656 22.9166 16.6668 22.9166C18.968 22.9166 20.8335 21.0511 20.8335 18.75C20.8335 21.0511 22.699 22.9166 25.0001 22.9166C27.3013 22.9166 29.1668 21.0511 29.1668 18.75C29.1668 21.0511 31.0323 22.9166 33.3335 22.9166C35.6347 22.9166 37.5001 21.0511 37.5001 18.75C37.5001 21.0511 39.3656 22.9166 41.6668 22.9166C43.968 22.9166 45.8335 21.0511 45.8335 18.75L41.8868 8.77318L41.8867 8.77314C40.7661 6.53185 40.2058 5.4112 39.1989 4.78891C38.192 4.16663 36.9391 4.16663 34.4332 4.16663Z"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M19.7915 44.7917V38.5417C19.7915 36.5946 19.7915 35.621 20.2102 34.8959C20.4845 34.4208 20.8789 34.0263 21.354 33.752C22.0792 33.3334 23.0527 33.3334 24.9998 33.3334C26.947 33.3334 27.9205 33.3334 28.6457 33.752C29.1207 34.0263 29.5152 34.4208 29.7895 34.8959C30.2082 35.621 30.2082 36.5946 30.2082 38.5417V44.7917"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-              </svg>
-            ),
-          },
-          {
-            title: "Magento Development",
-            desc: "Design modern, user-centric interfaces for an exceptional digital experience.",
-            svg: (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="25"
-                height="25"
-                viewBox="0 0 50 50"
-                fill="none"
-              >
-                <path
-                  d="M25.0003 45.8333C36.5063 45.8333 45.8337 36.5059 45.8337 25C45.8337 13.494 36.5063 4.16663 25.0003 4.16663C13.4944 4.16663 4.16699 13.494 4.16699 25C4.16699 36.5059 13.4944 45.8333 25.0003 45.8333Z"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M32.292 18.75L32.6494 19.1074C35.4272 21.8852 36.8161 23.2741 36.8161 25C36.8161 26.7259 35.4272 28.1148 32.6494 30.8926L32.292 31.25"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M27.6963 14.9382L25.0003 25L22.3042 35.0617"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M17.7087 18.75L17.3512 19.1074C14.5735 21.8852 13.1846 23.2741 13.1846 25C13.1846 26.7259 14.5735 28.1148 17.3512 30.8926L17.7087 31.25"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-              </svg>
-            ),
-          },
-          {
-            title: "Wordpress Development",
-            desc: "Design modern, user-centric interfaces for an exceptional digital experience.",
-            svg: (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="25"
-                height="25"
-                viewBox="0 0 52 52"
-                fill="none"
-              >
-                <circle
-                  cx="26"
-                  cy="26"
-                  r="25"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M4.5166 13.8746H6.74371M14.3476 13.8746H6.74371M6.74371 13.8746L18.8623 47.0621L27.6542 23.3794M27.6542 23.3794L24.2483 13.8746M27.6542 23.3794L36.2877 47.0621L45.0166 23.3794M24.2483 13.8746H18.3078M24.2483 13.8746H32.8026M45.0166 23.3794L45.9508 20.8448C47.1125 16.6468 47.9785 8.42521 42.1489 9.12223C39.7836 9.67667 37.0457 13.3043 45.0166 23.3794Z"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-              </svg>
-            ),
-          },
-          {
-            title: "Opencart",
-            desc: "Thoroughly test for responsiveness, performance, and security before seamless launch and handover.",
-            svg: (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="25"
-                height="25"
-                viewBox="0 0 50 50"
-                fill="none"
-              >
-                <path
-                  d="M2.01594 9.46583C4.54545 13.647 7.6255 15.745 13.2351 17.1287C17.1632 18.0959 20.8236 18.4084 29.1412 18.4828C33.6199 18.5125 36.1643 18.6018 37.3993 18.7506C42.5178 19.3904 43.8867 20.5808 42.3541 23.1252C42.0863 23.5716 40.8216 25.0595 39.5568 26.3986C36.6256 29.5233 35.7179 30.55 34.9442 31.6809C34.468 32.3355 34.3936 32.529 34.6168 32.4099C34.7805 32.3207 34.9739 32.1719 35.0335 32.0826C35.0781 31.9933 37.2059 30.1334 39.7651 27.961C46.4906 22.2026 48.4101 20.2534 48.916 18.6613C49.1689 17.8876 48.916 17.1585 48.2167 16.6972C46.4609 15.5366 43.1874 15.1647 34.5127 15.12C17.6245 15.0159 11.5686 14.3612 6.8964 12.0995C5.00671 11.177 3.62292 10.2396 2.09034 8.79625L0.989258 7.78445L2.01594 9.46583Z"
-                  fill="#4C8C74"
-                />
-                <path
-                  d="M12.5803 35.5792C11.6875 35.9066 10.9882 36.5464 10.6013 37.3648C9.51512 39.6859 11.0923 42.2155 13.6218 42.2155C16.3597 42.2006 17.9666 39.3437 16.5531 37.0523C15.7347 35.728 13.9641 35.0584 12.5803 35.5792Z"
-                  fill="#4C8C74"
-                />
-                <path
-                  d="M28.2332 35.5643C26.9387 36.0554 26.0757 37.1267 25.9269 38.4361C25.8078 39.433 26.0757 40.3406 26.7304 41.0549C27.4595 41.8583 28.2481 42.2155 29.364 42.2155C32.2507 42.2155 33.7684 38.8229 31.8787 36.5761C31.0752 35.609 29.364 35.1477 28.2332 35.5643Z"
-                  fill="#4C8C74"
-                />
-              </svg>
-            ),
-          },
-          {
-            title: "Shopify Development",
-            desc: "Incorporate compelling, SEO-optimized content and visuals that support your brand story.",
-            svg: (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="25"
-                height="25"
-                viewBox="0 0 47 52"
-                fill="none"
-              >
-                <path
-                  d="M32.2417 51.0001L1 45.5771L5.12642 14.4532L11.9727 12.3993M32.2417 51.0001V6.31849M32.2417 51.0001L45.7994 47.5812L40.0227 9.73743H36.2501L32.2417 6.31849M32.2417 6.31849L28.6995 7.38117M11.9727 12.3993C12.4414 8.44675 15.0528 0.636051 21.7492 1.01331C22.9995 0.936865 25.4315 2.31595 25.1572 8.44384M11.9727 12.3993L18.565 10.4216M25.1572 8.44384L18.565 10.4216M25.1572 8.44384L28.6995 7.38117M18.565 10.4216C19.1941 7.63916 21.6313 2.19228 26.347 2.66385C27.2472 2.56359 28.9781 3.36669 28.6995 7.38117"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M16.8005 16.8122C13.8515 18.2867 11.2471 21.1821 11.2471 24.8013C11.2471 27.2141 11.2396 28.563 13.5854 30.8418C16.8025 33.9919 18.3111 35.4209 16.0323 36.542C15.0269 36.676 12.0514 36.1154 11.2471 35.7132C10.1077 35.043 10.2013 35.8717 9.7321 36.542C7.92248 39.424 10.8045 41.9708 16.0323 42.0379C18.9813 42.1049 20.4835 41.5844 22.159 39.7078C23.7676 37.8981 23.523 37.0668 23.523 34.2518C23.523 30.7666 22.8686 30.3758 18.3111 26.6226C15.0939 23.9416 16.5685 21.3948 21.193 21.8639C23.6059 22.065 23.874 21.9309 24.5442 20.1213C24.8793 19.049 25.2144 17.7755 25.2144 17.3064C25.2144 15.9659 19.6155 15.4047 16.8005 16.8122Z"
-                  fill="#4C8C74"
-                />
-              </svg>
-            ),
-          },
-          {
-            title: "Woocommerce Development",
-            desc: "Provide maintenance, updates, and performance enhancements to keep your site running at its best.",
-            svg: (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="25"
-                height="25"
-                viewBox="0 0 86 52"
-                fill="none"
-              >
-                <path
-                  d="M81.4189 1L81.419 0H81.4189V1ZM81.4189 42.8379V43.8379H81.419L81.4189 42.8379ZM52.7529 42.8379V41.8379C52.4199 41.8379 52.1088 42.0037 51.923 42.28C51.7372 42.5564 51.7012 42.9071 51.827 43.2155L52.7529 42.8379ZM56.0811 51L55.5933 51.873C55.9642 52.0802 56.4254 52.0305 56.7436 51.749C57.0618 51.4675 57.1674 51.0158 57.007 50.6224L56.0811 51ZM41.4717 42.8379L41.9594 41.9649C41.8103 41.8816 41.6424 41.8379 41.4717 41.8379V42.8379ZM39.46 6.21875L40.1671 5.51164C40.1632 5.50775 40.1593 5.50389 40.1553 5.50006L39.46 6.21875ZM36.0469 5.62891L35.5479 4.76228C35.5434 4.76489 35.5389 4.76753 35.5344 4.77021L36.0469 5.62891ZM31.0264 21.6426L30.0365 21.5006L30.0357 21.5059L31.0264 21.6426ZM30.4355 25.2197L31.0807 25.9838C31.1021 25.9657 31.1228 25.9467 31.1427 25.9268L30.4355 25.2197ZM27.6465 16.1299L26.6731 16.3589L26.6733 16.3598L27.6465 16.1299ZM26.1699 11.5684L25.4479 12.2603C25.4661 12.2792 25.485 12.2975 25.5046 12.315L26.1699 11.5684ZM22.8555 11.8633L22.1357 11.169C22.1306 11.1743 22.1256 11.1796 22.1207 11.185L22.8555 11.8633ZM18.3926 19.707L17.5073 19.2419L17.5057 19.245L18.3926 19.707ZM14.3232 26.8604L15.0303 26.1532C15.0165 26.1394 15.0022 26.126 14.9876 26.1129L14.3232 26.8604ZM11.5342 13.3076L12.52 13.1398L12.5199 13.1391L11.5342 13.3076ZM7.92383 6.71191L8.08399 7.69901L8.08584 7.6987L7.92383 6.71191ZM5.29883 9.13965L4.29883 9.13947V9.13965H5.29883ZM8.54785 27.1885L7.57146 27.4046L7.57308 27.4117L8.54785 27.1885ZM20.1318 28.7314L21.024 29.1832L21.0263 29.1787L20.1318 28.7314ZM23.3799 22.6602V21.6602C23.3642 21.6602 23.3485 21.6605 23.3328 21.6613L23.3799 22.6602ZM24.2988 25.0225L23.3431 25.3166C23.3445 25.3213 23.346 25.3261 23.3476 25.3308L24.2988 25.0225ZM31.7158 37.5586L31.1672 38.3947L31.1726 38.3982L31.7158 37.5586ZM35.0303 37.3945L35.7662 38.0716C35.7701 38.0674 35.7739 38.0631 35.7777 38.0589L35.0303 37.3945ZM35.8506 31.2246L34.8514 31.1842L34.8512 31.1901L35.8506 31.2246ZM39.5586 10.3545L38.6473 9.94254L38.6427 9.95296L39.5586 10.3545ZM53.0791 9.36914L53.3655 8.41103L53.3621 8.41003L53.0791 9.36914ZM47.8281 9.40234L47.5394 8.44486L47.5275 8.44861L47.8281 9.40234ZM40.5762 18.7549L41.5424 19.0125L41.5433 19.009L40.5762 18.7549ZM40.6748 28.3047L41.6142 27.9619L41.6118 27.9553L40.6748 28.3047ZM44.875 33.5225L44.4278 34.417L44.4388 34.4223L44.875 33.5225ZM52.3896 33.5879L52.8548 34.4731L52.8554 34.4728L52.3896 33.5879ZM57.542 27.7461L58.4482 28.169L58.4489 28.1675L57.542 27.7461ZM74.5078 9.40234L74.2232 10.361L74.2237 10.3611L74.5078 9.40234ZM69.1592 9.40234L68.8746 8.44365L68.8651 8.44656L69.1592 9.40234ZM61.9062 18.9521L62.874 19.204L62.8747 19.2012L61.9062 18.9521ZM61.9062 27.7793L62.8661 27.4987L62.8649 27.4947L61.9062 27.7793ZM70.1104 34.3096L70.1103 35.3096H70.1104V34.3096ZM73.7207 33.6533L73.2818 32.7547L73.2735 32.7589L73.7207 33.6533ZM80.6777 18.6895L79.6797 18.7514L79.6798 18.7531L80.6777 18.6895ZM68.7324 17.0488L69.5624 17.6067L69.5694 17.5961L68.7324 17.0488ZM73.4902 15.2109L72.758 15.8921L72.7632 15.8976L73.4902 15.2109ZM74.7051 23.5459L75.6627 23.8341L75.664 23.8296L74.7051 23.5459ZM69.1592 28.5342L68.7401 29.4422L68.7517 29.4474L69.1592 28.5342ZM66.9277 23.1855H65.9277V23.1856L66.9277 23.1855ZM46.6465 18.1973L45.757 17.7403L45.755 17.7442L46.6465 18.1973ZM52.3242 15.4404L51.5603 16.0858L51.5618 16.0876L52.3242 15.4404ZM51.0117 27.418L51.7107 28.1332L51.7111 28.1328L51.0117 27.418ZM45.5312 22.9551H46.5312C46.5312 22.9502 46.5312 22.9453 46.5311 22.9404L45.5312 22.9551ZM81.4189 1L81.4188 2C82.8493 2.00015 84.0088 3.15993 84.0088 4.59082H85.0088H86.0088C86.0088 2.05586 83.9544 0.000258327 81.419 0L81.4189 1ZM85.0088 4.59082H84.0088V39.2471H85.0088H86.0088V4.59082H85.0088ZM85.0088 39.2471H84.0088C84.0088 40.678 82.8493 41.8377 81.4188 41.8379L81.4189 42.8379L81.419 43.8379C83.9544 43.8376 86.0088 41.782 86.0088 39.2471H85.0088ZM81.4189 42.8379V41.8379H52.7529V42.8379V43.8379H81.4189V42.8379ZM52.7529 42.8379L51.827 43.2155L55.1551 51.3776L56.0811 51L57.007 50.6224L53.6789 42.4603L52.7529 42.8379ZM56.0811 51L56.5688 50.127L41.9594 41.9649L41.4717 42.8379L40.9839 43.7109L55.5933 51.873L56.0811 51ZM41.4717 42.8379V41.8379H4.59082V42.8379V43.8379H41.4717V42.8379ZM4.59082 42.8379V41.8379C3.16005 41.8379 2 40.6778 2 39.2471H1H0C0 41.7824 2.05549 43.8379 4.59082 43.8379V42.8379ZM1 39.2471H2V4.59082H1H0V39.2471H1ZM1 4.59082H2C2 3.16006 3.16006 2 4.59082 2V1V0C2.05549 0 0 2.05549 0 4.59082H1ZM4.59082 1V2H81.4189V1V0H4.59082V1ZM39.46 6.21875L40.1553 5.50006C38.8773 4.26361 37.0849 3.87734 35.5479 4.76228L36.0469 5.62891L36.5458 6.49553C37.1744 6.1336 38.0081 6.2055 38.7646 6.93744L39.46 6.21875ZM36.0469 5.62891L35.5344 4.77021C34.8416 5.18369 34.2812 6.03281 33.8165 6.9509C33.3244 7.92302 32.8419 9.17703 32.3857 10.6295C31.4717 13.539 30.6329 17.3425 30.0365 21.5006L31.0264 21.6426L32.0162 21.7846C32.6011 17.7068 33.4193 14.0126 34.2938 11.2289C34.7317 9.83468 35.1762 8.69315 35.6009 7.8541C36.0529 6.96101 36.399 6.58332 36.5594 6.4876L36.0469 5.62891ZM31.0264 21.6426L30.0357 21.5059C29.9053 22.4519 29.7753 23.3207 29.6704 23.9579C29.6177 24.2779 29.5727 24.5315 29.5381 24.7046C29.5203 24.7932 29.5079 24.8475 29.5009 24.8746C29.4969 24.89 29.4989 24.8802 29.5071 24.8569C29.511 24.8459 29.5223 24.8146 29.542 24.7738C29.5512 24.7548 29.6078 24.6333 29.7284 24.5126L30.4355 25.2197L31.1427 25.9268C31.2674 25.802 31.3285 25.6735 31.3426 25.6444C31.3671 25.5936 31.3836 25.5493 31.3931 25.5224C31.4125 25.4674 31.4271 25.4145 31.4371 25.3759C31.458 25.295 31.479 25.1981 31.4992 25.0969C31.5405 24.8906 31.5898 24.6109 31.6438 24.2827C31.7523 23.6235 31.8849 22.7366 32.017 21.7792L31.0264 21.6426ZM30.4355 25.2197L29.7904 24.4556C29.9241 24.3428 30.103 24.2543 30.3143 24.231C30.5167 24.2087 30.6847 24.2532 30.798 24.3009C30.9975 24.3848 31.1072 24.5114 31.1286 24.5357C31.1883 24.6037 31.2044 24.6471 31.178 24.5962C31.1389 24.5206 31.0713 24.3652 30.9766 24.1142C30.7922 23.6257 30.5501 22.8972 30.2797 22.0166C29.7403 20.2603 29.1064 17.9605 28.6197 15.9L27.6465 16.1299L26.6733 16.3598C27.1708 18.4659 27.8164 20.8083 28.3678 22.6038C28.6428 23.4992 28.8991 24.274 29.1055 24.8206C29.2061 25.0871 29.307 25.3322 29.4019 25.5155C29.4425 25.5941 29.5171 25.7316 29.6256 25.8552C29.6714 25.9073 29.8032 26.0521 30.0222 26.1443C30.1452 26.1961 30.3223 26.2422 30.5333 26.219C30.753 26.1948 30.9398 26.1027 31.0807 25.9838L30.4355 25.2197ZM27.6465 16.1299L28.6199 15.9008C28.3527 14.765 28.0505 13.664 27.7741 12.8049C27.6365 12.3772 27.5005 11.9946 27.3738 11.6921C27.3109 11.5418 27.2438 11.3957 27.1733 11.2673C27.1174 11.1655 27.0075 10.9753 26.8352 10.8218L26.1699 11.5684L25.5046 12.315C25.4062 12.2273 25.3814 12.1593 25.42 12.2296C25.444 12.2733 25.4807 12.3493 25.5291 12.4647C25.6249 12.6936 25.7412 13.0166 25.8702 13.4175C26.127 14.2156 26.4154 15.2637 26.6731 16.3589L27.6465 16.1299ZM26.1699 11.5684L26.8919 10.8765C26.235 10.191 25.282 10.0056 24.4704 10.0802C23.6432 10.1563 22.7682 10.5134 22.1357 11.169L22.8555 11.8633L23.5752 12.5575C23.8289 12.2946 24.2337 12.1104 24.6535 12.0718C25.089 12.0318 25.3502 12.1582 25.4479 12.2603L26.1699 11.5684ZM22.8555 11.8633L22.1207 11.185C21.9411 11.3796 21.6851 11.7787 21.4258 12.2012C21.1402 12.6666 20.7796 13.2808 20.3707 13.9975C19.5523 15.432 18.5295 17.2965 17.5073 19.2419L18.3926 19.707L19.2778 20.1722C20.2903 18.2452 21.302 16.4012 22.1079 14.9886C22.5112 14.2817 22.8602 13.6876 23.1304 13.2474C23.2658 13.0267 23.3779 12.8504 23.4651 12.7203C23.5638 12.5728 23.6001 12.531 23.5903 12.5416L22.8555 11.8633ZM18.3926 19.707L17.5057 19.245C15.4636 23.1646 14.5172 24.9839 14.0497 25.8028C13.9337 26.006 13.8598 26.125 13.8141 26.1917C13.7449 26.2927 13.7894 26.1991 13.9282 26.1064C14.0198 26.0452 14.2077 25.947 14.4673 25.9553C14.7328 25.9637 14.9194 26.0786 15.0112 26.15C15.0878 26.2096 15.1353 26.2691 15.1195 26.2507C15.1172 26.2481 15.1175 26.2483 15.1118 26.2418C15.1078 26.2371 15.1016 26.2299 15.0944 26.2217C15.0801 26.2055 15.058 26.1809 15.0303 26.1532L14.3232 26.8604L13.6161 27.5675C13.5969 27.5482 13.5767 27.5242 13.6047 27.5567C13.6127 27.566 13.6829 27.6506 13.7831 27.7285C13.8985 27.8183 14.1099 27.9449 14.4035 27.9543C14.6911 27.9634 14.9106 27.8553 15.0394 27.7693C15.2525 27.6269 15.3942 27.4239 15.4636 27.3228C15.5565 27.1873 15.6626 27.0115 15.7866 26.7944C16.2791 25.9317 17.2525 24.0594 19.2794 20.1691L18.3926 19.707ZM14.3232 26.8604L14.9876 26.1129C15.1165 26.2275 15.1739 26.344 15.174 26.3442C15.1871 26.3687 15.1903 26.3789 15.1841 26.3634C15.1724 26.334 15.1508 26.2722 15.1192 26.1675C15.0574 25.962 14.9778 25.6592 14.8826 25.265C14.6933 24.4805 14.455 23.386 14.1914 22.0985C13.6647 19.5259 13.0433 16.2143 12.52 13.1398L11.5342 13.3076L10.5484 13.4754C11.0752 16.5703 11.7006 19.9038 12.2321 22.4996C12.4976 23.7963 12.7412 24.9168 12.9384 25.7341C13.0366 26.1408 13.1264 26.4856 13.2041 26.7439C13.2424 26.871 13.283 26.9952 13.3255 27.1019C13.3464 27.1545 13.3745 27.2204 13.4104 27.2875C13.4334 27.3305 13.5115 27.4768 13.6589 27.6078L14.3232 26.8604ZM11.5342 13.3076L12.5199 13.1391C12.2493 11.5565 12.0215 10.3043 11.7968 9.32972C11.5758 8.37057 11.3404 7.59793 11.0252 7.02034C10.6884 6.40297 10.2223 5.9424 9.54945 5.74139C8.95484 5.56377 8.32173 5.6332 7.76182 5.72512L7.92383 6.71191L8.08584 7.6987C8.62526 7.61014 8.85775 7.6221 8.97701 7.65772C9.01797 7.66996 9.11408 7.69334 9.26959 7.97833C9.44681 8.3031 9.6341 8.85122 9.84794 9.77894C10.0582 10.6913 10.2776 11.892 10.5485 13.4762L11.5342 13.3076ZM7.92383 6.71191L7.76366 5.72482C6.91204 5.86301 6.08389 6.35132 5.47965 6.90633C5.16974 7.19098 4.8874 7.52126 4.67666 7.87909C4.47074 8.22872 4.29891 8.66372 4.29883 9.13947L5.29883 9.13965L6.29883 9.13982C6.29883 9.14355 6.29837 9.12415 6.31319 9.07841C6.32795 9.03286 6.35483 8.97072 6.39999 8.89404C6.49175 8.73823 6.63801 8.55799 6.83257 8.37928C7.23727 8.00757 7.72154 7.75782 8.08399 7.699L7.92383 6.71191ZM5.29883 9.13965H4.29883C4.29883 9.36039 4.34781 9.75433 4.40921 10.1895C4.47537 10.6584 4.57015 11.267 4.68578 11.9736C4.91724 13.388 5.23519 15.213 5.58237 17.1357C6.27586 20.9762 7.09106 25.2344 7.57149 27.4046L8.54785 27.1885L9.52421 26.9723C9.05296 24.8435 8.24365 20.6188 7.55054 16.7803C7.20443 14.8636 6.88857 13.0502 6.65953 11.6506C6.54492 10.9502 6.45279 10.358 6.38959 9.91006C6.35794 9.68576 6.33428 9.50272 6.31873 9.36299C6.31096 9.29315 6.30565 9.23803 6.30239 9.1964C6.29886 9.15135 6.29883 9.13568 6.29883 9.13965H5.29883ZM8.54785 27.1885L7.57308 27.4117C8.37767 30.9256 9.11431 33.6448 9.87908 35.5265C10.2607 36.4655 10.6721 37.2545 11.1415 37.8402C11.6116 38.4266 12.2166 38.9016 12.9889 39.005C13.7644 39.1089 14.4706 38.8064 15.0717 38.3577C15.6701 37.9112 16.259 37.2522 16.8531 36.4423C18.0439 34.819 19.4066 32.3769 21.024 29.1832L20.1318 28.7314L19.2397 28.2796C17.6247 31.4686 16.3252 33.7806 15.2405 35.2593C14.6968 36.0004 14.2446 36.4794 13.8755 36.7549C13.5093 37.0282 13.3217 37.0318 13.2543 37.0227C13.1836 37.0133 12.9964 36.9565 12.7021 36.5893C12.4071 36.2213 12.082 35.6348 11.7319 34.7735C11.0333 33.0546 10.326 30.4739 9.52262 26.9653L8.54785 27.1885ZM20.1318 28.7314L21.0263 29.1787C21.8599 27.5115 22.6341 26.0037 23.2148 24.9151C23.506 24.3691 23.7439 23.9373 23.9142 23.6459C24.0009 23.4976 24.061 23.4013 24.0969 23.3486C24.1171 23.3189 24.1145 23.3256 24.0944 23.3487C24.0861 23.3582 24.0507 23.399 23.9928 23.4458C23.9806 23.4557 23.7678 23.643 23.4269 23.659L23.3799 22.6602L23.3328 21.6613C22.9836 21.6777 22.7598 21.8707 22.7342 21.8915C22.6629 21.9492 22.6115 22.006 22.585 22.0366C22.5282 22.1019 22.4792 22.171 22.4438 22.2228C22.3686 22.3332 22.281 22.4767 22.1875 22.6367C21.9975 22.9618 21.7452 23.4206 21.4501 23.9738C20.8582 25.0834 20.0755 26.6081 19.2374 28.2842L20.1318 28.7314ZM23.3799 22.6602V23.6602C23.1558 23.6602 22.9886 23.5849 22.8993 23.5346C22.8072 23.4827 22.7444 23.4272 22.7114 23.3958C22.6469 23.3342 22.6112 23.2812 22.6049 23.272C22.5878 23.2469 22.59 23.2456 22.613 23.2921C22.6543 23.3758 22.7171 23.5204 22.7972 23.7253C22.9546 24.1285 23.1518 24.6952 23.3431 25.3166L24.2988 25.0225L25.2546 24.7284C25.0521 24.0701 24.839 23.4557 24.6601 22.9976C24.5719 22.7718 24.4849 22.5658 24.4062 22.4065C24.3692 22.3315 24.3189 22.2357 24.2581 22.1464C24.2299 22.105 24.1745 22.0276 24.0928 21.9495C24.057 21.9153 23.8009 21.6602 23.3799 21.6602V22.6602ZM24.2988 25.0225L23.3476 25.3308C24.1468 27.7964 25.5109 30.6535 26.9372 33.0669C27.6519 34.2761 28.3921 35.3907 29.0976 36.3004C29.7867 37.1889 30.4988 37.9561 31.1672 38.3946L31.7158 37.5586L32.2645 36.7225C31.8827 36.472 31.3354 35.9223 30.678 35.0746C30.0369 34.248 29.3432 33.207 28.659 32.0492C27.2875 29.7286 25.9933 27.0068 25.2501 24.7141L24.2988 25.0225ZM31.7158 37.5586L31.1726 38.3982C32.5777 39.3073 34.5937 39.3461 35.7662 38.0716L35.0303 37.3945L34.2943 36.7175C33.9574 37.0837 33.0854 37.2536 32.259 36.719L31.7158 37.5586ZM35.0303 37.3945L35.7777 38.0589C36.2289 37.5513 36.4354 36.9715 36.5666 36.0072C36.6937 35.0737 36.7684 33.6256 36.85 31.2591L35.8506 31.2246L34.8512 31.1901C34.7687 33.5818 34.6957 34.9232 34.5849 35.7375C34.4783 36.5209 34.3567 36.6471 34.2828 36.7302L35.0303 37.3945ZM35.8506 31.2246L36.8498 31.2651C37.1761 23.2059 38.6781 14.8533 40.4744 10.756L39.5586 10.3545L38.6427 9.95296C36.6983 14.388 35.1815 23.033 34.8514 31.1842L35.8506 31.2246ZM39.5586 10.3545L40.4698 10.7664C40.9914 9.61265 41.3761 8.66342 41.3582 7.81025C41.3372 6.81469 40.7942 6.1388 40.1671 5.51164L39.46 6.21875L38.7529 6.92586C39.3071 7.48008 39.3549 7.67427 39.3586 7.85234C39.3654 8.17281 39.2087 8.70076 38.6474 9.94257L39.5586 10.3545ZM53.0791 9.36914L53.3621 8.41003C52.3105 8.09971 51.411 7.92553 50.473 7.93043C49.5363 7.93532 48.6218 8.11848 47.5394 8.44494L47.8281 9.40234L48.1169 10.3598C49.1018 10.0627 49.812 9.93391 50.4834 9.93041C51.1536 9.92691 51.8459 10.0479 52.7961 10.3283L53.0791 9.36914ZM47.8281 9.40234L47.5275 8.44861C45.7564 9.00693 44.0838 10.3856 42.7235 12.136C41.3519 13.9007 40.2337 16.1235 39.609 18.5007L40.5762 18.7549L41.5433 19.009C42.1 16.8906 43.0983 14.9129 44.3026 13.3633C45.5181 11.7993 46.8808 10.7495 48.1288 10.3561L47.8281 9.40234ZM40.5762 18.7549L39.6099 18.4972C39.2479 19.8548 39.0919 21.8617 39.1087 23.7356C39.1252 25.5862 39.3113 27.5102 39.7378 28.6541L40.6748 28.3047L41.6118 27.9553C41.3164 27.163 41.1249 25.5427 41.1086 23.7177C41.0925 21.9161 41.2481 20.1162 41.5424 19.0125L40.5762 18.7549ZM40.6748 28.3047L39.7354 28.6475C40.6829 31.2442 42.3673 33.3866 44.4278 34.4169L44.875 33.5225L45.3222 32.628C43.8388 31.8863 42.4388 30.2216 41.6142 27.9619L40.6748 28.3047ZM44.875 33.5225L44.4388 34.4223C45.6863 35.0271 47.2348 35.3171 48.7095 35.3303C50.1771 35.3435 51.6932 35.0834 52.8548 34.4731L52.3896 33.5879L51.9245 32.7026C51.15 33.1096 49.9917 33.3418 48.7275 33.3304C47.4703 33.3191 46.2296 33.0678 45.3112 32.6226L44.875 33.5225ZM52.3896 33.5879L52.8554 34.4728C54.9632 33.3635 57.2307 30.7779 58.4482 28.169L57.542 27.7461L56.6358 27.3232C55.5562 29.6367 53.5572 31.8434 51.9239 32.703L52.3896 33.5879ZM57.542 27.7461L58.4489 28.1675C60.3718 24.0296 60.8039 19.6553 59.9247 16.0329C59.0458 12.4114 56.8165 9.44263 53.3655 8.41103L53.0791 9.36914L52.7927 10.3272C55.3797 11.1006 57.2194 13.3661 57.9812 16.5046C58.7427 19.6424 58.3873 23.5541 56.6351 27.3247L57.542 27.7461ZM74.5078 9.40234L74.7924 8.4437C73.6969 8.11847 72.781 7.93476 71.8335 7.93477C70.8859 7.93477 69.9701 8.11849 68.8746 8.44369L69.1592 9.40234L69.4438 10.361C70.4483 10.0628 71.1567 9.93477 71.8335 9.93477C72.5102 9.93476 73.2186 10.0628 74.2232 10.361L74.5078 9.40234ZM69.1592 9.40234L68.8651 8.44656C67.0962 8.99086 65.4202 10.406 64.0601 12.1934C62.6863 13.9988 61.5614 16.278 60.9378 18.7031L61.9062 18.9521L62.8747 19.2012C63.4325 17.032 64.4409 14.9957 65.6517 13.4045C66.8761 11.7954 68.2359 10.7327 69.4533 10.3581L69.1592 9.40234ZM61.9062 18.9521L60.9385 18.7003C60.5972 20.0119 60.4387 21.7871 60.4387 23.4765C60.4387 25.1578 60.5955 26.8776 60.9476 28.0639L61.9062 27.7793L62.8649 27.4947C62.5936 26.5808 62.4387 25.0849 62.4387 23.4765C62.4387 21.8763 62.5919 20.288 62.874 19.204L61.9062 18.9521ZM61.9062 27.7793L60.9464 28.0599C61.614 30.3437 62.7365 32.1714 64.3153 33.4269C65.8999 34.6869 67.8678 35.3095 70.1103 35.3096L70.1104 34.3096L70.1104 33.3096C68.251 33.3095 66.7403 32.8 65.5601 31.8615C64.3741 30.9183 63.4455 29.4809 62.8661 27.4987L61.9062 27.7793ZM70.1104 34.3096V35.3096C71.7945 35.3096 73.0535 35.105 74.1679 34.5477L73.7207 33.6533L73.2735 32.7589C72.5502 33.1205 71.6422 33.3096 70.1104 33.3096V34.3096ZM73.7207 33.6533L74.1596 34.5519C76.5541 33.3823 78.5253 30.9638 79.8412 28.1307C81.165 25.2805 81.884 21.8905 81.6757 18.6258L80.6777 18.6895L79.6798 18.7531C79.8651 21.6576 79.2221 24.7157 78.0273 27.2882C76.8245 29.8779 75.1204 31.8567 73.2818 32.7548L73.7207 33.6533ZM80.6777 18.6895L81.6758 18.6275C81.3635 13.596 78.8631 9.64981 74.7919 8.44355L74.5078 9.40234L74.2237 10.3611C77.2409 11.2551 79.4013 14.2662 79.6797 18.7514L80.6777 18.6895ZM68.7324 17.0488L69.5694 17.5961C70.3619 16.3841 71.0792 15.778 71.6076 15.5735C71.8514 15.4791 72.0371 15.476 72.1868 15.5133C72.3404 15.5515 72.5349 15.6522 72.7581 15.8921L73.4902 15.2109L74.2224 14.5298C73.7893 14.0642 73.2701 13.7219 72.67 13.5725C72.066 13.4222 71.4581 13.4868 70.8857 13.7083C69.7818 14.1356 68.7766 15.154 67.8955 16.5016L68.7324 17.0488ZM73.4902 15.2109L72.7632 15.8976C74.1052 17.3184 74.6387 20.2459 73.7462 23.2622L74.7051 23.5459L75.664 23.8296C76.6746 20.414 76.2225 16.6475 74.2172 14.5243L73.4902 15.2109ZM74.7051 23.5459L73.7475 23.2577C73.2858 24.7916 72.4502 26.0799 71.5707 26.8719C70.6417 27.7083 69.9357 27.7856 69.5667 27.621L69.1592 28.5342L68.7517 29.4474C70.2204 30.1027 71.7787 29.3759 72.9089 28.3581C74.0886 27.2959 75.1071 25.6801 75.6627 23.8341L74.7051 23.5459ZM69.1592 28.5342L69.5782 27.6262C69.2717 27.4847 68.8449 27.0371 68.4868 26.1769C68.1438 25.353 67.9278 24.2954 67.9277 23.1855L66.9277 23.1855L65.9277 23.1856C65.9278 24.5367 66.1877 25.8581 66.6404 26.9456C67.078 27.9968 67.7669 28.993 68.7401 29.4421L69.1592 28.5342ZM66.9277 23.1855H67.9277C67.9277 20.8412 68.3366 19.4304 69.5624 17.6067L68.7324 17.0488L67.9025 16.491C66.4375 18.6707 65.9277 20.4764 65.9277 23.1855H66.9277ZM46.6465 18.1973L47.536 18.6542C48.4197 16.9341 49.3108 16.0019 50.0082 15.6633C50.3322 15.5061 50.5834 15.49 50.7861 15.5381C50.9952 15.5878 51.2616 15.7322 51.5603 16.0858L52.3242 15.4404L53.0881 14.7951C52.5829 14.197 51.9673 13.763 51.2482 13.5923C50.5226 13.42 49.7995 13.5414 49.1348 13.8641C47.8547 14.4856 46.711 15.8835 45.757 17.7403L46.6465 18.1973ZM52.3242 15.4404L51.5618 16.0876C52.5129 17.208 52.9385 19.1439 52.7043 21.2704C52.4722 23.3781 51.6152 25.4285 50.3124 26.7032L51.0117 27.418L51.7111 28.1328C53.4271 26.4538 54.424 23.9265 54.6923 21.4893C54.9586 19.071 54.531 16.4949 53.0866 14.7933L52.3242 15.4404ZM51.0117 27.418L50.3128 26.7028C49.6788 27.3224 49.1468 27.5853 48.7568 27.6568C48.4018 27.7218 48.1021 27.6431 47.8194 27.4133C47.1706 26.8858 46.5312 25.4609 46.5312 22.9551H45.5312H44.5312C44.5312 25.6342 45.1882 27.8518 46.5578 28.9651C47.2842 29.5557 48.1741 29.7969 49.1174 29.624C50.0257 29.4575 50.9008 28.9246 51.7107 28.1332L51.0117 27.418ZM45.5312 22.9551L46.5311 22.9404C46.5148 21.8286 46.5436 21.2488 46.6684 20.7196C46.7938 20.1881 47.029 19.6518 47.538 18.6503L46.6465 18.1973L45.755 17.7442C45.2468 18.7442 44.908 19.4712 44.7219 20.2605C44.5351 21.0521 44.5149 21.8505 44.5314 22.9698L45.5312 22.9551Z"
-                  fill="#4C8C74"
-                />
-              </svg>
-            ),
-          },
-        ],
-        processCardData: [
-          {
-            image: "/Services/01.svg",
-            heading: "Book a Strategy Call",
-            paragraph:
-              "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
-          },
-          {
-            image: "/Services/02.svg",
-            heading: "Website Audit & Strategy",
-            paragraph:
-              "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
-          },
-          {
-            image: "/Services/03.svg",
-            heading: "Build, Launch & Optimize",
-            paragraph:
-              "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
-          },
-        ],
-        pricingCardData: [
-          {
-            title: "Basic Website Package",
-            price: "$229",
-            discountedFrom: "$499",
-            includes: [
-              "2 Custom Logo Design Concepts",
-              "1 Dedicated Designer",
-              "4 REVISIONS",
-              "48 to 72 hours TAT",
-              "100% Unique Design Guarantee",
-              "100% Satisfaction Guarantee",
-              "100% Ownership Rights",
-              "100% Money Back Guarantee",
-            ],
-          },
-          {
-            title: "Basic Website Package",
-            price: "$229",
-            discountedFrom: "$499",
-            includes: [
-              "5 Custom Logo Design Concepts",
-              "By 2 Designers",
-              "UNLIMITED Revisions",
-              "48 to 72 hours TAT",
-              "100% Unique Design Guarantee",
-              "100% Satisfaction Guarantee",
-              "100% Ownership Rights",
-              "100% Money Back Guarantee",
-            ],
-          },
-          {
-            title: "Basic Website Package",
-            price: "$229",
-            discountedFrom: "$499",
-            includes: [
-              "UNLIMITED Logo Design Concepts",
-              "By 4 Designers",
-              "UNLIMITED Revisions",
-              "Stationary Design (Business Card, Letterhead, Envelope)",
-              "48 to 72 hours TAT",
-              "FREE MS Word Letterhead",
-              "All Final Files Format (AI, PSD, EPS, PNG, GIF, jpeg, PDF)",
-            ],
-          },
-        ],
-        faqData: [
-          {
-            question: "How to use this component?",
-            answer:
-              "Import the FAQ component and place it in your page. Click any question to expand or collapse the answer.",
-          },
-          {
-            question: "Are there any other components available?",
-            answer:
-              "Yes — check the Components section of the repo or documentation for more reusable UI pieces.",
-          },
-          {
-            question: "Are components responsive?",
-            answer:
-              "Yes, components are designed to be responsive across screen sizes.",
-          },
-          {
-            question: "Can I customize the components?",
-            answer:
-              "Yes, pass props or override styles to adapt components to your design.",
-          },
-        ],
-        portfolioData: [
-          {
-            id: "1",
-            src: "/Services/web_01.svg",
-            translateY: "-translate-y-25",
-          },
-          { id: "2", src: "/Services/web_02.svg", translateY: "" },
-          {
-            id: "3",
-            src: "/Services/web_02.svg",
-            translateY: "-translate-y-25",
-          },
-          { id: "4", src: "/Services/web_03.svg", translateY: "" },
-          {
-            id: "5",
-            src: "/Services/web_04.svg",
-            translateY: "-translate-y-25",
-          },
-          { id: "6", src: "/Services/web_05.svg", translateY: "" },
-          {
-            id: "7",
-            src: "/Services/web_06.svg",
-            translateY: "-translate-y-25",
-          },
-          { id: "8", src: "/Services/web_07.svg", translateY: "" },
-        ],
-        footnote:
-          "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
+        title: "Google Ads Management in Australia",
+        // heading: "eCommerce Website Development in Australia",
+       serviceBodyData: [
+      {
+        imageUrl: "/Services/Rectangle_52.webp",
+        description: (
+          <>
+            <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
+              Your Customers Are Searching Right Now. Are They Finding You?
+            </h2>
+            <p>Google Search Ads put your business at the very top of results, the moment someone searches for what you sell. No waiting for organic rankings. No cold outreach. Just qualified traffic from people already looking. At Aussie Digital Solutions, our team manages every campaign so every dollar produces a real return.</p>
+            {/* <ul className="mt-3">
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <div className="flex flex-col"><span className="font-semibold">More Than an Online Store: A Revenue Engine.</span>
+An eCommerce website is your best salesperson, the one who never calls in sick, works every hour of every day, and can handle thousands of customers at once. But only if it's built properly. 
+Custom eCommerce development means your store is built around your products, your customers, and how your business actually operates, not crammed into a generic template someone else's business already uses. Every feature, page, and checkout step is designed to reduce friction and increase the likelihood of a sale.
+Australian eCommerce is growing fast. Consumers expect fast loading, seamless mobile experiences, and a checkout process that doesn't make them think twice. We build stores that meet those expectations, and then some.
+</div>
+              </li>
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span className="font-semibold">Built Around Your Products & Customers</span>
+              </li>
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span className="font-semibold">
+                  Designed to Reduce Cart Abandonment
+                </span>
+              </li>
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span className="font-semibold">
+                  Secure Payments, Full Stop
+                </span>
+              </li>
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span className="font-semibold">
+                  Scales as You Grow
+                </span>
+              </li>
+            </ul> */}
+            <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
+  <a
+    className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15"
+    href="/contact"
+  >
+    Get a Free Campaign Audit
+  </a>
+  <span
+    aria-hidden="true"
+    className="h-10 w-px bg-white/30 max-sm:h-px max-sm:w-full"
+  />
+  <a
+    className="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/10"
+    href="/services"
+  >
+    See How We Work
+  </a>
+</div>
+          </>
+        ),
       },
       {
-        slug: "youtube-ads",
-        title: "YouTube Ads",
-        heading: "YouTube Ads That Convert",
-        imageUrl: "/Services/Rectangle_52.png",
-        description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
-        points: [
-          "Custom Website Design",
-          "Responsive Development",
-          "E-commerce Solutions",
-          "Content Management Systems",
-          "Performance Optimization",
+        imageUrl: "/Services/Rectangle_52.webp",
+        description: (
+          <>
+            <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
+              What Are Google Search Ads
+            </h2>
+
+            <h3 className="text-2xl text-white">The Most Direct Path From Search to Sale</h3>
+
+            <div className="space-y-2">
+              <span><b>Show Up When It Matters</b></span>
+            <p>Google Search Ads place your business at the very top of results for keywords your customers are actively searching. Your audience already has intent; you’re there at the exact moment they’re ready to decide.</p>
+
+            <span><b>High Intent Traffic Only</b></span>
+            <p>Every click comes from someone looking for what you offer. No passive scrolling, no wasted impressions, just real potential customers with a reason to be on your page.</p>
+
+            <span><b>Full Budget Control</b></span>
+            <p>You control spending, scheduling, and targeting. Scale up when it works, pause when needed, no minimum commitments.</p>
+
+            <span><b>Measurable to the Dollar</b></span>
+            <p>Track every click, lead, and sale. Google Ads is one of the most transparent paid channels, so you always know exactly what your investment delivers.</p>
+
+            <span><b>Fast Results</b></span>
+            <p>Unlike SEO, which takes months, Google Ads can put you at the top of search results within days. Perfect for businesses that need qualified leads now.</p>
+
+            <span><b>Why Most Ads Fail, And How We Fix It</b></span>
+            <p>Poorly structured campaigns, broad keywords burning budget, missing negative keyword lists, or ad copy that clicks but doesn’t convert are the real reasons Google Ads underperforms. We fix all of it, often in the first month.</p>
+            </div>
+
+            {/* <ul className="mt-3">
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span className="font-semibold">Custom Theme Nothing Borrowed</span>
+              </li>
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span className="font-semibold">Your Team Manages the Content</span>
+              </li>
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span className="font-semibold">
+                  Plugin Power, Done Right
+                </span>
+              </li>
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span className="font-semibold">
+                  SEO-Friendly From the Start
+                </span>
+              </li>
+            </ul> */}
+            {/* <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
+  <a
+    className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15"
+    href="/contact"
+  >
+    Get a Free WordPress Quote
+  </a>
+  <span
+    aria-hidden="true"
+    className="h-10 w-px bg-white/30 max-sm:h-px max-sm:w-full"
+  />
+  <a
+    className="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/10"
+    href="/services"
+  >
+    See What We Build
+  </a>
+</div> */}
+          </>
+        ),
+      },
+      ],
+        easyExperienceData: {
+          eyebrow: <>Easy Experience</>,
+          headingLine1: <>Campaign Types We Manage at Aussie Digital</>,
+          // headingLine2: <div className="text-sm">WordPress development involves a lot more technicalities than building a site and handing it over. Below is a mention of what exactly we offer and what each service does for your business in the long term.</div>,
+          cards: [
+            {
+              title: "One Focused Team.",
+              description:
+                <>Google Ads isn't one thing; it's a range of campaign types that serve different goals. We manage all of them and recommend only the ones that make sense for your business, your budget, and where your customers are in their buying journey.</>,
+              icon: (<RiTeamFill color="#4C8C74" size={40} />),
+            },
+            {
+              title: "Google Search Campaigns",
+              description:
+                <>The foundation of most PPC strategies. Text ads that appear when someone searches your target keywords, built around purchase intent and designed to drive calls, form fills, and direct sales from high-intent Australian searchers.</>,
+              icon: (<CiSearch color="#4C8C74" size={40} />),
+            },
+            {
+              title: "Google Shopping Ads",
+              description:
+                <>For eCommerce businesses, product listing ads show your image, price, and name right at the top of search results. We manage product feed optimisation, bidding strategy, and campaign segmentation to maximise your return on ad spend.</>,
+              icon: (<CiShoppingCart color="#4C8C74" size={40} />),
+            },
+            {
+              title: "Display & Remarketing",
+              description:
+                <>Most visitors do not use your service the first time. Remarketing brings them back, targeting people who visited your site, viewed specific pages, or abandoned a cart. We build retargeting audiences that recover lost intent and keep your brand in front of warm prospects.</>,
+              icon: (<FaDisplay color="#4C8C74" size={40} />),
+            },
+            {
+              title: "Local Search & Service Ads",
+              description:
+                <>For Australian businesses serving specific cities, suburbs, or regions. We set up location targeted campaigns and Google Local Service Ads that put you in front of buyers in your actual service area, not people two states away.</>,
+              icon: (<LuTv color="#4C8C74" size={40} />),
+            },
+            {
+              title: "Performance Max Campaigns",
+              description:
+                <>Google's AI-powered campaign type runs across Search, Display, YouTube, Gmail, and Maps from a single campaign. We structure PMax campaigns properly so Google's automation works for your budget rather than against it.</>,
+              icon: (<IoSpeedometerOutline color="#4C8C74" size={40} />),
+            },
+            {
+              title: "B2B Google Ads Management",
+              description:
+                <>B2B campaigns need a new and unique approach, longer buying cycles, decision maker targeting, higher value keywords, and lead quality over volume. The idea we follow is to build B2B Google Ads strategies that reach the right professionals at the right stage of their decision making.</>,
+              icon: (<BiReflectVertical color="#4C8C74" size={40} />),
+            },
+          ],
+        },
+        ctaData: {
+        badgeText: "Free Google Ads Audit at Aussie Digital Solution",
+        title: "Find Out Exactly Where",
+        highlightedTitle: "Your Ad Budget Is Being Wasted",
+        description:
+        "We'll audit your existing Google Ads account and show you what's leaking spend, or build a campaign plan from scratch if you're just getting started. Free, honest, no pressure.",
+        primaryAction: {
+          label: "Book a Free Audit",
+          href: "/contact",
+        },
+        secondaryAction: {
+          label: "View Packages",
+          href: "/services",
+        },
+        trustItems: [
         ],
-        experienceCardData: [
-          {
-            title: "End-to-End Support, Hosting & Maintenance",
-            description:
-              "We take care of everything behind the scenes. From secure hosting and regular updates to ongoing maintenance and performance improvements, we ensure your website stays fast, secure and running smoothly.",
-            svgelement: (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="50"
-                height="50"
-                viewBox="0 0 50 50"
-                fill="none"
-                className="transform translate-x-3.5 translate-y-3.5"
-              >
-                <path
-                  d="M4.16699 25.0545C4.16699 35.7758 12.2235 44.6105 22.5978 45.8048C24.1286 45.9811 25.6124 45.3285 26.702 44.2361C28.0634 42.8712 28.0634 40.6582 26.702 39.2933C25.6124 38.2008 24.7242 36.5712 25.5459 35.2643C28.8306 30.0401 45.8337 42.0376 45.8337 25.0545C45.8337 13.5185 36.5063 4.16675 25.0003 4.16675C13.4944 4.16675 4.16699 13.5185 4.16699 25.0545Z"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <circle
-                  cx="36.458"
-                  cy="23.9583"
-                  r="3.125"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <circle
-                  cx="13.542"
-                  cy="23.9583"
-                  r="3.125"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M23.0937 14.5828C23.0937 16.3087 21.6946 17.7078 19.9687 17.7078C18.2429 17.7078 16.8438 16.3087 16.8438 14.5828C16.8438 12.8569 18.2429 11.4578 19.9687 11.4578C21.6946 11.4578 23.0937 12.8569 23.0937 14.5828Z"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M33.333 14.5833C33.333 16.3091 31.9339 17.7083 30.208 17.7083C28.4821 17.7083 27.083 16.3091 27.083 14.5833C27.083 12.8574 28.4821 11.4583 30.208 11.4583C31.9339 11.4583 33.333 12.8574 33.333 14.5833Z"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-              </svg>
-            ),
-          },
-          {
-            title: "Fully Custom Design & Conversion-Focused Pages",
-            description:
-              "We design fully custom websites tailored to your brand and built with purpose. Every page is carefully crafted to guide users smoothly, encourage engagement and drive meaningful actions. No templates, no limitations, just thoughtful design focused on performance.",
-            svgelement: (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="50"
-                height="50"
-                viewBox="0 0 50 50"
-                fill="none"
-                className="transform translate-x-4 translate-y-4"
-              >
-                <circle
-                  cx="18.7503"
-                  cy="12.5001"
-                  r="8.33333"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M31.25 18.75C34.7018 18.75 37.5 15.9518 37.5 12.5C37.5 9.04822 34.7018 6.25 31.25 6.25"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <ellipse
-                  cx="18.7503"
-                  cy="35.4166"
-                  rx="14.5833"
-                  ry="8.33333"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M37.5 29.1667C41.1547 29.9682 43.75 31.9979 43.75 34.3751C43.75 36.5195 41.6381 38.3811 38.5417 39.3135"
-                  stroke="#4C8C74"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-              </svg>
-            ),
-          },
-        ],
+      },
         strategicCardData: [
           {
             title: "Custom Website Design",
@@ -9245,92 +9266,149 @@ Get in touch today, and one of our performance marketing specialists will get ba
             ),
           },
         ],
+        processHeading: <>From Audit to Live Campaigns in Three Focused Steps</>,
+        processPara: (
+          <>
+          </>
+        ),
         processCardData: [
           {
             image: "/Services/01.svg",
-            heading: "Book a Strategy Call",
-            paragraph:
-              "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
+            heading: "Audit, Research & Campaign Strategy",
+            paragraph: (
+              <>
+                Aussie research team starts by reviewing your existing account or researching your market from scratch. Our team audits campaign structure, keyword lists, ad copy, quality scores, conversion tracking, and what competitors are doing. After that, we move towards creating a clear strategy, which keywords to target, which campaign types make sense, what budget allocation is realistic, and what success looks like. You see the full plan before a dollar is spent.
+              </>
+            ),
           },
           {
             image: "/Services/02.svg",
-            heading: "Website Audit & Strategy",
-            paragraph:
-              "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
+            heading: "Campaign Build, Ad Creation & Launch",
+            paragraph: (
+              <>
+                Our initial step includes building the account structure, writing the ad copy, setting up conversion tracking, configuring bidding strategies, and creating the negative keyword list. Everything is reviewed internally before campaigns go live. We don't launch until tracking is confirmed working, because a campaign without proper attribution is just guesswork with a budget attached to it.
+              </>
+            ),
           },
           {
             image: "/Services/03.svg",
-            heading: "Build, Launch & Optimize",
-            paragraph:
-              "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
+            heading: "Optimise, Report & Scale",
+            paragraph: (
+              <>
+                Once live, we optimise weekly, reviewing search term reports, adjusting bids, testing new copy, refining audiences, and cutting waste. Monthly reporting shows cost-per-lead, ROAS, and conversion volume in plain language. As performance improves, we scale what's working and reinvest budget into the campaigns that are delivering the best return.
+              </>
+            ),
           },
         ],
         pricingCardData: [
-          {
-            title: "Basic Website Package",
-            price: "$229",
-            discountedFrom: "$499",
-            includes: [
-              "2 Custom Logo Design Concepts",
-              "1 Dedicated Designer",
-              "4 REVISIONS",
-              "48 to 72 hours TAT",
-              "100% Unique Design Guarantee",
-              "100% Satisfaction Guarantee",
-              "100% Ownership Rights",
-              "100% Money Back Guarantee",
-            ],
-          },
-          {
-            title: "Basic Website Package",
-            price: "$229",
-            discountedFrom: "$499",
-            includes: [
-              "5 Custom Logo Design Concepts",
-              "By 2 Designers",
-              "UNLIMITED Revisions",
-              "48 to 72 hours TAT",
-              "100% Unique Design Guarantee",
-              "100% Satisfaction Guarantee",
-              "100% Ownership Rights",
-              "100% Money Back Guarantee",
-            ],
-          },
-          {
-            title: "Basic Website Package",
-            price: "$229",
-            discountedFrom: "$499",
-            includes: [
-              "UNLIMITED Logo Design Concepts",
-              "By 4 Designers",
-              "UNLIMITED Revisions",
-              "Stationary Design (Business Card, Letterhead, Envelope)",
-              "48 to 72 hours TAT",
-              "FREE MS Word Letterhead",
-              "All Final Files Format (AI, PSD, EPS, PNG, GIF, jpeg, PDF)",
-            ],
-          },
+      {
+        title: "Basic Website Package",
+        price: "$229",
+        discountedFrom: "$499",
+        includes: [
+          "2 Custom Logo Design Concepts",
+          "1 Dedicated Designer",
+          "4 REVISIONS",
+          "48 to 72 hours TAT",
+          "100% Unique Design Guarantee",
+          "100% Satisfaction Guarantee",
+          "100% Ownership Rights",
+          "100% Money Back Guarantee",
         ],
+      },
+      {
+        title: "Basic Website Package",
+        price: "$229",
+        discountedFrom: "$499",
+        includes: [
+          "5 Custom Logo Design Concepts",
+          "By 2 Designers",
+          "UNLIMITED Revisions",
+          "48 to 72 hours TAT",
+          "100% Unique Design Guarantee",
+          "100% Satisfaction Guarantee",
+          "100% Ownership Rights",
+          "100% Money Back Guarantee",
+        ],
+      },
+      {
+        title: "Basic Website Package",
+        price: "$229",
+        discountedFrom: "$499",
+        includes: [
+          "UNLIMITED Logo Design Concepts",
+          "By 4 Designers",
+          "UNLIMITED Revisions",
+          "Stationary Design (Business Card, Letterhead, Envelope)",
+          "48 to 72 hours TAT",
+          "FREE MS Word Letterhead",
+          "All Final Files Format (AI, PSD, EPS, PNG, GIF, jpeg, PDF)",
+        ],
+      },
+        ],
+        customplanData: {
+          heading: "Why Work With Aussie Digital Solution",
+          buttonText: "Book a consultation call to create your perfect plan",
+          body: (
+            <div className="space-y-2">
+            <h3 className="text-2xl text-white">We Optimise for Revenue. Not Just Clicks.</h3>
+            <p>There's no shortage of PPC management agencies in Australia. Here's what actually separates the ones that grow your business from the ones that just manage your account and send monthly reports.</p>
+
+              <span className="font-semibold">Revenue-Focused, Not Metric-Focused</span>
+              <p>Every campaign decision is made with your actual revenue outcome as the only benchmark.</p>
+
+              <span className="font-semibold">Australian Market Knowledge</span>
+              <p>We understand Australian search behaviour, local bidding dynamics, and the seasonal and geographic factors that affect Google Ads performance in the Australian market. That context shapes a better strategy.</p>
+              
+              <span className="font-semibold">Dedicated In-House Google Ads Team</span>
+              <p>Your account is managed by our own Google Ads specialists optimising it every week.</p>
+
+              <span className="font-semibold">Flat Fee, Not a Percentage of Spend</span>
+              <p>You have access to your own Google Ads account. You see everything we're doing and why.</p>
+
+              <span className="font-semibold">Full Account Transparency</span>
+              <p>You have access to your own Google Ads account. You see everything we're doing and why.</p>
+
+              <span className="font-semibold">No Lock-In Contracts</span>
+              <p>Month-to-month Google Ads management. We keep your business because results keep improving, not because you're stuck in a 12-month agreement that's expensive to exit if things aren't working.</p>
+
+              {/* <ul className="list-disc list-inside mt-2">
+                <li>Custom Design That Reflects Your Brand</li>
+                <li>Mobile-First, Fully Responsive</li>
+                <li>Fast Load Times That Hold Rankings</li>
+                <li>SEO Built Into the Foundation</li>
+                <li>Secure by Design</li>
+                <li>Integrates With Everything</li>
+              </ul> */}
+            </div>
+          ),
+          rightContent: <><h3 className="text-2xl text-white mt-3">With Aussie Digital Solution</h3>
+          <p className="text-sm"></p>
+          <ul className="list-disc list-inside mt-1 text-sm">
+            <li>Tightly structured campaigns targeting only buyers with real intent</li>
+            <li>Keyword strategy built around commercial terms that actually convert</li>
+            <li>Ad copy written to stand out and move people to take action</li>
+            <li>Comprehensive negative keyword management from week one</li>
+            <li>Full conversion tracking;  every lead and sale properly attributed</li>
+            <li>Clear monthly reports; cost-per-lead, ROAS, and revenue</li>
+          </ul></>,
+          miniTagData: <></>,
+        },
         faqData: [
           {
-            question: "How to use this component?",
+            question: "How much budget do I need to start Google Ads in Australia?",
             answer:
-              "Import the FAQ component and place it in your page. Click any question to expand or collapse the answer.",
+              "It basically depends on your industry and competition. Some businesses can start with a modest daily budget, while competitive sectors require more to generate results. We’ll recommend a realistic budget based on your specific keywords during your strategy call.",
           },
           {
-            question: "Are there any other components available?",
+            question: "How quickly will I see results from Google Ads?",
             answer:
-              "Yes — check the Components section of the repo or documentation for more reusable UI pieces.",
+              "Campaigns can start generating leads within the first week. Most accounts improve significantly within weeks as data builds and optimisations take effect.",
           },
           {
-            question: "Are components responsive?",
+            question: "Do you charge a percentage of ad spend or a flat fee?",
             answer:
-              "Yes, components are designed to be responsive across screen sizes.",
-          },
-          {
-            question: "Can I customize the components?",
-            answer:
-              "Yes, pass props or override styles to adapt components to your design.",
+              "We charge a fixed monthly fee, never a percentage of your ad spend. Our focus is on making your budget perform better, not increasing it.",
           },
         ],
         portfolioData: [
@@ -9361,7 +9439,1069 @@ Get in touch today, and one of our performance marketing specialists will get ba
         ],
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
+        contactData: {
+        heading: (<>Let's Start Growing</>),
+        body: (<><h3 className="text-2xl font-semibold">Your Competitors Are Running<br />Google Ads Right Now.</h3>
+        <p>Every day without a properly managed Google Ads campaign is qualified search traffic going to someone else. One of our PPC specialists will get back to you within one business day. No scripts, no pressure, just a real conversation.</p>
+        </>),
+        buttonText: "Book a Free Audit",
       },
+      },
+
+      // YT ads
+      {
+        slug: "youtube-ads",
+        title: "YouTube Ads Management in Australia",
+        // heading: "eCommerce Website Development in Australia",
+       serviceBodyData: [
+      {
+        imageUrl: "/Services/Rectangle_52.webp",
+        description: (
+          <>
+            <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
+              Two Billion People Watch YouTube Daily. Are Any of Them Seeing You?
+            </h2>
+            <p>YouTube is the second-largest search engine on the planet, and most Australian businesses are leaving it completely untouched. Our team of professionals creates and manages YouTube Ads campaigns that reach your exact audience at the right moment, with video creatives that stop the scroll and a strategy that turns views into customers.</p>
+            {/* <ul className="mt-3">
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <div className="flex flex-col"><span className="font-semibold">More Than an Online Store: A Revenue Engine.</span>
+An eCommerce website is your best salesperson, the one who never calls in sick, works every hour of every day, and can handle thousands of customers at once. But only if it's built properly. 
+Custom eCommerce development means your store is built around your products, your customers, and how your business actually operates, not crammed into a generic template someone else's business already uses. Every feature, page, and checkout step is designed to reduce friction and increase the likelihood of a sale.
+Australian eCommerce is growing fast. Consumers expect fast loading, seamless mobile experiences, and a checkout process that doesn't make them think twice. We build stores that meet those expectations, and then some.
+</div>
+              </li>
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span className="font-semibold">Built Around Your Products & Customers</span>
+              </li>
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span className="font-semibold">
+                  Designed to Reduce Cart Abandonment
+                </span>
+              </li>
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span className="font-semibold">
+                  Secure Payments, Full Stop
+                </span>
+              </li>
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span className="font-semibold">
+                  Scales as You Grow
+                </span>
+              </li>
+            </ul> */}
+            <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
+  <a
+    className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15"
+    href="/contact"
+  >
+    Get a Free YouTube Audit
+  </a>
+  <span
+    aria-hidden="true"
+    className="h-10 w-px bg-white/30 max-sm:h-px max-sm:w-full"
+  />
+  <a
+    className="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/10"
+    href="/services"
+  >
+    See How We Work
+  </a>
+</div>
+          </>
+        ),
+      },
+      {
+        imageUrl: "/Services/Rectangle_52.webp",
+        description: (
+          <>
+            <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
+              What Are YouTube Ads
+            </h2>
+
+            <div className="space-y-2">
+            <p>YouTube Ads are video campaigns that reach your audience based on what they watch, search, and are interested in. When structured properly, they become one of the most effective ways to build trust and drive conversions.</p>
+            </div>
+
+            <ul className="mt-3">
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span className="font-semibold">Reach High-Intent Audiences</span>
+              </li>
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span className="font-semibold">Build Trust Faster Than Any Other Format</span>
+              </li>
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span className="font-semibold">
+                  You Only Pay for Engaged Views
+                </span>
+              </li>
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span className="font-semibold">
+                  Full Funnel Coverage
+                </span>
+              </li>
+            </ul>
+            {/* <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
+  <a
+    className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15"
+    href="/contact"
+  >
+    Get a Free WordPress Quote
+  </a>
+  <span
+    aria-hidden="true"
+    className="h-10 w-px bg-white/30 max-sm:h-px max-sm:w-full"
+  />
+  <a
+    className="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/10"
+    href="/services"
+  >
+    See What We Build
+  </a>
+</div> */}
+          </>
+        ),
+      },
+      ],
+      serviceBodyData2: [
+      {
+        imageUrl: "/Services/Rectangle_52.webp",
+        description: (
+          <>
+            <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
+              Why Work With Us
+            </h2>
+            <p><b>Views Are Nice.</b><br />
+<b>Revenue Is Better.</b><br />
+Most YouTube Ads agencies focus on view counts. We focus on what those views produce for your business. Here's what makes us different.
+</p>
+            <ul className="mt-3">
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span className="font-semibold">We Optimise for Revenue, Not Views</span>
+              </li>
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span className="font-semibold">We Write the Scripts</span>
+              </li>
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span className="font-semibold">
+                  Built for Australian Audiences
+                </span>
+              </li>
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span className="font-semibold">
+                  Full Funnel, Not Just One Ad
+                </span>
+              </li>
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span className="font-semibold">
+                  Flat Fee Management
+                </span>
+              </li>
+              <li className="flex items-start gap-2 md:gap-3 mb-2">
+                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                <span className="font-semibold">
+                  No Lock-In Contracts
+                </span>
+              </li>
+            </ul>
+
+            <h3 className="text-2xl text-white">Our YouTube Ads Results</h3>
+            <p>Do the Talking, We've run YouTube Ads campaigns for Australian businesses across home services, e-commerce, professional services, health, and B2B. Ask us for performance examples from your industry, and we'll share real data before you commit to anything.</p>
+          </>
+        ),
+      },
+      ],
+        easyExperienceData: {
+          eyebrow: <>Easy Experience</>,
+          headingLine1: <>What You Get With Our YouTube Ads Management Service</>,
+          headingLine2: <div className="text-sm">YouTube Ads management isn't just uploading a video and hoping for the best. Here's what proper campaign management actually involves, and what we deliver to every client.</div>,
+          cards: [
+            {
+              title: "Audience Research & Targeting Strategy",
+              description:
+                <>We identify your ideal viewers using Google's intent data, custom audiences, interest targeting, and remarketing lists, then structure campaigns so the right ad reaches the right person at the right stage.</>,
+              icon: (<RiTeamFill color="#4C8C74" size={40} />),
+            },
+            {
+              title: "Ad Script & Creative Direction",
+              description:
+                <>The first five seconds determine everything. We write scripts built to hook viewers immediately, with a clear message, a strong reason to keep watching, and a call to action that actually converts.</>,
+              icon: (<LuTv color="#4C8C74" size={40} />),
+            },
+            {
+              title: "Conversion & View Through Tracking",
+              description:
+                <>Before anything goes live, we set up full tracking, view-through conversions, click conversions, and engagement metrics. Every decision is based on what's actually producing results, not just views.</>,
+              icon: (<FaFunnelDollar color="#4C8C74" size={40} />),
+            },
+            {
+              title: "Weekly Campaign Optimisation",
+              description:
+                <>We review performance every week, adjusting bids, refining audience targeting, testing new creatives, and cutting placements that aren't converting. Performance improves because we actively make it.</>,
+              icon: (<MdCampaign color="#4C8C74" size={40} />),
+            },
+            {
+              title: "Transparent Monthly Reporting",
+              description:
+                <>Reports that tell you what matters, views, conversions, cost per result, and ROAS. Not a dashboard full of vanity metrics. Real numbers, real context, clear next steps.</>,
+              icon: (<TbReport color="#4C8C74" size={40} />),
+            },
+            {
+              title: "Full Funnel Campaign Structure",
+              description:
+                <>We build YouTube campaigns that map to each stage of your customer journey, awareness for cold audiences, consideration for warm ones, and conversion campaigns for those close to deciding.</>,
+              icon: (<IoIosFunnel color="#4C8C74" size={40} />),
+            },
+            {
+              title: "B2B Google Ads Management",
+              description:
+                <>B2B campaigns need a new and unique approach, longer buying cycles, decision maker targeting, higher value keywords, and lead quality over volume. The idea we follow is to build B2B Google Ads strategies that reach the right professionals at the right stage of their decision making.</>,
+              icon: (<SiGoogleads color="#4C8C74" size={40} />),
+            },
+          ],
+        },
+        ctaData: {
+        badgeText: "Free YouTube Ads Audit",
+        title: "Let's See What YouTube Ads",
+        highlightedTitle: "Could Actually Do for Your Business",
+        description:
+        "We'll review your current setup, or build you a fresh strategy from scratch, and show you exactly where the opportunity is. Free, honest, no pressure.",
+        primaryAction: {
+          label: "Book a Free Audit",
+          href: "/contact",
+        },
+        secondaryAction: {
+          label: "View Packages",
+          href: "/services",
+        },
+        trustItems: [
+        ],
+      },
+        strategicCardData: [
+          {
+            title: "Custom Website Design",
+            desc: "Understand your vision, business goals, and target audience to create a clear project roadmap.",
+            svg: (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                viewBox="0 0 50 50"
+                fill="none"
+              >
+                <path
+                  d="M4.1665 22.9167C4.1665 15.0599 4.1665 11.1316 6.60728 8.69078C9.04806 6.25 12.9764 6.25 20.8332 6.25H29.1665C37.0232 6.25 40.9516 6.25 43.3924 8.69078C45.8332 11.1316 45.8332 15.0599 45.8332 22.9167V27.0833C45.8332 34.9401 45.8332 38.8684 43.3924 41.3092C40.9516 43.75 37.0232 43.75 29.1665 43.75H20.8332C12.9764 43.75 9.04806 43.75 6.60728 41.3092C4.1665 38.8684 4.1665 34.9401 4.1665 27.0833V22.9167Z"
+                  stroke="#4C8C74"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+                <path
+                  d="M31.25 43.75L31.25 6.25"
+                  stroke="#4C8C74"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+                <path
+                  d="M12.4998 29.1666L10.4165 31.25L12.4998 33.3333M21.8748 33.3333L23.9582 35.4166L21.8748 37.5M18.7498 29.1666L15.6248 37.5"
+                  stroke="#4C8C74"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+              </svg>
+            ),
+          },
+          {
+            title: "E-commerce Website Development",
+            desc: "Iteratively develop robust, scalable websites with regular testing and your feedback at every stage.",
+            svg: (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                viewBox="0 0 50 50"
+                fill="none"
+              >
+                <path
+                  d="M45.8332 45.8334H4.1665"
+                  stroke="#4C8C74"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+                <path
+                  d="M41.6665 45.8333V22.9166"
+                  stroke="#4C8C74"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+                <path
+                  d="M8.3335 45.8333V22.9166"
+                  stroke="#4C8C74"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+                <path
+                  d="M34.4332 4.16663H15.5673C13.0614 4.16663 11.8085 4.16663 10.8016 4.78891C9.7947 5.4112 9.23437 6.53186 8.11372 8.77318L4.16699 18.75C4.16699 21.0511 6.03229 22.9166 8.33348 22.9166C10.6347 22.9166 12.5001 21.0511 12.5001 18.75C12.5001 21.0511 14.3656 22.9166 16.6668 22.9166C18.968 22.9166 20.8335 21.0511 20.8335 18.75C20.8335 21.0511 22.699 22.9166 25.0001 22.9166C27.3013 22.9166 29.1668 21.0511 29.1668 18.75C29.1668 21.0511 31.0323 22.9166 33.3335 22.9166C35.6347 22.9166 37.5001 21.0511 37.5001 18.75C37.5001 21.0511 39.3656 22.9166 41.6668 22.9166C43.968 22.9166 45.8335 21.0511 45.8335 18.75L41.8868 8.77318L41.8867 8.77314C40.7661 6.53185 40.2058 5.4112 39.1989 4.78891C38.192 4.16663 36.9391 4.16663 34.4332 4.16663Z"
+                  stroke="#4C8C74"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+                <path
+                  d="M19.7915 44.7917V38.5417C19.7915 36.5946 19.7915 35.621 20.2102 34.8959C20.4845 34.4208 20.8789 34.0263 21.354 33.752C22.0792 33.3334 23.0527 33.3334 24.9998 33.3334C26.947 33.3334 27.9205 33.3334 28.6457 33.752C29.1207 34.0263 29.5152 34.4208 29.7895 34.8959C30.2082 35.621 30.2082 36.5946 30.2082 38.5417V44.7917"
+                  stroke="#4C8C74"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+              </svg>
+            ),
+          },
+          {
+            title: "Magento Development",
+            desc: "Design modern, user-centric interfaces for an exceptional digital experience.",
+            svg: (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                viewBox="0 0 50 50"
+                fill="none"
+              >
+                <path
+                  d="M25.0003 45.8333C36.5063 45.8333 45.8337 36.5059 45.8337 25C45.8337 13.494 36.5063 4.16663 25.0003 4.16663C13.4944 4.16663 4.16699 13.494 4.16699 25C4.16699 36.5059 13.4944 45.8333 25.0003 45.8333Z"
+                  stroke="#4C8C74"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+                <path
+                  d="M32.292 18.75L32.6494 19.1074C35.4272 21.8852 36.8161 23.2741 36.8161 25C36.8161 26.7259 35.4272 28.1148 32.6494 30.8926L32.292 31.25"
+                  stroke="#4C8C74"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+                <path
+                  d="M27.6963 14.9382L25.0003 25L22.3042 35.0617"
+                  stroke="#4C8C74"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+                <path
+                  d="M17.7087 18.75L17.3512 19.1074C14.5735 21.8852 13.1846 23.2741 13.1846 25C13.1846 26.7259 14.5735 28.1148 17.3512 30.8926L17.7087 31.25"
+                  stroke="#4C8C74"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+              </svg>
+            ),
+          },
+          {
+            title: "Wordpress Development",
+            desc: "Design modern, user-centric interfaces for an exceptional digital experience.",
+            svg: (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                viewBox="0 0 52 52"
+                fill="none"
+              >
+                <circle
+                  cx="26"
+                  cy="26"
+                  r="25"
+                  stroke="#4C8C74"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+                <path
+                  d="M4.5166 13.8746H6.74371M14.3476 13.8746H6.74371M6.74371 13.8746L18.8623 47.0621L27.6542 23.3794M27.6542 23.3794L24.2483 13.8746M27.6542 23.3794L36.2877 47.0621L45.0166 23.3794M24.2483 13.8746H18.3078M24.2483 13.8746H32.8026M45.0166 23.3794L45.9508 20.8448C47.1125 16.6468 47.9785 8.42521 42.1489 9.12223C39.7836 9.67667 37.0457 13.3043 45.0166 23.3794Z"
+                  stroke="#4C8C74"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+              </svg>
+            ),
+          },
+          {
+            title: "Opencart",
+            desc: "Thoroughly test for responsiveness, performance, and security before seamless launch and handover.",
+            svg: (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                viewBox="0 0 50 50"
+                fill="none"
+              >
+                <path
+                  d="M2.01594 9.46583C4.54545 13.647 7.6255 15.745 13.2351 17.1287C17.1632 18.0959 20.8236 18.4084 29.1412 18.4828C33.6199 18.5125 36.1643 18.6018 37.3993 18.7506C42.5178 19.3904 43.8867 20.5808 42.3541 23.1252C42.0863 23.5716 40.8216 25.0595 39.5568 26.3986C36.6256 29.5233 35.7179 30.55 34.9442 31.6809C34.468 32.3355 34.3936 32.529 34.6168 32.4099C34.7805 32.3207 34.9739 32.1719 35.0335 32.0826C35.0781 31.9933 37.2059 30.1334 39.7651 27.961C46.4906 22.2026 48.4101 20.2534 48.916 18.6613C49.1689 17.8876 48.916 17.1585 48.2167 16.6972C46.4609 15.5366 43.1874 15.1647 34.5127 15.12C17.6245 15.0159 11.5686 14.3612 6.8964 12.0995C5.00671 11.177 3.62292 10.2396 2.09034 8.79625L0.989258 7.78445L2.01594 9.46583Z"
+                  fill="#4C8C74"
+                />
+                <path
+                  d="M12.5803 35.5792C11.6875 35.9066 10.9882 36.5464 10.6013 37.3648C9.51512 39.6859 11.0923 42.2155 13.6218 42.2155C16.3597 42.2006 17.9666 39.3437 16.5531 37.0523C15.7347 35.728 13.9641 35.0584 12.5803 35.5792Z"
+                  fill="#4C8C74"
+                />
+                <path
+                  d="M28.2332 35.5643C26.9387 36.0554 26.0757 37.1267 25.9269 38.4361C25.8078 39.433 26.0757 40.3406 26.7304 41.0549C27.4595 41.8583 28.2481 42.2155 29.364 42.2155C32.2507 42.2155 33.7684 38.8229 31.8787 36.5761C31.0752 35.609 29.364 35.1477 28.2332 35.5643Z"
+                  fill="#4C8C74"
+                />
+              </svg>
+            ),
+          },
+          {
+            title: "Shopify Development",
+            desc: "Incorporate compelling, SEO-optimized content and visuals that support your brand story.",
+            svg: (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                viewBox="0 0 47 52"
+                fill="none"
+              >
+                <path
+                  d="M32.2417 51.0001L1 45.5771L5.12642 14.4532L11.9727 12.3993M32.2417 51.0001V6.31849M32.2417 51.0001L45.7994 47.5812L40.0227 9.73743H36.2501L32.2417 6.31849M32.2417 6.31849L28.6995 7.38117M11.9727 12.3993C12.4414 8.44675 15.0528 0.636051 21.7492 1.01331C22.9995 0.936865 25.4315 2.31595 25.1572 8.44384M11.9727 12.3993L18.565 10.4216M25.1572 8.44384L18.565 10.4216M25.1572 8.44384L28.6995 7.38117M18.565 10.4216C19.1941 7.63916 21.6313 2.19228 26.347 2.66385C27.2472 2.56359 28.9781 3.36669 28.6995 7.38117"
+                  stroke="#4C8C74"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M16.8005 16.8122C13.8515 18.2867 11.2471 21.1821 11.2471 24.8013C11.2471 27.2141 11.2396 28.563 13.5854 30.8418C16.8025 33.9919 18.3111 35.4209 16.0323 36.542C15.0269 36.676 12.0514 36.1154 11.2471 35.7132C10.1077 35.043 10.2013 35.8717 9.7321 36.542C7.92248 39.424 10.8045 41.9708 16.0323 42.0379C18.9813 42.1049 20.4835 41.5844 22.159 39.7078C23.7676 37.8981 23.523 37.0668 23.523 34.2518C23.523 30.7666 22.8686 30.3758 18.3111 26.6226C15.0939 23.9416 16.5685 21.3948 21.193 21.8639C23.6059 22.065 23.874 21.9309 24.5442 20.1213C24.8793 19.049 25.2144 17.7755 25.2144 17.3064C25.2144 15.9659 19.6155 15.4047 16.8005 16.8122Z"
+                  fill="#4C8C74"
+                />
+              </svg>
+            ),
+          },
+          {
+            title: "Woocommerce Development",
+            desc: "Provide maintenance, updates, and performance enhancements to keep your site running at its best.",
+            svg: (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                viewBox="0 0 86 52"
+                fill="none"
+              >
+                <path
+                  d="M81.4189 1L81.419 0H81.4189V1ZM81.4189 42.8379V43.8379H81.419L81.4189 42.8379ZM52.7529 42.8379V41.8379C52.4199 41.8379 52.1088 42.0037 51.923 42.28C51.7372 42.5564 51.7012 42.9071 51.827 43.2155L52.7529 42.8379ZM56.0811 51L55.5933 51.873C55.9642 52.0802 56.4254 52.0305 56.7436 51.749C57.0618 51.4675 57.1674 51.0158 57.007 50.6224L56.0811 51ZM41.4717 42.8379L41.9594 41.9649C41.8103 41.8816 41.6424 41.8379 41.4717 41.8379V42.8379ZM39.46 6.21875L40.1671 5.51164C40.1632 5.50775 40.1593 5.50389 40.1553 5.50006L39.46 6.21875ZM36.0469 5.62891L35.5479 4.76228C35.5434 4.76489 35.5389 4.76753 35.5344 4.77021L36.0469 5.62891ZM31.0264 21.6426L30.0365 21.5006L30.0357 21.5059L31.0264 21.6426ZM30.4355 25.2197L31.0807 25.9838C31.1021 25.9657 31.1228 25.9467 31.1427 25.9268L30.4355 25.2197ZM27.6465 16.1299L26.6731 16.3589L26.6733 16.3598L27.6465 16.1299ZM26.1699 11.5684L25.4479 12.2603C25.4661 12.2792 25.485 12.2975 25.5046 12.315L26.1699 11.5684ZM22.8555 11.8633L22.1357 11.169C22.1306 11.1743 22.1256 11.1796 22.1207 11.185L22.8555 11.8633ZM18.3926 19.707L17.5073 19.2419L17.5057 19.245L18.3926 19.707ZM14.3232 26.8604L15.0303 26.1532C15.0165 26.1394 15.0022 26.126 14.9876 26.1129L14.3232 26.8604ZM11.5342 13.3076L12.52 13.1398L12.5199 13.1391L11.5342 13.3076ZM7.92383 6.71191L8.08399 7.69901L8.08584 7.6987L7.92383 6.71191ZM5.29883 9.13965L4.29883 9.13947V9.13965H5.29883ZM8.54785 27.1885L7.57146 27.4046L7.57308 27.4117L8.54785 27.1885ZM20.1318 28.7314L21.024 29.1832L21.0263 29.1787L20.1318 28.7314ZM23.3799 22.6602V21.6602C23.3642 21.6602 23.3485 21.6605 23.3328 21.6613L23.3799 22.6602ZM24.2988 25.0225L23.3431 25.3166C23.3445 25.3213 23.346 25.3261 23.3476 25.3308L24.2988 25.0225ZM31.7158 37.5586L31.1672 38.3947L31.1726 38.3982L31.7158 37.5586ZM35.0303 37.3945L35.7662 38.0716C35.7701 38.0674 35.7739 38.0631 35.7777 38.0589L35.0303 37.3945ZM35.8506 31.2246L34.8514 31.1842L34.8512 31.1901L35.8506 31.2246ZM39.5586 10.3545L38.6473 9.94254L38.6427 9.95296L39.5586 10.3545ZM53.0791 9.36914L53.3655 8.41103L53.3621 8.41003L53.0791 9.36914ZM47.8281 9.40234L47.5394 8.44486L47.5275 8.44861L47.8281 9.40234ZM40.5762 18.7549L41.5424 19.0125L41.5433 19.009L40.5762 18.7549ZM40.6748 28.3047L41.6142 27.9619L41.6118 27.9553L40.6748 28.3047ZM44.875 33.5225L44.4278 34.417L44.4388 34.4223L44.875 33.5225ZM52.3896 33.5879L52.8548 34.4731L52.8554 34.4728L52.3896 33.5879ZM57.542 27.7461L58.4482 28.169L58.4489 28.1675L57.542 27.7461ZM74.5078 9.40234L74.2232 10.361L74.2237 10.3611L74.5078 9.40234ZM69.1592 9.40234L68.8746 8.44365L68.8651 8.44656L69.1592 9.40234ZM61.9062 18.9521L62.874 19.204L62.8747 19.2012L61.9062 18.9521ZM61.9062 27.7793L62.8661 27.4987L62.8649 27.4947L61.9062 27.7793ZM70.1104 34.3096L70.1103 35.3096H70.1104V34.3096ZM73.7207 33.6533L73.2818 32.7547L73.2735 32.7589L73.7207 33.6533ZM80.6777 18.6895L79.6797 18.7514L79.6798 18.7531L80.6777 18.6895ZM68.7324 17.0488L69.5624 17.6067L69.5694 17.5961L68.7324 17.0488ZM73.4902 15.2109L72.758 15.8921L72.7632 15.8976L73.4902 15.2109ZM74.7051 23.5459L75.6627 23.8341L75.664 23.8296L74.7051 23.5459ZM69.1592 28.5342L68.7401 29.4422L68.7517 29.4474L69.1592 28.5342ZM66.9277 23.1855H65.9277V23.1856L66.9277 23.1855ZM46.6465 18.1973L45.757 17.7403L45.755 17.7442L46.6465 18.1973ZM52.3242 15.4404L51.5603 16.0858L51.5618 16.0876L52.3242 15.4404ZM51.0117 27.418L51.7107 28.1332L51.7111 28.1328L51.0117 27.418ZM45.5312 22.9551H46.5312C46.5312 22.9502 46.5312 22.9453 46.5311 22.9404L45.5312 22.9551ZM81.4189 1L81.4188 2C82.8493 2.00015 84.0088 3.15993 84.0088 4.59082H85.0088H86.0088C86.0088 2.05586 83.9544 0.000258327 81.419 0L81.4189 1ZM85.0088 4.59082H84.0088V39.2471H85.0088H86.0088V4.59082H85.0088ZM85.0088 39.2471H84.0088C84.0088 40.678 82.8493 41.8377 81.4188 41.8379L81.4189 42.8379L81.419 43.8379C83.9544 43.8376 86.0088 41.782 86.0088 39.2471H85.0088ZM81.4189 42.8379V41.8379H52.7529V42.8379V43.8379H81.4189V42.8379ZM52.7529 42.8379L51.827 43.2155L55.1551 51.3776L56.0811 51L57.007 50.6224L53.6789 42.4603L52.7529 42.8379ZM56.0811 51L56.5688 50.127L41.9594 41.9649L41.4717 42.8379L40.9839 43.7109L55.5933 51.873L56.0811 51ZM41.4717 42.8379V41.8379H4.59082V42.8379V43.8379H41.4717V42.8379ZM4.59082 42.8379V41.8379C3.16005 41.8379 2 40.6778 2 39.2471H1H0C0 41.7824 2.05549 43.8379 4.59082 43.8379V42.8379ZM1 39.2471H2V4.59082H1H0V39.2471H1ZM1 4.59082H2C2 3.16006 3.16006 2 4.59082 2V1V0C2.05549 0 0 2.05549 0 4.59082H1ZM4.59082 1V2H81.4189V1V0H4.59082V1ZM39.46 6.21875L40.1553 5.50006C38.8773 4.26361 37.0849 3.87734 35.5479 4.76228L36.0469 5.62891L36.5458 6.49553C37.1744 6.1336 38.0081 6.2055 38.7646 6.93744L39.46 6.21875ZM36.0469 5.62891L35.5344 4.77021C34.8416 5.18369 34.2812 6.03281 33.8165 6.9509C33.3244 7.92302 32.8419 9.17703 32.3857 10.6295C31.4717 13.539 30.6329 17.3425 30.0365 21.5006L31.0264 21.6426L32.0162 21.7846C32.6011 17.7068 33.4193 14.0126 34.2938 11.2289C34.7317 9.83468 35.1762 8.69315 35.6009 7.8541C36.0529 6.96101 36.399 6.58332 36.5594 6.4876L36.0469 5.62891ZM31.0264 21.6426L30.0357 21.5059C29.9053 22.4519 29.7753 23.3207 29.6704 23.9579C29.6177 24.2779 29.5727 24.5315 29.5381 24.7046C29.5203 24.7932 29.5079 24.8475 29.5009 24.8746C29.4969 24.89 29.4989 24.8802 29.5071 24.8569C29.511 24.8459 29.5223 24.8146 29.542 24.7738C29.5512 24.7548 29.6078 24.6333 29.7284 24.5126L30.4355 25.2197L31.1427 25.9268C31.2674 25.802 31.3285 25.6735 31.3426 25.6444C31.3671 25.5936 31.3836 25.5493 31.3931 25.5224C31.4125 25.4674 31.4271 25.4145 31.4371 25.3759C31.458 25.295 31.479 25.1981 31.4992 25.0969C31.5405 24.8906 31.5898 24.6109 31.6438 24.2827C31.7523 23.6235 31.8849 22.7366 32.017 21.7792L31.0264 21.6426ZM30.4355 25.2197L29.7904 24.4556C29.9241 24.3428 30.103 24.2543 30.3143 24.231C30.5167 24.2087 30.6847 24.2532 30.798 24.3009C30.9975 24.3848 31.1072 24.5114 31.1286 24.5357C31.1883 24.6037 31.2044 24.6471 31.178 24.5962C31.1389 24.5206 31.0713 24.3652 30.9766 24.1142C30.7922 23.6257 30.5501 22.8972 30.2797 22.0166C29.7403 20.2603 29.1064 17.9605 28.6197 15.9L27.6465 16.1299L26.6733 16.3598C27.1708 18.4659 27.8164 20.8083 28.3678 22.6038C28.6428 23.4992 28.8991 24.274 29.1055 24.8206C29.2061 25.0871 29.307 25.3322 29.4019 25.5155C29.4425 25.5941 29.5171 25.7316 29.6256 25.8552C29.6714 25.9073 29.8032 26.0521 30.0222 26.1443C30.1452 26.1961 30.3223 26.2422 30.5333 26.219C30.753 26.1948 30.9398 26.1027 31.0807 25.9838L30.4355 25.2197ZM27.6465 16.1299L28.6199 15.9008C28.3527 14.765 28.0505 13.664 27.7741 12.8049C27.6365 12.3772 27.5005 11.9946 27.3738 11.6921C27.3109 11.5418 27.2438 11.3957 27.1733 11.2673C27.1174 11.1655 27.0075 10.9753 26.8352 10.8218L26.1699 11.5684L25.5046 12.315C25.4062 12.2273 25.3814 12.1593 25.42 12.2296C25.444 12.2733 25.4807 12.3493 25.5291 12.4647C25.6249 12.6936 25.7412 13.0166 25.8702 13.4175C26.127 14.2156 26.4154 15.2637 26.6731 16.3589L27.6465 16.1299ZM26.1699 11.5684L26.8919 10.8765C26.235 10.191 25.282 10.0056 24.4704 10.0802C23.6432 10.1563 22.7682 10.5134 22.1357 11.169L22.8555 11.8633L23.5752 12.5575C23.8289 12.2946 24.2337 12.1104 24.6535 12.0718C25.089 12.0318 25.3502 12.1582 25.4479 12.2603L26.1699 11.5684ZM22.8555 11.8633L22.1207 11.185C21.9411 11.3796 21.6851 11.7787 21.4258 12.2012C21.1402 12.6666 20.7796 13.2808 20.3707 13.9975C19.5523 15.432 18.5295 17.2965 17.5073 19.2419L18.3926 19.707L19.2778 20.1722C20.2903 18.2452 21.302 16.4012 22.1079 14.9886C22.5112 14.2817 22.8602 13.6876 23.1304 13.2474C23.2658 13.0267 23.3779 12.8504 23.4651 12.7203C23.5638 12.5728 23.6001 12.531 23.5903 12.5416L22.8555 11.8633ZM18.3926 19.707L17.5057 19.245C15.4636 23.1646 14.5172 24.9839 14.0497 25.8028C13.9337 26.006 13.8598 26.125 13.8141 26.1917C13.7449 26.2927 13.7894 26.1991 13.9282 26.1064C14.0198 26.0452 14.2077 25.947 14.4673 25.9553C14.7328 25.9637 14.9194 26.0786 15.0112 26.15C15.0878 26.2096 15.1353 26.2691 15.1195 26.2507C15.1172 26.2481 15.1175 26.2483 15.1118 26.2418C15.1078 26.2371 15.1016 26.2299 15.0944 26.2217C15.0801 26.2055 15.058 26.1809 15.0303 26.1532L14.3232 26.8604L13.6161 27.5675C13.5969 27.5482 13.5767 27.5242 13.6047 27.5567C13.6127 27.566 13.6829 27.6506 13.7831 27.7285C13.8985 27.8183 14.1099 27.9449 14.4035 27.9543C14.6911 27.9634 14.9106 27.8553 15.0394 27.7693C15.2525 27.6269 15.3942 27.4239 15.4636 27.3228C15.5565 27.1873 15.6626 27.0115 15.7866 26.7944C16.2791 25.9317 17.2525 24.0594 19.2794 20.1691L18.3926 19.707ZM14.3232 26.8604L14.9876 26.1129C15.1165 26.2275 15.1739 26.344 15.174 26.3442C15.1871 26.3687 15.1903 26.3789 15.1841 26.3634C15.1724 26.334 15.1508 26.2722 15.1192 26.1675C15.0574 25.962 14.9778 25.6592 14.8826 25.265C14.6933 24.4805 14.455 23.386 14.1914 22.0985C13.6647 19.5259 13.0433 16.2143 12.52 13.1398L11.5342 13.3076L10.5484 13.4754C11.0752 16.5703 11.7006 19.9038 12.2321 22.4996C12.4976 23.7963 12.7412 24.9168 12.9384 25.7341C13.0366 26.1408 13.1264 26.4856 13.2041 26.7439C13.2424 26.871 13.283 26.9952 13.3255 27.1019C13.3464 27.1545 13.3745 27.2204 13.4104 27.2875C13.4334 27.3305 13.5115 27.4768 13.6589 27.6078L14.3232 26.8604ZM11.5342 13.3076L12.5199 13.1391C12.2493 11.5565 12.0215 10.3043 11.7968 9.32972C11.5758 8.37057 11.3404 7.59793 11.0252 7.02034C10.6884 6.40297 10.2223 5.9424 9.54945 5.74139C8.95484 5.56377 8.32173 5.6332 7.76182 5.72512L7.92383 6.71191L8.08584 7.6987C8.62526 7.61014 8.85775 7.6221 8.97701 7.65772C9.01797 7.66996 9.11408 7.69334 9.26959 7.97833C9.44681 8.3031 9.6341 8.85122 9.84794 9.77894C10.0582 10.6913 10.2776 11.892 10.5485 13.4762L11.5342 13.3076ZM7.92383 6.71191L7.76366 5.72482C6.91204 5.86301 6.08389 6.35132 5.47965 6.90633C5.16974 7.19098 4.8874 7.52126 4.67666 7.87909C4.47074 8.22872 4.29891 8.66372 4.29883 9.13947L5.29883 9.13965L6.29883 9.13982C6.29883 9.14355 6.29837 9.12415 6.31319 9.07841C6.32795 9.03286 6.35483 8.97072 6.39999 8.89404C6.49175 8.73823 6.63801 8.55799 6.83257 8.37928C7.23727 8.00757 7.72154 7.75782 8.08399 7.699L7.92383 6.71191ZM5.29883 9.13965H4.29883C4.29883 9.36039 4.34781 9.75433 4.40921 10.1895C4.47537 10.6584 4.57015 11.267 4.68578 11.9736C4.91724 13.388 5.23519 15.213 5.58237 17.1357C6.27586 20.9762 7.09106 25.2344 7.57149 27.4046L8.54785 27.1885L9.52421 26.9723C9.05296 24.8435 8.24365 20.6188 7.55054 16.7803C7.20443 14.8636 6.88857 13.0502 6.65953 11.6506C6.54492 10.9502 6.45279 10.358 6.38959 9.91006C6.35794 9.68576 6.33428 9.50272 6.31873 9.36299C6.31096 9.29315 6.30565 9.23803 6.30239 9.1964C6.29886 9.15135 6.29883 9.13568 6.29883 9.13965H5.29883ZM8.54785 27.1885L7.57308 27.4117C8.37767 30.9256 9.11431 33.6448 9.87908 35.5265C10.2607 36.4655 10.6721 37.2545 11.1415 37.8402C11.6116 38.4266 12.2166 38.9016 12.9889 39.005C13.7644 39.1089 14.4706 38.8064 15.0717 38.3577C15.6701 37.9112 16.259 37.2522 16.8531 36.4423C18.0439 34.819 19.4066 32.3769 21.024 29.1832L20.1318 28.7314L19.2397 28.2796C17.6247 31.4686 16.3252 33.7806 15.2405 35.2593C14.6968 36.0004 14.2446 36.4794 13.8755 36.7549C13.5093 37.0282 13.3217 37.0318 13.2543 37.0227C13.1836 37.0133 12.9964 36.9565 12.7021 36.5893C12.4071 36.2213 12.082 35.6348 11.7319 34.7735C11.0333 33.0546 10.326 30.4739 9.52262 26.9653L8.54785 27.1885ZM20.1318 28.7314L21.0263 29.1787C21.8599 27.5115 22.6341 26.0037 23.2148 24.9151C23.506 24.3691 23.7439 23.9373 23.9142 23.6459C24.0009 23.4976 24.061 23.4013 24.0969 23.3486C24.1171 23.3189 24.1145 23.3256 24.0944 23.3487C24.0861 23.3582 24.0507 23.399 23.9928 23.4458C23.9806 23.4557 23.7678 23.643 23.4269 23.659L23.3799 22.6602L23.3328 21.6613C22.9836 21.6777 22.7598 21.8707 22.7342 21.8915C22.6629 21.9492 22.6115 22.006 22.585 22.0366C22.5282 22.1019 22.4792 22.171 22.4438 22.2228C22.3686 22.3332 22.281 22.4767 22.1875 22.6367C21.9975 22.9618 21.7452 23.4206 21.4501 23.9738C20.8582 25.0834 20.0755 26.6081 19.2374 28.2842L20.1318 28.7314ZM23.3799 22.6602V23.6602C23.1558 23.6602 22.9886 23.5849 22.8993 23.5346C22.8072 23.4827 22.7444 23.4272 22.7114 23.3958C22.6469 23.3342 22.6112 23.2812 22.6049 23.272C22.5878 23.2469 22.59 23.2456 22.613 23.2921C22.6543 23.3758 22.7171 23.5204 22.7972 23.7253C22.9546 24.1285 23.1518 24.6952 23.3431 25.3166L24.2988 25.0225L25.2546 24.7284C25.0521 24.0701 24.839 23.4557 24.6601 22.9976C24.5719 22.7718 24.4849 22.5658 24.4062 22.4065C24.3692 22.3315 24.3189 22.2357 24.2581 22.1464C24.2299 22.105 24.1745 22.0276 24.0928 21.9495C24.057 21.9153 23.8009 21.6602 23.3799 21.6602V22.6602ZM24.2988 25.0225L23.3476 25.3308C24.1468 27.7964 25.5109 30.6535 26.9372 33.0669C27.6519 34.2761 28.3921 35.3907 29.0976 36.3004C29.7867 37.1889 30.4988 37.9561 31.1672 38.3946L31.7158 37.5586L32.2645 36.7225C31.8827 36.472 31.3354 35.9223 30.678 35.0746C30.0369 34.248 29.3432 33.207 28.659 32.0492C27.2875 29.7286 25.9933 27.0068 25.2501 24.7141L24.2988 25.0225ZM31.7158 37.5586L31.1726 38.3982C32.5777 39.3073 34.5937 39.3461 35.7662 38.0716L35.0303 37.3945L34.2943 36.7175C33.9574 37.0837 33.0854 37.2536 32.259 36.719L31.7158 37.5586ZM35.0303 37.3945L35.7777 38.0589C36.2289 37.5513 36.4354 36.9715 36.5666 36.0072C36.6937 35.0737 36.7684 33.6256 36.85 31.2591L35.8506 31.2246L34.8512 31.1901C34.7687 33.5818 34.6957 34.9232 34.5849 35.7375C34.4783 36.5209 34.3567 36.6471 34.2828 36.7302L35.0303 37.3945ZM35.8506 31.2246L36.8498 31.2651C37.1761 23.2059 38.6781 14.8533 40.4744 10.756L39.5586 10.3545L38.6427 9.95296C36.6983 14.388 35.1815 23.033 34.8514 31.1842L35.8506 31.2246ZM39.5586 10.3545L40.4698 10.7664C40.9914 9.61265 41.3761 8.66342 41.3582 7.81025C41.3372 6.81469 40.7942 6.1388 40.1671 5.51164L39.46 6.21875L38.7529 6.92586C39.3071 7.48008 39.3549 7.67427 39.3586 7.85234C39.3654 8.17281 39.2087 8.70076 38.6474 9.94257L39.5586 10.3545ZM53.0791 9.36914L53.3621 8.41003C52.3105 8.09971 51.411 7.92553 50.473 7.93043C49.5363 7.93532 48.6218 8.11848 47.5394 8.44494L47.8281 9.40234L48.1169 10.3598C49.1018 10.0627 49.812 9.93391 50.4834 9.93041C51.1536 9.92691 51.8459 10.0479 52.7961 10.3283L53.0791 9.36914ZM47.8281 9.40234L47.5275 8.44861C45.7564 9.00693 44.0838 10.3856 42.7235 12.136C41.3519 13.9007 40.2337 16.1235 39.609 18.5007L40.5762 18.7549L41.5433 19.009C42.1 16.8906 43.0983 14.9129 44.3026 13.3633C45.5181 11.7993 46.8808 10.7495 48.1288 10.3561L47.8281 9.40234ZM40.5762 18.7549L39.6099 18.4972C39.2479 19.8548 39.0919 21.8617 39.1087 23.7356C39.1252 25.5862 39.3113 27.5102 39.7378 28.6541L40.6748 28.3047L41.6118 27.9553C41.3164 27.163 41.1249 25.5427 41.1086 23.7177C41.0925 21.9161 41.2481 20.1162 41.5424 19.0125L40.5762 18.7549ZM40.6748 28.3047L39.7354 28.6475C40.6829 31.2442 42.3673 33.3866 44.4278 34.4169L44.875 33.5225L45.3222 32.628C43.8388 31.8863 42.4388 30.2216 41.6142 27.9619L40.6748 28.3047ZM44.875 33.5225L44.4388 34.4223C45.6863 35.0271 47.2348 35.3171 48.7095 35.3303C50.1771 35.3435 51.6932 35.0834 52.8548 34.4731L52.3896 33.5879L51.9245 32.7026C51.15 33.1096 49.9917 33.3418 48.7275 33.3304C47.4703 33.3191 46.2296 33.0678 45.3112 32.6226L44.875 33.5225ZM52.3896 33.5879L52.8554 34.4728C54.9632 33.3635 57.2307 30.7779 58.4482 28.169L57.542 27.7461L56.6358 27.3232C55.5562 29.6367 53.5572 31.8434 51.9239 32.703L52.3896 33.5879ZM57.542 27.7461L58.4489 28.1675C60.3718 24.0296 60.8039 19.6553 59.9247 16.0329C59.0458 12.4114 56.8165 9.44263 53.3655 8.41103L53.0791 9.36914L52.7927 10.3272C55.3797 11.1006 57.2194 13.3661 57.9812 16.5046C58.7427 19.6424 58.3873 23.5541 56.6351 27.3247L57.542 27.7461ZM74.5078 9.40234L74.7924 8.4437C73.6969 8.11847 72.781 7.93476 71.8335 7.93477C70.8859 7.93477 69.9701 8.11849 68.8746 8.44369L69.1592 9.40234L69.4438 10.361C70.4483 10.0628 71.1567 9.93477 71.8335 9.93477C72.5102 9.93476 73.2186 10.0628 74.2232 10.361L74.5078 9.40234ZM69.1592 9.40234L68.8651 8.44656C67.0962 8.99086 65.4202 10.406 64.0601 12.1934C62.6863 13.9988 61.5614 16.278 60.9378 18.7031L61.9062 18.9521L62.8747 19.2012C63.4325 17.032 64.4409 14.9957 65.6517 13.4045C66.8761 11.7954 68.2359 10.7327 69.4533 10.3581L69.1592 9.40234ZM61.9062 18.9521L60.9385 18.7003C60.5972 20.0119 60.4387 21.7871 60.4387 23.4765C60.4387 25.1578 60.5955 26.8776 60.9476 28.0639L61.9062 27.7793L62.8649 27.4947C62.5936 26.5808 62.4387 25.0849 62.4387 23.4765C62.4387 21.8763 62.5919 20.288 62.874 19.204L61.9062 18.9521ZM61.9062 27.7793L60.9464 28.0599C61.614 30.3437 62.7365 32.1714 64.3153 33.4269C65.8999 34.6869 67.8678 35.3095 70.1103 35.3096L70.1104 34.3096L70.1104 33.3096C68.251 33.3095 66.7403 32.8 65.5601 31.8615C64.3741 30.9183 63.4455 29.4809 62.8661 27.4987L61.9062 27.7793ZM70.1104 34.3096V35.3096C71.7945 35.3096 73.0535 35.105 74.1679 34.5477L73.7207 33.6533L73.2735 32.7589C72.5502 33.1205 71.6422 33.3096 70.1104 33.3096V34.3096ZM73.7207 33.6533L74.1596 34.5519C76.5541 33.3823 78.5253 30.9638 79.8412 28.1307C81.165 25.2805 81.884 21.8905 81.6757 18.6258L80.6777 18.6895L79.6798 18.7531C79.8651 21.6576 79.2221 24.7157 78.0273 27.2882C76.8245 29.8779 75.1204 31.8567 73.2818 32.7548L73.7207 33.6533ZM80.6777 18.6895L81.6758 18.6275C81.3635 13.596 78.8631 9.64981 74.7919 8.44355L74.5078 9.40234L74.2237 10.3611C77.2409 11.2551 79.4013 14.2662 79.6797 18.7514L80.6777 18.6895ZM68.7324 17.0488L69.5694 17.5961C70.3619 16.3841 71.0792 15.778 71.6076 15.5735C71.8514 15.4791 72.0371 15.476 72.1868 15.5133C72.3404 15.5515 72.5349 15.6522 72.7581 15.8921L73.4902 15.2109L74.2224 14.5298C73.7893 14.0642 73.2701 13.7219 72.67 13.5725C72.066 13.4222 71.4581 13.4868 70.8857 13.7083C69.7818 14.1356 68.7766 15.154 67.8955 16.5016L68.7324 17.0488ZM73.4902 15.2109L72.7632 15.8976C74.1052 17.3184 74.6387 20.2459 73.7462 23.2622L74.7051 23.5459L75.664 23.8296C76.6746 20.414 76.2225 16.6475 74.2172 14.5243L73.4902 15.2109ZM74.7051 23.5459L73.7475 23.2577C73.2858 24.7916 72.4502 26.0799 71.5707 26.8719C70.6417 27.7083 69.9357 27.7856 69.5667 27.621L69.1592 28.5342L68.7517 29.4474C70.2204 30.1027 71.7787 29.3759 72.9089 28.3581C74.0886 27.2959 75.1071 25.6801 75.6627 23.8341L74.7051 23.5459ZM69.1592 28.5342L69.5782 27.6262C69.2717 27.4847 68.8449 27.0371 68.4868 26.1769C68.1438 25.353 67.9278 24.2954 67.9277 23.1855L66.9277 23.1855L65.9277 23.1856C65.9278 24.5367 66.1877 25.8581 66.6404 26.9456C67.078 27.9968 67.7669 28.993 68.7401 29.4421L69.1592 28.5342ZM66.9277 23.1855H67.9277C67.9277 20.8412 68.3366 19.4304 69.5624 17.6067L68.7324 17.0488L67.9025 16.491C66.4375 18.6707 65.9277 20.4764 65.9277 23.1855H66.9277ZM46.6465 18.1973L47.536 18.6542C48.4197 16.9341 49.3108 16.0019 50.0082 15.6633C50.3322 15.5061 50.5834 15.49 50.7861 15.5381C50.9952 15.5878 51.2616 15.7322 51.5603 16.0858L52.3242 15.4404L53.0881 14.7951C52.5829 14.197 51.9673 13.763 51.2482 13.5923C50.5226 13.42 49.7995 13.5414 49.1348 13.8641C47.8547 14.4856 46.711 15.8835 45.757 17.7403L46.6465 18.1973ZM52.3242 15.4404L51.5618 16.0876C52.5129 17.208 52.9385 19.1439 52.7043 21.2704C52.4722 23.3781 51.6152 25.4285 50.3124 26.7032L51.0117 27.418L51.7111 28.1328C53.4271 26.4538 54.424 23.9265 54.6923 21.4893C54.9586 19.071 54.531 16.4949 53.0866 14.7933L52.3242 15.4404ZM51.0117 27.418L50.3128 26.7028C49.6788 27.3224 49.1468 27.5853 48.7568 27.6568C48.4018 27.7218 48.1021 27.6431 47.8194 27.4133C47.1706 26.8858 46.5312 25.4609 46.5312 22.9551H45.5312H44.5312C44.5312 25.6342 45.1882 27.8518 46.5578 28.9651C47.2842 29.5557 48.1741 29.7969 49.1174 29.624C50.0257 29.4575 50.9008 28.9246 51.7107 28.1332L51.0117 27.418ZM45.5312 22.9551L46.5311 22.9404C46.5148 21.8286 46.5436 21.2488 46.6684 20.7196C46.7938 20.1881 47.029 19.6518 47.538 18.6503L46.6465 18.1973L45.755 17.7442C45.2468 18.7442 44.908 19.4712 44.7219 20.2605C44.5351 21.0521 44.5149 21.8505 44.5314 22.9698L45.5312 22.9551Z"
+                  fill="#4C8C74"
+                />
+              </svg>
+            ),
+          },
+        ],
+        processHeading: <>From Strategy to Live Campaigns in Three Clear Steps</>,
+        processPara: (
+          <>
+          </>
+        ),
+        processCardData: [
+          {
+            image: "/Services/01.svg",
+            heading: "Audience Research & Campaign Planning",
+            paragraph: (
+              <>
+                We start by understanding your business, your audience, and your goals. We research how your ideal customers behave on YouTube, what they watch, what they search for, and what intent signals they're giving off. From there, we build a full campaign plan: ad formats, funnel structure, audience layers, bidding strategy, and creative direction. You approve the plan before any ads go live.
+              </>
+            ),
+          },
+          {
+            image: "/Services/02.svg",
+            heading: "Creative Development & Campaign Launch",
+            paragraph: (
+              <>
+                We write the ad scripts, provide creative direction for video production (or work with your existing video assets), and set up every campaign element properly, tracking, audience lists, placement exclusions, and bidding. Campaigns launch with full conversion tracking in place. No gaps, no guesswork on what's driving results from day one.
+              </>
+            ),
+          },
+          {
+            image: "/Services/03.svg",
+            heading: "Monitor, Optimise & Scale",
+            paragraph: (
+              <>
+                Once live, we review performance weekly, audience performance, view rates, conversion data, and cost per result. We test creative variations, refine targeting, and scale what's working. Monthly reporting covers the numbers that actually matter to your business. As the campaigns learn and we optimise, performance compounds; the longer we run them, the better they get.
+              </>
+            ),
+          },
+        ],
+        pricingCardData: [
+      {
+        title: "Basic Website Package",
+        price: "$229",
+        discountedFrom: "$499",
+        includes: [
+          "2 Custom Logo Design Concepts",
+          "1 Dedicated Designer",
+          "4 REVISIONS",
+          "48 to 72 hours TAT",
+          "100% Unique Design Guarantee",
+          "100% Satisfaction Guarantee",
+          "100% Ownership Rights",
+          "100% Money Back Guarantee",
+        ],
+      },
+      {
+        title: "Basic Website Package",
+        price: "$229",
+        discountedFrom: "$499",
+        includes: [
+          "5 Custom Logo Design Concepts",
+          "By 2 Designers",
+          "UNLIMITED Revisions",
+          "48 to 72 hours TAT",
+          "100% Unique Design Guarantee",
+          "100% Satisfaction Guarantee",
+          "100% Ownership Rights",
+          "100% Money Back Guarantee",
+        ],
+      },
+      {
+        title: "Basic Website Package",
+        price: "$229",
+        discountedFrom: "$499",
+        includes: [
+          "UNLIMITED Logo Design Concepts",
+          "By 4 Designers",
+          "UNLIMITED Revisions",
+          "Stationary Design (Business Card, Letterhead, Envelope)",
+          "48 to 72 hours TAT",
+          "FREE MS Word Letterhead",
+          "All Final Files Format (AI, PSD, EPS, PNG, GIF, jpeg, PDF)",
+        ],
+      },
+        ],
+        customplanData: {
+          heading: "With Aussie Digital Solution",
+          buttonText: "Book a consultation call to create your perfect plan",
+          body: (
+            <div className="space-y-2">
+              <ul className="list-disc list-inside mt-2">
+                <li>Precision targeting using Google's intent and interest data</li>
+                <li>Ad scripts are written to hook viewers in the first five seconds</li>
+                <li>Full-funnel structure, different creative for each stage</li>
+                <li>Complete conversion and view-through tracking from day one</li>
+                <li>Placement exclusions and negative audience lists from the start</li>
+                <li>Weekly optimisation, bidding, creative testing, audience refinement</li>
+              </ul>
+            </div>
+          ),
+          rightContent: <><h3 className="text-2xl text-white mt-3">YouTube Ad Formats We Run</h3>
+          <h2 className="text-3xl text-white font-semibold">Every YouTube Format. Used With Purpose.</h2>
+          <p className="text-sm">Different YouTube ad formats serve different goals. We don't pick one and run it for everything; we use the right format for the right stage of the customer journey, and we manage all of them properly.</p>
+          <ul className="list-disc list-inside mt-1 text-sm">
+            <li>Skippable In-Stream Ads</li>
+            <li>Bumper Ads</li>
+            <li>In-Feed Video Discovery Ads</li>
+            <li>YouTube Remarketing Campaigns</li>
+          </ul></>,
+          miniTagData: <></>,
+        },
+        faqData: [
+          {
+            question: "What types of YouTube ads do you manage?",
+            answer:
+              "We manage all major formats, skippable in-stream, bumper ads, non-skippable in-stream, in-feed ads, and YouTube Shorts ads. We recommend formats based on your goals and funnel stage, and explain every decision before launch.",
+          },
+          {
+            question: "Do I need a video already, or do you create it?",
+            answer:
+              "You can use existing footage, and we’ll edit it for performance, write scripts, and optimise it for ads. If you don’t have video, we can guide production or connect you with trusted partners.",
+          },
+          {
+            question: "How long before I see results from YouTube Ads?",
+            answer:
+              "Initial data appears within a few weeks. The first month is for testing and learning, with stronger performance typically from month two as campaigns are optimised.",
+          },
+        ],
+        portfolioData: [
+          {
+            id: "1",
+            src: "/Services/web_01.svg",
+            translateY: "-translate-y-25",
+          },
+          { id: "2", src: "/Services/web_02.svg", translateY: "" },
+          {
+            id: "3",
+            src: "/Services/web_02.svg",
+            translateY: "-translate-y-25",
+          },
+          { id: "4", src: "/Services/web_03.svg", translateY: "" },
+          {
+            id: "5",
+            src: "/Services/web_04.svg",
+            translateY: "-translate-y-25",
+          },
+          { id: "6", src: "/Services/web_05.svg", translateY: "" },
+          {
+            id: "7",
+            src: "/Services/web_06.svg",
+            translateY: "-translate-y-25",
+          },
+          { id: "8", src: "/Services/web_07.svg", translateY: "" },
+        ],
+        footnote:
+          "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
+        contactData: {
+        heading: (<>Let's Start Growing</>),
+        body: (<><h3 className="text-2xl font-semibold"></h3>
+        <p>Get in touch today, and one of our YouTube Ads specialists will get back to you within one business day. No scripts, no pressure. A straight conversation about your business and what video advertising could do for it.</p>
+        </>),
+        buttonText: "Book a Free Audit",
+      },
+      },
+      // {
+      //   slug: "youtube-ads",
+      //   title: "YouTube Ads",
+      //   heading: "YouTube Ads That Convert",
+      //   imageUrl: "/Services/Rectangle_52.png",
+      //   description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
+      //   points: [
+      //     "Custom Website Design",
+      //     "Responsive Development",
+      //     "E-commerce Solutions",
+      //     "Content Management Systems",
+      //     "Performance Optimization",
+      //   ],
+      //   experienceCardData: [
+      //     {
+      //       title: "End-to-End Support, Hosting & Maintenance",
+      //       description:
+      //         "We take care of everything behind the scenes. From secure hosting and regular updates to ongoing maintenance and performance improvements, we ensure your website stays fast, secure and running smoothly.",
+      //       svgelement: (
+      //         <svg
+      //           xmlns="http://www.w3.org/2000/svg"
+      //           width="50"
+      //           height="50"
+      //           viewBox="0 0 50 50"
+      //           fill="none"
+      //           className="transform translate-x-3.5 translate-y-3.5"
+      //         >
+      //           <path
+      //             d="M4.16699 25.0545C4.16699 35.7758 12.2235 44.6105 22.5978 45.8048C24.1286 45.9811 25.6124 45.3285 26.702 44.2361C28.0634 42.8712 28.0634 40.6582 26.702 39.2933C25.6124 38.2008 24.7242 36.5712 25.5459 35.2643C28.8306 30.0401 45.8337 42.0376 45.8337 25.0545C45.8337 13.5185 36.5063 4.16675 25.0003 4.16675C13.4944 4.16675 4.16699 13.5185 4.16699 25.0545Z"
+      //             stroke="#4C8C74"
+      //             strokeWidth="2"
+      //             strokeLinecap="round"
+      //           />
+      //           <circle
+      //             cx="36.458"
+      //             cy="23.9583"
+      //             r="3.125"
+      //             stroke="#4C8C74"
+      //             strokeWidth="2"
+      //             strokeLinecap="round"
+      //           />
+      //           <circle
+      //             cx="13.542"
+      //             cy="23.9583"
+      //             r="3.125"
+      //             stroke="#4C8C74"
+      //             strokeWidth="2"
+      //             strokeLinecap="round"
+      //           />
+      //           <path
+      //             d="M23.0937 14.5828C23.0937 16.3087 21.6946 17.7078 19.9687 17.7078C18.2429 17.7078 16.8438 16.3087 16.8438 14.5828C16.8438 12.8569 18.2429 11.4578 19.9687 11.4578C21.6946 11.4578 23.0937 12.8569 23.0937 14.5828Z"
+      //             stroke="#4C8C74"
+      //             strokeWidth="2"
+      //             strokeLinecap="round"
+      //           />
+      //           <path
+      //             d="M33.333 14.5833C33.333 16.3091 31.9339 17.7083 30.208 17.7083C28.4821 17.7083 27.083 16.3091 27.083 14.5833C27.083 12.8574 28.4821 11.4583 30.208 11.4583C31.9339 11.4583 33.333 12.8574 33.333 14.5833Z"
+      //             stroke="#4C8C74"
+      //             strokeWidth="2"
+      //             strokeLinecap="round"
+      //           />
+      //         </svg>
+      //       ),
+      //     },
+      //     {
+      //       title: "Fully Custom Design & Conversion-Focused Pages",
+      //       description:
+      //         "We design fully custom websites tailored to your brand and built with purpose. Every page is carefully crafted to guide users smoothly, encourage engagement and drive meaningful actions. No templates, no limitations, just thoughtful design focused on performance.",
+      //       svgelement: (
+      //         <svg
+      //           xmlns="http://www.w3.org/2000/svg"
+      //           width="50"
+      //           height="50"
+      //           viewBox="0 0 50 50"
+      //           fill="none"
+      //           className="transform translate-x-4 translate-y-4"
+      //         >
+      //           <circle
+      //             cx="18.7503"
+      //             cy="12.5001"
+      //             r="8.33333"
+      //             stroke="#4C8C74"
+      //             strokeWidth="2"
+      //             strokeLinecap="round"
+      //           />
+      //           <path
+      //             d="M31.25 18.75C34.7018 18.75 37.5 15.9518 37.5 12.5C37.5 9.04822 34.7018 6.25 31.25 6.25"
+      //             stroke="#4C8C74"
+      //             strokeWidth="2"
+      //             strokeLinecap="round"
+      //           />
+      //           <ellipse
+      //             cx="18.7503"
+      //             cy="35.4166"
+      //             rx="14.5833"
+      //             ry="8.33333"
+      //             stroke="#4C8C74"
+      //             strokeWidth="2"
+      //             strokeLinecap="round"
+      //           />
+      //           <path
+      //             d="M37.5 29.1667C41.1547 29.9682 43.75 31.9979 43.75 34.3751C43.75 36.5195 41.6381 38.3811 38.5417 39.3135"
+      //             stroke="#4C8C74"
+      //             strokeWidth="2"
+      //             strokeLinecap="round"
+      //           />
+      //         </svg>
+      //       ),
+      //     },
+      //   ],
+      //   strategicCardData: [
+      //     {
+      //       title: "Custom Website Design",
+      //       desc: "Understand your vision, business goals, and target audience to create a clear project roadmap.",
+      //       svg: (
+      //         <svg
+      //           xmlns="http://www.w3.org/2000/svg"
+      //           width="25"
+      //           height="25"
+      //           viewBox="0 0 50 50"
+      //           fill="none"
+      //         >
+      //           <path
+      //             d="M4.1665 22.9167C4.1665 15.0599 4.1665 11.1316 6.60728 8.69078C9.04806 6.25 12.9764 6.25 20.8332 6.25H29.1665C37.0232 6.25 40.9516 6.25 43.3924 8.69078C45.8332 11.1316 45.8332 15.0599 45.8332 22.9167V27.0833C45.8332 34.9401 45.8332 38.8684 43.3924 41.3092C40.9516 43.75 37.0232 43.75 29.1665 43.75H20.8332C12.9764 43.75 9.04806 43.75 6.60728 41.3092C4.1665 38.8684 4.1665 34.9401 4.1665 27.0833V22.9167Z"
+      //             stroke="#4C8C74"
+      //             strokeWidth="2"
+      //             strokeLinecap="round"
+      //           />
+      //           <path
+      //             d="M31.25 43.75L31.25 6.25"
+      //             stroke="#4C8C74"
+      //             strokeWidth="2"
+      //             strokeLinecap="round"
+      //           />
+      //           <path
+      //             d="M12.4998 29.1666L10.4165 31.25L12.4998 33.3333M21.8748 33.3333L23.9582 35.4166L21.8748 37.5M18.7498 29.1666L15.6248 37.5"
+      //             stroke="#4C8C74"
+      //             strokeWidth="2"
+      //             strokeLinecap="round"
+      //           />
+      //         </svg>
+      //       ),
+      //     },
+      //     {
+      //       title: "E-commerce Website Development",
+      //       desc: "Iteratively develop robust, scalable websites with regular testing and your feedback at every stage.",
+      //       svg: (
+      //         <svg
+      //           xmlns="http://www.w3.org/2000/svg"
+      //           width="25"
+      //           height="25"
+      //           viewBox="0 0 50 50"
+      //           fill="none"
+      //         >
+      //           <path
+      //             d="M45.8332 45.8334H4.1665"
+      //             stroke="#4C8C74"
+      //             strokeWidth="2"
+      //             strokeLinecap="round"
+      //           />
+      //           <path
+      //             d="M41.6665 45.8333V22.9166"
+      //             stroke="#4C8C74"
+      //             strokeWidth="2"
+      //             strokeLinecap="round"
+      //           />
+      //           <path
+      //             d="M8.3335 45.8333V22.9166"
+      //             stroke="#4C8C74"
+      //             strokeWidth="2"
+      //             strokeLinecap="round"
+      //           />
+      //           <path
+      //             d="M34.4332 4.16663H15.5673C13.0614 4.16663 11.8085 4.16663 10.8016 4.78891C9.7947 5.4112 9.23437 6.53186 8.11372 8.77318L4.16699 18.75C4.16699 21.0511 6.03229 22.9166 8.33348 22.9166C10.6347 22.9166 12.5001 21.0511 12.5001 18.75C12.5001 21.0511 14.3656 22.9166 16.6668 22.9166C18.968 22.9166 20.8335 21.0511 20.8335 18.75C20.8335 21.0511 22.699 22.9166 25.0001 22.9166C27.3013 22.9166 29.1668 21.0511 29.1668 18.75C29.1668 21.0511 31.0323 22.9166 33.3335 22.9166C35.6347 22.9166 37.5001 21.0511 37.5001 18.75C37.5001 21.0511 39.3656 22.9166 41.6668 22.9166C43.968 22.9166 45.8335 21.0511 45.8335 18.75L41.8868 8.77318L41.8867 8.77314C40.7661 6.53185 40.2058 5.4112 39.1989 4.78891C38.192 4.16663 36.9391 4.16663 34.4332 4.16663Z"
+      //             stroke="#4C8C74"
+      //             strokeWidth="2"
+      //             strokeLinecap="round"
+      //           />
+      //           <path
+      //             d="M19.7915 44.7917V38.5417C19.7915 36.5946 19.7915 35.621 20.2102 34.8959C20.4845 34.4208 20.8789 34.0263 21.354 33.752C22.0792 33.3334 23.0527 33.3334 24.9998 33.3334C26.947 33.3334 27.9205 33.3334 28.6457 33.752C29.1207 34.0263 29.5152 34.4208 29.7895 34.8959C30.2082 35.621 30.2082 36.5946 30.2082 38.5417V44.7917"
+      //             stroke="#4C8C74"
+      //             strokeWidth="2"
+      //             strokeLinecap="round"
+      //           />
+      //         </svg>
+      //       ),
+      //     },
+      //     {
+      //       title: "Magento Development",
+      //       desc: "Design modern, user-centric interfaces for an exceptional digital experience.",
+      //       svg: (
+      //         <svg
+      //           xmlns="http://www.w3.org/2000/svg"
+      //           width="25"
+      //           height="25"
+      //           viewBox="0 0 50 50"
+      //           fill="none"
+      //         >
+      //           <path
+      //             d="M25.0003 45.8333C36.5063 45.8333 45.8337 36.5059 45.8337 25C45.8337 13.494 36.5063 4.16663 25.0003 4.16663C13.4944 4.16663 4.16699 13.494 4.16699 25C4.16699 36.5059 13.4944 45.8333 25.0003 45.8333Z"
+      //             stroke="#4C8C74"
+      //             strokeWidth="2"
+      //             strokeLinecap="round"
+      //           />
+      //           <path
+      //             d="M32.292 18.75L32.6494 19.1074C35.4272 21.8852 36.8161 23.2741 36.8161 25C36.8161 26.7259 35.4272 28.1148 32.6494 30.8926L32.292 31.25"
+      //             stroke="#4C8C74"
+      //             strokeWidth="2"
+      //             strokeLinecap="round"
+      //           />
+      //           <path
+      //             d="M27.6963 14.9382L25.0003 25L22.3042 35.0617"
+      //             stroke="#4C8C74"
+      //             strokeWidth="2"
+      //             strokeLinecap="round"
+      //           />
+      //           <path
+      //             d="M17.7087 18.75L17.3512 19.1074C14.5735 21.8852 13.1846 23.2741 13.1846 25C13.1846 26.7259 14.5735 28.1148 17.3512 30.8926L17.7087 31.25"
+      //             stroke="#4C8C74"
+      //             strokeWidth="2"
+      //             strokeLinecap="round"
+      //           />
+      //         </svg>
+      //       ),
+      //     },
+      //     {
+      //       title: "Wordpress Development",
+      //       desc: "Design modern, user-centric interfaces for an exceptional digital experience.",
+      //       svg: (
+      //         <svg
+      //           xmlns="http://www.w3.org/2000/svg"
+      //           width="25"
+      //           height="25"
+      //           viewBox="0 0 52 52"
+      //           fill="none"
+      //         >
+      //           <circle
+      //             cx="26"
+      //             cy="26"
+      //             r="25"
+      //             stroke="#4C8C74"
+      //             strokeWidth="2"
+      //             strokeLinecap="round"
+      //           />
+      //           <path
+      //             d="M4.5166 13.8746H6.74371M14.3476 13.8746H6.74371M6.74371 13.8746L18.8623 47.0621L27.6542 23.3794M27.6542 23.3794L24.2483 13.8746M27.6542 23.3794L36.2877 47.0621L45.0166 23.3794M24.2483 13.8746H18.3078M24.2483 13.8746H32.8026M45.0166 23.3794L45.9508 20.8448C47.1125 16.6468 47.9785 8.42521 42.1489 9.12223C39.7836 9.67667 37.0457 13.3043 45.0166 23.3794Z"
+      //             stroke="#4C8C74"
+      //             strokeWidth="2"
+      //             strokeLinecap="round"
+      //           />
+      //         </svg>
+      //       ),
+      //     },
+      //     {
+      //       title: "Opencart",
+      //       desc: "Thoroughly test for responsiveness, performance, and security before seamless launch and handover.",
+      //       svg: (
+      //         <svg
+      //           xmlns="http://www.w3.org/2000/svg"
+      //           width="25"
+      //           height="25"
+      //           viewBox="0 0 50 50"
+      //           fill="none"
+      //         >
+      //           <path
+      //             d="M2.01594 9.46583C4.54545 13.647 7.6255 15.745 13.2351 17.1287C17.1632 18.0959 20.8236 18.4084 29.1412 18.4828C33.6199 18.5125 36.1643 18.6018 37.3993 18.7506C42.5178 19.3904 43.8867 20.5808 42.3541 23.1252C42.0863 23.5716 40.8216 25.0595 39.5568 26.3986C36.6256 29.5233 35.7179 30.55 34.9442 31.6809C34.468 32.3355 34.3936 32.529 34.6168 32.4099C34.7805 32.3207 34.9739 32.1719 35.0335 32.0826C35.0781 31.9933 37.2059 30.1334 39.7651 27.961C46.4906 22.2026 48.4101 20.2534 48.916 18.6613C49.1689 17.8876 48.916 17.1585 48.2167 16.6972C46.4609 15.5366 43.1874 15.1647 34.5127 15.12C17.6245 15.0159 11.5686 14.3612 6.8964 12.0995C5.00671 11.177 3.62292 10.2396 2.09034 8.79625L0.989258 7.78445L2.01594 9.46583Z"
+      //             fill="#4C8C74"
+      //           />
+      //           <path
+      //             d="M12.5803 35.5792C11.6875 35.9066 10.9882 36.5464 10.6013 37.3648C9.51512 39.6859 11.0923 42.2155 13.6218 42.2155C16.3597 42.2006 17.9666 39.3437 16.5531 37.0523C15.7347 35.728 13.9641 35.0584 12.5803 35.5792Z"
+      //             fill="#4C8C74"
+      //           />
+      //           <path
+      //             d="M28.2332 35.5643C26.9387 36.0554 26.0757 37.1267 25.9269 38.4361C25.8078 39.433 26.0757 40.3406 26.7304 41.0549C27.4595 41.8583 28.2481 42.2155 29.364 42.2155C32.2507 42.2155 33.7684 38.8229 31.8787 36.5761C31.0752 35.609 29.364 35.1477 28.2332 35.5643Z"
+      //             fill="#4C8C74"
+      //           />
+      //         </svg>
+      //       ),
+      //     },
+      //     {
+      //       title: "Shopify Development",
+      //       desc: "Incorporate compelling, SEO-optimized content and visuals that support your brand story.",
+      //       svg: (
+      //         <svg
+      //           xmlns="http://www.w3.org/2000/svg"
+      //           width="25"
+      //           height="25"
+      //           viewBox="0 0 47 52"
+      //           fill="none"
+      //         >
+      //           <path
+      //             d="M32.2417 51.0001L1 45.5771L5.12642 14.4532L11.9727 12.3993M32.2417 51.0001V6.31849M32.2417 51.0001L45.7994 47.5812L40.0227 9.73743H36.2501L32.2417 6.31849M32.2417 6.31849L28.6995 7.38117M11.9727 12.3993C12.4414 8.44675 15.0528 0.636051 21.7492 1.01331C22.9995 0.936865 25.4315 2.31595 25.1572 8.44384M11.9727 12.3993L18.565 10.4216M25.1572 8.44384L18.565 10.4216M25.1572 8.44384L28.6995 7.38117M18.565 10.4216C19.1941 7.63916 21.6313 2.19228 26.347 2.66385C27.2472 2.56359 28.9781 3.36669 28.6995 7.38117"
+      //             stroke="#4C8C74"
+      //             strokeWidth="2"
+      //             strokeLinecap="round"
+      //             strokeLinejoin="round"
+      //           />
+      //           <path
+      //             d="M16.8005 16.8122C13.8515 18.2867 11.2471 21.1821 11.2471 24.8013C11.2471 27.2141 11.2396 28.563 13.5854 30.8418C16.8025 33.9919 18.3111 35.4209 16.0323 36.542C15.0269 36.676 12.0514 36.1154 11.2471 35.7132C10.1077 35.043 10.2013 35.8717 9.7321 36.542C7.92248 39.424 10.8045 41.9708 16.0323 42.0379C18.9813 42.1049 20.4835 41.5844 22.159 39.7078C23.7676 37.8981 23.523 37.0668 23.523 34.2518C23.523 30.7666 22.8686 30.3758 18.3111 26.6226C15.0939 23.9416 16.5685 21.3948 21.193 21.8639C23.6059 22.065 23.874 21.9309 24.5442 20.1213C24.8793 19.049 25.2144 17.7755 25.2144 17.3064C25.2144 15.9659 19.6155 15.4047 16.8005 16.8122Z"
+      //             fill="#4C8C74"
+      //           />
+      //         </svg>
+      //       ),
+      //     },
+      //     {
+      //       title: "Woocommerce Development",
+      //       desc: "Provide maintenance, updates, and performance enhancements to keep your site running at its best.",
+      //       svg: (
+      //         <svg
+      //           xmlns="http://www.w3.org/2000/svg"
+      //           width="25"
+      //           height="25"
+      //           viewBox="0 0 86 52"
+      //           fill="none"
+      //         >
+      //           <path
+      //             d="M81.4189 1L81.419 0H81.4189V1ZM81.4189 42.8379V43.8379H81.419L81.4189 42.8379ZM52.7529 42.8379V41.8379C52.4199 41.8379 52.1088 42.0037 51.923 42.28C51.7372 42.5564 51.7012 42.9071 51.827 43.2155L52.7529 42.8379ZM56.0811 51L55.5933 51.873C55.9642 52.0802 56.4254 52.0305 56.7436 51.749C57.0618 51.4675 57.1674 51.0158 57.007 50.6224L56.0811 51ZM41.4717 42.8379L41.9594 41.9649C41.8103 41.8816 41.6424 41.8379 41.4717 41.8379V42.8379ZM39.46 6.21875L40.1671 5.51164C40.1632 5.50775 40.1593 5.50389 40.1553 5.50006L39.46 6.21875ZM36.0469 5.62891L35.5479 4.76228C35.5434 4.76489 35.5389 4.76753 35.5344 4.77021L36.0469 5.62891ZM31.0264 21.6426L30.0365 21.5006L30.0357 21.5059L31.0264 21.6426ZM30.4355 25.2197L31.0807 25.9838C31.1021 25.9657 31.1228 25.9467 31.1427 25.9268L30.4355 25.2197ZM27.6465 16.1299L26.6731 16.3589L26.6733 16.3598L27.6465 16.1299ZM26.1699 11.5684L25.4479 12.2603C25.4661 12.2792 25.485 12.2975 25.5046 12.315L26.1699 11.5684ZM22.8555 11.8633L22.1357 11.169C22.1306 11.1743 22.1256 11.1796 22.1207 11.185L22.8555 11.8633ZM18.3926 19.707L17.5073 19.2419L17.5057 19.245L18.3926 19.707ZM14.3232 26.8604L15.0303 26.1532C15.0165 26.1394 15.0022 26.126 14.9876 26.1129L14.3232 26.8604ZM11.5342 13.3076L12.52 13.1398L12.5199 13.1391L11.5342 13.3076ZM7.92383 6.71191L8.08399 7.69901L8.08584 7.6987L7.92383 6.71191ZM5.29883 9.13965L4.29883 9.13947V9.13965H5.29883ZM8.54785 27.1885L7.57146 27.4046L7.57308 27.4117L8.54785 27.1885ZM20.1318 28.7314L21.024 29.1832L21.0263 29.1787L20.1318 28.7314ZM23.3799 22.6602V21.6602C23.3642 21.6602 23.3485 21.6605 23.3328 21.6613L23.3799 22.6602ZM24.2988 25.0225L23.3431 25.3166C23.3445 25.3213 23.346 25.3261 23.3476 25.3308L24.2988 25.0225ZM31.7158 37.5586L31.1672 38.3947L31.1726 38.3982L31.7158 37.5586ZM35.0303 37.3945L35.7662 38.0716C35.7701 38.0674 35.7739 38.0631 35.7777 38.0589L35.0303 37.3945ZM35.8506 31.2246L34.8514 31.1842L34.8512 31.1901L35.8506 31.2246ZM39.5586 10.3545L38.6473 9.94254L38.6427 9.95296L39.5586 10.3545ZM53.0791 9.36914L53.3655 8.41103L53.3621 8.41003L53.0791 9.36914ZM47.8281 9.40234L47.5394 8.44486L47.5275 8.44861L47.8281 9.40234ZM40.5762 18.7549L41.5424 19.0125L41.5433 19.009L40.5762 18.7549ZM40.6748 28.3047L41.6142 27.9619L41.6118 27.9553L40.6748 28.3047ZM44.875 33.5225L44.4278 34.417L44.4388 34.4223L44.875 33.5225ZM52.3896 33.5879L52.8548 34.4731L52.8554 34.4728L52.3896 33.5879ZM57.542 27.7461L58.4482 28.169L58.4489 28.1675L57.542 27.7461ZM74.5078 9.40234L74.2232 10.361L74.2237 10.3611L74.5078 9.40234ZM69.1592 9.40234L68.8746 8.44365L68.8651 8.44656L69.1592 9.40234ZM61.9062 18.9521L62.874 19.204L62.8747 19.2012L61.9062 18.9521ZM61.9062 27.7793L62.8661 27.4987L62.8649 27.4947L61.9062 27.7793ZM70.1104 34.3096L70.1103 35.3096H70.1104V34.3096ZM73.7207 33.6533L73.2818 32.7547L73.2735 32.7589L73.7207 33.6533ZM80.6777 18.6895L79.6797 18.7514L79.6798 18.7531L80.6777 18.6895ZM68.7324 17.0488L69.5624 17.6067L69.5694 17.5961L68.7324 17.0488ZM73.4902 15.2109L72.758 15.8921L72.7632 15.8976L73.4902 15.2109ZM74.7051 23.5459L75.6627 23.8341L75.664 23.8296L74.7051 23.5459ZM69.1592 28.5342L68.7401 29.4422L68.7517 29.4474L69.1592 28.5342ZM66.9277 23.1855H65.9277V23.1856L66.9277 23.1855ZM46.6465 18.1973L45.757 17.7403L45.755 17.7442L46.6465 18.1973ZM52.3242 15.4404L51.5603 16.0858L51.5618 16.0876L52.3242 15.4404ZM51.0117 27.418L51.7107 28.1332L51.7111 28.1328L51.0117 27.418ZM45.5312 22.9551H46.5312C46.5312 22.9502 46.5312 22.9453 46.5311 22.9404L45.5312 22.9551ZM81.4189 1L81.4188 2C82.8493 2.00015 84.0088 3.15993 84.0088 4.59082H85.0088H86.0088C86.0088 2.05586 83.9544 0.000258327 81.419 0L81.4189 1ZM85.0088 4.59082H84.0088V39.2471H85.0088H86.0088V4.59082H85.0088ZM85.0088 39.2471H84.0088C84.0088 40.678 82.8493 41.8377 81.4188 41.8379L81.4189 42.8379L81.419 43.8379C83.9544 43.8376 86.0088 41.782 86.0088 39.2471H85.0088ZM81.4189 42.8379V41.8379H52.7529V42.8379V43.8379H81.4189V42.8379ZM52.7529 42.8379L51.827 43.2155L55.1551 51.3776L56.0811 51L57.007 50.6224L53.6789 42.4603L52.7529 42.8379ZM56.0811 51L56.5688 50.127L41.9594 41.9649L41.4717 42.8379L40.9839 43.7109L55.5933 51.873L56.0811 51ZM41.4717 42.8379V41.8379H4.59082V42.8379V43.8379H41.4717V42.8379ZM4.59082 42.8379V41.8379C3.16005 41.8379 2 40.6778 2 39.2471H1H0C0 41.7824 2.05549 43.8379 4.59082 43.8379V42.8379ZM1 39.2471H2V4.59082H1H0V39.2471H1ZM1 4.59082H2C2 3.16006 3.16006 2 4.59082 2V1V0C2.05549 0 0 2.05549 0 4.59082H1ZM4.59082 1V2H81.4189V1V0H4.59082V1ZM39.46 6.21875L40.1553 5.50006C38.8773 4.26361 37.0849 3.87734 35.5479 4.76228L36.0469 5.62891L36.5458 6.49553C37.1744 6.1336 38.0081 6.2055 38.7646 6.93744L39.46 6.21875ZM36.0469 5.62891L35.5344 4.77021C34.8416 5.18369 34.2812 6.03281 33.8165 6.9509C33.3244 7.92302 32.8419 9.17703 32.3857 10.6295C31.4717 13.539 30.6329 17.3425 30.0365 21.5006L31.0264 21.6426L32.0162 21.7846C32.6011 17.7068 33.4193 14.0126 34.2938 11.2289C34.7317 9.83468 35.1762 8.69315 35.6009 7.8541C36.0529 6.96101 36.399 6.58332 36.5594 6.4876L36.0469 5.62891ZM31.0264 21.6426L30.0357 21.5059C29.9053 22.4519 29.7753 23.3207 29.6704 23.9579C29.6177 24.2779 29.5727 24.5315 29.5381 24.7046C29.5203 24.7932 29.5079 24.8475 29.5009 24.8746C29.4969 24.89 29.4989 24.8802 29.5071 24.8569C29.511 24.8459 29.5223 24.8146 29.542 24.7738C29.5512 24.7548 29.6078 24.6333 29.7284 24.5126L30.4355 25.2197L31.1427 25.9268C31.2674 25.802 31.3285 25.6735 31.3426 25.6444C31.3671 25.5936 31.3836 25.5493 31.3931 25.5224C31.4125 25.4674 31.4271 25.4145 31.4371 25.3759C31.458 25.295 31.479 25.1981 31.4992 25.0969C31.5405 24.8906 31.5898 24.6109 31.6438 24.2827C31.7523 23.6235 31.8849 22.7366 32.017 21.7792L31.0264 21.6426ZM30.4355 25.2197L29.7904 24.4556C29.9241 24.3428 30.103 24.2543 30.3143 24.231C30.5167 24.2087 30.6847 24.2532 30.798 24.3009C30.9975 24.3848 31.1072 24.5114 31.1286 24.5357C31.1883 24.6037 31.2044 24.6471 31.178 24.5962C31.1389 24.5206 31.0713 24.3652 30.9766 24.1142C30.7922 23.6257 30.5501 22.8972 30.2797 22.0166C29.7403 20.2603 29.1064 17.9605 28.6197 15.9L27.6465 16.1299L26.6733 16.3598C27.1708 18.4659 27.8164 20.8083 28.3678 22.6038C28.6428 23.4992 28.8991 24.274 29.1055 24.8206C29.2061 25.0871 29.307 25.3322 29.4019 25.5155C29.4425 25.5941 29.5171 25.7316 29.6256 25.8552C29.6714 25.9073 29.8032 26.0521 30.0222 26.1443C30.1452 26.1961 30.3223 26.2422 30.5333 26.219C30.753 26.1948 30.9398 26.1027 31.0807 25.9838L30.4355 25.2197ZM27.6465 16.1299L28.6199 15.9008C28.3527 14.765 28.0505 13.664 27.7741 12.8049C27.6365 12.3772 27.5005 11.9946 27.3738 11.6921C27.3109 11.5418 27.2438 11.3957 27.1733 11.2673C27.1174 11.1655 27.0075 10.9753 26.8352 10.8218L26.1699 11.5684L25.5046 12.315C25.4062 12.2273 25.3814 12.1593 25.42 12.2296C25.444 12.2733 25.4807 12.3493 25.5291 12.4647C25.6249 12.6936 25.7412 13.0166 25.8702 13.4175C26.127 14.2156 26.4154 15.2637 26.6731 16.3589L27.6465 16.1299ZM26.1699 11.5684L26.8919 10.8765C26.235 10.191 25.282 10.0056 24.4704 10.0802C23.6432 10.1563 22.7682 10.5134 22.1357 11.169L22.8555 11.8633L23.5752 12.5575C23.8289 12.2946 24.2337 12.1104 24.6535 12.0718C25.089 12.0318 25.3502 12.1582 25.4479 12.2603L26.1699 11.5684ZM22.8555 11.8633L22.1207 11.185C21.9411 11.3796 21.6851 11.7787 21.4258 12.2012C21.1402 12.6666 20.7796 13.2808 20.3707 13.9975C19.5523 15.432 18.5295 17.2965 17.5073 19.2419L18.3926 19.707L19.2778 20.1722C20.2903 18.2452 21.302 16.4012 22.1079 14.9886C22.5112 14.2817 22.8602 13.6876 23.1304 13.2474C23.2658 13.0267 23.3779 12.8504 23.4651 12.7203C23.5638 12.5728 23.6001 12.531 23.5903 12.5416L22.8555 11.8633ZM18.3926 19.707L17.5057 19.245C15.4636 23.1646 14.5172 24.9839 14.0497 25.8028C13.9337 26.006 13.8598 26.125 13.8141 26.1917C13.7449 26.2927 13.7894 26.1991 13.9282 26.1064C14.0198 26.0452 14.2077 25.947 14.4673 25.9553C14.7328 25.9637 14.9194 26.0786 15.0112 26.15C15.0878 26.2096 15.1353 26.2691 15.1195 26.2507C15.1172 26.2481 15.1175 26.2483 15.1118 26.2418C15.1078 26.2371 15.1016 26.2299 15.0944 26.2217C15.0801 26.2055 15.058 26.1809 15.0303 26.1532L14.3232 26.8604L13.6161 27.5675C13.5969 27.5482 13.5767 27.5242 13.6047 27.5567C13.6127 27.566 13.6829 27.6506 13.7831 27.7285C13.8985 27.8183 14.1099 27.9449 14.4035 27.9543C14.6911 27.9634 14.9106 27.8553 15.0394 27.7693C15.2525 27.6269 15.3942 27.4239 15.4636 27.3228C15.5565 27.1873 15.6626 27.0115 15.7866 26.7944C16.2791 25.9317 17.2525 24.0594 19.2794 20.1691L18.3926 19.707ZM14.3232 26.8604L14.9876 26.1129C15.1165 26.2275 15.1739 26.344 15.174 26.3442C15.1871 26.3687 15.1903 26.3789 15.1841 26.3634C15.1724 26.334 15.1508 26.2722 15.1192 26.1675C15.0574 25.962 14.9778 25.6592 14.8826 25.265C14.6933 24.4805 14.455 23.386 14.1914 22.0985C13.6647 19.5259 13.0433 16.2143 12.52 13.1398L11.5342 13.3076L10.5484 13.4754C11.0752 16.5703 11.7006 19.9038 12.2321 22.4996C12.4976 23.7963 12.7412 24.9168 12.9384 25.7341C13.0366 26.1408 13.1264 26.4856 13.2041 26.7439C13.2424 26.871 13.283 26.9952 13.3255 27.1019C13.3464 27.1545 13.3745 27.2204 13.4104 27.2875C13.4334 27.3305 13.5115 27.4768 13.6589 27.6078L14.3232 26.8604ZM11.5342 13.3076L12.5199 13.1391C12.2493 11.5565 12.0215 10.3043 11.7968 9.32972C11.5758 8.37057 11.3404 7.59793 11.0252 7.02034C10.6884 6.40297 10.2223 5.9424 9.54945 5.74139C8.95484 5.56377 8.32173 5.6332 7.76182 5.72512L7.92383 6.71191L8.08584 7.6987C8.62526 7.61014 8.85775 7.6221 8.97701 7.65772C9.01797 7.66996 9.11408 7.69334 9.26959 7.97833C9.44681 8.3031 9.6341 8.85122 9.84794 9.77894C10.0582 10.6913 10.2776 11.892 10.5485 13.4762L11.5342 13.3076ZM7.92383 6.71191L7.76366 5.72482C6.91204 5.86301 6.08389 6.35132 5.47965 6.90633C5.16974 7.19098 4.8874 7.52126 4.67666 7.87909C4.47074 8.22872 4.29891 8.66372 4.29883 9.13947L5.29883 9.13965L6.29883 9.13982C6.29883 9.14355 6.29837 9.12415 6.31319 9.07841C6.32795 9.03286 6.35483 8.97072 6.39999 8.89404C6.49175 8.73823 6.63801 8.55799 6.83257 8.37928C7.23727 8.00757 7.72154 7.75782 8.08399 7.699L7.92383 6.71191ZM5.29883 9.13965H4.29883C4.29883 9.36039 4.34781 9.75433 4.40921 10.1895C4.47537 10.6584 4.57015 11.267 4.68578 11.9736C4.91724 13.388 5.23519 15.213 5.58237 17.1357C6.27586 20.9762 7.09106 25.2344 7.57149 27.4046L8.54785 27.1885L9.52421 26.9723C9.05296 24.8435 8.24365 20.6188 7.55054 16.7803C7.20443 14.8636 6.88857 13.0502 6.65953 11.6506C6.54492 10.9502 6.45279 10.358 6.38959 9.91006C6.35794 9.68576 6.33428 9.50272 6.31873 9.36299C6.31096 9.29315 6.30565 9.23803 6.30239 9.1964C6.29886 9.15135 6.29883 9.13568 6.29883 9.13965H5.29883ZM8.54785 27.1885L7.57308 27.4117C8.37767 30.9256 9.11431 33.6448 9.87908 35.5265C10.2607 36.4655 10.6721 37.2545 11.1415 37.8402C11.6116 38.4266 12.2166 38.9016 12.9889 39.005C13.7644 39.1089 14.4706 38.8064 15.0717 38.3577C15.6701 37.9112 16.259 37.2522 16.8531 36.4423C18.0439 34.819 19.4066 32.3769 21.024 29.1832L20.1318 28.7314L19.2397 28.2796C17.6247 31.4686 16.3252 33.7806 15.2405 35.2593C14.6968 36.0004 14.2446 36.4794 13.8755 36.7549C13.5093 37.0282 13.3217 37.0318 13.2543 37.0227C13.1836 37.0133 12.9964 36.9565 12.7021 36.5893C12.4071 36.2213 12.082 35.6348 11.7319 34.7735C11.0333 33.0546 10.326 30.4739 9.52262 26.9653L8.54785 27.1885ZM20.1318 28.7314L21.0263 29.1787C21.8599 27.5115 22.6341 26.0037 23.2148 24.9151C23.506 24.3691 23.7439 23.9373 23.9142 23.6459C24.0009 23.4976 24.061 23.4013 24.0969 23.3486C24.1171 23.3189 24.1145 23.3256 24.0944 23.3487C24.0861 23.3582 24.0507 23.399 23.9928 23.4458C23.9806 23.4557 23.7678 23.643 23.4269 23.659L23.3799 22.6602L23.3328 21.6613C22.9836 21.6777 22.7598 21.8707 22.7342 21.8915C22.6629 21.9492 22.6115 22.006 22.585 22.0366C22.5282 22.1019 22.4792 22.171 22.4438 22.2228C22.3686 22.3332 22.281 22.4767 22.1875 22.6367C21.9975 22.9618 21.7452 23.4206 21.4501 23.9738C20.8582 25.0834 20.0755 26.6081 19.2374 28.2842L20.1318 28.7314ZM23.3799 22.6602V23.6602C23.1558 23.6602 22.9886 23.5849 22.8993 23.5346C22.8072 23.4827 22.7444 23.4272 22.7114 23.3958C22.6469 23.3342 22.6112 23.2812 22.6049 23.272C22.5878 23.2469 22.59 23.2456 22.613 23.2921C22.6543 23.3758 22.7171 23.5204 22.7972 23.7253C22.9546 24.1285 23.1518 24.6952 23.3431 25.3166L24.2988 25.0225L25.2546 24.7284C25.0521 24.0701 24.839 23.4557 24.6601 22.9976C24.5719 22.7718 24.4849 22.5658 24.4062 22.4065C24.3692 22.3315 24.3189 22.2357 24.2581 22.1464C24.2299 22.105 24.1745 22.0276 24.0928 21.9495C24.057 21.9153 23.8009 21.6602 23.3799 21.6602V22.6602ZM24.2988 25.0225L23.3476 25.3308C24.1468 27.7964 25.5109 30.6535 26.9372 33.0669C27.6519 34.2761 28.3921 35.3907 29.0976 36.3004C29.7867 37.1889 30.4988 37.9561 31.1672 38.3946L31.7158 37.5586L32.2645 36.7225C31.8827 36.472 31.3354 35.9223 30.678 35.0746C30.0369 34.248 29.3432 33.207 28.659 32.0492C27.2875 29.7286 25.9933 27.0068 25.2501 24.7141L24.2988 25.0225ZM31.7158 37.5586L31.1726 38.3982C32.5777 39.3073 34.5937 39.3461 35.7662 38.0716L35.0303 37.3945L34.2943 36.7175C33.9574 37.0837 33.0854 37.2536 32.259 36.719L31.7158 37.5586ZM35.0303 37.3945L35.7777 38.0589C36.2289 37.5513 36.4354 36.9715 36.5666 36.0072C36.6937 35.0737 36.7684 33.6256 36.85 31.2591L35.8506 31.2246L34.8512 31.1901C34.7687 33.5818 34.6957 34.9232 34.5849 35.7375C34.4783 36.5209 34.3567 36.6471 34.2828 36.7302L35.0303 37.3945ZM35.8506 31.2246L36.8498 31.2651C37.1761 23.2059 38.6781 14.8533 40.4744 10.756L39.5586 10.3545L38.6427 9.95296C36.6983 14.388 35.1815 23.033 34.8514 31.1842L35.8506 31.2246ZM39.5586 10.3545L40.4698 10.7664C40.9914 9.61265 41.3761 8.66342 41.3582 7.81025C41.3372 6.81469 40.7942 6.1388 40.1671 5.51164L39.46 6.21875L38.7529 6.92586C39.3071 7.48008 39.3549 7.67427 39.3586 7.85234C39.3654 8.17281 39.2087 8.70076 38.6474 9.94257L39.5586 10.3545ZM53.0791 9.36914L53.3621 8.41003C52.3105 8.09971 51.411 7.92553 50.473 7.93043C49.5363 7.93532 48.6218 8.11848 47.5394 8.44494L47.8281 9.40234L48.1169 10.3598C49.1018 10.0627 49.812 9.93391 50.4834 9.93041C51.1536 9.92691 51.8459 10.0479 52.7961 10.3283L53.0791 9.36914ZM47.8281 9.40234L47.5275 8.44861C45.7564 9.00693 44.0838 10.3856 42.7235 12.136C41.3519 13.9007 40.2337 16.1235 39.609 18.5007L40.5762 18.7549L41.5433 19.009C42.1 16.8906 43.0983 14.9129 44.3026 13.3633C45.5181 11.7993 46.8808 10.7495 48.1288 10.3561L47.8281 9.40234ZM40.5762 18.7549L39.6099 18.4972C39.2479 19.8548 39.0919 21.8617 39.1087 23.7356C39.1252 25.5862 39.3113 27.5102 39.7378 28.6541L40.6748 28.3047L41.6118 27.9553C41.3164 27.163 41.1249 25.5427 41.1086 23.7177C41.0925 21.9161 41.2481 20.1162 41.5424 19.0125L40.5762 18.7549ZM40.6748 28.3047L39.7354 28.6475C40.6829 31.2442 42.3673 33.3866 44.4278 34.4169L44.875 33.5225L45.3222 32.628C43.8388 31.8863 42.4388 30.2216 41.6142 27.9619L40.6748 28.3047ZM44.875 33.5225L44.4388 34.4223C45.6863 35.0271 47.2348 35.3171 48.7095 35.3303C50.1771 35.3435 51.6932 35.0834 52.8548 34.4731L52.3896 33.5879L51.9245 32.7026C51.15 33.1096 49.9917 33.3418 48.7275 33.3304C47.4703 33.3191 46.2296 33.0678 45.3112 32.6226L44.875 33.5225ZM52.3896 33.5879L52.8554 34.4728C54.9632 33.3635 57.2307 30.7779 58.4482 28.169L57.542 27.7461L56.6358 27.3232C55.5562 29.6367 53.5572 31.8434 51.9239 32.703L52.3896 33.5879ZM57.542 27.7461L58.4489 28.1675C60.3718 24.0296 60.8039 19.6553 59.9247 16.0329C59.0458 12.4114 56.8165 9.44263 53.3655 8.41103L53.0791 9.36914L52.7927 10.3272C55.3797 11.1006 57.2194 13.3661 57.9812 16.5046C58.7427 19.6424 58.3873 23.5541 56.6351 27.3247L57.542 27.7461ZM74.5078 9.40234L74.7924 8.4437C73.6969 8.11847 72.781 7.93476 71.8335 7.93477C70.8859 7.93477 69.9701 8.11849 68.8746 8.44369L69.1592 9.40234L69.4438 10.361C70.4483 10.0628 71.1567 9.93477 71.8335 9.93477C72.5102 9.93476 73.2186 10.0628 74.2232 10.361L74.5078 9.40234ZM69.1592 9.40234L68.8651 8.44656C67.0962 8.99086 65.4202 10.406 64.0601 12.1934C62.6863 13.9988 61.5614 16.278 60.9378 18.7031L61.9062 18.9521L62.8747 19.2012C63.4325 17.032 64.4409 14.9957 65.6517 13.4045C66.8761 11.7954 68.2359 10.7327 69.4533 10.3581L69.1592 9.40234ZM61.9062 18.9521L60.9385 18.7003C60.5972 20.0119 60.4387 21.7871 60.4387 23.4765C60.4387 25.1578 60.5955 26.8776 60.9476 28.0639L61.9062 27.7793L62.8649 27.4947C62.5936 26.5808 62.4387 25.0849 62.4387 23.4765C62.4387 21.8763 62.5919 20.288 62.874 19.204L61.9062 18.9521ZM61.9062 27.7793L60.9464 28.0599C61.614 30.3437 62.7365 32.1714 64.3153 33.4269C65.8999 34.6869 67.8678 35.3095 70.1103 35.3096L70.1104 34.3096L70.1104 33.3096C68.251 33.3095 66.7403 32.8 65.5601 31.8615C64.3741 30.9183 63.4455 29.4809 62.8661 27.4987L61.9062 27.7793ZM70.1104 34.3096V35.3096C71.7945 35.3096 73.0535 35.105 74.1679 34.5477L73.7207 33.6533L73.2735 32.7589C72.5502 33.1205 71.6422 33.3096 70.1104 33.3096V34.3096ZM73.7207 33.6533L74.1596 34.5519C76.5541 33.3823 78.5253 30.9638 79.8412 28.1307C81.165 25.2805 81.884 21.8905 81.6757 18.6258L80.6777 18.6895L79.6798 18.7531C79.8651 21.6576 79.2221 24.7157 78.0273 27.2882C76.8245 29.8779 75.1204 31.8567 73.2818 32.7548L73.7207 33.6533ZM80.6777 18.6895L81.6758 18.6275C81.3635 13.596 78.8631 9.64981 74.7919 8.44355L74.5078 9.40234L74.2237 10.3611C77.2409 11.2551 79.4013 14.2662 79.6797 18.7514L80.6777 18.6895ZM68.7324 17.0488L69.5694 17.5961C70.3619 16.3841 71.0792 15.778 71.6076 15.5735C71.8514 15.4791 72.0371 15.476 72.1868 15.5133C72.3404 15.5515 72.5349 15.6522 72.7581 15.8921L73.4902 15.2109L74.2224 14.5298C73.7893 14.0642 73.2701 13.7219 72.67 13.5725C72.066 13.4222 71.4581 13.4868 70.8857 13.7083C69.7818 14.1356 68.7766 15.154 67.8955 16.5016L68.7324 17.0488ZM73.4902 15.2109L72.7632 15.8976C74.1052 17.3184 74.6387 20.2459 73.7462 23.2622L74.7051 23.5459L75.664 23.8296C76.6746 20.414 76.2225 16.6475 74.2172 14.5243L73.4902 15.2109ZM74.7051 23.5459L73.7475 23.2577C73.2858 24.7916 72.4502 26.0799 71.5707 26.8719C70.6417 27.7083 69.9357 27.7856 69.5667 27.621L69.1592 28.5342L68.7517 29.4474C70.2204 30.1027 71.7787 29.3759 72.9089 28.3581C74.0886 27.2959 75.1071 25.6801 75.6627 23.8341L74.7051 23.5459ZM69.1592 28.5342L69.5782 27.6262C69.2717 27.4847 68.8449 27.0371 68.4868 26.1769C68.1438 25.353 67.9278 24.2954 67.9277 23.1855L66.9277 23.1855L65.9277 23.1856C65.9278 24.5367 66.1877 25.8581 66.6404 26.9456C67.078 27.9968 67.7669 28.993 68.7401 29.4421L69.1592 28.5342ZM66.9277 23.1855H67.9277C67.9277 20.8412 68.3366 19.4304 69.5624 17.6067L68.7324 17.0488L67.9025 16.491C66.4375 18.6707 65.9277 20.4764 65.9277 23.1855H66.9277ZM46.6465 18.1973L47.536 18.6542C48.4197 16.9341 49.3108 16.0019 50.0082 15.6633C50.3322 15.5061 50.5834 15.49 50.7861 15.5381C50.9952 15.5878 51.2616 15.7322 51.5603 16.0858L52.3242 15.4404L53.0881 14.7951C52.5829 14.197 51.9673 13.763 51.2482 13.5923C50.5226 13.42 49.7995 13.5414 49.1348 13.8641C47.8547 14.4856 46.711 15.8835 45.757 17.7403L46.6465 18.1973ZM52.3242 15.4404L51.5618 16.0876C52.5129 17.208 52.9385 19.1439 52.7043 21.2704C52.4722 23.3781 51.6152 25.4285 50.3124 26.7032L51.0117 27.418L51.7111 28.1328C53.4271 26.4538 54.424 23.9265 54.6923 21.4893C54.9586 19.071 54.531 16.4949 53.0866 14.7933L52.3242 15.4404ZM51.0117 27.418L50.3128 26.7028C49.6788 27.3224 49.1468 27.5853 48.7568 27.6568C48.4018 27.7218 48.1021 27.6431 47.8194 27.4133C47.1706 26.8858 46.5312 25.4609 46.5312 22.9551H45.5312H44.5312C44.5312 25.6342 45.1882 27.8518 46.5578 28.9651C47.2842 29.5557 48.1741 29.7969 49.1174 29.624C50.0257 29.4575 50.9008 28.9246 51.7107 28.1332L51.0117 27.418ZM45.5312 22.9551L46.5311 22.9404C46.5148 21.8286 46.5436 21.2488 46.6684 20.7196C46.7938 20.1881 47.029 19.6518 47.538 18.6503L46.6465 18.1973L45.755 17.7442C45.2468 18.7442 44.908 19.4712 44.7219 20.2605C44.5351 21.0521 44.5149 21.8505 44.5314 22.9698L45.5312 22.9551Z"
+      //             fill="#4C8C74"
+      //           />
+      //         </svg>
+      //       ),
+      //     },
+      //   ],
+      //   processCardData: [
+      //     {
+      //       image: "/Services/01.svg",
+      //       heading: "Book a Strategy Call",
+      //       paragraph:
+      //         "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
+      //     },
+      //     {
+      //       image: "/Services/02.svg",
+      //       heading: "Website Audit & Strategy",
+      //       paragraph:
+      //         "We perform a detailed website audit, analyzing your UX, site structure, and user flow to uncover gaps and opportunities. Our data-driven strategy ensures your website is designed to convert, perform seamlessly, and deliver a strong user experience.",
+      //     },
+      //     {
+      //       image: "/Services/03.svg",
+      //       heading: "Build, Launch & Optimize",
+      //       paragraph:
+      //         "We design, develop, and deploy your responsive, mobile-first website using conversion-driven layouts and fast load speeds. Once live, we continuously optimize for SEO, performance, and sales, ensuring your site grows with your business.",
+      //     },
+      //   ],
+      //   pricingCardData: [
+      //     {
+      //       title: "Basic Website Package",
+      //       price: "$229",
+      //       discountedFrom: "$499",
+      //       includes: [
+      //         "2 Custom Logo Design Concepts",
+      //         "1 Dedicated Designer",
+      //         "4 REVISIONS",
+      //         "48 to 72 hours TAT",
+      //         "100% Unique Design Guarantee",
+      //         "100% Satisfaction Guarantee",
+      //         "100% Ownership Rights",
+      //         "100% Money Back Guarantee",
+      //       ],
+      //     },
+      //     {
+      //       title: "Basic Website Package",
+      //       price: "$229",
+      //       discountedFrom: "$499",
+      //       includes: [
+      //         "5 Custom Logo Design Concepts",
+      //         "By 2 Designers",
+      //         "UNLIMITED Revisions",
+      //         "48 to 72 hours TAT",
+      //         "100% Unique Design Guarantee",
+      //         "100% Satisfaction Guarantee",
+      //         "100% Ownership Rights",
+      //         "100% Money Back Guarantee",
+      //       ],
+      //     },
+      //     {
+      //       title: "Basic Website Package",
+      //       price: "$229",
+      //       discountedFrom: "$499",
+      //       includes: [
+      //         "UNLIMITED Logo Design Concepts",
+      //         "By 4 Designers",
+      //         "UNLIMITED Revisions",
+      //         "Stationary Design (Business Card, Letterhead, Envelope)",
+      //         "48 to 72 hours TAT",
+      //         "FREE MS Word Letterhead",
+      //         "All Final Files Format (AI, PSD, EPS, PNG, GIF, jpeg, PDF)",
+      //       ],
+      //     },
+      //   ],
+      //   faqData: [
+      //     {
+      //       question: "How to use this component?",
+      //       answer:
+      //         "Import the FAQ component and place it in your page. Click any question to expand or collapse the answer.",
+      //     },
+      //     {
+      //       question: "Are there any other components available?",
+      //       answer:
+      //         "Yes — check the Components section of the repo or documentation for more reusable UI pieces.",
+      //     },
+      //     {
+      //       question: "Are components responsive?",
+      //       answer:
+      //         "Yes, components are designed to be responsive across screen sizes.",
+      //     },
+      //     {
+      //       question: "Can I customize the components?",
+      //       answer:
+      //         "Yes, pass props or override styles to adapt components to your design.",
+      //     },
+      //   ],
+      //   portfolioData: [
+      //     {
+      //       id: "1",
+      //       src: "/Services/web_01.svg",
+      //       translateY: "-translate-y-25",
+      //     },
+      //     { id: "2", src: "/Services/web_02.svg", translateY: "" },
+      //     {
+      //       id: "3",
+      //       src: "/Services/web_02.svg",
+      //       translateY: "-translate-y-25",
+      //     },
+      //     { id: "4", src: "/Services/web_03.svg", translateY: "" },
+      //     {
+      //       id: "5",
+      //       src: "/Services/web_04.svg",
+      //       translateY: "-translate-y-25",
+      //     },
+      //     { id: "6", src: "/Services/web_05.svg", translateY: "" },
+      //     {
+      //       id: "7",
+      //       src: "/Services/web_06.svg",
+      //       translateY: "-translate-y-25",
+      //     },
+      //     { id: "8", src: "/Services/web_07.svg", translateY: "" },
+      //   ],
+      //   footnote:
+      //     "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
+      // },
       {
         slug: "meta-ads",
         title: "Meta Ads",

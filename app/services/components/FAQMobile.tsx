@@ -85,7 +85,7 @@ export default function FAQMobile({ service }: FAQMobileProps) {
                   >
                     <path
                       d="m4.5 7.2 3.793 3.793a1 1 0 0 0 1.414 0L13.5 7.2"
-                      stroke="#1D293D"
+                      stroke="#ffffff"
                       strokeWidth="1.5"
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -97,7 +97,7 @@ export default function FAQMobile({ service }: FAQMobileProps) {
                   id={panelId}
                   role="region"
                   aria-labelledby={buttonId}
-                  className={`text-xs text-slate-500 transition-all duration-200 ease-in-out overflow-hidden ${
+                  className={`text-xs text-[#AAAAAA] transition-all duration-200 ease-in-out overflow-hidden ${
                     isOpen ? "opacity-100 max-h-32 mt-2" : "opacity-0 max-h-0"
                   }`}
                 >

@@ -44,7 +44,7 @@ const ServiceBody = ({ data = [], footnote }: ServiceBodyProps) => {
                   }`}
                 >
                   {/* Text Column */}
-                  <div className="w-full md:w-1/2 relative">
+                  <div className="w-full md:w-1/2 relative max-h-[420px] overflow-y-auto pr-2 service-body-scrollbar">
                     {item.heading || item.title ? (
                       <motion.h2
                         className="text-2xl mt-5 md:text-3xl font-medium"
@@ -124,6 +124,44 @@ const ServiceBody = ({ data = [], footnote }: ServiceBodyProps) => {
           })}
         </div>
       </div>
+      <style jsx>{`
+        .service-body-scrollbar {
+          scrollbar-width: thin;
+          scrollbar-color: rgba(255, 255, 255, 0.45) rgba(255, 255, 255, 0.08);
+        }
+
+        .service-body-scrollbar::-webkit-scrollbar {
+          width: 6px;
+        }
+
+        .service-body-scrollbar::-webkit-scrollbar-track {
+          background: rgba(255, 255, 255, 0.08);
+          border: 1px solid rgba(255, 255, 255, 0.15);
+          border-radius: 999px;
+          backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px);
+        }
+
+        .service-body-scrollbar::-webkit-scrollbar-thumb {
+          background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.55),
+            rgba(255, 255, 255, 0.25)
+          );
+          border: 1px solid rgba(255, 255, 255, 0.3);
+          border-radius: 999px;
+          backdrop-filter: blur(12px);
+          -webkit-backdrop-filter: blur(12px);
+        }
+
+        .service-body-scrollbar::-webkit-scrollbar-thumb:hover {
+          background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.7),
+            rgba(255, 255, 255, 0.35)
+          );
+        }
+      `}</style>
     </section>
   );
 };

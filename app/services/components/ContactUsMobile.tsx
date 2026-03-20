@@ -128,7 +128,7 @@ const ContactUsMobile = ({ data }: ContactUsMobileProps) => {
           <h2 className="font-semibold text-white text-xl sm:text-2xl uppercase leading-tight">
             {data?.heading || "Looking For Best Design & Development Agency In Uk?"}
           </h2>
-          <p className="text-xs sm:text-sm text-[#AAAAAA]" data-text-sm-light>
+          <span className="text-xs sm:text-sm text-[#AAAAAA]" data-text-sm-light>
             {data?.body || (
               <>
                 Ready to bring your business idea to life? Let our experts work
@@ -136,7 +136,7 @@ const ContactUsMobile = ({ data }: ContactUsMobileProps) => {
                 engages your audience.
               </>
             )}
-          </p>
+          </span>
         </div>
 
         {/* Contact Form */}

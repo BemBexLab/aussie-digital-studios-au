@@ -156,7 +156,7 @@ const SocialAuditCta = ({ data }: SocialAuditCtaProps) => {
 
   return (
     <div
-      className="min-h-screen w-full flex items-center justify-center relative overflow-hidden px-4 py-20"
+      className="min-h-1/2 w-full flex items-left justify-left relative overflow-hidden px-20 py-20"
       style={{ backgroundColor: "#07100d", perspective: "2200px" }}
     >
       <div
