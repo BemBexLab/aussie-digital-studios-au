@@ -61,7 +61,7 @@ export default function FAQ({ service }: FAQProps) {
         className={`${poppins.className} max-w-screen-2xl mx-auto mt-30 flex flex-col items-center justify-center px-4 sm:px-6 md:px-16 lg:px-32`}
       >
         <motion.h2
-          className="text-3xl font-semibold text-center"
+          className="text-3xl font-semibold text-center text-[#F5F5F5]"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
@@ -90,9 +90,9 @@ export default function FAQ({ service }: FAQProps) {
                   aria-controls={panelId}
                   aria-expanded={isOpen}
                   onClick={() => setOpenIndex(isOpen ? null : index)}
-                  className="w-full flex items-center justify-between text-left cursor-pointer"
+                  className="w-full flex items-center justify-between text-left cursor-pointer text-[#F5F5F5]"
                 >
-                  <h3 className="text-base font-medium">{faq.question}</h3>
+                  <h3 className="text-base font-medium text-[#F5F5F5]">{faq.question}</h3>
                   <svg
                     width="18"
                     height="18"

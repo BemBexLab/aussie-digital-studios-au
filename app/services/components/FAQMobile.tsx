@@ -50,7 +50,7 @@ export default function FAQMobile({ service }: FAQMobileProps) {
       <div
         className={`${poppins.className} flex flex-col items-center justify-center px-3`}
       >
-        <h2 className="text-2xl font-semibold text-center mb-6">
+        <h2 className="text-2xl font-semibold text-center mb-6 text-[#F5F5F5]">
           Looking for answers?
         </h2>
 
@@ -70,9 +70,9 @@ export default function FAQMobile({ service }: FAQMobileProps) {
                   aria-controls={panelId}
                   aria-expanded={isOpen}
                   onClick={() => setOpenIndex(isOpen ? null : index)}
-                  className="w-full flex items-center justify-between text-left cursor-pointer gap-2"
+                  className="w-full flex items-center justify-between text-left cursor-pointer gap-2 text-[#F5F5F5]"
                 >
-                  <h3 className="text-sm font-medium flex-1">{faq.question}</h3>
+                  <h3 className="text-sm font-medium flex-1 text-[#F5F5F5]">{faq.question}</h3>
                   <svg
                     width="16"
                     height="16"
