@@ -147,7 +147,7 @@ const CustomPlan = ({ data }: CustomPlanProps) => {
               <div ref={bodyContentInnerRef}>
                 {data?.body || (
                   <>
-                    <ul className="text-sm text-[#4C8C74] space-y-3">
+                    <ul className="text-md text-[#AAAAAA] space-y-3">
                       <li>
                         We don't sell packages. We sit down with you, work out
                         what your business needs right now and where you want it

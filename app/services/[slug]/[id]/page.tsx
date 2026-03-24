@@ -14,6 +14,7 @@ import EasyExperience from "../../components/EasyExperience";
 import { notFound } from "next/navigation";
 import { services } from "../data";
 import SocialAuditCta from "../../components/SocialAuditCta";
+import SocialAuditCta2 from "../../components/SocialAuditCta2";
 
 interface ServicePageProps {
   params: Promise<{
@@ -101,7 +102,7 @@ const ServiceInnerPage = async ({ params }: ServicePageProps) => {
         <EasyExperience sectionData={easyExperienceSectionData} />
       ) : null}
       {"ctaData" in service && service.ctaData ? (
-        <SocialAuditCta data={service.ctaData} />
+        <SocialAuditCta2 data={service.ctaData} />
       ) : "ctaDiv" in service ? (
         (service.ctaDiv as ReactNode)
       ) : null}

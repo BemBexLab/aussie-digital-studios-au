@@ -134,6 +134,11 @@ const hasShapeIcon = (
 const EasyExperience = ({ sectionData }: EasyExperienceProps) => {
   const [expandedCards, setExpandedCards] = useState<Record<number, boolean>>({});
   const colsPerRow = 3;
+  const rows = Array.from(
+    { length: Math.ceil(sectionData.cards.length / colsPerRow) },
+    (_, rowIndex) =>
+      sectionData.cards.slice(rowIndex * colsPerRow, rowIndex * colsPerRow + colsPerRow),
+  );
 
   const toggleExpand = (index: number) => {
     setExpandedCards((prev) => ({ ...prev, [index]: !prev[index] }));
@@ -174,50 +179,61 @@ const EasyExperience = ({ sectionData }: EasyExperienceProps) => {
           </motion.h2>
         ) : null}
 
-        <div className="mx-auto mt-15 max-w-7xl grid grid-cols-3">
-          {sectionData.cards.map((card, index) => {
-            const isExpanded = !!expandedCards[index];
-            const isLastInRow =
-              (index + 1) % colsPerRow === 0 || index === sectionData.cards.length - 1;
-
-            const rawText = getEasyExperienceRawText(card.description);
-            const needsTruncation = rawText.length > CHAR_LIMIT;
-            const truncatedText = rawText.slice(0, CHAR_LIMIT).trimEnd() + "...";
+        <div className="mx-auto mt-15 max-w-7xl">
+          {rows.map((rowCards, rowIndex) => {
+            const shouldCenterRow = rowCards.length < colsPerRow;
 
             return (
-              <motion.div
-                key={index}
-                className={`flex flex-col items-center px-10 py-12 ${
-                  !isLastInRow ? "border-r border-white/20" : ""
-                }`}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.8, delay: index * 0.1, ease: "easeOut" }}
-                viewport={{ once: true, amount: 0.5 }}
+              <div
+                key={`row-${rowIndex}`}
+                className={shouldCenterRow ? "flex justify-center" : "grid grid-cols-3"}
               >
-                <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-full border border-white/30">
-                  {hasShapeIcon(card.icon) ? (
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="50"
-                      height="50"
-                      viewBox={card.icon.viewBox}
-                      fill="none"
+                {rowCards.map((card, cardIndex) => {
+                  const globalIndex = rowIndex * colsPerRow + cardIndex;
+                  const isExpanded = !!expandedCards[globalIndex];
+                  const isLastInRow = cardIndex === rowCards.length - 1;
+
+                  const rawText = getEasyExperienceRawText(card.description);
+                  const needsTruncation = rawText.length > CHAR_LIMIT;
+                  const truncatedText = rawText.slice(0, CHAR_LIMIT).trimEnd() + "...";
+
+                  return (
+                    <motion.div
+                      key={globalIndex}
+                      className={`flex w-full flex-col items-center px-10 py-12 ${
+                        shouldCenterRow ? "md:w-1/3" : ""
+                      } ${!isLastInRow ? "border-r border-white/20" : ""}`}
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      transition={{ duration: 0.8, delay: globalIndex * 0.1, ease: "easeOut" }}
+                      viewport={{ once: true, amount: 0.5 }}
                     >
-                      {card.icon.shapes.map(renderShape)}
-                    </svg>
-                  ) : null}
-                  {!hasShapeIcon(card.icon) ? card.icon : null}
-                </div>
+                      <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-full border border-white/30">
+                        {hasShapeIcon(card.icon) ? (
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="50"
+                            height="50"
+                            viewBox={card.icon.viewBox}
+                            fill="none"
+                          >
+                            {card.icon.shapes.map(renderShape)}
+                          </svg>
+                        ) : null}
+                        {!hasShapeIcon(card.icon) ? card.icon : null}
+                      </div>
 
-                <p className="text-center text-base font-semibold text-yellow-500 mb-4 leading-snug">
-                  {card.title}
-                </p>
+                      <p className="text-center text-base font-semibold text-yellow-500 mb-4 leading-snug">
+                        {card.title}
+                      </p>
 
-                <div className="text-center text-sm text-white/70 leading-relaxed">
-                  {card.description}
-                </div>
-              </motion.div>
+                      <div className="text-center text-sm text-white/70 leading-relaxed">
+                        {card.description}
+                      </div>
+                    </motion.div>
+                  );
+                })}
+              </div>
             );
           })}
         </div>

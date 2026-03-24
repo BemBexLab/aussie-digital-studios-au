@@ -18,6 +18,7 @@ import CustomPlan from "../../Home/components/CustomPlan";
 import ServiceBody from "../components/ServiceBody";
 import OurProcess from "../components/OurProcess";
 import { services } from "./data";
+import SocialAuditCta2 from "../components/SocialAuditCta2";
 
 export function slugify(text: string): string {
   return text
@@ -60,7 +61,7 @@ export default async function ServicePage({
       <Cards service={service} />
       <WhyChoose data={service.whyChooseData} />
       {"ctaData" in service && service.ctaData ? (
-        <SocialAuditCta data={service.ctaData} />
+        <SocialAuditCta2 data={service.ctaData} />
       ) : "ctaDiv" in service ? (
         (service.ctaDiv as ReactNode)
       ) : null}

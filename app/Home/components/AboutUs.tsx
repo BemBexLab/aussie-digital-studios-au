@@ -51,8 +51,8 @@ const AboutUs = () => {
   }, []);
 
   const fullText =
-    "Built for Australian businesses that are tired of paying for websites that look good, but don’t get the best results. \nWe handle web design, web development, SEO, digital marketing, and branding. Not as separate offerings bolted together, but as one connected strategy built around your goals.";
-  const highlightText = "\nWe handle web design, web development, SEO, digital marketing, and branding.";
+    "Built for Australian businesses tired of investing in websites that look good but fail to deliver results.\nWe combine web design, development, SEO, digital marketing, and branding into one cohesive strategy, aligned with your business goals from day one.";
+  const highlightText = "tired of investing in websites that look good but fail to deliver results.";
 
   const renderAnimatedText = () => {
     const elements: React.ReactNode[] = [];

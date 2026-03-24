@@ -9,6 +9,27 @@ const ServicesDropdown = () => {
   const pathname = usePathname();
   const currentPath = pathname ?? "";
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const closeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const clearCloseTimeout = () => {
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current);
+      closeTimeoutRef.current = null;
+    }
+  };
+
+  const openDropdown = () => {
+    clearCloseTimeout();
+    setIsServicesDropdownOpen(true);
+  };
+
+  const scheduleCloseDropdown = () => {
+    clearCloseTimeout();
+    closeTimeoutRef.current = setTimeout(() => {
+      setIsServicesDropdownOpen(false);
+      closeTimeoutRef.current = null;
+    }, 220);
+  };
 
   // Dropdown is dark-only. No theme detection required.
 
@@ -35,6 +56,12 @@ const ServicesDropdown = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [isServicesDropdownOpen]);
+
+  useEffect(() => {
+    return () => {
+      clearCloseTimeout();
+    };
+  }, []);
 
   const isActive = () => {
     return currentPath === "/services" || currentPath.startsWith("/services/");
@@ -117,12 +144,15 @@ const ServicesDropdown = () => {
   const active = isActive();
 
   return (
-    <div className="relative flex flex-col items-center" ref={dropdownRef}>
-      <button
-        onClick={(e) => {
-          e.preventDefault();
-          setIsServicesDropdownOpen(!isServicesDropdownOpen);
-        }}
+    <div
+      className="relative flex flex-col items-center"
+      ref={dropdownRef}
+      onMouseEnter={openDropdown}
+      onMouseLeave={scheduleCloseDropdown}
+    >
+      <Link
+        href="/services"
+        onFocus={openDropdown}
         className={`text-sm font-semibold transition-colors whitespace-nowrap flex flex-col items-center gap-1 leading-none ${
           active
             ? "text-[#4C8C74]"
@@ -135,7 +165,7 @@ const ServicesDropdown = () => {
             active ? "bg-[#4C8C74]" : "bg-transparent"
           }`}
         />
-      </button>
+      </Link>
 
       {/* Dropdown Panel */}
       {isServicesDropdownOpen && (
@@ -148,6 +178,8 @@ const ServicesDropdown = () => {
             width: "1100px",
             height: "390px",
           }}
+          onMouseEnter={openDropdown}
+          onMouseLeave={scheduleCloseDropdown}
           onClick={() => setIsServicesDropdownOpen(false)}
         >
           {/* Background Image Layer using Tailwind */}
