@@ -7,7 +7,7 @@ import { FaArrowTrendUp, FaDisplay, FaFilterCircleDollar, FaMeta } from "react-i
 import { CiSearch, CiShoppingCart } from "react-icons/ci";
 import { TbAffiliate, TbReport, TbSeo, TbWriting } from "react-icons/tb";
 import { CgPerformance, CgProfile, CgWebsite } from "react-icons/cg";
-import { GrDocumentPerformance } from "react-icons/gr";
+import { GrDocumentPerformance, GrScorecard } from "react-icons/gr";
 import { GiAnvilImpact } from "react-icons/gi";
 import { MdAttachEmail, MdCampaign, MdCenterFocusWeak, MdFlipCameraAndroid, MdOutlineSpatialTracking, MdViewQuilt } from "react-icons/md";
 import { IoSpeedometerOutline } from "react-icons/io5";
@@ -15,6 +15,7 @@ import { RiTeamFill } from "react-icons/ri";
 import { LuTv } from "react-icons/lu";
 import { BiReflectVertical } from "react-icons/bi";
 import { IoIosFunnel } from "react-icons/io";
+import { VscDebugContinue, VscReport } from "react-icons/vsc";
 
 
 export const services = [
@@ -9094,35 +9095,35 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
             title: "Quality Score Optimisation",
             desc: "We improve your Quality Score by aligning keywords, ad copy, and landing pages.",
             svg: (
-              <MdFlipCameraAndroid size={40} color="#4C8C74" />
+              <GrScorecard size={40} color="#4C8C74" />
             ),
           },
           {
             title: "Continuous Testing Framework",
             desc: "Every campaign runs on ongoing testing. We continuously test: Ad headlines and descriptions, Landing page variations, and Bidding strategies",
             svg: (
-              <MdFlipCameraAndroid size={40} color="#4C8C74" />
+              <VscDebugContinue size={40} color="#4C8C74" />
             ),
           },
           {
             title: "Full-Funnel Attribution",
             desc: "We use attribution models to understand how different touchpoints contribute to conversions.",
             svg: (
-              <MdFlipCameraAndroid size={40} color="#4C8C74" />
+              <IoIosFunnel size={40} color="#4C8C74" />
             ),
           },
           {
             title: "Clear Reporting",
             desc: "We combine ad data with user behaviour insights to show what happens after the click.",
             svg: (
-              <MdFlipCameraAndroid size={40} color="#4C8C74" />
+              <VscReport size={40} color="#4C8C74" />
             ),
           },
           {
             title: "Search Terms & Keyword Control",
             desc: "We continuously analyse real search queries triggering your ads, not just your keyword list.",
             svg: (
-              <MdFlipCameraAndroid size={40} color="#4C8C74" />
+              <CiSearch size={40} color="#4C8C74" />
             ),
           },
         ],
