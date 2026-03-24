@@ -9061,7 +9061,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
       <p className="text-xl text-[#4C8C74]">
         Our Strategic Services
       </p>
-      <div className="font-semibold mt-2">How We Actually Drive Google Ads Performance</div>
+      <div className="font-semibold text-white mt-2">How We Actually Drive Google Ads Performance</div>
       </>,
 //     strategicHeadingText: (
 //       <div className="mt-3 mx-auto flex w-full justify-center px-4">
