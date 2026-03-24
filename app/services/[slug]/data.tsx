@@ -8853,7 +8853,7 @@ Get in touch today, and one of our performance marketing specialists will get ba
       // Google Ads
       {
         slug: "google-ads",
-        title: "Google Ads Management in Australia",
+        title: "Google Ads Management",
         // heading: "eCommerce Website Development in Australia",
        serviceBodyData: [
       {
@@ -9455,7 +9455,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
       // YT ads
       {
         slug: "youtube-ads",
-        title: "YouTube Ads Management in Australia",
+        title: "YouTube Ads Management",
         // heading: "eCommerce Website Development in Australia",
        serviceBodyData: [
       {
