@@ -320,7 +320,7 @@ export const services = [
         ),
       },
     ],
-    processHeading: <>Our Process: How We Go From Brief to Results</>,
+    processHeading: <>How We Go From Brief to Results</>,
     processPara: (
       <>
         No guesswork. No confusion. Just a clear, structured path from your
@@ -813,10 +813,10 @@ The difference shows up fast. Visitors feel it in the clarity and flow. Google r
             ),
           },
         ],
-        processHeading: <>Our Process</>,
+        processHeading: <>Three Steps From Brief to a Live Website That Performs</>,
         processPara: (
           <>
-            Three Steps From Brief to a Live Website That Performs
+            No mystery timelines. No surprises halfway through.<br />Here's exactly what every project looks like.
           </>
         ),
         processCardData: [
@@ -988,9 +988,20 @@ The difference shows up fast. Visitors feel it in the clarity and flow. Google r
       },
       {
         slug: "ecommerce-website-development",
-        title: "eCommerce Website Development in Australia",
-        heading: "eCommerce Website Development in Australia",
+        title: "eCommerce Website Development",
+        heading: "eCommerce Website Development",
        serviceBodyData: [
+      {
+        imageUrl: "/Services/Rectangle_52.webp",
+        description: (
+          <>
+            <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
+              More Than an Online Store: A Revenue Engine.
+            </h2>
+            <p className="text-md text-[#AAAAA]">An eCommerce website is your best salesperson, the one who never calls in sick, works every hour of every day, and can handle thousands of customers at once. But only if it's built properly.</p>
+          </>
+        ),
+      },
       {
         imageUrl: "/Services/Rectangle_52.webp",
         description: (
@@ -998,15 +1009,8 @@ The difference shows up fast. Visitors feel it in the clarity and flow. Google r
             <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
               What Is eCommerce Website Development
             </h2>
+            <p className="text-md text-[#AAAAA]">Custom eCommerce development means your store is built around your products, your customers, and how your business actually operates, not crammed into a generic template someone else's business already uses. Every feature, page, and checkout step is designed to reduce friction and increase the likelihood of a sale.<br />Australian eCommerce is growing fast. Consumers expect fast loading, seamless mobile experiences, and a checkout process that doesn't make them think twice. We build stores that meet those expectations, and then some.</p>
             <ul className="mt-3">
-              <li className="flex items-start gap-2 md:gap-3 mb-2">
-                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
-                <div className="flex flex-col"><span className="font-semibold">More Than an Online Store: A Revenue Engine.</span>
-An eCommerce website is your best salesperson, the one who never calls in sick, works every hour of every day, and can handle thousands of customers at once. But only if it's built properly. 
-Custom eCommerce development means your store is built around your products, your customers, and how your business actually operates, not crammed into a generic template someone else's business already uses. Every feature, page, and checkout step is designed to reduce friction and increase the likelihood of a sale.
-Australian eCommerce is growing fast. Consumers expect fast loading, seamless mobile experiences, and a checkout process that doesn't make them think twice. We build stores that meet those expectations, and then some.
-</div>
-              </li>
               <li className="flex items-start gap-2 md:gap-3 mb-2">
                 <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
                 <span className="font-semibold">Built Around Your Products & Customers</span>
@@ -1494,7 +1498,7 @@ The result is a store that feels like it belongs to your brand. One that builds 
       },
       {
         slug: "magento-development",
-        title: "Magento Development in Australia",
+        title: "Magento Development",
         // heading: "eCommerce Website Development in Australia",
        serviceBodyData: [
       {
@@ -3376,7 +3380,7 @@ For high-traffic stores, we back this up with A/B testing so every change is dri
       },
       {
         slug: "wordpress-development",
-        title: "WordPress Website Development in Australia",
+        title: "WordPress Website",
         // heading: "eCommerce Website Development in Australia",
        serviceBodyData: [
       {
