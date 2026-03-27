@@ -104,10 +104,10 @@ export default async function ProjectPage({
     const project = cleanObjectUrls(rawProject);
 
     // Safely get image URL with cleaning and fallback
-    let imageUrl = project.acf?.project_image?.url || "/default.jpg";
+    let imageUrl = project.acf?.project_image?.url || "/default.webp";
     
     // Additional cleaning for the image URL
-    if (imageUrl !== "/default.jpg") {
+    if (imageUrl !== "/default.webp") {
       imageUrl = cleanUrl(imageUrl);
       
       // Handle protocol-relative URLs
@@ -122,7 +122,7 @@ export default async function ProjectPage({
       
       // Fallback if URL is invalid
       if (!imageUrl || imageUrl.length < 5) {
-        imageUrl = "/default.jpg";
+        imageUrl = "/default.webp";
       }
     }
 
@@ -139,7 +139,7 @@ export default async function ProjectPage({
         <ProjectImage 
           src={imageUrl}
           alt={project.title?.rendered || 'Project image'}
-          fallback="/default.jpg"
+          fallback="/default.webp"
         />
 
         {/* Project Content Sections */}

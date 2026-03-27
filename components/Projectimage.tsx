@@ -9,7 +9,7 @@ interface ProjectImageProps {
 export default function ProjectImage({ 
   src, 
   alt, 
-  fallback = "/default.jpg" 
+  fallback = "/default.webp" 
 }: ProjectImageProps) {
   return (
     <div className="w-full max-w-4xl rounded-2xl overflow-hidden shadow-xl mb-12">

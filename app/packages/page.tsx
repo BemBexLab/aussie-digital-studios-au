@@ -7,7 +7,7 @@ const PackagePage = () => {
     <div>
       <Hero H="PACKAGES" />
       {/* <Image
-        src="/Geometric_Shape_Silver.png"
+        src="/Geometric_Shape_Silver.webp"
         alt="Portfolio Background"
         className="absolute w-[120px] translate-y-20 translate-x-80 h-[140px] z-30"
         width={1920}
@@ -17,7 +17,7 @@ const PackagePage = () => {
       <BrandLevelUp />
       <div className="relative">
         {/* <img
-          src="/Geometric_Shape_Silver.png"
+          src="/Geometric_Shape_Silver.webp"
           alt="Decorative Image"
           width={150}
           height={150}

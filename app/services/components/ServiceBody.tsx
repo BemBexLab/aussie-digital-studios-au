@@ -27,7 +27,7 @@ const ServiceBody = ({ data = [], footnote }: ServiceBodyProps) => {
     <section>
       <div className="flex px-4 md:px-8 ">
         {/* <Image
-          src="/Geometric_Shape_Silver.png"
+          src="/Geometric_Shape_Silver.webp"
           alt="Geometric Shape 01"
           width={100}
           height={100}

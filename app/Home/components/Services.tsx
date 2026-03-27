@@ -290,7 +290,7 @@ const Services = () => {
         {/* Decorative 3D shape - top left */}
         <div className="absolute top-12 left-12 opacity-40">
           <Image
-            src="/Geometric_Shape_Silver.png"
+            src="/Geometric_Shape_Silver.webp"
             alt="Decorative Shape"
             width={120}
             height={120}

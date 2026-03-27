@@ -166,7 +166,7 @@ const About = () => {
               {/* Main Image — 3 columns */}
               <div className="lg:col-span-3 relative">
                 <Image
-                  src="/About/Rectangle_42.png"
+                  src="/about/Rectangle_42.webp"
                   alt="About Us Image"
                   width={800}
                   height={900}
@@ -174,7 +174,7 @@ const About = () => {
                 />
                 {/* Decorative shape */}
                 <img
-                  src="/Geometric_Shape_Silver.png"
+                  src="/Geometric_Shape_Silver.webp"
                   alt="Decorative shape"
                   className="absolute right-0 bottom-0 translate-x-1/2 translate-y-1/2 w-26 sm:w-20 md:w-40 pointer-events-none"
                 />
@@ -185,7 +185,7 @@ const About = () => {
                 className="lg:col-span-2 w-full h-auto rounded-lg bg-[#212423] shadow-lg p-6"
                 data-about-stat-card
                 style={{
-                  backgroundImage: "url('/About/About_Section_img_02.png')",
+                  backgroundImage: "url('/about/About_Section_img_02.webp')",
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}

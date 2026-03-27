@@ -58,7 +58,7 @@ const AboutMobile = () => {
           {/* Main Image */}
           <div className="relative w-full">
             <Image
-              src="/About/Rectangle_42.png"
+              src="/about/Rectangle_42.webp"
               alt="About Us Image"
               width={400}
               height={400}
@@ -66,7 +66,7 @@ const AboutMobile = () => {
             />
             {/* Decorative shape */}
             <img
-              src="/Geometric_Shape_Silver.png"
+              src="/Geometric_Shape_Silver.webp"
               alt="Decorative shape"
               className="absolute right-0 bottom-0 translate-x-1/3 translate-y-1/3 w-16 pointer-events-none"
             />
@@ -77,7 +77,7 @@ const AboutMobile = () => {
             className="w-full rounded-lg bg-[#212423] shadow-lg p-5"
             data-about-stat-card
             style={{
-              backgroundImage: "url('/About/About_Section_img_02.png')",
+              backgroundImage: "url('/about/About_Section_img_02.webp')",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}

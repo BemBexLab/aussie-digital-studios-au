@@ -2,14 +2,42 @@ import React from "react";
 import { title } from "process";
 import { FiCheckCircle, FiTarget } from "react-icons/fi";
 import { SiGoogleads, SiMicrostrategy } from "react-icons/si";
-import { FaFunnelDollar, FaLinkedin, FaTiktok, FaWpforms, FaYoutube } from "react-icons/fa";
-import { FaArrowTrendUp, FaDisplay, FaFilterCircleDollar, FaMeta } from "react-icons/fa6";
+import {
+  FaFunnelDollar,
+  FaLinkedin,
+  FaTiktok,
+  FaWpforms,
+  FaYoutube,
+} from "react-icons/fa";
+import {
+  FaArrowTrendUp,
+  FaDisplay,
+  FaFilterCircleDollar,
+  FaMeta,
+} from "react-icons/fa6";
 import { CiImageOn, CiSearch, CiShoppingCart } from "react-icons/ci";
-import { TbAffiliate, TbFileReport, TbReport, TbSeo, TbWriting } from "react-icons/tb";
+import {
+  TbAffiliate,
+  TbFileReport,
+  TbReport,
+  TbSeo,
+  TbWriting,
+} from "react-icons/tb";
 import { CgPerformance, CgProfile, CgScrollV, CgWebsite } from "react-icons/cg";
 import { GrDocumentPerformance, GrScorecard } from "react-icons/gr";
 import { GiAnvilImpact } from "react-icons/gi";
-import { MdAccountBalance, MdAttachEmail, MdCampaign, MdCenterFocusWeak, MdCollections, MdDescription, MdFlipCameraAndroid, MdMessage, MdOutlineSpatialTracking, MdViewQuilt } from "react-icons/md";
+import {
+  MdAccountBalance,
+  MdAttachEmail,
+  MdCampaign,
+  MdCenterFocusWeak,
+  MdCollections,
+  MdDescription,
+  MdFlipCameraAndroid,
+  MdMessage,
+  MdOutlineSpatialTracking,
+  MdViewQuilt,
+} from "react-icons/md";
 import { IoSpeedometerOutline } from "react-icons/io5";
 import { RiPagesLine, RiTeamFill } from "react-icons/ri";
 import { LuTv } from "react-icons/lu";
@@ -19,7 +47,6 @@ import { VscDebugContinue, VscReport } from "react-icons/vsc";
 import { HiDocumentReport } from "react-icons/hi";
 import { BsCameraReels } from "react-icons/bs";
 
-
 export const services = [
   // Web Design & Development
   {
@@ -28,7 +55,7 @@ export const services = [
     // heading: "Web Development Services in Australia",
     serviceBodyData: [
       {
-        imageUrl: "/Services/Rectangle_52.webp",
+        imageUrl: "/services/Rectangle_52.webp",
         description: (
           <>
             <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -44,7 +71,7 @@ export const services = [
         ),
       },
       {
-        imageUrl: "/Services/Rectangle_52.webp",
+        imageUrl: "/services/Rectangle_52.webp",
         description: (
           <>
             <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -103,7 +130,7 @@ export const services = [
       },
     ],
     whyChooseData: {
-      image: "/Services/Rectangle_52.webp",
+      image: "/services/Rectangle_52.webp",
       heading: "Why Choose Our Web Development Company in Australia",
       paragraphs: [
         "We help you create a polished business website, a high converting eCommerce store, a scalable web app, and a Shopify or WordPress platform your team can manage without a developer on speed dial. We deliver it with precision, speed, and long term performance in mind.\n\nWe follow Google's Core Web Vitals standards and build every project as a mobile first solution ready for progressive web app capabilities. Because your customers are searching on every device, your website needs to perform on all of them.\n\nOur team manages everything. The UI/UX planning, front end development, back end architecture, PHP development, eCommerce builds, and post launch support are all handled by the same people who built your site. No outsourcing. No miscommunication. No gaps in accountability.",
@@ -433,8 +460,11 @@ export const services = [
           and so are their digital needs. We will build a plan that fits your
           goals, your budget, and your timeline, if that means a full rebrand, a
           high performance eCommerce build, an end to end SEO strategy, or all
-          of the above.<br /><br />Our custom solutions have helped new businesses launch
-          with confidence, helped established brands break into new markets, and
+          of the above.
+          <br />
+          <br />
+          Our custom solutions have helped new businesses launch with
+          confidence, helped established brands break into new markets, and
           helped local Australian businesses compete on a national stage. Tell
           us where you want to go, and we will map out exactly how to get you
           there.
@@ -489,8 +519,19 @@ export const services = [
       { id: "8", src: "/Services/web_07.svg", translateY: "" },
     ],
     contactData: {
-      heading: (<>Ready to Build Something That Works as Hard as You Do?</>),
-      body: (<>If you are starting fresh, rebuilding an outdated site, or ready to take your digital presence to the next level, our team is ready to help. Get in touch, and one of our specialists will get back to you within one business day.<br /><br />No scripts. Nor pushy sales calls. Just a genuine conversation about your business and how we can move it forward.</>),
+      heading: <>Ready to Build Something That Works as Hard as You Do?</>,
+      body: (
+        <>
+          If you are starting fresh, rebuilding an outdated site, or ready to
+          take your digital presence to the next level, our team is ready to
+          help. Get in touch, and one of our specialists will get back to you
+          within one business day.
+          <br />
+          <br />
+          No scripts. Nor pushy sales calls. Just a genuine conversation about
+          your business and how we can move it forward.
+        </>
+      ),
       buttonText: "Book Your Free Strategy Call",
     },
     // footnote:
@@ -500,109 +541,173 @@ export const services = [
         slug: "custom-website-design",
         title: "Custom Website Design",
         heading: "Web Development That Accelerates something",
-       serviceBodyData: [
-      {
-        imageUrl: "/Services/Rectangle_52.webp",
-        description: (
-          <>
-            <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
-              What Is Custom Website Development
-            </h2>
-            Templates are shortcuts that cost you in the long run, in performance, in credibility, and in conversions. We build custom websites from the ground up, around your brand, your audience, and your actual goals.<br />
-A custom website is created particularly for your business, not any already existing theme, no borrowed layout, no compromises. Every page, feature, and design decision exists because it serves your brand or your customer.<br />
-The difference shows up fast. Visitors feel it in the clarity and flow. Google rewards it in rankings and Core Web Vitals. Your business benefits in trust, leads, and sales that generic templates consistently fail to produce.<br />
-            <ul className="mt-3">
-              <li className="flex items-start gap-2 md:gap-3 mb-2">
-                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
-                <span>Designed Around Your Audience,  built for your actual customer, not a general visitor</span>
-              </li>
-              <li className="flex items-start gap-2 md:gap-3 mb-2">
-                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
-                <span>No Functionality Ceiling, booking systems, configurators, portals, we build what templates can't</span>
-              </li>
-              <li className="flex items-start gap-2 md:gap-3 mb-2">
-                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
-                <span>
-                  Security From the Ground Up, hardened from day one, not patched afterward
-                </span>
-              </li>
-              <li className="flex items-start gap-2 md:gap-3 mb-2">
-                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
-                <span>
-                  You Own Everything, code, design, files, no lock-in, no licence fees
-                </span>
-              </li>
-            </ul>
-            <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
-  <a
-    className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15"
-    href="/contact"
-  >
-    Get a Free Project Quote
-  </a>
-  <span
-    aria-hidden="true"
-    className="h-10 w-px bg-white/30 max-sm:h-px max-sm:w-full"
-  />
-  <a
-    className="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/10"
-    href="/services"
-  >
-    See What We Build
-  </a>
-</div>
-          </>
-        ),
-      },
-      ],
+        serviceBodyData: [
+          {
+            imageUrl: "/services/Rectangle_52.webp",
+            description: (
+              <>
+                <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
+                  What Is Custom Website Development
+                </h2>
+                Templates are shortcuts that cost you in the long run, in
+                performance, in credibility, and in conversions. We build custom
+                websites from the ground up, around your brand, your audience,
+                and your actual goals.
+                <br />
+                A custom website is created particularly for your business, not
+                any already existing theme, no borrowed layout, no compromises.
+                Every page, feature, and design decision exists because it
+                serves your brand or your customer.
+                <br />
+                The difference shows up fast. Visitors feel it in the clarity
+                and flow. Google rewards it in rankings and Core Web Vitals.
+                Your business benefits in trust, leads, and sales that generic
+                templates consistently fail to produce.
+                <br />
+                <ul className="mt-3">
+                  <li className="flex items-start gap-2 md:gap-3 mb-2">
+                    <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                    <span>
+                      Designed Around Your Audience, built for your actual
+                      customer, not a general visitor
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2 md:gap-3 mb-2">
+                    <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                    <span>
+                      No Functionality Ceiling, booking systems, configurators,
+                      portals, we build what templates can't
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2 md:gap-3 mb-2">
+                    <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                    <span>
+                      Security From the Ground Up, hardened from day one, not
+                      patched afterward
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2 md:gap-3 mb-2">
+                    <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                    <span>
+                      You Own Everything, code, design, files, no lock-in, no
+                      licence fees
+                    </span>
+                  </li>
+                </ul>
+                <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
+                  <a
+                    className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15"
+                    href="/contact"
+                  >
+                    Get a Free Project Quote
+                  </a>
+                  <span
+                    aria-hidden="true"
+                    className="h-10 w-px bg-white/30 max-sm:h-px max-sm:w-full"
+                  />
+                  <a
+                    className="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/10"
+                    href="/services"
+                  >
+                    See What We Build
+                  </a>
+                </div>
+              </>
+            ),
+          },
+        ],
         easyExperienceData: {
           eyebrow: "Custom Development Services",
           headingLine1: <>Four Ways We Build Custom Websites For You</>,
-          headingLine2: <div className="text-sm">Custom development isn't one thing; it's a range of specialisations depending on what your business actually needs. Here's what we offer and what each one is really about.</div>,
+          headingLine2: (
+            <div className="text-sm">
+              Custom development isn't one thing; it's a range of
+              specialisations depending on what your business actually needs.
+              Here's what we offer and what each one is really about.
+            </div>
+          ),
           cards: [
             {
               title: "Fully Custom Website Design & Build",
-              description:
-                <>We design and develop your site entirely around your brand and your customers, from the first wireframe to the final line of code.<br />Every element has a reason behind it. The layout earns attention. The copy brings action. The design builds trust before a word is read.</>,
-              icon: (<CgWebsite color="#4C8C74" size={40} />),
+              description: (
+                <>
+                  We design and develop your site entirely around your brand and
+                  your customers, from the first wireframe to the final line of
+                  code.
+                  <br />
+                  Every element has a reason behind it. The layout earns
+                  attention. The copy brings action. The design builds trust
+                  before a word is read.
+                </>
+              ),
+              icon: <CgWebsite color="#4C8C74" size={40} />,
             },
             {
               title: "Speed, Responsiveness & Ongoing Support",
-              description:
-                <>Already have a custom site but it's slow, breaking on mobile, or starting to look dated? Our team of professionals rebuild and improve existing sites without discarding what's already working.<br />Beyond that, we provide an end-to-end maintenance,  security updates, performance monitoring, content changes, and technical support services. To stay your site current and running properly without you chasing developers.</>,
-              icon: (<IoSpeedometerOutline color="#4C8C74" size={40} />),
+              description: (
+                <>
+                  Already have a custom site but it's slow, breaking on mobile,
+                  or starting to look dated? Our team of professionals rebuild
+                  and improve existing sites without discarding what's already
+                  working.
+                  <br />
+                  Beyond that, we provide an end-to-end maintenance, security
+                  updates, performance monitoring, content changes, and
+                  technical support services. To stay your site current and
+                  running properly without you chasing developers.
+                </>
+              ),
+              icon: <IoSpeedometerOutline color="#4C8C74" size={40} />,
             },
             {
               title: "SEO for Custom Websites",
-              description:
-                <>A custom website no one finds on Google is a missed opportunity. We provide full SEO services built specifically around custom-built sites, technical auditing, keyword architecture, on-page optimisation, local SEO, and ranking campaigns.<br />Custom sites have a structural SEO advantage when built properly. We make sure you use it fully.</>,
-              icon: (<TbSeo color="#4C8C74" size={40} />),
+              description: (
+                <>
+                  A custom website no one finds on Google is a missed
+                  opportunity. We provide full SEO services built specifically
+                  around custom-built sites, technical auditing, keyword
+                  architecture, on-page optimisation, local SEO, and ranking
+                  campaigns.
+                  <br />
+                  Custom sites have a structural SEO advantage when built
+                  properly. We make sure you use it fully.
+                </>
+              ),
+              icon: <TbSeo color="#4C8C74" size={40} />,
             },
             {
               title: "UI/UX Design & Experience Enhancement",
-              description:
-                <>UI is what your site looks like. UX is how it feels to use. Both determine whether visitors stay, engage, and convert, or leave. We design and improve both, whether as part of a new build or as a standalone audit and redesign.<br />If your site has traffic but not conversions, the problem is usually UX. We find the friction and fix it.</>,
-              icon: (<MdViewQuilt color="#4C8C74" size={40} />),
+              description: (
+                <>
+                  UI is what your site looks like. UX is how it feels to use.
+                  Both determine whether visitors stay, engage, and convert, or
+                  leave. We design and improve both, whether as part of a new
+                  build or as a standalone audit and redesign.
+                  <br />
+                  If your site has traffic but not conversions, the problem is
+                  usually UX. We find the friction and fix it.
+                </>
+              ),
+              icon: <MdViewQuilt color="#4C8C74" size={40} />,
             },
           ],
         },
         ctaData: {
-        badgeText: "Free Consultation, No Obligation",
-        title: "Ready to Build a Website",
-        highlightedTitle: "That Work as Hard as You Do?",
-        description:
-        "Tell us what you're trying to build. We'll tell you exactly what's involved, what it'll cost, and how long it'll take, honestly, before you commit to anything.",
-        primaryAction: {
-          label: "Book Your Free Audit",
-          href: "/contact",
+          badgeText: "Free Consultation, No Obligation",
+          title: "Ready to Build a Website",
+          highlightedTitle: "That Work as Hard as You Do?",
+          description:
+            "Tell us what you're trying to build. We'll tell you exactly what's involved, what it'll cost, and how long it'll take, honestly, before you commit to anything.",
+          primaryAction: {
+            label: "Book Your Free Audit",
+            href: "/contact",
+          },
+          secondaryAction: {
+            label: "View All Services",
+            href: "/services",
+          },
+          trustItems: [],
         },
-        secondaryAction: {
-          label: "View All Services",
-          href: "/services",
-        },
-        trustItems: [
-        ],
-      },
         strategicCardData: [
           {
             title: "Custom Website Design",
@@ -816,10 +921,14 @@ The difference shows up fast. Visitors feel it in the clarity and flow. Google r
             ),
           },
         ],
-        processHeading: <>Three Steps From Brief to a Live Website That Performs</>,
+        processHeading: (
+          <>Three Steps From Brief to a Live Website That Performs</>
+        ),
         processPara: (
           <>
-            No mystery timelines. No surprises halfway through.<br />Here's exactly what every project looks like.
+            No mystery timelines. No surprises halfway through.
+            <br />
+            Here's exactly what every project looks like.
           </>
         ),
         processCardData: [
@@ -828,7 +937,12 @@ The difference shows up fast. Visitors feel it in the clarity and flow. Google r
             heading: "Discovery, Strategy & Brief",
             paragraph: (
               <>
-                Its very important to start the process by knowing your goals, audience, your brand, and ofcourse your competitors. From that real conversation, we build a detailed project brief covering site structure, design direction, technical requirements, and SEO foundations. You approve it before anything gets designed. No surprises later.
+                Its very important to start the process by knowing your goals,
+                audience, your brand, and ofcourse your competitors. From that
+                real conversation, we build a detailed project brief covering
+                site structure, design direction, technical requirements, and
+                SEO foundations. You approve it before anything gets designed.
+                No surprises later.
               </>
             ),
           },
@@ -837,7 +951,11 @@ The difference shows up fast. Visitors feel it in the clarity and flow. Google r
             heading: "Design, Build & Review",
             paragraph: (
               <>
-                Wireframes first. Then, the visual mockups. You see exactly what the site will look like before a line of code is written, and you give feedback at every stage. Once the design is locked, development begins. You get a staging site to review before anything goes live. Go-live is clean and confident.
+                Wireframes first. Then, the visual mockups. You see exactly what
+                the site will look like before a line of code is written, and
+                you give feedback at every stage. Once the design is locked,
+                development begins. You get a staging site to review before
+                anything goes live. Go-live is clean and confident.
               </>
             ),
           },
@@ -846,72 +964,95 @@ The difference shows up fast. Visitors feel it in the clarity and flow. Google r
             heading: "Launch, Monitor & Support",
             paragraph: (
               <>
-                Post-launch we run full performance checks, confirm SEO setup, verify analytics, and handle any immediate tweaks fast. Then we stay available for maintenance, for SEO, for growth. Going live is the start of the relationship, not the end of it.
+                Post-launch we run full performance checks, confirm SEO setup,
+                verify analytics, and handle any immediate tweaks fast. Then we
+                stay available for maintenance, for SEO, for growth. Going live
+                is the start of the relationship, not the end of it.
               </>
             ),
           },
         ],
         pricingCardData: [
-      {
-        title: "Basic Website Package",
-        price: "$229",
-        discountedFrom: "$499",
-        includes: [
-          "2 Custom Logo Design Concepts",
-          "1 Dedicated Designer",
-          "4 REVISIONS",
-          "48 to 72 hours TAT",
-          "100% Unique Design Guarantee",
-          "100% Satisfaction Guarantee",
-          "100% Ownership Rights",
-          "100% Money Back Guarantee",
-        ],
-      },
-      {
-        title: "Basic Website Package",
-        price: "$229",
-        discountedFrom: "$499",
-        includes: [
-          "5 Custom Logo Design Concepts",
-          "By 2 Designers",
-          "UNLIMITED Revisions",
-          "48 to 72 hours TAT",
-          "100% Unique Design Guarantee",
-          "100% Satisfaction Guarantee",
-          "100% Ownership Rights",
-          "100% Money Back Guarantee",
-        ],
-      },
-      {
-        title: "Basic Website Package",
-        price: "$229",
-        discountedFrom: "$499",
-        includes: [
-          "UNLIMITED Logo Design Concepts",
-          "By 4 Designers",
-          "UNLIMITED Revisions",
-          "Stationary Design (Business Card, Letterhead, Envelope)",
-          "48 to 72 hours TAT",
-          "FREE MS Word Letterhead",
-          "All Final Files Format (AI, PSD, EPS, PNG, GIF, jpeg, PDF)",
-        ],
-      },
+          {
+            title: "Basic Website Package",
+            price: "$229",
+            discountedFrom: "$499",
+            includes: [
+              "2 Custom Logo Design Concepts",
+              "1 Dedicated Designer",
+              "4 REVISIONS",
+              "48 to 72 hours TAT",
+              "100% Unique Design Guarantee",
+              "100% Satisfaction Guarantee",
+              "100% Ownership Rights",
+              "100% Money Back Guarantee",
+            ],
+          },
+          {
+            title: "Basic Website Package",
+            price: "$229",
+            discountedFrom: "$499",
+            includes: [
+              "5 Custom Logo Design Concepts",
+              "By 2 Designers",
+              "UNLIMITED Revisions",
+              "48 to 72 hours TAT",
+              "100% Unique Design Guarantee",
+              "100% Satisfaction Guarantee",
+              "100% Ownership Rights",
+              "100% Money Back Guarantee",
+            ],
+          },
+          {
+            title: "Basic Website Package",
+            price: "$229",
+            discountedFrom: "$499",
+            includes: [
+              "UNLIMITED Logo Design Concepts",
+              "By 4 Designers",
+              "UNLIMITED Revisions",
+              "Stationary Design (Business Card, Letterhead, Envelope)",
+              "48 to 72 hours TAT",
+              "FREE MS Word Letterhead",
+              "All Final Files Format (AI, PSD, EPS, PNG, GIF, jpeg, PDF)",
+            ],
+          },
         ],
         customplanData: {
           heading: "Why Custom Stands Out",
           buttonText: "Book a consultation call to create your perfect plan",
           body: (
             <>
-              Every custom website we build centres on three things: your target audience, your business goals, and the trust signals your customers need before they act. That's what consistently separates custom from template.
+              Every custom website we build centres on three things: your target
+              audience, your business goals, and the trust signals your
+              customers need before they act. That's what consistently separates
+              custom from template.
               <ul className="list-disc list-inside mt-2">
-                <li>Audience-First Design: we understand your customers before a pixel is placed</li>
-                <li>Goal-Driven Structure: every page has a job, leads, sales, or bookings</li>
-                <li>Trust Built In: design, speed, messaging, and social proof from the brief stage</li>
-                <li>Mobile-Firs: 60%+ of Australian traffic is mobile, we design for that first</li>
-                <li>Speed Without Compromise: lean, fast, no bloated plugin overhead</li>
-                <li>SEO From the Foundation: clean code, schema, Core Web Vitals, day one, not retrofitted</li>
+                <li>
+                  Audience-First Design: we understand your customers before a
+                  pixel is placed
+                </li>
+                <li>
+                  Goal-Driven Structure: every page has a job, leads, sales, or
+                  bookings
+                </li>
+                <li>
+                  Trust Built In: design, speed, messaging, and social proof
+                  from the brief stage
+                </li>
+                <li>
+                  Mobile-Firs: 60%+ of Australian traffic is mobile, we design
+                  for that first
+                </li>
+                <li>
+                  Speed Without Compromise: lean, fast, no bloated plugin
+                  overhead
+                </li>
+                <li>
+                  SEO From the Foundation: clean code, schema, Core Web Vitals,
+                  day one, not retrofitted
+                </li>
               </ul>
-
             </>
           ),
           // rightContent: <><h3 className="text-2xl text-white mt-3"></h3>
@@ -923,7 +1064,8 @@ The difference shows up fast. Visitors feel it in the clarity and flow. Google r
         },
         faqData: [
           {
-            question: "How much does custom website design and development cost in Australia?",
+            question:
+              "How much does custom website design and development cost in Australia?",
             answer:
               "It depends on the scope; a clean five-page custom site sits at a very different price point from a custom eCommerce platform. We give you a detailed quote after a free strategy call. No vague ranges, no hidden extras.",
           },
@@ -938,7 +1080,8 @@ The difference shows up fast. Visitors feel it in the clarity and flow. Google r
               "Yes, completely. Code, design files, domain, and content are all yours once the project is complete and paid. No ongoing licences just to own your own website.",
           },
           {
-            question: "Can you improve my existing custom website instead of rebuilding it?",
+            question:
+              "Can you improve my existing custom website instead of rebuilding it?",
             answer:
               "Yes, and we do this regularly. We start with an audit to understand what's actually causing the problem, slow speed, poor mobile UX, and low conversions, then recommend the most efficient path to fix it. Sometimes a full rebuild isn't necessary.",
           },
@@ -982,83 +1125,112 @@ The difference shows up fast. Visitors feel it in the clarity and flow. Google r
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
         contactData: {
-        heading: (<>Let's Build Something</>),
-        body: (<><h3 className="text-2xl font-semibold">Your Competitors Are Getting,<br />Better Websites Every Year.</h3>
-        <p>Every month your current site underperforms is a month of leads and credibility going elsewhere. One business day turnaround on enquiries. No scripts, no pressure, just a straight conversation about your project.</p>
-        </>),
-        buttonText: "Book a Free CallView Packages",
-      },
+          heading: <>Let's Build Something</>,
+          body: (
+            <>
+              <h3 className="text-2xl font-semibold">
+                Your Competitors Are Getting,
+                <br />
+                Better Websites Every Year.
+              </h3>
+              <p>
+                Every month your current site underperforms is a month of leads
+                and credibility going elsewhere. One business day turnaround on
+                enquiries. No scripts, no pressure, just a straight conversation
+                about your project.
+              </p>
+            </>
+          ),
+          buttonText: "Book a Free CallView Packages",
+        },
       },
       {
         slug: "ecommerce-website-development",
         title: "eCommerce Website Development",
         heading: "eCommerce Website Development",
-       serviceBodyData: [
-      {
-        imageUrl: "/Services/Rectangle_52.webp",
-        description: (
-          <>
-            <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
-              More Than an Online Store: A Revenue Engine.
-            </h2>
-            <p className="text-md text-[#AAAAA]">An eCommerce website is your best salesperson, the one who never calls in sick, works every hour of every day, and can handle thousands of customers at once. But only if it's built properly.</p>
-          </>
-        ),
-      },
-      {
-        imageUrl: "/Services/Rectangle_52.webp",
-        description: (
-          <>
-            <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
-              What Is eCommerce Website Development
-            </h2>
-            <p className="text-md text-[#AAAAA]">Custom eCommerce development means your store is built around your products, your customers, and how your business actually operates, not crammed into a generic template someone else's business already uses. Every feature, page, and checkout step is designed to reduce friction and increase the likelihood of a sale.<br />Australian eCommerce is growing fast. Consumers expect fast loading, seamless mobile experiences, and a checkout process that doesn't make them think twice. We build stores that meet those expectations, and then some.</p>
-            <ul className="mt-3">
-              <li className="flex items-start gap-2 md:gap-3 mb-2">
-                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
-                <span className="font-semibold">Built Around Your Products & Customers</span>
-              </li>
-              <li className="flex items-start gap-2 md:gap-3 mb-2">
-                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
-                <span className="font-semibold">
-                  Designed to Reduce Cart Abandonment
-                </span>
-              </li>
-              <li className="flex items-start gap-2 md:gap-3 mb-2">
-                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
-                <span className="font-semibold">
-                  Secure Payments, Full Stop
-                </span>
-              </li>
-              <li className="flex items-start gap-2 md:gap-3 mb-2">
-                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
-                <span className="font-semibold">
-                  Scales as You Grow
-                </span>
-              </li>
-            </ul>
-            <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
-  <a
-    className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15"
-    href="/contact"
-  >
-    Get a Free eCommerce Quote
-  </a>
-  <span
-    aria-hidden="true"
-    className="h-10 w-px bg-white/30 max-sm:h-px max-sm:w-full"
-  />
-  <a
-    className="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/10"
-    href="/services"
-  >
-    See What We Build
-  </a>
-</div>
-          </>
-        ),
-      },
-      ],
+        serviceBodyData: [
+          {
+            imageUrl: "/services/Rectangle_52.webp",
+            description: (
+              <>
+                <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
+                  More Than an Online Store: A Revenue Engine.
+                </h2>
+                <p className="text-md text-[#AAAAA]">
+                  An eCommerce website is your best salesperson, the one who
+                  never calls in sick, works every hour of every day, and can
+                  handle thousands of customers at once. But only if it's built
+                  properly.
+                </p>
+              </>
+            ),
+          },
+          {
+            imageUrl: "/services/Rectangle_52.webp",
+            description: (
+              <>
+                <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
+                  What Is eCommerce Website Development
+                </h2>
+                <p className="text-md text-[#AAAAA]">
+                  Custom eCommerce development means your store is built around
+                  your products, your customers, and how your business actually
+                  operates, not crammed into a generic template someone else's
+                  business already uses. Every feature, page, and checkout step
+                  is designed to reduce friction and increase the likelihood of
+                  a sale.
+                  <br />
+                  Australian eCommerce is growing fast. Consumers expect fast
+                  loading, seamless mobile experiences, and a checkout process
+                  that doesn't make them think twice. We build stores that meet
+                  those expectations, and then some.
+                </p>
+                <ul className="mt-3">
+                  <li className="flex items-start gap-2 md:gap-3 mb-2">
+                    <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                    <span className="font-semibold">
+                      Built Around Your Products & Customers
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2 md:gap-3 mb-2">
+                    <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                    <span className="font-semibold">
+                      Designed to Reduce Cart Abandonment
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2 md:gap-3 mb-2">
+                    <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                    <span className="font-semibold">
+                      Secure Payments, Full Stop
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2 md:gap-3 mb-2">
+                    <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                    <span className="font-semibold">Scales as You Grow</span>
+                  </li>
+                </ul>
+                <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
+                  <a
+                    className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15"
+                    href="/contact"
+                  >
+                    Get a Free eCommerce Quote
+                  </a>
+                  <span
+                    aria-hidden="true"
+                    className="h-10 w-px bg-white/30 max-sm:h-px max-sm:w-full"
+                  />
+                  <a
+                    className="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/10"
+                    href="/services"
+                  >
+                    See What We Build
+                  </a>
+                </div>
+              </>
+            ),
+          },
+        ],
         easyExperienceData: {
           eyebrow: <>Easy Experience</>,
           headingLine1: <>eCommerce Website Development Services</>,
@@ -1066,48 +1238,85 @@ The difference shows up fast. Visitors feel it in the clarity and flow. Google r
           cards: [
             {
               title: "Custom eCommerce Design & Build",
-              description:
-                <>A store built from scratch, no borrowed theme, no generic layout. We design every page around your products and your customers, from the homepage to the thank-you screen.<br />
-The result is a store that feels like it belongs to your brand. One that builds trust on the first visit and keeps customers coming back because the experience is genuinely good.</>,
-              icon: (<CgWebsite color="#4C8C74" size={40} />),
+              description: (
+                <>
+                  A store built from scratch, no borrowed theme, no generic
+                  layout. We design every page around your products and your
+                  customers, from the homepage to the thank-you screen.
+                  <br />
+                  The result is a store that feels like it belongs to your
+                  brand. One that builds trust on the first visit and keeps
+                  customers coming back because the experience is genuinely
+                  good.
+                </>
+              ),
+              icon: <CgWebsite color="#4C8C74" size={40} />,
             },
             {
               title: "eCommerce SEO",
-              description:
-                <>Your products can't sell if no one finds them. eCommerce SEO is a specific discipline, including product page optimisation, category architecture, duplicate content management, and schema markup that gets your products appearing in rich results.<br />We build and run SEO strategies for Australian eCommerce stores that want to rank for the terms their customers are actually searching, and convert those visits into sales.</>,
-              icon: (<TbSeo color="#4C8C74" size={40} />),
+              description: (
+                <>
+                  Your products can't sell if no one finds them. eCommerce SEO
+                  is a specific discipline, including product page optimisation,
+                  category architecture, duplicate content management, and
+                  schema markup that gets your products appearing in rich
+                  results.
+                  <br />
+                  We build and run SEO strategies for Australian eCommerce
+                  stores that want to rank for the terms their customers are
+                  actually searching, and convert those visits into sales.
+                </>
+              ),
+              icon: <TbSeo color="#4C8C74" size={40} />,
             },
             {
               title: "Speed, Responsiveness & Maintenance",
-              description:
-                <>Already have an eCommerce store, but it's slow, breaking on mobile, or losing customers somewhere in the funnel? We audit what's wrong and fix it, without rebuilding what's working.<br />We also offer ongoing maintenance, security patches, performance monitoring, platform updates, and technical support. Your store stays fast, secure, and running properly.</>,
-              icon: (<IoSpeedometerOutline color="#4C8C74" size={40} />),
+              description: (
+                <>
+                  Already have an eCommerce store, but it's slow, breaking on
+                  mobile, or losing customers somewhere in the funnel? We audit
+                  what's wrong and fix it, without rebuilding what's working.
+                  <br />
+                  We also offer ongoing maintenance, security patches,
+                  performance monitoring, platform updates, and technical
+                  support. Your store stays fast, secure, and running properly.
+                </>
+              ),
+              icon: <IoSpeedometerOutline color="#4C8C74" size={40} />,
             },
             {
               title: "UI/UX Enhancement & CRO",
-              description:
-                <>Traffic that doesn't convert is expensive traffic. If people are landing on your store and leaving without buying, that's a UX problem, and it's costing you revenue every single day.<br />We audit your customer journey, identify every friction point from landing page to checkout, and redesign those areas to remove the barriers between your visitor and their purchase.</>,
-              icon: (<MdViewQuilt color="#4C8C74" size={40} />),
+              description: (
+                <>
+                  Traffic that doesn't convert is expensive traffic. If people
+                  are landing on your store and leaving without buying, that's a
+                  UX problem, and it's costing you revenue every single day.
+                  <br />
+                  We audit your customer journey, identify every friction point
+                  from landing page to checkout, and redesign those areas to
+                  remove the barriers between your visitor and their purchase.
+                </>
+              ),
+              icon: <MdViewQuilt color="#4C8C74" size={40} />,
             },
           ],
         },
         ctaData: {
-        badgeText: "Free eCommerce Consultation",
-        title: "Ready to Build an Online Store",
-        highlightedTitle: "That Actually Converts?",
-        description:
-        "Tell us about your products, your customers, and your goals. We'll tell you exactly what's involved and what it'll cost, honestly, before you commit to anything.",
-        primaryAction: {
-          label: "Book a Free Strategy",
-          href: "/contact",
+          badgeText: "Free eCommerce Consultation",
+          title: "Ready to Build an Online Store",
+          highlightedTitle: "That Actually Converts?",
+          description:
+            "Tell us about your products, your customers, and your goals. We'll tell you exactly what's involved and what it'll cost, honestly, before you commit to anything.",
+          primaryAction: {
+            label: "Book a Free Strategy",
+            href: "/contact",
+          },
+          secondaryAction: {
+            label: "Call View Packages",
+            href: "/services",
+          },
+          trustItems: [],
         },
-        secondaryAction: {
-          label: "Call View Packages",
-          href: "/services",
-        },
-        trustItems: [
-        ],
-      },
         strategicCardData: [
           {
             title: "Custom Website Design",
@@ -1322,18 +1531,18 @@ The result is a store that feels like it belongs to your brand. One that builds 
           },
         ],
         processHeading: <>From Product Brief to Live Store in Three Steps</>,
-        processPara: (
-          <>
-            
-          </>
-        ),
+        processPara: <></>,
         processCardData: [
           {
             image: "/Services/01.svg",
             heading: "Discovery, Strategy & Store Architecture",
             paragraph: (
               <>
-                We start with your business, product range, customers, competitors, and goals. From there, we start planning store architecture: category structure, product page layout, checkout flow, payment options, and SEO foundations. You see and approve the full plan before any design begins.
+                We start with your business, product range, customers,
+                competitors, and goals. From there, we start planning store
+                architecture: category structure, product page layout, checkout
+                flow, payment options, and SEO foundations. You see and approve
+                the full plan before any design begins.
               </>
             ),
           },
@@ -1342,7 +1551,11 @@ The result is a store that feels like it belongs to your brand. One that builds 
             heading: "Design, Build & Test",
             paragraph: (
               <>
-                Design mockups first: homepage, category page, product page, checkout. You review them before a line of code is written. Then we build and test everything: desktop, mobile, all major browsers, payment flows, and speed. You get a staging store to review before anything goes live. No surprises on launch day.
+                Design mockups first: homepage, category page, product page,
+                checkout. You review them before a line of code is written. Then
+                we build and test everything: desktop, mobile, all major
+                browsers, payment flows, and speed. You get a staging store to
+                review before anything goes live. No surprises on launch day.
               </>
             ),
           },
@@ -1351,64 +1564,74 @@ The result is a store that feels like it belongs to your brand. One that builds 
             heading: "Launch, Monitor & Grow",
             paragraph: (
               <>
-                Post launch, we monitor performance, confirm SEO setup, verify analytics and conversion tracking, and handle any immediate adjustments fast. Then we stay involved, for maintenance, for SEO, for conversion rate improvements as your store grows. Going live is where the real work starts.
+                Post launch, we monitor performance, confirm SEO setup, verify
+                analytics and conversion tracking, and handle any immediate
+                adjustments fast. Then we stay involved, for maintenance, for
+                SEO, for conversion rate improvements as your store grows. Going
+                live is where the real work starts.
               </>
             ),
           },
         ],
         pricingCardData: [
-      {
-        title: "Basic Website Package",
-        price: "$229",
-        discountedFrom: "$499",
-        includes: [
-          "2 Custom Logo Design Concepts",
-          "1 Dedicated Designer",
-          "4 REVISIONS",
-          "48 to 72 hours TAT",
-          "100% Unique Design Guarantee",
-          "100% Satisfaction Guarantee",
-          "100% Ownership Rights",
-          "100% Money Back Guarantee",
-        ],
-      },
-      {
-        title: "Basic Website Package",
-        price: "$229",
-        discountedFrom: "$499",
-        includes: [
-          "5 Custom Logo Design Concepts",
-          "By 2 Designers",
-          "UNLIMITED Revisions",
-          "48 to 72 hours TAT",
-          "100% Unique Design Guarantee",
-          "100% Satisfaction Guarantee",
-          "100% Ownership Rights",
-          "100% Money Back Guarantee",
-        ],
-      },
-      {
-        title: "Basic Website Package",
-        price: "$229",
-        discountedFrom: "$499",
-        includes: [
-          "UNLIMITED Logo Design Concepts",
-          "By 4 Designers",
-          "UNLIMITED Revisions",
-          "Stationary Design (Business Card, Letterhead, Envelope)",
-          "48 to 72 hours TAT",
-          "FREE MS Word Letterhead",
-          "All Final Files Format (AI, PSD, EPS, PNG, GIF, jpeg, PDF)",
-        ],
-      },
+          {
+            title: "Basic Website Package",
+            price: "$229",
+            discountedFrom: "$499",
+            includes: [
+              "2 Custom Logo Design Concepts",
+              "1 Dedicated Designer",
+              "4 REVISIONS",
+              "48 to 72 hours TAT",
+              "100% Unique Design Guarantee",
+              "100% Satisfaction Guarantee",
+              "100% Ownership Rights",
+              "100% Money Back Guarantee",
+            ],
+          },
+          {
+            title: "Basic Website Package",
+            price: "$229",
+            discountedFrom: "$499",
+            includes: [
+              "5 Custom Logo Design Concepts",
+              "By 2 Designers",
+              "UNLIMITED Revisions",
+              "48 to 72 hours TAT",
+              "100% Unique Design Guarantee",
+              "100% Satisfaction Guarantee",
+              "100% Ownership Rights",
+              "100% Money Back Guarantee",
+            ],
+          },
+          {
+            title: "Basic Website Package",
+            price: "$229",
+            discountedFrom: "$499",
+            includes: [
+              "UNLIMITED Logo Design Concepts",
+              "By 4 Designers",
+              "UNLIMITED Revisions",
+              "Stationary Design (Business Card, Letterhead, Envelope)",
+              "48 to 72 hours TAT",
+              "FREE MS Word Letterhead",
+              "All Final Files Format (AI, PSD, EPS, PNG, GIF, jpeg, PDF)",
+            ],
+          },
         ],
         customplanData: {
           heading: "Why Custom eCommerce Stands Out",
           buttonText: "Book a consultation call to create your perfect plan",
           body: (
             <>
-              <h3>What Separates a Store That Sells From One That Sits There</h3>
-              Every custom eCommerce site we build is engineered around your target audience, your product range, and the trust signals Australian buyers need before they hand over their payment details. That's what makes the difference between traffic and revenue.
+              <h3>
+                What Separates a Store That Sells From One That Sits There
+              </h3>
+              Every custom eCommerce site we build is engineered around your
+              target audience, your product range, and the trust signals
+              Australian buyers need before they hand over their payment
+              details. That's what makes the difference between traffic and
+              revenue.
               <ul className="list-disc list-inside mt-2">
                 <li>Audience-First Design</li>
                 <li>Mobile-First, Always</li>
@@ -1419,16 +1642,22 @@ The result is a store that feels like it belongs to your brand. One that builds 
               </ul>
             </>
           ),
-          rightContent: <><h3 className="text-2xl text-white mt-3">What Makes an eCommerce Site Successful</h3>
-          <p className="text-sm"></p>
-          <ul className="list-disc list-inside mt-1 text-sm">
-            <li>Mobile-Responsive Design</li>
-            <li>Secure Payment Gateways</li>
-            <li>Smart Product Search & Filtering</li>
-            <li>Product Reviews & Social Proof</li>
-            <li>Email Marketing Integration</li>
-            <li>Inventory & Order Management</li>
-          </ul></>,
+          rightContent: (
+            <>
+              <h3 className="text-2xl text-white mt-3">
+                What Makes an eCommerce Site Successful
+              </h3>
+              <p className="text-sm"></p>
+              <ul className="list-disc list-inside mt-1 text-sm">
+                <li>Mobile-Responsive Design</li>
+                <li>Secure Payment Gateways</li>
+                <li>Smart Product Search & Filtering</li>
+                <li>Product Reviews & Social Proof</li>
+                <li>Email Marketing Integration</li>
+                <li>Inventory & Order Management</li>
+              </ul>
+            </>
+          ),
           miniTagData: <></>,
         },
         faqData: [
@@ -1438,12 +1667,14 @@ The result is a store that feels like it belongs to your brand. One that builds 
               "It completely depends on the size of your catalogue, the complexity of the features, and the platform. A straightforward starter store sits at a very different price point from a B2B platform with custom integrations. We give you a clear, itemised quote after a free strategy call, no vague ranges, no hidden costs.",
           },
           {
-            question: "Which platform do you recommend, Shopify, WooCommerce, or Magento?",
+            question:
+              "Which platform do you recommend, Shopify, WooCommerce, or Magento?",
             answer:
               "It genuinely depends on your business. Shopify is excellent for product-focused retail stores that want reliability and ease of management. WooCommerce suits businesses already on WordPress who need flexibility. Magento is the right call for large catalogues and complex B2B requirements. We'll give you an honest recommendation after understanding your situation, not just build on whatever we prefer.",
           },
           {
-            question: "How long does it take to build a custom eCommerce website?",
+            question:
+              "How long does it take to build a custom eCommerce website?",
             answer:
               "A standard eCommerce store typically takes six to ten weeks from brief to launch. Larger B2B platforms or stores with complex custom features take longer. We give you a realistic timeline in the project brief, not an optimistic one that slips.",
           },
@@ -1492,27 +1723,44 @@ The result is a store that feels like it belongs to your brand. One that builds 
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
         contactData: {
-        heading: (<>Let's Build Your Store</>),
-        body: (<><h3 className="text-2xl font-semibold">Every Day Without a Proper<br />Store Is Revenue Left Behind.</h3>
-        <p>Get in touch today, and one of our eCommerce specialists will respond within one business day. No scripts, no pressure. Just a straight conversation about your store and what it could be doing.</p>
-        </>),
-        buttonText: "Book a Free Call",
-      },
+          heading: <>Let's Build Your Store</>,
+          body: (
+            <>
+              <h3 className="text-2xl font-semibold">
+                Every Day Without a Proper
+                <br />
+                Store Is Revenue Left Behind.
+              </h3>
+              <p>
+                Get in touch today, and one of our eCommerce specialists will
+                respond within one business day. No scripts, no pressure. Just a
+                straight conversation about your store and what it could be
+                doing.
+              </p>
+            </>
+          ),
+          buttonText: "Book a Free Call",
+        },
       },
       {
         slug: "magento-development",
         title: "Magento Development",
         // heading: "eCommerce Website Development in Australia",
-       serviceBodyData: [
-      {
-        imageUrl: "/Services/Rectangle_52.webp",
-        description: (
-          <>
-            <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
-              Big Catalogues, Complex Requirements Magento Handles It.
-            </h2>
-            <p>When your eCommerce business has outgrown simpler platforms, too many products, too many rules, too many integrations, Magento is where serious merchants go. We build Magento stores for Australian businesses that mean business online.</p>
-            {/* <ul className="mt-3">
+        serviceBodyData: [
+          {
+            imageUrl: "/services/Rectangle_52.webp",
+            description: (
+              <>
+                <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
+                  Big Catalogues, Complex Requirements Magento Handles It.
+                </h2>
+                <p>
+                  When your eCommerce business has outgrown simpler platforms,
+                  too many products, too many rules, too many integrations,
+                  Magento is where serious merchants go. We build Magento stores
+                  for Australian businesses that mean business online.
+                </p>
+                {/* <ul className="mt-3">
               <li className="flex items-start gap-2 md:gap-3 mb-2">
                 <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
                 <div className="flex flex-col"><span className="font-semibold">More Than an Online Store: A Revenue Engine.</span>
@@ -1544,58 +1792,68 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
                 </span>
               </li>
             </ul> */}
-            <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
-  <a
-    className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15"
-    href="/contact"
-  >
-    Get a Free Magento Quote
-  </a>
-  <span
-    aria-hidden="true"
-    className="h-10 w-px bg-white/30 max-sm:h-px max-sm:w-full"
-  />
-  <a
-    className="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/10"
-    href="/services"
-  >
-    See What We Build
-  </a>
-</div>
-          </>
-        ),
-      },
-      {
-        imageUrl: "/Services/Rectangle_52.webp",
-        description: (
-          <>
-            {/* <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
+                <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
+                  <a
+                    className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15"
+                    href="/contact"
+                  >
+                    Get a Free Magento Quote
+                  </a>
+                  <span
+                    aria-hidden="true"
+                    className="h-10 w-px bg-white/30 max-sm:h-px max-sm:w-full"
+                  />
+                  <a
+                    className="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/10"
+                    href="/services"
+                  >
+                    See What We Build
+                  </a>
+                </div>
+              </>
+            ),
+          },
+          {
+            imageUrl: "/services/Rectangle_52.webp",
+            description: (
+              <>
+                {/* <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
               Big Catalogues, Complex Requirements Magento Handles It.
             </h2> */}
-            <p>It's not the right choice for every business, and we'll tell you that honestly. But for businesses that have hit the ceiling on simpler platforms, or that need serious customisation, serious scalability, and serious performance from day one, Magento is the right foundation.<br />We build on it properly, which makes all the difference.</p>
-            <ul className="mt-3">
-              <li className="flex items-start gap-2 md:gap-3 mb-2">
-                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
-                <span className="font-semibold">Built for Large, Complex Catalogues</span>
-              </li>
-              <li className="flex items-start gap-2 md:gap-3 mb-2">
-                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
-                <span className="font-semibold">B2B and B2C from One Platform</span>
-              </li>
-              <li className="flex items-start gap-2 md:gap-3 mb-2">
-                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
-                <span className="font-semibold">
-                  Customisation Without a Ceiling
-                </span>
-              </li>
-              <li className="flex items-start gap-2 md:gap-3 mb-2">
-                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
-                <span className="font-semibold">
-                  You Own the Platform
-                </span>
-              </li>
-            </ul>
-            {/* <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
+                <p>
+                  It's not the right choice for every business, and we'll tell
+                  you that honestly. But for businesses that have hit the
+                  ceiling on simpler platforms, or that need serious
+                  customisation, serious scalability, and serious performance
+                  from day one, Magento is the right foundation.
+                  <br />
+                  We build on it properly, which makes all the difference.
+                </p>
+                <ul className="mt-3">
+                  <li className="flex items-start gap-2 md:gap-3 mb-2">
+                    <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                    <span className="font-semibold">
+                      Built for Large, Complex Catalogues
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2 md:gap-3 mb-2">
+                    <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                    <span className="font-semibold">
+                      B2B and B2C from One Platform
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2 md:gap-3 mb-2">
+                    <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                    <span className="font-semibold">
+                      Customisation Without a Ceiling
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2 md:gap-3 mb-2">
+                    <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                    <span className="font-semibold">You Own the Platform</span>
+                  </li>
+                </ul>
+                {/* <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
   <a
     className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15"
     href="/contact"
@@ -1613,64 +1871,103 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
     See What We Build
   </a>
 </div> */}
-          </>
-        ),
-      },
-      ],
+              </>
+            ),
+          },
+        ],
         easyExperienceData: {
           eyebrow: <>Easy Experience</>,
           headingLine1: <>Our Magento Development Services</>,
-          headingLine2: <div className="text-sm">Magento development covers more ground than most people realise. Here's exactly what we offer and what each service actually does for your eCommerce business.</div>,
+          headingLine2: (
+            <div className="text-sm">
+              Magento development covers more ground than most people realise.
+              Here's exactly what we offer and what each service actually does
+              for your eCommerce business.
+            </div>
+          ),
           cards: [
             {
               title: "Custom Magento Store Design & Build",
-              description:
-                <>We design every page completely according to your products, brand, and how your customers actually shop. Homepage, category pages, product pages, checkout, all created custom.<br />
-The result is a store that performs technically and converts commercially. Built on Magento's powerful open-source platform, but looking and working nothing like a default installation.
-</>,
-              icon: (<CgWebsite color="#4C8C74" size={40} />),
+              description: (
+                <>
+                  We design every page completely according to your products,
+                  brand, and how your customers actually shop. Homepage,
+                  category pages, product pages, checkout, all created custom.
+                  <br />
+                  The result is a store that performs technically and converts
+                  commercially. Built on Magento's powerful open-source
+                  platform, but looking and working nothing like a default
+                  installation.
+                </>
+              ),
+              icon: <CgWebsite color="#4C8C74" size={40} />,
             },
             {
               title: "Magento eCommerce SEO",
-              description:
-                <>Magento has powerful SEO capabilities, but only when configured and managed properly. Layered navigation, faceted search, duplicate product URLs, and crawl budget are all common problems on Magento stores that aren't set up correctly.<br />
-Our team of professionals resolves the technical SEO foundation, builds the keyword architecture, optimises product and category pages, and runs ongoing SEO to grow organic traffic and rankings for your store.
-</>,
-              icon: (<TbSeo color="#4C8C74" size={40} />),
+              description: (
+                <>
+                  Magento has powerful SEO capabilities, but only when
+                  configured and managed properly. Layered navigation, faceted
+                  search, duplicate product URLs, and crawl budget are all
+                  common problems on Magento stores that aren't set up
+                  correctly.
+                  <br />
+                  Our team of professionals resolves the technical SEO
+                  foundation, builds the keyword architecture, optimises product
+                  and category pages, and runs ongoing SEO to grow organic
+                  traffic and rankings for your store.
+                </>
+              ),
+              icon: <TbSeo color="#4C8C74" size={40} />,
             },
             {
               title: "Speed, Responsiveness & Maintenance",
-              description:
-                <>We audit, optimise, and maintain existing Magento stores: caching, CDN configuration, image optimisation, mobile responsiveness, and security patches.<br />
-Our company also offer end-to-end ongoing maintenance so your store stays updated, secure, and running fast without you needing to manage it yourself.</>,
-              icon: (<IoSpeedometerOutline color="#4C8C74" size={40} />),
+              description: (
+                <>
+                  We audit, optimise, and maintain existing Magento stores:
+                  caching, CDN configuration, image optimisation, mobile
+                  responsiveness, and security patches.
+                  <br />
+                  Our company also offer end-to-end ongoing maintenance so your
+                  store stays updated, secure, and running fast without you
+                  needing to manage it yourself.
+                </>
+              ),
+              icon: <IoSpeedometerOutline color="#4C8C74" size={40} />,
             },
             {
               title: "UI/UX Enhancement & Conversion Optimisation",
-              description:
-                <>We audit the user journey end to end, product discovery, filtering, product pages, cart, checkout, and redesign the friction points that are costing you sales.<br />
-For high-traffic stores, we back this up with A/B testing so every change is driven by data from your actual customers, not assumptions.</>,
-              icon: (<MdViewQuilt color="#4C8C74" size={40} />),
+              description: (
+                <>
+                  We audit the user journey end to end, product discovery,
+                  filtering, product pages, cart, checkout, and redesign the
+                  friction points that are costing you sales.
+                  <br />
+                  For high-traffic stores, we back this up with A/B testing so
+                  every change is driven by data from your actual customers, not
+                  assumptions.
+                </>
+              ),
+              icon: <MdViewQuilt color="#4C8C74" size={40} />,
             },
           ],
         },
         ctaData: {
-        badgeText: "Free Magento Consultation",
-        title: "Ready to Build a Magento Store ",
-        highlightedTitle: "That Actually Scales?",
-        description:
-        "Tell us about your catalogue, your requirements, and your goals. We'll tell you exactly what's involved and what it'll cost, before you commit to anything.",
-        primaryAction: {
-          label: "Book a Free Strategy",
-          href: "/contact",
+          badgeText: "Free Magento Consultation",
+          title: "Ready to Build a Magento Store ",
+          highlightedTitle: "That Actually Scales?",
+          description:
+            "Tell us about your catalogue, your requirements, and your goals. We'll tell you exactly what's involved and what it'll cost, before you commit to anything.",
+          primaryAction: {
+            label: "Book a Free Strategy",
+            href: "/contact",
+          },
+          secondaryAction: {
+            label: "Call View Packages",
+            href: "/services",
+          },
+          trustItems: [],
         },
-        secondaryAction: {
-          label: "Call View Packages",
-          href: "/services",
-        },
-        trustItems: [
-        ],
-      },
         strategicCardData: [
           {
             title: "Custom Website Design",
@@ -1884,18 +2181,22 @@ For high-traffic stores, we back this up with A/B testing so every change is dri
             ),
           },
         ],
-        processHeading: <>From Brief to Live Magento Store in Three Clear Steps</>,
-        processPara: (
-          <>
-          </>
+        processHeading: (
+          <>From Brief to Live Magento Store in Three Clear Steps</>
         ),
+        processPara: <></>,
         processCardData: [
           {
             image: "/Services/01.svg",
             heading: "Discovery, Strategy & Store Architecture",
             paragraph: (
               <>
-                We start by understanding your business properly, which includes your catalogue structure, customer types, competitors, integrations, and what success looks like. From there, we build a detailed store architecture: category hierarchy, product page types, checkout flow, B2B requirements if applicable, and full SEO foundations. You approve the plan before design begins.
+                We start by understanding your business properly, which includes
+                your catalogue structure, customer types, competitors,
+                integrations, and what success looks like. From there, we build
+                a detailed store architecture: category hierarchy, product page
+                types, checkout flow, B2B requirements if applicable, and full
+                SEO foundations. You approve the plan before design begins.
               </>
             ),
           },
@@ -1904,7 +2205,12 @@ For high-traffic stores, we back this up with A/B testing so every change is dri
             heading: "Design, Build & Catalogue Setup",
             paragraph: (
               <>
-                Custom design mockups first, homepage, category pages, product pages, checkout. Your review and sign-off before a line of code is written. Then, full Magento development, product catalogue setup, payment gateway integration, third-party connections, and thorough testing across all devices and browsers. You review on a staging environment before anything goes live.
+                Custom design mockups first, homepage, category pages, product
+                pages, checkout. Your review and sign-off before a line of code
+                is written. Then, full Magento development, product catalogue
+                setup, payment gateway integration, third-party connections, and
+                thorough testing across all devices and browsers. You review on
+                a staging environment before anything goes live.
               </>
             ),
           },
@@ -1913,84 +2219,117 @@ For high-traffic stores, we back this up with A/B testing so every change is dri
             heading: "Launch, Optimise & Support",
             paragraph: (
               <>
-                Launch day is handled carefully, including performance checks, SEO verification, payment flow testing, and analytics confirmation. Once live, we monitor, optimise, and stay available. Magento stores benefit from ongoing SEO, performance tuning, and conversion rate work. We're the partner who sticks around after the build to help the store actually grow.
+                Launch day is handled carefully, including performance checks,
+                SEO verification, payment flow testing, and analytics
+                confirmation. Once live, we monitor, optimise, and stay
+                available. Magento stores benefit from ongoing SEO, performance
+                tuning, and conversion rate work. We're the partner who sticks
+                around after the build to help the store actually grow.
               </>
             ),
           },
         ],
         pricingCardData: [
-      {
-        title: "Basic Website Package",
-        price: "$229",
-        discountedFrom: "$499",
-        includes: [
-          "2 Custom Logo Design Concepts",
-          "1 Dedicated Designer",
-          "4 REVISIONS",
-          "48 to 72 hours TAT",
-          "100% Unique Design Guarantee",
-          "100% Satisfaction Guarantee",
-          "100% Ownership Rights",
-          "100% Money Back Guarantee",
-        ],
-      },
-      {
-        title: "Basic Website Package",
-        price: "$229",
-        discountedFrom: "$499",
-        includes: [
-          "5 Custom Logo Design Concepts",
-          "By 2 Designers",
-          "UNLIMITED Revisions",
-          "48 to 72 hours TAT",
-          "100% Unique Design Guarantee",
-          "100% Satisfaction Guarantee",
-          "100% Ownership Rights",
-          "100% Money Back Guarantee",
-        ],
-      },
-      {
-        title: "Basic Website Package",
-        price: "$229",
-        discountedFrom: "$499",
-        includes: [
-          "UNLIMITED Logo Design Concepts",
-          "By 4 Designers",
-          "UNLIMITED Revisions",
-          "Stationary Design (Business Card, Letterhead, Envelope)",
-          "48 to 72 hours TAT",
-          "FREE MS Word Letterhead",
-          "All Final Files Format (AI, PSD, EPS, PNG, GIF, jpeg, PDF)",
-        ],
-      },
+          {
+            title: "Basic Website Package",
+            price: "$229",
+            discountedFrom: "$499",
+            includes: [
+              "2 Custom Logo Design Concepts",
+              "1 Dedicated Designer",
+              "4 REVISIONS",
+              "48 to 72 hours TAT",
+              "100% Unique Design Guarantee",
+              "100% Satisfaction Guarantee",
+              "100% Ownership Rights",
+              "100% Money Back Guarantee",
+            ],
+          },
+          {
+            title: "Basic Website Package",
+            price: "$229",
+            discountedFrom: "$499",
+            includes: [
+              "5 Custom Logo Design Concepts",
+              "By 2 Designers",
+              "UNLIMITED Revisions",
+              "48 to 72 hours TAT",
+              "100% Unique Design Guarantee",
+              "100% Satisfaction Guarantee",
+              "100% Ownership Rights",
+              "100% Money Back Guarantee",
+            ],
+          },
+          {
+            title: "Basic Website Package",
+            price: "$229",
+            discountedFrom: "$499",
+            includes: [
+              "UNLIMITED Logo Design Concepts",
+              "By 4 Designers",
+              "UNLIMITED Revisions",
+              "Stationary Design (Business Card, Letterhead, Envelope)",
+              "48 to 72 hours TAT",
+              "FREE MS Word Letterhead",
+              "All Final Files Format (AI, PSD, EPS, PNG, GIF, jpeg, PDF)",
+            ],
+          },
         ],
         customplanData: {
           heading: "Why Magento Stands Out",
           buttonText: "Book a consultation call to create your perfect plan",
           body: (
             <>
-              Every Magento store we build is engineered around your catalogue, your customers, and the specific trust signals Australian buyers need. That's what makes Magento stores consistently outperform generic eCommerce setups for businesses with serious volume and requirements.
+              Every Magento store we build is engineered around your catalogue,
+              your customers, and the specific trust signals Australian buyers
+              need. That's what makes Magento stores consistently outperform
+              generic eCommerce setups for businesses with serious volume and
+              requirements.
               <ul className="list-disc list-inside mt-2">
-                <li><b>Scalability That Grows With You:</b> Grow from 500 to 50,000 products.</li>
-                <li><b>Mobile-First Shopping Experience:</b> Mobile-first Magento stores built for Aussie shoppers.</li>
-                <li><b>Enterprise-Grade Security:</b> Magento secured, your store and customers protected.</li>
-                <li><b>Performance at Scale:</b> Magento optimised for speed, even under peak traffic.</li>
-                <li><b>Deep SEO Capabilities:</b> Magento gives full SEO control; we use it all.</li>
-                <li><b>Integration-Ready Architecture:</b> Magento connects effortlessly to your business tools.</li>
+                <li>
+                  <b>Scalability That Grows With You:</b> Grow from 500 to
+                  50,000 products.
+                </li>
+                <li>
+                  <b>Mobile-First Shopping Experience:</b> Mobile-first Magento
+                  stores built for Aussie shoppers.
+                </li>
+                <li>
+                  <b>Enterprise-Grade Security:</b> Magento secured, your store
+                  and customers protected.
+                </li>
+                <li>
+                  <b>Performance at Scale:</b> Magento optimised for speed, even
+                  under peak traffic.
+                </li>
+                <li>
+                  <b>Deep SEO Capabilities:</b> Magento gives full SEO control;
+                  we use it all.
+                </li>
+                <li>
+                  <b>Integration-Ready Architecture:</b> Magento connects
+                  effortlessly to your business tools.
+                </li>
               </ul>
             </>
           ),
-          rightContent: <><h3 className="text-2xl text-white mt-3">What Makes a Magento Store Successful</h3>
-          <p className="text-sm"></p>
-          <ul className="list-disc list-inside mt-1 text-sm">
-            <li>Real eCommerce Results</li>
-            <li>Mobile-Responsive Design</li>
-            <li>Secure Payment Integration</li>
-            <li>Advanced Product Management</li>
-            <li>Customer Segmentation & Personalisation</li>
-            <li>Email Marketing Integration</li>
-            <li>Analytics & Reporting</li>
-          </ul></>,
+          rightContent: (
+            <>
+              <h3 className="text-2xl text-white mt-3">
+                What Makes a Magento Store Successful
+              </h3>
+              <p className="text-sm"></p>
+              <ul className="list-disc list-inside mt-1 text-sm">
+                <li>Real eCommerce Results</li>
+                <li>Mobile-Responsive Design</li>
+                <li>Secure Payment Integration</li>
+                <li>Advanced Product Management</li>
+                <li>Customer Segmentation & Personalisation</li>
+                <li>Email Marketing Integration</li>
+                <li>Analytics & Reporting</li>
+              </ul>
+            </>
+          ),
           miniTagData: <></>,
         },
         faqData: [
@@ -2000,7 +2339,8 @@ For high-traffic stores, we back this up with A/B testing so every change is dri
               "Magento is the right call when your business has a large or complex catalogue, needs B2B and B2C functionality from one platform, requires deep customisation, or has outgrown what Shopify or WooCommerce can handle. Our team will properly guide you with an honest assessment during the strategy call, including whether Magento isn't the right fit.",
           },
           {
-            question: "What's the difference between Magento Open Source and Adobe Commerce?",
+            question:
+              "What's the difference between Magento Open Source and Adobe Commerce?",
             answer:
               "Magento Open Source is free to use and extremely capable for most businesses. On the other side, Adobe Commerce (formerly Magento Commerce) adds enterprise features like advanced B2B tools, customer loyalty, and cloud hosting. We work with both and will recommend which one makes sense for your specific requirements and budget.",
           },
@@ -2054,18 +2394,29 @@ For high-traffic stores, we back this up with A/B testing so every change is dri
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
         contactData: {
-        heading: (<>Let's Build Your Magento Store</>),
-        body: (<><h3 className="text-2xl font-semibold">Your Business Has Outgrown<br />Simpler Platforms. Magento Hasn't.</h3>
-        <p>Get in touch today, and one of our Magento specialists will respond within one business day. No scripts, no pressure. Just a straight conversation about your store and what it needs.</p>
-        </>),
-        buttonText: "Book a Free Call",
-      },
+          heading: <>Let's Build Your Magento Store</>,
+          body: (
+            <>
+              <h3 className="text-2xl font-semibold">
+                Your Business Has Outgrown
+                <br />
+                Simpler Platforms. Magento Hasn't.
+              </h3>
+              <p>
+                Get in touch today, and one of our Magento specialists will
+                respond within one business day. No scripts, no pressure. Just a
+                straight conversation about your store and what it needs.
+              </p>
+            </>
+          ),
+          buttonText: "Book a Free Call",
+        },
       },
       {
         slug: "opencart",
         title: "OpenCart",
         heading: "Web Development That Accelerates something",
-        imageUrl: "/Services/Rectangle_52.png",
+        imageUrl: "/services/Rectangle_52.webp",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -2505,7 +2856,7 @@ For high-traffic stores, we back this up with A/B testing so every change is dri
         slug: "shopify-development",
         title: "Shopify Development",
         heading: "Web Development That Accelerates something",
-        imageUrl: "/Services/Rectangle_52.png",
+        imageUrl: "/services/Rectangle_52.webp",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -2945,7 +3296,7 @@ For high-traffic stores, we back this up with A/B testing so every change is dri
         slug: "woocommerce-development",
         title: "WooCommerce Development",
         heading: "Web Development That Accelerates something",
-        imageUrl: "/Services/Rectangle_52.png",
+        imageUrl: "/services/Rectangle_52.webp",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -3385,16 +3736,22 @@ For high-traffic stores, we back this up with A/B testing so every change is dri
         slug: "wordpress-development",
         title: "WordPress Website",
         // heading: "eCommerce Website Development in Australia",
-       serviceBodyData: [
-      {
-        imageUrl: "/Services/Rectangle_52.webp",
-        description: (
-          <>
-            <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
-              The World's Most Used Platform. Built the Right Way.
-            </h2>
-            <p>WordPress powers over 40% of the internet, but there's a massive difference between a WordPress site slapped together with a bought theme and one built properly from scratch. We build the second kind. Custom themes, clean code, fast load times, and a site your team can actually manage.</p>
-            {/* <ul className="mt-3">
+        serviceBodyData: [
+          {
+            imageUrl: "/services/Rectangle_52.webp",
+            description: (
+              <>
+                <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
+                  The World's Most Used Platform. Built the Right Way.
+                </h2>
+                <p>
+                  WordPress powers over 40% of the internet, but there's a
+                  massive difference between a WordPress site slapped together
+                  with a bought theme and one built properly from scratch. We
+                  build the second kind. Custom themes, clean code, fast load
+                  times, and a site your team can actually manage.
+                </p>
+                {/* <ul className="mt-3">
               <li className="flex items-start gap-2 md:gap-3 mb-2">
                 <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
                 <div className="flex flex-col"><span className="font-semibold">More Than an Online Store: A Revenue Engine.</span>
@@ -3426,59 +3783,76 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
                 </span>
               </li>
             </ul> */}
-            <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
-  <a
-    className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15"
-    href="/contact"
-  >
-    Get a Free WordPress Quote
-  </a>
-  <span
-    aria-hidden="true"
-    className="h-10 w-px bg-white/30 max-sm:h-px max-sm:w-full"
-  />
-  <a
-    className="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/10"
-    href="/services"
-  >
-    See What We Build
-  </a>
-</div>
-          </>
-        ),
-      },
-      {
-        imageUrl: "/Services/Rectangle_52.webp",
-        description: (
-          <>
-            <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
-              What Is Custom WordPress Development
-            </h2>
-            <p>WordPress is powerful when created properly. The platform itself is not the problem. The problem is the way most WordPress sites get built: a pre-made theme downloaded from a marketplace, a bunch of plugins stacked on top of each other, and a site that loads slowly, breaks under updates, and looks similar to twenty other businesses in your industry.
-Custom WordPress development means your site is built on WordPress's solid foundation, but everything on top of it, the theme, the layout, the functionality, is made specifically for your business, and completely reflects your brand. Your team gets complete control over content through WordPress's familiar interface. But the site itself is unique, fast, and built to perform rather than just exist.</p>
-            <ul className="mt-3">
-              <li className="flex items-start gap-2 md:gap-3 mb-2">
-                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
-                <span className="font-semibold">Custom Theme Nothing Borrowed</span>
-              </li>
-              <li className="flex items-start gap-2 md:gap-3 mb-2">
-                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
-                <span className="font-semibold">Your Team Manages the Content</span>
-              </li>
-              <li className="flex items-start gap-2 md:gap-3 mb-2">
-                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
-                <span className="font-semibold">
-                  Plugin Power, Done Right
-                </span>
-              </li>
-              <li className="flex items-start gap-2 md:gap-3 mb-2">
-                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
-                <span className="font-semibold">
-                  SEO-Friendly From the Start
-                </span>
-              </li>
-            </ul>
-            {/* <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
+                <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
+                  <a
+                    className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15"
+                    href="/contact"
+                  >
+                    Get a Free WordPress Quote
+                  </a>
+                  <span
+                    aria-hidden="true"
+                    className="h-10 w-px bg-white/30 max-sm:h-px max-sm:w-full"
+                  />
+                  <a
+                    className="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/10"
+                    href="/services"
+                  >
+                    See What We Build
+                  </a>
+                </div>
+              </>
+            ),
+          },
+          {
+            imageUrl: "/services/Rectangle_52.webp",
+            description: (
+              <>
+                <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
+                  What Is Custom WordPress Development
+                </h2>
+                <p>
+                  WordPress is powerful when created properly. The platform
+                  itself is not the problem. The problem is the way most
+                  WordPress sites get built: a pre-made theme downloaded from a
+                  marketplace, a bunch of plugins stacked on top of each other,
+                  and a site that loads slowly, breaks under updates, and looks
+                  similar to twenty other businesses in your industry. Custom
+                  WordPress development means your site is built on WordPress's
+                  solid foundation, but everything on top of it, the theme, the
+                  layout, the functionality, is made specifically for your
+                  business, and completely reflects your brand. Your team gets
+                  complete control over content through WordPress's familiar
+                  interface. But the site itself is unique, fast, and built to
+                  perform rather than just exist.
+                </p>
+                <ul className="mt-3">
+                  <li className="flex items-start gap-2 md:gap-3 mb-2">
+                    <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                    <span className="font-semibold">
+                      Custom Theme Nothing Borrowed
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2 md:gap-3 mb-2">
+                    <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                    <span className="font-semibold">
+                      Your Team Manages the Content
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2 md:gap-3 mb-2">
+                    <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                    <span className="font-semibold">
+                      Plugin Power, Done Right
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2 md:gap-3 mb-2">
+                    <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                    <span className="font-semibold">
+                      SEO-Friendly From the Start
+                    </span>
+                  </li>
+                </ul>
+                {/* <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
   <a
     className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15"
     href="/contact"
@@ -3496,64 +3870,104 @@ Custom WordPress development means your site is built on WordPress's solid found
     See What We Build
   </a>
 </div> */}
-          </>
-        ),
-      },
-      ],
+              </>
+            ),
+          },
+        ],
         easyExperienceData: {
           eyebrow: <>Easy Experience</>,
           headingLine1: <>Our WordPress Development Services</>,
-          headingLine2: <div className="text-sm">WordPress development involves a lot more technicalities than building a site and handing it over. Below is a mention of what exactly we offer and what each service does for your business in the long term.</div>,
+          headingLine2: (
+            <div className="text-sm">
+              WordPress development involves a lot more technicalities than
+              building a site and handing it over. Below is a mention of what
+              exactly we offer and what each service does for your business in
+              the long term.
+            </div>
+          ),
           cards: [
             {
               title: "Custom WordPress Design & Build",
-              description:
-                <>A WordPress site built from scratch, with a custom theme, custom layout, and nothing borrowed. Our designers will design every page around your brand and customers, then develop it on a clean, well-structured WordPress foundation.<br />
-Your team gets a site that looks genuinely unique and a CMS they can manage without needing a developer on standby for every content update.
-</>,
-              icon: (<CgWebsite color="#4C8C74" size={40} />),
+              description: (
+                <>
+                  A WordPress site built from scratch, with a custom theme,
+                  custom layout, and nothing borrowed. Our designers will design
+                  every page around your brand and customers, then develop it on
+                  a clean, well-structured WordPress foundation.
+                  <br />
+                  Your team gets a site that looks genuinely unique and a CMS
+                  they can manage without needing a developer on standby for
+                  every content update.
+                </>
+              ),
+              icon: <CgWebsite color="#4C8C74" size={40} />,
             },
             {
               title: "Mobile Responsiveness & Speed",
-              description:
-                <>Have an existing WordPress site that's slow, breaking on mobile, or failing Core Web Vitals? Our team will audit and resolve it, without discarding what's working. Speed optimisation, responsive fixes, caching setup, image compression, and performance tuning.<br />
-With that, we also offer end-to-end ongoing maintenance, security patches, plugin updates, uptime monitoring, and technical support so your site stays healthy without you having to manage it.
-</>,
-              icon: (<IoSpeedometerOutline color="#4C8C74" size={40} />),
+              description: (
+                <>
+                  Have an existing WordPress site that's slow, breaking on
+                  mobile, or failing Core Web Vitals? Our team will audit and
+                  resolve it, without discarding what's working. Speed
+                  optimisation, responsive fixes, caching setup, image
+                  compression, and performance tuning.
+                  <br />
+                  With that, we also offer end-to-end ongoing maintenance,
+                  security patches, plugin updates, uptime monitoring, and
+                  technical support so your site stays healthy without you
+                  having to manage it.
+                </>
+              ),
+              icon: <IoSpeedometerOutline color="#4C8C74" size={40} />,
             },
             {
               title: "WordPress SEO Services",
-              description:
-                <>WordPress has excellent SEO potential, but potential isn't the same as performance. We build the full SEO picture: technical audit, keyword research and architecture, on page optimisation, schema markup, local SEO for Australian businesses, and ongoing ranking campaigns.<br />
-A well-optimised WordPress site compounds over time, building authority, ranking for more terms, and delivering organic traffic that doesn't require ongoing ad spend.
-</>,
-              icon: (<TbSeo color="#4C8C74" size={40} />),
+              description: (
+                <>
+                  WordPress has excellent SEO potential, but potential isn't the
+                  same as performance. We build the full SEO picture: technical
+                  audit, keyword research and architecture, on page
+                  optimisation, schema markup, local SEO for Australian
+                  businesses, and ongoing ranking campaigns.
+                  <br />A well-optimised WordPress site compounds over time,
+                  building authority, ranking for more terms, and delivering
+                  organic traffic that doesn't require ongoing ad spend.
+                </>
+              ),
+              icon: <TbSeo color="#4C8C74" size={40} />,
             },
             {
               title: "UI/UX Enhancement & CRO",
-              description:
-                <>Traffic that doesn't convert is expensive traffic. If your WordPress site has visitors but not enquiries or sales, the problem is almost always UX, and it's fixable. We audit the full user journey, identify where people are dropping off, and redesign those areas to reduce friction and increase conversions.</>,
-              icon: (<MdViewQuilt color="#4C8C74" size={40} />),
+              description: (
+                <>
+                  Traffic that doesn't convert is expensive traffic. If your
+                  WordPress site has visitors but not enquiries or sales, the
+                  problem is almost always UX, and it's fixable. We audit the
+                  full user journey, identify where people are dropping off, and
+                  redesign those areas to reduce friction and increase
+                  conversions.
+                </>
+              ),
+              icon: <MdViewQuilt color="#4C8C74" size={40} />,
             },
           ],
         },
         ctaData: {
-        badgeText: "Free Magento Consultation",
-        title: "Ready to Build a Magento Store ",
-        highlightedTitle: "That Actually Scales?",
-        description:
-        "Tell us about your catalogue, your requirements, and your goals. We'll tell you exactly what's involved and what it'll cost, before you commit to anything.",
-        primaryAction: {
-          label: "Book a Free Strategy",
-          href: "/contact",
+          badgeText: "Free Magento Consultation",
+          title: "Ready to Build a Magento Store ",
+          highlightedTitle: "That Actually Scales?",
+          description:
+            "Tell us about your catalogue, your requirements, and your goals. We'll tell you exactly what's involved and what it'll cost, before you commit to anything.",
+          primaryAction: {
+            label: "Book a Free Strategy",
+            href: "/contact",
+          },
+          secondaryAction: {
+            label: "Call View Packages",
+            href: "/services",
+          },
+          trustItems: [],
         },
-        secondaryAction: {
-          label: "Call View Packages",
-          href: "/services",
-        },
-        trustItems: [
-        ],
-      },
         strategicCardData: [
           {
             title: "Custom Website Design",
@@ -3767,18 +4181,23 @@ A well-optimised WordPress site compounds over time, building authority, ranking
             ),
           },
         ],
-        processHeading: <>From Consultation to Live Site in Three Clear Steps</>,
-        processPara: (
-          <>
-          </>
+        processHeading: (
+          <>From Consultation to Live Site in Three Clear Steps</>
         ),
+        processPara: <></>,
         processCardData: [
           {
             image: "/Services/01.svg",
             heading: "Consultation, Strategy & Project Plan",
             paragraph: (
               <>
-                We start with a proper conversation, your business goals, your audience, your competitors, and what your current site is failing to deliver. From that, we build a detailed project plan: site structure, page goals, design direction, plugin requirements, SEO foundations, and CMS training needs. You review and approve the plan before design begins. No guesswork, no assumptions.
+                We start with a proper conversation, your business goals, your
+                audience, your competitors, and what your current site is
+                failing to deliver. From that, we build a detailed project plan:
+                site structure, page goals, design direction, plugin
+                requirements, SEO foundations, and CMS training needs. You
+                review and approve the plan before design begins. No guesswork,
+                no assumptions.
               </>
             ),
           },
@@ -3787,7 +4206,12 @@ A well-optimised WordPress site compounds over time, building authority, ranking
             heading: "Design, Prototype & Development",
             paragraph: (
               <>
-                Wireframes first, the site structure and layout, before any visual design. Then design mockups you review and approve. Then, development on a custom WordPress theme with clean code, proper plugin setup, and full mobile responsiveness. You get access to a staging site for review before anything goes live. Changes happen here, so launch day is smooth.
+                Wireframes first, the site structure and layout, before any
+                visual design. Then design mockups you review and approve. Then,
+                development on a custom WordPress theme with clean code, proper
+                plugin setup, and full mobile responsiveness. You get access to
+                a staging site for review before anything goes live. Changes
+                happen here, so launch day is smooth.
               </>
             ),
           },
@@ -3796,64 +4220,77 @@ A well-optimised WordPress site compounds over time, building authority, ranking
             heading: "Launch, Training & Ongoing Support",
             paragraph: (
               <>
-                Post-launch, we run full performance checks, verify SEO setup, confirm analytics, and handle any immediate fixes fast. We also provide CMS training so your team knows exactly how to manage your new WordPress site, adding pages, updating content, and managing blog posts, without needing us for every small change. Then we stay available for ongoing support.
+                Post-launch, we run full performance checks, verify SEO setup,
+                confirm analytics, and handle any immediate fixes fast. We also
+                provide CMS training so your team knows exactly how to manage
+                your new WordPress site, adding pages, updating content, and
+                managing blog posts, without needing us for every small change.
+                Then we stay available for ongoing support.
               </>
             ),
           },
         ],
         pricingCardData: [
-      {
-        title: "Basic Website Package",
-        price: "$229",
-        discountedFrom: "$499",
-        includes: [
-          "2 Custom Logo Design Concepts",
-          "1 Dedicated Designer",
-          "4 REVISIONS",
-          "48 to 72 hours TAT",
-          "100% Unique Design Guarantee",
-          "100% Satisfaction Guarantee",
-          "100% Ownership Rights",
-          "100% Money Back Guarantee",
-        ],
-      },
-      {
-        title: "Basic Website Package",
-        price: "$229",
-        discountedFrom: "$499",
-        includes: [
-          "5 Custom Logo Design Concepts",
-          "By 2 Designers",
-          "UNLIMITED Revisions",
-          "48 to 72 hours TAT",
-          "100% Unique Design Guarantee",
-          "100% Satisfaction Guarantee",
-          "100% Ownership Rights",
-          "100% Money Back Guarantee",
-        ],
-      },
-      {
-        title: "Basic Website Package",
-        price: "$229",
-        discountedFrom: "$499",
-        includes: [
-          "UNLIMITED Logo Design Concepts",
-          "By 4 Designers",
-          "UNLIMITED Revisions",
-          "Stationary Design (Business Card, Letterhead, Envelope)",
-          "48 to 72 hours TAT",
-          "FREE MS Word Letterhead",
-          "All Final Files Format (AI, PSD, EPS, PNG, GIF, jpeg, PDF)",
-        ],
-      },
+          {
+            title: "Basic Website Package",
+            price: "$229",
+            discountedFrom: "$499",
+            includes: [
+              "2 Custom Logo Design Concepts",
+              "1 Dedicated Designer",
+              "4 REVISIONS",
+              "48 to 72 hours TAT",
+              "100% Unique Design Guarantee",
+              "100% Satisfaction Guarantee",
+              "100% Ownership Rights",
+              "100% Money Back Guarantee",
+            ],
+          },
+          {
+            title: "Basic Website Package",
+            price: "$229",
+            discountedFrom: "$499",
+            includes: [
+              "5 Custom Logo Design Concepts",
+              "By 2 Designers",
+              "UNLIMITED Revisions",
+              "48 to 72 hours TAT",
+              "100% Unique Design Guarantee",
+              "100% Satisfaction Guarantee",
+              "100% Ownership Rights",
+              "100% Money Back Guarantee",
+            ],
+          },
+          {
+            title: "Basic Website Package",
+            price: "$229",
+            discountedFrom: "$499",
+            includes: [
+              "UNLIMITED Logo Design Concepts",
+              "By 4 Designers",
+              "UNLIMITED Revisions",
+              "Stationary Design (Business Card, Letterhead, Envelope)",
+              "48 to 72 hours TAT",
+              "FREE MS Word Letterhead",
+              "All Final Files Format (AI, PSD, EPS, PNG, GIF, jpeg, PDF)",
+            ],
+          },
         ],
         customplanData: {
           heading: "Why WordPress Stands Out",
           buttonText: "Book a consultation call to create your perfect plan",
           body: (
             <>
-              <span className="font-semibold">What a Properly Built WordPress Site Actually Delivers</span>
-              <p>Every WordPress site we build is engineered around your audience, goals, and the trust signals your visitors need before they pick up the phone or fill in a form. That's what makes your site unique and performs from one that just takes up digital space.</p>
+              <span className="font-semibold">
+                What a Properly Built WordPress Site Actually Delivers
+              </span>
+              <p>
+                Every WordPress site we build is engineered around your
+                audience, goals, and the trust signals your visitors need before
+                they pick up the phone or fill in a form. That's what makes your
+                site unique and performs from one that just takes up digital
+                space.
+              </p>
               <ul className="list-disc list-inside mt-2">
                 <li>Custom Design That Reflects Your Brand</li>
                 <li>Mobile-First, Fully Responsive</li>
@@ -3864,31 +4301,38 @@ A well-optimised WordPress site compounds over time, building authority, ranking
               </ul>
             </>
           ),
-          rightContent: <><h3 className="text-2xl text-white mt-3">Why Work With Us</h3>
-          <p className="text-sm"></p>
-          <ul className="list-disc list-inside mt-1 text-sm">
-            <li>Strategy Before Design</li>
-            <li>Built for Australian Audiences</li>
-            <li>One In-House Team Throughout</li>
-            <li>Conversion-First Thinking</li>
-            <li>CMS Training Included</li>
-            <li>No Lock-In, Full Ownership</li>
-          </ul></>,
+          rightContent: (
+            <>
+              <h3 className="text-2xl text-white mt-3">Why Work With Us</h3>
+              <p className="text-sm"></p>
+              <ul className="list-disc list-inside mt-1 text-sm">
+                <li>Strategy Before Design</li>
+                <li>Built for Australian Audiences</li>
+                <li>One In-House Team Throughout</li>
+                <li>Conversion-First Thinking</li>
+                <li>CMS Training Included</li>
+                <li>No Lock-In, Full Ownership</li>
+              </ul>
+            </>
+          ),
           miniTagData: <></>,
         },
         faqData: [
           {
-            question: "What's the difference between custom WordPress development and a theme?",
+            question:
+              "What's the difference between custom WordPress development and a theme?",
             answer:
               "A theme gives you a pre designed layout with limitations. Custom WordPress development is built specifically for your business, offering better performance, flexibility, and a unique design.",
           },
           {
-            question: "How much does custom WordPress development cost in Australia?",
+            question:
+              "How much does custom WordPress development cost in Australia?",
             answer:
               "Pricing depends on the scope. We provide a clear, detailed quote after a free strategy call, with no hidden costs.",
           },
           {
-            question: "How long does it take to build a custom WordPress website?",
+            question:
+              "How long does it take to build a custom WordPress website?",
             answer:
               "Most custom sites take a few weeks. More complex projects may take longer. Timelines are based on your actual requirements.",
           },
@@ -3932,12 +4376,24 @@ A well-optimised WordPress site compounds over time, building authority, ranking
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
         contactData: {
-        heading: (<>Let's Build Your WordPress Site</>),
-        body: (<><h3 className="text-2xl font-semibold">40% of the Internet Runs WordPress.<br />Make Sure Yours Runs It Well.</h3>
-        <p>Get in touch today, and one of our WordPress specialists will get back to you within one business day. No scripts, no pressure. Just a straight conversation about what your site needs to do.</p>
-        </>),
-        buttonText: "Book a Free Call",
-      },
+          heading: <>Let's Build Your WordPress Site</>,
+          body: (
+            <>
+              <h3 className="text-2xl font-semibold">
+                40% of the Internet Runs WordPress.
+                <br />
+                Make Sure Yours Runs It Well.
+              </h3>
+              <p>
+                Get in touch today, and one of our WordPress specialists will
+                get back to you within one business day. No scripts, no
+                pressure. Just a straight conversation about what your site
+                needs to do.
+              </p>
+            </>
+          ),
+          buttonText: "Book a Free Call",
+        },
       },
     ],
   },
@@ -3949,7 +4405,7 @@ A well-optimised WordPress site compounds over time, building authority, ranking
     // heading: "Web Development Services in Australia",
     serviceBodyData: [
       {
-        imageUrl: "/Services/Rectangle_52.webp",
+        imageUrl: "/services/Rectangle_52.webp",
         description: (
           <>
             <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -3960,48 +4416,69 @@ A well-optimised WordPress site compounds over time, building authority, ranking
               <li>Get Found Locally.</li>
               <li>Grow Faster.</li>
             </ul>
-            Most Australian businesses are not on Google’s top rank and are invisible to customers. It is not because their product is bad, but because their SEO is. We fix that. Our professional SEO agency works from the technical foundation to local search dominance, providing services that are built around one thing, and that is, getting your business in front of the people already looking for it. 
-<div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
-  <a
-    className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15"
-    href="/contact"
-  >
-    Get Your Free SEO Audit
-  </a>
-  <span
-    aria-hidden="true"
-    className="h-10 w-px bg-white/30 max-sm:h-px max-sm:w-full"
-  />
-  <a
-    className="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/10"
-    href="/services"
-  >
-    See What We Do
-  </a>
-</div>
+            Most Australian businesses are not on Google’s top rank and are
+            invisible to customers. It is not because their product is bad, but
+            because their SEO is. We fix that. Our professional SEO agency works
+            from the technical foundation to local search dominance, providing
+            services that are built around one thing, and that is, getting your
+            business in front of the people already looking for it.
+            <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
+              <a
+                className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15"
+                href="/contact"
+              >
+                Get Your Free SEO Audit
+              </a>
+              <span
+                aria-hidden="true"
+                className="h-10 w-px bg-white/30 max-sm:h-px max-sm:w-full"
+              />
+              <a
+                className="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/10"
+                href="/services"
+              >
+                See What We Do
+              </a>
+            </div>
           </>
         ),
       },
     ],
     whyChooseData: {
-      image: "/Services/Rectangle_52.webp",
+      image: "/services/Rectangle_52.webp",
       heading: "Why Aussie Digital Solution",
       paragraphs: [
         <React.Fragment key="why-aussie-branding">
-        <h3 className="text-2xl text-white">We've Seen What Bad SEO Does to a Business</h3>
-Wasted spend. Stalled growth. Rankings that never move. We've fixed the aftermath of bad SEO enough times to know exactly what separates the agencies that deliver from the ones that just send monthly reports and take the retainer.
-<h3 className="text-2xl text-white">We Know the Australian Market</h3>
-We're not applying a global playbook to an Australian audience. We understand how local buyers search, what Google prioritises in Australian results, and how to position your business in the specific market you're actually competing in.
-<br />
-<h3 className="text-2xl text-white">Strategy Comes Before Tactics</h3>
-We don't start writing content or building links until we understand your business properly. The strategy shapes everything. That's why our results hold up over time rather than spiking and disappearing.
-<br />
-<h3 className="text-2xl text-white">Full Transparency on What We're Doing</h3>
-You'll always know what we're working on, why, and what it's producing. No black box. No vague updates. Clear reporting, straight conversations, and real numbers.
-<br />
-<h3 className="text-2xl text-white">One Team, Start to Finish</h3>
-Your SEO is handled by our in-house team, not handed off to contractors or overseas. The people who built your strategy are the ones executing it and reporting back to you.
-</React.Fragment>,
+          <h3 className="text-2xl text-white">
+            We've Seen What Bad SEO Does to a Business
+          </h3>
+          Wasted spend. Stalled growth. Rankings that never move. We've fixed
+          the aftermath of bad SEO enough times to know exactly what separates
+          the agencies that deliver from the ones that just send monthly reports
+          and take the retainer.
+          <h3 className="text-2xl text-white">We Know the Australian Market</h3>
+          We're not applying a global playbook to an Australian audience. We
+          understand how local buyers search, what Google prioritises in
+          Australian results, and how to position your business in the specific
+          market you're actually competing in.
+          <br />
+          <h3 className="text-2xl text-white">Strategy Comes Before Tactics</h3>
+          We don't start writing content or building links until we understand
+          your business properly. The strategy shapes everything. That's why our
+          results hold up over time rather than spiking and disappearing.
+          <br />
+          <h3 className="text-2xl text-white">
+            Full Transparency on What We're Doing
+          </h3>
+          You'll always know what we're working on, why, and what it's
+          producing. No black box. No vague updates. Clear reporting, straight
+          conversations, and real numbers.
+          <br />
+          <h3 className="text-2xl text-white">One Team, Start to Finish</h3>
+          Your SEO is handled by our in-house team, not handed off to
+          contractors or overseas. The people who built your strategy are the
+          ones executing it and reporting back to you.
+        </React.Fragment>,
       ],
     },
     ctaData: {
@@ -4018,8 +4495,7 @@ Your SEO is handled by our in-house team, not handed off to contractors or overs
         label: "View All Services",
         href: "/services",
       },
-      trustItems: [
-      ],
+      trustItems: [],
     },
     strategicHeading: <div className="font-semibold">What We Do</div>,
     strategicHeadingText: (
@@ -4046,7 +4522,11 @@ Your SEO is handled by our in-house team, not handed off to contractors or overs
           "Jumping into SEO without a proper plan is how budgets get wasted. Before we do anything, we build a strategy around your business, your goals, your audience, your competitors, and where the real search opportunities are. Every decision we make from that point has a clear reason behind it.",
         desc: (
           <>
-            Jumping into SEO without a proper plan is how budgets get wasted. Before we do anything, we build a strategy around your business, your goals, your audience, your competitors, and where the real search opportunities are. Every decision we make from that point has a clear reason behind it.
+            Jumping into SEO without a proper plan is how budgets get wasted.
+            Before we do anything, we build a strategy around your business,
+            your goals, your audience, your competitors, and where the real
+            search opportunities are. Every decision we make from that point has
+            a clear reason behind it.
             <ul className="list-disc list-inside mt-1">
               <li>Competitor Analysis</li>
               <li>Keyword Research</li>
@@ -4103,43 +4583,159 @@ Your SEO is handled by our in-house team, not handed off to contractors or overs
         title: "Local Search Dominance",
         descText:
           "If your customers are searching for SEO services near them or in a specific suburb or city, local SEO is what gets you in front of them. Our process includes; optimisation of your Google Business Profile local citations, and providing a structure to your site so Google knows exactly where you operate and who you serve. For local businesses, this is the fastest path to more enquiries most of the time.",
-        desc: (<>If your customers are searching for SEO services near them or in a specific suburb or city, local SEO is what gets you in front of them. Our process includes; optimisation of your Google Business Profile local citations, and providing a structure to your site so Google knows exactly where you operate and who you serve. For local businesses, this is the fastest path to more enquiries most of the time. 
-        <ul className="list-disc list-inside mt-2">
-          <li>Local SEO</li>
-          <li>Google Maps</li>
-          <li>Citation Building</li>
-        </ul>
-</>),
+        desc: (
+          <>
+            If your customers are searching for SEO services near them or in a
+            specific suburb or city, local SEO is what gets you in front of
+            them. Our process includes; optimisation of your Google Business
+            Profile local citations, and providing a structure to your site so
+            Google knows exactly where you operate and who you serve. For local
+            businesses, this is the fastest path to more enquiries most of the
+            time.
+            <ul className="list-disc list-inside mt-2">
+              <li>Local SEO</li>
+              <li>Google Maps</li>
+              <li>Citation Building</li>
+            </ul>
+          </>
+        ),
         svg: (
-         <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z" stroke="#4C8C74" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path> </g></svg>
+          <svg
+            width="40px"
+            height="40px"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              {" "}
+              <path
+                d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z"
+                stroke="#4C8C74"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              ></path>{" "}
+            </g>
+          </svg>
         ),
       },
       {
         title: "Local Landing Pages",
         descText:
           "Ranking in one suburb is good. Ranking across every area you service is better. We build geo-targeted landing pages that are genuinely useful, not thin, copy-paste pages that Google ignores, but real pages with real content that rank for the locations that matter to your business.",
-        desc: (<>Ranking in one suburb is good. Ranking across every area you service is better. We build geo-targeted landing pages that are genuinely useful, not thin, copy-paste pages that Google ignores, but real pages with real content that rank for the locations that matter to your business.
-        <ul className="list-disc list-inside mt-2">
-          <li>Geo Pages</li>
-          <li>Location SEO</li>
-          <li>Service Areas</li>
-        </ul>
-</>),
+        desc: (
+          <>
+            Ranking in one suburb is good. Ranking across every area you service
+            is better. We build geo-targeted landing pages that are genuinely
+            useful, not thin, copy-paste pages that Google ignores, but real
+            pages with real content that rank for the locations that matter to
+            your business.
+            <ul className="list-disc list-inside mt-2">
+              <li>Geo Pages</li>
+              <li>Location SEO</li>
+              <li>Service Areas</li>
+            </ul>
+          </>
+        ),
         svg: (
-          <svg width="40px" height="40px" version="1.1" id="PAGE" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1800" enableBackground="new 0 0 1800 1800" fill="#000000"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="#4C8C74" d="M1720.335,5.563H85.245c-43.937,0-79.679,35.739-79.679,79.667v1635.1c0,43.928,35.743,79.67,79.679,79.67 h1635.09c43.927,0,79.665-35.742,79.665-79.67V85.23C1800,41.302,1764.262,5.563,1720.335,5.563z M85.245,68.575h1635.09 c9.182,0,16.653,7.473,16.653,16.655v195.532H68.578V85.23C68.578,76.048,76.055,68.575,85.245,68.575z M1720.335,1736.988H85.245 c-9.19,0-16.667-7.472-16.667-16.658V343.774h1668.41V1720.33C1736.988,1729.517,1729.517,1736.988,1720.335,1736.988z"></path> <path fill="#4C8C74" d="M1518.679,1150.928H333.948c-47.154,0-85.517,38.363-85.517,85.517v315.061 c0,47.152,38.363,85.516,85.517,85.516h1184.73c47.154,0,85.518-38.363,85.518-85.516v-315.061 C1604.196,1189.291,1565.833,1150.928,1518.679,1150.928z M1541.184,1551.505c0,12.403-10.096,22.504-22.505,22.504H333.948 c-12.409,0-22.504-10.101-22.504-22.504v-315.061c0-12.412,10.096-22.505,22.504-22.505h1184.73 c12.409,0,22.505,10.093,22.505,22.505V1551.505z"></path> <path fill="#4C8C74" d="M333.948,913.886h305.565c47.153,0,85.517-38.365,85.517-85.519V522.802 c0-47.154-38.363-85.516-85.517-85.516H333.948c-47.154,0-85.517,38.362-85.517,85.516v305.565 C248.432,875.521,286.794,913.886,333.948,913.886z M311.444,522.802c0-12.408,10.096-22.504,22.504-22.504h305.565 c12.408,0,22.505,10.096,22.505,22.504v305.565c0,12.408-10.097,22.505-22.505,22.505H333.948 c-12.409,0-22.504-10.097-22.504-22.505V522.802z"></path> <path fill="#4C8C74" d="M1572.689,996.396H279.938c-17.401,0-31.506,14.108-31.506,31.505c0,17.406,14.105,31.507,31.506,31.507 h1292.751c17.401,0,31.507-14.101,31.507-31.507C1604.196,1010.505,1590.091,996.396,1572.689,996.396z"></path> <path fill="#4C8C74" d="M1572.689,832.116H858.558c-17.402,0-31.507,14.105-31.507,31.507c0,17.401,14.105,31.505,31.507,31.505 h714.132c17.401,0,31.507-14.104,31.507-31.505C1604.196,846.222,1590.091,832.116,1572.689,832.116z"></path> <path fill="#4C8C74" d="M1572.689,643.081H858.558c-17.402,0-31.507,14.105-31.507,31.506c0,17.401,14.105,31.505,31.507,31.505 h714.132c17.401,0,31.507-14.104,31.507-31.505C1604.196,657.186,1590.091,643.081,1572.689,643.081z"></path> <path fill="#4C8C74" d="M1572.689,454.044H858.558c-17.402,0-31.507,14.105-31.507,31.507c0,17.401,14.105,31.505,31.507,31.505 h714.132c17.401,0,31.507-14.104,31.507-31.505C1604.196,468.15,1590.091,454.044,1572.689,454.044z"></path> <circle fill="#4C8C74" cx="204.913" cy="171.616" r="50.635"></circle> <circle fill="#4C8C74" cx="364.694" cy="171.616" r="50.635"></circle> <circle fill="#4C8C74" cx="524.474" cy="171.616" r="50.635"></circle> </g> </g></svg>
+          <svg
+            width="40px"
+            height="40px"
+            version="1.1"
+            id="PAGE"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1800 1800"
+            enableBackground="new 0 0 1800 1800"
+            fill="#000000"
+          >
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              {" "}
+              <g>
+                {" "}
+                <path
+                  fill="#4C8C74"
+                  d="M1720.335,5.563H85.245c-43.937,0-79.679,35.739-79.679,79.667v1635.1c0,43.928,35.743,79.67,79.679,79.67 h1635.09c43.927,0,79.665-35.742,79.665-79.67V85.23C1800,41.302,1764.262,5.563,1720.335,5.563z M85.245,68.575h1635.09 c9.182,0,16.653,7.473,16.653,16.655v195.532H68.578V85.23C68.578,76.048,76.055,68.575,85.245,68.575z M1720.335,1736.988H85.245 c-9.19,0-16.667-7.472-16.667-16.658V343.774h1668.41V1720.33C1736.988,1729.517,1729.517,1736.988,1720.335,1736.988z"
+                ></path>{" "}
+                <path
+                  fill="#4C8C74"
+                  d="M1518.679,1150.928H333.948c-47.154,0-85.517,38.363-85.517,85.517v315.061 c0,47.152,38.363,85.516,85.517,85.516h1184.73c47.154,0,85.518-38.363,85.518-85.516v-315.061 C1604.196,1189.291,1565.833,1150.928,1518.679,1150.928z M1541.184,1551.505c0,12.403-10.096,22.504-22.505,22.504H333.948 c-12.409,0-22.504-10.101-22.504-22.504v-315.061c0-12.412,10.096-22.505,22.504-22.505h1184.73 c12.409,0,22.505,10.093,22.505,22.505V1551.505z"
+                ></path>{" "}
+                <path
+                  fill="#4C8C74"
+                  d="M333.948,913.886h305.565c47.153,0,85.517-38.365,85.517-85.519V522.802 c0-47.154-38.363-85.516-85.517-85.516H333.948c-47.154,0-85.517,38.362-85.517,85.516v305.565 C248.432,875.521,286.794,913.886,333.948,913.886z M311.444,522.802c0-12.408,10.096-22.504,22.504-22.504h305.565 c12.408,0,22.505,10.096,22.505,22.504v305.565c0,12.408-10.097,22.505-22.505,22.505H333.948 c-12.409,0-22.504-10.097-22.504-22.505V522.802z"
+                ></path>{" "}
+                <path
+                  fill="#4C8C74"
+                  d="M1572.689,996.396H279.938c-17.401,0-31.506,14.108-31.506,31.505c0,17.406,14.105,31.507,31.506,31.507 h1292.751c17.401,0,31.507-14.101,31.507-31.507C1604.196,1010.505,1590.091,996.396,1572.689,996.396z"
+                ></path>{" "}
+                <path
+                  fill="#4C8C74"
+                  d="M1572.689,832.116H858.558c-17.402,0-31.507,14.105-31.507,31.507c0,17.401,14.105,31.505,31.507,31.505 h714.132c17.401,0,31.507-14.104,31.507-31.505C1604.196,846.222,1590.091,832.116,1572.689,832.116z"
+                ></path>{" "}
+                <path
+                  fill="#4C8C74"
+                  d="M1572.689,643.081H858.558c-17.402,0-31.507,14.105-31.507,31.506c0,17.401,14.105,31.505,31.507,31.505 h714.132c17.401,0,31.507-14.104,31.507-31.505C1604.196,657.186,1590.091,643.081,1572.689,643.081z"
+                ></path>{" "}
+                <path
+                  fill="#4C8C74"
+                  d="M1572.689,454.044H858.558c-17.402,0-31.507,14.105-31.507,31.507c0,17.401,14.105,31.505,31.507,31.505 h714.132c17.401,0,31.507-14.104,31.507-31.505C1604.196,468.15,1590.091,454.044,1572.689,454.044z"
+                ></path>{" "}
+                <circle
+                  fill="#4C8C74"
+                  cx="204.913"
+                  cy="171.616"
+                  r="50.635"
+                ></circle>{" "}
+                <circle
+                  fill="#4C8C74"
+                  cx="364.694"
+                  cy="171.616"
+                  r="50.635"
+                ></circle>{" "}
+                <circle
+                  fill="#4C8C74"
+                  cx="524.474"
+                  cy="171.616"
+                  r="50.635"
+                ></circle>{" "}
+              </g>{" "}
+            </g>
+          </svg>
         ),
       },
       {
         title: "On-Page & Off-Page SEO",
         descText:
           "On-page is what appears on your website, including content, structure, metadata, and internal linking. On the other side, Off-page is the authority you build outside of it, such as backlinks, mentions, and brand signals. Both has graeteast improratnce and have to be done properly for higher visibility. At Aussie Digital Solutions, the team of exeors manage the complete picture, so nothing gets left unattended. ",
-        desc: (<>On-page is what appears on your website, including content, structure, metadata, and internal linking. On the other side, Off-page is the authority you build outside of it, such as backlinks, mentions, and brand signals. Both has graeteast improratnce and have to be done properly for higher visibility. At Aussie Digital Solutions, the team of exeors manage the complete picture, so nothing gets left unattended. 
-        <ul className="list-inside list-disc mt-2">
-          <li>On-Page SEO</li>
-          <li>Off-Page SEO</li>
-          <li>Content Optimisation</li>
-        </ul>
-</>),
+        desc: (
+          <>
+            On-page is what appears on your website, including content,
+            structure, metadata, and internal linking. On the other side,
+            Off-page is the authority you build outside of it, such as
+            backlinks, mentions, and brand signals. Both has graeteast
+            improratnce and have to be done properly for higher visibility. At
+            Aussie Digital Solutions, the team of exeors manage the complete
+            picture, so nothing gets left unattended.
+            <ul className="list-inside list-disc mt-2">
+              <li>On-Page SEO</li>
+              <li>Off-Page SEO</li>
+              <li>Content Optimisation</li>
+            </ul>
+          </>
+        ),
         svg: (
           <svg
             fill="#4C8C74"
@@ -4207,73 +4803,205 @@ Your SEO is handled by our in-house team, not handed off to contractors or overs
         title: "Link Building",
         descText:
           "Not all links plays same role. A handful of genuinely relevant, high-authority backlinks will play and bring a much higher success rate for your rankings than hundreds of low-quality ones. We build links that actually move the needle, through content, outreach, and relationships with real sites in your industry and geography.",
-        desc: (<>Not all links plays same role. A handful of genuinely relevant, high-authority backlinks will play and bring a much higher success rate for your rankings than hundreds of low-quality ones. We build links that actually move the needle, through content, outreach, and relationships with real sites in your industry and geography.
-        <ul className="list-inside list-disc mt-2">
-          <li>Authority Links</li>
-          <li>Outreach</li>
-          <li>Digital PR</li>
-        </ul>
-</>),
+        desc: (
+          <>
+            Not all links plays same role. A handful of genuinely relevant,
+            high-authority backlinks will play and bring a much higher success
+            rate for your rankings than hundreds of low-quality ones. We build
+            links that actually move the needle, through content, outreach, and
+            relationships with real sites in your industry and geography.
+            <ul className="list-inside list-disc mt-2">
+              <li>Authority Links</li>
+              <li>Outreach</li>
+              <li>Digital PR</li>
+            </ul>
+          </>
+        ),
         svg: (
-          <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#4C8C74"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9.16488 17.6505C8.92513 17.8743 8.73958 18.0241 8.54996 18.1336C7.62175 18.6695 6.47816 18.6695 5.54996 18.1336C5.20791 17.9361 4.87912 17.6073 4.22153 16.9498C3.56394 16.2922 3.23514 15.9634 3.03767 15.6213C2.50177 14.6931 2.50177 13.5495 3.03767 12.6213C3.23514 12.2793 3.56394 11.9505 4.22153 11.2929L7.04996 8.46448C7.70755 7.80689 8.03634 7.47809 8.37838 7.28062C9.30659 6.74472 10.4502 6.74472 11.3784 7.28061C11.7204 7.47809 12.0492 7.80689 12.7068 8.46448C13.3644 9.12207 13.6932 9.45086 13.8907 9.7929C14.4266 10.7211 14.4266 11.8647 13.8907 12.7929C13.7812 12.9825 13.6314 13.1681 13.4075 13.4078M10.5919 10.5922C10.368 10.8319 10.2182 11.0175 10.1087 11.2071C9.57284 12.1353 9.57284 13.2789 10.1087 14.2071C10.3062 14.5492 10.635 14.878 11.2926 15.5355C11.9502 16.1931 12.279 16.5219 12.621 16.7194C13.5492 17.2553 14.6928 17.2553 15.621 16.7194C15.9631 16.5219 16.2919 16.1931 16.9495 15.5355L19.7779 12.7071C20.4355 12.0495 20.7643 11.7207 20.9617 11.3787C21.4976 10.4505 21.4976 9.30689 20.9617 8.37869C20.7643 8.03665 20.4355 7.70785 19.7779 7.05026C19.1203 6.39267 18.7915 6.06388 18.4495 5.8664C17.5212 5.3305 16.3777 5.3305 15.4495 5.8664C15.2598 5.97588 15.0743 6.12571 14.8345 6.34955" stroke="#4C8C74" strokeWidth="2" strokeLinecap="round"></path> </g></svg>
+          <svg
+            width="40px"
+            height="40px"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            stroke="#4C8C74"
+          >
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              {" "}
+              <path
+                d="M9.16488 17.6505C8.92513 17.8743 8.73958 18.0241 8.54996 18.1336C7.62175 18.6695 6.47816 18.6695 5.54996 18.1336C5.20791 17.9361 4.87912 17.6073 4.22153 16.9498C3.56394 16.2922 3.23514 15.9634 3.03767 15.6213C2.50177 14.6931 2.50177 13.5495 3.03767 12.6213C3.23514 12.2793 3.56394 11.9505 4.22153 11.2929L7.04996 8.46448C7.70755 7.80689 8.03634 7.47809 8.37838 7.28062C9.30659 6.74472 10.4502 6.74472 11.3784 7.28061C11.7204 7.47809 12.0492 7.80689 12.7068 8.46448C13.3644 9.12207 13.6932 9.45086 13.8907 9.7929C14.4266 10.7211 14.4266 11.8647 13.8907 12.7929C13.7812 12.9825 13.6314 13.1681 13.4075 13.4078M10.5919 10.5922C10.368 10.8319 10.2182 11.0175 10.1087 11.2071C9.57284 12.1353 9.57284 13.2789 10.1087 14.2071C10.3062 14.5492 10.635 14.878 11.2926 15.5355C11.9502 16.1931 12.279 16.5219 12.621 16.7194C13.5492 17.2553 14.6928 17.2553 15.621 16.7194C15.9631 16.5219 16.2919 16.1931 16.9495 15.5355L19.7779 12.7071C20.4355 12.0495 20.7643 11.7207 20.9617 11.3787C21.4976 10.4505 21.4976 9.30689 20.9617 8.37869C20.7643 8.03665 20.4355 7.70785 19.7779 7.05026C19.1203 6.39267 18.7915 6.06388 18.4495 5.8664C17.5212 5.3305 16.3777 5.3305 15.4495 5.8664C15.2598 5.97588 15.0743 6.12571 14.8345 6.34955"
+                stroke="#4C8C74"
+                strokeWidth="2"
+                strokeLinecap="round"
+              ></path>{" "}
+            </g>
+          </svg>
         ),
       },
       {
         title: "Keyword Architecture",
         descText:
           "Which keywords are suitable for which pages, whether long tail or short keywords are more visible, and why, is a question most sites never answer properly. We build a structured keyword architecture across your entire site so every page targets the right terms, content doesn't compete against itself, and Google understands exactly what each page is about, through organic keyword integration.",
-        desc: (<>Which keywords are suitable for which pages, whether long tail or short keywords are more visible, and why, is a question most sites never answer properly. We build a structured keyword architecture across your entire site so every page targets the right terms, content doesn't compete against itself, and Google understands exactly what each page is about, through organic keyword integration.
-        <ul className="list-disc list-inside mt-2">
-          <li>Keyword Mapping</li>
-          <li>Silo Structure</li>
-          <li>Intent Targeting</li>
-        </ul>
-</>),
+        desc: (
+          <>
+            Which keywords are suitable for which pages, whether long tail or
+            short keywords are more visible, and why, is a question most sites
+            never answer properly. We build a structured keyword architecture
+            across your entire site so every page targets the right terms,
+            content doesn't compete against itself, and Google understands
+            exactly what each page is about, through organic keyword
+            integration.
+            <ul className="list-disc list-inside mt-2">
+              <li>Keyword Mapping</li>
+              <li>Silo Structure</li>
+              <li>Intent Targeting</li>
+            </ul>
+          </>
+        ),
         svg: (
-          <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M10 14.0505C9.36474 13.4022 8.47934 13 7.5 13C5.567 13 4 14.567 4 16.5C4 18.433 5.567 20 7.5 20C9.433 20 11 18.433 11 16.5C11 15.5463 10.6186 14.6818 10 14.0505ZM10 14.0505L15.0316 9.01894M18.5 5.5L17.2689 6.75631M15.0316 9.01894L16.0379 8.01263L17.2689 6.75631M15.0316 9.01894L17.0126 11M17.2689 6.75631L20.0126 9.5" stroke="#4C8C74" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path> </g></svg>
+          <svg
+            width="40px"
+            height="40px"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              {" "}
+              <path
+                d="M10 14.0505C9.36474 13.4022 8.47934 13 7.5 13C5.567 13 4 14.567 4 16.5C4 18.433 5.567 20 7.5 20C9.433 20 11 18.433 11 16.5C11 15.5463 10.6186 14.6818 10 14.0505ZM10 14.0505L15.0316 9.01894M18.5 5.5L17.2689 6.75631M15.0316 9.01894L16.0379 8.01263L17.2689 6.75631M15.0316 9.01894L17.0126 11M17.2689 6.75631L20.0126 9.5"
+                stroke="#4C8C74"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              ></path>{" "}
+            </g>
+          </svg>
         ),
       },
       {
         title: "Technical SEO",
         descText:
           "If your site has crawl issues, slow load times, broken links, or poor Core Web Vitals scores, your rankings are being held back, no matter how good your content is. We run a full technical audit and fix what's actually causing the problems, not just flag them in a report and leave you to it.it's done, you've got a brand that's ready to compete and built to hold up over time.",
-        desc: (<>If your site has crawl issues, slow load times, broken links, or poor Core Web Vitals scores, your rankings are being held back, no matter how good your content is. We run a full technical audit and fix what's actually causing the problems, not just flag them in a report and leave you to it.it's done, you've got a brand that's ready to compete and built to hold up over time.
-        <ul className="mt-2 list-dissc list-inside">
-          <li>Site Audit</li>
-          <li>Core Web Vitals</li>
-          <li>Crawlability</li>
-        </ul>
-</>),
+        desc: (
+          <>
+            If your site has crawl issues, slow load times, broken links, or
+            poor Core Web Vitals scores, your rankings are being held back, no
+            matter how good your content is. We run a full technical audit and
+            fix what's actually causing the problems, not just flag them in a
+            report and leave you to it.it's done, you've got a brand that's
+            ready to compete and built to hold up over time.
+            <ul className="mt-2 list-dissc list-inside">
+              <li>Site Audit</li>
+              <li>Core Web Vitals</li>
+              <li>Crawlability</li>
+            </ul>
+          </>
+        ),
         svg: (
-          <svg fill="#4C8C74" height="40px" width="40px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 392 392" xmlSpace="preserve" stroke="#4C8C74"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M142.311,89.495c2.175,4.469,0.412,9.856-4.058,12.031C92.025,124.025,63.5,169.919,63.5,221.298v36.332 c0,4.971-4.415,9.371-9.386,9.371H35.354C20.045,267,7.5,254.176,7.5,238.869v-41.042c0-12.095,7.786-22.717,19.325-26.432 c4.729-1.522,9.836,1.078,11.359,5.809c1.522,4.731-1.101,9.802-5.832,11.325c-4.008,1.291-6.852,5.114-6.852,9.298v41.042 c0,5.382,4.471,10.131,9.854,10.131H45.5v-27.702c0-28.889,7.988-56.972,23.464-81.214c15.06-23.589,36.102-42.519,61.219-54.743 C134.655,83.166,140.135,85.025,142.311,89.495z M384.5,197.827v41.042c0,15.307-12.045,28.131-27.353,28.131h-16.621 c-5.46,17-14.122,33.477-25.788,48.188c-19.169,24.173-45.546,41.749-74.88,50.601c-1.319,14.807-13.792,26.21-28.933,26.21h-29.35 c-16.017,0-29.047-12.982-29.047-28.999c0-16.02,13.03-29.001,29.047-29.001h29.35c10.542,0,19.791,5.837,24.882,14.264 c55.474-17.165,93.579-68.2,93.579-126.966c0-13.307-1.934-26.329-5.761-38.862c-17.421,13.779-39.419,22.015-63.304,22.015 c-49.121,0-90.261-34.832-100.021-81.092c-0.021-0.089-0.042-0.179-0.061-0.27c-0.612-2.944-1.094-5.926-1.443-8.929 c-0.457-3.915-0.691-7.892-0.691-11.927c0-17.125,4.234-33.282,11.708-47.476c0.099-0.226,0.206-0.451,0.322-0.669 c14.619-27.331,40.46-46.183,70.106-52.1C246.594,0.718,253.152,0,259.863,0c0.021,0,0.042,0,0.064,0c0.027,0,0.058,0,0.085,0 c0.024,0,0.053,0,0.075,0c0.027,0,0.052,0,0.079,0c0.025,0,0.059,0,0.083,0c0.047,0,0.098,0,0.145,0c0.024,0,0.058,0,0.083,0 c0.03,0,0.052,0,0.079,0c0.022,0,0.052,0,0.075,0c0.027,0,0.057,0,0.086,0c0.02,0,0.042,0,0.063,0c6.671,0,13.19,0.71,19.504,1.965 c29.694,5.891,55.586,24.762,70.223,52.128c0.115,0.215,0.221,0.436,0.317,0.658c7.478,14.196,11.714,30.359,11.714,47.488 c0,4.245-0.26,8.432-0.765,12.543c-0.343,2.795-0.799,5.583-1.368,8.327c-0.021,0.103-0.045,0.228-0.069,0.33 c-3.598,17.026-11.447,32.549-22.38,45.31c6.26,16.819,9.43,34.594,9.43,52.734c0,9.278-0.819,18.517-2.434,27.517h12.194 c5.383,0,9.353-4.749,9.353-10.131v-41.042c0-4.185-2.645-8.008-6.653-9.298c-4.73-1.523-7.178-6.594-5.654-11.325 c1.522-4.731,6.491-7.331,11.223-5.809C376.953,175.109,384.5,185.732,384.5,197.827z M221.974,363.146 c0-0.734-0.072-1.258-0.209-1.952c-0.024-0.106-0.047-0.309-0.067-0.415c-1.123-4.912-5.526-8.779-10.771-8.779h-29.35 c-6.091,0-11.047,4.906-11.047,10.998c0,6.095,4.956,11.002,11.047,11.002h29.35C217.018,374,221.974,369.238,221.974,363.146z M304.605,78.207c0.774,7.773,1.174,15.829,1.174,24.027c0,8.349-0.414,16.551-1.217,24.457 c13.817-2.665,26.936-6.598,39.018-11.732c0.292-1.923,0.52-3.868,0.68-5.831c0.186-2.29,0.279-4.592,0.279-6.894 c0-11.559-2.339-22.577-6.571-32.613C327.375,73.27,316.185,76.144,304.605,78.207z M290.156,23.474 c1.535,2.933,2.981,6.125,4.327,9.567c3.171,8.109,5.723,17.347,7.593,27.336c9.328-1.689,18.365-3.948,26.982-6.754 C319.444,40.067,305.928,29.467,290.156,23.474z M236.402,62.875c15.713,1.575,32.129,1.576,47.84,0 c-1.641-8.538-3.831-16.396-6.522-23.278c-6.229-15.929-13.266-21.581-17.397-21.581s-11.168,5.652-17.397,21.581 C240.233,46.479,238.043,54.337,236.402,62.875z M177.167,114.958c12.081,5.134,25.101,9.067,38.918,11.732 c-0.803-7.905-1.214-16.108-1.214-24.457c0-8.198,0.406-16.254,1.18-24.027c-11.579-2.063-22.756-4.937-33.35-8.586 c-4.229,10.034-6.545,21.057-6.545,32.613c0,1.899,0.114,3.797,0.24,5.688c0.001,0.011,0.104,0.022,0.104,0.034 c0,0.005,0,0.012,0,0.018C176.5,110.331,176.817,112.656,177.167,114.958z M230.488,180.993c-1.535-2.933-2.98-6.125-4.327-9.567 c-3.025-7.736-5.486-16.5-7.33-25.963c-12.294-2.036-24.148-4.986-35.367-8.81C192.6,156.971,209.561,173.041,230.488,180.993z M230.488,23.474c-15.771,5.993-29.287,16.594-38.902,30.15c8.617,2.806,17.654,5.064,26.983,6.753 c1.869-9.99,4.421-19.228,7.592-27.336C227.508,29.599,228.953,26.407,230.488,23.474z M282.915,147.84 c-14.853,1.294-30.331,1.294-45.186,0c1.436,6.143,3.174,11.862,5.195,17.03c6.229,15.929,13.266,21.581,17.397,21.581 s11.168-5.652,17.397-21.581C279.741,159.702,281.479,153.983,282.915,147.84z M287.779,102.233c0-7.365-0.342-14.581-1.007-21.526 c-17.387,1.797-35.514,1.797-52.9,0c-0.665,6.945-1.007,14.162-1.007,21.526c0,9.397,0.557,18.55,1.63,27.209 c8.438,0.909,17.071,1.371,25.827,1.371s17.389-0.461,25.827-1.371C287.223,120.784,287.779,111.631,287.779,102.233z M337.182,136.653c-11.222,3.825-23.072,6.774-35.368,8.81c-1.844,9.463-4.305,18.228-7.33,25.963 c-1.346,3.442-2.792,6.634-4.327,9.567C311.084,173.041,328.046,156.971,337.182,136.653z"></path> </g></svg>
+          <svg
+            fill="#4C8C74"
+            height="40px"
+            width="40px"
+            version="1.1"
+            id="Capa_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 392 392"
+            xmlSpace="preserve"
+            stroke="#4C8C74"
+          >
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              {" "}
+              <path d="M142.311,89.495c2.175,4.469,0.412,9.856-4.058,12.031C92.025,124.025,63.5,169.919,63.5,221.298v36.332 c0,4.971-4.415,9.371-9.386,9.371H35.354C20.045,267,7.5,254.176,7.5,238.869v-41.042c0-12.095,7.786-22.717,19.325-26.432 c4.729-1.522,9.836,1.078,11.359,5.809c1.522,4.731-1.101,9.802-5.832,11.325c-4.008,1.291-6.852,5.114-6.852,9.298v41.042 c0,5.382,4.471,10.131,9.854,10.131H45.5v-27.702c0-28.889,7.988-56.972,23.464-81.214c15.06-23.589,36.102-42.519,61.219-54.743 C134.655,83.166,140.135,85.025,142.311,89.495z M384.5,197.827v41.042c0,15.307-12.045,28.131-27.353,28.131h-16.621 c-5.46,17-14.122,33.477-25.788,48.188c-19.169,24.173-45.546,41.749-74.88,50.601c-1.319,14.807-13.792,26.21-28.933,26.21h-29.35 c-16.017,0-29.047-12.982-29.047-28.999c0-16.02,13.03-29.001,29.047-29.001h29.35c10.542,0,19.791,5.837,24.882,14.264 c55.474-17.165,93.579-68.2,93.579-126.966c0-13.307-1.934-26.329-5.761-38.862c-17.421,13.779-39.419,22.015-63.304,22.015 c-49.121,0-90.261-34.832-100.021-81.092c-0.021-0.089-0.042-0.179-0.061-0.27c-0.612-2.944-1.094-5.926-1.443-8.929 c-0.457-3.915-0.691-7.892-0.691-11.927c0-17.125,4.234-33.282,11.708-47.476c0.099-0.226,0.206-0.451,0.322-0.669 c14.619-27.331,40.46-46.183,70.106-52.1C246.594,0.718,253.152,0,259.863,0c0.021,0,0.042,0,0.064,0c0.027,0,0.058,0,0.085,0 c0.024,0,0.053,0,0.075,0c0.027,0,0.052,0,0.079,0c0.025,0,0.059,0,0.083,0c0.047,0,0.098,0,0.145,0c0.024,0,0.058,0,0.083,0 c0.03,0,0.052,0,0.079,0c0.022,0,0.052,0,0.075,0c0.027,0,0.057,0,0.086,0c0.02,0,0.042,0,0.063,0c6.671,0,13.19,0.71,19.504,1.965 c29.694,5.891,55.586,24.762,70.223,52.128c0.115,0.215,0.221,0.436,0.317,0.658c7.478,14.196,11.714,30.359,11.714,47.488 c0,4.245-0.26,8.432-0.765,12.543c-0.343,2.795-0.799,5.583-1.368,8.327c-0.021,0.103-0.045,0.228-0.069,0.33 c-3.598,17.026-11.447,32.549-22.38,45.31c6.26,16.819,9.43,34.594,9.43,52.734c0,9.278-0.819,18.517-2.434,27.517h12.194 c5.383,0,9.353-4.749,9.353-10.131v-41.042c0-4.185-2.645-8.008-6.653-9.298c-4.73-1.523-7.178-6.594-5.654-11.325 c1.522-4.731,6.491-7.331,11.223-5.809C376.953,175.109,384.5,185.732,384.5,197.827z M221.974,363.146 c0-0.734-0.072-1.258-0.209-1.952c-0.024-0.106-0.047-0.309-0.067-0.415c-1.123-4.912-5.526-8.779-10.771-8.779h-29.35 c-6.091,0-11.047,4.906-11.047,10.998c0,6.095,4.956,11.002,11.047,11.002h29.35C217.018,374,221.974,369.238,221.974,363.146z M304.605,78.207c0.774,7.773,1.174,15.829,1.174,24.027c0,8.349-0.414,16.551-1.217,24.457 c13.817-2.665,26.936-6.598,39.018-11.732c0.292-1.923,0.52-3.868,0.68-5.831c0.186-2.29,0.279-4.592,0.279-6.894 c0-11.559-2.339-22.577-6.571-32.613C327.375,73.27,316.185,76.144,304.605,78.207z M290.156,23.474 c1.535,2.933,2.981,6.125,4.327,9.567c3.171,8.109,5.723,17.347,7.593,27.336c9.328-1.689,18.365-3.948,26.982-6.754 C319.444,40.067,305.928,29.467,290.156,23.474z M236.402,62.875c15.713,1.575,32.129,1.576,47.84,0 c-1.641-8.538-3.831-16.396-6.522-23.278c-6.229-15.929-13.266-21.581-17.397-21.581s-11.168,5.652-17.397,21.581 C240.233,46.479,238.043,54.337,236.402,62.875z M177.167,114.958c12.081,5.134,25.101,9.067,38.918,11.732 c-0.803-7.905-1.214-16.108-1.214-24.457c0-8.198,0.406-16.254,1.18-24.027c-11.579-2.063-22.756-4.937-33.35-8.586 c-4.229,10.034-6.545,21.057-6.545,32.613c0,1.899,0.114,3.797,0.24,5.688c0.001,0.011,0.104,0.022,0.104,0.034 c0,0.005,0,0.012,0,0.018C176.5,110.331,176.817,112.656,177.167,114.958z M230.488,180.993c-1.535-2.933-2.98-6.125-4.327-9.567 c-3.025-7.736-5.486-16.5-7.33-25.963c-12.294-2.036-24.148-4.986-35.367-8.81C192.6,156.971,209.561,173.041,230.488,180.993z M230.488,23.474c-15.771,5.993-29.287,16.594-38.902,30.15c8.617,2.806,17.654,5.064,26.983,6.753 c1.869-9.99,4.421-19.228,7.592-27.336C227.508,29.599,228.953,26.407,230.488,23.474z M282.915,147.84 c-14.853,1.294-30.331,1.294-45.186,0c1.436,6.143,3.174,11.862,5.195,17.03c6.229,15.929,13.266,21.581,17.397,21.581 s11.168-5.652,17.397-21.581C279.741,159.702,281.479,153.983,282.915,147.84z M287.779,102.233c0-7.365-0.342-14.581-1.007-21.526 c-17.387,1.797-35.514,1.797-52.9,0c-0.665,6.945-1.007,14.162-1.007,21.526c0,9.397,0.557,18.55,1.63,27.209 c8.438,0.909,17.071,1.371,25.827,1.371s17.389-0.461,25.827-1.371C287.223,120.784,287.779,111.631,287.779,102.233z M337.182,136.653c-11.222,3.825-23.072,6.774-35.368,8.81c-1.844,9.463-4.305,18.228-7.33,25.963 c-1.346,3.442-2.792,6.634-4.327,9.567C311.084,173.041,328.046,156.971,337.182,136.653z"></path>{" "}
+            </g>
+          </svg>
         ),
       },
       {
         title: "eCommerce SEO",
         descText:
           "eCommerce SEO has its own set of challenges, including product page optimisation, category structure, duplicate content, faceted navigation, and schema markup. We've worked across Shopify, WooCommerce, Magento, and custom platforms. We know what it takes to get product pages ranking and turning search traffic into sales.",
-        desc: (<>eCommerce SEO has its own set of challenges, including product page optimisation, category structure, duplicate content, faceted navigation, and schema markup. We've worked across Shopify, WooCommerce, Magento, and custom platforms. We know what it takes to get product pages ranking and turning search traffic into sales.
-<ul className="mt-2 list-inside list-disc">
-  <li>Product Page SEO</li>
-  <li>Shopify SEO</li>
-  <li>WooCommerce SEO</li>
-</ul>
-</>),
+        desc: (
+          <>
+            eCommerce SEO has its own set of challenges, including product page
+            optimisation, category structure, duplicate content, faceted
+            navigation, and schema markup. We've worked across Shopify,
+            WooCommerce, Magento, and custom platforms. We know what it takes to
+            get product pages ranking and turning search traffic into sales.
+            <ul className="mt-2 list-inside list-disc">
+              <li>Product Page SEO</li>
+              <li>Shopify SEO</li>
+              <li>WooCommerce SEO</li>
+            </ul>
+          </>
+        ),
         svg: (
-          <svg fill="#4C8C74" width="40px" height="40px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <g data-name="12 site" id="_12_site"> <path d="M17.5,9.08a2,2,0,1,1-2-2.03A2.021,2.021,0,0,1,17.5,9.08Z"></path> <path d="M11.5,9.08a2,2,0,1,1-2-2.03A2.021,2.021,0,0,1,11.5,9.08Z"></path> <path d="M23.5,9.08a2,2,0,1,1-2-2.03A2.021,2.021,0,0,1,23.5,9.08Z"></path> <path d="M58.5,3.5H5.5a2.006,2.006,0,0,0-2,2v53a2.006,2.006,0,0,0,2,2h53a2.006,2.006,0,0,0,2-2V5.5A2.006,2.006,0,0,0,58.5,3.5Zm0,55H5.5V14.67h53Zm0-45.83H5.5V5.5h53Z"></path> <path d="M56.21,9.91a1,1,0,0,1-.01,1.41.96.96,0,0,1-.7.29.976.976,0,0,1-.71-.3l-.79-.8-.79.8a.976.976,0,0,1-.71.3.96.96,0,0,1-.7-.29,1,1,0,0,1-.01-1.41l.81-.83-.81-.82a1.008,1.008,0,0,1,.01-1.42,1,1,0,0,1,1.41.01l.79.81.79-.81a1,1,0,0,1,1.41-.01,1.008,1.008,0,0,1,.01,1.42l-.81.82Z"></path> <path d="M49.5,9.08a1,1,0,0,1-1,1h-4a1,1,0,0,1,0-2h4A1,1,0,0,1,49.5,9.08Z"></path> <path d="M20.15,42.89l3.63-2.09H41.45A2.889,2.889,0,0,0,44,39.24l5.67-10.71a3.089,3.089,0,0,0-.22-3.22l-.72-1.02a2.906,2.906,0,0,0-2.34-1.22h-.01l-23.57.06-.15-1.54a3.084,3.084,0,0,0-3.03-2.81H13.98a1,1,0,0,0,0,2h5.65a1.09,1.09,0,0,1,1.04,1.02l1.78,17.46-3.37,1.95a3.158,3.158,0,0,0-1.34,2.6v.28a3.113,3.113,0,0,0,2.83,3.13,4.653,4.653,0,0,0-.78,2.59,4.408,4.408,0,1,0,8.81,0,4.684,4.684,0,0,0-.77-2.57H36.9a4.6,4.6,0,0,0-.77,2.57,4.408,4.408,0,1,0,8.81,0,4.684,4.684,0,0,0-.77-2.57h1.81a1,1,0,0,0,0-2H20.79a1.107,1.107,0,0,1-1.05-1.15v-.28A1.211,1.211,0,0,1,20.15,42.89ZM42.24,38.3a.915.915,0,0,1-.79.5H24.41L23.38,28.66l23.96-.01Zm4.14-13.23h.01a.87.87,0,0,1,.71.38l.73,1.02c.03.05.06.11.09.17l-24.75.02-.15-1.53ZM40.53,47.24a2.581,2.581,0,1,1-2.4,2.57A2.494,2.494,0,0,1,40.53,47.24Zm-16.34,0a2.581,2.581,0,1,1-2.4,2.57A2.494,2.494,0,0,1,24.19,47.24Z"></path> </g> </g></svg>
+          <svg
+            fill="#4C8C74"
+            width="40px"
+            height="40px"
+            viewBox="0 0 64 64"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              {" "}
+              <g data-name="12 site" id="_12_site">
+                {" "}
+                <path d="M17.5,9.08a2,2,0,1,1-2-2.03A2.021,2.021,0,0,1,17.5,9.08Z"></path>{" "}
+                <path d="M11.5,9.08a2,2,0,1,1-2-2.03A2.021,2.021,0,0,1,11.5,9.08Z"></path>{" "}
+                <path d="M23.5,9.08a2,2,0,1,1-2-2.03A2.021,2.021,0,0,1,23.5,9.08Z"></path>{" "}
+                <path d="M58.5,3.5H5.5a2.006,2.006,0,0,0-2,2v53a2.006,2.006,0,0,0,2,2h53a2.006,2.006,0,0,0,2-2V5.5A2.006,2.006,0,0,0,58.5,3.5Zm0,55H5.5V14.67h53Zm0-45.83H5.5V5.5h53Z"></path>{" "}
+                <path d="M56.21,9.91a1,1,0,0,1-.01,1.41.96.96,0,0,1-.7.29.976.976,0,0,1-.71-.3l-.79-.8-.79.8a.976.976,0,0,1-.71.3.96.96,0,0,1-.7-.29,1,1,0,0,1-.01-1.41l.81-.83-.81-.82a1.008,1.008,0,0,1,.01-1.42,1,1,0,0,1,1.41.01l.79.81.79-.81a1,1,0,0,1,1.41-.01,1.008,1.008,0,0,1,.01,1.42l-.81.82Z"></path>{" "}
+                <path d="M49.5,9.08a1,1,0,0,1-1,1h-4a1,1,0,0,1,0-2h4A1,1,0,0,1,49.5,9.08Z"></path>{" "}
+                <path d="M20.15,42.89l3.63-2.09H41.45A2.889,2.889,0,0,0,44,39.24l5.67-10.71a3.089,3.089,0,0,0-.22-3.22l-.72-1.02a2.906,2.906,0,0,0-2.34-1.22h-.01l-23.57.06-.15-1.54a3.084,3.084,0,0,0-3.03-2.81H13.98a1,1,0,0,0,0,2h5.65a1.09,1.09,0,0,1,1.04,1.02l1.78,17.46-3.37,1.95a3.158,3.158,0,0,0-1.34,2.6v.28a3.113,3.113,0,0,0,2.83,3.13,4.653,4.653,0,0,0-.78,2.59,4.408,4.408,0,1,0,8.81,0,4.684,4.684,0,0,0-.77-2.57H36.9a4.6,4.6,0,0,0-.77,2.57,4.408,4.408,0,1,0,8.81,0,4.684,4.684,0,0,0-.77-2.57h1.81a1,1,0,0,0,0-2H20.79a1.107,1.107,0,0,1-1.05-1.15v-.28A1.211,1.211,0,0,1,20.15,42.89ZM42.24,38.3a.915.915,0,0,1-.79.5H24.41L23.38,28.66l23.96-.01Zm4.14-13.23h.01a.87.87,0,0,1,.71.38l.73,1.02c.03.05.06.11.09.17l-24.75.02-.15-1.53ZM40.53,47.24a2.581,2.581,0,1,1-2.4,2.57A2.494,2.494,0,0,1,40.53,47.24Zm-16.34,0a2.581,2.581,0,1,1-2.4,2.57A2.494,2.494,0,0,1,24.19,47.24Z"></path>{" "}
+              </g>{" "}
+            </g>
+          </svg>
         ),
       },
       {
         title: "Google Profile Optimisation",
         descText:
           "Your Google Business Profile is often the first thing a local customer sees, before they even reach your website. We optimise it properly: categories, services, photos, Q&A, review strategy, and posting. A well-managed profile drives calls, directions, and visits directly from Google Search and Maps.",
-        desc: (<>Your Google Business Profile is often the first thing a local customer sees, before they even reach your website. We optimise it properly: categories, services, photos, Q&A, review strategy, and posting. A well-managed profile drives calls, directions, and visits directly from Google Search and Maps.
-        <ul className="list-disc list-inside mt-2">
-          <li>GBP Optimisation</li>
-          <li>Review Strategy</li>
-          <li>Local Visibility</li>
-        </ul>
-</>),
+        desc: (
+          <>
+            Your Google Business Profile is often the first thing a local
+            customer sees, before they even reach your website. We optimise it
+            properly: categories, services, photos, Q&A, review strategy, and
+            posting. A well-managed profile drives calls, directions, and visits
+            directly from Google Search and Maps.
+            <ul className="list-disc list-inside mt-2">
+              <li>GBP Optimisation</li>
+              <li>Review Strategy</li>
+              <li>Local Visibility</li>
+            </ul>
+          </>
+        ),
         svg: (
           <svg
             width="40px"
@@ -4296,7 +5024,10 @@ Your SEO is handled by our in-house team, not handed off to contractors or overs
     processHeading: <>How It Works</>,
     processPara: (
       <>
-        Three Steps From Audit to Rankings. No mystery timelines. No confusing jargon.<br />Here's exactly what happens when you start with us.
+        Three Steps From Audit to Rankings. No mystery timelines. No confusing
+        jargon.
+        <br />
+        Here's exactly what happens when you start with us.
       </>
     ),
     processCardData: [
@@ -4305,7 +5036,11 @@ Your SEO is handled by our in-house team, not handed off to contractors or overs
         heading: "Audit, Research & Strategy",
         paragraph: (
           <>
-We start by pulling your site apart, technically, content wise, and in terms of how it sits against your competitors. From there, we build a proper SEO strategy: which keywords to target, which pages to prioritise, what needs fixing, and what needs building from scratch. You see the full plan before we start anything.
+            We start by pulling your site apart, technically, content wise, and
+            in terms of how it sits against your competitors. From there, we
+            build a proper SEO strategy: which keywords to target, which pages
+            to prioritise, what needs fixing, and what needs building from
+            scratch. You see the full plan before we start anything.
           </>
         ),
       },
@@ -4314,7 +5049,11 @@ We start by pulling your site apart, technically, content wise, and in terms of 
         heading: "Implementation & Optimisation",
         paragraph: (
           <>
-This is where the actual work happens. Technical fixes go in, on-page optimisation gets done, content gets built or improved, and link building kicks off. Everything follows the strategy we agreed on. You're kept updated throughout, not left wondering what's happening with your site.
+            This is where the actual work happens. Technical fixes go in,
+            on-page optimisation gets done, content gets built or improved, and
+            link building kicks off. Everything follows the strategy we agreed
+            on. You're kept updated throughout, not left wondering what's
+            happening with your site.
           </>
         ),
       },
@@ -4323,7 +5062,11 @@ This is where the actual work happens. Technical fixes go in, on-page optimisati
         heading: "Track, Report & Keep Growing",
         paragraph: (
           <>
-Rankings improve, but we don't stop there. SEO is an ongoing process; Google updates its algorithm, competitors adjust their strategy, and search behaviour shifts. We monitor everything, report clearly, and keep refining so your rankings don't just reach the top but stay there.
+            Rankings improve, but we don't stop there. SEO is an ongoing
+            process; Google updates its algorithm, competitors adjust their
+            strategy, and search behaviour shifts. We monitor everything, report
+            clearly, and keep refining so your rankings don't just reach the top
+            but stay there.
           </>
         ),
       },
@@ -4379,33 +5122,52 @@ Rankings improve, but we don't stop there. SEO is an ongoing process; Google upd
       buttonText: "Get a Custom Quote",
       body: (
         <>
-          <h3 className="text-2xl text-white">Your SEO Plan Should Fit Your Business, Not the Other Way Around</h3>
-<p className="mt-2">A local tradie in Brisbane needs something completely different from a national eCommerce brand or a B2B SaaS company. Fixed packages rarely fit anyone properly. That's why we don't use them.
-We talk first, understand what you're trying to achieve, and then put together a scope that makes sense for your goals, your market, and your budget. You'll know exactly what you're getting and what it costs before anything starts.</p>
+          <h3 className="text-2xl text-white">
+            Your SEO Plan Should Fit Your Business, Not the Other Way Around
+          </h3>
+          <p className="mt-2">
+            A local tradie in Brisbane needs something completely different from
+            a national eCommerce brand or a B2B SaaS company. Fixed packages
+            rarely fit anyone properly. That's why we don't use them. We talk
+            first, understand what you're trying to achieve, and then put
+            together a scope that makes sense for your goals, your market, and
+            your budget. You'll know exactly what you're getting and what it
+            costs before anything starts.
+          </p>
 
-<ul className="list-disc list-inside mt-1">
-  <li>Local SEO for small businesses and service-area businesses</li>
-  <li>Technical SEO for sites that have been neglected or rebuilt</li>
-  <li>eCommerce SEO for Shopify, WooCommerce, and Magento stores</li>
-  <li>Content-led SEO for businesses targeting informational keywords</li>
-  <li>Enterprise SEO for larger sites with complex structures</li>
-  <li>Ongoing monthly SEO management with clear deliverables</li>
-</ul>
-
+          <ul className="list-disc list-inside mt-1">
+            <li>Local SEO for small businesses and service-area businesses</li>
+            <li>Technical SEO for sites that have been neglected or rebuilt</li>
+            <li>eCommerce SEO for Shopify, WooCommerce, and Magento stores</li>
+            <li>
+              Content-led SEO for businesses targeting informational keywords
+            </li>
+            <li>Enterprise SEO for larger sites with complex structures</li>
+            <li>Ongoing monthly SEO management with clear deliverables</li>
+          </ul>
         </>
       ),
-      rightContent: <><h3 className="text-2xl text-white mt-3">What's Typically Inside an Engagement</h3>
-<p className="text-sm">Depending on what we agree on, your SEO project may include any combination of:</p>
-<ul className="list-disc list-inside mt-1 text-sm">
-  <li>Full technical SEO audit and fix list</li>
-  <li>Keyword research and site-wide architecture</li>
-  <li>On-page optimisation across key pages</li>
-  <li>Local SEO and Google Profile setup and management</li>
-  <li>Location landing page creation</li>
-  <li>Link building and authority development</li>
-  <li>Monthly reporting with real numbers, not vanity metrics</li>
-  <li>eCommerce SEO for product and category pages</li>
-</ul></>,
+      rightContent: (
+        <>
+          <h3 className="text-2xl text-white mt-3">
+            What's Typically Inside an Engagement
+          </h3>
+          <p className="text-sm">
+            Depending on what we agree on, your SEO project may include any
+            combination of:
+          </p>
+          <ul className="list-disc list-inside mt-1 text-sm">
+            <li>Full technical SEO audit and fix list</li>
+            <li>Keyword research and site-wide architecture</li>
+            <li>On-page optimisation across key pages</li>
+            <li>Local SEO and Google Profile setup and management</li>
+            <li>Location landing page creation</li>
+            <li>Link building and authority development</li>
+            <li>Monthly reporting with real numbers, not vanity metrics</li>
+            <li>eCommerce SEO for product and category pages</li>
+          </ul>
+        </>
+      ),
     },
     faqData: [
       {
@@ -4419,7 +5181,8 @@ We talk first, understand what you're trying to achieve, and then put together a
           "No. Our ongoing SEO engagements are monthly. We're not interested in holding clients in through paperwork; we'd rather keep your business because the results make it an easy decision to stay. We do ask for a minimum initial period on project-based work, but that's always agreed upon upfront with full transparency.",
       },
       {
-        question: "Do you work with small businesses, or is this only for bigger companies?",
+        question:
+          "Do you work with small businesses, or is this only for bigger companies?",
         answer:
           "Small businesses make up a big part of our client base. Our strongest expertise area exists in local SEO and small business SEO. We have complete knowledge about local business SEO since we have successfully implemented this process more than one hundred times to help businesses attract nearby customers.",
       },
@@ -4429,7 +5192,8 @@ We talk first, understand what you're trying to achieve, and then put together a
           "Regular SEO targets broader search terms, which people use for national and international searches. Local SEO focuses on getting your business visible to people searching in specific locations, such as your suburb, city, or service area. The process includes managing your Google Business Profile together with local citations, geo-targeted content and map pack rankings. Local SEO becomes essential for businesses that operate from physical locations or provide services to particular regions.",
       },
       {
-        question: "Can you help if my site has already been penalised or had bad SEO done to it?",
+        question:
+          "Can you help if my site has already been penalised or had bad SEO done to it?",
         answer:
           "Yes, and it's something we deal with fairly regularly. We begin our work with an entire system examination, which helps us find all present problems and create a solution to restore operations. The process of damage reversal requires time, but through the correct methods, we can achieve complete restoration.",
       },
@@ -4450,13 +5214,17 @@ We talk first, understand what you're trying to achieve, and then put together a
       { id: "8", src: "/Services/web_07.svg", translateY: "" },
     ],
     contactData: {
-      heading: (<>Let's Get Started</>),
+      heading: <>Let's Get Started</>,
       body: (
         <>
           <span className="block text-xl font-bold text-white">
-            Your Customers Are Searching<br />Make Sure They Find You
+            Your Customers Are Searching
+            <br />
+            Make Sure They Find You
           </span>
-Get in touch today, and one of our SEO specialists will get back to you within one business day. No scripts, no pressure, just a straight conversation about your business.
+          Get in touch today, and one of our SEO specialists will get back to
+          you within one business day. No scripts, no pressure, just a straight
+          conversation about your business.
         </>
       ),
       buttonText: "Book a Free Strategy Call",
@@ -4468,7 +5236,7 @@ Get in touch today, and one of our SEO specialists will get back to you within o
         slug: "seo-strategy-planning",
         title: "SEO Strategy & Planning",
         heading: "Web Development That Accelerates something",
-        imageUrl: "/Services/Rectangle_52.png",
+        imageUrl: "/services/Rectangle_52.webp",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -4908,7 +5676,7 @@ Get in touch today, and one of our SEO specialists will get back to you within o
         slug: "local-search-dominance",
         title: "Local Search Dominance",
         heading: "Local Search Dominance That Drives Real Results",
-        imageUrl: "/Services/Rectangle_52.png",
+        imageUrl: "/services/Rectangle_52.webp",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -5348,7 +6116,7 @@ Get in touch today, and one of our SEO specialists will get back to you within o
         slug: "local-listing",
         title: "Local Listing",
         heading: "Local Listing That Drives Real Results",
-        imageUrl: "/Services/Rectangle_52.png",
+        imageUrl: "/services/Rectangle_52.webp",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -5788,7 +6556,7 @@ Get in touch today, and one of our SEO specialists will get back to you within o
         slug: "onpage-offpage-seo",
         title: "On-Page & Off-Page SEO",
         heading: "SEO That Drives Real Results",
-        imageUrl: "/Services/Rectangle_52.png",
+        imageUrl: "/services/Rectangle_52.webp",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -6228,7 +6996,7 @@ Get in touch today, and one of our SEO specialists will get back to you within o
         slug: "link-building",
         title: "Link Building",
         heading: "Link Building That Drives Real Results",
-        imageUrl: "/Services/Rectangle_52.png",
+        imageUrl: "/services/Rectangle_52.webp",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -6668,7 +7436,7 @@ Get in touch today, and one of our SEO specialists will get back to you within o
         slug: "intent-based-keyword-architecture",
         title: "Intent-Based Keywords",
         heading: "SEO That Drives Real Results",
-        imageUrl: "/Services/Rectangle_52.png",
+        imageUrl: "/services/Rectangle_52.webp",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -7108,7 +7876,7 @@ Get in touch today, and one of our SEO specialists will get back to you within o
         slug: "technical-seo-infrastructure",
         title: "Technical SEO Infrastructure",
         heading: "Technical SEO That Drives Real Results",
-        imageUrl: "/Services/Rectangle_52.png",
+        imageUrl: "/services/Rectangle_52.webp",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -7548,7 +8316,7 @@ Get in touch today, and one of our SEO specialists will get back to you within o
         slug: "ecommerce-seo",
         title: "Ecommerce SEO",
         heading: "Ecommerce SEO That Drives Real Results",
-        imageUrl: "/Services/Rectangle_52.png",
+        imageUrl: "/services/Rectangle_52.webp",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -7988,7 +8756,7 @@ Get in touch today, and one of our SEO specialists will get back to you within o
         slug: "google-profile-optimization",
         title: "Google Profile Optimization",
         heading: "Google Profile Optimization That Drives Real Results",
-        imageUrl: "/Services/Rectangle_52.png",
+        imageUrl: "/services/Rectangle_52.webp",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -8434,55 +9202,77 @@ Get in touch today, and one of our SEO specialists will get back to you within o
     // heading: "Web Development Services in Australia",
     serviceBodyData: [
       {
-        imageUrl: "/Services/Rectangle_52.webp",
+        imageUrl: "/services/Rectangle_52.webp",
         description: (
           <>
             <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
               Stop Spending | Start Performing
             </h2>
-It's seen that most paid advertising budgets get wasted, wrong audiences, weak creatives, and campaigns are set up once and then never touched again. Our way of working is different. Every dollar we spend on your behalf is monitored, tested, and working toward a real return. No vanity metrics. No mystery reports. But campaigns that grow your business. 
-<div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
-  <a
-    className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15"
-    href="/contact"
-  >
-    Book a Free Strategy Call
-  </a>
-  <span
-    aria-hidden="true"
-    className="h-10 w-px bg-white/30 max-sm:h-px max-sm:w-full"
-  />
-  <a
-    className="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/10"
-    href="/services"
-  >
-    See All Services
-  </a>
-</div>
+            It's seen that most paid advertising budgets get wasted, wrong
+            audiences, weak creatives, and campaigns are set up once and then
+            never touched again. Our way of working is different. Every dollar
+            we spend on your behalf is monitored, tested, and working toward a
+            real return. No vanity metrics. No mystery reports. But campaigns
+            that grow your business.
+            <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
+              <a
+                className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15"
+                href="/contact"
+              >
+                Book a Free Strategy Call
+              </a>
+              <span
+                aria-hidden="true"
+                className="h-10 w-px bg-white/30 max-sm:h-px max-sm:w-full"
+              />
+              <a
+                className="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/10"
+                href="/services"
+              >
+                See All Services
+              </a>
+            </div>
           </>
         ),
       },
     ],
     whyChooseData: {
-      image: "/Services/Rectangle_52.webp",
+      image: "/services/Rectangle_52.webp",
       heading: "Why Aussie Digital Solution",
       paragraphs: [
         <React.Fragment key="why-aussie-branding">
-        <h3 className="text-2xl text-white">We've Inherited Enough Broken Ad Accounts to Know What Not to Do</h3>
-Too many unnecessary campaign complications. Difficult to manage and optimise. Budgets are divided into too many places. Tracking that doesn't fire properly. Reporting that looks busy but says nothing useful. We've seen it all, and we've fixed most of it.
-
-<h3 className="text-2xl text-white">We Optimise for Revenue, Not Clicks</h3>
-We set up proper conversion tracking from day one, so every decision is practical and based on what's actually generating revenue for your business, and not just the activity in the account.
-
-<h3 className="text-2xl text-white">Constant Testing, Not Set and Forget</h3>
-Ad performance decays over time. Audiences get fatigued. Competitors change their bids. We're in the accounts regularly, testing new creatives, adjusting audiences, and making sure performance doesn't quietly slide.
-
-<h3 className="text-2xl text-white">Built for Australian Audiences</h3>
-We understand how Australians search, browse, and buy, and our campaigns are built around local consumer behaviour.
-
-<h3 className="text-2xl text-white">Transparent Reporting You'll Actually Read</h3>
-We tell you what's working, what isn't, what we're doing about it, and what it's costing you per lead or sale. Straight numbers, straight talk.
-</React.Fragment>,
+          <h3 className="text-2xl text-white">
+            We've Inherited Enough Broken Ad Accounts to Know What Not to Do
+          </h3>
+          Too many unnecessary campaign complications. Difficult to manage and
+          optimise. Budgets are divided into too many places. Tracking that
+          doesn't fire properly. Reporting that looks busy but says nothing
+          useful. We've seen it all, and we've fixed most of it.
+          <h3 className="text-2xl text-white">
+            We Optimise for Revenue, Not Clicks
+          </h3>
+          We set up proper conversion tracking from day one, so every decision
+          is practical and based on what's actually generating revenue for your
+          business, and not just the activity in the account.
+          <h3 className="text-2xl text-white">
+            Constant Testing, Not Set and Forget
+          </h3>
+          Ad performance decays over time. Audiences get fatigued. Competitors
+          change their bids. We're in the accounts regularly, testing new
+          creatives, adjusting audiences, and making sure performance doesn't
+          quietly slide.
+          <h3 className="text-2xl text-white">
+            Built for Australian Audiences
+          </h3>
+          We understand how Australians search, browse, and buy, and our
+          campaigns are built around local consumer behaviour.
+          <h3 className="text-2xl text-white">
+            Transparent Reporting You'll Actually Read
+          </h3>
+          We tell you what's working, what isn't, what we're doing about it, and
+          what it's costing you per lead or sale. Straight numbers, straight
+          talk.
+        </React.Fragment>,
       ],
     },
     ctaData: {
@@ -8499,8 +9289,7 @@ We tell you what's working, what isn't, what we're doing about it, and what it's
         label: "View All Services",
         href: "/services",
       },
-      trustItems: [
-      ],
+      trustItems: [],
     },
     strategicHeading: <div className="font-semibold">What We Run</div>,
     strategicHeadingText: (
@@ -8509,8 +9298,10 @@ We tell you what's working, what isn't, what we're doing about it, and what it's
           <h3 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
             Every Platform, One Focused Team.
           </h3>
-          <p className="mx-auto mt-4 max-w-6xl text-sm leading-7 text-[#AAAAAA] sm:text-base">           
-We do a lot more than just "managing ads." We build performance systems, with the strategy that is: the right message, on the right platform, in front of the right person, at the right time. 
+          <p className="mx-auto mt-4 max-w-6xl text-sm leading-7 text-[#AAAAAA] sm:text-base">
+            We do a lot more than just "managing ads." We build performance
+            systems, with the strategy that is: the right message, on the right
+            platform, in front of the right person, at the right time.
           </p>
         </div>
       </div>
@@ -8522,7 +9313,10 @@ We do a lot more than just "managing ads." We build performance systems, with th
           "Google Ads puts your business in front of many people with real purchase intent, and not just browsers. We handle the complete process, from campaign architecture and keyword strategy to ad copy, bidding management, and ongoing optimisation.",
         desc: (
           <>
-Google Ads puts your business in front of many people with real purchase intent, and not just browsers. We handle the complete process, from campaign architecture and keyword strategy to ad copy, bidding management, and ongoing optimisation. 
+            Google Ads puts your business in front of many people with real
+            purchase intent, and not just browsers. We handle the complete
+            process, from campaign architecture and keyword strategy to ad copy,
+            bidding management, and ongoing optimisation.
             <ul className="list-disc list-inside mt-1">
               <li>Search Ads</li>
               <li>DisplayPPC</li>
@@ -8530,161 +9324,179 @@ Google Ads puts your business in front of many people with real purchase intent,
             </ul>
           </>
         ),
-        svg: (
-          <SiGoogleads color="#4C8C74" size="40px" />
-        ),
+        svg: <SiGoogleads color="#4C8C74" size="40px" />,
       },
       {
         title: "YouTube Ads",
         descText:
           "We plan, place, and optimise YouTube campaigns that fit into your broader funnel. No matter if that's awareness at the top or hard conversion at the bottom.",
-        desc: (<>
-We plan, place, and optimise YouTube campaigns that fit into your broader funnel. No matter if that's awareness at the top or hard conversion at the bottom.
-        <ul className="list-disc list-inside mt-2">
-          <li>Pre-RollIn-Stream</li>
-          <li>Video Ads</li>
-          <li>YouTube SEO</li>
-        </ul>
-</>),
-        svg: (
-        <FaYoutube color="#4C8C74" size={40} />
+        desc: (
+          <>
+            We plan, place, and optimise YouTube campaigns that fit into your
+            broader funnel. No matter if that's awareness at the top or hard
+            conversion at the bottom.
+            <ul className="list-disc list-inside mt-2">
+              <li>Pre-RollIn-Stream</li>
+              <li>Video Ads</li>
+              <li>YouTube SEO</li>
+            </ul>
+          </>
         ),
+        svg: <FaYoutube color="#4C8C74" size={40} />,
       },
       {
         title: "Meta Ads",
         descText:
           "We build Meta campaigns around your real customer data, use creatives that actually stop people scrolling, and constantly test what's working. ",
-        desc: (<>
-We build Meta campaigns around your real customer data, use creatives that actually stop people scrolling, and constantly test what's working. 
-        <ul className="list-disc list-inside mt-2">
-          <li>Facebook Ads</li>
-          <li>Instagram Ads</li>
-          <li>Creative Testing</li>
-          <li>ROAS</li>
-        </ul>
-</>),
-        svg: (
-          <FaMeta color="#4C8C74" size={40} />
+        desc: (
+          <>
+            We build Meta campaigns around your real customer data, use
+            creatives that actually stop people scrolling, and constantly test
+            what's working.
+            <ul className="list-disc list-inside mt-2">
+              <li>Facebook Ads</li>
+              <li>Instagram Ads</li>
+              <li>Creative Testing</li>
+              <li>ROAS</li>
+            </ul>
+          </>
         ),
+        svg: <FaMeta color="#4C8C74" size={40} />,
       },
       {
         title: "TikTok Shop Ads",
         descText:
           "We run TikTok Shop ad campaigns that blend into the feed naturally, result in product discovery, and make right inside the app without friction. If your product is visual and your audience is on TikTok, this is a channel worth taking seriously.",
-        desc: (<>
-We run TikTok Shop ad campaigns that blend into the feed naturally, result in product discovery, and make right inside the app without friction. If your product is visual and your audience is on TikTok, this is a channel worth taking seriously.
-        <ul className="list-inside list-disc mt-2">
-          <li>TikTok Shop</li>
-          <li>In-Feed Ads</li>
-          <li>Product Discovery</li>
-        </ul>
-</>),
-        svg: (
-          <FaTiktok color="#4C8C74" size={40} />
+        desc: (
+          <>
+            We run TikTok Shop ad campaigns that blend into the feed naturally,
+            result in product discovery, and make right inside the app without
+            friction. If your product is visual and your audience is on TikTok,
+            this is a channel worth taking seriously.
+            <ul className="list-inside list-disc mt-2">
+              <li>TikTok Shop</li>
+              <li>In-Feed Ads</li>
+              <li>Product Discovery</li>
+            </ul>
+          </>
         ),
+        svg: <FaTiktok color="#4C8C74" size={40} />,
       },
       {
         title: "LinkedIn Ads",
         descText:
           "Our team of professionals runs LinkedIn campaigns for businesses that sell to other businesses: lead generation forms, sponsored content, message ads, and account-based targeting.",
-        desc: (<>
-Our team of professionals runs LinkedIn campaigns for businesses that sell to other businesses: lead generation forms, sponsored content, message ads, and account-based targeting.
-        <ul className="list-inside list-disc mt-2">
-          <li>B2B Ads</li>
-          <li>Lead Gen</li>
-          <li>Sponsored Content</li>
-        </ul>
-</>),
-        svg: (
-          <FaLinkedin color="#4C8C74" size={40} />
+        desc: (
+          <>
+            Our team of professionals runs LinkedIn campaigns for businesses
+            that sell to other businesses: lead generation forms, sponsored
+            content, message ads, and account-based targeting.
+            <ul className="list-inside list-disc mt-2">
+              <li>B2B Ads</li>
+              <li>Lead Gen</li>
+              <li>Sponsored Content</li>
+            </ul>
+          </>
         ),
+        svg: <FaLinkedin color="#4C8C74" size={40} />,
       },
       {
         title: "Retargeting & Remarketing",
         descText:
           "We build retargeting audiences based on real behaviour, pages visited, products viewed, cart abandonment, time on site, and serve those people specific ads designed to finish the job.",
-        desc: (<>
-We build retargeting audiences based on real behaviour, pages visited, products viewed, cart abandonment, time on site, and serve those people specific ads designed to finish the job. 
-        <ul className="list-disc list-inside mt-2">
-          <li>Retargeting</li>
-          <li>Cart Recovery</li>
-          <li>Audience Segments</li>
-        </ul>
-</>),
-        svg: (
-          <FiTarget color="#4C8C74" size={40} />
+        desc: (
+          <>
+            We build retargeting audiences based on real behaviour, pages
+            visited, products viewed, cart abandonment, time on site, and serve
+            those people specific ads designed to finish the job.
+            <ul className="list-disc list-inside mt-2">
+              <li>Retargeting</li>
+              <li>Cart Recovery</li>
+              <li>Audience Segments</li>
+            </ul>
+          </>
         ),
+        svg: <FiTarget color="#4C8C74" size={40} />,
       },
       {
         title: "Shopping Ads",
         descText:
           "The expert team operates Google Shopping campaigns by implementing feed optimisation techniques and product segmentation methods, and using bidding strategies which focus on your most profitable items.",
-        desc: (<>
-The expert team operates Google Shopping campaigns by implementing feed optimisation techniques and product segmentation methods, and using bidding strategies which focus on your most profitable items.
-        <ul className="mt-2 list-dissc list-inside">
-          <li>Google Shopping</li>
-          <li>Product Feed</li>
-          <li>eCommerce Ads</li>
-        </ul>
-</>),
-        svg: (
-          <CiShoppingCart color="#4C8C74" size={40} />
+        desc: (
+          <>
+            The expert team operates Google Shopping campaigns by implementing
+            feed optimisation techniques and product segmentation methods, and
+            using bidding strategies which focus on your most profitable items.
+            <ul className="mt-2 list-dissc list-inside">
+              <li>Google Shopping</li>
+              <li>Product Feed</li>
+              <li>eCommerce Ads</li>
+            </ul>
+          </>
         ),
+        svg: <CiShoppingCart color="#4C8C74" size={40} />,
       },
       {
         title: "Affiliate Performance Marketing",
         descText:
           "We build and manage affiliate programs that recruit the best quality publishers, within the right commission structures, and track overall performance properly.",
-        desc: (<>
-We build and manage affiliate programs that recruit the best quality publishers, within the right commission structures, and track overall performance properly. 
-<ul className="mt-2 list-inside list-disc">
-  <li>Affiliate Program</li>
-  <li>Publisher Recruitment</li>
-  <li>Commission Strategy</li>
-</ul>
-</>),
-        svg: (
-          <TbAffiliate color="#4C8C74" size={40} />
+        desc: (
+          <>
+            We build and manage affiliate programs that recruit the best quality
+            publishers, within the right commission structures, and track
+            overall performance properly.
+            <ul className="mt-2 list-inside list-disc">
+              <li>Affiliate Program</li>
+              <li>Publisher Recruitment</li>
+              <li>Commission Strategy</li>
+            </ul>
+          </>
         ),
+        svg: <TbAffiliate color="#4C8C74" size={40} />,
       },
       {
         title: "Influencer Performance Marketing",
         descText:
           "We approach them differently, with tracked links, promo codes, clear KPIs, and performance-based structures where possible. ",
-        desc: (<>
-We approach them differently, with tracked links, promo codes, clear KPIs, and performance-based structures where possible. 
-        <ul className="list-disc list-inside mt-2">
-          <li>Creator Partnerships</li>
-          <li>Tracked Campaigns</li>
-          <li>Micro Influencers</li>
-        </ul>
-</>),
-        svg: (
-          <CgPerformance color="#4C8C74" size={40} />
+        desc: (
+          <>
+            We approach them differently, with tracked links, promo codes, clear
+            KPIs, and performance-based structures where possible.
+            <ul className="list-disc list-inside mt-2">
+              <li>Creator Partnerships</li>
+              <li>Tracked Campaigns</li>
+              <li>Micro Influencers</li>
+            </ul>
+          </>
         ),
+        svg: <CgPerformance color="#4C8C74" size={40} />,
       },
       {
         title: "App Performance Marketing",
         descText:
           "We approach them differently, with tracked links, promo codes, clear KPIs, and performance-based structures where possible. ",
-        desc: (<>
-We run app marketing campaigns across Google UAC, Meta App Ads, and TikTok that optimise for post-install events, not just downloads. 
-        <ul className="list-disc list-inside mt-2">
-          <li>App Installs</li>
-          <li>UAC</li>
-          <li>Post-Install Events</li>
-          <li>ROAS</li>
-        </ul>
-</>),
-        svg: (
-          <GrDocumentPerformance color="#4C8C74" size={40} />
+        desc: (
+          <>
+            We run app marketing campaigns across Google UAC, Meta App Ads, and
+            TikTok that optimise for post-install events, not just downloads.
+            <ul className="list-disc list-inside mt-2">
+              <li>App Installs</li>
+              <li>UAC</li>
+              <li>Post-Install Events</li>
+              <li>ROAS</li>
+            </ul>
+          </>
         ),
+        svg: <GrDocumentPerformance color="#4C8C74" size={40} />,
       },
     ],
     processHeading: <>How We Work</>,
     processPara: (
       <>
-        <b>From First Brief to Live Campaigns in Three Clear Steps</b><br />No drawn-out onboarding. No mystery. Here's exactly what the first few weeks look like.
+        <b>From First Brief to Live Campaigns in Three Clear Steps</b>
+        <br />
+        No drawn-out onboarding. No mystery. Here's exactly what the first few
+        weeks look like.
       </>
     ),
     processCardData: [
@@ -8693,7 +9505,11 @@ We run app marketing campaigns across Google UAC, Meta App Ads, and TikTok that 
         heading: "Audit, Research & Strategy",
         paragraph: (
           <>
-We start by doing a complete, detailed audit by getting into your existing accounts, or starting fresh if you haven't run ads before. We dig into your competitors, analyse your audience data, and build a campaign strategy around your actual business goals to engage the customers. You see the full plan before we spend a dollar.
+            We start by doing a complete, detailed audit by getting into your
+            existing accounts, or starting fresh if you haven't run ads before.
+            We dig into your competitors, analyse your audience data, and build
+            a campaign strategy around your actual business goals to engage the
+            customers. You see the full plan before we spend a dollar.
           </>
         ),
       },
@@ -8702,7 +9518,10 @@ We start by doing a complete, detailed audit by getting into your existing accou
         heading: "Build, Launch & Track",
         paragraph: (
           <>
-We monitor the live campaigns from day one. Conversion events, UTMs, attribution, all set up correctly, so the data we use to make decisions is actually reliable. We don't launch until the measurement is right. A lot of agencies skip this step. We never do.
+            We monitor the live campaigns from day one. Conversion events, UTMs,
+            attribution, all set up correctly, so the data we use to make
+            decisions is actually reliable. We don't launch until the
+            measurement is right. A lot of agencies skip this step. We never do.
           </>
         ),
       },
@@ -8711,7 +9530,11 @@ We monitor the live campaigns from day one. Conversion events, UTMs, attribution
         heading: "Optimise, Report & Scale",
         paragraph: (
           <>
-Once campaigns are live, the work actually starts. We test creatives, adjust bids, refine audiences, eliminate what's not working, and scale what is. Monthly reporting gives you a clear picture of performance, not just numbers, but what they mean and what we're doing next.
+            Once campaigns are live, the work actually starts. We test
+            creatives, adjust bids, refine audiences, eliminate what's not
+            working, and scale what is. Monthly reporting gives you a clear
+            picture of performance, not just numbers, but what they mean and
+            what we're doing next.
           </>
         ),
       },
@@ -8767,34 +9590,72 @@ Once campaigns are live, the work actually starts. We test creatives, adjust bid
       buttonText: "Get a Custom Quote",
       body: (
         <>
-<p className="mt-2">Your Ad Strategy Should Fit Your Business; Not a Generic Package
-A local service business in Sydney needs a completely different approach from a national eCommerce brand or a B2B SaaS company trying to generate enterprise leads. Fixed packages don’t work that well because every business has different goals, different margins, and different audiences.<br />
-We start with a conversation about where you are, what you've tried, and what you're actually trying to achieve. Then we put together a scope that makes sense for your situation, no pressure to take channels you don't need.
-</p>
+          <p className="mt-2">
+            Your Ad Strategy Should Fit Your Business; Not a Generic Package A
+            local service business in Sydney needs a completely different
+            approach from a national eCommerce brand or a B2B SaaS company
+            trying to generate enterprise leads. Fixed packages don’t work that
+            well because every business has different goals, different margins,
+            and different audiences.
+            <br />
+            We start with a conversation about where you are, what you've tried,
+            and what you're actually trying to achieve. Then we put together a
+            scope that makes sense for your situation, no pressure to take
+            channels you don't need.
+          </p>
 
-<ul className="list-disc list-inside mt-1">
-  <li>Google Ads for businesses that want to capture existing search demand</li>
-  <li>Meta and TikTok for brands building awareness and driving direct sales</li>
-  <li>LinkedIn for B2B businesses targeting specific industries or job roles</li>
-  <li>Full funnel strategies combining multiple platforms into one system</li>
-  <li>eCommerce-specific setups for Shopping, Dynamic Ads, and TikTok Shop</li>
-  <li>App campaigns for mobile products needing quality installs at scale</li>
-  <li>Affiliate and influencer programs for performance-based growth</li>
-</ul>
+          <ul className="list-disc list-inside mt-1">
+            <li>
+              Google Ads for businesses that want to capture existing search
+              demand
+            </li>
+            <li>
+              Meta and TikTok for brands building awareness and driving direct
+              sales
+            </li>
+            <li>
+              LinkedIn for B2B businesses targeting specific industries or job
+              roles
+            </li>
+            <li>
+              Full funnel strategies combining multiple platforms into one
+              system
+            </li>
+            <li>
+              eCommerce-specific setups for Shopping, Dynamic Ads, and TikTok
+              Shop
+            </li>
+            <li>
+              App campaigns for mobile products needing quality installs at
+              scale
+            </li>
+            <li>
+              Affiliate and influencer programs for performance-based growth
+            </li>
+          </ul>
         </>
       ),
-      rightContent: <><h3 className="text-2xl text-white mt-3">What's Typically Inside an Engagement</h3>
-<p className="text-sm">Depending on which channels and goals we agree on, your performance marketing project may include:</p>
-<ul className="list-disc list-inside mt-1 text-sm">
-  <li>Full account audit and competitor analysis</li>
-  <li>Campaign strategy and platform recommendations</li>
-  <li>Campaign build, ad copy, and creative direction</li>
-  <li>Conversion tracking and attribution setup</li>
-  <li>Audience building and retargeting setup</li>
-  <li>Shopping feed management for eCommerce</li>
-  <li>Weekly optimisation and monthly reporting</li>
-  <li>Influencer or affiliate program management</li>
-</ul></>,
+      rightContent: (
+        <>
+          <h3 className="text-2xl text-white mt-3">
+            What's Typically Inside an Engagement
+          </h3>
+          <p className="text-sm">
+            Depending on which channels and goals we agree on, your performance
+            marketing project may include:
+          </p>
+          <ul className="list-disc list-inside mt-1 text-sm">
+            <li>Full account audit and competitor analysis</li>
+            <li>Campaign strategy and platform recommendations</li>
+            <li>Campaign build, ad copy, and creative direction</li>
+            <li>Conversion tracking and attribution setup</li>
+            <li>Audience building and retargeting setup</li>
+            <li>Shopping feed management for eCommerce</li>
+            <li>Weekly optimisation and monthly reporting</li>
+            <li>Influencer or affiliate program management</li>
+          </ul>
+        </>
+      ),
     },
     faqData: [
       {
@@ -8803,7 +9664,8 @@ We start with a conversation about where you are, what you've tried, and what yo
           "Much faster. Search campaigns like Google Ads can start generating leads within the first week once they're set up properly. Social campaigns usually need two to four weeks to finish the learning phase before performance stabilises. We'll set realistic expectations at the start based on your specific goals and budget.",
       },
       {
-        question: "Do you take a percentage of ad spend, or a flat management fee?",
+        question:
+          "Do you take a percentage of ad spend, or a flat management fee?",
         answer:
           "We work on a flat, month-wise management fee rather than a percentage of spend. This means our incentive is to make your budget work harder, not force you to spend more, so our fee goes up. We create a list of exactly what's included in management before anything starts.",
       },
@@ -8839,13 +9701,15 @@ We start with a conversation about where you are, what you've tried, and what yo
       { id: "8", src: "/Services/web_07.svg", translateY: "" },
     ],
     contactData: {
-      heading: (<>Let's Get Started</>),
+      heading: <>Let's Get Started</>,
       body: (
         <>
           <span className="block text-xl font-bold text-white">
             Your Competitors Are Running Ads Right Now.
           </span>
-Get in touch today, and one of our performance marketing specialists will get back to you within one business day. Straight conversation, no scripts.
+          Get in touch today, and one of our performance marketing specialists
+          will get back to you within one business day. Straight conversation,
+          no scripts.
         </>
       ),
       buttonText: "Book a Free Strategy Call",
@@ -8858,16 +9722,23 @@ Get in touch today, and one of our performance marketing specialists will get ba
         slug: "google-ads",
         title: "Google Ads Management",
         // heading: "eCommerce Website Development in Australia",
-       serviceBodyData: [
-      {
-        imageUrl: "/Services/Rectangle_52.webp",
-        description: (
-          <>
-            <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
-              Your Customers Are Searching Right Now. Are They Finding You?
-            </h2>
-            <p>Google Search Ads put your business at the very top of results, the moment someone searches for what you sell. No waiting for organic rankings. No cold outreach. Just qualified traffic from people already looking. At Aussie Digital Solutions, our team manages every campaign so every dollar produces a real return.</p>
-            {/* <ul className="mt-3">
+        serviceBodyData: [
+          {
+            imageUrl: "/services/Rectangle_52.webp",
+            description: (
+              <>
+                <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
+                  Your Customers Are Searching Right Now. Are They Finding You?
+                </h2>
+                <p>
+                  Google Search Ads put your business at the very top of
+                  results, the moment someone searches for what you sell. No
+                  waiting for organic rankings. No cold outreach. Just qualified
+                  traffic from people already looking. At Aussie Digital
+                  Solutions, our team manages every campaign so every dollar
+                  produces a real return.
+                </p>
+                {/* <ul className="mt-3">
               <li className="flex items-start gap-2 md:gap-3 mb-2">
                 <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
                 <div className="flex flex-col"><span className="font-semibold">More Than an Online Store: A Revenue Engine.</span>
@@ -8899,58 +9770,97 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
                 </span>
               </li>
             </ul> */}
-            <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
-  <a
-    className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15"
-    href="/contact"
-  >
-    Get a Free Campaign Audit
-  </a>
-  <span
-    aria-hidden="true"
-    className="h-10 w-px bg-white/30 max-sm:h-px max-sm:w-full"
-  />
-  <a
-    className="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/10"
-    href="/services"
-  >
-    See How We Work
-  </a>
-</div>
-          </>
-        ),
-      },
-      {
-        imageUrl: "/Services/Rectangle_52.webp",
-        description: (
-          <>
-            <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
-              What Are Google Search Ads
-            </h2>
+                <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
+                  <a
+                    className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15"
+                    href="/contact"
+                  >
+                    Get a Free Campaign Audit
+                  </a>
+                  <span
+                    aria-hidden="true"
+                    className="h-10 w-px bg-white/30 max-sm:h-px max-sm:w-full"
+                  />
+                  <a
+                    className="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/10"
+                    href="/services"
+                  >
+                    See How We Work
+                  </a>
+                </div>
+              </>
+            ),
+          },
+          {
+            imageUrl: "/services/Rectangle_52.webp",
+            description: (
+              <>
+                <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
+                  What Are Google Search Ads
+                </h2>
 
-            <h3 className="text-2xl text-white">The Most Direct Path From Search to Sale</h3>
+                <h3 className="text-2xl text-white">
+                  The Most Direct Path From Search to Sale
+                </h3>
 
-            <div className="space-y-2">
-              <span><b>Show Up When It Matters</b></span>
-            <p>Google Search Ads place your business at the very top of results for keywords your customers are actively searching. Your audience already has intent; you’re there at the exact moment they’re ready to decide.</p>
+                <div className="space-y-2">
+                  <span>
+                    <b>Show Up When It Matters</b>
+                  </span>
+                  <p>
+                    Google Search Ads place your business at the very top of
+                    results for keywords your customers are actively searching.
+                    Your audience already has intent; you’re there at the exact
+                    moment they’re ready to decide.
+                  </p>
 
-            <span><b>High Intent Traffic Only</b></span>
-            <p>Every click comes from someone looking for what you offer. No passive scrolling, no wasted impressions, just real potential customers with a reason to be on your page.</p>
+                  <span>
+                    <b>High Intent Traffic Only</b>
+                  </span>
+                  <p>
+                    Every click comes from someone looking for what you offer.
+                    No passive scrolling, no wasted impressions, just real
+                    potential customers with a reason to be on your page.
+                  </p>
 
-            <span><b>Full Budget Control</b></span>
-            <p>You control spending, scheduling, and targeting. Scale up when it works, pause when needed, no minimum commitments.</p>
+                  <span>
+                    <b>Full Budget Control</b>
+                  </span>
+                  <p>
+                    You control spending, scheduling, and targeting. Scale up
+                    when it works, pause when needed, no minimum commitments.
+                  </p>
 
-            <span><b>Measurable to the Dollar</b></span>
-            <p>Track every click, lead, and sale. Google Ads is one of the most transparent paid channels, so you always know exactly what your investment delivers.</p>
+                  <span>
+                    <b>Measurable to the Dollar</b>
+                  </span>
+                  <p>
+                    Track every click, lead, and sale. Google Ads is one of the
+                    most transparent paid channels, so you always know exactly
+                    what your investment delivers.
+                  </p>
 
-            <span><b>Fast Results</b></span>
-            <p>Unlike SEO, which takes months, Google Ads can put you at the top of search results within days. Perfect for businesses that need qualified leads now.</p>
+                  <span>
+                    <b>Fast Results</b>
+                  </span>
+                  <p>
+                    Unlike SEO, which takes months, Google Ads can put you at
+                    the top of search results within days. Perfect for
+                    businesses that need qualified leads now.
+                  </p>
 
-            <span><b>Why Most Ads Fail, And How We Fix It</b></span>
-            <p>Poorly structured campaigns, broad keywords burning budget, missing negative keyword lists, or ad copy that clicks but doesn’t convert are the real reasons Google Ads underperforms. We fix all of it, often in the first month.</p>
-            </div>
+                  <span>
+                    <b>Why Most Ads Fail, And How We Fix It</b>
+                  </span>
+                  <p>
+                    Poorly structured campaigns, broad keywords burning budget,
+                    missing negative keyword lists, or ad copy that clicks but
+                    doesn’t convert are the real reasons Google Ads
+                    underperforms. We fix all of it, often in the first month.
+                  </p>
+                </div>
 
-            {/* <ul className="mt-3">
+                {/* <ul className="mt-3">
               <li className="flex items-start gap-2 md:gap-3 mb-2">
                 <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
                 <span className="font-semibold">Custom Theme Nothing Borrowed</span>
@@ -8972,7 +9882,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
                 </span>
               </li>
             </ul> */}
-            {/* <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
+                {/* <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
   <a
     className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15"
     href="/contact"
@@ -8990,10 +9900,10 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
     See What We Build
   </a>
 </div> */}
-          </>
-        ),
-      },
-      ],
+              </>
+            ),
+          },
+        ],
         easyExperienceData: {
           eyebrow: <>Easy Experience</>,
           headingLine1: <>Campaign Types We Manage at Aussie Digital</>,
@@ -9001,146 +9911,184 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
           cards: [
             {
               title: "One Focused Team.",
-              description:
-                <>Google Ads isn't one thing; it's a range of campaign types that serve different goals. We manage all of them and recommend only the ones that make sense for your business, your budget, and where your customers are in their buying journey.</>,
-              icon: (<RiTeamFill color="#4C8C74" size={40} />),
+              description: (
+                <>
+                  Google Ads isn't one thing; it's a range of campaign types
+                  that serve different goals. We manage all of them and
+                  recommend only the ones that make sense for your business,
+                  your budget, and where your customers are in their buying
+                  journey.
+                </>
+              ),
+              icon: <RiTeamFill color="#4C8C74" size={40} />,
             },
             {
               title: "Google Search Campaigns",
-              description:
-                <>The foundation of most PPC strategies. Text ads that appear when someone searches your target keywords, built around purchase intent and designed to drive calls, form fills, and direct sales from high-intent Australian searchers.</>,
-              icon: (<CiSearch color="#4C8C74" size={40} />),
+              description: (
+                <>
+                  The foundation of most PPC strategies. Text ads that appear
+                  when someone searches your target keywords, built around
+                  purchase intent and designed to drive calls, form fills, and
+                  direct sales from high-intent Australian searchers.
+                </>
+              ),
+              icon: <CiSearch color="#4C8C74" size={40} />,
             },
             {
               title: "Google Shopping Ads",
-              description:
-                <>For eCommerce businesses, product listing ads show your image, price, and name right at the top of search results. We manage product feed optimisation, bidding strategy, and campaign segmentation to maximise your return on ad spend.</>,
-              icon: (<CiShoppingCart color="#4C8C74" size={40} />),
+              description: (
+                <>
+                  For eCommerce businesses, product listing ads show your image,
+                  price, and name right at the top of search results. We manage
+                  product feed optimisation, bidding strategy, and campaign
+                  segmentation to maximise your return on ad spend.
+                </>
+              ),
+              icon: <CiShoppingCart color="#4C8C74" size={40} />,
             },
             {
               title: "Display & Remarketing",
-              description:
-                <>Most visitors do not use your service the first time. Remarketing brings them back, targeting people who visited your site, viewed specific pages, or abandoned a cart. We build retargeting audiences that recover lost intent and keep your brand in front of warm prospects.</>,
-              icon: (<FaDisplay color="#4C8C74" size={40} />),
+              description: (
+                <>
+                  Most visitors do not use your service the first time.
+                  Remarketing brings them back, targeting people who visited
+                  your site, viewed specific pages, or abandoned a cart. We
+                  build retargeting audiences that recover lost intent and keep
+                  your brand in front of warm prospects.
+                </>
+              ),
+              icon: <FaDisplay color="#4C8C74" size={40} />,
             },
             {
               title: "Local Search & Service Ads",
-              description:
-                <>For Australian businesses serving specific cities, suburbs, or regions. We set up location targeted campaigns and Google Local Service Ads that put you in front of buyers in your actual service area, not people two states away.</>,
-              icon: (<LuTv color="#4C8C74" size={40} />),
+              description: (
+                <>
+                  For Australian businesses serving specific cities, suburbs, or
+                  regions. We set up location targeted campaigns and Google
+                  Local Service Ads that put you in front of buyers in your
+                  actual service area, not people two states away.
+                </>
+              ),
+              icon: <LuTv color="#4C8C74" size={40} />,
             },
             {
               title: "Performance Max Campaigns",
-              description:
-                <>Google's AI-powered campaign type runs across Search, Display, YouTube, Gmail, and Maps from a single campaign. We structure PMax campaigns properly so Google's automation works for your budget rather than against it.</>,
-              icon: (<IoSpeedometerOutline color="#4C8C74" size={40} />),
+              description: (
+                <>
+                  Google's AI-powered campaign type runs across Search, Display,
+                  YouTube, Gmail, and Maps from a single campaign. We structure
+                  PMax campaigns properly so Google's automation works for your
+                  budget rather than against it.
+                </>
+              ),
+              icon: <IoSpeedometerOutline color="#4C8C74" size={40} />,
             },
             {
               title: "B2B Google Ads Management",
-              description:
-                <>B2B campaigns need a new and unique approach, longer buying cycles, decision maker targeting, higher value keywords, and lead quality over volume. The idea we follow is to build B2B Google Ads strategies that reach the right professionals at the right stage of their decision making.</>,
-              icon: (<BiReflectVertical color="#4C8C74" size={40} />),
+              description: (
+                <>
+                  B2B campaigns need a new and unique approach, longer buying
+                  cycles, decision maker targeting, higher value keywords, and
+                  lead quality over volume. The idea we follow is to build B2B
+                  Google Ads strategies that reach the right professionals at
+                  the right stage of their decision making.
+                </>
+              ),
+              icon: <BiReflectVertical color="#4C8C74" size={40} />,
             },
           ],
         },
         ctaData: {
-        badgeText: "Free Google Ads Audit at Aussie Digital Solution",
-        title: "Find Out Exactly Where",
-        highlightedTitle: "Your Ad Budget Is Being Wasted",
-        description:
-        "We'll audit your existing Google Ads account and show you what's leaking spend, or build a campaign plan from scratch if you're just getting started. Free, honest, no pressure.",
-        primaryAction: {
-          label: "Book a Free Audit",
-          href: "/contact",
+          badgeText: "Free Google Ads Audit at Aussie Digital Solution",
+          title: "Find Out Exactly Where",
+          highlightedTitle: "Your Ad Budget Is Being Wasted",
+          description:
+            "We'll audit your existing Google Ads account and show you what's leaking spend, or build a campaign plan from scratch if you're just getting started. Free, honest, no pressure.",
+          primaryAction: {
+            label: "Book a Free Audit",
+            href: "/contact",
+          },
+          secondaryAction: {
+            label: "View Packages",
+            href: "/packages",
+          },
+          trustItems: [],
         },
-        secondaryAction: {
-          label: "View Packages",
-          href: "/packages",
-        },
-        trustItems: [
-        ],
-      },
-      strategicHeading: <>
-      <p className="text-xl text-[#4C8C74]">
-        Our Strategic Services
-      </p>
-      <div className="font-semibold text-white mt-2">How We Actually Drive Google Ads Performance</div>
-      </>,
-//     strategicHeadingText: (
-//       <div className="mt-3 mx-auto flex w-full justify-center px-4">
-//         <div className="w-full rounded-3xl border border-white/10 bg-white/5 px-6 py-6 text-center shadow-[0_18px_60px_rgba(0,0,0,0.18)] backdrop-blur-sm sm:px-10 sm:py-8">
-//           <h3 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
-//             Every Platform, One Focused Team.
-//           </h3>
-//           <p className="mx-auto mt-4 max-w-6xl text-sm leading-7 text-[#AAAAAA] sm:text-base">           
-// We do a lot more than just "managing ads." We build performance systems, with the strategy that is: the right message, on the right platform, in front of the right person, at the right time. 
-//           </p>
-//         </div>
-//       </div>
-//     ),
+        strategicHeading: (
+          <>
+            <p className="text-xl text-[#4C8C74]">Our Strategic Services</p>
+            <div className="font-semibold text-white mt-2">
+              How We Actually Drive Google Ads Performance
+            </div>
+          </>
+        ),
+        //     strategicHeadingText: (
+        //       <div className="mt-3 mx-auto flex w-full justify-center px-4">
+        //         <div className="w-full rounded-3xl border border-white/10 bg-white/5 px-6 py-6 text-center shadow-[0_18px_60px_rgba(0,0,0,0.18)] backdrop-blur-sm sm:px-10 sm:py-8">
+        //           <h3 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+        //             Every Platform, One Focused Team.
+        //           </h3>
+        //           <p className="mx-auto mt-4 max-w-6xl text-sm leading-7 text-[#AAAAAA] sm:text-base">
+        // We do a lot more than just "managing ads." We build performance systems, with the strategy that is: the right message, on the right platform, in front of the right person, at the right time.
+        //           </p>
+        //         </div>
+        //       </div>
+        //     ),
         strategicCardData: [
           {
             title: "Conversion Tracking",
             desc: "Before any campaign goes live, we validate tracking to make sure every lead and sale is properly attributed.",
-            svg: (
-              <MdOutlineSpatialTracking size={40} color="#4C8C74" />
-            ),
+            svg: <MdOutlineSpatialTracking size={40} color="#4C8C74" />,
           },
           {
             title: "ROI-First Optimisation",
             desc: "We evaluate campaigns based on actual profitability,  factoring in cost per acquisition, margins, and customer value.",
-            svg: (
-              <MdFlipCameraAndroid size={40} color="#4C8C74" />
-            ),
+            svg: <MdFlipCameraAndroid size={40} color="#4C8C74" />,
           },
           {
             title: "Quality Score Optimisation",
             desc: "We improve your Quality Score by aligning keywords, ad copy, and landing pages.",
-            svg: (
-              <GrScorecard size={40} color="#4C8C74" />
-            ),
+            svg: <GrScorecard size={40} color="#4C8C74" />,
           },
           {
             title: "Continuous Testing Framework",
             desc: "Every campaign runs on ongoing testing. We continuously test: Ad headlines and descriptions, Landing page variations, and Bidding strategies",
-            svg: (
-              <VscDebugContinue size={40} color="#4C8C74" />
-            ),
+            svg: <VscDebugContinue size={40} color="#4C8C74" />,
           },
           {
             title: "Full-Funnel Attribution",
             desc: "We use attribution models to understand how different touchpoints contribute to conversions.",
-            svg: (
-              <IoIosFunnel size={40} color="#4C8C74" />
-            ),
+            svg: <IoIosFunnel size={40} color="#4C8C74" />,
           },
           {
             title: "Clear Reporting",
             desc: "We combine ad data with user behaviour insights to show what happens after the click.",
-            svg: (
-              <VscReport size={40} color="#4C8C74" />
-            ),
+            svg: <VscReport size={40} color="#4C8C74" />,
           },
           {
             title: "Search Terms & Keyword Control",
             desc: "We continuously analyse real search queries triggering your ads, not just your keyword list.",
-            svg: (
-              <CiSearch size={40} color="#4C8C74" />
-            ),
+            svg: <CiSearch size={40} color="#4C8C74" />,
           },
         ],
-        processHeading: <>From Audit to Live Campaigns in Three Focused Steps</>,
-        processPara: (
-          <>
-          </>
+        processHeading: (
+          <>From Audit to Live Campaigns in Three Focused Steps</>
         ),
+        processPara: <></>,
         processCardData: [
           {
             image: "/Services/01.svg",
             heading: "Audit, Research & Campaign Strategy",
             paragraph: (
               <>
-                Aussie research team starts by reviewing your existing account or researching your market from scratch. Our team audits campaign structure, keyword lists, ad copy, quality scores, conversion tracking, and what competitors are doing. After that, we move towards creating a clear strategy, which keywords to target, which campaign types make sense, what budget allocation is realistic, and what success looks like. You see the full plan before a dollar is spent.
+                Aussie research team starts by reviewing your existing account
+                or researching your market from scratch. Our team audits
+                campaign structure, keyword lists, ad copy, quality scores,
+                conversion tracking, and what competitors are doing. After that,
+                we move towards creating a clear strategy, which keywords to
+                target, which campaign types make sense, what budget allocation
+                is realistic, and what success looks like. You see the full plan
+                before a dollar is spent.
               </>
             ),
           },
@@ -9149,7 +10097,13 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
             heading: "Campaign Build, Ad Creation & Launch",
             paragraph: (
               <>
-                Our initial step includes building the account structure, writing the ad copy, setting up conversion tracking, configuring bidding strategies, and creating the negative keyword list. Everything is reviewed internally before campaigns go live. We don't launch until tracking is confirmed working, because a campaign without proper attribution is just guesswork with a budget attached to it.
+                Our initial step includes building the account structure,
+                writing the ad copy, setting up conversion tracking, configuring
+                bidding strategies, and creating the negative keyword list.
+                Everything is reviewed internally before campaigns go live. We
+                don't launch until tracking is confirmed working, because a
+                campaign without proper attribution is just guesswork with a
+                budget attached to it.
               </>
             ),
           },
@@ -9158,82 +10112,122 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
             heading: "Optimise, Report & Scale",
             paragraph: (
               <>
-                Once live, we optimise weekly, reviewing search term reports, adjusting bids, testing new copy, refining audiences, and cutting waste. Monthly reporting shows cost-per-lead, ROAS, and conversion volume in plain language. As performance improves, we scale what's working and reinvest budget into the campaigns that are delivering the best return.
+                Once live, we optimise weekly, reviewing search term reports,
+                adjusting bids, testing new copy, refining audiences, and
+                cutting waste. Monthly reporting shows cost-per-lead, ROAS, and
+                conversion volume in plain language. As performance improves, we
+                scale what's working and reinvest budget into the campaigns that
+                are delivering the best return.
               </>
             ),
           },
         ],
         pricingCardData: [
-      {
-        title: "Basic Website Package",
-        price: "$229",
-        discountedFrom: "$499",
-        includes: [
-          "2 Custom Logo Design Concepts",
-          "1 Dedicated Designer",
-          "4 REVISIONS",
-          "48 to 72 hours TAT",
-          "100% Unique Design Guarantee",
-          "100% Satisfaction Guarantee",
-          "100% Ownership Rights",
-          "100% Money Back Guarantee",
-        ],
-      },
-      {
-        title: "Basic Website Package",
-        price: "$229",
-        discountedFrom: "$499",
-        includes: [
-          "5 Custom Logo Design Concepts",
-          "By 2 Designers",
-          "UNLIMITED Revisions",
-          "48 to 72 hours TAT",
-          "100% Unique Design Guarantee",
-          "100% Satisfaction Guarantee",
-          "100% Ownership Rights",
-          "100% Money Back Guarantee",
-        ],
-      },
-      {
-        title: "Basic Website Package",
-        price: "$229",
-        discountedFrom: "$499",
-        includes: [
-          "UNLIMITED Logo Design Concepts",
-          "By 4 Designers",
-          "UNLIMITED Revisions",
-          "Stationary Design (Business Card, Letterhead, Envelope)",
-          "48 to 72 hours TAT",
-          "FREE MS Word Letterhead",
-          "All Final Files Format (AI, PSD, EPS, PNG, GIF, jpeg, PDF)",
-        ],
-      },
+          {
+            title: "Basic Website Package",
+            price: "$229",
+            discountedFrom: "$499",
+            includes: [
+              "2 Custom Logo Design Concepts",
+              "1 Dedicated Designer",
+              "4 REVISIONS",
+              "48 to 72 hours TAT",
+              "100% Unique Design Guarantee",
+              "100% Satisfaction Guarantee",
+              "100% Ownership Rights",
+              "100% Money Back Guarantee",
+            ],
+          },
+          {
+            title: "Basic Website Package",
+            price: "$229",
+            discountedFrom: "$499",
+            includes: [
+              "5 Custom Logo Design Concepts",
+              "By 2 Designers",
+              "UNLIMITED Revisions",
+              "48 to 72 hours TAT",
+              "100% Unique Design Guarantee",
+              "100% Satisfaction Guarantee",
+              "100% Ownership Rights",
+              "100% Money Back Guarantee",
+            ],
+          },
+          {
+            title: "Basic Website Package",
+            price: "$229",
+            discountedFrom: "$499",
+            includes: [
+              "UNLIMITED Logo Design Concepts",
+              "By 4 Designers",
+              "UNLIMITED Revisions",
+              "Stationary Design (Business Card, Letterhead, Envelope)",
+              "48 to 72 hours TAT",
+              "FREE MS Word Letterhead",
+              "All Final Files Format (AI, PSD, EPS, PNG, GIF, jpeg, PDF)",
+            ],
+          },
         ],
         customplanData: {
           heading: "Why Work With Aussie Digital Solution",
           buttonText: "Book a consultation call to create your perfect plan",
           body: (
             <div className="space-y-2">
-            <h3 className="text-2xl text-white">We Optimise for Revenue. Not Just Clicks.</h3>
-            <p>There's no shortage of PPC management agencies in Australia. Here's what actually separates the ones that grow your business from the ones that just manage your account and send monthly reports.</p>
+              <h3 className="text-2xl text-white">
+                We Optimise for Revenue. Not Just Clicks.
+              </h3>
+              <p>
+                There's no shortage of PPC management agencies in Australia.
+                Here's what actually separates the ones that grow your business
+                from the ones that just manage your account and send monthly
+                reports.
+              </p>
 
-              <span className="font-semibold">Revenue-Focused, Not Metric-Focused</span>
-              <p>Every campaign decision is made with your actual revenue outcome as the only benchmark.</p>
+              <span className="font-semibold">
+                Revenue-Focused, Not Metric-Focused
+              </span>
+              <p>
+                Every campaign decision is made with your actual revenue outcome
+                as the only benchmark.
+              </p>
 
               <span className="font-semibold">Australian Market Knowledge</span>
-              <p>We understand Australian search behaviour, local bidding dynamics, and the seasonal and geographic factors that affect Google Ads performance in the Australian market. That context shapes a better strategy.</p>
-              
-              <span className="font-semibold">Dedicated In-House Google Ads Team</span>
-              <p>Your account is managed by our own Google Ads specialists optimising it every week.</p>
+              <p>
+                We understand Australian search behaviour, local bidding
+                dynamics, and the seasonal and geographic factors that affect
+                Google Ads performance in the Australian market. That context
+                shapes a better strategy.
+              </p>
 
-              <span className="font-semibold">Flat Fee, Not a Percentage of Spend</span>
-              <p>You have access to your own Google Ads account. You see everything we're doing and why.</p>
+              <span className="font-semibold">
+                Dedicated In-House Google Ads Team
+              </span>
+              <p>
+                Your account is managed by our own Google Ads specialists
+                optimising it every week.
+              </p>
+
+              <span className="font-semibold">
+                Flat Fee, Not a Percentage of Spend
+              </span>
+              <p>
+                You have access to your own Google Ads account. You see
+                everything we're doing and why.
+              </p>
 
               <span className="font-semibold">Full Account Transparency</span>
-              <p>You have access to your own Google Ads account. You see everything we're doing and why.</p>
+              <p>
+                You have access to your own Google Ads account. You see
+                everything we're doing and why.
+              </p>
 
               <span className="font-semibold">No Lock-In Contracts</span>
-              <p>Month-to-month Google Ads management. We keep your business because results keep improving, not because you're stuck in a 12-month agreement that's expensive to exit if things aren't working.</p>
+              <p>
+                Month-to-month Google Ads management. We keep your business
+                because results keep improving, not because you're stuck in a
+                12-month agreement that's expensive to exit if things aren't
+                working.
+              </p>
 
               {/* <ul className="list-disc list-inside mt-2">
                 <li>Custom Design That Reflects Your Brand</li>
@@ -9245,21 +10239,39 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
               </ul> */}
             </div>
           ),
-          rightContent: <><h3 className="text-2xl text-white mt-3">With Aussie Digital Solution</h3>
-          <p className="text-sm"></p>
-          <ul className="list-disc list-inside mt-1 text-sm">
-            <li>Tightly structured campaigns targeting only buyers with real intent</li>
-            <li>Keyword strategy built around commercial terms that actually convert</li>
-            <li>Ad copy written to stand out and move people to take action</li>
-            <li>Comprehensive negative keyword management from week one</li>
-            <li>Full conversion tracking;  every lead and sale properly attributed</li>
-            <li>Clear monthly reports; cost-per-lead, ROAS, and revenue</li>
-          </ul></>,
+          rightContent: (
+            <>
+              <h3 className="text-2xl text-white mt-3">
+                With Aussie Digital Solution
+              </h3>
+              <p className="text-sm"></p>
+              <ul className="list-disc list-inside mt-1 text-sm">
+                <li>
+                  Tightly structured campaigns targeting only buyers with real
+                  intent
+                </li>
+                <li>
+                  Keyword strategy built around commercial terms that actually
+                  convert
+                </li>
+                <li>
+                  Ad copy written to stand out and move people to take action
+                </li>
+                <li>Comprehensive negative keyword management from week one</li>
+                <li>
+                  Full conversion tracking; every lead and sale properly
+                  attributed
+                </li>
+                <li>Clear monthly reports; cost-per-lead, ROAS, and revenue</li>
+              </ul>
+            </>
+          ),
           miniTagData: <></>,
         },
         faqData: [
           {
-            question: "How much budget do I need to start Google Ads in Australia?",
+            question:
+              "How much budget do I need to start Google Ads in Australia?",
             answer:
               "It basically depends on your industry and competition. Some businesses can start with a modest daily budget, while competitive sectors require more to generate results. We’ll recommend a realistic budget based on your specific keywords during your strategy call.",
           },
@@ -9303,12 +10315,24 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
         contactData: {
-        heading: (<>Let's Start Growing</>),
-        body: (<><h3 className="text-2xl font-semibold">Your Competitors Are Running<br />Google Ads Right Now.</h3>
-        <p>Every day without a properly managed Google Ads campaign is qualified search traffic going to someone else. One of our PPC specialists will get back to you within one business day. No scripts, no pressure, just a real conversation.</p>
-        </>),
-        buttonText: "Book a Free Audit",
-      },
+          heading: <>Let's Start Growing</>,
+          body: (
+            <>
+              <h3 className="text-2xl font-semibold">
+                Your Competitors Are Running
+                <br />
+                Google Ads Right Now.
+              </h3>
+              <p>
+                Every day without a properly managed Google Ads campaign is
+                qualified search traffic going to someone else. One of our PPC
+                specialists will get back to you within one business day. No
+                scripts, no pressure, just a real conversation.
+              </p>
+            </>
+          ),
+          buttonText: "Book a Free Audit",
+        },
       },
 
       // YT ads
@@ -9316,16 +10340,24 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
         slug: "youtube-ads",
         title: "YouTube Ads Management",
         // heading: "eCommerce Website Development in Australia",
-       serviceBodyData: [
-      {
-        imageUrl: "/Services/Rectangle_52.webp",
-        description: (
-          <>
-            <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
-              Two Billion People Watch YouTube Daily. Are Any of Them Seeing You?
-            </h2>
-            <p>YouTube is the second-largest search engine on the planet, and most Australian businesses are leaving it completely untouched. Our team of professionals creates and manages YouTube Ads campaigns that reach your exact audience at the right moment, with video creatives that stop the scroll and a strategy that turns views into customers.</p>
-            {/* <ul className="mt-3">
+        serviceBodyData: [
+          {
+            imageUrl: "/services/Rectangle_52.webp",
+            description: (
+              <>
+                <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
+                  Two Billion People Watch YouTube Daily. Are Any of Them Seeing
+                  You?
+                </h2>
+                <p>
+                  YouTube is the second-largest search engine on the planet, and
+                  most Australian businesses are leaving it completely
+                  untouched. Our team of professionals creates and manages
+                  YouTube Ads campaigns that reach your exact audience at the
+                  right moment, with video creatives that stop the scroll and a
+                  strategy that turns views into customers.
+                </p>
+                {/* <ul className="mt-3">
               <li className="flex items-start gap-2 md:gap-3 mb-2">
                 <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
                 <div className="flex flex-col"><span className="font-semibold">More Than an Online Store: A Revenue Engine.</span>
@@ -9357,62 +10389,69 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
                 </span>
               </li>
             </ul> */}
-            <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
-  <a
-    className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15"
-    href="/contact"
-  >
-    Get a Free YouTube Audit
-  </a>
-  <span
-    aria-hidden="true"
-    className="h-10 w-px bg-white/30 max-sm:h-px max-sm:w-full"
-  />
-  <a
-    className="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/10"
-    href="/services"
-  >
-    See How We Work
-  </a>
-</div>
-          </>
-        ),
-      },
-      {
-        imageUrl: "/Services/Rectangle_52.webp",
-        description: (
-          <>
-            <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
-              What Are YouTube Ads
-            </h2>
+                <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
+                  <a
+                    className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15"
+                    href="/contact"
+                  >
+                    Get a Free YouTube Audit
+                  </a>
+                  <span
+                    aria-hidden="true"
+                    className="h-10 w-px bg-white/30 max-sm:h-px max-sm:w-full"
+                  />
+                  <a
+                    className="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/10"
+                    href="/services"
+                  >
+                    See How We Work
+                  </a>
+                </div>
+              </>
+            ),
+          },
+          {
+            imageUrl: "/services/Rectangle_52.webp",
+            description: (
+              <>
+                <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
+                  What Are YouTube Ads
+                </h2>
 
-            <div className="space-y-2">
-            <p>YouTube Ads are video campaigns that reach your audience based on what they watch, search, and are interested in. When structured properly, they become one of the most effective ways to build trust and drive conversions.</p>
-            </div>
+                <div className="space-y-2">
+                  <p>
+                    YouTube Ads are video campaigns that reach your audience
+                    based on what they watch, search, and are interested in.
+                    When structured properly, they become one of the most
+                    effective ways to build trust and drive conversions.
+                  </p>
+                </div>
 
-            <ul className="mt-3">
-              <li className="flex items-start gap-2 md:gap-3 mb-2">
-                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
-                <span className="font-semibold">Reach High-Intent Audiences</span>
-              </li>
-              <li className="flex items-start gap-2 md:gap-3 mb-2">
-                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
-                <span className="font-semibold">Build Trust Faster Than Any Other Format</span>
-              </li>
-              <li className="flex items-start gap-2 md:gap-3 mb-2">
-                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
-                <span className="font-semibold">
-                  You Only Pay for Engaged Views
-                </span>
-              </li>
-              <li className="flex items-start gap-2 md:gap-3 mb-2">
-                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
-                <span className="font-semibold">
-                  Full Funnel Coverage
-                </span>
-              </li>
-            </ul>
-            {/* <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
+                <ul className="mt-3">
+                  <li className="flex items-start gap-2 md:gap-3 mb-2">
+                    <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                    <span className="font-semibold">
+                      Reach High-Intent Audiences
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2 md:gap-3 mb-2">
+                    <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                    <span className="font-semibold">
+                      Build Trust Faster Than Any Other Format
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2 md:gap-3 mb-2">
+                    <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                    <span className="font-semibold">
+                      You Only Pay for Engaged Views
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2 md:gap-3 mb-2">
+                    <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                    <span className="font-semibold">Full Funnel Coverage</span>
+                  </li>
+                </ul>
+                {/* <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
   <a
     className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15"
     href="/contact"
@@ -9430,63 +10469,72 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
     See What We Build
   </a>
 </div> */}
-          </>
-        ),
-      },
-      ],
-      serviceBodyData2: [
-      {
-        imageUrl: "/Services/Rectangle_52.webp",
-        description: (
-          <>
-            <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
-              Why Work With Us
-            </h2>
-            <p><b>Views Are Nice.</b><br />
-<b>Revenue Is Better.</b><br />
-Most YouTube Ads agencies focus on view counts. We focus on what those views produce for your business. Here's what makes us different.
-</p>
-            <ul className="mt-3">
-              <li className="flex items-start gap-2 md:gap-3 mb-2">
-                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
-                <span className="font-semibold">We Optimise for Revenue, Not Views</span>
-              </li>
-              <li className="flex items-start gap-2 md:gap-3 mb-2">
-                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
-                <span className="font-semibold">We Write the Scripts</span>
-              </li>
-              <li className="flex items-start gap-2 md:gap-3 mb-2">
-                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
-                <span className="font-semibold">
-                  Built for Australian Audiences
-                </span>
-              </li>
-              <li className="flex items-start gap-2 md:gap-3 mb-2">
-                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
-                <span className="font-semibold">
-                  Full Funnel, Not Just One Ad
-                </span>
-              </li>
-              <li className="flex items-start gap-2 md:gap-3 mb-2">
-                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
-                <span className="font-semibold">
-                  Flat Fee Management
-                </span>
-              </li>
-              <li className="flex items-start gap-2 md:gap-3 mb-2">
-                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
-                <span className="font-semibold">
-                  No Lock-In Contracts
-                </span>
-              </li>
-            </ul>
+              </>
+            ),
+          },
+        ],
+        serviceBodyData2: [
+          {
+            imageUrl: "/services/Rectangle_52.webp",
+            description: (
+              <>
+                <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
+                  Why Work With Us
+                </h2>
+                <p>
+                  <b>Views Are Nice.</b>
+                  <br />
+                  <b>Revenue Is Better.</b>
+                  <br />
+                  Most YouTube Ads agencies focus on view counts. We focus on
+                  what those views produce for your business. Here's what makes
+                  us different.
+                </p>
+                <ul className="mt-3">
+                  <li className="flex items-start gap-2 md:gap-3 mb-2">
+                    <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                    <span className="font-semibold">
+                      We Optimise for Revenue, Not Views
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2 md:gap-3 mb-2">
+                    <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                    <span className="font-semibold">We Write the Scripts</span>
+                  </li>
+                  <li className="flex items-start gap-2 md:gap-3 mb-2">
+                    <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                    <span className="font-semibold">
+                      Built for Australian Audiences
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2 md:gap-3 mb-2">
+                    <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                    <span className="font-semibold">
+                      Full Funnel, Not Just One Ad
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2 md:gap-3 mb-2">
+                    <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                    <span className="font-semibold">Flat Fee Management</span>
+                  </li>
+                  <li className="flex items-start gap-2 md:gap-3 mb-2">
+                    <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                    <span className="font-semibold">No Lock-In Contracts</span>
+                  </li>
+                </ul>
 
-            <h3 className="text-2xl text-white">Our YouTube Ads Results</h3>
-            <p>Do the Talking, We've run YouTube Ads campaigns for Australian businesses across home services, e-commerce, professional services, health, and B2B. Ask us for performance examples from your industry, and we'll share real data before you commit to anything.</p>
-          </>
-        ),
-      },
-      ],
+                <h3 className="text-2xl text-white">Our YouTube Ads Results</h3>
+                <p>
+                  Do the Talking, We've run YouTube Ads campaigns for Australian
+                  businesses across home services, e-commerce, professional
+                  services, health, and B2B. Ask us for performance examples
+                  from your industry, and we'll share real data before you
+                  commit to anything.
+                </p>
+              </>
+            ),
+          },
+        ],
         easyExperienceData: {
           eyebrow: <>YouTube Ad Formats We Run</>,
           headingLine1: <>Every YouTube Format</>,
@@ -9494,131 +10542,154 @@ Most YouTube Ads agencies focus on view counts. We focus on what those views pro
           cards: [
             {
               title: "Used With Purpose",
-              description:
-                <>We use the right format for the right stage of the customer journey, and we manage all of them properly.</>,
-              icon: (<RiTeamFill color="#4C8C74" size={40} />),
+              description: (
+                <>
+                  We use the right format for the right stage of the customer
+                  journey, and we manage all of them properly.
+                </>
+              ),
+              icon: <RiTeamFill color="#4C8C74" size={40} />,
             },
             {
               title: "Skippable In-Stream Ads",
-              description:
-                <>These ads show up before or during YouTube videos and can be skipped after five seconds. They’re versatile, measurable, and work well for both awareness and conversions, as long as your creative grabs attention fast.<br />
-                With TrueView bidding, you only pay when someone watches 30 seconds or more, or clicks, so your budget goes to viewers who actually care, not just passive impressions.</>,
-              icon: (<LuTv color="#4C8C74" size={40} />),
+              description: (
+                <>
+                  These ads show up before or during YouTube videos and can be
+                  skipped after five seconds. They’re versatile, measurable, and
+                  work well for both awareness and conversions, as long as your
+                  creative grabs attention fast.
+                  <br />
+                  With TrueView bidding, you only pay when someone watches 30
+                  seconds or more, or clicks, so your budget goes to viewers who
+                  actually care, not just passive impressions.
+                </>
+              ),
+              icon: <LuTv color="#4C8C74" size={40} />,
             },
             {
               title: "Bumper Ads",
-              description:
-                <>Short, sharp, and impossible to skip. These ads don’t tell a full story — they deliver one clear message. Perfect for reinforcing your brand and staying top of mind. We use them alongside longer ads to retarget warm audiences and keep visibility high when people aren’t ready to convert yet.</>,
-              icon: (<FaFunnelDollar color="#4C8C74" size={40} />),
+              description: (
+                <>
+                  Short, sharp, and impossible to skip. These ads don’t tell a
+                  full story — they deliver one clear message. Perfect for
+                  reinforcing your brand and staying top of mind. We use them
+                  alongside longer ads to retarget warm audiences and keep
+                  visibility high when people aren’t ready to convert yet.
+                </>
+              ),
+              icon: <FaFunnelDollar color="#4C8C74" size={40} />,
             },
             {
               title: "In-Feed Video Ads",
-              description:
-                <>These show up in search results, the homepage, and related videos — looking like organic content. They reach people who are already browsing or researching, so the intent is higher. We optimize thumbnails and titles to attract attention and drive clicks at the consideration stage.</>,
-              icon: (<MdCampaign color="#4C8C74" size={40} />),
+              description: (
+                <>
+                  These show up in search results, the homepage, and related
+                  videos — looking like organic content. They reach people who
+                  are already browsing or researching, so the intent is higher.
+                  We optimize thumbnails and titles to attract attention and
+                  drive clicks at the consideration stage.
+                </>
+              ),
+              icon: <MdCampaign color="#4C8C74" size={40} />,
             },
             {
               title: "YouTube Remarketing Campaigns",
-              description:
-                <>We target people who’ve already watched, visited, or engaged with your brand, the ones most likely to convert. Different ads are shown based on where they are in the journey.<br />
-                We also connect this with your Google Ads setup for full-funnel remarketing that gets stronger over time.</>,
-              icon: (<TbReport color="#4C8C74" size={40} />),
+              description: (
+                <>
+                  We target people who’ve already watched, visited, or engaged
+                  with your brand, the ones most likely to convert. Different
+                  ads are shown based on where they are in the journey.
+                  <br />
+                  We also connect this with your Google Ads setup for
+                  full-funnel remarketing that gets stronger over time.
+                </>
+              ),
+              icon: <TbReport color="#4C8C74" size={40} />,
             },
           ],
         },
         ctaData: {
-        badgeText: "Free YouTube Ads Audit",
-        title: "Let's See What YouTube Ads",
-        highlightedTitle: "Could Actually Do for Your Business",
-        description:
-        "We'll review your current setup, or build you a fresh strategy from scratch, and show you exactly where the opportunity is. Free, honest, no pressure.",
-        primaryAction: {
-          label: "Book a Free Audit",
-          href: "/contact",
+          badgeText: "Free YouTube Ads Audit",
+          title: "Let's See What YouTube Ads",
+          highlightedTitle: "Could Actually Do for Your Business",
+          description:
+            "We'll review your current setup, or build you a fresh strategy from scratch, and show you exactly where the opportunity is. Free, honest, no pressure.",
+          primaryAction: {
+            label: "Book a Free Audit",
+            href: "/contact",
+          },
+          secondaryAction: {
+            label: "View Packages",
+            href: "/services",
+          },
+          trustItems: [],
         },
-        secondaryAction: {
-          label: "View Packages",
-          href: "/services",
-        },
-        trustItems: [
-        ],
-      },
-      strategicHeading: <div className="font-semibold">What You Get With Our YouTube Ads Management Service</div>,
-      strategicHeadingText: (
-        <div className="mt-3 mx-auto flex w-full justify-center px-4">
-          <div className="w-full rounded-3xl border border-white/10 bg-white/5 px-6 py-6 text-center shadow-[0_18px_60px_rgba(0,0,0,0.18)] backdrop-blur-sm sm:px-10 sm:py-8">
-            {/* <h3 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
-              Every Platform, One Focused Team.
-            </h3> */}
-            <p className="mx-auto mt-4 max-w-6xl text-sm leading-7 text-[#AAAAAA] sm:text-base">           
-            YouTube Ads management isn't just uploading a video and hoping for the best. Here is what a well created campaign management actually includes, and what we deliver to every client. 
-            </p>
+        strategicHeading: (
+          <div className="font-semibold">
+            What You Get With Our YouTube Ads Management Service
           </div>
-        </div>
-      ),
+        ),
+        strategicHeadingText: (
+          <><p className="mx-auto text-center mt-4 max-w-6xl text-sm leading-7 text-[#AAAAAA] sm:text-base">
+                YouTube Ads management isn't just uploading a video and hoping
+                for the best. Here is what a well created campaign management
+                actually includes, and what we deliver to every client.
+              </p></>
+        ),
         strategicCardData: [
           {
             title: "Audience Research & Targeting Strategy",
             desc: "We identify your ideal viewers using Google's intent data, custom audiences, interest targeting, and remarketing lists, then structure campaigns so the right ad reaches the right person at the right stage.",
-            svg: (
-              <IoIosPeople color='#4C8C74' size={40} />
-            ),
+            svg: <IoIosPeople color="#4C8C74" size={40} />,
           },
           {
             title: "Landing Page Optimisation",
             desc: "We optimise your landing pages to match your ads and increase conversions, converting clicks into true leads and sales.",
-            svg: (
-              <RiPagesLine color='#4C8C74' size={40} />
-            ),
+            svg: <RiPagesLine color="#4C8C74" size={40} />,
           },
           {
             title: "Ad Script & Creative Direction",
             desc: "The first five seconds determine everything. We write scripts built to hook viewers immediately, with a clear message, a strong reason to keep watching, and a call to action that actually converts.",
-            svg: (
-              <MdDescription color='#4C8C74' size={40} />
-            ),
+            svg: <MdDescription color="#4C8C74" size={40} />,
           },
           {
             title: "Conversion & View Through Tracking",
             desc: "Before anything goes live, we set up full tracking, view through conversions, click conversions, and engagement metrics. Every decision is based on what's actually producing results, not just views.",
-            svg: (
-              <MdOutlineSpatialTracking color='#4C8C74' size={40} />
-            ),
+            svg: <MdOutlineSpatialTracking color="#4C8C74" size={40} />,
           },
           {
             title: "Weekly Campaign Optimisation",
             desc: "We review performance every week, adjusting bids, refining audience targeting, testing new creatives, and cutting placements that aren't converting. Performance improves because we actively make it.",
-            svg: (
-              <MdCampaign color='#4C8C74' size={40} />
-            ),
+            svg: <MdCampaign color="#4C8C74" size={40} />,
           },
           {
             title: "Transparent Monthly Reporting",
             desc: "Reports that tell you what matters, views, conversions, cost per result, and ROAS. Not a dashboard full of vanity metrics. Real numbers, real context, clear next steps.",
-            svg: (
-              <HiDocumentReport color='#4C8C74' size={40} />
-            ),
+            svg: <HiDocumentReport color="#4C8C74" size={40} />,
           },
           {
             title: "Full Funnel Campaign Structure",
             desc: "We build YouTube campaigns that map to each stage of your customer journey, awareness for cold audiences, consideration for warm ones, and conversion campaigns for those close to deciding.",
-            svg: (
-              <IoIosFunnel color='#4C8C74' size={40} />
-            ),
+            svg: <IoIosFunnel color="#4C8C74" size={40} />,
           },
         ],
-        processHeading: <>From Strategy to Live Campaigns in Three Clear Steps</>,
-        processPara: (
-          <>
-          </>
+        processHeading: (
+          <>From Strategy to Live Campaigns in Three Clear Steps</>
         ),
+        processPara: <></>,
         processCardData: [
           {
             image: "/Services/01.svg",
             heading: "Audience Research & Campaign Planning",
             paragraph: (
               <>
-                We start by understanding your business, your audience, and your goals. We research how your ideal customers behave on YouTube, what they watch, what they search for, and what intent signals they're giving off. From there, we build a full campaign plan: ad formats, funnel structure, audience layers, bidding strategy, and creative direction. You approve the plan before any ads go live.
+                We start by understanding your business, your audience, and your
+                goals. We research how your ideal customers behave on YouTube,
+                what they watch, what they search for, and what intent signals
+                they're giving off. From there, we build a full campaign plan:
+                ad formats, funnel structure, audience layers, bidding strategy,
+                and creative direction. You approve the plan before any ads go
+                live.
               </>
             ),
           },
@@ -9627,7 +10698,12 @@ Most YouTube Ads agencies focus on view counts. We focus on what those views pro
             heading: "Creative Development & Campaign Launch",
             paragraph: (
               <>
-                We write the ad scripts, provide creative direction for video production (or work with your existing video assets), and set up every campaign element properly, tracking, audience lists, placement exclusions, and bidding. Campaigns launch with full conversion tracking in place. No gaps, no guesswork on what's driving results from day one.
+                We write the ad scripts, provide creative direction for video
+                production (or work with your existing video assets), and set up
+                every campaign element properly, tracking, audience lists,
+                placement exclusions, and bidding. Campaigns launch with full
+                conversion tracking in place. No gaps, no guesswork on what's
+                driving results from day one.
               </>
             ),
           },
@@ -9636,56 +10712,62 @@ Most YouTube Ads agencies focus on view counts. We focus on what those views pro
             heading: "Monitor, Optimise & Scale",
             paragraph: (
               <>
-                Once live, we review performance weekly, audience performance, view rates, conversion data, and cost per result. We test creative variations, refine targeting, and scale what's working. Monthly reporting covers the numbers that actually matter to your business. As the campaigns learn and we optimise, performance compounds; the longer we run them, the better they get.
+                Once live, we review performance weekly, audience performance,
+                view rates, conversion data, and cost per result. We test
+                creative variations, refine targeting, and scale what's working.
+                Monthly reporting covers the numbers that actually matter to
+                your business. As the campaigns learn and we optimise,
+                performance compounds; the longer we run them, the better they
+                get.
               </>
             ),
           },
         ],
         pricingCardData: [
-      {
-        title: "Basic Website Package",
-        price: "$229",
-        discountedFrom: "$499",
-        includes: [
-          "2 Custom Logo Design Concepts",
-          "1 Dedicated Designer",
-          "4 REVISIONS",
-          "48 to 72 hours TAT",
-          "100% Unique Design Guarantee",
-          "100% Satisfaction Guarantee",
-          "100% Ownership Rights",
-          "100% Money Back Guarantee",
-        ],
-      },
-      {
-        title: "Basic Website Package",
-        price: "$229",
-        discountedFrom: "$499",
-        includes: [
-          "5 Custom Logo Design Concepts",
-          "By 2 Designers",
-          "UNLIMITED Revisions",
-          "48 to 72 hours TAT",
-          "100% Unique Design Guarantee",
-          "100% Satisfaction Guarantee",
-          "100% Ownership Rights",
-          "100% Money Back Guarantee",
-        ],
-      },
-      {
-        title: "Basic Website Package",
-        price: "$229",
-        discountedFrom: "$499",
-        includes: [
-          "UNLIMITED Logo Design Concepts",
-          "By 4 Designers",
-          "UNLIMITED Revisions",
-          "Stationary Design (Business Card, Letterhead, Envelope)",
-          "48 to 72 hours TAT",
-          "FREE MS Word Letterhead",
-          "All Final Files Format (AI, PSD, EPS, PNG, GIF, jpeg, PDF)",
-        ],
-      },
+          {
+            title: "Basic Website Package",
+            price: "$229",
+            discountedFrom: "$499",
+            includes: [
+              "2 Custom Logo Design Concepts",
+              "1 Dedicated Designer",
+              "4 REVISIONS",
+              "48 to 72 hours TAT",
+              "100% Unique Design Guarantee",
+              "100% Satisfaction Guarantee",
+              "100% Ownership Rights",
+              "100% Money Back Guarantee",
+            ],
+          },
+          {
+            title: "Basic Website Package",
+            price: "$229",
+            discountedFrom: "$499",
+            includes: [
+              "5 Custom Logo Design Concepts",
+              "By 2 Designers",
+              "UNLIMITED Revisions",
+              "48 to 72 hours TAT",
+              "100% Unique Design Guarantee",
+              "100% Satisfaction Guarantee",
+              "100% Ownership Rights",
+              "100% Money Back Guarantee",
+            ],
+          },
+          {
+            title: "Basic Website Package",
+            price: "$229",
+            discountedFrom: "$499",
+            includes: [
+              "UNLIMITED Logo Design Concepts",
+              "By 4 Designers",
+              "UNLIMITED Revisions",
+              "Stationary Design (Business Card, Letterhead, Envelope)",
+              "48 to 72 hours TAT",
+              "FREE MS Word Letterhead",
+              "All Final Files Format (AI, PSD, EPS, PNG, GIF, jpeg, PDF)",
+            ],
+          },
         ],
         customplanData: {
           heading: "With Aussie Digital Solution",
@@ -9693,24 +10775,45 @@ Most YouTube Ads agencies focus on view counts. We focus on what those views pro
           body: (
             <div className="space-y-2">
               <ul className="list-disc list-inside mt-2">
-                <li>Precision targeting using Google's intent and interest data</li>
-                <li>Ad scripts are written to hook viewers in the first five seconds</li>
-                <li>Full-funnel structure, different creative for each stage</li>
-                <li>Complete conversion and view-through tracking from day one</li>
-                <li>Placement exclusions and negative audience lists from the start</li>
-                <li>Weekly optimisation, bidding, creative testing, audience refinement</li>
+                <li>
+                  Precision targeting using Google's intent and interest data
+                </li>
+                <li>
+                  Ad scripts are written to hook viewers in the first five
+                  seconds
+                </li>
+                <li>
+                  Full-funnel structure, different creative for each stage
+                </li>
+                <li>
+                  Complete conversion and view-through tracking from day one
+                </li>
+                <li>
+                  Placement exclusions and negative audience lists from the
+                  start
+                </li>
+                <li>
+                  Weekly optimisation, bidding, creative testing, audience
+                  refinement
+                </li>
               </ul>
             </div>
           ),
-          rightContent: <><h3 className="text-2xl text-white mt-3">What's Included in Our Management</h3>
-          <ul className="list-disc list-inside mt-1 text-sm">
-            <li>Audience Research & Targeting Strategy</li>
-            <li>Ad Script & Creative Direction</li>
-            <li>Conversion & View-Through Tracking</li>
-            <li>Weekly Campaign Optimisation</li>
-            <li>Transparent Monthly Reporting</li>
-            <li>Full Funnel Campaign Structure</li>
-          </ul></>,
+          rightContent: (
+            <>
+              <h3 className="text-2xl text-white mt-3">
+                What's Included in Our Management
+              </h3>
+              <ul className="list-disc list-inside mt-1 text-sm">
+                <li>Audience Research & Targeting Strategy</li>
+                <li>Ad Script & Creative Direction</li>
+                <li>Conversion & View-Through Tracking</li>
+                <li>Weekly Campaign Optimisation</li>
+                <li>Transparent Monthly Reporting</li>
+                <li>Full Funnel Campaign Structure</li>
+              </ul>
+            </>
+          ),
           miniTagData: <></>,
         },
         faqData: [
@@ -9759,29 +10862,45 @@ Most YouTube Ads agencies focus on view counts. We focus on what those views pro
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
         contactData: {
-        heading: (<>Let's Start Growing</>),
-        body: (<><h3 className="text-2xl font-semibold"></h3>
-        <p>Get in touch today, and one of our YouTube Ads specialists will get back to you within one business day. No scripts, no pressure. A straight conversation about your business and what video advertising could do for it.</p>
-        </>),
-        buttonText: "Book a Free Audit",
+          heading: <>Let's Start Growing</>,
+          body: (
+            <>
+              <h3 className="text-2xl font-semibold"></h3>
+              <p>
+                Get in touch today, and one of our YouTube Ads specialists will
+                get back to you within one business day. No scripts, no
+                pressure. A straight conversation about your business and what
+                video advertising could do for it.
+              </p>
+            </>
+          ),
+          buttonText: "Book a Free Audit",
+        },
       },
-      },
-      
-      // Meta 
+
+      // Meta
       {
         slug: "meta-ads",
         title: "Meta Ads Management",
         // heading: "eCommerce Website Development in Australia",
-       serviceBodyData: [
-      {
-        imageUrl: "/Services/Rectangle_52.webp",
-        description: (
-          <>
-            <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
-              Your Customers Are on Facebook & Instagram.<br /> Are Your Ads Finding Them?
-            </h2>
-            <p>Meta's advertising platform gives you access to over 17 million Australians across Facebook and Instagram, with targeting so precise it's almost unsettling. We manage Meta Ads campaigns that reach the right people, with creatives that actually stop the scroll, and strategies built around real business outcomes.</p>
-            {/* <ul className="mt-3">
+        serviceBodyData: [
+          {
+            imageUrl: "/services/Rectangle_52.webp",
+            description: (
+              <>
+                <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
+                  Your Customers Are on Facebook & Instagram.
+                  <br /> Are Your Ads Finding Them?
+                </h2>
+                <p>
+                  Meta's advertising platform gives you access to over 17
+                  million Australians across Facebook and Instagram, with
+                  targeting so precise it's almost unsettling. We manage Meta
+                  Ads campaigns that reach the right people, with creatives that
+                  actually stop the scroll, and strategies built around real
+                  business outcomes.
+                </p>
+                {/* <ul className="mt-3">
               <li className="flex items-start gap-2 md:gap-3 mb-2">
                 <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
                 <div className="flex flex-col"><span className="font-semibold">More Than an Online Store: A Revenue Engine.</span>
@@ -9813,63 +10932,82 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
                 </span>
               </li>
             </ul> */}
-            <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
-  <a
-    className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15"
-    href="/contact"
-  >
-    Get a Free Meta Audit
-  </a>
-  <span
-    aria-hidden="true"
-    className="h-10 w-px bg-white/30 max-sm:h-px max-sm:w-full"
-  />
-  <a
-    className="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/10"
-    href="/services"
-  >
-    See How We Work
-  </a>
-</div>
-          </>
-        ),
-      },
-      {
-        imageUrl: "/Services/Rectangle_52.webp",
-        description: (
-          <>
-            <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
-              What Are Meta Ads
-            </h2>
+                <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
+                  <a
+                    className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15"
+                    href="/contact"
+                  >
+                    Get a Free Meta Audit
+                  </a>
+                  <span
+                    aria-hidden="true"
+                    className="h-10 w-px bg-white/30 max-sm:h-px max-sm:w-full"
+                  />
+                  <a
+                    className="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/10"
+                    href="/services"
+                  >
+                    See How We Work
+                  </a>
+                </div>
+              </>
+            ),
+          },
+          {
+            imageUrl: "/services/Rectangle_52.webp",
+            description: (
+              <>
+                <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
+                  What Are Meta Ads
+                </h2>
 
-            <div className="space-y-2">
-            <p>Meta Ads are paid advertisements that run across Facebook, Instagram, Messenger, and the Audience Network. They appear in feeds, Stories, Reels, and Marketplace, formats that blend into how people actually use these platforms rather than interrupting them with something obviously promotional.<br /><br />
-The targeting capabilities are genuinely impressive. You can reach people based on age, location, interests, behaviour, life events, job titles, and purchase intent. Build lookalike audiences from your existing customers. Retarget people who've visited your website, watched your videos, or interacted with your profile. When it's set up properly, Meta advertising is one of the most powerful tools in a paid media strategy.</p>
-            </div>
+                <div className="space-y-2">
+                  <p>
+                    Meta Ads are paid advertisements that run across Facebook,
+                    Instagram, Messenger, and the Audience Network. They appear
+                    in feeds, Stories, Reels, and Marketplace, formats that
+                    blend into how people actually use these platforms rather
+                    than interrupting them with something obviously promotional.
+                    <br />
+                    <br />
+                    The targeting capabilities are genuinely impressive. You can
+                    reach people based on age, location, interests, behaviour,
+                    life events, job titles, and purchase intent. Build
+                    lookalike audiences from your existing customers. Retarget
+                    people who've visited your website, watched your videos, or
+                    interacted with your profile. When it's set up properly,
+                    Meta advertising is one of the most powerful tools in a paid
+                    media strategy.
+                  </p>
+                </div>
 
-            <ul className="mt-3">
-              <li className="flex items-start gap-2 md:gap-3 mb-2">
-                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
-                <span className="font-semibold">Audience Targeting That Goes Deep</span>
-              </li>
-              <li className="flex items-start gap-2 md:gap-3 mb-2">
-                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
-                <span className="font-semibold">Visual Formats That Build Trust Fast</span>
-              </li>
-              <li className="flex items-start gap-2 md:gap-3 mb-2">
-                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
-                <span className="font-semibold">
-                  Lead Generation Without a Landing Page
-                </span>
-              </li>
-              <li className="flex items-start gap-2 md:gap-3 mb-2">
-                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
-                <span className="font-semibold">
-                  Retargeting That Closes Sales
-                </span>
-              </li>
-            </ul>
-            {/* <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
+                <ul className="mt-3">
+                  <li className="flex items-start gap-2 md:gap-3 mb-2">
+                    <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                    <span className="font-semibold">
+                      Audience Targeting That Goes Deep
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2 md:gap-3 mb-2">
+                    <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                    <span className="font-semibold">
+                      Visual Formats That Build Trust Fast
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2 md:gap-3 mb-2">
+                    <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                    <span className="font-semibold">
+                      Lead Generation Without a Landing Page
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2 md:gap-3 mb-2">
+                    <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                    <span className="font-semibold">
+                      Retargeting That Closes Sales
+                    </span>
+                  </li>
+                </ul>
+                {/* <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
   <a
     className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15"
     href="/contact"
@@ -9887,10 +11025,10 @@ The targeting capabilities are genuinely impressive. You can reach people based 
     See What We Build
   </a>
 </div> */}
-          </>
-        ),
-      },
-      ],
+              </>
+            ),
+          },
+        ],
         easyExperienceData: {
           eyebrow: <>Easy Experience</>,
           headingLine1: <>Meta Ad Formats We Run</>,
@@ -9898,123 +11036,148 @@ The targeting capabilities are genuinely impressive. You can reach people based 
           cards: [
             {
               title: "Image & Video Feed Ads",
-              description:
-                <>The foundational Meta ad format, appearing natively in Facebook and Instagram feeds. We write the copy, direct the creative, test multiple variations, and optimise based on what your specific audience responds to. Not generic templates, ads built for your brand and your customer.</>,
-              icon: (<CiImageOn color="#4C8C74" size={40} />),
+              description: (
+                <>
+                  The foundational Meta ad format, appearing natively in
+                  Facebook and Instagram feeds. We write the copy, direct the
+                  creative, test multiple variations, and optimise based on what
+                  your specific audience responds to. Not generic templates, ads
+                  built for your brand and your customer.
+                </>
+              ),
+              icon: <CiImageOn color="#4C8C74" size={40} />,
             },
             {
               title: "Reels & Stories Ads",
-              description:
-                <>We script and direct Reels and Stories ads specifically for these formats, not repurposed feed ads squeezed into a vertical frame. The pacing, the hook, the call to action, all built for how people actually consume short-form video.</>,
-              icon: (<BsCameraReels color="#4C8C74" size={40} />),
+              description: (
+                <>
+                  We script and direct Reels and Stories ads specifically for
+                  these formats, not repurposed feed ads squeezed into a
+                  vertical frame. The pacing, the hook, the call to action, all
+                  built for how people actually consume short-form video.
+                </>
+              ),
+              icon: <BsCameraReels color="#4C8C74" size={40} />,
             },
             {
               title: "Carousel & Collection Ads",
-              description:
-                <>Carousel ads let you show multiple products, features, or benefits in a single ad that people swipe through. For eCommerce businesses, they're one of the strongest formats for driving product discovery and purchases. We build carousel and collection campaigns around your product catalogue, testing different sequencing, creative, and copy to find what drives the best return on your ad spend.</>,
-              icon: (<MdCollections color="#4C8C74" size={40} />),
+              description: (
+                <>
+                  Carousel ads let you show multiple products, features, or
+                  benefits in a single ad that people swipe through. For
+                  eCommerce businesses, they're one of the strongest formats for
+                  driving product discovery and purchases. We build carousel and
+                  collection campaigns around your product catalogue, testing
+                  different sequencing, creative, and copy to find what drives
+                  the best return on your ad spend.
+                </>
+              ),
+              icon: <MdCollections color="#4C8C74" size={40} />,
             },
             {
               title: "Retargeting & Lookalike Campaigns",
-              description:
-                <>Retargeting campaigns serve these audiences with specific ads designed to bring them back and convert. Lookalike audiences let us find new people who behave like your best existing customers, so cold audience campaigns start with a meaningful advantage. Together, the two strategies form the backbone of a profitable Meta Ads funnel.</>,
-              icon: (<FiTarget color="#4C8C74" size={40} />),
+              description: (
+                <>
+                  Retargeting campaigns serve these audiences with specific ads
+                  designed to bring them back and convert. Lookalike audiences
+                  let us find new people who behave like your best existing
+                  customers, so cold audience campaigns start with a meaningful
+                  advantage. Together, the two strategies form the backbone of a
+                  profitable Meta Ads funnel.
+                </>
+              ),
+              icon: <FiTarget color="#4C8C74" size={40} />,
             },
           ],
         },
         ctaData: {
-        badgeText: "Free Meta Ads Audit",
-        title: "Find Out Why Your Meta Ads",
-        highlightedTitle: "Aren't Generating What They Should",
-        description:
-        "We'll audit your current Facebook and Instagram Ads setup, or build a fresh strategy from scratch, and tell you exactly what needs to change. Free, honest, no pressure.",
-        primaryAction: {
-          label: "Book a Free Audit",
-          href: "/contact",
+          badgeText: "Free Meta Ads Audit",
+          title: "Find Out Why Your Meta Ads",
+          highlightedTitle: "Aren't Generating What They Should",
+          description:
+            "We'll audit your current Facebook and Instagram Ads setup, or build a fresh strategy from scratch, and tell you exactly what needs to change. Free, honest, no pressure.",
+          primaryAction: {
+            label: "Book a Free Audit",
+            href: "/contact",
+          },
+          secondaryAction: {
+            label: "View Packages",
+            href: "/packages",
+          },
+          trustItems: [],
         },
-        secondaryAction: {
-          label: "View Packages",
-          href: "/packages",
-        },
-        trustItems: [
-        ],
-      },
-      strategicHeading: <div className="font-semibold">Everything You Need to Scale Your Meta Ads Profitably</div>,
-      // strategicHeadingText: (
-      //   <div className="mt-3 mx-auto flex w-full justify-center px-4">
-      //     <div className="w-full rounded-3xl border border-white/10 bg-white/5 px-6 py-6 text-center shadow-[0_18px_60px_rgba(0,0,0,0.18)] backdrop-blur-sm sm:px-10 sm:py-8">
-      //       {/* <h3 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
-      //         Every Platform, One Focused Team.
-      //       </h3> */}
-      //       <p className="mx-auto mt-4 max-w-6xl text-sm leading-7 text-[#AAAAAA] sm:text-base">           
-      //       YouTube Ads management isn't just uploading a video and hoping for the best. Here is what a well created campaign management actually includes, and what we deliver to every client. 
-      //       </p>
-      //     </div>
-      //   </div>
-      // ),
+        strategicHeading: (
+          <div className="font-semibold">
+            Everything You Need to Scale Your Meta Ads Profitably
+          </div>
+        ),
+        // strategicHeadingText: (
+        //   <div className="mt-3 mx-auto flex w-full justify-center px-4">
+        //     <div className="w-full rounded-3xl border border-white/10 bg-white/5 px-6 py-6 text-center shadow-[0_18px_60px_rgba(0,0,0,0.18)] backdrop-blur-sm sm:px-10 sm:py-8">
+        //       {/* <h3 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+        //         Every Platform, One Focused Team.
+        //       </h3> */}
+        //       <p className="mx-auto mt-4 max-w-6xl text-sm leading-7 text-[#AAAAAA] sm:text-base">
+        //       YouTube Ads management isn't just uploading a video and hoping for the best. Here is what a well created campaign management actually includes, and what we deliver to every client.
+        //       </p>
+        //     </div>
+        //   </div>
+        // ),
         strategicCardData: [
           {
             title: "Strategy That Actually Converts",
             desc: "We build data-driven Meta Ads strategies focused on real sales, not vanity metrics.",
-            svg: (
-              <SiMicrostrategy color='#4C8C74' size={40} />
-            ),
+            svg: <SiMicrostrategy color="#4C8C74" size={40} />,
           },
           {
             title: "Scroll-Stopping Creatives",
             desc: "High-performing ads designed to grab attention and drive instant engagement.",
-            svg: (
-              <CgScrollV color='#4C8C74' size={40} />
-            ),
+            svg: <CgScrollV color="#4C8C74" size={40} />,
           },
           {
             title: "Precision Audience Targeting",
             desc: "We reach the right people at the right time using advanced targeting systems.",
-            svg: (
-              <IoIosPeople color='#4C8C74' size={40} />
-            ),
+            svg: <IoIosPeople color="#4C8C74" size={40} />,
           },
           {
             title: "Full-Funnel Campaign Setup",
             desc: "From awareness to conversion, we structure ads for every stage of the customer journey.",
-            svg: (
-              <IoIosFunnel color='#4C8C74' size={40} />
-            ),
+            svg: <IoIosFunnel color="#4C8C74" size={40} />,
           },
           {
             title: "Continuous Optimization",
             desc: "We constantly test and improve campaigns to reduce costs and increase ROI.",
-            svg: (
-              <VscDebugContinue color='#4C8C74' size={40} />
-            ),
+            svg: <VscDebugContinue color="#4C8C74" size={40} />,
           },
           {
             title: "Transparent Performance Tracking",
             desc: "Clear reporting so you always know what’s working and where results are coming from.",
-            svg: (
-              <CgPerformance color='#4C8C74' size={40} />
-            ),
+            svg: <CgPerformance color="#4C8C74" size={40} />,
           },
           {
             title: "Built for Scalable Growth",
             desc: "Campaigns designed to grow with your business and increase revenue over time.",
-            svg: (
-              <GrDocumentPerformance color='#4C8C74' size={40} />
-            ),
+            svg: <GrDocumentPerformance color="#4C8C74" size={40} />,
           },
         ],
-        processHeading: <>From Account Audit to Live Campaigns in Three Clear Steps</>,
-        processPara: (
-          <>
-          </>
+        processHeading: (
+          <>From Account Audit to Live Campaigns in Three Clear Steps</>
         ),
+        processPara: <></>,
         processCardData: [
           {
             image: "/Services/01.svg",
             heading: "Audience Targeting & Campaign Planning",
             paragraph: (
               <>
-                Our team of professionals starts with your business, audience, and goals. Start auditing your existing account if you have one, or research your market fresh if you're starting. Then map out your full funnel strategy: which audiences to target at which stage, which formats to use, what the creative needs to say, and how to structure campaigns for the Meta algorithm to optimise correctly. You see and approve the plan before anything goes live.
+                Our team of professionals starts with your business, audience,
+                and goals. Start auditing your existing account if you have one,
+                or research your market fresh if you're starting. Then map out
+                your full funnel strategy: which audiences to target at which
+                stage, which formats to use, what the creative needs to say, and
+                how to structure campaigns for the Meta algorithm to optimise
+                correctly. You see and approve the plan before anything goes
+                live.
               </>
             ),
           },
@@ -10023,7 +11186,13 @@ The targeting capabilities are genuinely impressive. You can reach people based 
             heading: "Creative Development & Campaign Launch",
             paragraph: (
               <>
-                We write the ad copy and direct the creative for every ad in the campaign. Pixel and Conversions API setup is verified before launch; no campaigns are running with tracking gaps. Audiences are built, the campaign structure is properly set up, and everything is reviewed before it goes live. We don't launch until we're confident the foundation is right, because a bad launch wastes budget that's hard to recover.
+                We write the ad copy and direct the creative for every ad in the
+                campaign. Pixel and Conversions API setup is verified before
+                launch; no campaigns are running with tracking gaps. Audiences
+                are built, the campaign structure is properly set up, and
+                everything is reviewed before it goes live. We don't launch
+                until we're confident the foundation is right, because a bad
+                launch wastes budget that's hard to recover.
               </>
             ),
           },
@@ -10032,56 +11201,63 @@ The targeting capabilities are genuinely impressive. You can reach people based 
             heading: "Optimise, Report & Scale",
             paragraph: (
               <>
-                Once live, we review performance every week: creative fatigue, audience overlap, bid strategy, and placement performance. We test new creative variations, introduce new audience segments, and cut what isn't working. Monthly reporting covers the numbers that matter to your business. As the algorithm learns and we refine, campaigns compound, and performance improves consistently over time rather than plateauing after the first month.
+                Once live, we review performance every week: creative fatigue,
+                audience overlap, bid strategy, and placement performance. We
+                test new creative variations, introduce new audience segments,
+                and cut what isn't working. Monthly reporting covers the numbers
+                that matter to your business. As the algorithm learns and we
+                refine, campaigns compound, and performance improves
+                consistently over time rather than plateauing after the first
+                month.
               </>
             ),
           },
         ],
         pricingCardData: [
-      {
-        title: "Basic Website Package",
-        price: "$229",
-        discountedFrom: "$499",
-        includes: [
-          "2 Custom Logo Design Concepts",
-          "1 Dedicated Designer",
-          "4 REVISIONS",
-          "48 to 72 hours TAT",
-          "100% Unique Design Guarantee",
-          "100% Satisfaction Guarantee",
-          "100% Ownership Rights",
-          "100% Money Back Guarantee",
-        ],
-      },
-      {
-        title: "Basic Website Package",
-        price: "$229",
-        discountedFrom: "$499",
-        includes: [
-          "5 Custom Logo Design Concepts",
-          "By 2 Designers",
-          "UNLIMITED Revisions",
-          "48 to 72 hours TAT",
-          "100% Unique Design Guarantee",
-          "100% Satisfaction Guarantee",
-          "100% Ownership Rights",
-          "100% Money Back Guarantee",
-        ],
-      },
-      {
-        title: "Basic Website Package",
-        price: "$229",
-        discountedFrom: "$499",
-        includes: [
-          "UNLIMITED Logo Design Concepts",
-          "By 4 Designers",
-          "UNLIMITED Revisions",
-          "Stationary Design (Business Card, Letterhead, Envelope)",
-          "48 to 72 hours TAT",
-          "FREE MS Word Letterhead",
-          "All Final Files Format (AI, PSD, EPS, PNG, GIF, jpeg, PDF)",
-        ],
-      },
+          {
+            title: "Basic Website Package",
+            price: "$229",
+            discountedFrom: "$499",
+            includes: [
+              "2 Custom Logo Design Concepts",
+              "1 Dedicated Designer",
+              "4 REVISIONS",
+              "48 to 72 hours TAT",
+              "100% Unique Design Guarantee",
+              "100% Satisfaction Guarantee",
+              "100% Ownership Rights",
+              "100% Money Back Guarantee",
+            ],
+          },
+          {
+            title: "Basic Website Package",
+            price: "$229",
+            discountedFrom: "$499",
+            includes: [
+              "5 Custom Logo Design Concepts",
+              "By 2 Designers",
+              "UNLIMITED Revisions",
+              "48 to 72 hours TAT",
+              "100% Unique Design Guarantee",
+              "100% Satisfaction Guarantee",
+              "100% Ownership Rights",
+              "100% Money Back Guarantee",
+            ],
+          },
+          {
+            title: "Basic Website Package",
+            price: "$229",
+            discountedFrom: "$499",
+            includes: [
+              "UNLIMITED Logo Design Concepts",
+              "By 4 Designers",
+              "UNLIMITED Revisions",
+              "Stationary Design (Business Card, Letterhead, Envelope)",
+              "48 to 72 hours TAT",
+              "FREE MS Word Letterhead",
+              "All Final Files Format (AI, PSD, EPS, PNG, GIF, jpeg, PDF)",
+            ],
+          },
         ],
         customplanData: {
           heading: "With Aussie Digital Solution",
@@ -10089,18 +11265,46 @@ The targeting capabilities are genuinely impressive. You can reach people based 
           body: (
             <div className="space-y-2">
               <ul className="list-disc list-inside mt-2">
-                <li>Precise audience targeting built around real buyer behaviour</li>
-                <li>Scroll-stopping creative written and designed to drive action</li>
-                <li>Full Meta pixel and conversion API setup, every lead attributed</li>
-                <li>Separate campaigns for cold audiences, warm audiences, and retargeting</li>
-                <li>Weekly optimisation, creative testing, audience refinement, bid adjustment</li>
-                <li>Reporting tied to cost per lead, ROAS, and real business outcomes</li>
+                <li>
+                  Precise audience targeting built around real buyer behaviour
+                </li>
+                <li>
+                  Scroll-stopping creative written and designed to drive action
+                </li>
+                <li>
+                  Full Meta pixel and conversion API setup, every lead
+                  attributed
+                </li>
+                <li>
+                  Separate campaigns for cold audiences, warm audiences, and
+                  retargeting
+                </li>
+                <li>
+                  Weekly optimisation, creative testing, audience refinement,
+                  bid adjustment
+                </li>
+                <li>
+                  Reporting tied to cost per lead, ROAS, and real business
+                  outcomes
+                </li>
               </ul>
             </div>
           ),
-          rightContent: <><h3 className="text-2xl text-white mt-3">Our Meta Ads Results</h3>
-          <p className="mt-2 font-semibold text-xl">Speak Louder Than We Do</p>
-          <p className="text-md">We've run Facebook and Instagram Ads campaigns for Australian businesses across eCommerce, home services, professional services, health, hospitality, and B2B. Ask us for examples from your sector, and we'll share real performance data before you commit to anything.</p></>,
+          rightContent: (
+            <>
+              <h3 className="text-2xl text-white mt-3">Our Meta Ads Results</h3>
+              <p className="mt-2 font-semibold text-xl">
+                Speak Louder Than We Do
+              </p>
+              <p className="text-md">
+                We've run Facebook and Instagram Ads campaigns for Australian
+                businesses across eCommerce, home services, professional
+                services, health, hospitality, and B2B. Ask us for examples from
+                your sector, and we'll share real performance data before you
+                commit to anything.
+              </p>
+            </>
+          ),
           miniTagData: <></>,
         },
         faqData: [
@@ -10110,12 +11314,14 @@ The targeting capabilities are genuinely impressive. You can reach people based 
               "Most campaigns start generating data in less time. Initial optimisation happens during this learning phase, with more stable results typically seen within a few weeks. Retargeting campaigns often perform faster as they target warm audiences.",
           },
           {
-            question: "How much budget do I need to start Meta Ads in Australia?",
+            question:
+              "How much budget do I need to start Meta Ads in Australia?",
             answer:
               "It depends on your industry and goals, but you can start with a modest daily budget. We’ll recommend a realistic starting point for your specific business after a free strategy call.",
           },
           {
-            question: "Do you create the ad creative, or do I need to supply it?",
+            question:
+              "Do you create the ad creative, or do I need to supply it?",
             answer:
               "Our company provides ad copy and creative direction. You can use your existing assets, or we’ll guide you on what needs to be created for better performance. We can also connect you with trusted production support if needed.",
           },
@@ -10149,12 +11355,22 @@ The targeting capabilities are genuinely impressive. You can reach people based 
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
         contactData: {
-        heading: (<>Let's Grow Your Business Together</>),
-        body: (<><h3 className="text-2xl font-semibold">17 Million Australians Use Facebook and Instagram Every Month</h3>
-        <p>The question isn't whether your customers are on Meta. They are. The question is whether your ads are reaching them properly. Get in touch today, and one of our Meta Ads specialists will respond within one business day.</p>
-        </>),
-        buttonText: "Book a Free Audit",
-      },
+          heading: <>Let's Grow Your Business Together</>,
+          body: (
+            <>
+              <h3 className="text-2xl font-semibold">
+                17 Million Australians Use Facebook and Instagram Every Month
+              </h3>
+              <p>
+                The question isn't whether your customers are on Meta. They are.
+                The question is whether your ads are reaching them properly. Get
+                in touch today, and one of our Meta Ads specialists will respond
+                within one business day.
+              </p>
+            </>
+          ),
+          buttonText: "Book a Free Audit",
+        },
       },
 
       // TikTok Shop Ads
@@ -10162,7 +11378,7 @@ The targeting capabilities are genuinely impressive. You can reach people based 
         slug: "tiktok-shop-ads",
         title: "TikTok Shop Ads",
         heading: "TikTok Shop Ads That Convert",
-        imageUrl: "/Services/Rectangle_52.png",
+        imageUrl: "/services/Rectangle_52.webp",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -10598,22 +11814,31 @@ The targeting capabilities are genuinely impressive. You can reach people based 
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
       },
-      
+
       // Linkedin Ads
       {
         slug: "linkedin-ads",
         title: "LinkedIn Ads Management",
         // heading: "eCommerce Website Development in Australia",
-       serviceBodyData: [
-      {
-        imageUrl: "/Services/Rectangle_52.webp",
-        description: (
-          <>
-            <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
-              The Decision Makers You Need Are on LinkedIn. Are Your Ads Reaching Them?
-            </h2>
-            <p>LinkedIn is the only platform where you can target by job title, company size, industry, and seniority at the same time. For Australian B2B businesses, that precision is worth more than any other channel. Our team of professionals manages LinkedIn Ads campaigns that get your message in front of the exact professionals you need to reach, and convert that reach into a qualified pipeline.</p>
-            {/* <ul className="mt-3">
+        serviceBodyData: [
+          {
+            imageUrl: "/services/Rectangle_52.webp",
+            description: (
+              <>
+                <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
+                  The Decision Makers You Need Are on LinkedIn. Are Your Ads
+                  Reaching Them?
+                </h2>
+                <p>
+                  LinkedIn is the only platform where you can target by job
+                  title, company size, industry, and seniority at the same time.
+                  For Australian B2B businesses, that precision is worth more
+                  than any other channel. Our team of professionals manages
+                  LinkedIn Ads campaigns that get your message in front of the
+                  exact professionals you need to reach, and convert that reach
+                  into a qualified pipeline.
+                </p>
+                {/* <ul className="mt-3">
               <li className="flex items-start gap-2 md:gap-3 mb-2">
                 <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
                 <div className="flex flex-col"><span className="font-semibold">More Than an Online Store: A Revenue Engine.</span>
@@ -10645,14 +11870,14 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
                 </span>
               </li>
             </ul> */}
-            <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
-  <a
-    className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15"
-    href="/contact"
-  >
-    Get a Free LinkedIn Audit 
-  </a>
-  {/* <span
+                <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
+                  <a
+                    className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15"
+                    href="/contact"
+                  >
+                    Get a Free LinkedIn Audit
+                  </a>
+                  {/* <span
     aria-hidden="true"
     className="h-10 w-px bg-white/30 max-sm:h-px max-sm:w-full"
   />
@@ -10662,47 +11887,59 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
   >
     See How We Work
   </a> */}
-</div>
-          </>
-        ),
-      },
-      {
-        imageUrl: "/Services/Rectangle_52.webp",
-        description: (
-          <>
-            <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
-              What Are LinkedIn Ads
-            </h2>
+                </div>
+              </>
+            ),
+          },
+          {
+            imageUrl: "/services/Rectangle_52.webp",
+            description: (
+              <>
+                <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
+                  What Are LinkedIn Ads
+                </h2>
 
-            <div className="space-y-2">
-            <p>LinkedIn Ads reach professionals directly in their feed, inbox, and search, with powerful B2B targeting like job title, industry, company, and seniority.<br /><br />
-While clicks cost more, the audience quality is far higher. We create a specific strategy according to goals, creativity, and targeting specifically for LinkedIn to bring real results for B2B businesses.
-</p>
-            </div>
+                <div className="space-y-2">
+                  <p>
+                    LinkedIn Ads reach professionals directly in their feed,
+                    inbox, and search, with powerful B2B targeting like job
+                    title, industry, company, and seniority.
+                    <br />
+                    <br />
+                    While clicks cost more, the audience quality is far higher.
+                    We create a specific strategy according to goals,
+                    creativity, and targeting specifically for LinkedIn to bring
+                    real results for B2B businesses.
+                  </p>
+                </div>
 
-            <ul className="mt-3">
-              <li className="flex items-start gap-2 md:gap-3 mb-2">
-                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
-                <span className="font-semibold">Targeting No Other Platform Offers</span>
-              </li>
-              <li className="flex items-start gap-2 md:gap-3 mb-2">
-                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
-                <span className="font-semibold">Lead Gen Forms That Convert Inside LinkedIn</span>
-              </li>
-              <li className="flex items-start gap-2 md:gap-3 mb-2">
-                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
-                <span className="font-semibold">
-                  Higher Lead Quality Than Any Other Platform
-                </span>
-              </li>
-              <li className="flex items-start gap-2 md:gap-3 mb-2">
-                <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
-                <span className="font-semibold">
-                  Account-Based Marketing at Scale
-                </span>
-              </li>
-            </ul>
-            {/* <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
+                <ul className="mt-3">
+                  <li className="flex items-start gap-2 md:gap-3 mb-2">
+                    <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                    <span className="font-semibold">
+                      Targeting No Other Platform Offers
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2 md:gap-3 mb-2">
+                    <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                    <span className="font-semibold">
+                      Lead Gen Forms That Convert Inside LinkedIn
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2 md:gap-3 mb-2">
+                    <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                    <span className="font-semibold">
+                      Higher Lead Quality Than Any Other Platform
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2 md:gap-3 mb-2">
+                    <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
+                    <span className="font-semibold">
+                      Account-Based Marketing at Scale
+                    </span>
+                  </li>
+                </ul>
+                {/* <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
   <a
     className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15"
     href="/contact"
@@ -10720,10 +11957,10 @@ While clicks cost more, the audience quality is far higher. We create a specific
     See What We Build
   </a>
 </div> */}
-          </>
-        ),
-      },
-      ],
+              </>
+            ),
+          },
+        ],
         easyExperienceData: {
           eyebrow: <>Easy Experience</>,
           headingLine1: <>What's Included in Our Management</>,
@@ -10731,114 +11968,148 @@ While clicks cost more, the audience quality is far higher. We create a specific
           cards: [
             {
               title: "Professional Audience Targeting",
-              description:
-                <>We build your LinkedIn audiences around the exact professionals you need to reach, job titles, seniority levels, company sizes, industries, and specific account lists if needed. Targeting precision is everything on a platform with LinkedIn's CPMs.</>,
-              icon: (<CiImageOn color="#4C8C74" size={40} />),
+              description: (
+                <>
+                  We build your LinkedIn audiences around the exact
+                  professionals you need to reach, job titles, seniority levels,
+                  company sizes, industries, and specific account lists if
+                  needed. Targeting precision is everything on a platform with
+                  LinkedIn's CPMs.
+                </>
+              ),
+              icon: <CiImageOn color="#4C8C74" size={40} />,
             },
             {
               title: "B2B Ad Copy & Creative Direction",
-              description:
-                <>We write LinkedIn ad copy that professionals actually engage with, clear value proposition, relevant to their role, and offering something genuinely useful. Not corporate press release copy that gets scrolled past.</>,
-              icon: (<BsCameraReels color="#4C8C74" size={40} />),
+              description: (
+                <>
+                  We write LinkedIn ad copy that professionals actually engage
+                  with, clear value proposition, relevant to their role, and
+                  offering something genuinely useful. Not corporate press
+                  release copy that gets scrolled past.
+                </>
+              ),
+              icon: <BsCameraReels color="#4C8C74" size={40} />,
             },
             {
               title: "LinkedIn Insight Tag & Conversion Setup",
-              description:
-                <>We install and verify the LinkedIn Insight Tag, set up conversion events, and configure lead gen form tracking so every lead and action is attributed correctly. No campaigns running without proper measurement.</>,
-              icon: (<MdCollections color="#4C8C74" size={40} />),
+              description: (
+                <>
+                  We install and verify the LinkedIn Insight Tag, set up
+                  conversion events, and configure lead gen form tracking so
+                  every lead and action is attributed correctly. No campaigns
+                  running without proper measurement.
+                </>
+              ),
+              icon: <MdCollections color="#4C8C74" size={40} />,
             },
             {
               title: "Weekly Bid & Performance Optimisation",
-              description:
-                <>We review your campaigns every week, bid adjustments, audience performance, creative fatigue, and lead quality. LinkedIn's costs make active management essential. Campaigns left unoptimised on LinkedIn waste budget faster than on any other platform.</>,
-              icon: (<FiTarget color="#4C8C74" size={40} />),
+              description: (
+                <>
+                  We review your campaigns every week, bid adjustments, audience
+                  performance, creative fatigue, and lead quality. LinkedIn's
+                  costs make active management essential. Campaigns left
+                  unoptimised on LinkedIn waste budget faster than on any other
+                  platform.
+                </>
+              ),
+              icon: <FiTarget color="#4C8C74" size={40} />,
             },
             {
               title: "Clear Monthly Reporting",
-              description:
-                <>Reports tied to cost per lead, lead quality, and pipeline impact, not reach and click-through rates. You always know what your LinkedIn spend is producing in real business outcomes.</>,
-              icon: (<TbFileReport color="#4C8C74" size={40} />),
+              description: (
+                <>
+                  Reports tied to cost per lead, lead quality, and pipeline
+                  impact, not reach and click-through rates. You always know
+                  what your LinkedIn spend is producing in real business
+                  outcomes.
+                </>
+              ),
+              icon: <TbFileReport color="#4C8C74" size={40} />,
             },
             {
               title: "Full Funnel B2B Campaign Structure",
-              description:
-                <>Awareness campaigns for cold professional audiences, consideration campaigns for engaged prospects, and conversion campaigns for warm leads, structured around the longer B2B buying cycle, not the impulse-buy consumer model.</>,
-              icon: (<IoIosFunnel color="#4C8C74" size={40} />),
+              description: (
+                <>
+                  Awareness campaigns for cold professional audiences,
+                  consideration campaigns for engaged prospects, and conversion
+                  campaigns for warm leads, structured around the longer B2B
+                  buying cycle, not the impulse-buy consumer model.
+                </>
+              ),
+              icon: <IoIosFunnel color="#4C8C74" size={40} />,
             },
           ],
         },
         ctaData: {
-        badgeText: "Free Meta Ads Audit",
-        title: "Find Out Why Your Meta Ads",
-        highlightedTitle: "Aren't Generating What They Should",
-        description:
-        "We'll audit your current Facebook and Instagram Ads setup, or build a fresh strategy from scratch, and tell you exactly what needs to change. Free, honest, no pressure.",
-        primaryAction: {
-          label: "Book a Free Audit",
-          href: "/contact",
+          badgeText: "Free Meta Ads Audit",
+          title: "Find Out Why Your Meta Ads",
+          highlightedTitle: "Aren't Generating What They Should",
+          description:
+            "We'll audit your current Facebook and Instagram Ads setup, or build a fresh strategy from scratch, and tell you exactly what needs to change. Free, honest, no pressure.",
+          primaryAction: {
+            label: "Book a Free Audit",
+            href: "/contact",
+          },
+          secondaryAction: {
+            label: "View Packages",
+            href: "/packages",
+          },
+          trustItems: [],
         },
-        secondaryAction: {
-          label: "View Packages",
-          href: "/packages",
-        },
-        trustItems: [
-        ],
-      },
-      strategicHeading: <div className="font-semibold">LinkedIn Ad Formats We Run</div>,
-      strategicHeadingText: (
-        <div className="mt-3 mx-auto flex w-full justify-center px-4">
-          <div className="w-full rounded-3xl border border-white/10 bg-white/5 px-6 py-6 text-center shadow-[0_18px_60px_rgba(0,0,0,0.18)] backdrop-blur-sm sm:px-10 sm:py-8">
-            {/* <h3 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
-              
-            </h3> */}
-            <p className="mx-auto mt-4 max-w-6xl text-sm leading-7 text-[#AAAAAA] sm:text-base">           
-            Every LinkedIn Format. Used for the Right Goal.
-            </p>
+        strategicHeading: (
+          <div className="text-white font-semibold">
+            LinkedIn Ad Formats We Run
           </div>
-        </div>
-      ),
+        ),
+        strategicHeadingText: (
+          <>
+            <p className="mx-auto text-center max-w-6xl text-sm leading-7 text-[#AAAAAA] sm:text-base">
+              Every LinkedIn Format. Used for the Right Goal.
+            </p>
+          </>
+        ),
         strategicCardData: [
           {
             title: "Sponsored Content & Single Image Ads",
             desc: "Sponsored Content appears in the LinkedIn feed like a regular post. It actually makes it ideal for awareness and lead generation when done in the right way. We write it to feel natural and engaging, not like an ad, then pair it with a strong CTA or lead form to attract attention and finally convert it into action.",
-            svg: (
-              <CiImageOn color='#4C8C74' size={40} />
-            ),
+            svg: <CiImageOn color="#4C8C74" size={40} />,
           },
           {
             title: "Message & Conversation Ads",
             desc: "Sent directly to LinkedIn inboxes, these feel personal and bring strong engagement. Conversation ads add interactive choices to guide users toward actions like demos or sign ups, ideal for high value B2B offers.",
-            svg: (
-              <MdMessage color='#4C8C74' size={40} />
-            ),
+            svg: <MdMessage color="#4C8C74" size={40} />,
           },
           {
             title: "Lead Gen Form Campaigns",
             desc: "Pre filled forms make it easy for users to submit details without leaving LinkedIn, boosting conversion rates. Success depends on matching the right offer to the audience’s stage.",
-            svg: (
-              <FaWpforms color='#4C8C74' size={40} />
-            ),
+            svg: <FaWpforms color="#4C8C74" size={40} />,
           },
           {
             title: "Retargeting & Account-Based Campaigns",
             desc: "Retarget warm prospects who’ve already engaged, and use account-based targeting to reach decision makers at specific companies with customised messaging.",
-            svg: (
-              <MdAccountBalance color='#4C8C74' size={40} />
-            ),
+            svg: <MdAccountBalance color="#4C8C74" size={40} />,
           },
         ],
-        processHeading: <>From Account Audit to Live Campaigns in Three Clear Steps</>,
-        processPara: (
-          <>
-          </>
+        processHeading: (
+          <>From Account Audit to Live Campaigns in Three Clear Steps</>
         ),
+        processPara: <></>,
         processCardData: [
           {
             image: "/Services/01.svg",
             heading: "Audience Targeting & Campaign Planning",
             paragraph: (
               <>
-                Our team of professionals starts with your business, audience, and goals. Start auditing your existing account if you have one, or research your market fresh if you're starting. Then map out your full funnel strategy: which audiences to target at which stage, which formats to use, what the creative needs to say, and how to structure campaigns for the Meta algorithm to optimise correctly. You see and approve the plan before anything goes live.
+                Our team of professionals starts with your business, audience,
+                and goals. Start auditing your existing account if you have one,
+                or research your market fresh if you're starting. Then map out
+                your full funnel strategy: which audiences to target at which
+                stage, which formats to use, what the creative needs to say, and
+                how to structure campaigns for the Meta algorithm to optimise
+                correctly. You see and approve the plan before anything goes
+                live.
               </>
             ),
           },
@@ -10847,7 +12118,13 @@ While clicks cost more, the audience quality is far higher. We create a specific
             heading: "Creative Development & Campaign Launch",
             paragraph: (
               <>
-                We write the ad copy and direct the creative for every ad in the campaign. Pixel and Conversions API setup is verified before launch; no campaigns are running with tracking gaps. Audiences are built, the campaign structure is properly set up, and everything is reviewed before it goes live. We don't launch until we're confident the foundation is right, because a bad launch wastes budget that's hard to recover.
+                We write the ad copy and direct the creative for every ad in the
+                campaign. Pixel and Conversions API setup is verified before
+                launch; no campaigns are running with tracking gaps. Audiences
+                are built, the campaign structure is properly set up, and
+                everything is reviewed before it goes live. We don't launch
+                until we're confident the foundation is right, because a bad
+                launch wastes budget that's hard to recover.
               </>
             ),
           },
@@ -10856,56 +12133,63 @@ While clicks cost more, the audience quality is far higher. We create a specific
             heading: "Optimise, Report & Scale",
             paragraph: (
               <>
-                Once live, we review performance every week: creative fatigue, audience overlap, bid strategy, and placement performance. We test new creative variations, introduce new audience segments, and cut what isn't working. Monthly reporting covers the numbers that matter to your business. As the algorithm learns and we refine, campaigns compound, and performance improves consistently over time rather than plateauing after the first month.
+                Once live, we review performance every week: creative fatigue,
+                audience overlap, bid strategy, and placement performance. We
+                test new creative variations, introduce new audience segments,
+                and cut what isn't working. Monthly reporting covers the numbers
+                that matter to your business. As the algorithm learns and we
+                refine, campaigns compound, and performance improves
+                consistently over time rather than plateauing after the first
+                month.
               </>
             ),
           },
         ],
         pricingCardData: [
-      {
-        title: "Basic Website Package",
-        price: "$229",
-        discountedFrom: "$499",
-        includes: [
-          "2 Custom Logo Design Concepts",
-          "1 Dedicated Designer",
-          "4 REVISIONS",
-          "48 to 72 hours TAT",
-          "100% Unique Design Guarantee",
-          "100% Satisfaction Guarantee",
-          "100% Ownership Rights",
-          "100% Money Back Guarantee",
-        ],
-      },
-      {
-        title: "Basic Website Package",
-        price: "$229",
-        discountedFrom: "$499",
-        includes: [
-          "5 Custom Logo Design Concepts",
-          "By 2 Designers",
-          "UNLIMITED Revisions",
-          "48 to 72 hours TAT",
-          "100% Unique Design Guarantee",
-          "100% Satisfaction Guarantee",
-          "100% Ownership Rights",
-          "100% Money Back Guarantee",
-        ],
-      },
-      {
-        title: "Basic Website Package",
-        price: "$229",
-        discountedFrom: "$499",
-        includes: [
-          "UNLIMITED Logo Design Concepts",
-          "By 4 Designers",
-          "UNLIMITED Revisions",
-          "Stationary Design (Business Card, Letterhead, Envelope)",
-          "48 to 72 hours TAT",
-          "FREE MS Word Letterhead",
-          "All Final Files Format (AI, PSD, EPS, PNG, GIF, jpeg, PDF)",
-        ],
-      },
+          {
+            title: "Basic Website Package",
+            price: "$229",
+            discountedFrom: "$499",
+            includes: [
+              "2 Custom Logo Design Concepts",
+              "1 Dedicated Designer",
+              "4 REVISIONS",
+              "48 to 72 hours TAT",
+              "100% Unique Design Guarantee",
+              "100% Satisfaction Guarantee",
+              "100% Ownership Rights",
+              "100% Money Back Guarantee",
+            ],
+          },
+          {
+            title: "Basic Website Package",
+            price: "$229",
+            discountedFrom: "$499",
+            includes: [
+              "5 Custom Logo Design Concepts",
+              "By 2 Designers",
+              "UNLIMITED Revisions",
+              "48 to 72 hours TAT",
+              "100% Unique Design Guarantee",
+              "100% Satisfaction Guarantee",
+              "100% Ownership Rights",
+              "100% Money Back Guarantee",
+            ],
+          },
+          {
+            title: "Basic Website Package",
+            price: "$229",
+            discountedFrom: "$499",
+            includes: [
+              "UNLIMITED Logo Design Concepts",
+              "By 4 Designers",
+              "UNLIMITED Revisions",
+              "Stationary Design (Business Card, Letterhead, Envelope)",
+              "48 to 72 hours TAT",
+              "FREE MS Word Letterhead",
+              "All Final Files Format (AI, PSD, EPS, PNG, GIF, jpeg, PDF)",
+            ],
+          },
         ],
         customplanData: {
           heading: "With Aussie Digital Solution",
@@ -10913,18 +12197,46 @@ While clicks cost more, the audience quality is far higher. We create a specific
           body: (
             <div className="space-y-2">
               <ul className="list-disc list-inside mt-2">
-                <li>Precise audience targeting built around real buyer behaviour</li>
-                <li>Scroll-stopping creative written and designed to drive action</li>
-                <li>Full Meta pixel and conversion API setup, every lead attributed</li>
-                <li>Separate campaigns for cold audiences, warm audiences, and retargeting</li>
-                <li>Weekly optimisation, creative testing, audience refinement, bid adjustment</li>
-                <li>Reporting tied to cost per lead, ROAS, and real business outcomes</li>
+                <li>
+                  Precise audience targeting built around real buyer behaviour
+                </li>
+                <li>
+                  Scroll-stopping creative written and designed to drive action
+                </li>
+                <li>
+                  Full Meta pixel and conversion API setup, every lead
+                  attributed
+                </li>
+                <li>
+                  Separate campaigns for cold audiences, warm audiences, and
+                  retargeting
+                </li>
+                <li>
+                  Weekly optimisation, creative testing, audience refinement,
+                  bid adjustment
+                </li>
+                <li>
+                  Reporting tied to cost per lead, ROAS, and real business
+                  outcomes
+                </li>
               </ul>
             </div>
           ),
-          rightContent: <><h3 className="text-2xl text-white mt-3">Our Meta Ads Results</h3>
-          <p className="mt-2 font-semibold text-xl">Speak Louder Than We Do</p>
-          <p className="text-md">We've run Facebook and Instagram Ads campaigns for Australian businesses across eCommerce, home services, professional services, health, hospitality, and B2B. Ask us for examples from your sector, and we'll share real performance data before you commit to anything.</p></>,
+          rightContent: (
+            <>
+              <h3 className="text-2xl text-white mt-3">Our Meta Ads Results</h3>
+              <p className="mt-2 font-semibold text-xl">
+                Speak Louder Than We Do
+              </p>
+              <p className="text-md">
+                We've run Facebook and Instagram Ads campaigns for Australian
+                businesses across eCommerce, home services, professional
+                services, health, hospitality, and B2B. Ask us for examples from
+                your sector, and we'll share real performance data before you
+                commit to anything.
+              </p>
+            </>
+          ),
           miniTagData: <></>,
         },
         faqData: [
@@ -10934,12 +12246,14 @@ While clicks cost more, the audience quality is far higher. We create a specific
               "Most campaigns start generating data in less time. Initial optimisation happens during this learning phase, with more stable results typically seen within a few weeks. Retargeting campaigns often perform faster as they target warm audiences.",
           },
           {
-            question: "How much budget do I need to start Meta Ads in Australia?",
+            question:
+              "How much budget do I need to start Meta Ads in Australia?",
             answer:
               "It depends on your industry and goals, but you can start with a modest daily budget. We’ll recommend a realistic starting point for your specific business after a free strategy call.",
           },
           {
-            question: "Do you create the ad creative, or do I need to supply it?",
+            question:
+              "Do you create the ad creative, or do I need to supply it?",
             answer:
               "Our company provides ad copy and creative direction. You can use your existing assets, or we’ll guide you on what needs to be created for better performance. We can also connect you with trusted production support if needed.",
           },
@@ -10973,18 +12287,28 @@ While clicks cost more, the audience quality is far higher. We create a specific
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
         contactData: {
-        heading: (<>Let's Grow Your Business Together</>),
-        body: (<><h3 className="text-2xl font-semibold">17 Million Australians Use Facebook and Instagram Every Month</h3>
-        <p>The question isn't whether your customers are on Meta. They are. The question is whether your ads are reaching them properly. Get in touch today, and one of our Meta Ads specialists will respond within one business day.</p>
-        </>),
-        buttonText: "Book a Free Audit",
-      },
+          heading: <>Let's Grow Your Business Together</>,
+          body: (
+            <>
+              <h3 className="text-2xl font-semibold">
+                17 Million Australians Use Facebook and Instagram Every Month
+              </h3>
+              <p>
+                The question isn't whether your customers are on Meta. They are.
+                The question is whether your ads are reaching them properly. Get
+                in touch today, and one of our Meta Ads specialists will respond
+                within one business day.
+              </p>
+            </>
+          ),
+          buttonText: "Book a Free Audit",
+        },
       },
       {
         slug: "retargeting-remarketing",
         title: "Retargeting & Remarketing",
         heading: "Retargeting That Converts",
-        imageUrl: "/Services/Rectangle_52.png",
+        imageUrl: "/services/Rectangle_52.webp",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -11424,7 +12748,7 @@ While clicks cost more, the audience quality is far higher. We create a specific
         slug: "shopping-ads",
         title: "Shopping Ads",
         heading: "Shopping Ads That Convert",
-        imageUrl: "/Services/Rectangle_52.png",
+        imageUrl: "/services/Rectangle_52.webp",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -11864,7 +13188,7 @@ While clicks cost more, the audience quality is far higher. We create a specific
         slug: "affiliate-performance-marketing",
         title: "Affiliate Performance Marketing",
         heading: "Affiliate Performance Marketing That Drives Real Results",
-        imageUrl: "/Services/Rectangle_52.png",
+        imageUrl: "/services/Rectangle_52.webp",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -12304,7 +13628,7 @@ While clicks cost more, the audience quality is far higher. We create a specific
         slug: "influencer-performance-marketing",
         title: "Influencer Performance Marketing",
         heading: "Influencer Performance Marketing That Drives Real Results",
-        imageUrl: "/Services/Rectangle_52.png",
+        imageUrl: "/services/Rectangle_52.webp",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -12744,7 +14068,7 @@ While clicks cost more, the audience quality is far higher. We create a specific
         slug: "app-performance-marketing",
         title: "App Performance Marketing",
         heading: "App Performance Marketing That Drives Real Results",
-        imageUrl: "/Services/Rectangle_52.png",
+        imageUrl: "/services/Rectangle_52.webp",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -13190,59 +14514,92 @@ While clicks cost more, the audience quality is far higher. We create a specific
     // heading: "Web Development Services in Australia",
     serviceBodyData: [
       {
-        imageUrl: "/Services/Rectangle_52.webp",
+        imageUrl: "/services/Rectangle_52.webp",
         description: (
           <>
             <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
               Your Brand Deserves to Be Remembered.
             </h2>
-            Most businesses underestimate what a logo actually does. It's not decoration. It's the first thing someone sees before they read a word about you, and if it doesn't land, they're already forming the wrong opinion.<br /><br />
-At Aussie Digital Solution, we don't hand you a generic mark and call it a day. We build brand identities that actually mean something, ones that grow with your business and make people remember you for the right reasons.
-
-{/* <h3 className="text-white text-3xl mt-5 md:text-2xl font-medium">CTA: Start Your Brand Journey | See Our Services</h3> */}
-<div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
-  <a
-    className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15"
-    href="/contact"
-  >
-    Start Your Brand Journey
-  </a>
-  <span
-    aria-hidden="true"
-    className="h-10 w-px bg-white/30 max-sm:h-px max-sm:w-full"
-  />
-  <a
-    className="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/10"
-    href="/services"
-  >
-    See Our Services
-  </a>
-</div>
+            Most businesses underestimate what a logo actually does. It's not
+            decoration. It's the first thing someone sees before they read a
+            word about you, and if it doesn't land, they're already forming the
+            wrong opinion.
+            <br />
+            <br />
+            At Aussie Digital Solution, we don't hand you a generic mark and
+            call it a day. We build brand identities that actually mean
+            something, ones that grow with your business and make people
+            remember you for the right reasons.
+            {/* <h3 className="text-white text-3xl mt-5 md:text-2xl font-medium">CTA: Start Your Brand Journey | See Our Services</h3> */}
+            <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
+              <a
+                className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15"
+                href="/contact"
+              >
+                Start Your Brand Journey
+              </a>
+              <span
+                aria-hidden="true"
+                className="h-10 w-px bg-white/30 max-sm:h-px max-sm:w-full"
+              />
+              <a
+                className="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/10"
+                href="/services"
+              >
+                See Our Services
+              </a>
+            </div>
           </>
         ),
       },
     ],
     whyChooseData: {
-      image: "/Services/Rectangle_52.webp",
+      image: "/services/Rectangle_52.webp",
       heading: "Why Aussie Digital Solution",
       paragraphs: [
         <React.Fragment key="why-aussie-branding">
-        <h3 className="text-2xl text-white">We Don't Just Design, We Build Brands</h3>
-        <p className="text-[#AAAAAA]">Getting a cheap logo made is easy. There are dozens of places to do it in under 10 minutes. <br />
-But that's not a brand. A brand is what people think and feel when they come across your business, and building that properly takes more than a quick design file. We've spent years working with Australian businesses across different industries, and we've seen firsthand what separates the brands that stick from the ones that get ignored.</p>
+          <h3 className="text-2xl text-white">
+            We Don't Just Design, We Build Brands
+          </h3>
+          <p className="text-[#AAAAAA]">
+            Getting a cheap logo made is easy. There are dozens of places to do
+            it in under 10 minutes. <br />
+            But that's not a brand. A brand is what people think and feel when
+            they come across your business, and building that properly takes
+            more than a quick design file. We've spent years working with
+            Australian businesses across different industries, and we've seen
+            firsthand what separates the brands that stick from the ones that
+            get ignored.
+          </p>
 
-<h3 className="text-2xl text-white mt-5">Strategy Before Design</h3>
-        <p className="text-[#AAAAAA]">We start with your business goals and audience before we ever open a design tool. </p>
+          <h3 className="text-2xl text-white mt-5">Strategy Before Design</h3>
+          <p className="text-[#AAAAAA]">
+            We start with your business goals and audience before we ever open a
+            design tool.{" "}
+          </p>
 
-        <h3 className="text-2xl text-white mt-5">Built for Australian Markets</h3>
-        <p className="text-[#AAAAAA]">We understand local business culture, buyer behaviour, and what resonates with Australian audiences, not a generic international template.</p>
+          <h3 className="text-2xl text-white mt-5">
+            Built for Australian Markets
+          </h3>
+          <p className="text-[#AAAAAA]">
+            We understand local business culture, buyer behaviour, and what
+            resonates with Australian audiences, not a generic international
+            template.
+          </p>
 
-        <h3 className="text-2xl text-white mt-5">End to End Delivery</h3>
-        <p className="text-[#AAAAAA]">From initial brief to final brand file handover, everything happens under one roof. No outsourcing,  confusion, or any compromise in quality.</p>
+          <h3 className="text-2xl text-white mt-5">End to End Delivery</h3>
+          <p className="text-[#AAAAAA]">
+            From initial brief to final brand file handover, everything happens
+            under one roof. No outsourcing, confusion, or any compromise in
+            quality.
+          </p>
 
-        <h3 className="text-2xl text-white mt-5">You Own Everything</h3>
-        <p className="text-[#AAAAAA]">All files, all rights, all yours. We hand over source files and full ownership of every asset we create, no strings attached.</p>
-</React.Fragment>,
+          <h3 className="text-2xl text-white mt-5">You Own Everything</h3>
+          <p className="text-[#AAAAAA]">
+            All files, all rights, all yours. We hand over source files and full
+            ownership of every asset we create, no strings attached.
+          </p>
+        </React.Fragment>,
       ],
     },
     // ctaData: {
@@ -13280,128 +14637,328 @@ But that's not a brand. A brand is what people think and feel when they come acr
           </>
         ),
         svg: (
-          <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fillRule="evenodd" clipRule="evenodd" d="M10.6628 3.25L13.3962 3.25C14.4775 3.24999 15.3438 3.24998 16.0539 3.32024C16.7893 3.393 17.4138 3.54511 18.0018 3.88204C18.5885 4.21826 19.0412 4.68264 19.4875 5.28464C19.9201 5.86804 20.3781 6.62574 20.9521 7.57545L21.6722 8.7667C22.1517 9.55986 22.5408 10.2035 22.8055 10.7633C23.0815 11.3467 23.25 11.8935 23.25 12.5C23.25 13.1065 23.0815 13.6533 22.8055 14.2367C22.5408 14.7965 22.1517 15.4401 21.6722 16.2333L20.9521 17.4246C20.3781 18.3743 19.9201 19.132 19.4875 19.7154C19.0412 20.3174 18.5885 20.7817 18.0018 21.118C17.4138 21.4549 16.7893 21.607 16.0539 21.6798C15.3438 21.75 14.4775 21.75 13.3962 21.75H10.6628C8.77448 21.75 7.27837 21.75 6.10742 21.5873C4.90024 21.4194 3.92827 21.0659 3.16484 20.2766C2.4048 19.4908 2.06748 18.4962 1.90675 17.2601C1.74998 16.0544 1.74999 14.5118 1.75 12.555V12.445C1.74999 10.4882 1.74998 8.94556 1.90675 7.73988C2.06748 6.50385 2.4048 5.50922 3.16484 4.72339C3.92827 3.93405 4.90024 3.58055 6.10742 3.41274C7.27838 3.24997 8.7745 3.24998 10.6628 3.25ZM6.31395 4.89846C5.28243 5.04185 4.68356 5.31074 4.24305 5.76621C3.79914 6.22517 3.53449 6.85468 3.39423 7.93331C3.25149 9.03102 3.25 10.476 3.25 12.5C3.25 14.524 3.25149 15.969 3.39423 17.0667C3.53449 18.1453 3.79914 18.7748 4.24305 19.2338C4.68356 19.6893 5.28243 19.9582 6.31395 20.1015C7.36968 20.2483 8.76142 20.25 10.721 20.25H13.358C14.4863 20.25 15.2785 20.2492 15.9062 20.187C16.517 20.1266 16.9142 20.0123 17.256 19.8165C17.599 19.6199 17.9062 19.3297 18.2826 18.822C18.668 18.3022 19.09 17.6055 19.6875 16.617L20.3683 15.4908C20.8728 14.6562 21.2214 14.0778 21.4495 13.5954C21.6702 13.1287 21.75 12.8077 21.75 12.5C21.75 12.1923 21.6702 11.8713 21.4495 11.4046C21.2214 10.9222 20.8728 10.3438 20.3683 9.50924L19.6875 8.383C19.09 7.39452 18.668 6.69782 18.2826 6.17798C17.9062 5.6703 17.599 5.38005 17.256 5.1835C16.9142 4.98766 16.517 4.87339 15.9062 4.81295C15.2785 4.75084 14.4863 4.75 13.358 4.75H10.721C8.76142 4.75 7.36968 4.7517 6.31395 4.89846ZM7.5 7.24512C7.91421 7.24512 8.25 7.5809 8.25 7.99512V17C8.25 17.4142 7.91421 17.75 7.5 17.75C7.08579 17.75 6.75 17.4142 6.75 17V7.99512C6.75 7.5809 7.08579 7.24512 7.5 7.24512Z" fill="#4C8C74"></path> </g></svg>
+          <svg
+            width="40px"
+            height="40px"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              {" "}
+              <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M10.6628 3.25L13.3962 3.25C14.4775 3.24999 15.3438 3.24998 16.0539 3.32024C16.7893 3.393 17.4138 3.54511 18.0018 3.88204C18.5885 4.21826 19.0412 4.68264 19.4875 5.28464C19.9201 5.86804 20.3781 6.62574 20.9521 7.57545L21.6722 8.7667C22.1517 9.55986 22.5408 10.2035 22.8055 10.7633C23.0815 11.3467 23.25 11.8935 23.25 12.5C23.25 13.1065 23.0815 13.6533 22.8055 14.2367C22.5408 14.7965 22.1517 15.4401 21.6722 16.2333L20.9521 17.4246C20.3781 18.3743 19.9201 19.132 19.4875 19.7154C19.0412 20.3174 18.5885 20.7817 18.0018 21.118C17.4138 21.4549 16.7893 21.607 16.0539 21.6798C15.3438 21.75 14.4775 21.75 13.3962 21.75H10.6628C8.77448 21.75 7.27837 21.75 6.10742 21.5873C4.90024 21.4194 3.92827 21.0659 3.16484 20.2766C2.4048 19.4908 2.06748 18.4962 1.90675 17.2601C1.74998 16.0544 1.74999 14.5118 1.75 12.555V12.445C1.74999 10.4882 1.74998 8.94556 1.90675 7.73988C2.06748 6.50385 2.4048 5.50922 3.16484 4.72339C3.92827 3.93405 4.90024 3.58055 6.10742 3.41274C7.27838 3.24997 8.7745 3.24998 10.6628 3.25ZM6.31395 4.89846C5.28243 5.04185 4.68356 5.31074 4.24305 5.76621C3.79914 6.22517 3.53449 6.85468 3.39423 7.93331C3.25149 9.03102 3.25 10.476 3.25 12.5C3.25 14.524 3.25149 15.969 3.39423 17.0667C3.53449 18.1453 3.79914 18.7748 4.24305 19.2338C4.68356 19.6893 5.28243 19.9582 6.31395 20.1015C7.36968 20.2483 8.76142 20.25 10.721 20.25H13.358C14.4863 20.25 15.2785 20.2492 15.9062 20.187C16.517 20.1266 16.9142 20.0123 17.256 19.8165C17.599 19.6199 17.9062 19.3297 18.2826 18.822C18.668 18.3022 19.09 17.6055 19.6875 16.617L20.3683 15.4908C20.8728 14.6562 21.2214 14.0778 21.4495 13.5954C21.6702 13.1287 21.75 12.8077 21.75 12.5C21.75 12.1923 21.6702 11.8713 21.4495 11.4046C21.2214 10.9222 20.8728 10.3438 20.3683 9.50924L19.6875 8.383C19.09 7.39452 18.668 6.69782 18.2826 6.17798C17.9062 5.6703 17.599 5.38005 17.256 5.1835C16.9142 4.98766 16.517 4.87339 15.9062 4.81295C15.2785 4.75084 14.4863 4.75 13.358 4.75H10.721C8.76142 4.75 7.36968 4.7517 6.31395 4.89846ZM7.5 7.24512C7.91421 7.24512 8.25 7.5809 8.25 7.99512V17C8.25 17.4142 7.91421 17.75 7.5 17.75C7.08579 17.75 6.75 17.4142 6.75 17V7.99512C6.75 7.5809 7.08579 7.24512 7.5 7.24512Z"
+                fill="#4C8C74"
+              ></path>{" "}
+            </g>
+          </svg>
         ),
       },
       {
         title: "Logo Design & Visual Systems",
         descText:
           "People decide whether they trust a brand in seconds. Your logo carries a lot of that weight. We design logos that actually say something, not just look nice, but communicate what you do and give people a reason to pay attention. From there, we build out a full visual system around it: icons, colour rules, spacing, and everything your team needs so the brand stays consistent across every platform and piece of material you put out.",
-        desc: (<>People decide whether they trust a brand in seconds. Your logo carries a lot of that weight.<br />
-	We design logos that actually say something, not just look nice, but communicate what you do and give people a reason to pay attention. From there, we build out a full visual system around it: icons, colour rules, spacing, and everything your team needs so the brand stays consistent across every platform and piece of material you put out.
-        <div className="absolute bottom-4 left-0 right-0 flex flex-col items-center text-[10px] gap-y-3">
-          <div className="flex items-center justify-center gap-2">
-            <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
-  Logo Design
-</button>
-            <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
-  Icon Design
-</button>
-          </div>
-          <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
-  Visual System
-</button>
-        </div>
-</>),
+        desc: (
+          <>
+            People decide whether they trust a brand in seconds. Your logo
+            carries a lot of that weight.
+            <br />
+            We design logos that actually say something, not just look nice, but
+            communicate what you do and give people a reason to pay attention.
+            From there, we build out a full visual system around it: icons,
+            colour rules, spacing, and everything your team needs so the brand
+            stays consistent across every platform and piece of material you put
+            out.
+            <div className="absolute bottom-4 left-0 right-0 flex flex-col items-center text-[10px] gap-y-3">
+              <div className="flex items-center justify-center gap-2">
+                <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
+                  Logo Design
+                </button>
+                <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
+                  Icon Design
+                </button>
+              </div>
+              <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
+                Visual System
+              </button>
+            </div>
+          </>
+        ),
         svg: (
-          <svg version="1.1" id="DESIGN" xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 1800 1800" enableBackground="new 0 0 1800 1800" fill="#000000"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Layer"> <g> <path fill="#4C8C74" d="M1541.606,1540.146l0.009-0.008c35.598-35.594,35.598-93.52,0-129.121 c-17.24-17.236-40.178-26.745-64.569-26.745c-24.378,0-47.314,9.509-64.564,26.763c-35.588,35.584-35.588,93.51,0.009,129.104 C1448.096,1575.73,1506.014,1575.73,1541.606,1540.146z M1440.885,1511.743c-9.656-9.655-14.975-22.498-14.975-36.165 c0-13.659,5.318-26.511,14.975-36.167c9.665-9.655,22.512-14.979,36.175-14.979c13.659,0,26.497,5.323,36.161,14.979 c19.938,19.945,19.938,52.387-0.008,72.332C1493.271,1531.689,1460.831,1531.681,1440.885,1511.743z"></path> <path fill="#4C8C74" d="M1700.934,402.736c0.021-0.026,0.047-0.043,0.068-0.065c0.044-0.043,0.083-0.091,0.127-0.134l5.504-5.505 l-0.138-0.139c81.836-87.814,80.038-225.814-5.507-311.356c-42.353-42.357-98.664-65.685-158.565-65.685 c-57.228,0-111.154,21.339-152.792,60.18l-0.134-0.134l-5.511,5.507c-0.043,0.046-0.09,0.085-0.134,0.131 c-0.021,0.021-0.039,0.045-0.061,0.069L66.371,1403.02l0.513,0.513c-7.364,4.749-12.699,12.548-13.98,21.907L9.578,1741.903 c-1.319,9.647,1.95,19.347,8.831,26.232c5.875,5.87,13.807,9.108,22.004,9.108c1.402,0,2.813-0.095,4.224-0.286l316.451-43.338 c9.365-1.276,17.163-6.617,21.912-13.98l0.512,0.513L1700.934,402.736z M1542.423,82.094c43.272,0,83.954,16.852,114.551,47.452 c55.643,55.638,62.276,142.02,19.897,204.983L1451.973,109.64C1478.482,91.724,1509.717,82.094,1542.423,82.094z M1389.497,167.919l229.113,229.112L383.512,1632.129l-86.195-86.19l991.423-991.409l-59.351-59.342l-991.41,991.418 l-83.585-83.586L1389.497,167.919z M76.804,1709.731l35.68-260.604l224.915,224.916L76.804,1709.731z"></path> <path fill="#4C8C74" d="M506.941,804.479l56.789-56.789l-454.446-454.45l185.432-185.437l87.924,87.932l-63.792,63.783 l50.362,50.359l63.792-63.779l51.262,51.258l-63.792,63.788l50.363,50.354l63.797-63.779l51.257,51.267l-94.375,94.353 l50.376,50.363l94.362-94.362l62.502,62.498l-63.792,63.801l50.363,50.354l63.792-63.792l0.043,0.047l56.789-56.789 L323.106,22.622c-15.682-15.686-41.102-15.686-56.784,0L24.102,264.845c-15.687,15.683-15.687,41.107,0,56.789L506.941,804.479z"></path> <path fill="#4C8C74" d="M1778.944,1478.287c-0.726-0.729-1.478-1.424-2.241-2.085l-505.282-505.273l-151.159,151.159l50.259,50.26 l94.371-94.37l428.79,428.782l-185.441,185.432l-479.045-479.041l-56.789,56.798l507.437,507.427 c15.682,15.69,41.102,15.69,56.788,0l242.234-242.213c0.021-0.034,0.048-0.052,0.079-0.086 C1794.63,1519.402,1794.63,1493.969,1778.944,1478.287z"></path> </g> </g> </g></svg>
+          <svg
+            version="1.1"
+            id="DESIGN"
+            xmlns="http://www.w3.org/2000/svg"
+            width="40px"
+            height="40px"
+            viewBox="0 0 1800 1800"
+            enableBackground="new 0 0 1800 1800"
+            fill="#000000"
+          >
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              {" "}
+              <g id="Layer">
+                {" "}
+                <g>
+                  {" "}
+                  <path
+                    fill="#4C8C74"
+                    d="M1541.606,1540.146l0.009-0.008c35.598-35.594,35.598-93.52,0-129.121 c-17.24-17.236-40.178-26.745-64.569-26.745c-24.378,0-47.314,9.509-64.564,26.763c-35.588,35.584-35.588,93.51,0.009,129.104 C1448.096,1575.73,1506.014,1575.73,1541.606,1540.146z M1440.885,1511.743c-9.656-9.655-14.975-22.498-14.975-36.165 c0-13.659,5.318-26.511,14.975-36.167c9.665-9.655,22.512-14.979,36.175-14.979c13.659,0,26.497,5.323,36.161,14.979 c19.938,19.945,19.938,52.387-0.008,72.332C1493.271,1531.689,1460.831,1531.681,1440.885,1511.743z"
+                  ></path>{" "}
+                  <path
+                    fill="#4C8C74"
+                    d="M1700.934,402.736c0.021-0.026,0.047-0.043,0.068-0.065c0.044-0.043,0.083-0.091,0.127-0.134l5.504-5.505 l-0.138-0.139c81.836-87.814,80.038-225.814-5.507-311.356c-42.353-42.357-98.664-65.685-158.565-65.685 c-57.228,0-111.154,21.339-152.792,60.18l-0.134-0.134l-5.511,5.507c-0.043,0.046-0.09,0.085-0.134,0.131 c-0.021,0.021-0.039,0.045-0.061,0.069L66.371,1403.02l0.513,0.513c-7.364,4.749-12.699,12.548-13.98,21.907L9.578,1741.903 c-1.319,9.647,1.95,19.347,8.831,26.232c5.875,5.87,13.807,9.108,22.004,9.108c1.402,0,2.813-0.095,4.224-0.286l316.451-43.338 c9.365-1.276,17.163-6.617,21.912-13.98l0.512,0.513L1700.934,402.736z M1542.423,82.094c43.272,0,83.954,16.852,114.551,47.452 c55.643,55.638,62.276,142.02,19.897,204.983L1451.973,109.64C1478.482,91.724,1509.717,82.094,1542.423,82.094z M1389.497,167.919l229.113,229.112L383.512,1632.129l-86.195-86.19l991.423-991.409l-59.351-59.342l-991.41,991.418 l-83.585-83.586L1389.497,167.919z M76.804,1709.731l35.68-260.604l224.915,224.916L76.804,1709.731z"
+                  ></path>{" "}
+                  <path
+                    fill="#4C8C74"
+                    d="M506.941,804.479l56.789-56.789l-454.446-454.45l185.432-185.437l87.924,87.932l-63.792,63.783 l50.362,50.359l63.792-63.779l51.262,51.258l-63.792,63.788l50.363,50.354l63.797-63.779l51.257,51.267l-94.375,94.353 l50.376,50.363l94.362-94.362l62.502,62.498l-63.792,63.801l50.363,50.354l63.792-63.792l0.043,0.047l56.789-56.789 L323.106,22.622c-15.682-15.686-41.102-15.686-56.784,0L24.102,264.845c-15.687,15.683-15.687,41.107,0,56.789L506.941,804.479z"
+                  ></path>{" "}
+                  <path
+                    fill="#4C8C74"
+                    d="M1778.944,1478.287c-0.726-0.729-1.478-1.424-2.241-2.085l-505.282-505.273l-151.159,151.159l50.259,50.26 l94.371-94.37l428.79,428.782l-185.441,185.432l-479.045-479.041l-56.789,56.798l507.437,507.427 c15.682,15.69,41.102,15.69,56.788,0l242.234-242.213c0.021-0.034,0.048-0.052,0.079-0.086 C1794.63,1519.402,1794.63,1493.969,1778.944,1478.287z"
+                  ></path>{" "}
+                </g>{" "}
+              </g>{" "}
+            </g>
+          </svg>
         ),
       },
       {
         title: "Brand Guide & Standards",
         descText:
           "Here's what happens without one: your website uses one shade of blue, your printed flyers use another, your social posts look like they belong to a different company entirely. Customers notice. It makes you look unorganised even when you're not. A brand guide fixes that. It gives everyone, your staff, your designers, your print supplier, one clear document to work from. Colours, fonts, logo usage, tone of voice. Everything in one place, clearly explained, easy to follow.",
-        desc: (<>Here's what happens without one: your website uses one shade of blue, your printed flyers use another, your social posts look like they belong to a different company entirely. Customers notice. It makes you look unorganised even when you're not.<br />
-A brand guide fixes that. It gives everyone, your staff, your designers, your print supplier, one clear document to work from. Colours, fonts, logo usage, tone of voice. Everything in one place, clearly explained, easy to follow.
-	<div className="absolute bottom-4 left-0 right-0 flex flex-col items-center text-[10px] gap-y-3">
-          <div className="flex items-center justify-center gap-2">
-            <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
-  Brand Standards
-</button>
-            <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
-  Colour Palette
-</button>
-          </div>
-          <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
-  Typography
-</button>
-        </div>
-</>),
+        desc: (
+          <>
+            Here's what happens without one: your website uses one shade of
+            blue, your printed flyers use another, your social posts look like
+            they belong to a different company entirely. Customers notice. It
+            makes you look unorganised even when you're not.
+            <br />A brand guide fixes that. It gives everyone, your staff, your
+            designers, your print supplier, one clear document to work from.
+            Colours, fonts, logo usage, tone of voice. Everything in one place,
+            clearly explained, easy to follow.
+            <div className="absolute bottom-4 left-0 right-0 flex flex-col items-center text-[10px] gap-y-3">
+              <div className="flex items-center justify-center gap-2">
+                <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
+                  Brand Standards
+                </button>
+                <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
+                  Colour Palette
+                </button>
+              </div>
+              <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
+                Typography
+              </button>
+            </div>
+          </>
+        ),
         svg: (
-          <svg width="40px" height="40px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill="#4C8C74" fillRule="evenodd" d="M1.25 2C.56 2 0 2.56 0 3.25v8.5C0 12.44.56 13 1.25 13H5c.896 0 1.475.205 1.809.448.317.23.441.51.441.802a.75.75 0 001.5 0c0-.292.124-.572.441-.802.334-.243.913-.448 1.809-.448h3.75c.69 0 1.25-.56 1.25-1.25v-8.5C16 2.56 15.44 2 14.75 2H11c-1.154 0-2.106.354-2.772 1-.081.08-.157.161-.228.246A3.131 3.131 0 007.772 3C7.106 2.354 6.154 2 5 2H1.25zm7.5 9.967c.61-.309 1.372-.467 2.25-.467h3.5v-8H11c-.846 0-1.394.253-1.728.577-.335.325-.522.787-.522 1.34v6.55zm-1.5 0v-6.55c0-.553-.187-1.015-.522-1.34C6.394 3.753 5.846 3.5 5 3.5H1.5v8H5c.878 0 1.64.158 2.25.467z" clipRule="evenodd"></path></g></svg>
+          <svg
+            width="40px"
+            height="40px"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+          >
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                fill="#4C8C74"
+                fillRule="evenodd"
+                d="M1.25 2C.56 2 0 2.56 0 3.25v8.5C0 12.44.56 13 1.25 13H5c.896 0 1.475.205 1.809.448.317.23.441.51.441.802a.75.75 0 001.5 0c0-.292.124-.572.441-.802.334-.243.913-.448 1.809-.448h3.75c.69 0 1.25-.56 1.25-1.25v-8.5C16 2.56 15.44 2 14.75 2H11c-1.154 0-2.106.354-2.772 1-.081.08-.157.161-.228.246A3.131 3.131 0 007.772 3C7.106 2.354 6.154 2 5 2H1.25zm7.5 9.967c.61-.309 1.372-.467 2.25-.467h3.5v-8H11c-.846 0-1.394.253-1.728.577-.335.325-.522.787-.522 1.34v6.55zm-1.5 0v-6.55c0-.553-.187-1.015-.522-1.34C6.394 3.753 5.846 3.5 5 3.5H1.5v8H5c.878 0 1.64.158 2.25.467z"
+                clipRule="evenodd"
+              ></path>
+            </g>
+          </svg>
         ),
       },
       {
         title: "Playbook Development",
         descText:
           "A brand guide tells people what your brand looks like. A playbook tells people how it behaves. How does your team talk to customers? What's the tone in your emails? How does your brand come across on social versus in a proposal? These things matter more than most businesses realise, and when they're inconsistent, customers feel it even if they can't name it. We build playbooks that turn your brand values into real, everyday decisions, so no matter who's speaking on behalf of your business, it always feels like the same company.",
-        desc: (<>A brand guide tells people what your brand looks like. A playbook tells people how it behaves.<br />
-How does your team talk to customers? What's the tone in your emails? How does your brand come across on social versus in a proposal? These things matter more than most businesses realise, and when they're inconsistent, customers feel it even if they can't name it.<br />
-We build playbooks that turn your brand values into real, everyday decisions, so no matter who's speaking on behalf of your business, it always feels like the same company.
-<div className="absolute bottom-4 left-0 right-0 flex flex-col items-center text-[10px] gap-y-3">
-          <div className="flex items-center justify-center gap-2">
-            <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
-  Brand Voice
-</button>
-            <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
-  Messaging
-</button>
-          </div>
-          <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
-  Touchpoints
-</button>
-        </div>
-</>),
+        desc: (
+          <>
+            A brand guide tells people what your brand looks like. A playbook
+            tells people how it behaves.
+            <br />
+            How does your team talk to customers? What's the tone in your
+            emails? How does your brand come across on social versus in a
+            proposal? These things matter more than most businesses realise, and
+            when they're inconsistent, customers feel it even if they can't name
+            it.
+            <br />
+            We build playbooks that turn your brand values into real, everyday
+            decisions, so no matter who's speaking on behalf of your business,
+            it always feels like the same company.
+            <div className="absolute bottom-4 left-0 right-0 flex flex-col items-center text-[10px] gap-y-3">
+              <div className="flex items-center justify-center gap-2">
+                <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
+                  Brand Voice
+                </button>
+                <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
+                  Messaging
+                </button>
+              </div>
+              <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
+                Touchpoints
+              </button>
+            </div>
+          </>
+        ),
         svg: (
-          <svg width="40px" height="40px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"  fill="#000000"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>book-album</title> <desc>Created with Sketch Beta.</desc> <defs> </defs> <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd" > <g id="Icon-Set"  transform="translate(-412.000000, -99.000000)" fill="#4C8C74"> <path d="M442,124 C442,125.104 441.073,125.656 440,126 C440,126 434.557,127.515 429,128.977 L429,104 L440,101 C441.104,101 442,101.896 442,103 L442,124 L442,124 Z M427,128.998 C421.538,127.53 416,126 416,126 C414.864,125.688 414,125.104 414,124 L414,103 C414,101.896 414.896,101 416,101 L427,104 L427,128.998 L427,128.998 Z M440,99 C440,99 434.211,100.594 428.95,102 C428.291,102.025 427.627,102 426.967,102 C421.955,100.656 416,99 416,99 C413.791,99 412,100.791 412,103 L412,124 C412,126.209 413.885,127.313 416,128 C416,128 421.393,129.5 426.967,131 L428.992,131 C434.612,129.5 440,128 440,128 C442.053,127.469 444,126.209 444,124 L444,103 C444,100.791 442.209,99 440,99 L440,99 Z" id="book-album" > </path> </g> </g> </g></svg>
+          <svg
+            width="40px"
+            height="40px"
+            viewBox="0 0 32 32"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="#000000"
+          >
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              {" "}
+              <title>book-album</title> <desc>Created with Sketch Beta.</desc>{" "}
+              <defs> </defs>{" "}
+              <g
+                id="Page-1"
+                stroke="none"
+                strokeWidth="1"
+                fill="none"
+                fillRule="evenodd"
+              >
+                {" "}
+                <g
+                  id="Icon-Set"
+                  transform="translate(-412.000000, -99.000000)"
+                  fill="#4C8C74"
+                >
+                  {" "}
+                  <path
+                    d="M442,124 C442,125.104 441.073,125.656 440,126 C440,126 434.557,127.515 429,128.977 L429,104 L440,101 C441.104,101 442,101.896 442,103 L442,124 L442,124 Z M427,128.998 C421.538,127.53 416,126 416,126 C414.864,125.688 414,125.104 414,124 L414,103 C414,101.896 414.896,101 416,101 L427,104 L427,128.998 L427,128.998 Z M440,99 C440,99 434.211,100.594 428.95,102 C428.291,102.025 427.627,102 426.967,102 C421.955,100.656 416,99 416,99 C413.791,99 412,100.791 412,103 L412,124 C412,126.209 413.885,127.313 416,128 C416,128 421.393,129.5 426.967,131 L428.992,131 C434.612,129.5 440,128 440,128 C442.053,127.469 444,126.209 444,124 L444,103 C444,100.791 442.209,99 440,99 L440,99 Z"
+                    id="book-album"
+                  >
+                    {" "}
+                  </path>{" "}
+                </g>{" "}
+              </g>{" "}
+            </g>
+          </svg>
         ),
       },
       {
         title: "Personal Branding",
         descText:
           "If you're a founder, consultant, coach, or creative, you are part of the product. People buy from people they trust, and that trust starts with how you present yourself. We help individuals build a personal brand that's genuinely theirs. Not a polished corporate version of themselves, but something clear, credible, and consistent - across LinkedIn, their website, and wherever their audience actually spends time.",
-        desc: (<>If you're a founder, consultant, coach, or creative, you are part of the product. People buy from people they trust, and that trust starts with how you present yourself.<br />
-We help individuals build a personal brand that's genuinely theirs. Not a polished corporate version of themselves, but something clear, credible, and consistent — across LinkedIn, their website, and wherever their audience actually spends time.
-<div className="absolute bottom-4 left-0 right-0 flex flex-col items-center text-[10px] gap-y-3">
-          <div className="flex items-center justify-center gap-2">
-            <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
-  Personal Brand
-</button>
-            <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
-  Founder Brand
-</button>
-          </div>
-          <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
-  Online Presence
-</button>
-        </div>
-</>),
+        desc: (
+          <>
+            If you're a founder, consultant, coach, or creative, you are part of
+            the product. People buy from people they trust, and that trust
+            starts with how you present yourself.
+            <br />
+            We help individuals build a personal brand that's genuinely theirs.
+            Not a polished corporate version of themselves, but something clear,
+            credible, and consistent — across LinkedIn, their website, and
+            wherever their audience actually spends time.
+            <div className="absolute bottom-4 left-0 right-0 flex flex-col items-center text-[10px] gap-y-3">
+              <div className="flex items-center justify-center gap-2">
+                <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
+                  Personal Brand
+                </button>
+                <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
+                  Founder Brand
+                </button>
+              </div>
+              <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
+                Online Presence
+              </button>
+            </div>
+          </>
+        ),
         svg: (
-          <svg width="40px" height="40px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#4C8C74"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M0 0h48v48H0z" fill="none"></path> <g id="Shopicon"> <path d="M44,22V4H26L4,26l18,18L44,22z M32,14c1.105,0,2,0.895,2,2c0,1.105-0.895,2-2,2c-1.105,0-2-0.895-2-2 C30,14.895,30.895,14,32,14z"></path> </g> </g></svg>
+          <svg
+            width="40px"
+            height="40px"
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="#4C8C74"
+          >
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              {" "}
+              <path d="M0 0h48v48H0z" fill="none"></path>{" "}
+              <g id="Shopicon">
+                {" "}
+                <path d="M44,22V4H26L4,26l18,18L44,22z M32,14c1.105,0,2,0.895,2,2c0,1.105-0.895,2-2,2c-1.105,0-2-0.895-2-2 C30,14.895,30.895,14,32,14z"></path>{" "}
+              </g>{" "}
+            </g>
+          </svg>
         ),
       },
       {
         title: "Video & Motion Graphics",
         descText:
           "A static logo on a white background tells part of the story. Motion tells the rest. Animated brand intros, explainer videos, social reels, promotional content - when it's done well, motion makes people stop and actually watch. We create motion content built around your brand, not generic templates. Every frame has a reason to be there.",
-        desc: (<>A static logo on a white background tells part of the story. Motion tells the rest.<br />
-Animated brand intros, explainer videos, social reels, promotional content — when it's done well, motion makes people stop and actually watch. We create motion content built around your brand, not generic templates. Every frame has a reason to be there.
-<div className="absolute bottom-4 left-0 right-0 flex flex-col items-center text-[10px] gap-y-3">
-          <div className="flex items-center justify-center gap-2">
-            <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
-  Brand Animation
-</button>
-            <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
-  Explainer Video
-</button>
-          </div>
-          <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
-  Social Reels
-</button>
-        </div>
-</>),
+        desc: (
+          <>
+            A static logo on a white background tells part of the story. Motion
+            tells the rest.
+            <br />
+            Animated brand intros, explainer videos, social reels, promotional
+            content — when it's done well, motion makes people stop and actually
+            watch. We create motion content built around your brand, not generic
+            templates. Every frame has a reason to be there.
+            <div className="absolute bottom-4 left-0 right-0 flex flex-col items-center text-[10px] gap-y-3">
+              <div className="flex items-center justify-center gap-2">
+                <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
+                  Brand Animation
+                </button>
+                <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
+                  Explainer Video
+                </button>
+              </div>
+              <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
+                Social Reels
+              </button>
+            </div>
+          </>
+        ),
         svg: (
-          <svg width="40px" height="40px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="none">
+          <svg
+            width="40px"
+            height="40px"
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+          >
             <path
               d="M23.9092,33.9928l-8.68-5.1065.0919-10.0541,8.7723-4.9476,8.68,5.1065-.092,10.054Z"
               stroke="#4C8C74"
@@ -13451,43 +15008,113 @@ Animated brand intros, explainer videos, social reels, promotional content — w
         title: "Brand Identity Development",
         descText:
           "This is the whole thing, built properly, from scratch. We start by actually getting to know your business. Not the surface stuff, but the real picture: what you're trying to achieve, who you're selling to, who you're up against, and what's going to make someone choose you over the next option. That takes a real conversation. We have it. Then we build every visual and verbal element of your brand around what we learn. Logo, colour palette, typography, tone of voice, messaging, brand presentation, everything. When it's done, you've got a brand that's ready to compete and built to hold up over time.",
-        desc: (<>This is the whole thing, built properly, from scratch.<br />
-We start by actually getting to know your business. Not the surface stuff, but the real picture: what you're trying to achieve, who you're selling to, who you're up against, and what's going to make someone choose you over the next option. That takes a real conversation. We have it.<br />
-Then we build every visual and verbal element of your brand around what we learn. Logo, colour palette, typography, tone of voice, messaging, brand presentation, everything. When it's done, you've got a brand that's ready to compete and built to hold up over time.
-<div className="absolute bottom-4 left-0 right-0 flex flex-col items-center text-[10px] gap-y-3">
-          <div className="flex items-center justify-center gap-2">
-            <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
-  Full Identity
-</button>
-            <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
-  Brand Strategy
-</button>
-          </div>
-          <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
-  Market Positioning
-</button>
-        </div>
-</>),
+        desc: (
+          <>
+            This is the whole thing, built properly, from scratch.
+            <br />
+            We start by actually getting to know your business. Not the surface
+            stuff, but the real picture: what you're trying to achieve, who
+            you're selling to, who you're up against, and what's going to make
+            someone choose you over the next option. That takes a real
+            conversation. We have it.
+            <br />
+            Then we build every visual and verbal element of your brand around
+            what we learn. Logo, colour palette, typography, tone of voice,
+            messaging, brand presentation, everything. When it's done, you've
+            got a brand that's ready to compete and built to hold up over time.
+            <div className="absolute bottom-4 left-0 right-0 flex flex-col items-center text-[10px] gap-y-3">
+              <div className="flex items-center justify-center gap-2">
+                <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
+                  Full Identity
+                </button>
+                <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
+                  Brand Strategy
+                </button>
+              </div>
+              <button className="px-4 py-2 rounded-full border-2 border-white text-white font-semibold tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-150 cursor-pointer">
+                Market Positioning
+              </button>
+            </div>
+          </>
+        ),
         svg: (
-          <svg width="40px" height="40px" viewBox="-0.5 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M21 18.5H3C2.72 18.5 2.5 18.28 2.5 18V7C2.5 6.72 2.72 6.5 3 6.5H21C21.28 6.5 21.5 6.72 21.5 7V18C21.5 18.28 21.28 18.5 21 18.5Z" stroke="#4C8C74" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M15.2201 12.74C16.2419 12.74 17.0701 11.9028 17.0701 10.87C17.0701 9.83722 16.2419 9 15.2201 9C14.1984 9 13.3701 9.83722 13.3701 10.87C13.3701 11.9028 14.1984 12.74 15.2201 12.74Z" stroke="#4C8C74" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M18.5901 14.01C18.9001 14.54 19.0901 15.14 19.1201 15.78C19.1301 15.9 19.0301 16 18.9101 16H11.5201C11.4001 16 11.3101 15.9 11.3101 15.78C11.3501 15.14 11.5401 14.54 11.8401 14.01" stroke="#4C8C74" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M4.5 12.5H8.92999" stroke="#4C8C74" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M4.5 10.5H7.92999" stroke="#4C8C74" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M4.5 14.5H6.92999" stroke="#4C8C74" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"></path> </g></svg>
+          <svg
+            width="40px"
+            height="40px"
+            viewBox="-0.5 0 25 25"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              {" "}
+              <path
+                d="M21 18.5H3C2.72 18.5 2.5 18.28 2.5 18V7C2.5 6.72 2.72 6.5 3 6.5H21C21.28 6.5 21.5 6.72 21.5 7V18C21.5 18.28 21.28 18.5 21 18.5Z"
+                stroke="#4C8C74"
+                strokeMiterlimit="10"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              ></path>{" "}
+              <path
+                d="M15.2201 12.74C16.2419 12.74 17.0701 11.9028 17.0701 10.87C17.0701 9.83722 16.2419 9 15.2201 9C14.1984 9 13.3701 9.83722 13.3701 10.87C13.3701 11.9028 14.1984 12.74 15.2201 12.74Z"
+                stroke="#4C8C74"
+                strokeMiterlimit="10"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              ></path>{" "}
+              <path
+                d="M18.5901 14.01C18.9001 14.54 19.0901 15.14 19.1201 15.78C19.1301 15.9 19.0301 16 18.9101 16H11.5201C11.4001 16 11.3101 15.9 11.3101 15.78C11.3501 15.14 11.5401 14.54 11.8401 14.01"
+                stroke="#4C8C74"
+                strokeMiterlimit="10"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              ></path>{" "}
+              <path
+                d="M4.5 12.5H8.92999"
+                stroke="#4C8C74"
+                strokeMiterlimit="10"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              ></path>{" "}
+              <path
+                d="M4.5 10.5H7.92999"
+                stroke="#4C8C74"
+                strokeMiterlimit="10"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              ></path>{" "}
+              <path
+                d="M4.5 14.5H6.92999"
+                stroke="#4C8C74"
+                strokeMiterlimit="10"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              ></path>{" "}
+            </g>
+          </svg>
         ),
       },
     ],
     processHeading: <>How We Build Your Brand: Three Clear Steps</>,
-    processPara: (
-      <>
-        We keep things simple, transparent, and collaborative. 
-      </>
-    ),
+    processPara: <>We keep things simple, transparent, and collaborative.</>,
     processCardData: [
       {
         image: "/Services/01.svg",
         heading: "Discovery & Brand Strategy",
         paragraph: (
           <>
-            Before we design anything, we need to understand your business properly. We get on a call, ask the questions most agencies don't bother with, and dig into your goals, your customers, your competitors, and what story your brand needs to tell. <br /><br />
-Most agencies skip this step and go straight to design. That's why most brands end up looking like everyone else.
-
+            Before we design anything, we need to understand your business
+            properly. We get on a call, ask the questions most agencies don't
+            bother with, and dig into your goals, your customers, your
+            competitors, and what story your brand needs to tell. <br />
+            <br />
+            Most agencies skip this step and go straight to design. That's why
+            most brands end up looking like everyone else.
           </>
         ),
       },
@@ -13496,9 +15123,14 @@ Most agencies skip this step and go straight to design. That's why most brands e
         heading: "Design & Creative Development",
         paragraph: (
           <>
-            Once we know what we're building and why, our designers get to work. We develop concepts, show you the thinking behind each one, and refine based on your feedback. You're part of every stage, not shown a finished result at the end and asked to sign off on something cold. <br /><br />
-We go back and forth until you're genuinely happy with it. That's not a throwaway line, it's how we actually work.
-
+            Once we know what we're building and why, our designers get to work.
+            We develop concepts, show you the thinking behind each one, and
+            refine based on your feedback. You're part of every stage, not shown
+            a finished result at the end and asked to sign off on something
+            cold. <br />
+            <br />
+            We go back and forth until you're genuinely happy with it. That's
+            not a throwaway line, it's how we actually work.
           </>
         ),
       },
@@ -13507,7 +15139,10 @@ We go back and forth until you're genuinely happy with it. That's not a throwawa
         heading: "Delivery & Brand Launch Support",
         paragraph: (
           <>
-            When everything's finalised, we hand over everything you need — source files, brand guides, digital assets, print-ready files, all of it. And if you need help rolling the brand out across your website, socials, or marketing materials, we're here for that too.
+            When everything's finalised, we hand over everything you need —
+            source files, brand guides, digital assets, print-ready files, all
+            of it. And if you need help rolling the brand out across your
+            website, socials, or marketing materials, we're here for that too.
           </>
         ),
       },
@@ -13563,29 +15198,52 @@ We go back and forth until you're genuinely happy with it. That's not a throwawa
       buttonText: "Get a Custom Quote",
       body: (
         <>
-          A three-person startup doesn't need the same thing as a 50-person firm. A solo consultant has completely different needs from both. We've seen what happens when businesses are forced into a package that doesn't quite fit — it shows in the result. <br /><br />
-So we don't do that. Every project starts with a conversation about where your business is now and where you're trying to take it. From there, we put together a scope that actually makes sense for you — honest about what's involved and what it'll cost before anything starts.
-
-<ul className="list-disc list-inside mt-1">
-  <li>Logo-only for businesses just getting started</li>
-  <li>Full brand identity for companies ready to scale up properly</li>
-  <li>Brand refresh for businesses that have outgrown their current look</li>
-  <li>Personal branding for founders and professionals building their name</li>
-  <li>Ongoing brand support for teams that need a creative partner long term</li>
-</ul>
+          A three-person startup doesn't need the same thing as a 50-person
+          firm. A solo consultant has completely different needs from both.
+          We've seen what happens when businesses are forced into a package that
+          doesn't quite fit — it shows in the result. <br />
+          <br />
+          So we don't do that. Every project starts with a conversation about
+          where your business is now and where you're trying to take it. From
+          there, we put together a scope that actually makes sense for you —
+          honest about what's involved and what it'll cost before anything
+          starts.
+          <ul className="list-disc list-inside mt-1">
+            <li>Logo-only for businesses just getting started</li>
+            <li>
+              Full brand identity for companies ready to scale up properly
+            </li>
+            <li>
+              Brand refresh for businesses that have outgrown their current look
+            </li>
+            <li>
+              Personal branding for founders and professionals building their
+              name
+            </li>
+            <li>
+              Ongoing brand support for teams that need a creative partner long
+              term
+            </li>
+          </ul>
         </>
       ),
-      rightContent: <><h3 className="text-2xl text-white mt-3">What's Typically Included</h3>
-<p>Depending on what we agree on, your project might include:</p>
-<ul className="list-disc list-inside mt-1">
-  <li>Custom logo design, primary mark plus variations</li>
-  <li>Full colour palette and typography system</li>
-  <li>Brand guide or complete playbook</li>
-  <li>Business card and stationery design</li>
-  <li>Social media profile branding</li>
-  <li>Motion graphics and brand animations</li>
-  <li>All source files and full IP ownership</li>
-</ul></>,
+      rightContent: (
+        <>
+          <h3 className="text-2xl text-white mt-3">
+            What's Typically Included
+          </h3>
+          <p>Depending on what we agree on, your project might include:</p>
+          <ul className="list-disc list-inside mt-1">
+            <li>Custom logo design, primary mark plus variations</li>
+            <li>Full colour palette and typography system</li>
+            <li>Brand guide or complete playbook</li>
+            <li>Business card and stationery design</li>
+            <li>Social media profile branding</li>
+            <li>Motion graphics and brand animations</li>
+            <li>All source files and full IP ownership</li>
+          </ul>
+        </>
+      ),
     },
     faqData: [
       {
@@ -13630,16 +15288,16 @@ So we don't do that. Every project starts with a conversation about where your b
       { id: "8", src: "/Services/web_07.svg", translateY: "" },
     ],
     contactData: {
-      heading: (<>Ready to Build a Brand</>),
+      heading: <>Ready to Build a Brand</>,
       body: (
         <>
           <span className="block text-xl font-bold text-white">
             Does that actually work?
           </span>
-          Our team wants to know about your business. If you plan to create a new
-          brand or update an existing one, we are here to help. You can schedule a
-          complimentary brand consultation, which has no strings attached, to
-          discuss potential opportunities with us.
+          Our team wants to know about your business. If you plan to create a
+          new brand or update an existing one, we are here to help. You can
+          schedule a complimentary brand consultation, which has no strings
+          attached, to discuss potential opportunities with us.
         </>
       ),
       buttonText: "Book a Free Consultation View All Services",
@@ -13651,7 +15309,7 @@ So we don't do that. Every project starts with a conversation about where your b
         slug: "logo-design-visual-systems",
         title: "Logo Design & Visual Systems",
         heading: "Create a Strong Brand Identity",
-        imageUrl: "/Services/Rectangle_52.png",
+        imageUrl: "/services/Rectangle_52.webp",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -14091,7 +15749,7 @@ So we don't do that. Every project starts with a conversation about where your b
         slug: "brand-guide-book",
         title: "Brand Guide Book",
         heading: "Create a Strong Brand Identity",
-        imageUrl: "/Services/Rectangle_52.png",
+        imageUrl: "/services/Rectangle_52.webp",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -14531,7 +16189,7 @@ So we don't do that. Every project starts with a conversation about where your b
         slug: "playbook",
         title: "Playbook",
         heading: "Meta Ads That Convert",
-        imageUrl: "/Services/Rectangle_52.png",
+        imageUrl: "/services/Rectangle_52.webp",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -14971,7 +16629,7 @@ So we don't do that. Every project starts with a conversation about where your b
         slug: "personal-branding",
         title: "Personal Branding",
         heading: "Build Your Personal Brand",
-        imageUrl: "/Services/Rectangle_52.png",
+        imageUrl: "/services/Rectangle_52.webp",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -15411,7 +17069,7 @@ So we don't do that. Every project starts with a conversation about where your b
         slug: "video-motion-graphics",
         title: "Video & Motion Graphics",
         heading: "Video & Motion Graphics That Engage",
-        imageUrl: "/Services/Rectangle_52.png",
+        imageUrl: "/services/Rectangle_52.webp",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -15851,7 +17509,7 @@ So we don't do that. Every project starts with a conversation about where your b
         slug: "brand-identity-development",
         title: "Brand Identity Development",
         heading: "Create a Strong Brand Identity",
-        imageUrl: "/Services/Rectangle_52.png",
+        imageUrl: "/services/Rectangle_52.webp",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -16297,67 +17955,87 @@ So we don't do that. Every project starts with a conversation about where your b
     // heading: "Web Development Services in Australia",
     serviceBodyData: [
       {
-        imageUrl: "/Services/Rectangle_52.webp",
+        imageUrl: "/services/Rectangle_52.webp",
         description: (
           <>
             <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
               Social Media That Actually Grows Your Business.
             </h2>
-Making ads, posting consistently, and getting zero results and appearing nowhere is one of the most frustrating things in digital marketing. Most businesses aren't failing because they're not trying, but they're failing because they don't have a proper strategy behind what they're putting out. We fix that. At Aussie Digital Solutions, we handle profile optimisation and content systems built around your audience, and we manage social media that moves the needle.
-<br />
-<p className="mt-2 font-bold text-white">We manage:</p>
-<ul className="list-disc list-inside">
-  <li>Instagram</li>
-  <li>Facebook</li>
-  <li>LinkedIn</li>
-  <li>TikTok</li>
-  <li>YouTube</li>
-  <li>Pinterest</li>
-  <li>X / Twitter</li>
-</ul>
-
-<div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
-  <a
-    className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15"
-    href="/contact"
-  >
-    Get a Free Social Audit
-  </a>
-  <span
-    aria-hidden="true"
-    className="h-10 w-px bg-white/30 max-sm:h-px max-sm:w-full"
-  />
-  <a
-    className="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/10"
-    href="/services"
-  >
-    See What We Do
-  </a>
-</div>
+            Making ads, posting consistently, and getting zero results and
+            appearing nowhere is one of the most frustrating things in digital
+            marketing. Most businesses aren't failing because they're not
+            trying, but they're failing because they don't have a proper
+            strategy behind what they're putting out. We fix that. At Aussie
+            Digital Solutions, we handle profile optimisation and content
+            systems built around your audience, and we manage social media that
+            moves the needle.
+            <br />
+            <p className="mt-2 font-bold text-white">We manage:</p>
+            <ul className="list-disc list-inside">
+              <li>Instagram</li>
+              <li>Facebook</li>
+              <li>LinkedIn</li>
+              <li>TikTok</li>
+              <li>YouTube</li>
+              <li>Pinterest</li>
+              <li>X / Twitter</li>
+            </ul>
+            <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
+              <a
+                className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15"
+                href="/contact"
+              >
+                Get a Free Social Audit
+              </a>
+              <span
+                aria-hidden="true"
+                className="h-10 w-px bg-white/30 max-sm:h-px max-sm:w-full"
+              />
+              <a
+                className="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/10"
+                href="/services"
+              >
+                See What We Do
+              </a>
+            </div>
           </>
         ),
       },
     ],
     whyChooseData: {
-      image: "/Services/Rectangle_52.webp",
+      image: "/services/Rectangle_52.webp",
       heading: "Why Aussie Digital Solution",
       paragraphs: [
         <React.Fragment key="why-aussie-branding">
-        <h3 className="text-2xl text-white">Social Media That Looks Good Is Easy. Social Media That Converts Is Different.</h3>
-There are plenty of agencies that will post on your behalf and send you a monthly report full of impressions and reach numbers. Most of it is noise. We care about what social media actually does for your revenue, and we build everything around that.
-
-<h3 className="text-2xl text-white">We Know the Australian Audience</h3>
-We build content strategies around how Australians actually engage on social, the platforms they use, the tone they respond to, and the trends that cut through locally.
-
-<h3 className="text-2xl text-white">Strategy Comes Before Content</h3>
-The strategy shapes everything: the platforms, the content mix, the posting frequency, and the tone. Content without strategy is just noise.
-
-<h3 className="text-2xl text-white">One Team, Not a Revolving Door</h3>
-Your account is managed by our in-house team. The people who built your strategy are the ones writing your captions, building your content, and responding to your community.
-
-<h3 className="text-2xl text-white">We Report on What Matters</h3>
-Reach and impressions are fine, but they don't pay the bills. We report on the metrics tied to your actual goals, website clicks, leads, bookings, product page visits, and DM enquiries.
-</React.Fragment>,
+          <h3 className="text-2xl text-white">
+            Social Media That Looks Good Is Easy. Social Media That Converts Is
+            Different.
+          </h3>
+          There are plenty of agencies that will post on your behalf and send
+          you a monthly report full of impressions and reach numbers. Most of it
+          is noise. We care about what social media actually does for your
+          revenue, and we build everything around that.
+          <h3 className="text-2xl text-white">
+            We Know the Australian Audience
+          </h3>
+          We build content strategies around how Australians actually engage on
+          social, the platforms they use, the tone they respond to, and the
+          trends that cut through locally.
+          <h3 className="text-2xl text-white">Strategy Comes Before Content</h3>
+          The strategy shapes everything: the platforms, the content mix, the
+          posting frequency, and the tone. Content without strategy is just
+          noise.
+          <h3 className="text-2xl text-white">
+            One Team, Not a Revolving Door
+          </h3>
+          Your account is managed by our in-house team. The people who built
+          your strategy are the ones writing your captions, building your
+          content, and responding to your community.
+          <h3 className="text-2xl text-white">We Report on What Matters</h3>
+          Reach and impressions are fine, but they don't pay the bills. We
+          report on the metrics tied to your actual goals, website clicks,
+          leads, bookings, product page visits, and DM enquiries.
+        </React.Fragment>,
       ],
     },
     ctaData: {
@@ -16374,8 +18052,7 @@ Reach and impressions are fine, but they don't pay the bills. We report on the m
         label: "View All Services",
         href: "/services",
       },
-      trustItems: [
-      ],
+      trustItems: [],
     },
     strategicHeading: <div className="font-semibold">How We Work</div>,
     strategicHeadingText: (
@@ -16384,8 +18061,12 @@ Reach and impressions are fine, but they don't pay the bills. We report on the m
           <h3 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
             Four Systems. One Social Presence That Works.
           </h3>
-          <p className="mx-auto mt-4 max-w-6xl text-sm leading-7 text-[#AAAAAA] sm:text-base">           
-Social media management isn't just scheduling posts. Their team is actually creating an online presence that attracts the right people, keeps them engaged, and eventually makes them true customers. Every service we offer is designed to do exactly that, not just fill a content calendar.
+          <p className="mx-auto mt-4 max-w-6xl text-sm leading-7 text-[#AAAAAA] sm:text-base">
+            Social media management isn't just scheduling posts. Their team is
+            actually creating an online presence that attracts the right people,
+            keeps them engaged, and eventually makes them true customers. Every
+            service we offer is designed to do exactly that, not just fill a
+            content calendar.
           </p>
         </div>
       </div>
@@ -16397,7 +18078,12 @@ Social media management isn't just scheduling posts. Their team is actually crea
           "We audit every element of your profile across each platform and rebuild it properly. That means a bio that clearly explains what you do and who it's for, a consistent visual identity, a link strategy that actually causes action, and platform-specific optimisations that help you show up in search within the apps. First impressions on social are fast. We make sure yours lands right.",
         desc: (
           <>
-We audit every element of your profile across each platform and rebuild it properly. That means a bio that clearly explains what you do and who it's for, a consistent visual identity, a link strategy that actually causes action, and platform-specific optimisations that help you show up in search within the apps. First impressions on social are fast. We make sure yours lands right.
+            We audit every element of your profile across each platform and
+            rebuild it properly. That means a bio that clearly explains what you
+            do and who it's for, a consistent visual identity, a link strategy
+            that actually causes action, and platform-specific optimisations
+            that help you show up in search within the apps. First impressions
+            on social are fast. We make sure yours lands right.
             <ul className="list-disc list-inside mt-1">
               <li>Bio Optimisation</li>
               <li>Visual Identity</li>
@@ -16406,76 +18092,87 @@ We audit every element of your profile across each platform and rebuild it prope
             </ul>
           </>
         ),
-        svg: (
-          <CgProfile color="#4C8C74" size="40px" />
-        ),
+        svg: <CgProfile color="#4C8C74" size="40px" />,
       },
       {
         title: "High-Impact Content Systems",
         descText:
           "We create content systems according to your brand and audience. That includes content pillars, posting schedules, format mixes (carousels, Reels, Stories, long-form video, static), caption frameworks, and a production workflow your team can actually maintain. The result is a content engine that runs consistently, stays on brand, and compounds over time.",
-        desc: (<>
-We create content systems according to your brand and audience. That includes content pillars, posting schedules, format mixes (carousels, Reels, Stories, long-form video, static), caption frameworks, and a production workflow your team can actually maintain. The result is a content engine that runs consistently, stays on brand, and compounds over time.
-        <ul className="list-disc list-inside mt-2">
-          <li>Content Pillars</li>
-          <li>Reels & Video Content</li>
-          <li>Calendar</li>
-          <li>Copywriting</li>
-        </ul>
-</>),
-        svg: (
-        <GiAnvilImpact color="#4C8C74" size={40} />
+        desc: (
+          <>
+            We create content systems according to your brand and audience. That
+            includes content pillars, posting schedules, format mixes
+            (carousels, Reels, Stories, long-form video, static), caption
+            frameworks, and a production workflow your team can actually
+            maintain. The result is a content engine that runs consistently,
+            stays on brand, and compounds over time.
+            <ul className="list-disc list-inside mt-2">
+              <li>Content Pillars</li>
+              <li>Reels & Video Content</li>
+              <li>Calendar</li>
+              <li>Copywriting</li>
+            </ul>
+          </>
         ),
+        svg: <GiAnvilImpact color="#4C8C74" size={40} />,
       },
       {
         title: "Conversion Focused Strategy",
         descText:
           "Followers are nice. Customers are better. A lot of social media management stops at engagement, likes, comments, and shares. We push it further. Every piece of content we create has a role in moving your audience from casual follower to paying customer.",
-        desc: (<>
-Followers are nice. Customers are better. A lot of social media management stops at engagement, likes, comments, and shares. We push it further. Every piece of content we create has a role in moving your audience from casual follower to paying customer.
-        <ul className="list-disc list-inside mt-2">
-          <li>Social Funnel</li>
-          <li>CTA Strategy</li>
-          <li>Lead Generation</li>
-          <li>DM Campaigns</li>
-        </ul>
-</>),
-        svg: (
-          <MdCenterFocusWeak color="#4C8C74" size={40} />
+        desc: (
+          <>
+            Followers are nice. Customers are better. A lot of social media
+            management stops at engagement, likes, comments, and shares. We push
+            it further. Every piece of content we create has a role in moving
+            your audience from casual follower to paying customer.
+            <ul className="list-disc list-inside mt-2">
+              <li>Social Funnel</li>
+              <li>CTA Strategy</li>
+              <li>Lead Generation</li>
+              <li>DM Campaigns</li>
+            </ul>
+          </>
         ),
+        svg: <MdCenterFocusWeak color="#4C8C74" size={40} />,
       },
       {
         title: "Trend Intelligence & Reach Amplification",
         descText:
           "We track trending sounds, formats, hashtags, and topics relevant to your industry and your audience, then create content that capitalises on them quickly, in a way that fits your brand. We also use hashtag strategy, posting time optimisation, cross-platform amplification, and community engagement to push your reach beyond your existing following.",
-        desc: (<>
-We track trending sounds, formats, hashtags, and topics relevant to your industry and your audience, then create content that capitalises on them quickly, in a way that fits your brand. We also use hashtag strategy, posting time optimisation, cross-platform amplification, and community engagement to push your reach beyond your existing following.
-
-        <ul className="list-inside list-disc mt-2">
-          <li>Trend Monitoring</li>
-          <li>Hashtag Strategy</li>
-          <li>Algorithm Reach</li>
-          <li>Community Management</li>
-        </ul>
-</>),
-        svg: (
-          <FaArrowTrendUp color="#4C8C74" size={40} />
+        desc: (
+          <>
+            We track trending sounds, formats, hashtags, and topics relevant to
+            your industry and your audience, then create content that
+            capitalises on them quickly, in a way that fits your brand. We also
+            use hashtag strategy, posting time optimisation, cross-platform
+            amplification, and community engagement to push your reach beyond
+            your existing following.
+            <ul className="list-inside list-disc mt-2">
+              <li>Trend Monitoring</li>
+              <li>Hashtag Strategy</li>
+              <li>Algorithm Reach</li>
+              <li>Community Management</li>
+            </ul>
+          </>
         ),
+        svg: <FaArrowTrendUp color="#4C8C74" size={40} />,
       },
     ],
     processHeading: <>How We Work</>,
-    processPara: (
-      <>
-        From Audit to Active Presence in Three Clear Steps
-      </>
-    ),
+    processPara: <>From Audit to Active Presence in Three Clear Steps</>,
     processCardData: [
       {
         image: "/Services/01.svg",
         heading: "Audit, Strategy & Platform Plan",
         paragraph: (
           <>
-We start by auditing your current profiles, what's working, what isn't, and what's missing entirely. Then we get into your business: your goals, your audience, your competitors. From there, we build a platform-specific strategy that maps out exactly what we're creating, where we're posting it, and why. You see and approve the full plan before we create a single piece of content.
+            We start by auditing your current profiles, what's working, what
+            isn't, and what's missing entirely. Then we get into your business:
+            your goals, your audience, your competitors. From there, we build a
+            platform-specific strategy that maps out exactly what we're
+            creating, where we're posting it, and why. You see and approve the
+            full plan before we create a single piece of content.
           </>
         ),
       },
@@ -16484,7 +18181,12 @@ We start by auditing your current profiles, what's working, what isn't, and what
         heading: "Content Creation & Profile Setup",
         paragraph: (
           <>
-Profiles get optimised first. Then content production starts, including copywriting, visual creation, video editing, and scheduling. Everything goes through an approval process, so you're always across what's going out on your behalf. We handle community management too: comments, DMs, and engagement that builds a real audience rather than a passive one.
+            Profiles get optimised first. Then content production starts,
+            including copywriting, visual creation, video editing, and
+            scheduling. Everything goes through an approval process, so you're
+            always across what's going out on your behalf. We handle community
+            management too: comments, DMs, and engagement that builds a real
+            audience rather than a passive one.
           </>
         ),
       },
@@ -16493,7 +18195,11 @@ Profiles get optimised first. Then content production starts, including copywrit
         heading: "Track, Report & Keep Improving",
         paragraph: (
           <>
-Monthly reporting covers the numbers that actually matter for your goals. We look at what's performing, what's not, and adjust the strategy accordingly. Social media evolves fast, algorithms change, formats rise and fall, and audience behaviour shifts. We stay on top of all of it so you don't have to.
+            Monthly reporting covers the numbers that actually matter for your
+            goals. We look at what's performing, what's not, and adjust the
+            strategy accordingly. Social media evolves fast, algorithms change,
+            formats rise and fall, and audience behaviour shifts. We stay on top
+            of all of it so you don't have to.
           </>
         ),
       },
@@ -16545,33 +18251,54 @@ Monthly reporting covers the numbers that actually matter for your goals. We loo
       },
     ],
     customplanData: {
-      heading: "Your Social Media Plan Should Fit Your Business, Not a Template",
+      heading:
+        "Your Social Media Plan Should Fit Your Business, Not a Template",
       buttonText: "Get a Custom Quote",
       body: (
         <>
-<p className="mt-2">A local café in Melbourne has completely different social media needs from a B2B software company or a national eCommerce brand. Cookie-cutter packages don't serve any of them well. We don't use them.
-We have a conversation first. We learn where your business is, who you're trying to reach, and what success looks like. Then we put together a scope that makes sense for your goals and your budget, no filler services, no platforms you don't need.
-We offer social media marketing for small businesses, B2B companies, and growing brands, including full-service management across multiple platforms. Services also include content creation, strategy consulting, and community management for businesses that need consistent engagement and support.
-</p>
+          <p className="mt-2">
+            A local café in Melbourne has completely different social media
+            needs from a B2B software company or a national eCommerce brand.
+            Cookie-cutter packages don't serve any of them well. We don't use
+            them. We have a conversation first. We learn where your business is,
+            who you're trying to reach, and what success looks like. Then we put
+            together a scope that makes sense for your goals and your budget, no
+            filler services, no platforms you don't need. We offer social media
+            marketing for small businesses, B2B companies, and growing brands,
+            including full-service management across multiple platforms.
+            Services also include content creation, strategy consulting, and
+            community management for businesses that need consistent engagement
+            and support.
+          </p>
         </>
       ),
-      rightContent: <><h3 className="text-2xl text-white mt-3">What's Typically Included</h3>
-<p className="text-sm">Depending on the scope we agree on, your social media package may include any combination of:</p>
-<ul className="list-disc list-inside mt-1 text-sm">
-  <li>Full social media audit across current platforms</li>
-  <li>Platform strategy and content pillar development</li>
-  <li>Profile optimisation across all active channels</li>
-  <li>Monthly content creation, copy, visuals, video</li>
-  <li>Scheduling and publishing management</li>
-  <li>Community management and engagement</li>
-  <li>Trend monitoring and reactive content</li>
-  <li>Monthly performance reporting</li>
-</ul></>,
-miniTagData: <>Built Around You</>,
+      rightContent: (
+        <>
+          <h3 className="text-2xl text-white mt-3">
+            What's Typically Included
+          </h3>
+          <p className="text-sm">
+            Depending on the scope we agree on, your social media package may
+            include any combination of:
+          </p>
+          <ul className="list-disc list-inside mt-1 text-sm">
+            <li>Full social media audit across current platforms</li>
+            <li>Platform strategy and content pillar development</li>
+            <li>Profile optimisation across all active channels</li>
+            <li>Monthly content creation, copy, visuals, video</li>
+            <li>Scheduling and publishing management</li>
+            <li>Community management and engagement</li>
+            <li>Trend monitoring and reactive content</li>
+            <li>Monthly performance reporting</li>
+          </ul>
+        </>
+      ),
+      miniTagData: <>Built Around You</>,
     },
     faqData: [
       {
-        question: "How long before we start seeing real results from social media?",
+        question:
+          "How long before we start seeing real results from social media?",
         answer:
           "It totally depends on where you're starting from. If your profiles are starting from the very start, give it two to three months to build real momentum. If you have an existing audience, you'll often see meaningful improvement in the first four to six weeks once the strategy and content systems are running properly. We set honest expectations at the start, not just tell you what sounds good.",
       },
@@ -16586,7 +18313,8 @@ miniTagData: <>Built Around You</>,
           "We handle content creation end-to-end, copy, graphics, and video editing. For businesses where authentic behind-the-scenes content is important (restaurants, trades, retail), we'll give you a simple brief for any raw footage or photos you want to include. But you're never required to supply content. We can build a full content system from scratch.",
       },
       {
-        question: "Do you offer social media marketing packages for small businesses?",
+        question:
+          "Do you offer social media marketing packages for small businesses?",
         answer:
           "Yes, and it's a big part of what we do. Small businesses are often underserved by social media agencies that pitch enterprise-level packages at enterprise prices. We offer properly scoped social media services for small businesses, real strategy, real content, priced for where you are right now.",
       },
@@ -16612,13 +18340,17 @@ miniTagData: <>Built Around You</>,
       { id: "8", src: "/Services/web_07.svg", translateY: "" },
     ],
     contactData: {
-      heading: (<>Let's Get Started</>),
+      heading: <>Let's Get Started</>,
       body: (
         <>
           <span className="block text-xl font-bold text-white">
-            Your Audience Is Already on Social.<br />Let's Make Sure They Find You.
+            Your Audience Is Already on Social.
+            <br />
+            Let's Make Sure They Find You.
           </span>
-Get in touch today, and one of our social media specialists will get back to you within one business day. No scripts, no hard sell, just a real conversation about your business.
+          Get in touch today, and one of our social media specialists will get
+          back to you within one business day. No scripts, no hard sell, just a
+          real conversation about your business.
         </>
       ),
       buttonText: "Book a Free Strategy Call",
@@ -16630,7 +18362,7 @@ Get in touch today, and one of our social media specialists will get back to you
         slug: "profile-optimization",
         title: "Profile Optimization",
         heading: "Optimize Your Social Media Presence",
-        imageUrl: "/Services/Rectangle_52.png",
+        imageUrl: "/services/Rectangle_52.webp",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -17070,7 +18802,7 @@ Get in touch today, and one of our social media specialists will get back to you
         slug: "high-impact-content-systems",
         title: "High-Impact Content Systems",
         heading: "Create a Strong Brand Identity",
-        imageUrl: "/Services/Rectangle_52.png",
+        imageUrl: "/services/Rectangle_52.webp",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -17510,7 +19242,7 @@ Get in touch today, and one of our social media specialists will get back to you
         slug: "algorithm-optimized-distribution",
         title: "Algorithm Optimized Distribution",
         heading: "Algorithm Optimized Distribution Services",
-        imageUrl: "/Services/Rectangle_52.png",
+        imageUrl: "/services/Rectangle_52.webp",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -17950,7 +19682,7 @@ Get in touch today, and one of our social media specialists will get back to you
         slug: "conversion-focused-profile-architecture",
         title: "Conversion-Focused Profile Architecture",
         heading: "Conversion-Focused Profile Architecture",
-        imageUrl: "/Services/Rectangle_52.png",
+        imageUrl: "/services/Rectangle_52.webp",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -18390,7 +20122,7 @@ Get in touch today, and one of our social media specialists will get back to you
         slug: "trend-intelligence-reach-amplification",
         title: "Trend Intelligence & Reach Amplification",
         heading: "Trend Intelligence & Reach Amplification That Engages",
-        imageUrl: "/Services/Rectangle_52.png",
+        imageUrl: "/services/Rectangle_52.webp",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -18828,7 +20560,6 @@ Get in touch today, and one of our social media specialists will get back to you
       },
     ],
   },
-  
 
   // Content Marketing Service Data
   {
@@ -18836,50 +20567,62 @@ Get in touch today, and one of our social media specialists will get back to you
     title: "Content Marketing Management in Australia",
     serviceBodyData: [
       {
-        imageUrl: "/Services/Rectangle_52.webp",
+        imageUrl: "/services/Rectangle_52.webp",
         description: (
           <>
             <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
               Content that Ranks, Reads Right, and Actually Converts.
             </h2>
-Most content either reads like it was written by a machine or gets buried on page six of Google. Neither version does anything for your business. We write content that sounds like a real person wrote it, gets found by the right people, and moves those people toward a decision. That's the whole job.
-
-<div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
-  <a
-    className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15"
-    href="/contact"
-  >
-    Get a Free Content Audit
-  </a>
-  <span
-    aria-hidden="true"
-    className="h-10 w-px bg-white/30 max-sm:h-px max-sm:w-full"
-  />
-  <a
-    className="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/10"
-    href="/services"
-  >
-    See Our Services
-  </a>
-</div>
+            Most content either reads like it was written by a machine or gets
+            buried on page six of Google. Neither version does anything for your
+            business. We write content that sounds like a real person wrote it,
+            gets found by the right people, and moves those people toward a
+            decision. That's the whole job.
+            <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
+              <a
+                className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15"
+                href="/contact"
+              >
+                Get a Free Content Audit
+              </a>
+              <span
+                aria-hidden="true"
+                className="h-10 w-px bg-white/30 max-sm:h-px max-sm:w-full"
+              />
+              <a
+                className="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/10"
+                href="/services"
+              >
+                See Our Services
+              </a>
+            </div>
           </>
         ),
       },
     ],
     whyChooseData: {
-      image: "/Services/Rectangle_52.webp",
+      image: "/services/Rectangle_52.webp",
       heading: "Why Aussie Digital Solution",
       paragraphs: [
         <React.Fragment key="why-aussie-branding">
-        {/* <h3 className="text-2xl text-white">Social Media That Looks Good Is Easy. Social Media That Converts Is Different.</h3> */}
-We've Read Enough Bad Content to Know Exactly What Not to Do Keyword-stuffed blog posts that no one reads. Homepages that explain nothing. Email campaigns that sound like they were written by a robot. We see the results of this kind of content every time we audit.
-
-<b>Here's what we do differently:</b>
-
-<h3 className="text-2xl text-white mt-2">We write content for the Australian market in the tone, vocabulary, and style that resonates with local readers.</h3>
-Google's algorithm has changed significantly in the last two years. Thin content and keyword manipulation are getting penalised harder than ever. We write content that meets Google's E-E-A-T criteria: real expertise, real authority, real usefulness.
-We use experienced human writers for everything we produce. Not AI content passed off as original, not templated rewrites. Genuine writing that sounds like a knowledgeable person wrote it, because one did.
-</React.Fragment>,
+          {/* <h3 className="text-2xl text-white">Social Media That Looks Good Is Easy. Social Media That Converts Is Different.</h3> */}
+          We've Read Enough Bad Content to Know Exactly What Not to Do
+          Keyword-stuffed blog posts that no one reads. Homepages that explain
+          nothing. Email campaigns that sound like they were written by a robot.
+          We see the results of this kind of content every time we audit.
+          <b>Here's what we do differently:</b>
+          <h3 className="text-2xl text-white mt-2">
+            We write content for the Australian market in the tone, vocabulary,
+            and style that resonates with local readers.
+          </h3>
+          Google's algorithm has changed significantly in the last two years.
+          Thin content and keyword manipulation are getting penalised harder
+          than ever. We write content that meets Google's E-E-A-T criteria: real
+          expertise, real authority, real usefulness. We use experienced human
+          writers for everything we produce. Not AI content passed off as
+          original, not templated rewrites. Genuine writing that sounds like a
+          knowledgeable person wrote it, because one did.
+        </React.Fragment>,
       ],
     },
     ctaData: {
@@ -18896,18 +20639,19 @@ We use experienced human writers for everything we produce. Not AI content passe
         label: "View All Services",
         href: "/services",
       },
-      trustItems: [
-      ],
+      trustItems: [],
     },
-    strategicHeading: <div className="font-semibold">Content That Does Real Work</div>,
+    strategicHeading: (
+      <div className="font-semibold">Content That Does Real Work</div>
+    ),
     strategicHeadingText: (
       <div className="mt-3 mx-auto flex w-full justify-center px-4">
         <div className="w-full rounded-3xl border border-white/10 bg-white/5 px-6 py-6 text-center shadow-[0_18px_60px_rgba(0,0,0,0.18)] backdrop-blur-sm sm:px-10 sm:py-8">
           {/* <h3 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
             Four Systems. One Social Presence That Works.
           </h3> */}
-          <p className="mx-auto mt-4 max-w-6xl text-sm leading-7 text-white sm:text-base">           
-We write content with that outcome in mind from the first line.
+          <p className="mx-auto mt-4 max-w-6xl text-sm leading-7 text-white sm:text-base">
+            We write content with that outcome in mind from the first line.
           </p>
         </div>
       </div>
@@ -18919,7 +20663,11 @@ We write content with that outcome in mind from the first line.
           "Email is still one of the highest-returning channels in digital marketing when it's done properly. Our team works on properly segmented lists, sequences built around where subscribers are in their journey, subject lines people actually open, and copy that feels personal rather than promotional.",
         desc: (
           <>
-Email is still one of the highest-returning channels in digital marketing when it's done properly. Our team works on properly segmented lists, sequences built around where subscribers are in their journey, subject lines people actually open, and copy that feels personal rather than promotional.
+            Email is still one of the highest-returning channels in digital
+            marketing when it's done properly. Our team works on properly
+            segmented lists, sequences built around where subscribers are in
+            their journey, subject lines people actually open, and copy that
+            feels personal rather than promotional.
             {/* <ul className="list-disc list-inside mt-1">
               <li>Bio Optimisation</li>
               <li>Visual Identity</li>
@@ -18928,58 +20676,65 @@ Email is still one of the highest-returning channels in digital marketing when i
             </ul> */}
           </>
         ),
-        svg: (
-          <MdAttachEmail color="#4C8C74" size="40px" />
-        ),
+        svg: <MdAttachEmail color="#4C8C74" size="40px" />,
       },
       {
         title: "SEO Content Writing",
         descText:
           "Our SEO content writing services produce articles, service pages, and website content that ranks because it's genuinely useful, well-researched, clearly written, structured properly, and built around real search intent, as Google's recent algorithm updates have made this even more important.",
-        desc: (<>
-Our SEO content writing services produce articles, service pages, and website content that ranks because it's genuinely useful, well-researched, clearly written, structured properly, and built around real search intent, as Google's recent algorithm updates have made this even more important.
-</>),
-        svg: (
-        <TbSeo color="#4C8C74" size={40} />
+        desc: (
+          <>
+            Our SEO content writing services produce articles, service pages,
+            and website content that ranks because it's genuinely useful,
+            well-researched, clearly written, structured properly, and built
+            around real search intent, as Google's recent algorithm updates have
+            made this even more important.
+          </>
         ),
+        svg: <TbSeo color="#4C8C74" size={40} />,
       },
       {
         title: "Copywriting ",
         descText:
           "Copywriting is what converts visitors into customers. We create homepage copy, landing pages, ads, and product descriptions that perfectly communicate value and result in conversions.",
-        desc: (<>
-Copywriting is what converts visitors into customers. We create homepage copy, landing pages, ads, and product descriptions that perfectly communicate value and result in conversions.
-</>),
-        svg: (
-          <TbWriting color="#4C8C74" size={40} />
+        desc: (
+          <>
+            Copywriting is what converts visitors into customers. We create
+            homepage copy, landing pages, ads, and product descriptions that
+            perfectly communicate value and result in conversions.
+          </>
         ),
+        svg: <TbWriting color="#4C8C74" size={40} />,
       },
       {
         title: "Conversion Rate Optimisation",
         descText:
           "We audit your site, analyse user behaviour, identify the biggest drop-off points, and fix them through a combination of copy improvements, structural changes, and A/B testing. The result is more leads, more sales, and more revenue from the same amount of traffic, without spending an extra dollar on ads.",
-        desc: (<>
-We audit your site, analyse user behaviour, identify the biggest drop-off points, and fix them through a combination of copy improvements, structural changes, and A/B testing. The result is more leads, more sales, and more revenue from the same amount of traffic, without spending an extra dollar on ads.
-</>),
-        svg: (
-          <FaFilterCircleDollar color="#4C8C74" size={40} />
+        desc: (
+          <>
+            We audit your site, analyse user behaviour, identify the biggest
+            drop-off points, and fix them through a combination of copy
+            improvements, structural changes, and A/B testing. The result is
+            more leads, more sales, and more revenue from the same amount of
+            traffic, without spending an extra dollar on ads.
+          </>
         ),
+        svg: <FaFilterCircleDollar color="#4C8C74" size={40} />,
       },
     ],
     processHeading: <>How We Work</>,
-    processPara: (
-      <>
-        From Brief to Published Content in Three Clear Steps
-      </>
-    ),
+    processPara: <>From Brief to Published Content in Three Clear Steps</>,
     processCardData: [
       {
         image: "/Services/01.svg",
         heading: "Audit, Research & Strategy",
         paragraph: (
           <>
-We start by understanding your business properly. For SEO content, this includes full keyword research and a content plan built around real search opportunities. For copy and email, we dig into your customer journey and identify exactly where words need to work harder. You approve the strategy before anything gets written.
-
+            We start by understanding your business properly. For SEO content,
+            this includes full keyword research and a content plan built around
+            real search opportunities. For copy and email, we dig into your
+            customer journey and identify exactly where words need to work
+            harder. You approve the strategy before anything gets written.
           </>
         ),
       },
@@ -18988,8 +20743,11 @@ We start by understanding your business properly. For SEO content, this includes
         heading: "Write, Review & Refine",
         paragraph: (
           <>
-Content gets written, then reviewed internally before it reaches you. You get a chance to read it, give feedback, and request changes. We don't cap revisions arbitrarily; we refine until the content is genuinely right. The goal is content you're proud to publish, not something you feel indifferent about.
-
+            Content gets written, then reviewed internally before it reaches
+            you. You get a chance to read it, give feedback, and request
+            changes. We don't cap revisions arbitrarily; we refine until the
+            content is genuinely right. The goal is content you're proud to
+            publish, not something you feel indifferent about.
           </>
         ),
       },
@@ -18998,7 +20756,11 @@ Content gets written, then reviewed internally before it reaches you. You get a 
         heading: "Publish, Track & Build",
         paragraph: (
           <>
-Once content goes live, we monitor its performance, rankings, traffic, engagement, and conversions. Content that's working gets built on. Content that needs adjustment gets updated. This ongoing cycle is what turns content marketing from a one-off exercise into a compounding asset that keeps delivering results over time.
+            Once content goes live, we monitor its performance, rankings,
+            traffic, engagement, and conversions. Content that's working gets
+            built on. Content that needs adjustment gets updated. This ongoing
+            cycle is what turns content marketing from a one-off exercise into a
+            compounding asset that keeps delivering results over time.
           </>
         ),
       },
@@ -19054,24 +20816,40 @@ Once content goes live, we monitor its performance, rankings, traffic, engagemen
       buttonText: "Get a Custom Quote",
       body: (
         <>
-<p className="mt-2">A local service business needs suburb-targeted landing pages and a Google Business Profile content strategy. An eCommerce brand needs product descriptions, category page copy, and abandoned cart emails. A B2B SaaS company needs long-form thought leadership articles and a nurture email sequence. None of these is the same brief.
-We start with a conversation about what your business actually needs. Tell us where you are and where you're trying to get to, and we'll put together a scope that makes sense.
-</p>
+          <p className="mt-2">
+            A local service business needs suburb-targeted landing pages and a
+            Google Business Profile content strategy. An eCommerce brand needs
+            product descriptions, category page copy, and abandoned cart emails.
+            A B2B SaaS company needs long-form thought leadership articles and a
+            nurture email sequence. None of these is the same brief. We start
+            with a conversation about what your business actually needs. Tell us
+            where you are and where you're trying to get to, and we'll put
+            together a scope that makes sense.
+          </p>
         </>
       ),
-      rightContent: <><h3 className="text-2xl text-white mt-3">What's Typically Included</h3>
-<p className="text-sm">Depending on the scope we agree on, your content marketing engagement may include any combination of:</p>
-<ul className="list-disc list-inside mt-1 text-sm">
-  <li>Content audit and keyword research</li>
-  <li>SEO content strategy and editorial calendar</li>
-  <li>Blog posts and long-form SEO articles</li>
-  <li>Service page and website content writing</li>
-  <li>Homepage and landing page copywriting</li>
-  <li>Email sequence writing and campaign management</li>
-  <li>CRO audit, testing, and copy improvements</li>
-  <li>Monthly content performance reporting</li>
-</ul></>,
-miniTagData: <></>,
+      rightContent: (
+        <>
+          <h3 className="text-2xl text-white mt-3">
+            What's Typically Included
+          </h3>
+          <p className="text-sm">
+            Depending on the scope we agree on, your content marketing
+            engagement may include any combination of:
+          </p>
+          <ul className="list-disc list-inside mt-1 text-sm">
+            <li>Content audit and keyword research</li>
+            <li>SEO content strategy and editorial calendar</li>
+            <li>Blog posts and long-form SEO articles</li>
+            <li>Service page and website content writing</li>
+            <li>Homepage and landing page copywriting</li>
+            <li>Email sequence writing and campaign management</li>
+            <li>CRO audit, testing, and copy improvements</li>
+            <li>Monthly content performance reporting</li>
+          </ul>
+        </>
+      ),
+      miniTagData: <></>,
     },
     faqData: [
       {
@@ -19090,12 +20868,14 @@ miniTagData: <></>,
           "For most industries, yes, we do write. We have writers with backgrounds in professional services, eCommerce, healthcare, trades, technology, hospitality, finance, and more. For highly technical or heavily regulated fields, at first, we do an initial assessment to make sure that we're the right fit, and we're honest if we're not.",
       },
       {
-        question: "What's the difference between copywriting and content writing?",
+        question:
+          "What's the difference between copywriting and content writing?",
         answer:
           "Content writing informs, educates, and builds trust over time, through blog posts, articles, and guides. Copywriting is designed to drive immediate action, homepage copy, landing pages, ads, and product descriptions. Both are important; using both together is the best digital marketing strategy. We offer both services and can advise on what your specific situation needs.",
       },
       {
-        question: "Do you handle the publishing side, or just provide the content?",
+        question:
+          "Do you handle the publishing side, or just provide the content?",
         answer:
           "Both options are available. We can deliver finished content for your team to upload, or we can handle publishing directly if you give us access to your CMS. For email marketing, we manage the platform setup, list management, scheduling, and sending, everything from end to end if that's what you need.",
       },
@@ -19116,13 +20896,15 @@ miniTagData: <></>,
       { id: "8", src: "/Services/web_07.svg", translateY: "" },
     ],
     contactData: {
-      heading: (<>Let's Get Started</>),
+      heading: <>Let's Get Started</>,
       body: (
         <>
           <span className="block text-xl font-bold text-white">
             Words That Work Hard for Your Business
           </span>
-Get in touch today, and one of our content specialists will get back to you within one business day. No scripts, no pressure, just a straight conversation about what your content needs to do.
+          Get in touch today, and one of our content specialists will get back
+          to you within one business day. No scripts, no pressure, just a
+          straight conversation about what your content needs to do.
         </>
       ),
       buttonText: "Book a Free Strategy Call",
@@ -19132,7 +20914,7 @@ Get in touch today, and one of our content specialists will get back to you with
         slug: "email-marketing",
         title: "Email Marketing",
         heading: "Engage Your Audience with Targeted Email Campaigns",
-        imageUrl: "/Services/Rectangle_52.png",
+        imageUrl: "/services/Rectangle_52.webp",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -19572,7 +21354,7 @@ Get in touch today, and one of our content specialists will get back to you with
         slug: "seo-content-writing",
         title: "SEO & Content Writing",
         heading: "SEO & Content Writing Services",
-        imageUrl: "/Services/Rectangle_52.png",
+        imageUrl: "/services/Rectangle_52.webp",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -20012,7 +21794,7 @@ Get in touch today, and one of our content specialists will get back to you with
         slug: "copywriting",
         title: "Copywriting",
         heading: "Professional Copywriting Services",
-        imageUrl: "/Services/Rectangle_52.png",
+        imageUrl: "/services/Rectangle_52.webp",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -20452,7 +22234,7 @@ Get in touch today, and one of our content specialists will get back to you with
         slug: "conversion-rate-optimization-cro",
         title: "Conversion Rate Optimization (CRO)",
         heading: "Conversion Rate Optimization (CRO)",
-        imageUrl: "/Services/Rectangle_52.png",
+        imageUrl: "/services/Rectangle_52.webp",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -20891,7 +22673,3 @@ Get in touch today, and one of our content specialists will get back to you with
     ],
   },
 ];
-
-
-
-

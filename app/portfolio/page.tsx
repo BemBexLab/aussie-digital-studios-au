@@ -10,7 +10,7 @@ const PortfolioPage = () => {
       {/* <PortfolioSection /> */}
       {/* <div className="flex justify-end">
         <img
-          src="/Geometric_Shape_Silver.png"
+          src="/Geometric_Shape_Silver.webp"
           alt="Decorative Image"
           width={100}
           height={100}

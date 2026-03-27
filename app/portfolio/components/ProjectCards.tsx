@@ -140,7 +140,7 @@ const ProjectCardGrid = () => {
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-2">
           {filteredPosts.map((post) => {
-            const imageUrl = post.acf?.project_image?.url || "/default.jpg";
+            const imageUrl = post.acf?.project_image?.url || "/default.webp";
             const figma = isFigmaCard(post);
             const scrollAmount = scrollOffsets[post.id] || 0;
             const useModal =
@@ -270,7 +270,7 @@ const ProjectCardGrid = () => {
               &times;
             </button>
             <img
-              src={modalProject.acf?.project_image?.url || "/default.jpg"}
+              src={modalProject.acf?.project_image?.url || "/default.webp"}
               alt={modalProject.title.rendered}
               className="w-full h-auto max-h-[620px] rounded-lg mb-4 object-contain"
             />

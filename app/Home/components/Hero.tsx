@@ -12,7 +12,7 @@ const Hero = () => {
         className="hidden min-[1250px]:block h-[695px] w-full relative hero-bg-section"
         data-hero-bg
         style={{
-          backgroundImage: "url('/Hero_Section.png')",
+          backgroundImage: "url('/Hero_Section.webp')",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundPosition: "center",
@@ -82,7 +82,7 @@ const Hero = () => {
         className="min-[1250px]:hidden w-full relative min-h-screen flex flex-col items-center justify-center text-center px-4 sm:px-6 hero-bg-section"
         data-hero-bg
         style={{
-          backgroundImage: "url('/Hero_Section.png')",
+          backgroundImage: "url('/Hero_Section.webp')",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundPosition: "center",
