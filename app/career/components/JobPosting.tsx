@@ -4,7 +4,7 @@ const JobPosting = () => {
   return (
     <div className="relative overflow-x-hidden">
       <img
-        src="/Geometric_Shape_Silver.png"
+        src="/Geometric_Shape_Silver.webp"
         alt="Geometric shape"
         className="absolute -top-6 -right-6 w-36 h-36 pointer-events-none"
       />

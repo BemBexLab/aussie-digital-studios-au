@@ -42,7 +42,7 @@ const Footer = () => {
             {/* Aussie Logo */}
             <div className="mx-auto md:mx-[50px] mt-5 md:mt-5">
               <Image
-                src={isDarkMode ? "/Group_1.png" : "/Aussie_Header_Logo_Light.png"}
+                src={isDarkMode ? "/Group_1.webp" : "/Aussie_Header_Logo_Light.webp"}
                 alt="Logo"
                 width={280}
                 height={170}

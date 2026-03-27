@@ -12,7 +12,7 @@ const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
     >
       <div
         style={{
-          backgroundImage: "url('/Group_1.png')",
+          backgroundImage: "url('/Group_1.webp')",
           backgroundSize: "contain",
           backgroundRepeat: "no-repeat",
           width: "20%",

@@ -165,7 +165,7 @@ const Cards = ({ service }: CardsProps) => {
       >
         {/* Title */}
         <motion.h2
-          className="text-4xl text-center mb-8"
+          className="text-4xl text-center text-white"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
@@ -186,7 +186,7 @@ const Cards = ({ service }: CardsProps) => {
         {/* Geometric Shape */}
         <div className="hidden md:block absolute top-0 right-0 translate-y-0 -translate-x-32 z-10 pointer-events-none">
           <Image
-            src="/Geometric_Shape_Silver.png"
+            src="/Geometric_Shape_Silver.webp"
             alt="Geometric Shape"
             width={120}
             height={80}

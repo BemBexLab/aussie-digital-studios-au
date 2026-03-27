@@ -84,7 +84,7 @@ const ContactMobile = () => {
           {/* Image Section */}
           <div className="relative w-full">
             <Image
-              src="/Contact/Rectangle_1.png"
+              src="/contact/Rectangle_1.webp"
               alt="Get in Touch Illustration"
               width={280}
               height={280}
@@ -93,7 +93,7 @@ const ContactMobile = () => {
             {/* Move shape inside bounds on mobile */}
             <div className="absolute -bottom-4 -right-2 pointer-events-none">
               <Image
-                src="/Contact/shape.png"
+                src="/contact/shape.webp"
                 alt="decorative shape"
                 width={60}
                 height={60}
@@ -117,7 +117,7 @@ const ContactMobile = () => {
             {/* Smaller decorative shape */}
             <div className="absolute -top-6 -right-4 pointer-events-none opacity-60">
               <Image
-                src="/Geometric_Shape_Silver.png"
+                src="/Geometric_Shape_Silver.webp"
                 alt="decorative geometric shape"
                 width={60}
                 height={60}

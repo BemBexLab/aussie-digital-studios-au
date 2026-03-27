@@ -18,7 +18,7 @@ const AboutPage = () => {
       <Values />
       {/* <div className="relative">
         <Image
-          src="/Geometric_Shape_Silver.png"
+          src="/Geometric_Shape_Silver.webp"
           alt="Decorative Image"
           width={150}
           height={150}

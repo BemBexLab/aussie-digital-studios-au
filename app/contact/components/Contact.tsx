@@ -42,7 +42,7 @@ const Contact = () => {
           {/* Left Side - Image */}
           <div className="flex-1 relative">
             <Image
-              src="/Contact/Rectangle_1.png"
+              src="/contact/Rectangle_1.webp"
               alt="Get in Touch Illustration"
               width={300}
               height={300}
@@ -50,7 +50,7 @@ const Contact = () => {
             />
             <div className="absolute -left-15 top-1/2 -translate-y-1/2 pointer-events-none">
               <Image
-                src="/Contact/shape.png"
+                src="/contact/shape.webp"
                 alt="decorative shape"
                 width={196}
                 height={196}
@@ -73,7 +73,7 @@ const Contact = () => {
           >
             <div className="absolute -top-24 -right-24 pointer-events-none">
               <Image
-                src="/Geometric_Shape_Silver.png"
+                src="/Geometric_Shape_Silver.webp"
                 alt="decorative geometric shape"
                 width={160}
                 height={160}
@@ -182,7 +182,7 @@ const Contact = () => {
           {/* Image Section */}
           <div className="relative w-full max-w-md mx-auto">
             <Image
-              src="/Contact/Rectangle_1.png"
+              src="/contact/Rectangle_1.webp"
               alt="Get in Touch Illustration"
               width={300}
               height={300}
@@ -191,7 +191,7 @@ const Contact = () => {
             {/* Move shape inside bounds on mobile */}
             <div className="absolute -bottom-6 -right-4 pointer-events-none">
               <Image
-                src="/Contact/shape.png"
+                src="/contact/shape.webp"
                 alt="decorative shape"
                 width={80}
                 height={80}
@@ -211,7 +211,7 @@ const Contact = () => {
             {/* Smaller decorative shape or hide if too big — optional */}
             <div className="absolute -top-8 -right-6 pointer-events-none opacity-70">
               <Image
-                src="/Geometric_Shape_Silver.png"
+                src="/Geometric_Shape_Silver.webp"
                 alt="decorative geometric shape"
                 width={80}
                 height={80}

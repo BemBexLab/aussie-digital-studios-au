@@ -141,7 +141,7 @@ const FooterMobile = () => {
       {/* Mobile Logo */}
       <div className="flex justify-center py-6 border-t border-gray-700">
         <Image
-          src="/Group_1.png"
+          src="/Group_1.webp"
           alt="Logo"
           width={280}
           height={170}

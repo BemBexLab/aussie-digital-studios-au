@@ -1,1 +1,0 @@
-IN order to link services/[subservices] and the dropdown menu make sure that the services array subservice is the same name as your data subservice slug

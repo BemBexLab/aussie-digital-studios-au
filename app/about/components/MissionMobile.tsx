@@ -9,7 +9,7 @@ const MissionMobile = () => {
         {/* Image 1 */}
         <div className="relative w-[90px] h-[90px]">
           <Image
-            src="/About/Rectangle_44.png"
+            src="/about/Rectangle_44.webp"
             alt="Mission Image 1"
             fill
             className="object-cover rounded-[12px]"
@@ -19,7 +19,7 @@ const MissionMobile = () => {
         {/* Image 2 */}
         <div className="relative w-[90px] h-[90px]">
           <Image
-            src="/About/Rectangle_45.png"
+            src="/about/Rectangle_45.webp"
             alt="Mission Image 2"
             fill
             className="object-cover rounded-[12px] drop-shadow-md"
@@ -29,14 +29,14 @@ const MissionMobile = () => {
         {/* Image 3 with geometric shape */}
         <div className="relative w-[90px] h-[90px]">
           <Image
-            src="/About/Rectangle_46.png"
+            src="/about/Rectangle_46.webp"
             alt="Mission Image 3"
             fill
             className="object-cover rounded-[12px]"
           />
           {/* Geometric shape — kept inside bounds */}
           <Image
-            src="/Geometric_Shape_Silver.png"
+            src="/Geometric_Shape_Silver.webp"
             alt="Geometric Shape"
             width={60}
             height={60}
