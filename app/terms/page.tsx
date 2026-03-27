@@ -10,7 +10,7 @@ const TermsAndConditions = () => {
 
         <section className="mb-10">
           <p className="text-white">
-            By using Bembex Lab and signing up as a Client, you agree to be
+            By using Aussie Digital Studios and signing up as a Client, you agree to be
             legally bound by these Terms and Conditions of Use, including those
             terms and conditions incorporated by reference.
           </p>
@@ -21,14 +21,13 @@ const TermsAndConditions = () => {
         <section className="mb-10">
           <p className="text-white">
             Please read these Terms and Conditions carefully. If you do not
-            accept these Terms and Conditions, you may not use the Bembex Lab
-            service. By placing any order with Bembex Lab you agree to all our
-            terms and it is your responsibility to read our terms. Bembex Lab
+            accept these Terms and Conditions, you may not use the Aussie Digital Studios
+            service. By placing any order with Aussie Digital Studios you agree to all our
+            terms and it is your responsibility to read our terms. Aussie Digital Studios
             may revise these Terms and Conditions at any time by updating this
             posting. You should visit this web page periodically to review the
             Terms and Conditions, because they are binding on you. In these
-            Terms and Conditions, all services provided by and related to Bembex
-            Lab and all text, images, photographs, user interface, &quot;look&quot; and
+            Terms and Conditions, all services provided by and related to Aussie Digital Studios and all text, images, photographs, user interface, &quot;look&quot; and
             &quot;feel&quot;, data and other content (including, without limitation, the
             selection, coordination and arrangement of such content) are
             sometimes referred to as the &quot;Web Site&quot; and/or &quot;Service&quot;.
@@ -37,7 +36,7 @@ const TermsAndConditions = () => {
 
         <section className="mb-10">
           <p className="text-white">
-            You acknowledge and agree that Bembex Lab shall have the right (but
+            You acknowledge and agree that Aussie Digital Studios shall have the right (but
             not the obligation) in its sole discretion, to pre-screen, refuse or
             remove any project and/or user provided content that violates these
             Terms and Conditions or is otherwise objectionable, including,
@@ -46,32 +45,32 @@ const TermsAndConditions = () => {
             violates the rights of others. Activity that is brought to our
             attention which appears in our sole judgment to violate the law will
             be brought to the attention of the proper authorities. You
-            acknowledge, consent and agree that Bembex Lab. may access,
+            acknowledge, consent and agree that Aussie Digital Studios. may access,
             preserve, and disclose your account information and content if
             required to do so by law or in a good faith belief that such access
             preservation or disclosure is reasonably necessary to: (a) comply
             with legal process; (b) enforce these Terms and Conditions; (c)
             respond to claims that any content violates the rights of
             third-parties; (d) respond to your requests for customer service; or
-            (e) protect the rights, property, or personal safety of Bembex Lab
+            (e) protect the rights, property, or personal safety of Aussie Digital Studios
             its users and the public.
           </p>
         </section>
 
         <section className="mb-10">
           <h2 className="text-3xl font-semibold mb-4 text-[#4C8C74]">
-            Bembex lab General Services
+            Aussie Digital Studios General Services
           </h2>
           <ul className="text-white">
             <li>
-              Description. Bembex Lab Service is an online service where
-              individuals or entities that have signed up with Bembex Lab as
+              Description. Aussie Digital Studios Service is an online service where
+              individuals or entities that have signed up with Aussie Digital Studios as
               clients (each, a &quot;Client&quot;) can post specific assignments and
               project descriptions, including illustrative samples or other
               media (each, a &quot;Creative Brief&quot;), revise those Creative Briefs
               (each, a &quot;Revision Brief&quot;) and obtain responses (each, a
               &quot;Response&quot;) to those Creative or Revision Briefs from design
-              experts retained by Bembex Lab (&quot;Members&quot;). Bembex Lab will
+              experts retained by Aussie Digital Studios (&quot;Members&quot;). Aussie Digital Studios will
               provide you, as the Client, the Service according to the Package
               you have chosen as detailed in section 1(e) below. Your Responses
               will be created iteratively through a drafting cycle of Creative
@@ -88,26 +87,26 @@ const TermsAndConditions = () => {
               each Response to a Creative Brief that you want to receive, a term
               sheet (a &quot;Term Sheet&quot;) will be generated that will contain, and be
               subject to, the terms and conditions you have established for the
-              Creative or Revision Brief. Bembex Lab is under no obligation to
+              Creative or Revision Brief. Aussie Digital Studios is under no obligation to
               review a Creative or Revision Brief or Term Sheet for any purpose,
               including accuracy, completeness of information, quality or
-              clarity. Bembex Lab may decide, in its sole discretion, to deny a
+              clarity. Aussie Digital Studios may decide, in its sole discretion, to deny a
               Creative or Revision Brief or a Term Sheet.
             </li>
             <br />
             <li>
-              Reviewing Responses. When Bembex Lab provides you with a Response,
+              Reviewing Responses. When Aussie Digital Studios provides you with a Response,
               you are responsible for reviewing the Response. If you fail to
-              promptly inform Bembex Lab that the Response is not reasonably
+              promptly inform Aussie Digital Studios that the Response is not reasonably
               responsive to the related Term Sheet or Creative Brief, you will
-              be deemed to have accepted the Response. If you notify Bembex Lab
+              be deemed to have accepted the Response. If you notify Aussie Digital Studios
               that you think a Response is not reasonably responsive to the
               related Creative Brief, you shall then submit to the Web Site a
               Revision Brief containing information regarding amendments or
               modification to be made to the initial Response. After you provide
-              Bembex Lab with a Revision Brief, Bembex Lab will provide you with
+              Aussie Digital Studios with a Revision Brief, Aussie Digital Studios will provide you with
               a subsequent Response that conforms to the additional criteria you
-              requested. Bembex Lab is not responsible for the content of
+              requested. Aussie Digital Studios is not responsible for the content of
               Responses developed to the extent that such Responses are prepared
               to conform to your Creative or Revision Briefs.
             </li>
@@ -123,7 +122,7 @@ const TermsAndConditions = () => {
               selected. By the third revision request, your requests shall be
               modifications of the current composition only. Revision requests
               that depart from the then-current composition will be honored and
-              completed in a timely manner, however; Bembex Lab reserves the
+              completed in a timely manner, however; Aussie Digital Studios reserves the
               right to charge the client for each such Revision. No revision
               work, which requires payment, will be started without your
               authorization.
@@ -138,15 +137,15 @@ const TermsAndConditions = () => {
             <li>
               Client Accounts. When you register for the Service, you must pay
               for the Service via credit card, or other payment method
-              authorized by Bembex Lab. You will be charged for the Package you
+              authorized by Aussie Digital Studios. You will be charged for the Package you
               have selected along with and additional products and/or services
               you select as add-ons. If you pay by credit card, you will be
               required to provide a valid credit card number and credit card
               billing address when registering as a Client. You will receive
-              receipts for all your transactions with Bembex Lab. We hold the
+              receipts for all your transactions with Aussie Digital Studios. We hold the
               right to change the fee policy for Clients and impose additional
               fees on Clients at any time; however, such additional fees will
-              not apply to projects submitted before Bembex Lab decides to
+              not apply to projects submitted before Aussie Digital Studios decides to
               implement any such changes in fees.
             </li>
           </ul>
@@ -175,12 +174,12 @@ const TermsAndConditions = () => {
               confidential, shall not disseminate, and shall use solely in
               accordance with these Terms and Conditions, your User Identity,
               registration identification and password for the Web Site. You
-              shall immediately notify Bembex Lab if you learn of or suspect:
+              shall immediately notify Aussie Digital Studios if you learn of or suspect:
               (i) any loss or theft of your User Identity, registration
               identification or password, or (ii) any unauthorized use of your
               registration identification or password or of the Web Site. In the
-              event of such loss, theft, or unauthorized use, Bembex Lab may
-              impose on you, at Bembex Lab &apos; sole discretion, additional
+              event of such loss, theft, or unauthorized use, Aussie Digital Studios may
+              impose on you, at Aussie Digital Studios &apos; sole discretion, additional
               security obligations.
             </li>
             <br />
@@ -188,7 +187,7 @@ const TermsAndConditions = () => {
               Security Breaches and Revision. If any unauthorized person obtains
               access to the Web Site as a result of any act or omission by you,
               you shall use your best efforts to ascertain the source and manner
-              of acquisition and shall fully and promptly inform Bembex Lab You
+              of acquisition and shall fully and promptly inform Aussie Digital Studios You
               shall otherwise cooperate and assist in any investigation relating
               to any such unauthorized access.
             </li>
@@ -204,7 +203,7 @@ const TermsAndConditions = () => {
               Creative and Response Briefs. Upon submission of a Creative or
               Response Brief or any other information or media provided by you
               in connection with your use of the Service (collectively, the
-              &quot;Client Information&quot;), Bembex Lab and its agents shall have all
+              &quot;Client Information&quot;), Aussie Digital Studios and its agents shall have all
               rights and licenses necessary to use such Client Information for
               the purpose of obtaining Responses and for archival purposes. Each
               Member to whom your project is made available has the right to
@@ -213,8 +212,8 @@ const TermsAndConditions = () => {
             </li>
             <br />
             <li>
-              Rights of Bembex Lab . Upon your submission of Client Information
-              to the Service, you grant Bembex Lab a royalty-free, perpetual,
+              Rights of Aussie Digital Studios . Upon your submission of Client Information
+              to the Service, you grant Aussie Digital Studios a royalty-free, perpetual,
               irrevocable, sub-licensable , exclusive, worldwide right
               (including any moral rights) and license to use, reproduce,
               modify, adapt, publish, translate, create derivative works from,
@@ -229,15 +228,15 @@ const TermsAndConditions = () => {
             <li>
               Rights of Clients. Subject to your compliance with these Terms and
               Conditions, you shall own the final the Response composition
-              provided to you by Bembex Lab. (the &quot;Final Product&quot;). You shall
+              provided to you by Aussie Digital Studios. (the &quot;Final Product&quot;). You shall
               not, however, own any materials, media or other content generated
               during any revision cycles leading up to the Final Product, and
-              Bembex Lab lab expressly reserves all right, title and interest in
-              and to the same. You acknowledge and hereby grant to Bembex Lab a
+              Aussie Digital Studios lab expressly reserves all right, title and interest in
+              and to the same. You acknowledge and hereby grant to Aussie Digital Studios a
               royalty-free, irrevocable exclusive worldwide right to use
               Creative and Revision Briefs, individual Responses provided to
               you, and Final Product for internal and archival purposes, and in
-              order to display and promote the Bembex Lab Service. Bembex Lab
+              order to display and promote the Aussie Digital Studios Service. Aussie Digital Studios
               retains the rights to all artwork concepts and other content not
               selected by you.
             </li>
@@ -251,10 +250,10 @@ const TermsAndConditions = () => {
           </h2>
           <ul className="text-white">
             <li>
-              Bembex LAB. intends to use commercially reasonable efforts to
+              Aussie Digital Studios. intends to use commercially reasonable efforts to
               follow its privacy policy; as such privacy policy may be changed
-              from time to time at Bembex Lab &apos; sole discretion. Notwithstanding
-              the foregoing, Bembex Lab cannot and does not assume any
+              from time to time at Aussie Digital Studios &apos; sole discretion. Notwithstanding
+              the foregoing, Aussie Digital Studios cannot and does not assume any
               responsibility or liability for any information submitted to the
               Web Site or for the use or misuse of any information submitted by
               you or any other person, including, without limitation, any
@@ -272,13 +271,13 @@ const TermsAndConditions = () => {
             <li>
               Eligibility Requirements. To register as a Client, you must be at
               least 18 years of age, agree to these Terms and Conditions and
-              Bembex Lab privacy policy, and complete the registration
+              Aussie Digital Studios privacy policy, and complete the registration
               procedure. By registering as a Client, you represent and warrant
               that you meet these eligibility requirements, that the information
               you include as part of the registration process is complete and
               accurate and, if you are registering on behalf of an entity, that
               you are authorized to bind that entity to these Terms and
-              Conditions. Bembex Lab may accept or reject your registration in
+              Conditions. Aussie Digital Studios may accept or reject your registration in
               its sole discretion.
             </li>
             <li>
@@ -339,7 +338,7 @@ const TermsAndConditions = () => {
             </li>
             <li>
               (b) delete or revise any material or other information of any
-              other user of Bembex Lab;
+              other user of Aussie Digital Studios;
             </li>
             <li>
               (c) take any action that imposes an unreasonable or
@@ -355,7 +354,7 @@ const TermsAndConditions = () => {
               other device or mechanism (including, without limitation,
               browsers, spiders, robots, avatars or intelligent agents) to
               navigate or search the Web Site, other than the search engine and
-              search agents available from Bembex Lab on the Web Site and other
+              search agents available from Aussie Digital Studios on the Web Site and other
               than generally available third-party web browsers (e.g., Microsoft
               Internet Explorer and Netscape Navigator); or
             </li>
@@ -395,14 +394,13 @@ const TermsAndConditions = () => {
               (v) forging any TCP/IP packet header or any part of the header
               information in any email or posting generated in connection with
               the Service. Violations of system or network security may result
-              in civil or criminal liability. Bembex Lab will investigate
+              in civil or criminal liability. Aussie Digital Studios will investigate
               occurrences that may involve such violations and may involve, and
               cooperate with, law enforcement authorities in prosecuting users
-              who are involved in such violations. Bembex Lab reserves the right
+              who are involved in such violations. Aussie Digital Studios reserves the right
               to review postings on the Web Site, to remove any postings, and to
               terminate your ability to communicate with, or post to, the Web
-              Site at any time without notice, in its sole discretion. Bembex
-              Lab will use commercially reasonable efforts not to disclose any
+              Site at any time without notice, in its sole discretion. Aussie Digital Studios will use commercially reasonable efforts not to disclose any
               information you communicate with, or post to, the Web Site, but
               reserves the right to disclose such information to the extent
               necessary to satisfy any applicable law, regulation, legal process
@@ -413,19 +411,19 @@ const TermsAndConditions = () => {
           <br />
           <ul className="text-white">
             <li>
-              (h) Operation of Web Site. Bembex Lab shall not be responsible for
+              (h) Operation of Web Site. Aussie Digital Studios shall not be responsible for
               any delays or interruptions of, or errors or omissions contained
-              in, the Web Site. Bembex Lab reserves the right, but shall not be
+              in, the Web Site. Aussie Digital Studios reserves the right, but shall not be
               required, to correct any such delays, interruptions, errors or
-              omissions. Although Bembex Lab intends to use commercially
+              omissions. Although Aussie Digital Studios intends to use commercially
               reasonable efforts to make the Web Site and Service accessible,
-              Bembex Lab makes no representation, warranty or covenant that the
+              Aussie Digital Studios makes no representation, warranty or covenant that the
               Web Site or Service will be available at all times or at any time.
               Various circumstances may prevent or delay availability, including
-              telecommunications and/or server problems. Bembex Lab may at any
+              telecommunications and/or server problems. Aussie Digital Studios may at any
               time discontinue the Web Site in whole or in part, may change or
               eliminate any transmission method, and may change transmission
-              speeds or other signal characteristics. Bembex Lab shall not be
+              speeds or other signal characteristics. Aussie Digital Studios shall not be
               responsible for any loss, cost, damage or liability that may
               result from any of the circumstances, actions or inactions
               described in this paragraph.
@@ -439,22 +437,22 @@ const TermsAndConditions = () => {
           </h2>
           <ul className="text-white">
             <li>
-              By using the Bembex Lab Service, you agree to receive, via email
+              By using the Aussie Digital Studios Service, you agree to receive, via email
               or otherwise, status notifications, a monthly newsletter, and
               carefully selected special offers and promotions for certain
               products and services that we believe could be of value to our
               Clients. This is essential to maintaining the low-cost of our
               services. You are free to unsubscribe from any newsletters we send
-              to you at any time. Bembex Lab may or may not use a third party to
+              to you at any time. Aussie Digital Studios may or may not use a third party to
               send email or otherwise contact you, however, your personal
               identifying information will never be disclosed or shared with
-              another party in a manner inconsistent with Be Bembex Lab ‘
+              another party in a manner inconsistent with Be Aussie Digital Studios ‘
               privacy policy.
             </li>
             <br />
             <li>
               By providing a telephone number and submitting this form, you
-              consent to receive SMS text messages from Bembex Lab LLC regarding
+              consent to receive SMS text messages from Aussie Digital Studios LLC regarding
               our services. Message frequency may vary. Message and data rates
               may apply. Reply STOP to opt out of further messaging and HELP for
               assistance or call
@@ -472,7 +470,7 @@ const TermsAndConditions = () => {
           <ul className="text-white">
             <li>
               By submitting your phone number, you agree to receive SMS and MMS
-              messages from Bembex Lab for service-related purposes. These
+              messages from Aussie Digital Studios for service-related purposes. These
               messages may include booking confirmations, appointment reminders,
               and customer support responses.
             </li>
@@ -530,18 +528,18 @@ const TermsAndConditions = () => {
           </h3>
           <ul className="text-white">
             <li>
-              Responsibility for Content. Bembex Lab shall not be responsible
+              Responsibility for Content. Aussie Digital Studios shall not be responsible
               for any use that is or is not made of the Web Site or the Service.
-              Without limiting the foregoing, Bembex Lab makes no
+              Without limiting the foregoing, Aussie Digital Studios makes no
               representations, warranties or covenants regarding, and does not
               guarantee, the truthfulness, accuracy, or reliability of any
               information or other material (including, without limitation, any
               Creative Brief, Term Sheets, Responses or User Identity) that are
               communicated through, or posted to, the Service, whether by
-              Members, Clients, Bembex Lab or otherwise, nor does Bembex Lab
+              Members, Clients, Aussie Digital Studios or otherwise, nor does Aussie Digital Studios
               endorse any opinions expressed by any user of the Web Site,
               including any Member or Client. Without limiting the foregoing,
-              Bembex Lab makes no representations, warranties or covenants
+              Aussie Digital Studios makes no representations, warranties or covenants
               regarding the validity of the rights to Responses granted pursuant
               to these Terms and Conditions. You acknowledge that any reliance
               on information or other material, including, without limitation,
@@ -553,11 +551,11 @@ const TermsAndConditions = () => {
               for taking any actions you deem reasonable to determine whether
               your use of a Response will infringe any statutory or third-party
               intellectual property, privacy or publicity rights. Photos /
-              Images: Bembex Lab shall not be responsible for any use of photos
+              Images: Aussie Digital Studios shall not be responsible for any use of photos
               that are not royalty free. It is the clients&apos; responsibility to
               purchase and pay for all rights to use any photos, images,
               graphics, icons, logos, and/or designs for any designs created by
-              Bembex Lab for the client. This includes websites, website
+              Aussie Digital Studios for the client. This includes websites, website
               templates, brochures, business cards, postcards, stationery,
               signage, animations, commercials, slogans, flyers, banners,
               stickers, promotional items, and/or desktop wallpapers.
