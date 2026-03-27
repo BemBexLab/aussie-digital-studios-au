@@ -13,7 +13,7 @@ const Privacy = () => {
         {/* Intro */}
         <section className="mb-10">
           <p className="text-white">
-            By using Bembex Lab and signing up as a Client, you agree to be
+            By using Aussie Digital Studios and signing up as a Client, you agree to be
             legally bound by these Privacy Policy of Use, including those
             Privacy Policy incorporated by reference.
           </p>
@@ -22,7 +22,7 @@ const Privacy = () => {
         {/* Site + scope */}
         <section className="mb-10">
           <p className="text-white">
-            This privacy statement describes how Bembex Lab collects and uses
+            This privacy statement describes how Aussie Digital Studios collects and uses
             the personal information you provide on our website:
             <Link
               href="https://bembexlab.com/"
@@ -40,7 +40,7 @@ const Privacy = () => {
         {/* Enforcement / disclosures (from T&C reference) */}
         <section className="mb-10">
           <p className="text-white mb-5">
-            You acknowledge and agree that Bembex Lab shall have the right (but
+            You acknowledge and agree that Aussie Digital Studios shall have the right (but
             not the obligation) in its sole discretion, to pre-screen, refuse or
             remove any project and/or user provided content that violates these
             Terms and Conditions or is otherwise objectionable, including,
@@ -49,14 +49,14 @@ const Privacy = () => {
             the rights of others. Activity that is brought to our attention
             which appears in our sole judgment to violate the law will be
             brought to the attention of the proper authorities. You acknowledge,
-            consent and agree that Bembex Lab may access, preserve, and disclose
+            consent and agree that Aussie Digital Studios may access, preserve, and disclose
             your account information and content if required to do so by law or
             in a good faith belief that such access, preservation or disclosure
             is reasonably necessary to: (a) comply with legal process; (b)
             enforce these Terms and Conditions; (c) respond to claims that any
             content violates the rights of third-parties; (d) respond to your
             requests for customer service; or (e) protect the rights, property,
-            or personal safety of Bembex Lab, its users and the public.
+            or personal safety of Aussie Digital Studios, its users and the public.
           </p>
 
           <ul className="text-white pl-5 list-disc space-y-2">
@@ -162,7 +162,7 @@ const Privacy = () => {
             law such as to comply with a subpoena, or similar legal process when
             we believe in good faith that disclosure is necessary to protect our
             rights, protect your safety or the safety of others, investigate
-            fraud, or respond to a government request. If Bembex Lab is involved
+            fraud, or respond to a government request. If Aussie Digital Studios is involved
             in a merger, acquisition, or sale of all or a portion of its assets,
             you will be notified via email and/or a prominent notice on our
             website of any change in ownership or uses of your personal
@@ -228,7 +228,7 @@ const Privacy = () => {
           </h2>
           <p>
             Our site includes links to other websites whose privacy practices
-            may differ from those of Bembex Lab. If you submit personal
+            may differ from those of Aussie Digital Studios. If you submit personal
             information to any of those sites, your information is governed by
             their privacy statements. We encourage you to carefully read the
             privacy statement of any website you visit.
@@ -311,7 +311,7 @@ const Privacy = () => {
         <section className="text-white mb-10">
           <p>
             By providing a telephone number and submitting this form, you
-            consent to receive SMS text messages from Bembex Lab LLC regarding
+            consent to receive SMS text messages from Aussie Digital Studios LLC regarding
             our services. Message frequency may vary. Message and data rates may
             apply. Reply STOP to opt out of further messaging and HELP for
             assistance or call{" "}
@@ -349,7 +349,7 @@ const Privacy = () => {
           <ul className="list-disc pl-5 space-y-2">
             <li>
               By providing your mobile number and opting in, you consent to
-              receive SMS and MMS messages from Bembex Lab related to our
+              receive SMS and MMS messages from Aussie Digital Studios related to our
               services. These messages may include appointment confirmations,
               service updates, and responses to inquiries.
             </li>
