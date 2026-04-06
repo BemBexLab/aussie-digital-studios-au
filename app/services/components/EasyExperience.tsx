@@ -47,7 +47,7 @@ type EasyExperienceSourceCard = {
 };
 
 export type EasyExperienceSectionData = {
-  eyebrow: ReactNode;
+  eyebrow?: ReactNode;
   headingLine1: ReactNode;
   headingLine2?: ReactNode;
   cards: EasyExperienceSourceCard[];
@@ -147,15 +147,17 @@ const EasyExperience = ({ sectionData }: EasyExperienceProps) => {
   return (
     <section className="hidden md:block mt-25">
       <div className="w-full px-4">
-        <motion.p
-          className="text-xl font-normal text-center text-[#4C8C74]"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1.2, ease: "easeOut" }}
-          viewport={{ once: true, amount: 0.5 }}
-        >
-          {sectionData.eyebrow}
-        </motion.p>
+        {sectionData.eyebrow ? (
+          <motion.p
+            className="text-xl font-normal text-center text-[#4C8C74]"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.5 }}
+          >
+            {sectionData.eyebrow}
+          </motion.p>
+        ) : null}
 
         <motion.h2
           className="text-4xl font-semibold text-center text-white mt-2"
