@@ -26,7 +26,7 @@ type SocialAuditCtaProps = {
 const SocialAuditCta2 = ({ data }: SocialAuditCtaProps) => {
   return (
     <section
-      className="hidden py-10 text-center sm:flex sm:flex-col sm:items-center sm:justify-center"
+      className="hidden mt-8 py-10 text-center sm:flex sm:flex-col sm:items-center sm:justify-center"
       style={{
         backgroundImage: `url("/Home/CTA.svg")`,
         backgroundSize: "cover",

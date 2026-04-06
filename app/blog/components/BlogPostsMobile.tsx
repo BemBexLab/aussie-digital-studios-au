@@ -31,7 +31,7 @@ const BlogPostsMobile = () => {
 
   const displayedPosts = blogPosts.slice(0, displayCount);
   const hasMorePosts = displayCount < blogPosts.length;
-  const cardBg = isLightMode ? '/blog/card_light.webp' : '/blog/card_dark.webp';
+  const cardBg = isLightMode ? '/Blog/card_light.webp' : '/Blog/card_dark.webp';
   const descriptionColor = isLightMode ? '#000000' : '#AAAAAA';
 
   return (
@@ -82,3 +82,4 @@ const BlogPostsMobile = () => {
 };
 
 export default BlogPostsMobile;
+

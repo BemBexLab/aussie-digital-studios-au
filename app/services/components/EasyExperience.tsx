@@ -145,7 +145,7 @@ const EasyExperience = ({ sectionData }: EasyExperienceProps) => {
   };
 
   return (
-    <section className="hidden md:block my-25">
+    <section className="hidden md:block mt-25">
       <div className="w-full px-4">
         <motion.p
           className="text-xl font-normal text-center text-[#4C8C74]"

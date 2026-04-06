@@ -97,7 +97,7 @@ html.light .arrow-icon svg * {
   color: black !important;
 }
 html.light [data-service-card] {
-  background-image: url('/Home/frame_163_light.svg') !important;  background-size: cover !important;
+  background-image: url('/Home/Frame_163_light.svg') !important;  background-size: cover !important;
   background-position: center !important;}
 @import "tailwindcss";
 
@@ -263,3 +263,4 @@ body {
   color: var(--foreground);
   font-family: 'Outfit', Arial, Helvetica, sans-serif;
 } */
+

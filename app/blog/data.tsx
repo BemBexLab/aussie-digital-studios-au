@@ -22,14 +22,14 @@ Proin euismod commodo purus, iaculis sodales dui viverra at. Phasellus pulvinar 
 Nunc porttitor eu leo ut luctus. Nunc pulvinar convallis tempus. Phasellus vel massa fermentum, elementum quam id, faucibus purus. Mauris a tortor malesuada, bibendum nunc nec, gravida odio. Etiam faucibus, nulla non pretium sodales, diam augue ultricies odio, eu maximus ligula lectus ac lectus. Donec sed nisi molestie, mattis lacus in, semper nibh. Ut porttitor lorem non purus sodales sodales. Nulla nec ultricies nunc. Duis nec est tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Morbi ultricies pretium blandit. Sed iaculis, lectus vitae ultricies rhoncus, nibh enim tristique nibh, vitae imperdiet nisl orci sed eros. Aliquam dictum dolor vitae nulla posuere pulvinar. Duis vehicula placerat quam vitae rhoncus. Sed id risus sit amet elit porta tincidunt non mollis mauris.`,
         relatedblog: [
           {
-            image: "/Blog/image.webp",
+            image: "/Blog/Image.webp",
             category: "Design",
             title: "Lorem Ipsum is simply dummy ",
             link: "#",
             blogIndex: 0,
           },
           {
-            image: "/Blog/image.webp",
+            image: "/Blog/Image.webp",
             category: "Development",
             title: "Lorem Ipsum is simply dummy ",
             link: "#",
@@ -62,28 +62,28 @@ Proin euismod commodo purus, iaculis sodales dui viverra at. Phasellus pulvinar 
 Nunc porttitor eu leo ut luctus. Nunc pulvinar convallis tempus. Phasellus vel massa fermentum, elementum quam id, faucibus purus. Mauris a tortor malesuada, bibendum nunc nec, gravida odio. Etiam faucibus, nulla non pretium sodales, diam augue ultricies odio, eu maximus ligula lectus ac lectus. Donec sed nisi molestie, mattis lacus in, semper nibh. Ut porttitor lorem non purus sodales sodales. Nulla nec ultricies nunc. Duis nec est tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Morbi ultricies pretium blandit. Sed iaculis, lectus vitae ultricies rhoncus, nibh enim tristique nibh, vitae imperdiet nisl orci sed eros. Aliquam dictum dolor vitae nulla posuere pulvinar. Duis vehicula placerat quam vitae rhoncus. Sed id risus sit amet elit porta tincidunt non mollis mauris.`,
         relatedblog: [
           {
-            image: "/Blog/image.webp",
+            image: "/Blog/Image.webp",
             category: "Development",
             title: "Lorem Ipsum is simply dummy ",
             link: "#",
             blogIndex: 0,
           },
           {
-            image: "/Blog/image.webp",
+            image: "/Blog/Image.webp",
             category: "Development",
             title: "Lorem Ipsum is simply dummy ",
             link: "#",
             blogIndex: 0,
           },
           {
-            image: "/Blog/image.webp",
+            image: "/Blog/Image.webp",
             category: "Development",
             title: "Lorem Ipsum is simply dummy ",
             link: "#",
             blogIndex: 0,
           },
           {
-            image: "/Blog/image.webp",
+            image: "/Blog/Image.webp",
             category: "Development",
             title: "Lorem Ipsum is simply dummy ",
             link: "#",
@@ -94,3 +94,4 @@ Nunc porttitor eu leo ut luctus. Nunc pulvinar convallis tempus. Phasellus vel m
     ],
   },
 ];
+
