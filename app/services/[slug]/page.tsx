@@ -1,24 +1,22 @@
 import type { ReactNode } from "react";
-import Header from "@/components/Header";
-import Image from "next/image";
+import dynamic from "next/dynamic";
 import { notFound } from "next/navigation";
-import ThemeToggle from "@/components/ThemeToggle";
-import { FiCheckCircle } from "react-icons/fi";
-import Footer from "@/components/Footer";
-import FAQ from "../components/FAQ";
-import Cards from "../components/Cards";
 import Hero from "../components/Hero";
-import WhyChoose from "../components/WhyChoose";
-import Portfolio from "../components/Portfolio";
-import { Testimonials } from "../components/Testimonials";
-import SocialAuditCta from "../components/SocialAuditCta";
-import ContactUs from "../components/ContactUs";
-import PricingPlan from "../components/PricingPlan";
-import CustomPlan from "../../Home/components/CustomPlan";
 import ServiceBody from "../components/ServiceBody";
-import OurProcess from "../components/OurProcess";
 import { services } from "./data";
-import SocialAuditCta2 from "../components/SocialAuditCta2";
+
+const Cards = dynamic(() => import("../components/Cards"));
+const WhyChoose = dynamic(() => import("../components/WhyChoose"));
+const SocialAuditCta2 = dynamic(() => import("../components/SocialAuditCta2"));
+const OurProcess = dynamic(() => import("../components/OurProcess"));
+const Portfolio = dynamic(() => import("../components/Portfolio"));
+const PricingPlan = dynamic(() => import("../components/PricingPlan"));
+const CustomPlan = dynamic(() => import("../../Home/components/CustomPlan"));
+const Testimonials = dynamic(() =>
+  import("../components/Testimonials").then((mod) => mod.Testimonials)
+);
+const FAQ = dynamic(() => import("../components/FAQ"));
+const ContactUs = dynamic(() => import("../components/ContactUs"));
 
 export function slugify(text: string): string {
   return text
