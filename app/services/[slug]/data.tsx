@@ -20733,13 +20733,13 @@ Often, the fastest path to a current, usable brand guide is rather than starting
             </div>
           </>
         ),
-            strategicHeadingText: (
+        strategicHeadingText: (
               <div className="mt-1 mx-auto flex w-full justify-center px-4">
                   <p className="mx-auto max-w-6xl text-sm leading-7 text-[#AAAAAA] sm:text-base">
         We identify where users drop off, hesitate, or lose interest, then fix it with precise adjustments that improve performance.
                   </p>
               </div>
-            ),
+        ),
         strategicCardData: [
           {
             title: "User Journey Analysis",
