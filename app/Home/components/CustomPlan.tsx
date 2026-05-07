@@ -108,7 +108,7 @@ const CustomPlan = ({ data }: CustomPlanProps) => {
   return (
     <>
       <CustomPlanMobile data={data} />
-      <section className="hidden sm:flex w-full justify-center items-center">
+      <section className="hidden sm:flex w-full mb-15 justify-center items-center">
         <div className="flex flex-col lg:flex-row w-[1200px] gap-2 lg:gap-4 items-center">
           {/* Custom Plan Content */}
           <div

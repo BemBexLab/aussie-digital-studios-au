@@ -7,6 +7,7 @@ import ProcessCards from "./ProcessCards";
 
 type OurProcessProps = {
   service: {
+    processEyebrow?: string,
     processHeading?: React.ReactNode,
     processPara?: React.ReactNode,
     processCardData?: Array<{
@@ -56,7 +57,7 @@ const OurProcess = ({ service }: OurProcessProps) => {
             transition={{ duration: 1.2, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.5 }}
           >
-            Our Process
+            {service.processEyebrow || "Our Process"} 
           </motion.p>
           <motion.h2
             className="text-4xl md:text-4xl font-semibold text-white"
