@@ -59,18 +59,18 @@ const Hero = () => {
         {/* Main headings */}
         <div className=" mx-auto z-20 justify-center max-w-7xl flex flex-col px-12 w-full mt-[30px]">
           <div className="justify-center items-center flex flex-col">
-            <span className="text-white text-3xl font-semibold transform -translate-x-165">
+            <span className="text-white text-3xl font-semibold min-[1420px]:transform min-[1420px]:-translate-x-165">
               We help
             </span>
             <motion.span
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.5 }}
-              className="text-white uppercase text-[125px] leading-[0.95] font-semibold tracking-tight whitespace-nowrap"
+              className="text-white uppercase min-[1000px]:text-[90px] min-[1280px]:text-[110px] min-[1450px]:text-[125px] leading-[0.95] font-semibold tracking-tight whitespace-nowrap"
             >
               Australian businesses
             </motion.span>
-            <span className="text-white text-2xl font-medium transform -translate-x-90">
+            <span className="text-white text-2xl font-medium min-[1420px]:transform min-[1420px]:-translate-x-90">
               build websites that actually bring in work.
             </span>
           </div>
