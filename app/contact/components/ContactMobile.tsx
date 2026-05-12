@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { sendContactEmail } from "@/lib/emailService";
@@ -76,7 +78,7 @@ const ContactMobile = () => {
   };
 
   return (
-    <div className="sm:hidden relative w-full mt-12 py-8 px-4 overflow-x-hidden">
+    <div className="relative mt-12 w-full overflow-x-hidden px-4 py-8 md:hidden">
       {/* Main Content */}
       <div className="relative w-full">
         {/* Stacked layout */}

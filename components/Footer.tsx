@@ -46,7 +46,7 @@ const Footer = () => {
                 alt="Logo"
                 width={280}
                 height={170}
-                className="w-[200px] md:w-[280px]"
+                className="h-auto w-[200px] md:w-[280px]"
               />
             </div>
 
@@ -221,7 +221,7 @@ const Footer = () => {
             alt="Aussie Digital Studios"
             width={1900}
             height={1900}
-            className="w-[1300px] mb-4"
+            className="mb-4 h-auto w-[1300px] max-w-full"
           />
           )}
         </div>
