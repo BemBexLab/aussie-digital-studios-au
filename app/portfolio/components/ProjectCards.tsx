@@ -50,8 +50,7 @@ const ProjectCardGrid = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const ts = Date.now();
-        const res = await fetch(`/api/posts?ts=${ts}`, { cache: "no-store" });
+        const res = await fetch("/api/posts");
         const data = await res.json();
         const projectPosts = data.filter(
           (post: Post) => post.acf?.project_image?.url && post.slug

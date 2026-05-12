@@ -141,9 +141,7 @@ export default function PortfolioWall() {
     const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
 
     try {
-      const ts = Date.now();
-      const res = await fetch(`/api/posts?ts=${ts}`, {
-        cache: "no-store",
+      const res = await fetch("/api/posts", {
         signal: controller.signal,
       });
 
@@ -182,9 +180,6 @@ export default function PortfolioWall() {
           return post;
         })
         .filter(Boolean);
-
-      // Wait a moment to ensure everything is cleaned
-      await new Promise((resolve) => setTimeout(resolve, 200));
 
       setPosts(projectPosts);
       setDataReady(true);
@@ -328,17 +323,13 @@ export default function PortfolioWall() {
       return;
     }
 
-    // Show loading state and add delay before navigation
     setIsNavigating(true);
-
-    setTimeout(() => {
-      try {
-        router.push(`/projects/${post.slug}`);
-      } catch (e) {
-        console.error("Navigation error", e);
-        setIsNavigating(false);
-      }
-    }, 200);
+    try {
+      router.push(`/projects/${post.slug}`);
+    } catch (e) {
+      console.error("Navigation error", e);
+      setIsNavigating(false);
+    }
   };
 
   useEffect(() => {

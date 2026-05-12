@@ -1,6 +1,4 @@
-// app/api/posts/route.ts (or wherever this file is)
-export const dynamic = "force-dynamic"; // ensure it's never statically cached
-export const revalidate = 0; // disable ISR for this route
+export const revalidate = 300;
 
 // Helper to clean ALL strings of control characters
 function cleanString(str: string): string {
@@ -48,7 +46,7 @@ export async function GET() {
     while (true) {
       const res = await fetch(
         `https://olive-peafowl-546702.hostingersite.com/wp-json/wp/v2/posts?per_page=100&page=${page}`,
-        { cache: "no-store" } // bypass Next fetch cache to WP
+        { next: { revalidate: 300 } }
       );
 
       if (!res.ok) break;
@@ -65,11 +63,7 @@ export async function GET() {
       status: 200,
       headers: {
         "Content-Type": "application/json",
-        // prevent browser/CDN caching of THIS response
-        "Cache-Control":
-          "no-store, no-cache, must-revalidate, proxy-revalidate",
-        Pragma: "no-cache",
-        Expires: "0",
+        "Cache-Control": "public, s-maxage=300, stale-while-revalidate=600",
       },
     });
   } catch (error) {
