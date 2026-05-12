@@ -389,7 +389,7 @@ export default function PortfolioWall() {
       )}
 
       <section
-        className={`hidden md:block relative mt-25 my-20 max-[1250px]:px-4 ${
+        className={`relative my-20 mt-20 hidden px-4 md:block md:px-6 lg:px-8 ${
           isCompactCategory ? "pb-16" : ""
         }`}
       >
@@ -407,7 +407,7 @@ export default function PortfolioWall() {
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-white text-center font-semibold text-3xl sm:text-4xl md:text-5xl leading-[1.3] mb-20 space-y-2"
+            className="mb-14 text-center text-3xl font-semibold leading-[1.2] text-white md:text-4xl lg:mb-20 lg:text-5xl"
           >
             Proven Result,
             <br />
@@ -416,12 +416,12 @@ export default function PortfolioWall() {
         </div>
 
         {/* Category filter buttons */}
-        <div className="flex flex-wrap justify-center gap-3 mb-8">
+        <div className="mb-8 flex flex-wrap justify-center gap-2.5 md:gap-3">
           {categories.map((cat, i) => (
             <button
               key={i}
               onClick={() => setSelectedCategory(cat)}
-              className={`px-4 py-2 rounded-[8px] border cursor-pointer text-sm transition ${
+              className={`cursor-pointer rounded-[8px] border px-3 py-2 text-xs transition sm:px-4 sm:text-sm ${
                 selectedCategory === cat
                   ? "border-yellow-400 text-yellow-400 bg-yellow-400/10"
                   : "text-gray-400 border-gray-600 hover:border-yellow-400 hover:text-yellow-400"
@@ -473,7 +473,7 @@ export default function PortfolioWall() {
             </div>
           ) : (
             <div
-              className={`grid grid-cols-2 max-[1250px]:grid-cols-1 gap-20 ${
+              className={`grid w-full grid-cols-1 justify-items-center gap-8 lg:grid-cols-2 lg:gap-10 xl:gap-16 ${
                 isCompactCategory ? "mb-8" : ""
               }`}
             >
@@ -515,12 +515,12 @@ export default function PortfolioWall() {
                     key={post.id}
                     className={
                       isCompact
-                        ? "w-[380px] h-[370px] relative group"
+                        ? "group relative w-full max-w-[380px]"
                         : isFigma
-                          ? "w-[430px] relative group"
+                          ? "group relative w-full max-w-[430px]"
                           : isFlexible
-                            ? "relative group"
-                            : "w-[480px] h-[460px] relative group"
+                            ? "group relative w-full max-w-[430px]"
+                            : "group relative w-full max-w-[480px]"
                     }
                     role="link"
                     tabIndex={0}
@@ -533,7 +533,7 @@ export default function PortfolioWall() {
                     }}
                   >
                     <div
-                      className="rounded-lg p-4 overflow-hidden shadow-lg transition-transform duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 flex flex-col"
+                      className="flex h-full flex-col overflow-hidden rounded-lg p-3 shadow-lg transition-transform duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 md:p-4"
                       style={{
                         borderRadius: "30px",
                         background: "transparent",
@@ -544,10 +544,10 @@ export default function PortfolioWall() {
                           isFigma
                             ? "overflow-hidden rounded-md"
                             : isCompact
-                              ? "overflow-hidden rounded-md h-[350px]"
+                              ? "overflow-hidden rounded-md h-[280px] md:h-[320px] lg:h-[350px]"
                               : isFlexible
                                 ? "overflow-hidden rounded-md"
-                                : "overflow-hidden rounded-md h-[350px]"
+                                : "overflow-hidden rounded-md h-[300px] md:h-[330px] lg:h-[350px]"
                         }
                         style={
                           isFigma
@@ -594,8 +594,8 @@ export default function PortfolioWall() {
                             alt={title}
                             className={
                               isFlexible
-                                ? "w-auto h-auto object-contain transform transition-transform duration-500 ease-out group-hover:scale-105 will-change-transform "
-                                : "w-full h-full object-cover transform transition-transform duration-500 ease-out group-hover:scale-105 will-change-transform "
+                                ? "h-auto w-full object-contain transition-transform duration-500 ease-out will-change-transform group-hover:scale-105"
+                                : "h-full w-full object-cover transition-transform duration-500 ease-out will-change-transform group-hover:scale-105"
                             }
                             onError={(e) => {
                               const target =
@@ -616,7 +616,7 @@ export default function PortfolioWall() {
                       <div className="mt-2 flex-1 flex flex-col justify-start overflow-hidden">
                         {categoryLabel?.toLowerCase() !== "print" && (
                           <h2
-                            className="text-[#3A6EA5] text-lg font-semibold mt-2"
+                            className="mt-2 text-base font-semibold text-[#3A6EA5] md:text-lg"
                             style={{
                               display: "-webkit-box",
                               WebkitLineClamp: 2,
@@ -689,7 +689,7 @@ export default function PortfolioWall() {
       )}
 
       {/* Mobile section */}
-      <section className="md:hidden block w-full relative mt-8 mb-10 px-4">
+      <section className="relative mb-10 mt-8 block w-full px-4 md:hidden sm:px-5">
         <div ref={mobileHeadingRef}>
           <motion.p
             initial={{ opacity: 0 }}
@@ -703,7 +703,7 @@ export default function PortfolioWall() {
             initial={{ opacity: 0 }}
             animate={isMobileInView ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-white text-center font-semibold text-2xl leading-tight mb-6"
+            className="mb-6 text-center text-2xl font-semibold leading-tight text-white sm:text-3xl"
           >
             Proven Result,
             <br />
@@ -711,12 +711,12 @@ export default function PortfolioWall() {
           </motion.h2>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-2 mb-6 pb-2">
+        <div className="mb-6 flex flex-wrap justify-center gap-2 pb-2">
           {categories.map((cat, i) => (
             <button
               key={i}
               onClick={() => setSelectedCategory(cat)}
-              className={`px-4 py-2 rounded-[8px] border cursor-pointer text-sm transition ${
+              className={`cursor-pointer rounded-[8px] border px-3 py-2 text-xs transition sm:px-4 sm:text-sm ${
                 selectedCategory === cat
                   ? "border-yellow-400 text-yellow-400 bg-yellow-400/10"
                   : "text-gray-400 border-gray-600 hover:border-yellow-400 hover:text-yellow-400"
@@ -766,7 +766,7 @@ export default function PortfolioWall() {
               </button>
             </div>
           ) : (
-            <div className="space-y-4">
+            <div className="space-y-4 sm:space-y-5">
               {filteredPosts.slice(0, itemsToShow).map((post: Post) => {
                 const image =
                   post.acf?.project_image?.url || "/Home/Rectangle_33.webp";
@@ -774,6 +774,15 @@ export default function PortfolioWall() {
                 const safeImageSrc = normalizeSrc(image);
                 const cat = post.acf?.catogary;
                 const categoryLabel = Array.isArray(cat) ? cat[0] : cat || "";
+                const isFigma = isFigmaCard(post);
+                const isCompact = ["logo design", "branding", "illustration"].includes(
+                  categoryLabel.toLowerCase(),
+                );
+                const mobileCardHeight = isFigma
+                  ? Math.min(FIGMA_VISIBLE_HEIGHT, 320)
+                  : isCompact
+                    ? 220
+                    : 192;
 
                 return (
                   <div
@@ -795,11 +804,18 @@ export default function PortfolioWall() {
                         background: "transparent",
                       }}
                     >
-                      <div className="overflow-hidden rounded-lg h-48 w-full">
+                      <div
+                        className="w-full overflow-hidden rounded-lg"
+                        style={{ height: `${mobileCardHeight}px` }}
+                      >
                         <img
                           src={safeImageSrc}
                           alt={title}
-                          className="w-full h-full object-cover transform transition-transform duration-500 ease-out group-active:scale-105 will-change-transform rounded-lg"
+                          className={`rounded-lg transition-transform duration-500 ease-out will-change-transform group-active:scale-105 ${
+                            isFigma
+                              ? "h-auto w-full object-contain"
+                              : "h-full w-full object-cover"
+                          }`}
                           onError={(e) => {
                             const target = e.currentTarget as HTMLImageElement;
                             if (
@@ -814,7 +830,7 @@ export default function PortfolioWall() {
                       </div>
 
                       <div className="mt-2 flex-1 flex flex-col justify-start overflow-hidden">
-                        <h3 className="text-[#3A6EA5] text-base font-semibold mt-2 line-clamp-2">
+                        <h3 className="mt-2 line-clamp-2 text-base font-semibold text-[#3A6EA5] sm:text-lg">
                           {title}
                         </h3>
                         <div className="flex gap-2 flex-wrap mt-1">

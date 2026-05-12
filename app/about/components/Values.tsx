@@ -68,13 +68,13 @@ const Values = () => {
       <div className="sm:hidden">
         <ValuesMobile />
       </div>
-      <div className="hidden sm:flex flex-col my-30 md:flex-row md:mt-8 mx-auto w-full max-w-7xl px-4 sm:px-6 md:px-10">
+      <div className="mx-auto hidden w-full max-w-7xl flex-col px-4 py-16 sm:flex sm:px-6 md:flex-row md:items-start md:gap-8 md:px-8 lg:gap-10 lg:px-10 xl:gap-14">
       {/* Left Content */}
-      <div className="flex flex-col w-full">
+      <div className="flex w-full flex-col">
         {/* Responsive (sm to md): show cards and image below */}
-        <div ref={mobileHeadingRef} className="md:hidden px-4">
+        <div ref={mobileHeadingRef} className="px-2 md:hidden">
           <motion.p
-            className="text-[#4C8C74] my-20 text-lg font-medium mb-4"
+            className="mb-4 mt-8 text-lg font-medium text-[#4C8C74] sm:mt-10"
             initial={{ opacity: 0, y: 8 }}
             animate={isMobileHeadingInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 8 }}
             transition={{ duration: 0.6 }}
@@ -82,7 +82,7 @@ const Values = () => {
             Our Values
           </motion.p>
           <motion.h2
-            className="text-white text-5xl mb-5 font-bold"
+            className="mb-5 text-3xl font-bold text-white sm:text-4xl"
             initial={{ opacity: 0, y: 10 }}
             animate={isMobileHeadingInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
             transition={{ duration: 0.6, delay: 0.05 }}
@@ -191,22 +191,22 @@ const Values = () => {
             </div>
 
             {/* Mobile-only image: centered */}
-            <div className="flex justify-center mt-32">
+            <div className="mt-16 flex justify-center sm:mt-20">
               <Image 
                 src="/About/Rectangle 43.webp"
                 alt="Values Illustration"
                 width={500}
                 height={200}
-                className="w-full max-w-md h-auto" // responsive, no overflow
+                className="h-auto w-full max-w-md"
               />
             </div>
           </div>
         </div>
 
         {/* Desktop: original layout (unchanged for 1250px+, responsive below) */}
-        <div ref={desktopHeadingRef} className="hidden md:block max-w-7xl mx-3">
+        <div ref={desktopHeadingRef} className="hidden w-full md:block">
           <motion.p
-            className="text-[#4C8C74] my-20 text-lg font-medium mb-4"
+            className="mb-4 mt-8 text-lg font-medium text-[#4C8C74] lg:mt-12 xl:mt-16"
             initial={{ opacity: 0, y: 8 }}
             animate={isDesktopHeadingInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 8 }}
             transition={{ duration: 0.6 }}
@@ -214,7 +214,7 @@ const Values = () => {
             Our Values
           </motion.p>
           <motion.h2
-            className="text-white text-5xl mb-5 font-bold"
+            className="mb-5 text-4xl font-bold text-white lg:text-5xl"
             initial={{ opacity: 0, y: 10 }}
             animate={isDesktopHeadingInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
             transition={{ duration: 0.6, delay: 0.05 }}
@@ -223,10 +223,10 @@ const Values = () => {
           </motion.h2>
 
           {/* First Row */}
-          <div className="flex flex-wrap mt-3 gap-3" style={{ justifyContent: "flex-start" }}>
+          <div className="mt-3 grid grid-cols-1 gap-3 lg:grid-cols-2" style={{ justifyContent: "flex-start" }}>
 
             {/* Card 1 */}
-            <div className="group relative rounded-2xl w-[280px] border border-white/10 p-6 transition overflow-hidden" data-values-card style={{ backgroundImage: backgroundImage, backgroundSize: "cover", backgroundPosition: "center", backdropFilter: "blur(10px)" }}>
+            <div className="group relative w-full rounded-2xl border border-white/10 p-6 transition overflow-hidden xl:max-w-[280px]" data-values-card style={{ backgroundImage: backgroundImage, backgroundSize: "cover", backgroundPosition: "center", backdropFilter: "blur(10px)" }}>
               {/* ... same as before ... */}
               <div className="flex flex-col">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 50 50" fill="none">
@@ -242,7 +242,7 @@ const Values = () => {
             </div>
 
             {/* Card 2 */}
-            <div className="group relative rounded-2xl w-[280px] border border-white/10 p-6 transition overflow-hidden" data-values-card style={{ backgroundImage: backgroundImage, backgroundSize: "cover", backgroundPosition: "center", backdropFilter: "blur(10px)" }}>
+            <div className="group relative w-full rounded-2xl border border-white/10 p-6 transition overflow-hidden xl:max-w-[280px]" data-values-card style={{ backgroundImage: backgroundImage, backgroundSize: "cover", backgroundPosition: "center", backdropFilter: "blur(10px)" }}>
               {/* ... same as before ... */}
               <div className="flex flex-col">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 50 50" fill="none">
@@ -262,10 +262,10 @@ const Values = () => {
           </div>
 
           {/* Second Row */}
-          <div className="flex flex-wrap mt-3 gap-3" style={{ justifyContent: "flex-start" }}>
+          <div className="mt-3 grid grid-cols-1 gap-3 lg:grid-cols-2" style={{ justifyContent: "flex-start" }}>
 
             {/* Card 3 */}
-            <div className="group relative rounded-2xl w-[300px] border border-white/10 p-6 transition overflow-hidden" data-values-card style={{ backgroundImage: backgroundImage, backgroundSize: "cover", backgroundPosition: "center", backdropFilter: "blur(10px)" }}>
+            <div className="group relative w-full rounded-2xl border border-white/10 p-6 transition overflow-hidden xl:max-w-[300px]" data-values-card style={{ backgroundImage: backgroundImage, backgroundSize: "cover", backgroundPosition: "center", backdropFilter: "blur(10px)" }}>
               {/* ... same as before ... */}
               <div className="flex flex-col">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 50 50" fill="none">
@@ -280,7 +280,7 @@ const Values = () => {
             </div>
 
             {/* Card 4 */}
-            <div className="group relative rounded-2xl w-[300px] border border-white/10 p-6 transition overflow-hidden" data-values-card style={{ backgroundImage: backgroundImage, backgroundSize: "cover", backgroundPosition: "center", backdropFilter: "blur(10px)" }}>
+            <div className="group relative w-full rounded-2xl border border-white/10 p-6 transition overflow-hidden xl:max-w-[300px]" data-values-card style={{ backgroundImage: backgroundImage, backgroundSize: "cover", backgroundPosition: "center", backdropFilter: "blur(10px)" }}>
               {/* ... same as before ... */}
               <div className="flex flex-col">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 50 50" fill="none">
@@ -305,7 +305,7 @@ const Values = () => {
         alt="Values Illustration"
         width={800}
         height={700}
-        className="hidden md:block ml-9 mt-15 max-h-[600px] w-[500px] flex-shrink-0"
+        className="mt-16 hidden h-auto w-full max-w-[320px] flex-shrink-0 self-center md:block lg:mt-24 lg:max-w-[420px] xl:max-w-[500px]"
       />
     </div>
     </>

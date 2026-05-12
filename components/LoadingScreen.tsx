@@ -1,14 +1,23 @@
-import React from 'react'
+"use client";
 
-type LoadingScreenProps = {
-  onComplete?: () => void
-}
+import React from "react";
 
-const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
+const LoadingScreen = () => {
+  const [isVisible, setIsVisible] = React.useState(true);
+
+  React.useEffect(() => {
+    const fallback = window.setTimeout(() => setIsVisible(false), 3200);
+    return () => window.clearTimeout(fallback);
+  }, []);
+
+  if (!isVisible) {
+    return null;
+  }
+
   return (
     <section
-      className='loading-screen fixed inset-0 z-[9999] bg-black flex items-center justify-center'
-      onAnimationEnd={onComplete}
+      className="loading-screen fixed inset-0 z-[9999] flex items-center justify-center bg-black"
+      onAnimationEnd={() => setIsVisible(false)}
     >
       <div
         style={{
@@ -18,9 +27,9 @@ const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
           width: "20%",
           height: "20%",
         }}
-      ></div>
+      />
     </section>
-  )
-}
+  );
+};
 
-export default LoadingScreen
+export default LoadingScreen;

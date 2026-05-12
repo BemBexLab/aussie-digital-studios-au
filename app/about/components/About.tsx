@@ -185,7 +185,7 @@ const About = () => {
                 className="lg:col-span-2 w-full h-auto rounded-lg bg-[#212423] shadow-lg p-6"
                 data-about-stat-card
                 style={{
-                  backgroundImage: "url('/about/About_Section_img_02.webp')",
+                  backgroundImage: "url('/About/About_Section_img_02.webp')",
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}

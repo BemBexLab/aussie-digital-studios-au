@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import BrandLevelUpMobile from "./BrandLevelUpMobile";
@@ -32,31 +31,31 @@ const BrandLevelUp = () => {
     <div ref={wrapperRef}>
       <BrandLevelUpMobile />
       <div
-        className="hidden sm:flex flex-col bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white h-90 bg-cover bg-center justify-center items-center"
+        className="hidden bg-cover bg-center px-4 py-16 text-white sm:flex sm:px-6 lg:px-8 xl:py-20"
         data-brandlevelup-bg
         style={{ backgroundImage: "url(/Home/CTA.svg)" }}
       >
-        <div className="flex flex-col lg:flex-row w-full max-w-[1200px] flex-wrap">
+        <div className="mx-auto flex w-full max-w-[1200px] flex-col items-center gap-10 lg:flex-row lg:items-center lg:justify-between xl:gap-12">
           {/* Text Part */}
-          <div className="w-full lg:w-[50%] mt-20 mr-10 px-3 md:px-10 py-8 md:py-0 transform translate-y-28">
+          <div className="w-full max-w-[38rem] px-1 sm:px-3 md:px-6 lg:w-[48%] lg:px-0">
             <motion.h1
               initial={{ opacity: 0 }}
               animate={isInView ? { opacity: 1 } : { opacity: 0 }}
               transition={{ duration: 0.9, ease: "easeInOut" }}
-              className="text-5xl sm:text-5xl font-semibold text-white"
+              className="text-4xl font-semibold leading-tight text-white md:text-5xl xl:text-[3.25rem]"
             >
               Ready to <span className="text-yellow-400">level up</span> your
               brand?
             </motion.h1>
-            <p className="mt-4 text-lg sm:text-xl">
+            <p className="mt-4 max-w-[30rem] text-base text-white/85 md:text-lg xl:text-xl">
               Let's create something modern, simple, and effective.
             </p>
 
             {/* Button */}
-            <div className="flex flex-row mt-4">
+            <div className="mt-5 flex flex-row">
               <button
                 onClick={() => router.push("/contact")}
-                className="justify-center mt-4 px-3 w-[190px] h-[45px] text-sm bg-teal-500 text-white rounded-full hover:bg-blue-400 transition-all inline-flex items-center group flex flex-row"
+                className="group mt-2 inline-flex h-[45px] w-full max-w-[220px] items-center justify-center rounded-full bg-teal-500 px-4 text-sm text-white transition-all hover:bg-blue-400 sm:w-[190px]"
               >
                 <span>Book a Strategy Call</span>
                 <span className="ml-3 relative w-6 h-6 flex items-center justify-center">
@@ -95,11 +94,9 @@ const BrandLevelUp = () => {
 
           {/* Image Part */}
           <div
-            className="w-full lg:w-[50%] transform -translate-y-37 flex justify-center items-center h-[300px] mx-auto lg:mr-12 rounded-lg"
+            className="mx-auto flex h-[260px] w-full items-center justify-center rounded-lg bg-cover bg-center sm:h-[300px] md:h-[340px] lg:mx-0 lg:h-[320px] lg:w-[46%] xl:h-[360px]"
             style={{
               backgroundImage: "url(/Home/Rectangle_1905.webp)",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
             }}
           >
             {/* Green Elipse */}
@@ -109,7 +106,7 @@ const BrandLevelUp = () => {
               height="130"
               viewBox="0 0 201 204"
               fill="none"
-              className="flex justify-center items-center"
+              className="flex h-[96px] w-[96px] items-center justify-center sm:h-[120px] sm:w-[120px] xl:h-[130px] xl:w-[150px]"
             >
               <g filter="url(#filter0_dg_1087_1656)">
                 <circle cx="100.442" cy="100.442" r="94.6417" fill="#4C8C74" />

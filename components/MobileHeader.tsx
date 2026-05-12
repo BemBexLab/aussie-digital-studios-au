@@ -34,7 +34,7 @@ const MobileHeader = () => {
 
   return (
     <>
-      <header className="fixed top-0 w-full z-[100] md:hidden bg-black backdrop-blur-sm transition-colors">
+      <header className="fixed top-0 w-full z-[100] md:hidden bg-black/5 backdrop-blur-sm transition-colors">
       <div className="flex items-center justify-between px-4 py-3 text-white">
         {/* Logo */}
         <div className="flex items-center">
@@ -80,7 +80,7 @@ const MobileHeader = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="bg-black border-gray-700 text-white backdrop-blur-sm pb-4 border-t">
+        <div className="bg-black/10 border-gray-700 text-white backdrop-blur-sm pb-4 border-t">
           <nav className="flex flex-col space-y-2 px-4 py-4">
             {['Home', 'About'].map((item) => {
               const href = item === 'Home' ? '/' : `/${item.toLowerCase()}`;

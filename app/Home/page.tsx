@@ -1,20 +1,19 @@
-import Header from "@/components/Header";
 import React from "react";
-// import Hero from "./components/Hero_old";
+import dynamic from "next/dynamic";
 import AboutUs from "./components/AboutUs";
 import Services from "./components/Services";
-import PortfolioSection from "./components/PortfolioSection";
-import PricingPlan from "./components/PricingPlan";
-import BrandLevelUp from "./components/BrandLevelUp";
-import { Testimonials } from "./components/Testimonials";
-import Footer from "@/components/Footer";
-
-import Image from "next/image";
 import Hero from "./components/Hero";
 import LogoSlider from "./components/LogoSlider";
-import WhyChooseUs from "./components/WhyChooseUs";
-import CustomPlan from "./components/CustomPlan";
-import ContactUs from "./components/ContactUs";
+
+const PortfolioSection = dynamic(() => import("./components/PortfolioSection"));
+const WhyChooseUs = dynamic(() => import("./components/WhyChooseUs"));
+const BrandLevelUp = dynamic(() => import("./components/BrandLevelUp"));
+const PricingPlan = dynamic(() => import("./components/PricingPlan"));
+const CustomPlan = dynamic(() => import("./components/CustomPlan"));
+const Testimonials = dynamic(() =>
+  import("./components/Testimonials").then((mod) => mod.Testimonials)
+);
+const ContactUs = dynamic(() => import("./components/ContactUs"));
 
 const HomePage = () => {
   return (

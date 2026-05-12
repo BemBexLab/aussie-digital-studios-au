@@ -27,56 +27,50 @@ const Mission = () => {
 
   return (
     <>
-      <div className="sm:hidden">
+      <div className="md:hidden">
         <MissionMobile />
       </div>
       {/* Desktop: unchanged (md and up), responsive below 1250px */}
-      <div className="hidden md:flex flex-wrap justify-center items-center min-h-[500px] lg:h-[500px] overflow-hidden gap-6">
-        <div className="flex flex-wrap w-full lg:flex-nowrap justify-center items-center">
-          <div className="w-full lg:w-auto flex gap-6 justify-center flex-wrap lg:flex-nowrap">
-            <div className="w-50 h-72">
+      <div className="hidden overflow-hidden px-4 py-12 md:flex md:justify-center md:px-6 lg:px-8 xl:py-16">
+        <div className="flex w-full max-w-7xl flex-col items-center gap-10 lg:flex-row lg:items-center lg:justify-center lg:gap-12">
+          <div className="flex w-full flex-wrap justify-center gap-4 md:gap-5 lg:w-auto lg:flex-nowrap lg:gap-6">
+            <div className="relative h-52 w-[9.5rem] sm:w-[10.5rem] md:h-64 md:w-[11rem] lg:h-72 lg:w-[12.5rem]">
               <Image
-                src="/about/Rectangle_44.webp"
+                src="/About/Rectangle_44.webp"
                 alt="Mission Image"
-                width={288}
-                height={288}
-                className="w-full h-full object-cover rounded-[18px]"
+                fill
+                sizes="(max-width: 767px) 152px, (max-width: 1023px) 176px, 200px"
+                className="rounded-[18px] object-cover"
               />
             </div>
 
-            <div className="w-50 h-72 lg:-translate-y-10 transform drop-shadow-2xl">
+            <div className="relative h-52 w-[9.5rem] drop-shadow-2xl sm:w-[10.5rem] md:h-64 md:w-[11rem] lg:h-72 lg:w-[12.5rem] lg:-translate-y-10">
               <Image
-                src="/about/Rectangle_45.webp"
+                src="/About/Rectangle_45.webp"
                 alt="Mission Image"
-                width={288}
-                height={288}
-                className="w-full h-full object-cover rounded-[18px]"
+                fill
+                sizes="(max-width: 767px) 152px, (max-width: 1023px) 176px, 200px"
+                className="rounded-[18px] object-cover"
               />
             </div>
 
-            <div className="relative w-50 h-72 overflow-visible">
+            <div className="relative h-52 w-[9.5rem] overflow-visible sm:w-[10.5rem] md:h-64 md:w-[11rem] lg:h-72 lg:w-[12.5rem]">
               <Image
-                src="/about/Rectangle_46.webp"
+                src="/About/Rectangle_46.webp"
                 alt="Mission Image"
-                width={288}
-                height={288}
-                className="w-full h-full object-cover rounded-[18px]"
-              />
-              <Image
-                src="/Geometric_Shape_Silver.webp"
-                alt="Geometric Shape"
-                width={220}
-                height={220}
-                className="absolute bottom-0 right-0 w-48 h-48 lg:translate-x-24 lg:translate-y-24 z-20 opacity-95 pointer-events-none drop-shadow-2xl"
+                fill
+                sizes="(max-width: 767px) 152px, (max-width: 1023px) 176px, 200px"
+                className="rounded-[18px] object-cover"
               />
             </div>
           </div>
 
-          <div className="hidden lg:block w-15"></div>
-
-          <div ref={contentRef} className="flex flex-col w-full lg:w-120 lg:h-72 justify-center px-4 sm:px-6 md:px-10">
+          <div
+            ref={contentRef}
+            className="flex w-full max-w-[42rem] flex-col justify-center px-2 text-center md:px-4 lg:w-[34rem] lg:max-w-none lg:px-0 lg:text-left"
+          >
             <motion.h2
-              className="text-4xl font-bold mb-6"
+              className="mb-5 text-3xl font-bold md:text-4xl"
               initial={{ opacity: 0, y: 10 }}
               animate={isContentInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
               transition={{ duration: 0.6 }}
@@ -84,7 +78,7 @@ const Mission = () => {
               Our Mission
             </motion.h2>
             <motion.p
-              className="text-[#AAAAAA] font-normal"
+              className="font-normal leading-relaxed text-[#AAAAAA] md:text-base"
               data-text-sm-light
               initial={{ opacity: 0, y: 8 }}
               animate={isContentInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 8 }}

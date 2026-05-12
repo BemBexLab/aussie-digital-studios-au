@@ -116,6 +116,7 @@ const Header = () => {
                 width={140}
                 height={56}
                 className="h-14 w-auto"
+                style={{ width: "auto" }}
                 priority
                 unoptimized
                 onError={() => setLogoFallback(true)}
@@ -164,7 +165,7 @@ const Header = () => {
         </div>
 
         {/* Right side: Get In Touch button */}
-        <button className="hidden md:flex items-center space-x-1 text-sm text-white hover:text-green-400 transition-colors" onClick={() => { window.location.href = '/contact'; }}>
+        <button className="hidden md:flex items-center space-x-1 text-xs lg:text-sm text-white hover:text-green-400 transition-colors whitespace-nowrap px-2 lg:px-0" onClick={() => { window.location.href = '/contact'; }}>
           <span>Get In Touch</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
