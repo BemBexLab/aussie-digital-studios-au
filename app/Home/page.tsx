@@ -4,6 +4,7 @@ import AboutUs from "./components/AboutUs";
 import Services from "./components/Services";
 import Hero from "./components/Hero";
 import LogoSlider from "./components/LogoSlider";
+import { getProjectPosts } from "@/lib/projectPosts";
 
 const PortfolioSection = dynamic(() => import("./components/PortfolioSection"));
 const WhyChooseUs = dynamic(() => import("./components/WhyChooseUs"));
@@ -15,7 +16,9 @@ const Testimonials = dynamic(() =>
 );
 const ContactUs = dynamic(() => import("./components/ContactUs"));
 
-const HomePage = () => {
+const HomePage = async () => {
+  const initialPosts = await getProjectPosts();
+
   return (
     <div className="overflow-hidden relative">
       <Hero />
@@ -29,7 +32,7 @@ const HomePage = () => {
         width={1920}
         height={1080}
       /> */}
-      <PortfolioSection />
+      <PortfolioSection initialPosts={initialPosts} />
       <WhyChooseUs />
       <BrandLevelUp />
       <PricingPlan />

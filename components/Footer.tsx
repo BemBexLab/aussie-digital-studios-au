@@ -3,33 +3,14 @@
 import React from "react";
 import Image from "next/image";
 import FooterMobile from "./FooterMobile";
+import { useThemeMode } from "@/lib/useThemeMode";
 
 const Footer = () => {
-  const [isDarkMode, setIsDarkMode] = React.useState(true);
+  const { isDarkMode } = useThemeMode();
   const [isClient, setIsClient] = React.useState(false);
 
   React.useEffect(() => {
     setIsClient(true);
-    const theme = localStorage.getItem("ads_theme");
-    setIsDarkMode(theme !== "light");
-
-    const handleThemeChange = () => {
-      const theme = localStorage.getItem("ads_theme");
-      setIsDarkMode(theme !== "light");
-    };
-
-    const observer = new MutationObserver(handleThemeChange);
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ["class"],
-    });
-
-    window.addEventListener("storage", handleThemeChange);
-
-    return () => {
-      observer.disconnect();
-      window.removeEventListener("storage", handleThemeChange);
-    };
   }, []);
 
   return (

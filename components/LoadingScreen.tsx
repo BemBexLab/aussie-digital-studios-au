@@ -6,7 +6,7 @@ const LoadingScreen = () => {
   const [isVisible, setIsVisible] = React.useState(true);
 
   React.useEffect(() => {
-    const fallback = window.setTimeout(() => setIsVisible(false), 3200);
+    const fallback = window.setTimeout(() => setIsVisible(false), 1200);
     return () => window.clearTimeout(fallback);
   }, []);
 

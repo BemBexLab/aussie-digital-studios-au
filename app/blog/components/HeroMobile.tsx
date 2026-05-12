@@ -40,24 +40,6 @@ const HeroMobile = ({ H, B }: HeroMobileProps) => {
         backgroundColor: "#1F1F1F",
       }}
     >
-      {/* Clouds Video Overlay */}
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        controlsList="nodownload nofullscreen"
-        disablePictureInPicture
-        className="absolute inset-0 w-full h-full object-cover hero-video-overlay pointer-events-none"
-        style={{
-          mixBlendMode: "overlay",
-          filter: "brightness(2) contrast(1.1)",
-        }}
-      >
-        <source src="/Clouds.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-
       {/* Content Wrapper */}
       <div className="flex flex-col items-center justify-end w-full relative z-10 px-4 pb-4">
         {/* ThemeToggle */}

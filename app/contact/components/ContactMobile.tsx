@@ -3,9 +3,10 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { sendContactEmail } from "@/lib/emailService";
+import { useThemeMode } from "@/lib/useThemeMode";
 
 const ContactMobile = () => {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const { isDarkMode } = useThemeMode();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -18,26 +19,6 @@ const ContactMobile = () => {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
   const [isSuccess, setIsSuccess] = useState(false);
-
-  useEffect(() => {
-    const theme = localStorage.getItem("ads_theme");
-    setIsDarkMode(theme !== "light");
-
-    const handleThemeChange = () => {
-      const theme = localStorage.getItem("ads_theme");
-      setIsDarkMode(theme !== "light");
-    };
-
-    const observer = new MutationObserver(handleThemeChange);
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
-
-    window.addEventListener("storage", handleThemeChange);
-
-    return () => {
-      observer.disconnect();
-      window.removeEventListener("storage", handleThemeChange);
-    };
-  }, []);
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>

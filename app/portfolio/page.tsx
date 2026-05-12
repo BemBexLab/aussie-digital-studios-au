@@ -2,8 +2,11 @@ import Image from "next/image";
 import Hero from "@/components/Hero";
 import ProjectCardGrid from "./components/ProjectCards";
 import PortfolioSection from "../Home/components/PortfolioSection";
+import { getProjectPosts } from "@/lib/projectPosts";
 
-const PortfolioPage = () => {
+const PortfolioPage = async () => {
+  const initialPosts = await getProjectPosts();
+
   return (
     <div>
       <Hero H="portfolio" />
@@ -17,7 +20,7 @@ const PortfolioPage = () => {
           className="relative z-10 bottom-[-103px] right-0 md:block"
         />
       </div> */}
-      <PortfolioSection />
+      <PortfolioSection initialPosts={initialPosts} />
     </div>
   );
 };

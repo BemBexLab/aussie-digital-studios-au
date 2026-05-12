@@ -55,7 +55,7 @@ const BrandLevelUp = () => {
             <div className="mt-5 flex flex-row">
               <button
                 onClick={() => router.push("/contact")}
-                className="group mt-2 inline-flex h-[45px] w-full max-w-[220px] items-center justify-center rounded-full bg-teal-500 px-4 text-sm text-white transition-all hover:bg-blue-400 sm:w-[190px]"
+                className="group mt-2 inline-flex h-[45px] w-full max-w-[320px] items-center justify-center rounded-full bg-teal-500 px-4 text-sm text-white transition-all hover:bg-blue-400 sm:w-[195px]"
               >
                 <span>Book a Strategy Call</span>
                 <span className="ml-3 relative w-6 h-6 flex items-center justify-center">

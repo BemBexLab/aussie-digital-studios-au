@@ -6,6 +6,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { motion } from "motion/react";
 import ContactUsSm from "./ContactUsSm";
 import { sendContactEmail } from "@/lib/emailService";
+import { useThemeMode } from "@/lib/useThemeMode";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -17,36 +18,12 @@ const ContactUs = () => {
     subject: "",
     detail: "",
   });
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const { isDarkMode } = useThemeMode();
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
   const [isSuccess, setIsSuccess] = useState(false);
   const headingRef = useRef<HTMLDivElement | null>(null);
   const [isHeadingInView, setIsHeadingInView] = useState(false);
-
-  useEffect(() => {
-    // Initial theme detection
-    const theme = localStorage.getItem("ads_theme");
-    setIsDarkMode(theme !== "light");
-
-    // Listen for theme changes via document class mutations
-    const handleThemeChange = () => {
-      const theme = localStorage.getItem("ads_theme");
-      setIsDarkMode(theme !== "light");
-    };
-
-    // Watch for class changes on document element
-    const observer = new MutationObserver(handleThemeChange);
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
-
-    // Also listen to storage changes (for cross-tab updates)
-    window.addEventListener("storage", handleThemeChange);
-
-    return () => {
-      observer.disconnect();
-      window.removeEventListener("storage", handleThemeChange);
-    };
-  }, []);
 
   React.useEffect(() => {
     const el = headingRef.current;

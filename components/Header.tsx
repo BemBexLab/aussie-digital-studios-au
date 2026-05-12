@@ -7,11 +7,12 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import ServicesDropdown from "./ServicesDropdown";
 import MobileHeader from "./MobileHeader";
+import { useThemeMode } from "@/lib/useThemeMode";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [logoFallback, setLogoFallback] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const { isDarkMode } = useThemeMode();
   const pathname = usePathname();
   const currentPath = pathname ?? "";
   const [hash, setHash] = useState("");
@@ -19,28 +20,6 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const lastScrollY = useRef(0);
   const ticking = useRef(false);
-
-  useEffect(() => {
-    // Detect initial theme
-    const theme = localStorage.getItem("ads_theme");
-    setIsDarkMode(theme !== "light");
-
-    // Listen for theme changes
-    const handleThemeChange = () => {
-      const theme = localStorage.getItem("ads_theme");
-      setIsDarkMode(theme !== "light");
-    };
-
-    const observer = new MutationObserver(handleThemeChange);
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
-
-    window.addEventListener("storage", handleThemeChange);
-
-    return () => {
-      observer.disconnect();
-      window.removeEventListener("storage", handleThemeChange);
-    };
-  }, []);
 
   useEffect(() => {
     setHash(window.location.hash || "");
@@ -118,7 +97,6 @@ const Header = () => {
                 className="h-14 w-auto"
                 style={{ width: "auto" }}
                 priority
-                unoptimized
                 onError={() => setLogoFallback(true)}
               />
             ) : (

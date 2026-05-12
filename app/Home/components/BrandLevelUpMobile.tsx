@@ -2,30 +2,11 @@
 
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import { useThemeMode } from "@/lib/useThemeMode";
 
 const BrandLevelUpMobile = () => {
   const router = useRouter();
-  const [isDarkMode, setIsDarkMode] = useState(true);
-
-  useEffect(() => {
-    const theme = localStorage.getItem("ads_theme");
-    setIsDarkMode(theme !== "light");
-
-    const handleThemeChange = () => {
-      const theme = localStorage.getItem("ads_theme");
-      setIsDarkMode(theme !== "light");
-    };
-
-    const observer = new MutationObserver(handleThemeChange);
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
-
-    window.addEventListener("storage", handleThemeChange);
-
-    return () => {
-      observer.disconnect();
-      window.removeEventListener("storage", handleThemeChange);
-    };
-  }, []);
+  const { isDarkMode } = useThemeMode();
 
   return (
     <div

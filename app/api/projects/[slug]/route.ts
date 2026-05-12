@@ -1,4 +1,4 @@
-// app/api/posts/route.ts
+export const revalidate = 300;
 
 // URL cleaning function
 const cleanUrl = (url: string): string => {
@@ -57,7 +57,7 @@ export async function GET(request: Request) {
     const wpRes = await fetch(
       'https://olive-peafowl-546702.hostingersite.com/index.php/wp-json/wp/v2/projects?per_page=100',
       {
-        cache: 'no-store', // Prevent caching issues
+        next: { revalidate: 300 },
       }
     );
 
@@ -73,7 +73,7 @@ export async function GET(request: Request) {
     return new Response(JSON.stringify(cleanedData), {
       headers: {
         'Content-Type': 'application/json',
-        'Cache-Control': 'no-store, max-age=0',
+        'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600',
       },
     });
   } catch (error) {

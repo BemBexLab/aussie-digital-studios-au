@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import WhyChooseUsMobile from "./WhyChooseUsMobile";
 import { motion } from "motion/react";
+import { useThemeMode } from "@/lib/useThemeMode";
 
 const cardData = [
   {
@@ -26,37 +27,10 @@ const cardData = [
 
 const WhyChooseUs = () => {
   const router = useRouter();
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const { isDarkMode } = useThemeMode();
   const wrapperRef = useRef<HTMLDivElement | null>(null);
   const [hasAnimated, setHasAnimated] = useState(false);
   const [counts, setCounts] = useState<number[]>(() => cardData.map(() => 0));
-
-  useEffect(() => {
-    // Initial theme detection
-    const theme = localStorage.getItem("ads_theme");
-    setIsDarkMode(theme !== "light");
-
-    // Listen for theme changes via document class mutations
-    const handleThemeChange = () => {
-      const theme = localStorage.getItem("ads_theme");
-      setIsDarkMode(theme !== "light");
-    };
-
-    // Watch for class changes on document element
-    const observer = new MutationObserver(handleThemeChange);
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ["class"],
-    });
-
-    // Also listen to storage changes (for cross-tab updates)
-    window.addEventListener("storage", handleThemeChange);
-
-    return () => {
-      observer.disconnect();
-      window.removeEventListener("storage", handleThemeChange);
-    };
-  }, []);
 
   // Trigger count animations when section comes into view
   useEffect(() => {
@@ -111,7 +85,7 @@ const WhyChooseUs = () => {
       <section
         className="my-20 hidden w-full justify-center px-4 sm:flex sm:px-6 lg:px-8"
       >
-        <div className="mx-auto flex w-full max-w-7xl flex-col gap-8 lg:flex-row lg:items-start lg:justify-center lg:gap-6">
+        <div className="mx-auto flex w-full max-w-8xl flex-col gap-8 lg:flex-row lg:items-start lg:justify-center lg:gap-6">
           {/* First column */}
           <div className="flex w-full max-w-[44rem] flex-col lg:w-[46%] lg:max-w-none">
             <h2 className="mb-1 text-lg text-[#4C8C74] md:text-xl">
