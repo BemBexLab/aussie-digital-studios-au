@@ -18,7 +18,7 @@ const Contact = () => {
           <div className="flex flex-col items-stretch gap-8 lg:min-h-[384px] lg:flex-row lg:gap-12">
             <div className="relative mx-auto w-full max-w-[62rem] lg:mx-0 lg:max-w-none lg:flex-1">
               <Image
-                src="/contact/Rectangle_1.webp"
+                src="/Contact/Rectangle_1.webp"
                 alt="Get in Touch Illustration"
                 width={900}
                 height={900}
@@ -26,7 +26,7 @@ const Contact = () => {
               />
               <div className="pointer-events-none absolute -left-6 top-1/2 hidden -translate-y-1/2 lg:block xl:-left-15">
                 <Image
-                  src="/contact/shape.webp"
+                  src="/Contact/shape.webp"
                   alt="decorative shape"
                   width={196}
                   height={196}
