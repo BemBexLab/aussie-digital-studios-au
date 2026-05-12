@@ -158,7 +158,7 @@ const About = () => {
                 />
                 {/* Decorative shape */}
                 <img
-                  src="/About/Geometric_Shape_Silver.webp"
+                  src="/Geometric_Shape_Silver.webp"
                   alt="Decorative shape"
                   className="absolute right-0 bottom-0 translate-x-1/2 translate-y-1/2 w-26 sm:w-20 md:w-40 pointer-events-none"
                 />
