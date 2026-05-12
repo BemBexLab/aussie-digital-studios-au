@@ -3,6 +3,7 @@
 import Image from "next/image";
 import React, { useState, useEffect, useRef } from "react";
 import CustomPlanMobile from "./CustomPlanMobile";
+import { useThemeMode } from "@/lib/useThemeMode";
 
 type CustomPlanData = {
   heading?: React.ReactNode;
@@ -19,7 +20,7 @@ type CustomPlanProps = {
 };
 
 const CustomPlan = ({ data }: CustomPlanProps) => {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const { isDarkMode } = useThemeMode();
   const [hasBodyOverflow, setHasBodyOverflow] = useState(false);
   const [hasRightContentOverflow, setHasRightContentOverflow] = useState(false);
   const defaultButtonText = "Book a consultation call to create your perfect plan";
@@ -30,33 +31,6 @@ const CustomPlan = ({ data }: CustomPlanProps) => {
 
   const glassScrollbarClasses =
     "scrollbar-thin scrollbar-thumb-[#AAAAAA]/60 scrollbar-track-white/10 [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-[#ffffff14] [&::-webkit-scrollbar-track]:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.08)] [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:border [&::-webkit-scrollbar-thumb]:border-solid [&::-webkit-scrollbar-thumb]:border-[#ffffff33] [&::-webkit-scrollbar-thumb]:bg-[#AAAAAA99]";
-
-  useEffect(() => {
-    // Initial theme detection
-    const theme = localStorage.getItem("ads_theme");
-    setIsDarkMode(theme !== "light");
-
-    // Listen for theme changes via document class mutations
-    const handleThemeChange = () => {
-      const theme = localStorage.getItem("ads_theme");
-      setIsDarkMode(theme !== "light");
-    };
-
-    // Watch for class changes on document element
-    const observer = new MutationObserver(handleThemeChange);
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ["class"],
-    });
-
-    // Also listen to storage changes (for cross-tab updates)
-    window.addEventListener("storage", handleThemeChange);
-
-    return () => {
-      observer.disconnect();
-      window.removeEventListener("storage", handleThemeChange);
-    };
-  }, []);
 
   useEffect(() => {
     const updateOverflowState = () => {

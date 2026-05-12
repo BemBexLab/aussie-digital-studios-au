@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { PiSunFill, PiMoonFill } from "react-icons/pi";
+import { dispatchThemeModeChange } from "@/lib/useThemeMode";
 
 export default function ThemeToggle() {
   const [theme, setTheme] = useState("dark");
@@ -22,6 +23,7 @@ export default function ThemeToggle() {
       el.classList.remove("light");
       el.classList.add("dark");
     }
+    dispatchThemeModeChange(t === "light" ? "light" : "dark");
   }
 
   function toggle() {

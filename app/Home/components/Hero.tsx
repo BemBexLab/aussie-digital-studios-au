@@ -29,6 +29,7 @@ const Hero = () => {
             loop
             muted
             playsInline
+            preload="none"
             className="w-full h-[300px] sm:h-[400px] min-[1250px]:w-full min-[1250px]:h-full object-cover mix-blend-overlay opacity-20 smoke-video"
             aria-label="Video overlay"
             style={{ position: "absolute", inset: 0, height: "695px" }}
@@ -91,20 +92,6 @@ const Hero = () => {
         {/* <div className="absolute right-4 sm:right-6 top-16 translate-y-10 sm:top-20 z-50">
           <ThemeToggle />
         </div> */}
-
-        {/* Video overlay */}
-        <div className="absolute inset-0 z-10 pointer-events-none">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-full object-cover mix-blend-overlay opacity-10 smoke-video"
-            aria-label="Video overlay"
-          >
-            <source src="/Clouds.mp4" type="video/mp4" />
-          </video>
-        </div>
 
         {/* Responsive text and image layout */}
         <div className="relative z-20 flex w-full max-w-[1180px] flex-col items-center justify-center gap-10 sm:gap-12 lg:gap-14">

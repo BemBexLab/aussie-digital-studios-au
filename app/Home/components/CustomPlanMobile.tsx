@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
+import { useThemeMode } from "@/lib/useThemeMode";
 
 type CustomPlanData = {
   heading?: React.ReactNode;
@@ -17,32 +18,8 @@ type CustomPlanMobileProps = {
 };
 
 const CustomPlanMobile = ({ data }: CustomPlanMobileProps) => {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const { isDarkMode } = useThemeMode();
   const defaultButtonText = "Book a consultation call to create your perfect plan";
-
-  useEffect(() => {
-    // Initial theme detection
-    const theme = localStorage.getItem("ads_theme");
-    setIsDarkMode(theme !== "light");
-
-    // Listen for theme changes via document class mutations
-    const handleThemeChange = () => {
-      const theme = localStorage.getItem("ads_theme");
-      setIsDarkMode(theme !== "light");
-    };
-
-    // Watch for class changes on document element
-    const observer = new MutationObserver(handleThemeChange);
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
-
-    // Also listen to storage changes (for cross-tab updates)
-    window.addEventListener("storage", handleThemeChange);
-
-    return () => {
-      observer.disconnect();
-      window.removeEventListener("storage", handleThemeChange);
-    };
-  }, []);
 
   return (
     <section className="sm:hidden my-8 px-4">

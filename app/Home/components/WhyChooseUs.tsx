@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import WhyChooseUsMobile from "./WhyChooseUsMobile";
 import { motion } from "motion/react";
+import { useThemeMode } from "@/lib/useThemeMode";
 
 const cardData = [
   {
@@ -26,37 +27,10 @@ const cardData = [
 
 const WhyChooseUs = () => {
   const router = useRouter();
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const { isDarkMode } = useThemeMode();
   const wrapperRef = useRef<HTMLDivElement | null>(null);
   const [hasAnimated, setHasAnimated] = useState(false);
   const [counts, setCounts] = useState<number[]>(() => cardData.map(() => 0));
-
-  useEffect(() => {
-    // Initial theme detection
-    const theme = localStorage.getItem("ads_theme");
-    setIsDarkMode(theme !== "light");
-
-    // Listen for theme changes via document class mutations
-    const handleThemeChange = () => {
-      const theme = localStorage.getItem("ads_theme");
-      setIsDarkMode(theme !== "light");
-    };
-
-    // Watch for class changes on document element
-    const observer = new MutationObserver(handleThemeChange);
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ["class"],
-    });
-
-    // Also listen to storage changes (for cross-tab updates)
-    window.addEventListener("storage", handleThemeChange);
-
-    return () => {
-      observer.disconnect();
-      window.removeEventListener("storage", handleThemeChange);
-    };
-  }, []);
 
   // Trigger count animations when section comes into view
   useEffect(() => {

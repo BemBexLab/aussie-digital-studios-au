@@ -3,7 +3,7 @@ import nextDynamic from "next/dynamic";
 import LivePreview from "@/components/LivePreview";
 import ProjectImage from "@/components/Projectimage";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 300;
 
 // Dynamically import the client-only BackButton
 const BackButton = nextDynamic(() => import("../[slug]/BackButton"));
@@ -67,7 +67,7 @@ export async function generateStaticParams() {
   try {
     const res = await fetch(
       "https://olive-peafowl-546702.hostingersite.com/wp-json/wp/v2/posts",
-      { cache: 'no-store' }
+      { next: { revalidate: 300 } }
     );
     
     if (!res.ok) return [];
@@ -89,7 +89,7 @@ export default async function ProjectPage({
   
   try {
     const res = await fetch(`${API_URL}${slug}`, {
-      cache: 'no-store',
+      next: { revalidate: 300 },
     });
 
     if (!res.ok) return notFound();

@@ -4,41 +4,19 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion } from "motion/react";
 import ContactMobile from "./ContactMobile";
+import { useThemeMode } from "@/lib/useThemeMode";
 
 const Contact = () => {
-  const [isDarkMode, setIsDarkMode] = useState(true);
-
-  useEffect(() => {
-    const theme = localStorage.getItem("ads_theme");
-    setIsDarkMode(theme !== "light");
-
-    const handleThemeChange = () => {
-      const nextTheme = localStorage.getItem("ads_theme");
-      setIsDarkMode(nextTheme !== "light");
-    };
-
-    const observer = new MutationObserver(handleThemeChange);
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ["class"],
-    });
-
-    window.addEventListener("storage", handleThemeChange);
-
-    return () => {
-      observer.disconnect();
-      window.removeEventListener("storage", handleThemeChange);
-    };
-  }, []);
+  const { isDarkMode } = useThemeMode();
 
   return (
     <>
       <ContactMobile />
 
       <section className="relative hidden w-full overflow-x-hidden px-4 py-12 md:block md:px-6 lg:mt-20 lg:px-8 lg:py-16">
-        <div className="relative mx-auto max-w-6xl">
+        <div className="relative mx-auto max-w-7xl">
           <div className="flex flex-col items-stretch gap-8 lg:min-h-[384px] lg:flex-row lg:gap-12">
-            <div className="relative mx-auto w-full max-w-[32rem] lg:mx-0 lg:max-w-none lg:flex-1">
+            <div className="relative mx-auto w-full max-w-[62rem] lg:mx-0 lg:max-w-none lg:flex-1">
               <Image
                 src="/contact/Rectangle_1.webp"
                 alt="Get in Touch Illustration"
@@ -186,7 +164,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="mx-auto mt-12 px-4 sm:px-6 lg:mt-16">
+          <div className="mx-auto mt-12 max-w-[84rem] px-4 sm:px-6 lg:mt-16">
             <div className="flex flex-wrap justify-center gap-4 md:gap-5 lg:flex-nowrap lg:items-center lg:gap-6">
               <Image
                 src={
@@ -197,7 +175,7 @@ const Contact = () => {
                 alt="Contact Card 1"
                 width={900}
                 height={900}
-                className="h-auto w-full max-w-[300px] rounded-xl object-cover"
+                className="h-auto w-full max-w-[340px] rounded-xl object-cover"
               />
 
               <Image
@@ -207,7 +185,7 @@ const Contact = () => {
                 alt="Contact Card 2"
                 width={900}
                 height={900}
-                className="h-auto w-full max-w-[300px] rounded-xl object-cover"
+                className="h-auto w-full max-w-[340px] rounded-xl object-cover"
               />
 
               <Image
@@ -219,7 +197,7 @@ const Contact = () => {
                 alt="Contact Card 3"
                 width={900}
                 height={900}
-                className="h-auto w-full max-w-[300px] rounded-xl object-cover"
+                className="h-auto w-full max-w-[340px] rounded-xl object-cover"
               />
             </div>
           </div>

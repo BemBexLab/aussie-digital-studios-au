@@ -50,7 +50,11 @@ const ProjectCardGrid = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const res = await fetch("/api/posts");
+        const postsUrl =
+          typeof window !== "undefined"
+            ? new URL("/api/posts", window.location.origin).toString()
+            : "/api/posts";
+        const res = await fetch(postsUrl);
         const data = await res.json();
         const projectPosts = data.filter(
           (post: Post) => post.acf?.project_image?.url && post.slug

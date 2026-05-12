@@ -2,24 +2,10 @@
 
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
+import { useThemeMode } from "@/lib/useThemeMode";
 
 const ValuesMobile = () => {
-  const [isLight, setIsLight] = useState(false);
-
-  useEffect(() => {
-    // Check initial theme
-    const checkTheme = () => {
-      setIsLight(document.documentElement.classList.contains("light"));
-    };
-
-    checkTheme();
-
-    // Watch for theme changes
-    const observer = new MutationObserver(checkTheme);
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
-
-    return () => observer.disconnect();
-  }, []);
+  const { isLightMode: isLight } = useThemeMode();
 
   const backgroundImage = isLight
     ? "url(/About/Frame_163_Light.svg)"

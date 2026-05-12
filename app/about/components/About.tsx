@@ -4,9 +4,10 @@ import React, { useState, useEffect, useRef } from "react";
 import { motion } from "motion/react";
 import Image from "next/image";
 import AboutMobile from "./AboutMobile";
+import { useThemeMode } from "@/lib/useThemeMode";
 
 const About = () => {
-  const [isLight, setIsLight] = useState(false);
+  const { isLightMode: isLight } = useThemeMode();
   const headerRef = useRef<HTMLDivElement | null>(null);
   const [isHeaderInView, setIsHeaderInView] = useState(false);
   const bodyRef = useRef<HTMLDivElement | null>(null);
@@ -15,23 +16,6 @@ const About = () => {
   const [counts, setCounts] = useState<number[]>([0, 0, 0]);
   const [hasCounted, setHasCounted] = useState(false);
 
-  useEffect(() => {
-    // Check initial theme
-    const checkTheme = () => {
-      setIsLight(document.documentElement.classList.contains("light"));
-    };
-
-    checkTheme();
-
-    // Watch for theme changes
-    const observer = new MutationObserver(checkTheme);
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ["class"],
-    });
-
-    return () => observer.disconnect();
-  }, []);
   React.useEffect(() => {
     const el = headerRef.current;
     if (!el) return;

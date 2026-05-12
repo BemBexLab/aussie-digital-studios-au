@@ -5,6 +5,7 @@ import { useRouter, usePathname } from "next/navigation";
 import { GoArrowDown } from "react-icons/go";
 import { IoClose } from "react-icons/io5";
 import { motion } from "motion/react";
+import type { ProjectPost } from "@/lib/projectPosts";
 
 // Category configuration
 const MODAL_CATEGORIES = [
@@ -22,16 +23,7 @@ const categories = [...ROUTE_CATEGORIES, ...MODAL_CATEGORIES];
 const FIGMA_CARD_HEIGHT = 500;
 const FIGMA_VISIBLE_HEIGHT = Math.floor(FIGMA_CARD_HEIGHT / 2) + 100;
 
-interface Post {
-  id: number;
-  slug: string;
-  title: { rendered: string };
-  acf?: {
-    project_image?: { url: string };
-    project_url?: string;
-    catogary?: string | string[];
-  };
-}
+type Post = ProjectPost;
 
 // Enhanced URL cleaning function
 const cleanUrl = (url: string): string => {
@@ -96,8 +88,14 @@ const normalizeSrc = (src?: string): string => {
   return cleanedSrc;
 };
 
-export default function PortfolioWall() {
-  const [posts, setPosts] = useState<Post[]>([]);
+type PortfolioWallProps = {
+  initialPosts?: Post[];
+};
+
+export default function PortfolioWall({
+  initialPosts = [],
+}: PortfolioWallProps) {
+  const [posts, setPosts] = useState<Post[]>(initialPosts);
   const [selectedCategory, setSelectedCategory] = useState("WEB DEVELOPMENT");
   const [hoveredFigmaCard, setHoveredFigmaCard] = useState<number | null>(null);
   const [scrollOffsets, setScrollOffsets] = useState<Record<number, number>>(
@@ -107,10 +105,10 @@ export default function PortfolioWall() {
   const [modalOpen, setModalOpen] = useState(false);
   const [modalProject, setModalProject] = useState<Post | null>(null);
   const [itemsToShow, setItemsToShow] = useState(6);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(initialPosts.length === 0);
   const [fetchTimedOut, setFetchTimedOut] = useState(false);
   const [fetchError, setFetchError] = useState<string | null>(null);
-  const [dataReady, setDataReady] = useState(false);
+  const [dataReady, setDataReady] = useState(initialPosts.length > 0);
   const [isNavigating, setIsNavigating] = useState(false);
   const [isInView, setIsInView] = useState(false);
   const [isMobileInView, setIsMobileInView] = useState(false);
@@ -133,6 +131,15 @@ export default function PortfolioWall() {
 
   // Fetch posts with proper validation
   const fetchPosts = async (timeoutMs = 15000) => {
+    if (initialPosts.length > 0) {
+      setPosts(initialPosts);
+      setDataReady(true);
+      setLoading(false);
+      setFetchTimedOut(false);
+      setFetchError(null);
+      return;
+    }
+
     setLoading(true);
     setDataReady(false);
     setFetchTimedOut(false);
@@ -141,7 +148,12 @@ export default function PortfolioWall() {
     const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
 
     try {
-      const res = await fetch("/api/posts", {
+      const postsUrl =
+        typeof window !== "undefined"
+          ? new URL("/api/posts", window.location.origin).toString()
+          : "/api/posts";
+
+      const res = await fetch(postsUrl, {
         signal: controller.signal,
       });
 
@@ -197,8 +209,19 @@ export default function PortfolioWall() {
   };
 
   useEffect(() => {
-    fetchPosts();
-  }, []);
+    if (initialPosts.length > 0) {
+      setPosts(initialPosts);
+      setDataReady(true);
+      setLoading(false);
+      setFetchTimedOut(false);
+      setFetchError(null);
+      return;
+    }
+
+    if (initialPosts.length === 0) {
+      fetchPosts();
+    }
+  }, [initialPosts.length]);
 
   useEffect(() => {
     const desktopObserver = new IntersectionObserver(

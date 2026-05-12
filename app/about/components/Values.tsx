@@ -4,28 +4,14 @@ import Image from "next/image";
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "motion/react";
 import ValuesMobile from "./ValuesMobile";
+import { useThemeMode } from "@/lib/useThemeMode";
 
 const Values = () => {
-  const [isLight, setIsLight] = useState(false);
+  const { isLightMode: isLight } = useThemeMode();
   const mobileHeadingRef = useRef<HTMLDivElement | null>(null);
   const desktopHeadingRef = useRef<HTMLDivElement | null>(null);
   const [isMobileHeadingInView, setIsMobileHeadingInView] = useState(false);
   const [isDesktopHeadingInView, setIsDesktopHeadingInView] = useState(false);
-
-  useEffect(() => {
-    // Check initial theme
-    const checkTheme = () => {
-      setIsLight(document.documentElement.classList.contains("light"));
-    };
-
-    checkTheme();
-
-    // Watch for theme changes
-    const observer = new MutationObserver(checkTheme);
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
-
-    return () => observer.disconnect();
-  }, []);
 
   useEffect(() => {
     const el = mobileHeadingRef.current;

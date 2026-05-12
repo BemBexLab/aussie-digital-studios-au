@@ -2,29 +2,14 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import { useThemeMode } from "@/lib/useThemeMode";
 
 const AboutUs = () => {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const { isDarkMode } = useThemeMode();
   const [isInView, setIsInView] = useState(false);
   const componentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const theme = localStorage.getItem("ads_theme");
-    setIsDarkMode(theme !== "light");
-
-    const handleThemeChange = () => {
-      const theme = localStorage.getItem("ads_theme");
-      setIsDarkMode(theme !== "light");
-    };
-
-    const observer = new MutationObserver(handleThemeChange);
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ["class"],
-    });
-
-    window.addEventListener("storage", handleThemeChange);
-
     // Intersection Observer for animation trigger
     const intersectionObserver = new IntersectionObserver(
       ([entry]) => {
@@ -44,9 +29,7 @@ const AboutUs = () => {
     }
 
     return () => {
-      observer.disconnect();
       intersectionObserver.disconnect();
-      window.removeEventListener("storage", handleThemeChange);
     };
   }, []);
 

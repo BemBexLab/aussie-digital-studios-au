@@ -2,27 +2,10 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import { useThemeMode } from "@/lib/useThemeMode";
 
 const AboutMobile = () => {
-  const [isLight, setIsLight] = useState(false);
-
-  useEffect(() => {
-    // Check initial theme
-    const checkTheme = () => {
-      setIsLight(document.documentElement.classList.contains("light"));
-    };
-
-    checkTheme();
-
-    // Watch for theme changes
-    const observer = new MutationObserver(checkTheme);
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ["class"],
-    });
-
-    return () => observer.disconnect();
-  }, []);
+  const { isLightMode: isLight } = useThemeMode();
 
   return (
     <section className="md:hidden py-8 px-4">

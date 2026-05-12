@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "motion/react";
-import ThemeToggle from "@/components/ThemeToggle";
 import HeroMobile from "@/components/HeroMobile";
 
 type HeroProps = {
@@ -45,7 +44,6 @@ const Hero = ({ H }: HeroProps) => {
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          backgroundAttachment: "fixed",
         }}
       >
       {/* Clouds Video Overlay */}
@@ -54,6 +52,7 @@ const Hero = ({ H }: HeroProps) => {
         muted
         loop
         playsInline
+        preload="none"
         controlsList="nodownload nofullscreen"
         disablePictureInPicture
         className="absolute inset-0 w-full h-full object-cover hero-video-overlay pointer-events-none"

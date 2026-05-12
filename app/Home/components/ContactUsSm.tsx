@@ -4,6 +4,7 @@ import { TextField } from "@mui/material";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { sendContactEmail } from "@/lib/emailService";
+import { useThemeMode } from "@/lib/useThemeMode";
 
 const ContactUsSm = () => {
   const [formData, setFormData] = useState({
@@ -15,30 +16,10 @@ const ContactUsSm = () => {
     subject: "",
     detail: "",
   });
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const { isDarkMode } = useThemeMode();
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
   const [isSuccess, setIsSuccess] = useState(false);
-
-  useEffect(() => {
-    const theme = localStorage.getItem("ads_theme");
-    setIsDarkMode(theme !== "light");
-
-    const handleThemeChange = () => {
-      const theme = localStorage.getItem("ads_theme");
-      setIsDarkMode(theme !== "light");
-    };
-
-    const observer = new MutationObserver(handleThemeChange);
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
-
-    window.addEventListener("storage", handleThemeChange);
-
-    return () => {
-      observer.disconnect();
-      window.removeEventListener("storage", handleThemeChange);
-    };
-  }, []);
 
   const textFieldSx = {
     "& .MuiInput-input": {
