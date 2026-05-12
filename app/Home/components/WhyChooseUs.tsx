@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 import WhyChooseUsMobile from "./WhyChooseUsMobile";
 import { motion } from "motion/react";
@@ -110,26 +109,27 @@ const WhyChooseUs = () => {
     <div ref={wrapperRef}>
       <WhyChooseUsMobile />
       <section
-        className="hidden sm:flex w-full px-5 my-20 justify-center"
-        style={{}}
+        className="my-20 hidden w-full justify-center px-4 sm:flex sm:px-6 lg:px-8"
       >
-        <div className="flex flex-col lg:flex-row justify-center mx-auto gap-8 lg:gap-5 max-w-7xl w-full flex-wrap">
+        <div className="mx-auto flex w-full max-w-7xl flex-col gap-8 lg:flex-row lg:items-start lg:justify-center lg:gap-6">
           {/* First column */}
-          <div className="flex flex-col w-full lg:w-[45%]">
-            <h2 className="text-[#4C8C74] text-xl mb-1">Why Work With Us</h2>
-            <h2 className="text-white text-3xl lg:text-4xl font-medium mb-5">
+          <div className="flex w-full max-w-[44rem] flex-col lg:w-[46%] lg:max-w-none">
+            <h2 className="mb-1 text-lg text-[#4C8C74] md:text-xl">
+              Why Work With Us
+            </h2>
+            <h2 className="mb-5 text-3xl font-medium leading-tight text-white md:text-4xl lg:text-[2.5rem]">
               Honestly? Because we don't disappear after launch.
             </h2>
-            <ul className="list-inside font-normal text-sm text-[#AAAAAA] space-y-3">
+            <ul className="list-inside space-y-3 text-sm font-normal leading-relaxed text-[#AAAAAA] md:text-base">
               <li>A lot of agencies are great at winning the job and average at everything after. We've structured our whole business around the opposite. Your site goes live, and that's when we start paying attention to what's working, what is not, and what needs to change.</li>
               <li>We also don't outsource. Every person working on your project is part of our team. You will deal with the same people from the first call to the final handover, and beyond if you need ongoing support.</li>
               <li>We are not going to promise you page one of Google by next Tuesday. What we will do is build your website the right way, optimise it properly, and keep improving it over time. That's what actually works.</li>
               <li>We have done it for new businesses finding their feet, for established brands trying to break into new parts of the market, and for local Australian businesses that wanted to compete well beyond their postcode.</li>
             </ul>
-            <div className="flex flex-row">
+            <div className="mt-2 flex flex-row">
               <button
                 onClick={() => router.push("/contact")}
-                className="justify-center mt-4 px-3 w-[150px] h-[40px] text-sm bg-teal-500 text-white rounded-full hover:bg-blue-400 transition-all inline-flex items-center group flex flex-row"
+                className="group mt-4 inline-flex h-[42px] w-full max-w-[168px] items-center justify-center rounded-full bg-teal-500 px-4 text-sm text-white transition-all hover:bg-blue-400 sm:w-[150px]"
               >
                 <span>Get Started</span>
                 <span className="ml-3 relative w-6 h-6 flex items-center justify-center">
@@ -167,13 +167,13 @@ const WhyChooseUs = () => {
           </div>
 
           {/* Second column */}
-          <div className="grid grid-cols-2 gap-x-3 w-full lg:w-[38%] max-w-[520px] max-h-[300px]">
+          <div className="grid w-full max-w-[640px] grid-cols-1 gap-4 sm:grid-cols-2 lg:w-[40%] lg:max-w-[520px]">
             {/* Mapped Cards */}
             {cardData.map((card, index) => (
               <div
                 key={index}
                 className={
-                  "\n  relative\n  h-[140px]\n  px-6\n  py-6\n  rounded-2xl\n  flex\n  flex-col\n  justify-between\n  bg-no-repeat\n  bg-cover\n  bg-center\n"
+                  "relative flex min-h-[138px] flex-col justify-between rounded-2xl bg-cover bg-center bg-no-repeat px-5 py-5 sm:min-h-[150px] sm:px-6 sm:py-6"
                 }
                 style={{
                   backgroundImage: isDarkMode
@@ -182,7 +182,7 @@ const WhyChooseUs = () => {
                 }}
               >
                 {/* Numeric value (animated) */}
-                <h2 className="text-5xl lg:text-6xl font-regular text-white leading-none tracking-tight">
+                <h2 className="text-4xl leading-none tracking-tight text-white sm:text-5xl lg:text-6xl">
                   {(() => {
                     const match = String(card.value).match(/^(\d+)/);
                     const suffix = String(card.value).replace(/^\d+/, "");
@@ -196,7 +196,7 @@ const WhyChooseUs = () => {
                   initial={{ opacity: 0 }}
                   animate={hasAnimated ? { opacity: 1 } : { opacity: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.08 }}
-                  className="text-[#9CA3AF] text-sm lg:text-base"
+                  className="text-sm text-[#9CA3AF] sm:text-base"
                 >
                   {card.title}
                 </motion.p>

@@ -1,6 +1,5 @@
 "use client";
 
-import ThemeToggle from "@/components/ThemeToggle";
 import React from "react";
 import { motion } from "motion/react";
 
@@ -79,7 +78,7 @@ const Hero = () => {
 
       {/* Responsive Hero (smaller than 1250px) */}
       <section
-        className="min-[1250px]:hidden w-full relative min-h-screen flex flex-col items-center justify-center text-center px-4 sm:px-6 hero-bg-section"
+        className="min-[1250px]:hidden relative flex min-h-[100svh] w-full items-center justify-center overflow-hidden px-4 py-20 text-center sm:px-6 sm:py-24 md:px-8 lg:px-10 hero-bg-section"
         data-hero-bg
         style={{
           backgroundImage: "url('/Hero_Section.webp')",
@@ -108,33 +107,40 @@ const Hero = () => {
         </div>
 
         {/* Responsive text and image layout */}
-        <div className="relative z-20 space-y-4 sm:space-y-6 md:space-y-8 mt-12 sm:mt-16 md:mt-20 w-full max-w-sm sm:max-w-md md:max-w-2xl lg:max-w-3xl">
-          <br className="hidden sm:block" />
-          <span className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold block">
-            We help
-          </span>
-          <motion.span
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.5 }}
-            className="text-white uppercase text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight block leading-tight"
-          >
-            Australian businesses
-          </motion.span>
-          <span className="text-white text-base sm:text-lg md:text-xl lg:text-2xl font-medium block">
-            build websites that actually bring in work.
-          </span>
-          <p className="text-[#808c87] text-sm sm:text-base md:text-lg mt-4 sm:mt-6 md:mt-8">
-            Complete Digital Solutions for Australian Businesses Strategy,
-            Design, Development, and Growth
-          </p>
-          <motion.img
-            animate={{ y: [0, -15, 0] }}
-            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-            src="/Home/Frame_557.webp"
-            alt="Geometric_Shape"
-            className="z-30 w-full sm:w-[400px] md:w-[550px] h-auto mt-4 sm:mt-6 md:mt-8 mx-auto object-contain"
-          />
+        <div className="relative z-20 flex w-full max-w-[1180px] flex-col items-center justify-center gap-10 sm:gap-12 lg:gap-14">
+          <div className="order-2 w-full max-w-[min(92vw,620px)] sm:max-w-[min(84vw,700px)] lg:max-w-[620px]">
+            <motion.img
+              animate={{ y: [0, -15, 0] }}
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+              src="/Home/Frame_557.webp"
+              alt="Geometric_Shape"
+              className="mx-auto h-auto w-full object-contain"
+            />
+          </div>
+
+          <div className="order-1 flex w-full max-w-[22rem] flex-col items-center text-center sm:max-w-[30rem] md:max-w-[42rem] lg:max-w-[52rem]">
+            <p className="mb-4 max-w-[18rem] text-sm font-semibold uppercase tracking-[0.18em] text-[#808c87] sm:mb-5 sm:max-w-[22rem] sm:text-base md:mb-6 md:max-w-[26rem] md:text-lg lg:max-w-[30rem]">
+              Complete Digital Solutions for Australian Businesses Strategy,
+              Design, Development, and Growth
+            </p>
+
+            <span className="block text-[clamp(1.375rem,3vw,2.5rem)] font-semibold text-white">
+              We help
+            </span>
+
+            <motion.span
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 0.5 }}
+              className="block text-[clamp(2.6rem,8vw,5.8rem)] font-extrabold uppercase leading-[0.92] tracking-tight text-white sm:whitespace-nowrap"
+            >
+              Australian businesses
+            </motion.span>
+
+            <span className="mt-3 block max-w-[19rem] text-base font-medium leading-relaxed text-white sm:mt-4 sm:max-w-[28rem] sm:text-lg md:max-w-[34rem] md:text-xl lg:text-2xl">
+              build websites that actually bring in work.
+            </span>
+          </div>
         </div>
       </section>
     </>

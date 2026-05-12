@@ -36,7 +36,7 @@ const Mission = () => {
           <div className="w-full lg:w-auto flex gap-6 justify-center flex-wrap lg:flex-nowrap">
             <div className="w-50 h-72">
               <Image
-                src="/about/Rectangle_44.webp"
+                src="/About/Rectangle_44.webp"
                 alt="Mission Image"
                 width={288}
                 height={288}
@@ -46,7 +46,7 @@ const Mission = () => {
 
             <div className="w-50 h-72 lg:-translate-y-10 transform drop-shadow-2xl">
               <Image
-                src="/about/Rectangle_45.webp"
+                src="/About/Rectangle_45.webp"
                 alt="Mission Image"
                 width={288}
                 height={288}
@@ -56,18 +56,11 @@ const Mission = () => {
 
             <div className="relative w-50 h-72 overflow-visible">
               <Image
-                src="/about/Rectangle_46.webp"
+                src="/About/Rectangle_46.webp"
                 alt="Mission Image"
                 width={288}
                 height={288}
                 className="w-full h-full object-cover rounded-[18px]"
-              />
-              <Image
-                src="/Geometric_Shape_Silver.webp"
-                alt="Geometric Shape"
-                width={220}
-                height={220}
-                className="absolute bottom-0 right-0 w-48 h-48 lg:translate-x-24 lg:translate-y-24 z-20 opacity-95 pointer-events-none drop-shadow-2xl"
               />
             </div>
           </div>

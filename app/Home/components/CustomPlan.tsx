@@ -106,13 +106,13 @@ const CustomPlan = ({ data }: CustomPlanProps) => {
   }, [data]);
 
   return (
-    <>
+      <>
       <CustomPlanMobile data={data} />
-      <section className="hidden sm:flex w-full mb-15 justify-center items-center">
-        <div className="flex flex-col lg:flex-row w-[1200px] gap-2 lg:gap-4 items-center">
+      <section className="mb-15 hidden w-full justify-center px-4 sm:flex sm:px-6 lg:px-8">
+        <div className="flex w-full max-w-[1200px] flex-col items-stretch gap-4 md:gap-5 lg:flex-row lg:items-center">
           {/* Custom Plan Content */}
           <div
-            className="flex flex-col rounded-xl px-6 lg:px-6 py-8 lg:py-10 w-full lg:h-[350px] lg:w-[90%]"
+            className="flex w-full flex-col rounded-xl px-5 py-7 sm:px-6 sm:py-8 lg:h-[350px] lg:w-[90%] lg:px-6 lg:py-10"
             style={
               isDarkMode
                 ? {
@@ -126,12 +126,12 @@ const CustomPlan = ({ data }: CustomPlanProps) => {
                   }
             }
           >
-            <h2 className="font-semibold text-2xl lg:text-4xl text-white">
+            <h2 className="text-2xl font-semibold text-white md:text-3xl lg:text-4xl">
               {data?.heading || "Your Plan, Not Ours"}
             </h2>
             <div
               ref={bodyContentRef}
-              className={`w-full lg:w-[720px] max-h-[170px] px-2 text-md text-[#AAAAAA] mt-4 ${
+              className={`mt-4 w-full max-w-full px-1 text-sm leading-relaxed text-[#AAAAAA] sm:px-2 sm:text-base lg:w-[720px] lg:max-h-[170px] ${
                 hasBodyOverflow
                   ? `overflow-y-auto ${glassScrollbarClasses}`
                   : "overflow-y-hidden"
@@ -147,7 +147,7 @@ const CustomPlan = ({ data }: CustomPlanProps) => {
               <div ref={bodyContentInnerRef}>
                 {data?.body || (
                   <>
-                    <ul className="text-md text-[#AAAAAA] space-y-3">
+                    <ul className="space-y-3 text-sm text-[#AAAAAA] sm:text-base">
                       <li>
                         We don't sell packages. We sit down with you, work out
                         what your business needs right now and where you want it
@@ -169,12 +169,14 @@ const CustomPlan = ({ data }: CustomPlanProps) => {
                 )}
               </div>
             </div>
-            <div className="mt-8 flex flex-row">
+            <div className="mt-6 flex flex-col gap-4 sm:mt-8 sm:flex-row sm:items-start sm:justify-between">
               <a
                 href="/contact"
-                className="flex font-light text-sm items-center justify-center gap-1 bg-[#4C8C74] text-white py-2 px-3 rounded-full hover:bg-blue-300 transition-colors group w-fit mr-auto"
+                className="group flex w-full items-center justify-center gap-2 rounded-full bg-[#4C8C74] px-4 py-3 text-center text-sm font-light text-white transition-colors hover:bg-blue-300 sm:mr-auto sm:w-fit sm:justify-start"
               >
-                {data?.buttonText || defaultButtonText}
+                <span className="max-w-[28rem]">
+                  {data?.buttonText || defaultButtonText}
+                </span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="28"
@@ -194,7 +196,7 @@ const CustomPlan = ({ data }: CustomPlanProps) => {
                   />
                 </svg>
               </a>
-              <div className="flex flex-row justify-center my-2">
+              <div className="my-1 flex flex-row items-center justify-center self-start sm:my-2 sm:self-center">
                 <p className="text-[#4C8C74]">{data?.miniTagData}</p>
                 <svg
                   className="m-2"
@@ -216,11 +218,11 @@ const CustomPlan = ({ data }: CustomPlanProps) => {
           </div>
 
           {/* Image on right side */}
-          <div className="w-full lg:w-[50%] flex justify-end items-center">
+          <div className="flex w-full items-center justify-center lg:w-[50%] lg:justify-end">
             {data?.rightContent ? (
               <div
                 ref={rightContentRef}
-                className={`w-full h-[350px] max-w-[430px] rounded-xl border border-white/10 bg-[#08110e] px-6 py-5 text-[#AAAAAA] ${
+                className={`w-full rounded-xl border border-white/10 bg-[#08110e] px-5 py-5 text-[#AAAAAA] sm:px-6 lg:h-[350px] lg:max-w-[430px] ${
                   hasRightContentOverflow
                     ? `overflow-y-auto ${glassScrollbarClasses}`
                     : "overflow-y-hidden"
@@ -236,7 +238,7 @@ const CustomPlan = ({ data }: CustomPlanProps) => {
                 alt={data?.rightImageAlt || "Custom Plan Illustration"}
                 width={430}
                 height={400}
-                className="w-full h-[350px] max-w-[430px]"
+                className="h-auto w-full max-w-[430px] rounded-xl object-contain lg:h-[350px]"
               />
             )}
           </div>
