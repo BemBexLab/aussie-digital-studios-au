@@ -2,6 +2,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 import Hero from "@/components/Hero";
 import SectionFallback from "@/components/SectionFallback";
+import LazySection from "@/components/LazySection";
 
 const About = dynamic(() => import("./components/About"), {
   loading: () => <SectionFallback heightClassName="min-h-72" />,
@@ -20,8 +21,12 @@ const AboutPage = () => {
   return (
     <div className="overflow-x-hidden">
       <Hero H="ABOUT US" />
-      <About />
-      <Values />
+      <LazySection heightClassName="min-h-72">
+        <About />
+      </LazySection>
+      <LazySection heightClassName="min-h-72">
+        <Values />
+      </LazySection>
       {/* <div className="relative">
         <Image
           src="/Geometric_Shape_Silver.webp"
@@ -31,8 +36,12 @@ const AboutPage = () => {
           className="left-50 -bottom-17 right-3 md:block absolute z-10"
         />
       </div> */}
-      <BrandLevelUp />
-      <Mission />
+      <LazySection heightClassName="min-h-72">
+        <BrandLevelUp />
+      </LazySection>
+      <LazySection heightClassName="min-h-72">
+        <Mission />
+      </LazySection>
     </div>
   );
 };

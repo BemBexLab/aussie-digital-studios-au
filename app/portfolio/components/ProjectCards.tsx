@@ -177,6 +177,8 @@ const ProjectCardGrid = () => {
                       }}
                       src={imageUrl}
                       alt={post.title.rendered}
+                      loading="lazy"
+                      decoding="async"
                       className={`w-full object-cover object-top transition-transform duration-[2500ms] ease-in-out ${
                         figma
                           ? "h-auto"
@@ -227,6 +229,8 @@ const ProjectCardGrid = () => {
                       }}
                       src={imageUrl}
                       alt={post.title.rendered}
+                      loading="lazy"
+                      decoding="async"
                       className={`w-full object-cover object-top transition-transform duration-[2500ms] ease-in-out ${
                         figma
                           ? "h-auto"
@@ -275,6 +279,7 @@ const ProjectCardGrid = () => {
             <img
               src={modalProject.acf?.project_image?.url || "/default.webp"}
               alt={modalProject.title.rendered}
+              decoding="async"
               className="w-full h-auto max-h-[620px] rounded-lg mb-4 object-contain"
             />
           </div>

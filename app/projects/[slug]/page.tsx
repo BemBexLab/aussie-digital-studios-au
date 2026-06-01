@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import nextDynamic from "next/dynamic";
 import ProjectImage from "@/components/Projectimage";
 import SectionFallback from "@/components/SectionFallback";
+import LazySection from "@/components/LazySection";
 
 export const revalidate = 300;
 
@@ -139,61 +140,69 @@ export default async function ProjectPage({
         </h1>
 
         {/* Project Image - Now using Client Component */}
-        <ProjectImage 
-          src={imageUrl}
-          alt={project.title?.rendered || 'Project image'}
-          fallback="/default.webp"
-        />
+        <LazySection heightClassName="min-h-96">
+          <ProjectImage 
+            src={imageUrl}
+            alt={project.title?.rendered || 'Project image'}
+            fallback="/default.webp"
+          />
+        </LazySection>
 
         {/* Project Content Sections */}
-        <div className="w-full max-w-3xl space-y-12 text-lg sm:text-xl">
-          {acf?.introduction && (
-            <Section title="Introduction" text={acf.introduction} />
-          )}
-          {acf?.genesis_of_collaboration && (
-            <Section
-              title="Genesis Of Collaboration"
-              text={acf.genesis_of_collaboration}
-            />
-          )}
-          {acf?.conceptualization && (
-            <Section title="Conceptualization" text={acf.conceptualization} />
-          )}
-          {acf?.design_symphony && (
-            <Section title="Design Symphony" text={acf.design_symphony} />
-          )}
-          {acf?.development_overture && (
-            <Section
-              title="Development Overture"
-              text={acf.development_overture}
-            />
-          )}
-          {acf?.launch_and_beyond && (
-            <Section title="Launch And Beyond" text={acf.launch_and_beyond} />
-          )}
-          {acf?.conclusion && (
-            <Section title="Conclusion" text={acf.conclusion} />
-          )}
-        </div>
+        <LazySection heightClassName="min-h-96">
+          <div className="w-full max-w-3xl space-y-12 text-lg sm:text-xl">
+            {acf?.introduction && (
+              <Section title="Introduction" text={acf.introduction} />
+            )}
+            {acf?.genesis_of_collaboration && (
+              <Section
+                title="Genesis Of Collaboration"
+                text={acf.genesis_of_collaboration}
+              />
+            )}
+            {acf?.conceptualization && (
+              <Section title="Conceptualization" text={acf.conceptualization} />
+            )}
+            {acf?.design_symphony && (
+              <Section title="Design Symphony" text={acf.design_symphony} />
+            )}
+            {acf?.development_overture && (
+              <Section
+                title="Development Overture"
+                text={acf.development_overture}
+              />
+            )}
+            {acf?.launch_and_beyond && (
+              <Section title="Launch And Beyond" text={acf.launch_and_beyond} />
+            )}
+            {acf?.conclusion && (
+              <Section title="Conclusion" text={acf.conclusion} />
+            )}
+          </div>
+        </LazySection>
 
         {/* Live Website Preview (only if project_url exists) */}
         {acf?.project_url && (
-          <div className="w-full max-w-5xl mx-auto my-16 rounded-2xl overflow-hidden">
-            <div className="text-2xl font-semibold mb-2 px-6 pt-6 text-[#3A6EA5] text-center">
-              {/* Extract domain from URL or use default */}
-              {acf.project_url 
-                ? new URL(cleanUrl(acf.project_url)).hostname 
-                : 'Live Preview'
-              }
+          <LazySection heightClassName="min-h-96">
+            <div className="w-full max-w-5xl mx-auto my-16 rounded-2xl overflow-hidden">
+              <div className="text-2xl font-semibold mb-2 px-6 pt-6 text-[#3A6EA5] text-center">
+                {/* Extract domain from URL or use default */}
+                {acf.project_url 
+                  ? new URL(cleanUrl(acf.project_url)).hostname 
+                  : 'Live Preview'
+                }
+              </div>
+              <LivePreview url={cleanUrl(acf.project_url)} />
             </div>
-            <LivePreview url={cleanUrl(acf.project_url)} />
-          </div>
+          </LazySection>
         )}
 
         {/* Back Button */}
-        <div className="mt-16 mb-8 text-center">
-          <BackButton />
-        </div>
+        <LazySection heightClassName="min-h-24">
+          <div className="mt-16 mb-8 text-center">
+            <BackButton />
+          </div>
+        </LazySection>
       </div>
     );
   } catch (error) {

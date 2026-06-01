@@ -124,7 +124,11 @@ const MobileHeader = () => {
               );
             })}
 
-            <button className={`w-full flex items-center justify-center space-x-1 text-sm text-white hover:text-green-400 transition-colors px-4 py-2 mt-2 rounded-lg hover:bg-gray-900`}>
+            <Link
+              href="/contact"
+              className="w-full flex items-center justify-center space-x-1 text-sm text-white hover:text-green-400 transition-colors px-4 py-2 mt-2 rounded-lg hover:bg-gray-900"
+              onClick={() => setIsMenuOpen(false)}
+            >
               <span>Get In Touch</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -140,7 +144,7 @@ const MobileHeader = () => {
                   d="M17 8l4 4m0 0l-4 4m4-4H3"
                 />
               </svg>
-            </button>
+            </Link>
           </nav>
         </div>
       )}

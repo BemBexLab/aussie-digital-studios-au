@@ -3,6 +3,7 @@ import dynamic from "next/dynamic";
 import Hero from '@/components/Hero'
 import HeroMobile from '@/components/HeroMobile'
 import SectionFallback from "@/components/SectionFallback";
+import LazySection from "@/components/LazySection";
 
 const BlogPosts = dynamic(() => import("./components/BlogPosts"), {
   loading: () => <SectionFallback heightClassName="min-h-96" />,
@@ -17,8 +18,12 @@ const BlogPage = () => {
     <section>
         <Hero H={"Blogs"} />
         <HeroMobile H={"Blogs"} />
-        <BlogPosts />
-        <BlogPostsMobile />
+        <LazySection heightClassName="min-h-96">
+          <BlogPosts />
+        </LazySection>
+        <LazySection heightClassName="min-h-96">
+          <BlogPostsMobile />
+        </LazySection>
     </section>
   )
 }

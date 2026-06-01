@@ -4,6 +4,32 @@ import React from "react";
 import { motion } from "@/lib/motion";
 
 const Hero = () => {
+  const [shouldRenderVideo, setShouldRenderVideo] = React.useState(false);
+
+  React.useEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    const reducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+
+    if (reducedMotion) {
+      return;
+    }
+
+    const enableVideo = () => setShouldRenderVideo(true);
+
+    if ("requestIdleCallback" in window) {
+      const idleId = window.requestIdleCallback(enableVideo, { timeout: 1200 });
+      return () => window.cancelIdleCallback(idleId);
+    }
+
+    const timeoutId = setTimeout(enableVideo, 300);
+    return () => clearTimeout(timeoutId);
+  }, []);
+
   return (
     <>
       {/* Desktop Hero (1250px and up) */}
@@ -23,21 +49,22 @@ const Hero = () => {
         </div> */}
 
         {/* Video Overlay */}
-        <div className="absolute inset-0 z-10 flex items-center justify-center p-4 pointer-events-none">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="none"
-            className="w-full h-[300px] sm:h-[400px] min-[1250px]:w-full min-[1250px]:h-full object-cover mix-blend-overlay opacity-20 smoke-video"
-            aria-label="Video overlay"
-            style={{ position: "absolute", inset: 0, height: "695px" }}
-          >
-            <source src="/Clouds.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
+        {shouldRenderVideo ? (
+          <div className="absolute inset-0 z-10 flex items-center justify-center p-4 pointer-events-none">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="none"
+              className="w-full h-[300px] sm:h-[400px] min-[1250px]:w-full min-[1250px]:h-full object-cover mix-blend-overlay opacity-20 smoke-video"
+              aria-hidden="true"
+              style={{ position: "absolute", inset: 0, height: "695px" }}
+            >
+              <source src="/Clouds.mp4" type="video/mp4" />
+            </video>
+          </div>
+        ) : null}
 
         {/* Top content: text + frame */}
         <div className="flex flex-row justify-center gap-10 h-1/2">

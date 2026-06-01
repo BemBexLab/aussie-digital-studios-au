@@ -1,9 +1,13 @@
 import React from "react";
 import dynamic from "next/dynamic";
 import Hero from "./components/Hero";
-import LogoSlider from "./components/LogoSlider";
 import { getProjectPosts } from "@/lib/projectPosts";
 import SectionFallback from "@/components/SectionFallback";
+import LazySection from "@/components/LazySection";
+
+const LogoSlider = dynamic(() => import("./components/LogoSlider"), {
+  loading: () => <SectionFallback heightClassName="min-h-32" />,
+});
 
 const AboutUs = dynamic(() => import("./components/AboutUs"), {
   loading: () => <SectionFallback heightClassName="min-h-48" />,
@@ -42,9 +46,15 @@ const HomePage = async () => {
   return (
     <div className="overflow-hidden relative">
       <Hero />
-      <LogoSlider />
-      <AboutUs />
-      <Services />
+      <LazySection heightClassName="min-h-32">
+        <LogoSlider />
+      </LazySection>
+      <LazySection heightClassName="min-h-48">
+        <AboutUs />
+      </LazySection>
+      <LazySection heightClassName="min-h-72">
+        <Services />
+      </LazySection>
       {/* <Image
         src="/Geometric_Shape_Silver.webp"
         alt="Portfolio Background"
@@ -52,13 +62,27 @@ const HomePage = async () => {
         width={1920}
         height={1080}
       /> */}
-      <PortfolioSection initialPosts={initialPosts} />
-      <WhyChooseUs />
-      <BrandLevelUp />
-      <PricingPlan />
-      <CustomPlan />
-      <Testimonials />
-      <ContactUs />
+      <LazySection heightClassName="min-h-96">
+        <PortfolioSection initialPosts={initialPosts} />
+      </LazySection>
+      <LazySection heightClassName="min-h-72">
+        <WhyChooseUs />
+      </LazySection>
+      <LazySection heightClassName="min-h-72">
+        <BrandLevelUp />
+      </LazySection>
+      <LazySection heightClassName="min-h-96">
+        <PricingPlan />
+      </LazySection>
+      <LazySection heightClassName="min-h-72">
+        <CustomPlan />
+      </LazySection>
+      <LazySection heightClassName="min-h-80">
+        <Testimonials />
+      </LazySection>
+      <LazySection heightClassName="min-h-72">
+        <ContactUs />
+      </LazySection>
     </div>
   );
 };

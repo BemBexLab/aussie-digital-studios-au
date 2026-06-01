@@ -2,6 +2,7 @@ import dynamic from "next/dynamic";
 import Hero from "@/components/Hero";
 import { getProjectPosts } from "@/lib/projectPosts";
 import SectionFallback from "@/components/SectionFallback";
+import LazySection from "@/components/LazySection";
 
 const LazyPortfolioSection = dynamic(
   () => import("../Home/components/PortfolioSection"),
@@ -26,7 +27,9 @@ const PortfolioPage = async () => {
           className="relative z-10 bottom-[-103px] right-0 md:block"
         />
       </div> */}
-      <LazyPortfolioSection initialPosts={initialPosts} />
+      <LazySection heightClassName="min-h-96">
+        <LazyPortfolioSection initialPosts={initialPosts} />
+      </LazySection>
     </div>
   );
 };

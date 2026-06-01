@@ -3,6 +3,7 @@ import dynamic from "next/dynamic";
 import Hero from "./components/Hero";
 import { services } from "./[slug]/data";
 import SectionFallback from "@/components/SectionFallback";
+import LazySection from "@/components/LazySection";
 
 const WhyChoose = dynamic(() => import("./components/WhyChoose"), {
   loading: () => <SectionFallback heightClassName="min-h-72" />,
@@ -45,11 +46,21 @@ const ServicePage = () => {
   return (
     <section>
       <Hero H="Our Services" />
-      <WhyChoose data={services[0]?.whyChooseData} />
-      <MainServices />
-      <CustomPlan data={servicesCustomPlanData} />
-      <Testimonials />
-      <ContactUs data={services[0]?.contactData} />
+      <LazySection heightClassName="min-h-72">
+        <WhyChoose data={services[0]?.whyChooseData} />
+      </LazySection>
+      <LazySection heightClassName="min-h-96">
+        <MainServices />
+      </LazySection>
+      <LazySection heightClassName="min-h-72">
+        <CustomPlan data={servicesCustomPlanData} />
+      </LazySection>
+      <LazySection heightClassName="min-h-80">
+        <Testimonials />
+      </LazySection>
+      <LazySection heightClassName="min-h-72">
+        <ContactUs data={services[0]?.contactData} />
+      </LazySection>
     </section>
   );
 };

@@ -11,6 +11,7 @@ type HeroProps = {
 const Hero = ({ H }: HeroProps) => {
   const headingRef = React.useRef<HTMLDivElement | null>(null);
   const [isHeadingInView, setIsHeadingInView] = React.useState(false);
+  const [shouldRenderVideo, setShouldRenderVideo] = React.useState(false);
 
   React.useEffect(() => {
     const el = headingRef.current;
@@ -26,6 +27,30 @@ const Hero = ({ H }: HeroProps) => {
     );
     obs.observe(el);
     return () => obs.disconnect();
+  }, []);
+
+  React.useEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    const reducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+
+    if (reducedMotion) {
+      return;
+    }
+
+    const enableVideo = () => setShouldRenderVideo(true);
+
+    if ("requestIdleCallback" in window) {
+      const idleId = window.requestIdleCallback(enableVideo, { timeout: 1200 });
+      return () => window.cancelIdleCallback(idleId);
+    }
+
+    const timeoutId = setTimeout(enableVideo, 300);
+    return () => clearTimeout(timeoutId);
   }, []);
   return (
     <>
@@ -46,23 +71,25 @@ const Hero = ({ H }: HeroProps) => {
         }}
       >
       {/* Clouds Video Overlay */}
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="none"
-        controlsList="nodownload nofullscreen"
-        disablePictureInPicture
-        className="absolute inset-0 w-full h-full object-cover hero-video-overlay pointer-events-none"
-        style={{
-          mixBlendMode: "overlay",
-          filter: "brightness(2) contrast(1.1)",
-        }}
-      >
-        <source src="/Clouds.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      {shouldRenderVideo ? (
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="none"
+          controlsList="nodownload nofullscreen"
+          disablePictureInPicture
+          className="absolute inset-0 w-full h-full object-cover hero-video-overlay pointer-events-none"
+          aria-hidden="true"
+          style={{
+            mixBlendMode: "overlay",
+            filter: "brightness(2) contrast(1.1)",
+          }}
+        >
+          <source src="/Clouds.mp4" type="video/mp4" />
+        </video>
+      ) : null}
 
       {/* Content Wrapper */}
       <div ref={headingRef} className="flex flex-col items-center justify-end w-full relative z-10 px-4 pb-6">

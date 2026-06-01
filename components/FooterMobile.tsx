@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
 
 const FooterMobile = () => {
@@ -14,58 +15,58 @@ const FooterMobile = () => {
         <div className="grid grid-cols-2 gap-6 mb-8">
           {/* First Column */}
           <div className="flex flex-col gap-3 items-center text-center">
-            <a
+            <Link
               href="/"
               className="text-xs font-extralight hover:text-[#4C8C74] transition-colors"
             >
               Home
-            </a>
-            <a
+            </Link>
+            <Link
               href="/about"
               className="text-xs font-extralight hover:text-[#4C8C74] transition-colors"
             >
               About
-            </a>
-            <a
+            </Link>
+            <Link
               href="/services"
               className="text-xs font-extralight hover:text-[#4C8C74] transition-colors"
             >
               Services
-            </a>
-            <a
+            </Link>
+            <Link
               href="/portfolio"
               className="text-xs font-extralight hover:text-[#4C8C74] transition-colors"
             >
               Portfolio
-            </a>
+            </Link>
           </div>
 
           {/* Second Column */}
           <div className="flex flex-col gap-3 items-center text-center">
-            <a
+            <Link
               href="/packages"
               className="text-xs font-extralight hover:text-[#4C8C74] transition-colors"
             >
               Packages
-            </a>
-            <a
+            </Link>
+            <Link
               href="/contact"
               className="text-xs font-extralight hover:text-[#4C8C74] transition-colors"
             >
               Contact
-            </a>
-            <a
+            </Link>
+            <Link
               href="/terms"
               className="text-xs font-extralight hover:text-[#4C8C74] transition-colors"
             >
               Terms & Conditions
-            </a>
-            <a
+            </Link>
+            <Link
               href="/privacy"
               className="text-xs font-extralight hover:text-[#4C8C74] transition-colors"
             >
               Privacy Policy
-            </a>
+            </Link>
           </div>
         </div>
 
