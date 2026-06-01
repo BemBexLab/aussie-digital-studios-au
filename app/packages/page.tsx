@@ -1,6 +1,7 @@
 import dynamic from "next/dynamic";
 import Hero from "@/components/Hero";
 import SectionFallback from "@/components/SectionFallback";
+import LazySection from "@/components/LazySection";
 
 const PricingPlan = dynamic(() => import("../Home/components/PricingPlan"), {
   loading: () => <SectionFallback heightClassName="min-h-96" />,
@@ -20,8 +21,12 @@ const PackagePage = () => {
         width={1920}
         height={1080}
       /> */}
-      <PricingPlan />
-      <BrandLevelUp />
+      <LazySection heightClassName="min-h-96">
+        <PricingPlan />
+      </LazySection>
+      <LazySection heightClassName="min-h-72">
+        <BrandLevelUp />
+      </LazySection>
       <div className="relative">
         {/* <img
           src="/Geometric_Shape_Silver.webp"

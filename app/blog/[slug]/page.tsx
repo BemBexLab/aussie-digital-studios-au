@@ -5,6 +5,7 @@ import HeroMobile from '../components/HeroMobile'
 import { blogPosts } from '../data'
 import { notFound } from 'next/navigation'
 import SectionFallback from "@/components/SectionFallback";
+import LazySection from "@/components/LazySection";
 
 const BlogBody = dynamic(() => import("../components/BlogBody"), {
   loading: () => <SectionFallback heightClassName="min-h-96" />,
@@ -56,8 +57,12 @@ const BlogPage = async ({ params }: BlogPageProps) => {
     <section>
       <Hero H={blogPost.title} B={blogPost.description} />
       <HeroMobile H={blogPost.title} B={blogPost.description} />
-      <BlogBody subblog={subblogData} />
-      <BlogBodyMobile subblog={subblogData} />
+      <LazySection heightClassName="min-h-96">
+        <BlogBody subblog={subblogData} />
+      </LazySection>
+      <LazySection heightClassName="min-h-96">
+        <BlogBodyMobile subblog={subblogData} />
+      </LazySection>
     </section>
   )
 }

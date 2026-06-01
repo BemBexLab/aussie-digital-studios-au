@@ -2,9 +2,13 @@ import type { ReactNode } from "react";
 import dynamic from "next/dynamic";
 import { notFound } from "next/navigation";
 import Hero from "../components/Hero";
-import ServiceBody from "../components/ServiceBody";
 import { services } from "./data";
 import SectionFallback from "@/components/SectionFallback";
+import LazySection from "@/components/LazySection";
+
+const ServiceBody = dynamic(() => import("../components/ServiceBody"), {
+  loading: () => <SectionFallback heightClassName="min-h-72" />,
+});
 
 const Cards = dynamic(() => import("../components/Cards"), {
   loading: () => <SectionFallback heightClassName="min-h-96" />,
@@ -74,24 +78,48 @@ export default async function ServicePage({
   return (
     <div className="relative w-full p-0 m-0">
       <Hero H={service.title} />
-      <ServiceBody
-        data={service.serviceBodyData ?? []}
-        footnote={"footnote" in service ? (service.footnote as ReactNode) : undefined}
-      />
-      <Cards service={service} />
-      <WhyChoose data={service.whyChooseData} />
+      <LazySection heightClassName="min-h-72">
+        <ServiceBody
+          data={service.serviceBodyData ?? []}
+          footnote={"footnote" in service ? (service.footnote as ReactNode) : undefined}
+        />
+      </LazySection>
+      <LazySection heightClassName="min-h-96">
+        <Cards service={service} />
+      </LazySection>
+      <LazySection heightClassName="min-h-72">
+        <WhyChoose data={service.whyChooseData} />
+      </LazySection>
       {"ctaData" in service && service.ctaData ? (
-        <SocialAuditCta2 data={service.ctaData} />
+        <LazySection heightClassName="min-h-72">
+          <SocialAuditCta2 data={service.ctaData} />
+        </LazySection>
       ) : "ctaDiv" in service ? (
-        (service.ctaDiv as ReactNode)
+        <LazySection heightClassName="min-h-72">
+          {service.ctaDiv as ReactNode}
+        </LazySection>
       ) : null}
-      <OurProcess service={service} />
-      <Portfolio service={service} />
-      <PricingPlan service={service} />
-      <CustomPlan data={service.customplanData} />
-      <Testimonials />
-      <FAQ service={service} />
-      <ContactUs data={service.contactData} />
+      <LazySection heightClassName="min-h-72">
+        <OurProcess service={service} />
+      </LazySection>
+      <LazySection heightClassName="min-h-96">
+        <Portfolio service={service} />
+      </LazySection>
+      <LazySection heightClassName="min-h-96">
+        <PricingPlan service={service} />
+      </LazySection>
+      <LazySection heightClassName="min-h-72">
+        <CustomPlan data={service.customplanData} />
+      </LazySection>
+      <LazySection heightClassName="min-h-80">
+        <Testimonials />
+      </LazySection>
+      <LazySection heightClassName="min-h-72">
+        <FAQ service={service} />
+      </LazySection>
+      <LazySection heightClassName="min-h-72">
+        <ContactUs data={service.contactData} />
+      </LazySection>
     </div>
   );
 }
