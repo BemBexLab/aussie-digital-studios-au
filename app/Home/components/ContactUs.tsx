@@ -3,7 +3,7 @@
 import { TextField } from "@mui/material";
 import Image from "next/image";
 import React, { useState, useEffect, useRef } from "react";
-import { motion } from "motion/react";
+import { motion } from "@/lib/motion";
 import ContactUsSm from "./ContactUsSm";
 import { sendContactEmail } from "@/lib/emailService";
 import { useThemeMode } from "@/lib/useThemeMode";

@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion, useSpring } from "motion/react";
+import { motion, useSpring } from "@/lib/motion";
 
 export type SocialAuditCtaData = {
   badgeText: string;

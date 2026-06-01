@@ -4,19 +4,41 @@ import { notFound } from "next/navigation";
 import Hero from "../components/Hero";
 import ServiceBody from "../components/ServiceBody";
 import { services } from "./data";
+import SectionFallback from "@/components/SectionFallback";
 
-const Cards = dynamic(() => import("../components/Cards"));
-const WhyChoose = dynamic(() => import("../components/WhyChoose"));
-const SocialAuditCta2 = dynamic(() => import("../components/SocialAuditCta2"));
-const OurProcess = dynamic(() => import("../components/OurProcess"));
-const Portfolio = dynamic(() => import("../components/Portfolio"));
-const PricingPlan = dynamic(() => import("../components/PricingPlan"));
-const CustomPlan = dynamic(() => import("../../Home/components/CustomPlan"));
+const Cards = dynamic(() => import("../components/Cards"), {
+  loading: () => <SectionFallback heightClassName="min-h-96" />,
+});
+const WhyChoose = dynamic(() => import("../components/WhyChoose"), {
+  loading: () => <SectionFallback heightClassName="min-h-72" />,
+});
+const SocialAuditCta2 = dynamic(() => import("../components/SocialAuditCta2"), {
+  loading: () => <SectionFallback heightClassName="min-h-72" />,
+});
+const OurProcess = dynamic(() => import("../components/OurProcess"), {
+  loading: () => <SectionFallback heightClassName="min-h-72" />,
+});
+const Portfolio = dynamic(() => import("../components/Portfolio"), {
+  loading: () => <SectionFallback heightClassName="min-h-96" />,
+});
+const PricingPlan = dynamic(() => import("../components/PricingPlan"), {
+  loading: () => <SectionFallback heightClassName="min-h-96" />,
+});
+const CustomPlan = dynamic(() => import("../../Home/components/CustomPlan"), {
+  loading: () => <SectionFallback heightClassName="min-h-72" />,
+});
 const Testimonials = dynamic(() =>
-  import("../components/Testimonials").then((mod) => mod.Testimonials)
+  import("../components/Testimonials").then((mod) => mod.Testimonials),
+  {
+    loading: () => <SectionFallback heightClassName="min-h-80" />,
+  }
 );
-const FAQ = dynamic(() => import("../components/FAQ"));
-const ContactUs = dynamic(() => import("../components/ContactUs"));
+const FAQ = dynamic(() => import("../components/FAQ"), {
+  loading: () => <SectionFallback heightClassName="min-h-72" />,
+});
+const ContactUs = dynamic(() => import("../components/ContactUs"), {
+  loading: () => <SectionFallback heightClassName="min-h-72" />,
+});
 
 export function slugify(text: string): string {
   return text

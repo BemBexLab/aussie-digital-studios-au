@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import WhyChooseUsMobile from "./WhyChooseUsMobile";
-import { motion } from "motion/react";
+import { motion } from "@/lib/motion";
 import { useThemeMode } from "@/lib/useThemeMode";
 
 const cardData = [

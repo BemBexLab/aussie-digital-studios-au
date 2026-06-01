@@ -1,9 +1,11 @@
-import Header from '@/components/Header'
 import React from 'react'
-import Footer from '@/components/Footer'
-import Contact from './components/Contact'
+import dynamic from "next/dynamic";
 import Hero from '@/components/Hero'
-import HeroMobile from '@/components/HeroMobile'
+import SectionFallback from "@/components/SectionFallback";
+
+const Contact = dynamic(() => import("./components/Contact"), {
+  loading: () => <SectionFallback heightClassName="min-h-96" />,
+});
 
 
 const ContactPage = () => {

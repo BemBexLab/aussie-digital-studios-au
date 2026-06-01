@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { motion } from "motion/react";
+import { motion } from "@/lib/motion";
 import Link from "next/link";
 
 const Mission = () => {

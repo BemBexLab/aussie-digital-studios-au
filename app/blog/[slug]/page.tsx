@@ -1,10 +1,17 @@
 import React from 'react'
+import dynamic from "next/dynamic";
 import Hero from '../components/Hero'
 import HeroMobile from '../components/HeroMobile'
-import BlogBody from '../components/BlogBody'
-import BlogBodyMobile from '../components/BlogBodyMobile'
 import { blogPosts } from '../data'
 import { notFound } from 'next/navigation'
+import SectionFallback from "@/components/SectionFallback";
+
+const BlogBody = dynamic(() => import("../components/BlogBody"), {
+  loading: () => <SectionFallback heightClassName="min-h-96" />,
+});
+const BlogBodyMobile = dynamic(() => import("../components/BlogBodyMobile"), {
+  loading: () => <SectionFallback heightClassName="min-h-96" />,
+});
 
 interface BlogPageProps {
   params: Promise<{

@@ -1,20 +1,40 @@
 import React from "react";
 import dynamic from "next/dynamic";
-import AboutUs from "./components/AboutUs";
-import Services from "./components/Services";
 import Hero from "./components/Hero";
 import LogoSlider from "./components/LogoSlider";
 import { getProjectPosts } from "@/lib/projectPosts";
+import SectionFallback from "@/components/SectionFallback";
 
-const PortfolioSection = dynamic(() => import("./components/PortfolioSection"));
-const WhyChooseUs = dynamic(() => import("./components/WhyChooseUs"));
-const BrandLevelUp = dynamic(() => import("./components/BrandLevelUp"));
-const PricingPlan = dynamic(() => import("./components/PricingPlan"));
-const CustomPlan = dynamic(() => import("./components/CustomPlan"));
+const AboutUs = dynamic(() => import("./components/AboutUs"), {
+  loading: () => <SectionFallback heightClassName="min-h-48" />,
+});
+const Services = dynamic(() => import("./components/Services"), {
+  loading: () => <SectionFallback heightClassName="min-h-72" />,
+});
+const PortfolioSection = dynamic(() => import("./components/PortfolioSection"), {
+  loading: () => <SectionFallback heightClassName="min-h-96" />,
+});
+const WhyChooseUs = dynamic(() => import("./components/WhyChooseUs"), {
+  loading: () => <SectionFallback heightClassName="min-h-72" />,
+});
+const BrandLevelUp = dynamic(() => import("./components/BrandLevelUp"), {
+  loading: () => <SectionFallback heightClassName="min-h-72" />,
+});
+const PricingPlan = dynamic(() => import("./components/PricingPlan"), {
+  loading: () => <SectionFallback heightClassName="min-h-96" />,
+});
+const CustomPlan = dynamic(() => import("./components/CustomPlan"), {
+  loading: () => <SectionFallback heightClassName="min-h-72" />,
+});
 const Testimonials = dynamic(() =>
-  import("./components/Testimonials").then((mod) => mod.Testimonials)
+  import("./components/Testimonials").then((mod) => mod.Testimonials),
+  {
+    loading: () => <SectionFallback heightClassName="min-h-80" />,
+  }
 );
-const ContactUs = dynamic(() => import("./components/ContactUs"));
+const ContactUs = dynamic(() => import("./components/ContactUs"), {
+  loading: () => <SectionFallback heightClassName="min-h-72" />,
+});
 
 const HomePage = async () => {
   const initialPosts = await getProjectPosts();

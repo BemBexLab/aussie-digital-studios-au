@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
-import { motion } from "motion/react";
+import { motion } from "@/lib/motion";
 import { useThemeMode } from "@/lib/useThemeMode";
 
 const valuesContent = [

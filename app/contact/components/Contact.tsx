@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { motion } from "motion/react";
+import { motion } from "@/lib/motion";
 import ContactMobile from "./ContactMobile";
 import { useThemeMode } from "@/lib/useThemeMode";
 

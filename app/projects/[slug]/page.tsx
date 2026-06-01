@@ -1,12 +1,15 @@
 import { notFound } from "next/navigation";
 import nextDynamic from "next/dynamic";
-import LivePreview from "@/components/LivePreview";
 import ProjectImage from "@/components/Projectimage";
+import SectionFallback from "@/components/SectionFallback";
 
 export const revalidate = 300;
 
 // Dynamically import the client-only BackButton
 const BackButton = nextDynamic(() => import("../[slug]/BackButton"));
+const LivePreview = nextDynamic(() => import("@/components/LivePreview"), {
+  loading: () => <SectionFallback heightClassName="min-h-96" />,
+});
 
 const API_URL =
   "https://olive-peafowl-546702.hostingersite.com/wp-json/wp/v2/posts?slug=";

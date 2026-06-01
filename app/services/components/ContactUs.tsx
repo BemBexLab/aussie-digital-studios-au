@@ -2,7 +2,7 @@
 
 import { Button, TextField } from "@mui/material";
 import React, { useState, useEffect } from "react";
-import { motion } from "motion/react";
+import { motion } from "@/lib/motion";
 import ContactUsMobile from "./ContactUsMobile";
 import { sendContactEmail } from "@/lib/emailService";
 

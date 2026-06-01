@@ -1,8 +1,11 @@
 import React from 'react'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-import JobPosting from './components/JobPosting'
+import dynamic from "next/dynamic";
 import Hero from '@/components/Hero'
+import SectionFallback from "@/components/SectionFallback";
+
+const JobPosting = dynamic(() => import("./components/JobPosting"), {
+  loading: () => <SectionFallback heightClassName="min-h-96" />,
+});
 
 const CareerPage = () => {
   return (

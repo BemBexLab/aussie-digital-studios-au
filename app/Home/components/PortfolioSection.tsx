@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import { GoArrowDown } from "react-icons/go";
 import { IoClose } from "react-icons/io5";
-import { motion } from "motion/react";
+import { motion } from "@/lib/motion";
 import type { ProjectPost } from "@/lib/projectPosts";
 
 // Category configuration

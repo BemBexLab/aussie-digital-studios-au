@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { BsArrowUpRightCircle } from "react-icons/bs";
 import Image from "next/image";
-import { motion } from "motion/react";
+import { motion } from "@/lib/motion";
 import ServicesMobile from "./ServicesMobile";
 
 const services = [
