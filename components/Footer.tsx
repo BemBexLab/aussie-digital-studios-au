@@ -1,17 +1,13 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
 import FooterMobile from "./FooterMobile";
 import { useThemeMode } from "@/lib/useThemeMode";
-
+ 
 const Footer = () => {
   const { isDarkMode } = useThemeMode();
-  const [isClient, setIsClient] = React.useState(false);
-
-  React.useEffect(() => {
-    setIsClient(true);
-  }, []);
 
   return (
     <>
@@ -34,30 +30,30 @@ const Footer = () => {
             <div className="grid grid-cols-2 md:flex md:flex-row gap-8 md:gap-[35px]">
               {/* First Column */}
               <div className="flex flex-col mt-0 md:mt-5 gap-2">
-                <a
+                <Link
                   href="/"
                   className="text-sm font-extralight hover:text-[#4C8C74] transition-colors"
                 >
                   Home
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/about"
                   className="text-sm font-extralight hover:text-[#4C8C74] transition-colors"
                 >
                   About
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/services"
                   className="text-sm font-extralight hover:text-[#4C8C74] transition-colors"
                 >
                   Services
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/portfolio"
                   className="text-sm font-extralight hover:text-[#4C8C74] transition-colors"
                 >
                   Portfolio
-                </a>
+                </Link>
                 {/* <a
                 href="#"
                 className="text-sm font-extralight hover:text-[#4C8C74] transition-colors"
@@ -68,30 +64,30 @@ const Footer = () => {
 
               {/* Second Column */}
               <div className="flex flex-col mt-0 md:mt-5 gap-2">
-                <a
+                <Link
                   href="/packages"
                   className="text-sm font-extralight hover:text-[#4C8C74] transition-colors"
                 >
                   Packages
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/contact"
                   className="text-sm font-extralight hover:text-[#4C8C74] transition-colors"
                 >
                   Contact
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/terms"
                   className="text-sm font-extralight hover:text-[#4C8C74] transition-colors"
                 >
                   Terms & Conditions
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/privacy"
                   className="text-sm font-extralight hover:text-[#4C8C74] transition-colors"
                 >
                   Privacy Policy
-                </a>
+                </Link>
               </div>
 
               {/* Third Column - Social Media */}
@@ -196,7 +192,6 @@ const Footer = () => {
 
         {/* Aussie Digital SVGs */}
         <div className="w-full flex justify-center items-center mx-auto px-4">
-          {isClient && (
           <Image
             src="/aussie_digital_stroke_light.webp"
             alt="Aussie Digital Studios"
@@ -204,7 +199,6 @@ const Footer = () => {
             height={1900}
             className="mb-4 h-auto w-[1300px] max-w-full"
           />
-          )}
         </div>
       </div>
     </>

@@ -10,7 +10,6 @@ import MobileHeader from "./MobileHeader";
 import { useThemeMode } from "@/lib/useThemeMode";
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [logoFallback, setLogoFallback] = useState(false);
   const { isDarkMode } = useThemeMode();
   const pathname = usePathname();
@@ -143,7 +142,10 @@ const Header = () => {
         </div>
 
         {/* Right side: Get In Touch button */}
-        <button className="hidden md:flex items-center space-x-1 text-xs lg:text-sm text-white hover:text-green-400 transition-colors whitespace-nowrap px-2 lg:px-0" onClick={() => { window.location.href = '/contact'; }}>
+        <Link
+          href="/contact"
+          className="hidden md:flex items-center space-x-1 text-xs lg:text-sm text-white hover:text-green-400 transition-colors whitespace-nowrap px-2 lg:px-0"
+        >
           <span>Get In Touch</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -159,7 +161,7 @@ const Header = () => {
               d="M17 8l4 4m0 0l-4 4m4-4H3"
             />
           </svg>
-        </button>
+        </Link>
       </div>
     </header>
     </>
