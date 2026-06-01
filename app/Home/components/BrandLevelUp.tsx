@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import BrandLevelUpMobile from "./BrandLevelUpMobile";
-import { motion } from "motion/react";
+import { motion } from "@/lib/motion";
 
 const BrandLevelUp = () => {
   const router = useRouter();

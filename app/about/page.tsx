@@ -1,9 +1,20 @@
 import React from "react";
-import About from "./components/About";
-import Values from "./components/Values";
-import BrandLevelUp from "../Home/components/BrandLevelUp";
-import Mission from "./components/Mission";
+import dynamic from "next/dynamic";
 import Hero from "@/components/Hero";
+import SectionFallback from "@/components/SectionFallback";
+
+const About = dynamic(() => import("./components/About"), {
+  loading: () => <SectionFallback heightClassName="min-h-72" />,
+});
+const Values = dynamic(() => import("./components/Values"), {
+  loading: () => <SectionFallback heightClassName="min-h-72" />,
+});
+const BrandLevelUp = dynamic(() => import("../Home/components/BrandLevelUp"), {
+  loading: () => <SectionFallback heightClassName="min-h-72" />,
+});
+const Mission = dynamic(() => import("./components/Mission"), {
+  loading: () => <SectionFallback heightClassName="min-h-72" />,
+});
 
 const AboutPage = () => {
   return (

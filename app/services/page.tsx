@@ -1,11 +1,27 @@
 import React from "react";
+import dynamic from "next/dynamic";
 import Hero from "./components/Hero";
-import WhyChoose from "./components/WhyChoose";
-import { Testimonials } from "../Home/components/Testimonials";
-import CustomPlan from "../Home/components/CustomPlan";
-import ContactUs from "./components/ContactUs";
-import MainServices from "./components/MainServices";
 import { services } from "./[slug]/data";
+import SectionFallback from "@/components/SectionFallback";
+
+const WhyChoose = dynamic(() => import("./components/WhyChoose"), {
+  loading: () => <SectionFallback heightClassName="min-h-72" />,
+});
+const Testimonials = dynamic(
+  () => import("../Home/components/Testimonials").then((mod) => mod.Testimonials),
+  {
+    loading: () => <SectionFallback heightClassName="min-h-80" />,
+  }
+);
+const CustomPlan = dynamic(() => import("../Home/components/CustomPlan"), {
+  loading: () => <SectionFallback heightClassName="min-h-72" />,
+});
+const ContactUs = dynamic(() => import("./components/ContactUs"), {
+  loading: () => <SectionFallback heightClassName="min-h-72" />,
+});
+const MainServices = dynamic(() => import("./components/MainServices"), {
+  loading: () => <SectionFallback heightClassName="min-h-96" />,
+});
 
 const servicesCustomPlanData = {
   rightContent: (

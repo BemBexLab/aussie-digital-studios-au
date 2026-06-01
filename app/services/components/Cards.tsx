@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { motion } from "motion/react";
+import { motion } from "@/lib/motion";
 import CardsMobile from "./CardsMobile";
 import { AiOutlineArrowDown, AiOutlineArrowUp } from "react-icons/ai";
 

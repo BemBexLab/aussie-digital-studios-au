@@ -1,6 +1,13 @@
-import PricingPlan from "../Home/components/PricingPlan";
-import BrandLevelUp from "../Home/components/BrandLevelUp";
+import dynamic from "next/dynamic";
 import Hero from "@/components/Hero";
+import SectionFallback from "@/components/SectionFallback";
+
+const PricingPlan = dynamic(() => import("../Home/components/PricingPlan"), {
+  loading: () => <SectionFallback heightClassName="min-h-96" />,
+});
+const BrandLevelUp = dynamic(() => import("../Home/components/BrandLevelUp"), {
+  loading: () => <SectionFallback heightClassName="min-h-72" />,
+});
 
 const PackagePage = () => {
   return (

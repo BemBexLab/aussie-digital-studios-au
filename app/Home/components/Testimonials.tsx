@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion } from "motion/react";
+import { motion } from "@/lib/motion";
 import Image from "next/image";
 import { resolveViewport } from "next/dist/lib/metadata/resolve-metadata";
 

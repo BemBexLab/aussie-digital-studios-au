@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import { motion } from "motion/react";
+import { motion } from "@/lib/motion";
 import HeroMobile from "@/components/HeroMobile";
 
 type HeroProps = {

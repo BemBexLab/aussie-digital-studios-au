@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { motion } from "motion/react";
+import { motion } from "@/lib/motion";
 import Divider from "./Divider";
 import ProcessCards from "./ProcessCards";
 

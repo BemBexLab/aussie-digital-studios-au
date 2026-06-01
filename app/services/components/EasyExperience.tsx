@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, type ReactNode } from "react";
-import { motion } from "motion/react";
+import { motion } from "@/lib/motion";
 import { AiOutlineArrowDown, AiOutlineArrowUp } from "react-icons/ai";
 
 type EasyExperienceShapeBase = {

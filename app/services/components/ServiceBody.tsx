@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { motion } from "motion/react";
+import { motion } from "@/lib/motion";
 import { FiCheckCircle } from "react-icons/fi";
 
 type ServiceBodyItem = {
