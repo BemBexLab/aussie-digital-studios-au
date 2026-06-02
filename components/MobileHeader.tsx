@@ -104,7 +104,7 @@ const MobileHeader = () => {
             {/* Services Dropdown - after About */}
             <MobileServicesDropdown />
 
-            {['Portfolio', 'Packages', 'Contact'].map((item) => {
+            {['Portfolio', 'Packages', 'Blogs', 'Contact'].map((item) => {
               const href = `/${item.toLowerCase()}`;
               const active = isActive(item);
 

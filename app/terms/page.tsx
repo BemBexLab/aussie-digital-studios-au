@@ -1,3 +1,12 @@
+import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = buildMetadata({
+  title: "Terms and Conditions",
+  description:
+    "Read the Aussie Digital Studios terms and conditions for using our website, services, packages, and communications.",
+  path: "/terms",
+});
 
 const TermsAndConditions = () => {
   return (

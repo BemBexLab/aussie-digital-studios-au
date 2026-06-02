@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import dynamic from "next/dynamic";
 import { notFound } from "next/navigation";
@@ -5,6 +6,7 @@ import Hero from "../components/Hero";
 import { services } from "./data";
 import SectionFallback from "@/components/SectionFallback";
 import LazySection from "@/components/LazySection";
+import { buildMetadata } from "@/lib/seo";
 
 const ServiceBody = dynamic(() => import("../components/ServiceBody"), {
   loading: () => <SectionFallback heightClassName="min-h-72" />,
@@ -60,6 +62,30 @@ export async function generateStaticParams() {
   return services.map((service) => ({
     slug: service.slug,
   }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const service = services.find((item) => item.slug === slug);
+
+  if (!service) {
+    return buildMetadata({
+      title: "Services",
+      description:
+        "Explore Aussie Digital Studios services including web design, development, branding, SEO, paid advertising, social media, and digital strategy.",
+      path: `/services/${slug}`,
+    });
+  }
+
+  return buildMetadata({
+    title: service.title,
+    description: `Explore ${service.title} services from Aussie Digital Studios and see how we help businesses grow with practical, results-focused digital execution.`,
+    path: `/services/${service.slug}`,
+  });
 }
 
 export default async function ServicePage({

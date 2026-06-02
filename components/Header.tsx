@@ -108,7 +108,7 @@ const Header = () => {
 
           {/* Desktop Nav - now next to logo */}
           <nav className="hidden md:flex flex-row space-x-6 items-center relative">
-            {['Home', 'About', 'Services', 'Portfolio', 'Packages', 'Contact'].map((item) => {
+            {['Home', 'About', 'Services', 'Portfolio', 'Packages', 'Blogs', 'Contact'].map((item) => {
               const href =
                 item === 'Home'
                   ? '/'

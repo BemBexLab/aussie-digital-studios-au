@@ -1,4 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = buildMetadata({
+  title: "Privacy Policy",
+  description:
+    "Read the Aussie Digital Studios privacy policy covering how we collect, use, store, and protect personal information.",
+  path: "/privacy",
+});
 
 const Privacy = () => {
   return (

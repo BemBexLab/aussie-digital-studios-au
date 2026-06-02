@@ -11,6 +11,7 @@ export async function sendContactEmail(data: {
   service: string;
   subject: string;
   detail: string;
+  source?: string;
 }) {
   try {
     const response = await fetch("/api/smtp", {
@@ -29,7 +30,7 @@ export async function sendContactEmail(data: {
 
     return {
       success: true,
-      message: result.message,
+      message: result.message || "Email sent successfully.",
     };
   } catch (error) {
     console.error("Email send error:", error);

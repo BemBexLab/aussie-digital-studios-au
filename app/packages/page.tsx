@@ -1,7 +1,16 @@
+import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import Hero from "@/components/Hero";
 import SectionFallback from "@/components/SectionFallback";
 import LazySection from "@/components/LazySection";
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = buildMetadata({
+  title: "Packages",
+  description:
+    "Review Aussie Digital Studios packages for branding, web design, and digital services built to suit different business stages and budgets.",
+  path: "/packages",
+});
 
 const PricingPlan = dynamic(() => import("../Home/components/PricingPlan"), {
   loading: () => <SectionFallback heightClassName="min-h-96" />,

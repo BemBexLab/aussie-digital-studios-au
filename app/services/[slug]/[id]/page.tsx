@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import type { ComponentProps, ReactNode } from "react";
 import Hero from "../../components/Hero";
 import ServiceBody from "../../components/ServiceBody";
@@ -15,12 +16,39 @@ import { notFound } from "next/navigation";
 import { services } from "../data";
 import SocialAuditCta from "../../components/SocialAuditCta";
 import SocialAuditCta2 from "../../components/SocialAuditCta2";
+import { buildMetadata } from "@/lib/seo";
 
 interface ServicePageProps {
   params: Promise<{
     slug: string;
     id: string;
   }>;
+}
+
+export async function generateMetadata({
+  params,
+}: ServicePageProps): Promise<Metadata> {
+  const { slug, id } = await params;
+
+  const parentService = services.find((service) => service.slug === slug);
+  const service = parentService?.subcategory?.find(
+    (subcategory) => subcategory.slug === id
+  );
+
+  if (!service) {
+    return buildMetadata({
+      title: "Service Details",
+      description:
+        "Explore detailed digital service solutions from Aussie Digital Studios.",
+      path: `/services/${slug}/${id}`,
+    });
+  }
+
+  return buildMetadata({
+    title: service.title,
+    description: `Learn more about ${service.title} from Aussie Digital Studios and how this service supports business growth, visibility, and conversion.`,
+    path: `/services/${slug}/${id}`,
+  });
 }
 
 const ServiceInnerPage = async ({ params }: ServicePageProps) => {

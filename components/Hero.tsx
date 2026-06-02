@@ -64,7 +64,7 @@ const Hero = ({ H }: HeroProps) => {
         className="hidden md:flex w-full h-[60vh] lg:h-[70vh] items-center justify-center relative overflow-hidden"
         data-hero-bg-about
         style={{
-          backgroundImage: "url('/about/About Hero BG.webp')",
+          backgroundImage: "url('/About/About Hero BG.webp')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -84,7 +84,7 @@ const Hero = ({ H }: HeroProps) => {
           aria-hidden="true"
           style={{
             mixBlendMode: "overlay",
-            filter: "brightness(2) contrast(1.1)",
+            filter: "brightness(1.3) contrast(1.1)",
           }}
         >
           <source src="/Clouds.mp4" type="video/mp4" />

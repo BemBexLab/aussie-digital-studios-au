@@ -1,8 +1,17 @@
+import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import Hero from "@/components/Hero";
 import { getProjectPosts } from "@/lib/projectPosts";
 import SectionFallback from "@/components/SectionFallback";
 import LazySection from "@/components/LazySection";
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = buildMetadata({
+  title: "Portfolio",
+  description:
+    "Browse the Aussie Digital Studios portfolio to see recent website, branding, and digital project work delivered for growing businesses.",
+  path: "/portfolio",
+});
 
 const LazyPortfolioSection = dynamic(
   () => import("../Home/components/PortfolioSection"),

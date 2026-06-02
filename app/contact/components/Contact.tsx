@@ -1,13 +1,70 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { motion } from "@/lib/motion";
 import ContactMobile from "./ContactMobile";
+import { sendContactEmail } from "@/lib/emailService";
 import { useThemeMode } from "@/lib/useThemeMode";
 
 const Contact = () => {
   const { isDarkMode } = useThemeMode();
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    service: "",
+    subject: "",
+    detail: "",
+  });
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
+  const [isSuccess, setIsSuccess] = useState(false);
+
+  const handleInputChange = (
+    event:
+      | React.ChangeEvent<HTMLInputElement>
+      | React.ChangeEvent<HTMLTextAreaElement>
+      | React.ChangeEvent<HTMLSelectElement>,
+  ) => {
+    const { name, value } = event.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setLoading(true);
+    setMessage("");
+
+    const result = await sendContactEmail({
+      ...formData,
+      source: "Contact page desktop form",
+    });
+
+    setLoading(false);
+
+    if (result.success) {
+      setMessage("✅ Email sent successfully! We'll be in touch soon.");
+      setIsSuccess(true);
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        service: "",
+        subject: "",
+        detail: "",
+      });
+      setTimeout(() => setMessage(""), 5000);
+    } else {
+      setMessage(`❌ Error: ${result.error}`);
+      setIsSuccess(false);
+    }
+  };
 
   return (
     <>
@@ -24,12 +81,12 @@ const Contact = () => {
                 height={900}
                 className="h-[320px] w-full rounded-xl object-cover md:h-[360px] lg:h-full"
               />
-              <div className="pointer-events-none absolute -left-6 top-1/2 hidden -translate-y-1/2 lg:block xl:-left-15">
+              <div className="pointer-events-none absolute -left-46 top-1/2 hidden -translate-y-1/2 lg:block xl:-left-105">
                 <Image
-                  src="/Contact/shape.webp"
+                  src="/Contact/61da23ef-4d09-41be-a65c-a0692caccb38 1.png"
                   alt="decorative shape"
-                  width={196}
-                  height={196}
+                  width={596}
+                  height={596}
                   className="h-auto w-auto object-contain"
                 />
               </div>
@@ -72,16 +129,25 @@ const Contact = () => {
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
                 viewport={{ once: true, amount: 0.5 }}
+                onSubmit={handleSubmit}
               >
                 <div className="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-6">
                   <input
                     type="text"
+                    name="firstName"
                     placeholder="First Name"
+                    value={formData.firstName}
+                    onChange={handleInputChange}
+                    required
                     className="border-b border-gray-500 bg-transparent pb-3 text-white placeholder-gray-500 focus:border-teal-400 focus:outline-none"
                   />
                   <input
                     type="text"
+                    name="lastName"
                     placeholder="Last Name"
+                    value={formData.lastName}
+                    onChange={handleInputChange}
+                    required
                     className="border-b border-gray-500 bg-transparent pb-3 text-white placeholder-gray-500 focus:border-teal-400 focus:outline-none"
                   />
                 </div>
@@ -89,17 +155,31 @@ const Contact = () => {
                 <div className="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-6">
                   <input
                     type="email"
+                    name="email"
                     placeholder="Email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    required
                     className="border-b border-gray-500 bg-transparent pb-3 text-white placeholder-gray-500 focus:border-teal-400 focus:outline-none"
                   />
                   <input
                     type="tel"
+                    name="phone"
                     placeholder="Phone number"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    required
                     className="border-b border-gray-500 bg-transparent pb-3 text-white placeholder-gray-500 focus:border-teal-400 focus:outline-none"
                   />
                 </div>
 
-                <select className="w-full cursor-pointer appearance-none border-b border-gray-500 bg-transparent pb-3 text-gray-500 placeholder-gray-500 focus:border-teal-400 focus:outline-none">
+                <select
+                  name="service"
+                  value={formData.service}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full cursor-pointer appearance-none border-b border-gray-500 bg-transparent pb-3 text-gray-500 placeholder-gray-500 focus:border-teal-400 focus:outline-none"
+                >
                   <option value="">Select services</option>
                   <option value="Logo">Logo</option>
                   <option value="Ecommerce">Ecommerce</option>
@@ -113,19 +193,43 @@ const Contact = () => {
 
                 <input
                   type="text"
+                  name="subject"
                   placeholder="Subject"
+                  value={formData.subject}
+                  onChange={handleInputChange}
+                  required
                   className="w-full border-b border-gray-500 bg-transparent pb-3 text-white placeholder-gray-500 focus:border-teal-400 focus:outline-none"
                 />
 
                 <textarea
+                  name="detail"
                   placeholder="Details"
                   rows={5}
+                  value={formData.detail}
+                  onChange={handleInputChange}
+                  required
                   className="w-full resize-none border-b border-gray-500 bg-transparent pb-3 text-white placeholder-gray-500 focus:border-teal-400 focus:outline-none"
-                ></textarea>
+                />
+
+                {message && (
+                  <div
+                    className={`rounded p-3 text-center text-sm ${
+                      isSuccess
+                        ? "bg-green-500 bg-opacity-20 text-green-400"
+                        : "bg-red-500 bg-opacity-20 text-red-400"
+                    }`}
+                  >
+                    {message}
+                  </div>
+                )}
 
                 <div className="pt-2 md:pt-4">
-                  <button className="group inline-flex w-full items-center justify-center rounded-full bg-teal-500 px-5 py-3 text-sm text-white transition-all hover:bg-blue-400 md:w-auto md:px-4 md:py-2">
-                    <span>Submit</span>
+                  <button
+                    type="submit"
+                    disabled={loading}
+                    className="group inline-flex w-full items-center justify-center rounded-full bg-teal-500 px-5 py-3 text-sm text-white transition-all hover:bg-blue-400 disabled:cursor-not-allowed disabled:opacity-50 md:w-auto md:px-4 md:py-2"
+                  >
+                    <span>{loading ? "Sending..." : "Submit"}</span>
                     <span className="relative ml-2 flex h-6 w-6 items-center justify-center">
                       <span
                         className={`absolute inset-0 rounded-full transition-colors ${
