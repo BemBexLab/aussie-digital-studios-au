@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Swal from "sweetalert2";
 import { motion } from "@/lib/motion";
 import ContactMobile from "./ContactMobile";
 import { sendContactEmail } from "@/lib/emailService";
@@ -19,8 +20,6 @@ const Contact = () => {
     detail: "",
   });
   const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState("");
-  const [isSuccess, setIsSuccess] = useState(false);
 
   const handleInputChange = (
     event:
@@ -38,7 +37,6 @@ const Contact = () => {
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setLoading(true);
-    setMessage("");
 
     const result = await sendContactEmail({
       ...formData,
@@ -48,8 +46,6 @@ const Contact = () => {
     setLoading(false);
 
     if (result.success) {
-      setMessage("✅ Email sent successfully! We'll be in touch soon.");
-      setIsSuccess(true);
       setFormData({
         firstName: "",
         lastName: "",
@@ -59,10 +55,24 @@ const Contact = () => {
         subject: "",
         detail: "",
       });
-      setTimeout(() => setMessage(""), 5000);
+
+      await Swal.fire({
+        icon: "success",
+        title: "Message sent",
+        text: "Your message was sent successfully. We'll be in touch soon.",
+        confirmButtonColor: "#14b8a6",
+        background: isDarkMode ? "#111827" : "#ffffff",
+        color: isDarkMode ? "#ffffff" : "#111827",
+      });
     } else {
-      setMessage(`❌ Error: ${result.error}`);
-      setIsSuccess(false);
+      await Swal.fire({
+        icon: "error",
+        title: "Message failed",
+        text: result.error || "Unable to send your message right now.",
+        confirmButtonColor: "#ef4444",
+        background: isDarkMode ? "#111827" : "#ffffff",
+        color: isDarkMode ? "#ffffff" : "#111827",
+      });
     }
   };
 
@@ -210,19 +220,6 @@ const Contact = () => {
                   required
                   className="w-full resize-none border-b border-gray-500 bg-transparent pb-3 text-white placeholder-gray-500 focus:border-teal-400 focus:outline-none"
                 />
-
-                {message && (
-                  <div
-                    className={`rounded p-3 text-center text-sm ${
-                      isSuccess
-                        ? "bg-green-500 bg-opacity-20 text-green-400"
-                        : "bg-red-500 bg-opacity-20 text-red-400"
-                    }`}
-                  >
-                    {message}
-                  </div>
-                )}
-
                 <div className="pt-2 md:pt-4">
                   <button
                     type="submit"

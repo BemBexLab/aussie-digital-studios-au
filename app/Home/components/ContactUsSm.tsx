@@ -2,7 +2,8 @@
 
 import { TextField } from "@mui/material";
 import Image from "next/image";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import Swal from "sweetalert2";
 import { sendContactEmail } from "@/lib/emailService";
 import { useThemeMode } from "@/lib/useThemeMode";
 
@@ -18,8 +19,6 @@ const ContactUsSm = () => {
   });
   const { isDarkMode } = useThemeMode();
   const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState("");
-  const [isSuccess, setIsSuccess] = useState(false);
 
   const textFieldSx = {
     "& .MuiInput-input": {
@@ -59,7 +58,6 @@ const ContactUsSm = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    setMessage("");
 
     const result = await sendContactEmail({
       firstName: formData.firstName,
@@ -75,8 +73,6 @@ const ContactUsSm = () => {
     setLoading(false);
 
     if (result.success) {
-      setMessage("✅ Email sent successfully! We'll be in touch soon.");
-      setIsSuccess(true);
       setFormData({
         firstName: "",
         lastName: "",
@@ -86,10 +82,24 @@ const ContactUsSm = () => {
         subject: "",
         detail: "",
       });
-      setTimeout(() => setMessage(""), 5000);
+
+      await Swal.fire({
+        icon: "success",
+        title: "Message sent",
+        text: "Your message was sent successfully. We'll be in touch soon.",
+        confirmButtonColor: "#14b8a6",
+        background: isDarkMode ? "#111827" : "#ffffff",
+        color: isDarkMode ? "#ffffff" : "#111827",
+      });
     } else {
-      setMessage(`❌ Error: ${result.error}`);
-      setIsSuccess(false);
+      await Swal.fire({
+        icon: "error",
+        title: "Message failed",
+        text: result.error || "Unable to send your message right now.",
+        confirmButtonColor: "#ef4444",
+        background: isDarkMode ? "#111827" : "#ffffff",
+        color: isDarkMode ? "#ffffff" : "#111827",
+      });
     }
   };
 
@@ -201,20 +211,6 @@ const ContactUsSm = () => {
               required
               sx={textFieldSx}
             />
-
-            {/* Message Alert */}
-            {message && (
-              <div
-                className={`p-3 rounded text-sm text-center ${
-                  isSuccess
-                    ? "bg-green-500 bg-opacity-20 text-green-400"
-                    : "bg-red-500 bg-opacity-20 text-red-400"
-                }`}
-              >
-                {message}
-              </div>
-            )}
-
             {/* Submit Button */}
             <button
               type="submit"

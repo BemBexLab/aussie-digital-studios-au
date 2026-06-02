@@ -2,7 +2,8 @@
 
 import { TextField } from "@mui/material";
 import Image from "next/image";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
+import Swal from "sweetalert2";
 import { motion } from "@/lib/motion";
 import ContactUsSm from "./ContactUsSm";
 import { sendContactEmail } from "@/lib/emailService";
@@ -20,8 +21,6 @@ const ContactUs = () => {
   });
   const { isDarkMode } = useThemeMode();
   const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState("");
-  const [isSuccess, setIsSuccess] = useState(false);
   const headingRef = useRef<HTMLDivElement | null>(null);
   const [isHeadingInView, setIsHeadingInView] = useState(false);
 
@@ -77,7 +76,6 @@ const ContactUs = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-    setMessage("");
 
     const result = await sendContactEmail({
       firstName: formData.firstName,
@@ -93,8 +91,6 @@ const ContactUs = () => {
     setLoading(false);
 
     if (result.success) {
-      setMessage("✅ Email sent successfully! We'll be in touch soon.");
-      setIsSuccess(true);
       setFormData({
         firstName: "",
         lastName: "",
@@ -104,10 +100,24 @@ const ContactUs = () => {
         subject: "",
         detail: "",
       });
-      setTimeout(() => setMessage(""), 5000);
+
+      await Swal.fire({
+        icon: "success",
+        title: "Message sent",
+        text: "Your message was sent successfully. We'll be in touch soon.",
+        confirmButtonColor: "#14b8a6",
+        background: isDarkMode ? "#111827" : "#ffffff",
+        color: isDarkMode ? "#ffffff" : "#111827",
+      });
     } else {
-      setMessage(`❌ Error: ${result.error}`);
-      setIsSuccess(false);
+      await Swal.fire({
+        icon: "error",
+        title: "Message failed",
+        text: result.error || "Unable to send your message right now.",
+        confirmButtonColor: "#ef4444",
+        background: isDarkMode ? "#111827" : "#ffffff",
+        color: isDarkMode ? "#ffffff" : "#111827",
+      });
     }
   };
 
@@ -246,20 +256,6 @@ const ContactUs = () => {
               required
               sx={textFieldSx}
             />
-
-            {/* Message Alert */}
-            {message && (
-              <div
-                className={`p-3 rounded text-sm text-center ${
-                  isSuccess
-                    ? "bg-green-500 bg-opacity-20 text-green-400"
-                    : "bg-red-500 bg-opacity-20 text-red-400"
-                }`}
-              >
-                {message}
-              </div>
-            )}
-
             {/* Submit Button */}
             <div className="mt-2 flex flex-row justify-start">
               <button
