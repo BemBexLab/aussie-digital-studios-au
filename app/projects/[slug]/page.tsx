@@ -1,8 +1,10 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import nextDynamic from "next/dynamic";
 import ProjectImage from "@/components/Projectimage";
 import SectionFallback from "@/components/SectionFallback";
 import LazySection from "@/components/LazySection";
+import { buildMetadata } from "@/lib/seo";
 
 export const revalidate = 300;
 
@@ -81,6 +83,49 @@ export async function generateStaticParams() {
   } catch (error) {
     console.error('Error generating static params:', error);
     return [];
+  }
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+
+  try {
+    const res = await fetch(`${API_URL}${slug}`, {
+      next: { revalidate: 300 },
+    });
+
+    if (!res.ok) {
+      return buildMetadata({
+        title: "Project",
+        description:
+          "Explore project work delivered by Aussie Digital Studios.",
+        path: `/projects/${slug}`,
+      });
+    }
+
+    const data = await res.json();
+    const project = data?.[0];
+    const projectTitle = project?.title?.rendered || "Project";
+    const projectDescription =
+      project?.acf?.introduction ||
+      `Explore ${projectTitle} in the Aussie Digital Studios portfolio.`;
+
+    return buildMetadata({
+      title: projectTitle,
+      description: projectDescription,
+      path: `/projects/${slug}`,
+    });
+  } catch {
+    return buildMetadata({
+      title: "Project",
+      description:
+        "Explore project work delivered by Aussie Digital Studios.",
+      path: `/projects/${slug}`,
+    });
   }
 }
 

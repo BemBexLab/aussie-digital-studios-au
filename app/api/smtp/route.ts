@@ -1,275 +1,211 @@
-import { NextRequest, NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+import nodemailer, { type Transporter } from "nodemailer";
 
-// Email validation logic and check
-const validateEmail = (email: string): boolean => {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
+export const runtime = "nodejs";
+
+const recipientEmail =
+  getOptionalEnv("CONTACT_EMAIL") ||
+  getOptionalEnv("SMTP_USER") ||
+  "social@aussiedigitalstudios.com";
+
+type ContactRequest = {
+  firstName?: unknown;
+  lastName?: unknown;
+  email?: unknown;
+  phone?: unknown;
+  service?: unknown;
+  subject?: unknown;
+  detail?: unknown;
+  source?: unknown;
 };
 
-// Phone validation
-const validatePhone = (phone: string): boolean => {
-  const phoneRegex = /^[\d\s\-\+\(\)]{7,}$/;
-  return phoneRegex.test(phone.replace(/\s/g, ""));
-};
+let transporter: Transporter | null = null;
 
-// Configure nodemailer transporter
-const createTransporter = () => {
-  return nodemailer.createTransport({
-    service: process.env.EMAIL_SERVICE || "gmail",
-    auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASSWORD,
-    },
-  });
-};
+function getOptionalEnv(name: string) {
+  return process.env[name]?.trim();
+}
 
-// Format email HTML template
-const generateEmailTemplate = (
-  firstName: string,
-  lastName: string,
-  email: string,
-  phone: string,
-  service: string,
-  subject: string,
-  detail: string
-): string => {
-  return `
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <style>
-          body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-          }
-          .container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-          }
-          .header {
-            background-color: #4C8C74;
-            color: white;
-            padding: 15px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-          }
-          .field {
-            margin-bottom: 15px;
-            padding: 10px;
-            background-color: #f9f9f9;
-            border-left: 4px solid #4C8C74;
-          }
-          .label {
-            font-weight: bold;
-            color: #4C8C74;
-            margin-bottom: 5px;
-          }
-          .footer {
-            margin-top: 20px;
-            padding-top: 10px;
-            border-top: 1px solid #ddd;
-            font-size: 12px;
-            color: #666;
-          }
-        </style>
-      </head>
-      <body>
-        <div class="container">
-          <div class="header">
-            <h2>New Contact Form Submission</h2>
-          </div>
-          
-          <div class="field">
-            <div class="label">First Name</div>
-            <div>${firstName}</div>
-          </div>
-          
-          <div class="field">
-            <div class="label">Last Name</div>
-            <div>${lastName}</div>
-          </div>
-          
-          <div class="field">
-            <div class="label">Email</div>
-            <div><a href="mailto:${email}">${email}</a></div>
-          </div>
-          
-          <div class="field">
-            <div class="label">Phone Number</div>
-            <div><a href="tel:${phone}">${phone}</a></div>
-          </div>
-          
-          <div class="field">
-            <div class="label">Service</div>
-            <div>${service}</div>
-          </div>
-          
-          <div class="field">
-            <div class="label">Subject</div>
-            <div>${subject}</div>
-          </div>
-          
-          <div class="field">
-            <div class="label">Details</div>
-            <div>${detail.replace(/\n/g, "<br>")}</div>
-          </div>
-          
-          <div class="footer">
-            <p>This email was sent from your website contact form.</p>
-            <p>Sent at: ${new Date().toLocaleString()}</p>
-          </div>
-        </div>
-      </body>
-    </html>
-  `;
-};
+function getRequiredEnv(name: string) {
+  const value = getOptionalEnv(name);
 
-export async function POST(request: NextRequest) {
+  if (!value) {
+    throw new Error(`Missing ${name}`);
+  }
+
+  return value;
+}
+
+function getSmtpPassword(host: string) {
+  const password = getRequiredEnv("SMTP_PASSWORD");
+
+  if (host === "smtp.gmail.com") {
+    return password.replace(/\s/g, "");
+  }
+
+  return password;
+}
+
+function getTransporter() {
+  if (!transporter) {
+    const host = getRequiredEnv("SMTP_HOST");
+    const port = Number(process.env.SMTP_PORT || "465");
+    const timeout = Number(process.env.SMTP_CONNECTION_TIMEOUT || "10000");
+
+    transporter = nodemailer.createTransport({
+      host,
+      port,
+      secure: process.env.SMTP_SECURE
+        ? process.env.SMTP_SECURE === "true"
+        : port === 465,
+      auth: {
+        user: getRequiredEnv("SMTP_USER"),
+        pass: getSmtpPassword(host),
+      },
+      connectionTimeout: timeout,
+      greetingTimeout: timeout,
+      socketTimeout: timeout,
+    });
+  }
+
+  return transporter;
+}
+
+function normalizeString(value: unknown) {
+  return typeof value === "string" ? value.trim() : "";
+}
+
+function isValidEmail(value: string) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+}
+
+function escapeHtml(value: string) {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+function isSmtpAuthError(error: unknown) {
+  return (
+    typeof error === "object" &&
+    error !== null &&
+    "code" in error &&
+    error.code === "EAUTH"
+  );
+}
+
+function isSmtpConnectionError(error: unknown) {
+  return (
+    typeof error === "object" &&
+    error !== null &&
+    "code" in error &&
+    (error.code === "ESOCKET" || error.code === "ETIMEDOUT")
+  );
+}
+
+export async function POST(request: Request) {
+  let payload: ContactRequest;
+
   try {
-    const body = await request.json();
-    const {
-      firstName,
-      lastName,
-      email,
-      phone,
-      service,
-      subject,
-      detail,
-    } = body;
+    payload = (await request.json()) as ContactRequest;
+  } catch {
+    return Response.json({ error: "Invalid request body." }, { status: 400 });
+  }
 
-    // Validation
-    const errors: string[] = [];
+  const firstName = normalizeString(payload.firstName);
+  const lastName = normalizeString(payload.lastName);
+  const email = normalizeString(payload.email);
+  const phone = normalizeString(payload.phone);
+  const service = normalizeString(payload.service) || "General Inquiry";
+  const subject =
+    normalizeString(payload.subject) || "Contact Form Submission";
+  const detail = normalizeString(payload.detail);
+  const source =
+    normalizeString(payload.source) || "Aussie Digital Studios contact form";
+  const fullName = [firstName, lastName].filter(Boolean).join(" ");
 
-    if (!firstName || firstName.trim() === "") {
-      errors.push("First name is required");
-    }
-    if (!lastName || lastName.trim() === "") {
-      errors.push("Last name is required");
-    }
-    if (!email || !validateEmail(email)) {
-      errors.push("Valid email is required");
-    }
-    if (!phone || !validatePhone(phone)) {
-      errors.push("Valid phone number is required");
-    }
-    if (!service || service.trim() === "") {
-      errors.push("Service is required");
-    }
-    if (!subject || subject.trim() === "") {
-      errors.push("Subject is required");
-    }
-    if (!detail || detail.trim() === "") {
-      errors.push("Detail is required");
-    }
-
-    if (errors.length > 0) {
-      return NextResponse.json(
-        { success: false, errors },
-        { status: 400 }
-      );
-    }
-
-    // Create transporter
-    const transporter = createTransporter();
-
-    // Verify credentials
-    try {
-      await transporter.verify();
-    } catch (error) {
-      console.error("Email service authentication failed:", error);
-      return NextResponse.json(
-        {
-          success: false,
-          error: "Email service configuration error. Please try again later.",
-        },
-        { status: 500 }
-      );
-    }
-
-    // Send email to admin
-    const adminMailOptions = {
-      from: process.env.EMAIL_USER,
-      to: process.env.RECIPIENT_EMAIL,
-      subject: `New Contact Form Submission: ${subject}`,
-      html: generateEmailTemplate(
-        firstName,
-        lastName,
-        email,
-        phone,
-        service,
-        subject,
-        detail
-      ),
-      replyTo: email,
-    };
-
-    await transporter.sendMail(adminMailOptions);
-
-    // Send confirmation email to user
-    const userMailOptions = {
-      from: process.env.EMAIL_USER,
-      to: email,
-      subject: "We received your message",
-      html: `
-        <!DOCTYPE html>
-        <html>
-          <head>
-            <style>
-              body {
-                font-family: Arial, sans-serif;
-                line-height: 1.6;
-                color: #333;
-              }
-              .container {
-                max-width: 600px;
-                margin: 0 auto;
-                padding: 20px;
-              }
-              .header {
-                background-color: #4C8C74;
-                color: white;
-                padding: 15px;
-                border-radius: 5px;
-                margin-bottom: 20px;
-              }
-            </style>
-          </head>
-          <body>
-            <div class="container">
-              <div class="header">
-                <h2>Thank You for Contacting Us</h2>
-              </div>
-              <p>Hi ${firstName},</p>
-              <p>We have received your message and will get back to you as soon as possible.</p>
-              <p>Best regards,<br>Aussie Digital Studios Team</p>
-            </div>
-          </body>
-        </html>
-      `,
-    };
-
-    await transporter.sendMail(userMailOptions);
-
-    return NextResponse.json(
+  if (!firstName || !lastName || !email || !phone || !detail) {
+    return Response.json(
       {
-        success: true,
-        message: "Email sent successfully",
+        error:
+          "Please fill in first name, last name, email, phone, and details.",
       },
-      { status: 200 }
-    );
-  } catch (error) {
-    console.error("SMTP Error:", error);
-    return NextResponse.json(
-      {
-        success: false,
-        error: "Failed to send email. Please try again later.",
-      },
-      { status: 500 }
+      { status: 400 },
     );
   }
+
+  if (!isValidEmail(email)) {
+    return Response.json(
+      { error: "Please enter a valid email address." },
+      { status: 400 },
+    );
+  }
+
+  const mailSubject = `New Aussie Digital Studios inquiry from ${fullName}`;
+  const text = [
+    "New Aussie Digital Studios contact form submission",
+    "",
+    `Source: ${source}`,
+    `Name: ${fullName}`,
+    `Email: ${email}`,
+    `Phone: ${phone}`,
+    `Service: ${service}`,
+    `Subject: ${subject}`,
+    "",
+    "Details:",
+    detail,
+  ].join("\n");
+
+  const html = `
+    <h2>New Aussie Digital Studios contact form submission</h2>
+    <p><strong>Source:</strong> ${escapeHtml(source)}</p>
+    <p><strong>Name:</strong> ${escapeHtml(fullName)}</p>
+    <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+    <p><strong>Phone:</strong> ${escapeHtml(phone)}</p>
+    <p><strong>Service:</strong> ${escapeHtml(service)}</p>
+    <p><strong>Subject:</strong> ${escapeHtml(subject)}</p>
+    <p><strong>Details:</strong></p>
+    <p>${escapeHtml(detail).replace(/\n/g, "<br />")}</p>
+  `;
+
+  try {
+    await getTransporter().sendMail({
+      from: `"${getOptionalEnv("SMTP_FROM_NAME") || "Aussie Digital Studios Website"}" <${getRequiredEnv("SMTP_USER")}>`,
+      to: recipientEmail,
+      replyTo: email,
+      subject: mailSubject,
+      text,
+      html,
+    });
+  } catch (error) {
+    console.error("Contact email failed:", error);
+
+    if (isSmtpAuthError(error)) {
+      return Response.json(
+        {
+          error:
+            "SMTP login failed. Check SMTP_USER and SMTP_PASSWORD, then restart the server after updating your environment variables.",
+        },
+        { status: 500 },
+      );
+    }
+
+    if (isSmtpConnectionError(error)) {
+      return Response.json(
+        {
+          error:
+            "SMTP server is unreachable. Check SMTP_HOST, SMTP_PORT, and SMTP_SECURE in .env.",
+        },
+        { status: 500 },
+      );
+    }
+
+    return Response.json(
+      { error: "Unable to send your message right now." },
+      { status: 500 },
+    );
+  }
+
+  return Response.json({ ok: true, message: "Email sent successfully." });
 }

@@ -35,7 +35,10 @@ const ContactMobile = () => {
     setLoading(true);
     setMessage("");
 
-    const result = await sendContactEmail(formData);
+    const result = await sendContactEmail({
+      ...formData,
+      source: "ContactMobile form",
+    });
 
     setLoading(false);
 

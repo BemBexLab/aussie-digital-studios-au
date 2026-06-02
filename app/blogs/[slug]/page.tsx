@@ -1,16 +1,14 @@
+import type { Metadata } from "next";
 import React from 'react'
 import dynamic from "next/dynamic";
 import Hero from '../components/Hero'
-import HeroMobile from '../components/HeroMobile'
 import { blogPosts } from '../data'
 import { notFound } from 'next/navigation'
 import SectionFallback from "@/components/SectionFallback";
 import LazySection from "@/components/LazySection";
+import { buildMetadata } from "@/lib/seo";
 
 const BlogBody = dynamic(() => import("../components/BlogBody"), {
-  loading: () => <SectionFallback heightClassName="min-h-96" />,
-});
-const BlogBodyMobile = dynamic(() => import("../components/BlogBodyMobile"), {
   loading: () => <SectionFallback heightClassName="min-h-96" />,
 });
 
@@ -30,6 +28,30 @@ export async function generateStaticParams() {
     }
   })
   return params
+}
+
+export async function generateMetadata({
+  params,
+}: BlogPageProps): Promise<Metadata> {
+  const { slug } = await params;
+
+  for (const post of blogPosts) {
+    const subblog = post.subblog?.find((sub) => sub.slug === slug);
+    if (subblog) {
+      return buildMetadata({
+        title: subblog.heading || post.title,
+        description: post.description,
+        path: `/blogs/${slug}`,
+      });
+    }
+  }
+
+  return buildMetadata({
+    title: "Blogs",
+    description:
+      "Read insights, ideas, and updates from Aussie Digital Studios on web design, branding, marketing, and digital growth.",
+    path: `/blogs/${slug}`,
+  });
 }
 
 const BlogPage = async ({ params }: BlogPageProps) => {
@@ -56,12 +78,8 @@ const BlogPage = async ({ params }: BlogPageProps) => {
   return (
     <section>
       <Hero H={blogPost.title} B={blogPost.description} />
-      <HeroMobile H={blogPost.title} B={blogPost.description} />
       <LazySection heightClassName="min-h-96">
         <BlogBody subblog={subblogData} />
-      </LazySection>
-      <LazySection heightClassName="min-h-96">
-        <BlogBodyMobile subblog={subblogData} />
       </LazySection>
     </section>
   )
