@@ -471,13 +471,13 @@ const PricingPlan = () => {
               </h2>
               <p className="text-3xl text-white font-semibold mb-2">
                 {card.price}
-                <span className="line-through font-normal text-xs mx-2 text-[#4C8C74]">
+                {/* <span className="line-through font-normal text-xs mx-2 text-[#4C8C74]">
                   {card.discountedFrom}
-                </span>
+                </span> */}
               </p>
-              <p className="text-xs text-[#4C8C74] mb-3">
+              {/* <p className="text-xs text-[#4C8C74] mb-3">
                 Up to <span className="font-bold">$50%</span> referral AAR
-              </p>
+              </p> */}
 
               <p className="font-semibold text-xs mb-2">Includes:</p>
               <ul className="space-y-1 text-[#4C8C74] max-h-[160px] overflow-y-auto pr-2 mb-3 [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-thumb]:bg-[#4C8C74] [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-[#202020]">
@@ -579,17 +579,17 @@ const PricingPlan = () => {
                 </h2>
                 <p className="text-4xl sm:text-5xl text-white font-semibold mb-3 sm:mb-4">
                   {card.price}
-                  <span className="line-through font-normal text-sm sm:text-base mx-[5px] text-[#4C8C74]">
+                  {/* <span className="line-through font-normal text-sm sm:text-base mx-[5px] text-[#4C8C74]">
                     {card.discountedFrom}
-                  </span>
+                  </span> */}
                 </p>
-                <p className="text-sm sm:text-base text-[#4C8C74] mb-6 sm:mb-8">
+                {/* <p className="text-sm sm:text-base text-[#4C8C74] mb-6 sm:mb-8">
                   Up to{" "}
                   <span className="font-bold pricing-discount-percent">
                     $50%
                   </span>{" "}
                   referral AAR
-                </p>
+                </p> */}
 
                 <p className="font-semibold text-sm sm:text-md mb-2 sm:mb-3">
                   Includes:

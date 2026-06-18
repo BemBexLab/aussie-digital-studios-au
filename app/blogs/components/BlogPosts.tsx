@@ -22,7 +22,7 @@ const BlogPosts = () => {
         {displayedPosts.map((post, index) => (
           <article
             key={index}
-            className="overflow-hidden rounded-[14px] border border-[#28322d] bg-[#1d1f1e] p-3 shadow-[0_0_0_1px_rgba(97,132,117,0.05),0_18px_40px_rgba(0,0,0,0.18)] sm:p-3.5"
+            className="flex h-full flex-col overflow-hidden rounded-[14px] border border-[#28322d] bg-[#1d1f1e] p-3 shadow-[0_0_0_1px_rgba(97,132,117,0.05),0_18px_40px_rgba(0,0,0,0.18)] sm:p-3.5"
             style={{
               background:
                 "linear-gradient(180deg, rgba(66,95,82,0.38) 0%, rgba(29,31,30,1) 16%, rgba(29,31,30,1) 100%)",
@@ -38,7 +38,7 @@ const BlogPosts = () => {
               />
             </div>
 
-            <div className="px-1 pb-1 pt-4 sm:pt-5">
+            <div className="flex flex-1 flex-col px-1 pb-1 pt-4 sm:pt-5">
               <p className="text-[10px] font-medium leading-none text-[#5a8e78] sm:text-[11px]">
                 {post.category}
               </p>
@@ -50,8 +50,8 @@ const BlogPosts = () => {
               </p>
 
               <a
-                className="mt-4 inline-flex items-center gap-2 text-[11px] font-light text-[#8f9491] transition hover:text-[#c5c9c7] sm:mt-5 sm:text-[12px]"
-                href={`/blog/${post.subblog[0]?.slug || "default"}`}
+                className="mt-auto pt-4 inline-flex items-center gap-2 text-[11px] font-light text-[#8f9491] transition hover:text-[#c5c9c7] sm:pt-5 sm:text-[12px]"
+                href={`/blogs/${post.subblog[0]?.slug || "default"}`}
               >
                 <BsArrowUpRightCircle className="h-4 w-4 text-[#4f826c] sm:h-[18px] sm:w-[18px]" />
                 <span>Read More</span>

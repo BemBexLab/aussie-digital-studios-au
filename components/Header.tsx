@@ -143,10 +143,10 @@ const Header = () => {
 
         {/* Right side: Get In Touch button */}
         <Link
-          href="/contact"
+          href="tel:+61468285539"
           className="hidden md:flex items-center space-x-1 text-xs lg:text-sm text-white hover:text-green-400 transition-colors whitespace-nowrap px-2 lg:px-0"
         >
-          <span>Get In Touch</span>
+          <span>Call Now</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-4 w-4"

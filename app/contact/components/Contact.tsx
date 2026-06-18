@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Swal from "sweetalert2";
 import { motion } from "@/lib/motion";
+import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
 import ContactMobile from "./ContactMobile";
 import { sendContactEmail } from "@/lib/emailService";
 import { useThemeMode } from "@/lib/useThemeMode";
@@ -20,6 +21,26 @@ const Contact = () => {
     detail: "",
   });
   const [loading, setLoading] = useState(false);
+  const contactCards = [
+    {
+      icon: <FiPhone className="h-8 w-8 text-[#f2d300]" />,
+      label: "(0468) 285-539",
+      value: "+61 468 285 539",
+      href: "tel:+61468285539",
+    },
+    {
+      icon: <FiMail className="h-8 w-8 text-[#f2d300]" />,
+      label: "social@aussiedigitalstudios.com",
+      value: "social@aussiedigitalstudios.com",
+      href: "mailto:social@aussiedigitalstudios.com",
+    },
+    {
+      icon: <FiMapPin className="h-8 w-8 text-[#f2d300]" />,
+      label: "16A Fox Cl, Kariong NSW 2250, Australia",
+      value: "16A Fox Cl, Kariong NSW 2250, Australia",
+      href: "",
+    },
+  ];
 
   const handleInputChange = (
     event:
@@ -266,40 +287,30 @@ const Contact = () => {
           </div>
 
           <div className="mx-auto mt-12 max-w-[84rem] px-4 sm:px-6 lg:mt-16">
-            <div className="flex flex-wrap justify-center gap-4 md:gap-5 lg:flex-nowrap lg:items-center lg:gap-6">
-              <Image
-                src={
-                  isDarkMode
-                    ? "/Contact/phone_number_dark.svg"
-                    : "/Contact/phone_number_light.svg"
-                }
-                alt="Contact Card 1"
-                width={900}
-                height={900}
-                className="h-auto w-full max-w-[340px] rounded-xl object-cover"
-              />
-
-              <Image
-                src={
-                  isDarkMode ? "/Contact/email_dark.svg" : "/Contact/email_light.svg"
-                }
-                alt="Contact Card 2"
-                width={900}
-                height={900}
-                className="h-auto w-full max-w-[340px] rounded-xl object-cover"
-              />
-
-              <Image
-                src={
-                  isDarkMode
-                    ? "/Contact/location_dark.svg"
-                    : "/Contact/location_light.svg"
-                }
-                alt="Contact Card 3"
-                width={900}
-                height={900}
-                className="h-auto w-full max-w-[340px] rounded-xl object-cover"
-              />
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-5 xl:grid-cols-3 xl:gap-6">
+              {contactCards.map((card) => (
+                <a
+                  key={card.label}
+                  href={card.href}
+                  target={card.href.startsWith("https://") ? "_blank" : undefined}
+                  rel={
+                    card.href.startsWith("https://")
+                      ? "noreferrer noopener"
+                      : undefined
+                  }
+                  className="group flex min-h-[142px] flex-col items-center justify-center rounded-[18px] border border-white/5 bg-[#221f1f] px-6 py-8 text-center shadow-[0_10px_30px_rgba(0,0,0,0.22)] transition-all duration-300 hover:border-[#4C8C74]/25 hover:bg-[#262222]"
+                >
+                  <div className="mb-3 flex h-10 w-10 items-center justify-center">
+                    {card.icon}
+                  </div>
+                  <p className="text-[17px] font-light text-[#f1f1f1]">
+                    {card.label}
+                  </p>
+                  {/* <p className="mt-2 text-sm text-[#8d928f] transition-colors duration-300 group-hover:text-[#b8c2bc]">
+                    {card.value}
+                  </p> */}
+                </a>
+              ))}
             </div>
           </div>
         </div>

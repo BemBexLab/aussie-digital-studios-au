@@ -79,13 +79,13 @@ const PricingPlanMobile = ({ service }: PricingPlanMobileProps) => {
               </h2>
               <p className="text-3xl text-white font-semibold mb-2">
                 {card.price}
-                <span className="line-through font-normal text-xs mx-2 text-[#4C8C74]">
+                {/* <span className="line-through font-normal text-xs mx-2 text-[#4C8C74]">
                   {card.discountedFrom}
-                </span>
+                </span> */}
               </p>
-              <p className="text-xs text-[#4C8C74] mb-4">
+              {/* <p className="text-xs text-[#4C8C74] mb-4">
                 Up to <span className="font-bold">50%</span> referral AAR
-              </p>
+              </p> */}
 
               <p className="font-semibold text-xs mb-2">Includes:</p>
               <ul role="list" className="space-y-1 mb-4 text-[#4C8C74]">

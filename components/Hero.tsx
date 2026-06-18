@@ -61,7 +61,7 @@ const Hero = ({ H }: HeroProps) => {
 
       {/* Desktop View */}
       <div
-        className="hidden md:flex w-full h-[60vh] lg:h-[70vh] items-center justify-center relative overflow-hidden"
+        className="hidden md:flex w-full h-[50vh] items-center justify-center relative overflow-hidden"
         data-hero-bg-about
         style={{
           backgroundImage: "url('/About/About Hero BG.webp')",

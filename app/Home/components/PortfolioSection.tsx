@@ -448,7 +448,7 @@ export default function PortfolioWall({
         </div>
 
         {/* Main Container */}
-        <div className="max-w-7xl mx-auto flex justify-center">
+        <div className="mx-auto flex max-w-5xl justify-center">
           {loading || !shouldRenderContent ? (
             <div className="py-24 flex items-center justify-center">
               <svg
@@ -487,7 +487,7 @@ export default function PortfolioWall({
             </div>
           ) : (
             <div
-              className={`grid w-full grid-cols-1 justify-items-center gap-8 lg:grid-cols-2 lg:gap-10 xl:gap-16 ${
+              className={`grid w-full grid-cols-1 justify-items-center gap-8 lg:grid-cols-2 lg:gap-0 ${
                 isCompactCategory ? "mb-8" : ""
               }`}
             >
@@ -529,12 +529,12 @@ export default function PortfolioWall({
                     key={post.id}
                     className={
                       isCompact
-                        ? "group relative w-full max-w-[380px]"
+                        ? "group relative w-full max-w-[410px]"
                         : isFigma
-                          ? "group relative w-full max-w-[430px]"
+                          ? "group relative w-full max-w-[470px]"
                           : isFlexible
-                            ? "group relative w-full max-w-[430px]"
-                            : "group relative w-full max-w-[480px]"
+                            ? "group relative w-full max-w-[470px]"
+                            : "group relative w-full max-w-[500px]"
                     }
                     role="link"
                     tabIndex={0}
@@ -549,7 +549,6 @@ export default function PortfolioWall({
                     <div
                       className="flex h-full flex-col overflow-hidden rounded-lg p-3 shadow-lg transition-transform duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 md:p-4"
                       style={{
-                        borderRadius: "30px",
                         background: "transparent",
                       }}
                     >

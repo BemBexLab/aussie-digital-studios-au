@@ -116,17 +116,17 @@ const PricingPlan = ({ service }: PricingPlanProps) => {
                   <span className="text-5xl text-white font-bold">
                     {card.price}
                   </span>
-                  <span className="line-through font-normal text-lg ml-2 text-gray-400">
+                  {/* <span className="line-through font-normal text-lg ml-2 text-gray-400">
                     {card.discountedFrom}
-                  </span>
+                  </span> */}
                 </div>
 
                 {/* Discount Info */}
-                <p className="text-base text-[#4C8C74] mb-8">
+                {/* <p className="text-base text-[#4C8C74] mb-8">
                   Up to{" "}
                   <span className="font-bold">$50%</span>{" "}
                   referral AAR
-                </p>
+                </p> */}
 
                 {/* Includes Section */}
                 <div className="flex-grow">

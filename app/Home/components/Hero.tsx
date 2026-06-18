@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import React from "react";
 import { motion } from "@/lib/motion";
 
@@ -34,7 +35,7 @@ const Hero = () => {
     <>
       {/* Desktop Hero (1250px and up) */}
       <section
-        className="hidden min-[1250px]:block h-[695px] w-full relative hero-bg-section"
+        className="hidden min-[1250px]:block h-[695px] w-full relative overflow-hidden hero-bg-section"
         data-hero-bg
         style={{
           backgroundImage: "url('/Hero_Section.webp')",
@@ -43,6 +44,7 @@ const Hero = () => {
           backgroundPosition: "center",
         }}
       >
+
         {/* Theme Toggle - top right, floating */}
         {/* <div className="absolute top-24 right-16 z-50">
           <ThemeToggle />
@@ -72,13 +74,13 @@ const Hero = () => {
             Complete Digital Solutions for Australian Businesses Strategy,
             Design, Development, and Growth
           </div>
-          <div className="w-[700px] h-full mt-[50px] block">
+          <div className="w-[570px] h-full mt-[50px] block">
             <motion.img
               animate={{ y: [0, -15, 0] }}
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
               src="/Home/Frame_557.webp"
               alt="Geometric_Shape"
-              className="z-30 w-[700px] h-auto transform translate-x-20 -translate-y-10 -top-5 relative"
+              className="z-30 w-[570px] h-auto transform translate-x-38 -translate-y-5 -top-5 relative"
             />
           </div>
         </div>
@@ -100,13 +102,43 @@ const Hero = () => {
             <span className="text-white text-2xl font-medium min-[1420px]:transform min-[1420px]:-translate-x-90">
               build websites that actually bring in work.
             </span>
+            <motion.div
+              className="mt-8"
+              whileHover={{ y: -6, scale: 1.03 }}
+              transition={{ type: "spring", stiffness: 280, damping: 18 }}
+            >
+              <Link
+                href="/contact"
+                className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full border border-white/20 bg-[#4C8C74]/35 px-8 py-3 text-sm font-light text-white shadow-[0_8px_30px_rgba(76,140,116,0.22)] backdrop-blur-md transition-[background-color,border-color,box-shadow] duration-300 hover:border-white/35 hover:bg-[#5da888]/45 hover:shadow-[0_16px_40px_rgba(76,140,116,0.34)]"
+              >
+                <span
+                  aria-hidden="true"
+                  className="pointer-events-none absolute inset-y-0 left-[-35%] w-1/3 -translate-x-full -skew-x-12 bg-white/25 blur-md transition-transform duration-700 ease-in-out group-hover:translate-x-[260%]"
+                />
+                <span className="relative z-10">Get In Touch</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="relative z-10 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </Link>
+            </motion.div>
           </div>
         </div>
       </section>
 
       {/* Responsive Hero (smaller than 1250px) */}
       <section
-        className="min-[1250px]:hidden relative flex min-h-[100svh] w-full items-center justify-center overflow-hidden px-4 py-20 text-center sm:px-6 sm:py-24 md:px-8 lg:px-10 hero-bg-section"
+        className="min-[1250px]:hidden relative flex min-h-[50svh] w-full items-center justify-center overflow-hidden px-4 py-20 text-center sm:px-6 sm:py-24 md:px-8 lg:px-10 hero-bg-section"
         data-hero-bg
         style={{
           backgroundImage: "url('/Hero_Section.webp')",
@@ -122,7 +154,7 @@ const Hero = () => {
 
         {/* Responsive text and image layout */}
         <div className="relative z-20 flex w-full max-w-[1180px] flex-col items-center justify-center gap-10 sm:gap-12 lg:gap-14">
-          <div className="order-2 w-full max-w-[min(92vw,620px)] sm:max-w-[min(84vw,700px)] lg:max-w-[620px]">
+          <div className="order-2 hidden w-full max-w-[min(92vw,620px)] sm:max-w-[min(84vw,700px)] lg:block lg:max-w-[620px]">
             <motion.img
               animate={{ y: [0, -15, 0] }}
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
@@ -154,6 +186,37 @@ const Hero = () => {
             <span className="mt-3 block max-w-[19rem] text-base font-medium leading-relaxed text-white sm:mt-4 sm:max-w-[28rem] sm:text-lg md:max-w-[34rem] md:text-xl lg:text-2xl">
               build websites that actually bring in work.
             </span>
+
+            <motion.div
+              className="mt-6 sm:mt-8"
+              whileHover={{ y: -6, scale: 1.03 }}
+              transition={{ type: "spring", stiffness: 280, damping: 18 }}
+            >
+              <Link
+                href="/contact"
+                className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full border border-white/20 bg-[#4C8C74]/35 px-6 py-3 text-sm font-light text-white shadow-[0_8px_30px_rgba(76,140,116,0.22)] backdrop-blur-md transition-[background-color,border-color,box-shadow] duration-300 hover:border-white/35 hover:bg-[#5da888]/45 hover:shadow-[0_16px_40px_rgba(76,140,116,0.34)] sm:px-8"
+              >
+                <span
+                  aria-hidden="true"
+                  className="pointer-events-none absolute inset-y-0 left-[-35%] w-1/3 -translate-x-full -skew-x-12 bg-white/25 blur-md transition-transform duration-700 ease-in-out group-hover:translate-x-[260%]"
+                />
+                <span className="relative z-10">Get In Touch</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="relative z-10 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </Link>
+            </motion.div>
           </div>
         </div>
       </section>

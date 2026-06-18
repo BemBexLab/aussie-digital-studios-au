@@ -77,7 +77,10 @@ const BlogPage = async ({ params }: BlogPageProps) => {
 
   return (
     <section>
-      <Hero H={blogPost.title} B={blogPost.description} />
+      <Hero
+        H={subblogData.heading || blogPost.title}
+        B={subblogData.herotext || blogPost.description}
+      />
       <LazySection heightClassName="min-h-96">
         <BlogBody subblog={subblogData} />
       </LazySection>
