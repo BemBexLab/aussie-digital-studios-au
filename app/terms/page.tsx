@@ -465,7 +465,9 @@ const TermsAndConditions = () => {
               our services. Message frequency may vary. Message and data rates
               may apply. Reply STOP to opt out of further messaging and HELP for
               assistance or call
-              <span className="text-[#4C8C74]">+1 470-469-7096</span>. Please
+              <a href="tel:+61468285539" className="text-[#4C8C74]">
+                (0468) 285-539
+              </a>. Please
               see our Privacy Policy at{" "}
               <span className="text-[#4C8C74]"> Privacy Policy</span>.
             </li>
@@ -498,8 +500,8 @@ const TermsAndConditions = () => {
             <br />
             <li>
               If you require help, reply &quot;HELP&quot; or contact us at{" "}
-              <a href="mailto:support@bembexlab.com" className="text-[#4C8C74]">
-                support@bembexlab.com
+              <a href="mailto:social@aussiedigitalstudios.com" className="text-[#4C8C74]">
+                social@aussiedigitalstudios.com
               </a>
               .
             </li>

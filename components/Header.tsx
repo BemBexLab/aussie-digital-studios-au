@@ -146,8 +146,8 @@ const Header = () => {
           href="tel:+61468285539"
           className="hidden md:flex items-center space-x-1 text-xs lg:text-sm text-white hover:text-green-400 transition-colors whitespace-nowrap px-2 lg:px-0"
         >
-          <span>Call Now</span>
-          <svg
+          <span>Call Now: (0468) 285-539</span>
+          {/* <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-4 w-4"
             fill="none"
@@ -160,7 +160,7 @@ const Header = () => {
               strokeWidth={2}
               d="M17 8l4 4m0 0l-4 4m4-4H3"
             />
-          </svg>
+          </svg> */}
         </Link>
       </div>
     </header>

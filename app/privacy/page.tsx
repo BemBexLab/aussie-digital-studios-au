@@ -34,11 +34,11 @@ const Privacy = () => {
             This privacy statement describes how Aussie Digital Studios collects and uses
             the personal information you provide on our website:
             <Link
-              href="https://bembexlab.com/"
+              href="/"
               className="text-[#4C8C74] underline ml-1"
               target="_blank"
             >
-              https://bembexlab.com/
+              https://aussiedigitalstudios.com/
             </Link>{" "}
             and also describes the choices available to you regarding our use of
             your personal information and how you can access and update this
@@ -129,10 +129,10 @@ const Privacy = () => {
               emails by following the unsubscribe instructions included in these
               emails or you can contact us at{" "}
               <a
-                href="mailto:support@bembexlab.com"
+                href="mailto:social@aussiedigitalstudios.com"
                 className="text-[#4C8C74] underline"
               >
-                support@bembexlab.com
+                social@aussiedigitalstudios.com
               </a>
               .
             </li>
@@ -257,10 +257,10 @@ const Privacy = () => {
               cannot guarantee its absolute security. If you have any questions
               about security on our website, you can contact us at{" "}
               <a
-                href="mailto:support@bembexlab.com"
+                href="mailto:social@aussiedigitalstudios.com"
                 className="text-[#4C8C74] underline"
               >
-                support@bembexlab.com
+                social@aussiedigitalstudios.com
               </a>
               .
             </li>
@@ -307,10 +307,10 @@ const Privacy = () => {
             To review and update your personal information to ensure it is
             accurate, contact us at{" "}
             <a
-              href="mailto:support@bembexlab.com"
+              href="mailto:social@aussiedigitalstudios.com"
               className="text-[#4C8C74] underline"
             >
-              support@bembexlab.com
+              social@aussiedigitalstudios.com
             </a>
             .
           </p>
@@ -324,8 +324,8 @@ const Privacy = () => {
             our services. Message frequency may vary. Message and data rates may
             apply. Reply STOP to opt out of further messaging and HELP for
             assistance or call{" "}
-            <a href="tel:+14704697096" className="text-[#4C8C74] underline">
-              +1 470-469-7096
+            <a href="tel:+61468285539" className="text-[#4C8C74] underline">
+              (0468) 285-539
             </a>
             . Please see our{" "}
             <Link href="/privacy" className="text-[#4C8C74] underline">
@@ -367,10 +367,10 @@ const Privacy = () => {
               number through our website forms or by contacting our support team
               at{" "}
               <a
-                href="mailto:support@bembexlab.com"
+                href="mailto:social@aussiedigitalstudios.com"
                 className="text-[#4C8C74] underline"
               >
-                support@bembexlab.com
+                social@aussiedigitalstudios.com
               </a>
               .
             </li>
@@ -380,10 +380,10 @@ const Privacy = () => {
               assistance, reply <strong>&quot;HELP&quot;</strong> or contact us
               at{" "}
               <a
-                href="mailto:support@bembexlab.com"
+                href="mailto:social@aussiedigitalstudios.com"
                 className="text-[#4C8C74] underline"
               >
-                support@bembexlab.com
+                social@aussiedigitalstudios.com
               </a>
               . To rejoin later, reply <strong>&quot;UNSTOP&quot;</strong>.
             </li>
