@@ -30,9 +30,9 @@ const Contact = () => {
     },
     {
       icon: <FiMail className="h-8 w-8 text-[#f2d300]" />,
-      label: "social@aussiedigitalstudios.com",
-      value: "social@aussiedigitalstudios.com",
-      href: "mailto:social@aussiedigitalstudios.com",
+      label: "contact@aussiedigitalstudios.com.au",
+      value: "contact@aussiedigitalstudios.com.au",
+      href: "mailto:contact@aussiedigitalstudios.com.au",
     },
     {
       icon: <FiMapPin className="h-8 w-8 text-[#f2d300]" />,

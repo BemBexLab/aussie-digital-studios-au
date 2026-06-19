@@ -129,10 +129,10 @@ const Privacy = () => {
               emails by following the unsubscribe instructions included in these
               emails or you can contact us at{" "}
               <a
-                href="mailto:social@aussiedigitalstudios.com"
+                href="mailto:contact@aussiedigitalstudios.com.au"
                 className="text-[#4C8C74] underline"
               >
-                social@aussiedigitalstudios.com
+                contact@aussiedigitalstudios.com.au
               </a>
               .
             </li>
@@ -257,10 +257,10 @@ const Privacy = () => {
               cannot guarantee its absolute security. If you have any questions
               about security on our website, you can contact us at{" "}
               <a
-                href="mailto:social@aussiedigitalstudios.com"
+                href="mailto:contact@aussiedigitalstudios.com.au"
                 className="text-[#4C8C74] underline"
               >
-                social@aussiedigitalstudios.com
+                contact@aussiedigitalstudios.com.au
               </a>
               .
             </li>
@@ -307,10 +307,10 @@ const Privacy = () => {
             To review and update your personal information to ensure it is
             accurate, contact us at{" "}
             <a
-              href="mailto:social@aussiedigitalstudios.com"
+              href="mailto:contact@aussiedigitalstudios.com.au"
               className="text-[#4C8C74] underline"
             >
-              social@aussiedigitalstudios.com
+              contact@aussiedigitalstudios.com.au
             </a>
             .
           </p>
@@ -367,10 +367,10 @@ const Privacy = () => {
               number through our website forms or by contacting our support team
               at{" "}
               <a
-                href="mailto:social@aussiedigitalstudios.com"
+                href="mailto:contact@aussiedigitalstudios.com.au"
                 className="text-[#4C8C74] underline"
               >
-                social@aussiedigitalstudios.com
+                contact@aussiedigitalstudios.com.au
               </a>
               .
             </li>
@@ -380,10 +380,10 @@ const Privacy = () => {
               assistance, reply <strong>&quot;HELP&quot;</strong> or contact us
               at{" "}
               <a
-                href="mailto:social@aussiedigitalstudios.com"
+                href="mailto:contact@aussiedigitalstudios.com.au"
                 className="text-[#4C8C74] underline"
               >
-                social@aussiedigitalstudios.com
+                contact@aussiedigitalstudios.com.au
               </a>
               . To rejoin later, reply <strong>&quot;UNSTOP&quot;</strong>.
             </li>

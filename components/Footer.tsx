@@ -177,6 +177,30 @@ const Footer = () => {
                   Copyright © 2025, Aussie Digital Studios.
                 </p>
                 <p className="text-sm font-extralight">All Rights Reserved.</p>
+                <div className="mt-3 space-y-2 text-sm font-extralight">
+                  <p>
+                    <span className="font-medium text-white">Phone Number:</span>{" "}
+                    <a
+                      href="tel:+61468285539"
+                      className="hover:text-[#4C8C74] transition-colors"
+                    >
+                      (0468) 285-539
+                    </a>
+                  </p>
+                  <p>
+                    <span className="font-medium text-white">Email:</span>{" "}
+                    <a
+                      href="mailto:contact@aussiedigitalstudios.com.au"
+                      className="break-all hover:text-[#4C8C74] transition-colors"
+                    >
+                      contact@aussiedigitalstudios.com.au
+                    </a>
+                  </p>
+                  <p className="max-w-[260px]">
+                    <span className="font-medium text-white">Address:</span>{" "}
+                    16A Fox Cl, Kariong NSW 2250, Australia.
+                  </p>
+                </div>
               </div>
             </div>
           </div>

@@ -5,7 +5,7 @@ export const runtime = "nodejs";
 const recipientEmail =
   getOptionalEnv("CONTACT_EMAIL") ||
   getOptionalEnv("SMTP_USER") ||
-  "social@aussiedigitalstudios.com";
+  "contact@aussiedigitalstudios.com.au";
 
 type ContactRequest = {
   firstName?: unknown;
