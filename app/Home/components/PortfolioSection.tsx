@@ -16,14 +16,37 @@ const MODAL_CATEGORIES = [
   "PRINT",
 ];
 
-const ROUTE_CATEGORIES = ["WEB DEVELOPMENT", "SHOPIFY", "WORDPRESS"];
+const ROUTE_CATEGORIES = [
+  "WEB DEVELOPMENT",
+  "SHOPIFY",
+  "WORDPRESS",
+  "MAGENTO",
+  "LARAVEL",
+  "REACT",
+];
 
 const categories = [...ROUTE_CATEGORIES, ...MODAL_CATEGORIES];
 
 const FIGMA_CARD_HEIGHT = 500;
 const FIGMA_VISIBLE_HEIGHT = Math.floor(FIGMA_CARD_HEIGHT / 2) + 100;
+const WEB_DEVELOPMENT_MATCHERS = [
+  "web development",
+  "react",
+  "magento",
+  "laravel",
+];
 
 type Post = ProjectPost;
+
+const normalizeCategory = (value?: string) => value?.trim().toLowerCase() || "";
+const decodeHtmlEntities = (value: string) =>
+  value
+    .replace(/&#8217;/g, "'")
+    .replace(/&#8216;/g, "'")
+    .replace(/&#8220;/g, '"')
+    .replace(/&#8221;/g, '"')
+    .replace(/&#038;/g, "&")
+    .replace(/&amp;/g, "&");
 
 // Enhanced URL cleaning function
 const cleanUrl = (url: string): string => {
@@ -121,12 +144,19 @@ export default function PortfolioWall({
   const filteredPosts = posts.filter((post) => {
     const cat = post.acf?.catogary;
     if (!cat) return false;
-    if (Array.isArray(cat)) {
-      return cat.some(
-        (c) => c.toLowerCase() === selectedCategory.toLowerCase(),
+
+    const selected = normalizeCategory(selectedCategory);
+    const postCategories = (Array.isArray(cat) ? cat : [cat]).map((value) =>
+      normalizeCategory(value),
+    );
+
+    if (selected === "web development") {
+      return postCategories.some((value) =>
+        WEB_DEVELOPMENT_MATCHERS.some((matcher) => value.includes(matcher)),
       );
     }
-    return cat.toLowerCase() === selectedCategory.toLowerCase();
+
+    return postCategories.some((value) => value === selected);
   });
 
   // Fetch posts with proper validation
@@ -495,10 +525,17 @@ export default function PortfolioWall({
               {filteredPosts.slice(0, itemsToShow).map((post: Post) => {
                 const image =
                   post.acf?.project_image?.url || "/Home/Rectangle_33.webp";
-                const title = post.title?.rendered || post.slug;
+                const title = decodeHtmlEntities(
+                  post.title?.rendered || post.slug,
+                );
                 const safeImageSrc = normalizeSrc(image);
                 const cat = post.acf?.catogary;
-                const categoryLabel = Array.isArray(cat) ? cat[0] : cat || "";
+                const categoryLabels = Array.isArray(cat)
+                  ? cat
+                  : cat
+                    ? [cat]
+                    : [];
+                const primaryCategoryLabel = categoryLabels[0] || "";
 
                 const isFlexible =
                   isFigmaCard(post) ||
@@ -627,7 +664,7 @@ export default function PortfolioWall({
                       </div>
 
                       <div className="mt-2 flex-1 flex flex-col justify-start overflow-hidden">
-                        {categoryLabel?.toLowerCase() !== "print" && (
+                        {primaryCategoryLabel?.toLowerCase() !== "print" && (
                           <h2
                             className="mt-2 text-base font-semibold text-[#3A6EA5] md:text-lg"
                             style={{
@@ -641,7 +678,9 @@ export default function PortfolioWall({
                           </h2>
                         )}
                         <div className="flex gap-2 flex-wrap mt-1">
-                          {categoryLabel && <Tag label={categoryLabel} />}
+                          {categoryLabels.map((label) => (
+                            <Tag key={`${post.id}-${label}`} label={label} />
+                          ))}
                         </div>
                       </div>
                     </div>
@@ -783,13 +822,20 @@ export default function PortfolioWall({
               {filteredPosts.slice(0, itemsToShow).map((post: Post) => {
                 const image =
                   post.acf?.project_image?.url || "/Home/Rectangle_33.webp";
-                const title = post.title?.rendered || post.slug;
+                const title = decodeHtmlEntities(
+                  post.title?.rendered || post.slug,
+                );
                 const safeImageSrc = normalizeSrc(image);
                 const cat = post.acf?.catogary;
-                const categoryLabel = Array.isArray(cat) ? cat[0] : cat || "";
+                const categoryLabels = Array.isArray(cat)
+                  ? cat
+                  : cat
+                    ? [cat]
+                    : [];
+                const primaryCategoryLabel = categoryLabels[0] || "";
                 const isFigma = isFigmaCard(post);
                 const isCompact = ["logo design", "branding", "illustration"].includes(
-                  categoryLabel.toLowerCase(),
+                  primaryCategoryLabel.toLowerCase(),
                 );
                 const mobileCardHeight = isFigma
                   ? Math.min(FIGMA_VISIBLE_HEIGHT, 320)
@@ -847,7 +893,9 @@ export default function PortfolioWall({
                           {title}
                         </h3>
                         <div className="flex gap-2 flex-wrap mt-1">
-                          {categoryLabel && <Tag label={categoryLabel} />}
+                          {categoryLabels.map((label) => (
+                            <Tag key={`${post.id}-${label}`} label={label} />
+                          ))}
                         </div>
                       </div>
                     </div>

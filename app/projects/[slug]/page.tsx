@@ -5,6 +5,7 @@ import ProjectImage from "@/components/Projectimage";
 import SectionFallback from "@/components/SectionFallback";
 import LazySection from "@/components/LazySection";
 import { buildMetadata } from "@/lib/seo";
+import { getProjectPosts } from "@/lib/projectPosts";
 
 export const revalidate = 300;
 
@@ -14,8 +15,13 @@ const LivePreview = nextDynamic(() => import("@/components/LivePreview"), {
   loading: () => <SectionFallback heightClassName="min-h-96" />,
 });
 
-const API_URL =
-  "https://olive-peafowl-546702.hostingersite.com/wp-json/wp/v2/posts?slug=";
+async function fetchProjectCollection() {
+  try {
+    return await getProjectPosts();
+  } catch {
+    return [];
+  }
+}
 
 // Enhanced URL cleaning function
 function cleanUrl(url: string): string {
@@ -71,14 +77,7 @@ function cleanObjectUrls(obj: any): any {
 
 export async function generateStaticParams() {
   try {
-    const res = await fetch(
-      "https://olive-peafowl-546702.hostingersite.com/wp-json/wp/v2/posts",
-      { next: { revalidate: 300 } }
-    );
-    
-    if (!res.ok) return [];
-    
-    const posts = await res.json();
+    const posts = await fetchProjectCollection();
     return posts.map((post: any) => ({ slug: post.slug }));
   } catch (error) {
     console.error('Error generating static params:', error);
@@ -94,21 +93,8 @@ export async function generateMetadata({
   const { slug } = await params;
 
   try {
-    const res = await fetch(`${API_URL}${slug}`, {
-      next: { revalidate: 300 },
-    });
-
-    if (!res.ok) {
-      return buildMetadata({
-        title: "Project",
-        description:
-          "Explore project work delivered by Aussie Digital Studios.",
-        path: `/projects/${slug}`,
-      });
-    }
-
-    const data = await res.json();
-    const project = data?.[0];
+    const data = await fetchProjectCollection();
+    const project = data?.find((item: any) => item.slug === slug);
     const projectTitle = project?.title?.rendered || "Project";
     const projectDescription =
       project?.acf?.introduction ||
@@ -137,16 +123,10 @@ export default async function ProjectPage({
   const { slug } = await params;
   
   try {
-    const res = await fetch(`${API_URL}${slug}`, {
-      next: { revalidate: 300 },
-    });
-
-    if (!res.ok) return notFound();
-
-    const data = await res.json();
+    const data = await fetchProjectCollection();
     if (!data || data.length === 0) return notFound();
     
-    const rawProject = data[0];
+    const rawProject = data.find((item: any) => item.slug === slug);
     if (!rawProject) return notFound();
 
     // Clean all URLs in the project data

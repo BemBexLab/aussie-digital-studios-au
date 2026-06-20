@@ -1,5 +1,7 @@
 export const revalidate = 300;
 
+import { getProjectPosts } from "@/lib/projectPosts";
+
 // URL cleaning function
 const cleanUrl = (url: string): string => {
   if (!url) return "";
@@ -52,23 +54,24 @@ const cleanObjectUrls = (obj: any): any => {
   return cleaned;
 };
 
-export async function GET(request: Request) {
+export async function GET(
+  request: Request,
+  { params }: { params: Promise<{ slug: string }> },
+) {
   try {
-    const wpRes = await fetch(
-      'https://olive-peafowl-546702.hostingersite.com/index.php/wp-json/wp/v2/projects?per_page=100',
-      {
-        next: { revalidate: 300 },
-      }
-    );
+    const { slug } = await params;
+    const data = await getProjectPosts();
 
-    if (!wpRes.ok) {
-      return new Response("Failed to fetch posts", { status: wpRes.status });
+    const project = Array.isArray(data)
+      ? data.find((item: any) => item?.slug === slug)
+      : null;
+
+    if (!project) {
+      return new Response("Project not found", { status: 404 });
     }
 
-    const data = await wpRes.json();
-
     // Clean all URLs in the response data
-    const cleanedData = cleanObjectUrls(data);
+    const cleanedData = cleanObjectUrls(project);
 
     return new Response(JSON.stringify(cleanedData), {
       headers: {
