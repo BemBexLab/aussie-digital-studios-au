@@ -3,9 +3,18 @@ export interface ProjectPost {
   slug: string;
   title: { rendered: string };
   acf?: {
+    project_title?: string;
     project_image?: { url: string };
     project_url?: string;
     catogary?: string | string[];
+    introduction?: string;
+    genesis_of_collaboration?: string;
+    conceptualization?: string;
+    design_symphony?: string;
+    development_overture?: string;
+    launch_and_beyond?: string;
+    conclusion?: string;
+    logo_sub_catogary?: string | string[];
   };
 }
 
