@@ -184,10 +184,10 @@ const Footer = () => {
                   (0468) 285-539
                 </a>
                 <a
-                  href="mailto:social@aussiedigitalstudios.com"
+                  href="mailto:contact@aussiedigitalstudios.com.au"
                   className="text-sm font-extralight hover:text-[#4C8C74] transition-colors"
                 >
-                  social@aussiedigitalstudios.com
+                  contact@aussiedigitalstudios.com.au
                 </a>
                 <p className="max-w-[240px] text-sm font-extralight">
                   16A Fox Cl, Kariong NSW 2250, Australia.

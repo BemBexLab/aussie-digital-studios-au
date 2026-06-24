@@ -161,10 +161,10 @@ const FooterMobile = () => {
           (0468) 285-539
         </a>
         <a
-          href="mailto:social@aussiedigitalstudios.com"
+          href="mailto:contact@aussiedigitalstudios.com.au"
           className="block hover:text-[#4C8C74] transition-colors"
         >
-          social@aussiedigitalstudios.com
+          contact@aussiedigitalstudios.com.au
         </a>
         <p className="mx-auto mt-1 max-w-[260px]">
           16A Fox Cl, Kariong NSW 2250, Australia.
