@@ -535,6 +535,9 @@ export default function PortfolioWall({
                   : cat
                     ? [cat]
                     : [];
+                const visibleCategoryLabels = categoryLabels.filter(
+                  (label) => normalizeCategory(label) !== "web development",
+                );
                 const primaryCategoryLabel = categoryLabels[0] || "";
 
                 const isFlexible =
@@ -678,7 +681,7 @@ export default function PortfolioWall({
                           </h2>
                         )}
                         <div className="flex gap-2 flex-wrap mt-1">
-                          {categoryLabels.map((label) => (
+                          {visibleCategoryLabels.map((label) => (
                             <Tag key={`${post.id}-${label}`} label={label} />
                           ))}
                         </div>
@@ -832,6 +835,9 @@ export default function PortfolioWall({
                   : cat
                     ? [cat]
                     : [];
+                const visibleCategoryLabels = categoryLabels.filter(
+                  (label) => normalizeCategory(label) !== "web development",
+                );
                 const primaryCategoryLabel = categoryLabels[0] || "";
                 const isFigma = isFigmaCard(post);
                 const isCompact = ["logo design", "branding", "illustration"].includes(
@@ -893,7 +899,7 @@ export default function PortfolioWall({
                           {title}
                         </h3>
                         <div className="flex gap-2 flex-wrap mt-1">
-                          {categoryLabels.map((label) => (
+                          {visibleCategoryLabels.map((label) => (
                             <Tag key={`${post.id}-${label}`} label={label} />
                           ))}
                         </div>
