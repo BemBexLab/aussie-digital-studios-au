@@ -82,7 +82,7 @@ const Header = () => {
       <header
         className={`hidden md:block fixed w-full z-50 transform transition-transform duration-300 ease-in-out ${isHeaderVisible ? 'translate-y-0' : '-translate-y-full'} ${isScrolled && isHeaderVisible ? 'bg-white/5 backdrop-blur-sm' : 'bg-transparent'}`}
       >
-      <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="w-full px-6 py-4 md:px-8 lg:px-12 xl:px-16 flex items-center justify-between">
         {/* Left side: Logo + Nav (grouped together) */}
         <div className="flex items-center space-x-18">
           {/* Logo */}
@@ -107,7 +107,7 @@ const Header = () => {
           </div>
 
           {/* Desktop Nav - now next to logo */}
-          <nav className="hidden md:flex flex-row space-x-6 items-center relative">
+          <nav className="hidden md:flex flex-row space-x-8 lg:space-x-15 items-center relative ml-[190px]">
             {['Home', 'About', 'Services', 'Portfolio', 'Packages', 'Blogs', 'Contact'].map((item) => {
               const href =
                 item === 'Home'
@@ -146,7 +146,12 @@ const Header = () => {
           href="tel:+61468285539"
           className="hidden md:flex items-center space-x-1 text-xs lg:text-sm text-white hover:text-green-400 transition-colors whitespace-nowrap px-2 lg:px-0"
         >
-          <span>Call Now: (0468) 285-539</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+  <path d="M14.3761 2.05373C14.3761 2.05373 16.6352 2.2591 19.5104 5.13432C22.3857 8.00955 22.591 10.2687 22.591 10.2687" stroke="white" stroke-width="1.5403" stroke-linecap="round"/>
+  <path d="M14.5887 5.68436C14.5887 5.68436 15.6052 5.9748 17.13 7.49962C18.6549 9.02443 18.9453 10.041 18.9453 10.041" stroke="white" stroke-width="1.5403" stroke-linecap="round"/>
+  <path d="M10.3073 5.459L10.9737 6.65317C11.5752 7.73085 11.3337 9.14458 10.3865 10.0918C10.3865 10.0918 9.23747 11.2408 11.3207 13.3241C13.4039 15.4073 14.553 14.2583 14.553 14.2583C15.5002 13.3111 16.914 13.0696 17.9916 13.6711L19.1858 14.3375C20.8131 15.2457 21.0053 17.5278 19.5749 18.9582C18.7154 19.8177 17.6625 20.4865 16.4986 20.5306C14.5392 20.6049 11.2116 20.109 7.87372 16.7711C4.53582 13.4332 4.03993 10.1056 4.11421 8.14622C4.15834 6.98228 4.82711 5.92937 5.6866 5.06988C7.11697 3.63951 9.3991 3.83169 10.3073 5.459Z" stroke="white" stroke-width="1.5403" stroke-linecap="round"/>
+</svg>
+          <span>(0468) 285-539</span>
           {/* <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-4 w-4"

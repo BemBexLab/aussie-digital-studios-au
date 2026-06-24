@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import { getProjectPosts } from "@/lib/projectPosts";
 import SectionFallback from "@/components/SectionFallback";
 import LazySection from "@/components/LazySection";
+import HomeHeroV2 from "@/components/HomeHeroV2";
 
 const LogoSlider = dynamic(() => import("./components/LogoSlider"), {
   loading: () => <SectionFallback heightClassName="min-h-32" />,
@@ -45,7 +46,8 @@ const HomePage = async () => {
 
   return (
     <div className="overflow-hidden relative">
-      <Hero />
+      {/* <Hero /> */}
+      <HomeHeroV2 />
       <LazySection heightClassName="min-h-32">
         <LogoSlider />
       </LazySection>

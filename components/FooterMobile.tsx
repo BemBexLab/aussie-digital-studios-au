@@ -154,6 +154,21 @@ const FooterMobile = () => {
       <div className="text-center py-4 border-t border-gray-700 text-xs font-extralight">
         <p className="mb-1">Copyright © 2025, Aussie Digital Studios.</p>
         <p>All Rights Reserved.</p>
+        <a
+          href="tel:+61468285539"
+          className="mt-3 block hover:text-[#4C8C74] transition-colors"
+        >
+          (0468) 285-539
+        </a>
+        <a
+          href="mailto:social@aussiedigitalstudios.com"
+          className="block hover:text-[#4C8C74] transition-colors"
+        >
+          social@aussiedigitalstudios.com
+        </a>
+        <p className="mx-auto mt-1 max-w-[260px]">
+          16A Fox Cl, Kariong NSW 2250, Australia.
+        </p>
       </div>
 
       {/* Aussie Digital SVGs - Stacked for mobile */}
