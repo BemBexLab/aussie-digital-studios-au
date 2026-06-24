@@ -500,8 +500,8 @@ const TermsAndConditions = () => {
             <br />
             <li>
               If you require help, reply &quot;HELP&quot; or contact us at{" "}
-              <a href="mailto:social@aussiedigitalstudios.com" className="text-[#4C8C74]">
-                social@aussiedigitalstudios.com
+              <a href="mailto:contact@aussiedigitalstudios.com.au" className="text-[#4C8C74]">
+                contact@aussiedigitalstudios.com.au
               </a>
               .
             </li>

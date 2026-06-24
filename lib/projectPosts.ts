@@ -3,9 +3,18 @@ export interface ProjectPost {
   slug: string;
   title: { rendered: string };
   acf?: {
+    project_title?: string;
     project_image?: { url: string };
     project_url?: string;
     catogary?: string | string[];
+    introduction?: string;
+    genesis_of_collaboration?: string;
+    conceptualization?: string;
+    design_symphony?: string;
+    development_overture?: string;
+    launch_and_beyond?: string;
+    conclusion?: string;
+    logo_sub_catogary?: string | string[];
   };
 }
 
@@ -42,23 +51,30 @@ function cleanObject<T>(obj: T): T {
   return obj;
 }
 
+const PROJECTS_API_URL =
+  "https://olive-peafowl-546702.hostingersite.com/index.php/wp-json/wp/v2/posts?per_page=100";
+
 export async function getProjectPosts(): Promise<ProjectPost[]> {
   const allPosts: ProjectPost[] = [];
   let page = 1;
+  let totalPages = 1;
 
-  while (true) {
-    const res = await fetch(
-      `https://olive-peafowl-546702.hostingersite.com/wp-json/wp/v2/posts?per_page=100&page=${page}`,
-      { next: { revalidate: 300 } },
-    );
+  while (page <= totalPages) {
+    const separator = PROJECTS_API_URL.includes("?") ? "&" : "?";
+    const res = await fetch(`${PROJECTS_API_URL}${separator}page=${page}`, {
+      next: { revalidate: 300 },
+    });
 
-    if (!res.ok) break;
+    if (!res.ok) {
+      throw new Error(`Failed to fetch project posts: ${res.status}`);
+    }
 
     const posts = (await res.json()) as ProjectPost[];
     allPosts.push(...posts);
 
-    if (posts.length < 100) break;
-    page++;
+    const totalPagesHeader = res.headers.get("X-WP-TotalPages");
+    totalPages = totalPagesHeader ? Number(totalPagesHeader) : page;
+    page += 1;
   }
 
   return cleanObject(allPosts);
