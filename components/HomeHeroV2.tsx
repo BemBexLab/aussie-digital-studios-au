@@ -77,7 +77,7 @@ const HomeHeroV2 = () => {
           </p>
 
           <a
-            href="tel:0468285539"
+            href="tel:+61468285539"
             className="mt-7 inline-flex w-fit items-center gap-3 rounded-full bg-[#56b09b] px-4 py-2.5 text-[0.92rem] font-medium text-white transition-transform duration-200 hover:scale-[1.02] sm:mt-8 sm:gap-4 sm:px-5 sm:py-3 sm:text-base lg:mt-10 lg:px-7 lg:py-3.5 lg:text-[1.05rem]"
           >
             <span>(0468) 285-539</span>

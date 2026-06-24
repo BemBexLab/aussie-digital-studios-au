@@ -12,13 +12,13 @@ const MobileHeader = () => {
   const [logoFallback, setLogoFallback] = useState(false);
   const pathname = usePathname();
   const currentPath = pathname ?? "";
-  const [hash, setHash] = useState("");
+  const [hash, setHash] = useState(() =>
+    typeof window === "undefined" ? "" : window.location.hash || "",
+  );
 
   // Mobile header is dark-only. No theme detection required.
 
   useEffect(() => {
-    setHash(window.location.hash || "");
-
     const onHashChange = () => setHash(window.location.hash || "");
     window.addEventListener("hashchange", onHashChange);
     return () => window.removeEventListener("hashchange", onHashChange);
@@ -34,8 +34,9 @@ const MobileHeader = () => {
 
   return (
     <>
-      <header className="fixed top-0 w-full z-[100] md:hidden bg-black/5 backdrop-blur-sm transition-colors">
-      <div className="flex items-center justify-between px-4 py-3 text-white">
+      <header className="fixed top-0 w-full z-[100] lg:hidden transition-colors">
+      <div className="mx-3 mt-3 rounded-[22px] border border-white/12 bg-black/10 px-4 py-3 text-white backdrop-blur-xl shadow-[0_14px_40px_rgba(0,0,0,0.22)] sm:mx-4 sm:px-5">
+      <div className="flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center">
           {!logoFallback ? (
@@ -44,7 +45,7 @@ const MobileHeader = () => {
               alt="Aussie Digital Studios"
               width={100}
               height={40}
-              className="h-10 w-auto"
+              className="h-9 w-auto sm:h-10"
               priority
               onError={() => setLogoFallback(true)}
             />
@@ -76,11 +77,12 @@ const MobileHeader = () => {
           </svg>
         </button>
       </div>
+      </div>
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="bg-black/10 border-gray-700 text-white backdrop-blur-sm pb-4 border-t">
-          <nav className="flex flex-col space-y-2 px-4 py-4">
+        <div className="mx-3 mt-2 rounded-[22px] border border-white/12 bg-black/12 pb-4 text-white backdrop-blur-xl shadow-[0_14px_40px_rgba(0,0,0,0.22)] sm:mx-4">
+          <nav className="flex flex-col space-y-2 px-4 py-4 sm:px-5">
             {['Home', 'About'].map((item) => {
               const href = item === 'Home' ? '/' : `/${item.toLowerCase()}`;
               const active = isActive(item);
@@ -151,7 +153,7 @@ const MobileHeader = () => {
       </header>
     
       {/* Spacer to push content below fixed header */}
-      <div className="h-16 md:hidden" />
+      <div className="h-20 lg:hidden" />
     </>
   );
 };
