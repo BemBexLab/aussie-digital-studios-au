@@ -46,7 +46,7 @@ const MobileHeader = () => {
               width={100}
               height={40}
               className="h-9 w-auto sm:h-10"
-              priority
+              sizes="100px"
               onError={() => setLogoFallback(true)}
             />
           ) : (

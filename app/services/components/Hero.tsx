@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 import { motion } from "@/lib/motion";
 import HeroMobile from "@/components/HeroMobile";
 
@@ -64,13 +65,15 @@ const Hero = ({ H }: HeroProps) => {
       <div
         className="hidden md:flex w-full h-[45vh] lg:h-[55vh] items-center justify-center relative overflow-hidden"
         data-hero-bg-about
-        style={{
-          backgroundImage: "url('/about/About Hero BG.webp')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
       >
+      <Image
+        src="/About/About Hero BG.webp"
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover"
+      />
       {/* Clouds Video Overlay */}
       {shouldRenderVideo ? (
         <video

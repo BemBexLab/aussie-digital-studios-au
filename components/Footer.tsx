@@ -1,14 +1,8 @@
-"use client";
-
-import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import FooterMobile from "./FooterMobile";
-import { useThemeMode } from "@/lib/useThemeMode";
  
 const Footer = () => {
-  const { isDarkMode } = useThemeMode();
-
   return (
     <>
       <FooterMobile />
@@ -19,11 +13,12 @@ const Footer = () => {
             {/* Aussie Logo */}
             <div className="mx-auto md:mx-[50px] mt-5 md:mt-5">
               <Image
-                src={isDarkMode ? "/Group_1.webp" : "/Aussie_Header_Logo_Light.webp"}
+                src="/Group_1.webp"
                 alt="Logo"
                 width={280}
                 height={170}
                 className="h-auto w-[200px] md:w-[280px]"
+                sizes="(max-width: 768px) 200px, 280px"
               />
             </div>
 
@@ -213,6 +208,7 @@ const Footer = () => {
             width={1900}
             height={1900}
             className="mb-4 h-auto w-[1300px] max-w-full"
+            sizes="(max-width: 768px) 100vw, 1300px"
           />
         </div>
       </div>

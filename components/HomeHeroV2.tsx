@@ -1,56 +1,30 @@
 "use client";
 
 import React from "react";
-import { FiPhoneCall } from "react-icons/fi";
+import Image from "next/image";
 import { motion } from "@/lib/motion";
-import { useReducedMotion } from "motion/react";
+import { useReducedMotion, useScroll, useTransform } from "motion/react";
 
 const HomeHeroV2 = () => {
   const shouldReduceMotion = useReducedMotion();
-  const [parallaxY, setParallaxY] = React.useState(0);
-
-  React.useEffect(() => {
-    if (typeof window === "undefined" || shouldReduceMotion) {
-      return;
-    }
-
-    let frameId = 0;
-
-    const updateParallax = () => {
-      const scrollY = window.scrollY;
-      setParallaxY(Math.min(scrollY * 0.18, 120));
-      frameId = 0;
-    };
-
-    const handleScroll = () => {
-      if (frameId) {
-        return;
-      }
-
-      frameId = window.requestAnimationFrame(updateParallax);
-    };
-
-    updateParallax();
-    window.addEventListener("scroll", handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      if (frameId) {
-        window.cancelAnimationFrame(frameId);
-      }
-    };
-  }, [shouldReduceMotion]);
+  const { scrollY } = useScroll();
+  const parallaxY = useTransform(scrollY, [0, 700], [0, 120]);
 
   return (
     <section className="relative isolate min-h-screen overflow-hidden bg-[#0d0f0f] text-white">
       <motion.div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        animate={{ y: shouldReduceMotion ? 0 : parallaxY }}
-        transition={{ type: "spring", stiffness: 45, damping: 22, mass: 1.1 }}
-        style={{
-          backgroundImage: "url('/Home/image 17.webp')",
-        }}
-      />
+        className="absolute inset-0"
+        style={{ y: shouldReduceMotion ? 0 : parallaxY }}
+      >
+        <Image
+          src="/Home/image 17.webp"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+      </motion.div>
 
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,11,11,0.78)_0%,rgba(10,12,12,0.58)_36%,rgba(14,13,11,0.44)_100%)] md:bg-[linear-gradient(90deg,rgba(11,12,12,0.82)_0%,rgba(11,13,13,0.56)_42%,rgba(17,14,10,0.38)_100%)]" />
       <div className="absolute left-[-12%] top-[10%] h-[260px] w-[260px] rounded-full bg-[#1c3b31]/20 blur-3xl sm:left-[2%] sm:h-[320px] sm:w-[320px] lg:left-[10%] lg:h-[520px] lg:w-[520px]" />

@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 type HeroMobileProps = {
   H: string;
@@ -10,13 +11,15 @@ const HeroMobile = ({ H, shouldRenderVideo }: HeroMobileProps) => {
     <div
       className="relative flex h-[42vh] w-full items-center justify-center overflow-hidden md:hidden sm:h-[50vh]"
       data-hero-bg-about
-      style={{
-        backgroundImage: "url('/About/About Hero BG.webp')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
     >
+      <Image
+        src="/About/About Hero BG.webp"
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover"
+      />
       {shouldRenderVideo ? (
         <video
           autoPlay

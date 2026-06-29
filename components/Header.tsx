@@ -101,7 +101,7 @@ const Header = () => {
                 height={56}
                 className="h-11 w-auto xl:h-12 2xl:h-14"
                 style={{ width: "auto" }}
-                priority
+                sizes="140px"
                 onError={() => setLogoFallback(true)}
               />
             ) : (

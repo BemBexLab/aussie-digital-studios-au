@@ -147,6 +147,7 @@ const FooterMobile = () => {
           width={280}
           height={170}
           className="w-[150px]"
+          sizes="150px"
         />
       </div>
 
