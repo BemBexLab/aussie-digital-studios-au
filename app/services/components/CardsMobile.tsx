@@ -44,15 +44,17 @@ const CardsMobile = ({ service }: CardsMobileProps) => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center w-full py-8 px-4">
-      <h2 className="text-2xl text-center mb-6 font-semibold">Strategic Approach</h2>
+    <div className="flex w-full flex-col items-center justify-center px-4 py-8">
+      <h2 className="mb-6 text-center text-2xl font-semibold">
+        Strategic Approach
+      </h2>
       
       {/* Single column stack for mobile */}
-      <div className="flex flex-col gap-4 w-full">
+      <div className="flex w-full flex-col gap-4">
         {allCards.map((card, index) => (
           <div
             key={`${card.title}-${index}`}
-            className="relative rounded-xl w-full border border-white/10 p-4 pb-24 min-h-[240px] transition overflow-hidden"
+            className="relative w-full overflow-hidden rounded-xl border border-white/10 p-4 transition sm:p-5"
             style={{
               backgroundImage: `url('${isDarkMode ? '/Services/dark_card_md.webp' : '/Services/light_card_md.webp'}')`,
               backgroundSize: "cover",
@@ -60,13 +62,25 @@ const CardsMobile = ({ service }: CardsMobileProps) => {
               backdropFilter: "blur(10px)",
             }}
           >
-            <div className="flex flex-col">
-              <div className="flex justify-center mb-3" key="svg-icon">
+            <div className="flex flex-col gap-3">
+              <div className="mb-1 flex justify-center" key="svg-icon">
                 {card.svg}
               </div>
               <div className="flex flex-col">
-                <h3 className={`text-lg ${isDarkMode ? "text-yellow-500" : "text-[#3A6EA5]"} font-semibold`}>{card.title}</h3>
-                <div className={`font-light text-sm mt-2 mb-4 ${isDarkMode ? "text-white" : "text-[#777777]"}`}>{card.desc}</div>
+                <h3
+                  className={`text-lg font-semibold leading-snug ${
+                    isDarkMode ? "text-yellow-500" : "text-[#3A6EA5]"
+                  }`}
+                >
+                  {card.title}
+                </h3>
+                <div
+                  className={`mt-2 text-sm leading-6 ${
+                    isDarkMode ? "text-white" : "text-[#777777]"
+                  }`}
+                >
+                  {card.desc}
+                </div>
               </div>
             </div>
           </div>

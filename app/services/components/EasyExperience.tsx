@@ -145,11 +145,11 @@ const EasyExperience = ({ sectionData }: EasyExperienceProps) => {
   };
 
   return (
-    <section className="hidden md:block mt-25">
+    <section className="mt-16 md:mt-25">
       <div className="w-full px-4">
         {sectionData.eyebrow ? (
           <motion.p
-            className="text-xl font-normal text-center text-[#4C8C74]"
+            className="text-center text-base font-normal text-[#4C8C74] md:text-xl"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
@@ -160,7 +160,7 @@ const EasyExperience = ({ sectionData }: EasyExperienceProps) => {
         ) : null}
 
         <motion.h2
-          className="text-4xl font-semibold text-center text-white mt-2"
+          className="mt-2 text-center text-2xl font-semibold text-white md:text-4xl"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
@@ -171,7 +171,7 @@ const EasyExperience = ({ sectionData }: EasyExperienceProps) => {
 
         {sectionData.headingLine2 ? (
           <motion.h2
-            className="text-center text-white mt-2"
+            className="mt-2 text-center text-sm text-white/80 md:text-base"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
@@ -181,7 +181,65 @@ const EasyExperience = ({ sectionData }: EasyExperienceProps) => {
           </motion.h2>
         ) : null}
 
-        <div className="mx-auto mt-15 max-w-7xl">
+        <div className="mx-auto mt-8 flex flex-col gap-4 md:hidden">
+          {sectionData.cards.map((card, index) => {
+            const isExpanded = !!expandedCards[index];
+            const rawText = getEasyExperienceRawText(card.description);
+            const hasTextContent = rawText.trim().length > 0;
+            const needsTruncation = rawText.length > CHAR_LIMIT;
+            const displayText =
+              !needsTruncation || isExpanded
+                ? rawText
+                : `${rawText.slice(0, CHAR_LIMIT).trimEnd()}...`;
+
+            return (
+              <motion.div
+                key={`mobile-${index}`}
+                className="rounded-2xl border border-white/15 px-5 py-6"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: index * 0.1, ease: "easeOut" }}
+                viewport={{ once: true, amount: 0.3 }}
+              >
+                <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full border border-white/30">
+                  {hasShapeIcon(card.icon) ? (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="40"
+                      height="40"
+                      viewBox={card.icon.viewBox}
+                      fill="none"
+                    >
+                      {card.icon.shapes.map(renderShape)}
+                    </svg>
+                  ) : null}
+                  {!hasShapeIcon(card.icon) ? card.icon : null}
+                </div>
+
+                <p className="mb-3 text-lg font-semibold leading-snug text-yellow-500">
+                  {card.title}
+                </p>
+
+                <div className="text-sm leading-relaxed text-white/70">
+                  {hasTextContent ? displayText : card.description}
+                </div>
+
+                {hasTextContent && needsTruncation ? (
+                  <button
+                    type="button"
+                    onClick={() => toggleExpand(index)}
+                    className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-yellow-400"
+                  >
+                    <span>{isExpanded ? "Read Less" : "Read More"}</span>
+                    {isExpanded ? <AiOutlineArrowUp /> : <AiOutlineArrowDown />}
+                  </button>
+                ) : null}
+              </motion.div>
+            );
+          })}
+        </div>
+
+        <div className="mx-auto mt-15 hidden max-w-7xl md:block">
           {rows.map((rowCards, rowIndex) => {
             const shouldCenterRow = rowCards.length < colsPerRow;
 
@@ -192,12 +250,7 @@ const EasyExperience = ({ sectionData }: EasyExperienceProps) => {
               >
                 {rowCards.map((card, cardIndex) => {
                   const globalIndex = rowIndex * colsPerRow + cardIndex;
-                  const isExpanded = !!expandedCards[globalIndex];
                   const isLastInRow = cardIndex === rowCards.length - 1;
-
-                  const rawText = getEasyExperienceRawText(card.description);
-                  const needsTruncation = rawText.length > CHAR_LIMIT;
-                  const truncatedText = rawText.slice(0, CHAR_LIMIT).trimEnd() + "...";
 
                   return (
                     <motion.div
