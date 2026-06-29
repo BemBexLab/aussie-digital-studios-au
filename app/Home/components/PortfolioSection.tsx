@@ -25,7 +25,15 @@ const ROUTE_CATEGORIES = [
   "REACT",
 ];
 
-const categories = [...ROUTE_CATEGORIES, ...MODAL_CATEGORIES];
+const ALL_CATEGORIES = [...ROUTE_CATEGORIES, ...MODAL_CATEGORIES];
+const HOME_CATEGORIES = [
+  "WEB DEVELOPMENT",
+  "FIGMA DESIGN",
+  "LOGO DESIGN",
+  "BRANDING",
+  "ILLUSTRATION",
+  "PRINT",
+];
 
 const FIGMA_CARD_HEIGHT = 500;
 const FIGMA_VISIBLE_HEIGHT = Math.floor(FIGMA_CARD_HEIGHT / 2) + 100;
@@ -346,6 +354,9 @@ export default function PortfolioWall({
   const router = useRouter();
   const pathname = usePathname();
   const isOnPortfolioPage = pathname === "/portfolio";
+  const visibleCategories = isOnPortfolioPage
+    ? ALL_CATEGORIES
+    : HOME_CATEGORIES;
 
   const handleLoadMore = () => {
     if (isOnPortfolioPage) {
@@ -461,7 +472,7 @@ export default function PortfolioWall({
 
         {/* Category filter buttons */}
         <div className="mb-8 flex flex-wrap justify-center gap-2.5 md:gap-3">
-          {categories.map((cat, i) => (
+          {visibleCategories.map((cat, i) => (
             <button
               key={i}
               onClick={() => setSelectedCategory(cat)}
@@ -767,7 +778,7 @@ export default function PortfolioWall({
         </div>
 
         <div className="mb-6 flex flex-wrap justify-center gap-2 pb-2">
-          {categories.map((cat, i) => (
+          {visibleCategories.map((cat, i) => (
             <button
               key={i}
               onClick={() => setSelectedCategory(cat)}
