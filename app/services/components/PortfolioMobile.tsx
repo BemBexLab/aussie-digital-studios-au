@@ -51,57 +51,43 @@ const PortfolioMobile = ({ service }: PortfolioMobileProps) => {
   const images = service.portfolioData || defaultPortfolioData;
 
   return (
-    <section className="sm:hidden my-10 py-3" style={{
-        backgroundImage: `url('${isDarkMode ? '/Home/CTA.svg' : '/Home/Frame_167_Light.svg'}')`,
+    <section
+      className="my-10 py-6 sm:hidden"
+      style={{
+        backgroundImage: `url('${isDarkMode ? "/Home/CTA.svg" : "/Home/Frame_167_Light.svg"}')`,
         backgroundColor: "transparent",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-    }}>
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       {/* Heading */}
-      <div className="text-center mb-8 px-4">
-        <p className="text-sm font-medium text-[#4C8C74] mb-2">Our Portfolio</p>
+      <div className="mb-8 text-center">
+        <p className="mb-2 text-sm font-medium text-[#4C8C74]">Our Portfolio</p>
         <h2 className="text-xl font-semibold text-white leading-tight">
           Real Websites, Not Just Mockups
         </h2>
 
-        {/* Cards slider */}
-        <style>{`
-          @keyframes scroll-mobile {
-            0% {
-              transform: translateX(0);
-            }
-            100% {
-              transform: translateX(-100%);
-            }
-          }
-          .portfolio-scroll-mobile {
-            animation: scroll-mobile 25s linear infinite;
-          }
-          .portfolio-image-mobile {
-            cursor: pointer;
-            transition: transform 0.3s ease;
-          }
-          .portfolio-image-mobile:hover {
-            transform: scale(1.05);
-          }
-          .portfolio-image-mobile.selected {
-            transform: scale(1.15);
-          }
-        `}</style>
-        <div className="overflow-hidden mt-10">
-          <div className="flex flex-row gap-2 portfolio-scroll-mobile">
+        <div className="mt-8 overflow-x-auto px-4 pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <div className="flex snap-x snap-mandatory gap-3">
             {images.map((image) => (
-              <Image
+              <button
                 key={image.id}
-                className={`w-[200px] h-[350px] flex-shrink-0 portfolio-image-mobile ${image.translateY} ${
-                  clickedImageId === image.id ? "selected" : ""
+                type="button"
+                onClick={() =>
+                  setClickedImageId(image.id === clickedImageId ? null : image.id)
+                }
+                className={`relative w-[78vw] max-w-[260px] shrink-0 snap-center overflow-hidden rounded-2xl border border-white/10 bg-black/10 text-left transition-transform duration-300 ${
+                  clickedImageId === image.id ? "scale-[1.02]" : ""
                 }`}
-                src={image.src}
-                alt="Our Process"
-                width={600}
-                height={900}
-                onClick={() => setClickedImageId(image.id === clickedImageId ? null : image.id)}
-              />
+              >
+                <Image
+                  className="h-auto w-full"
+                  src={image.src}
+                  alt="Portfolio preview"
+                  width={600}
+                  height={900}
+                />
+              </button>
             ))}
           </div>
         </div>

@@ -109,16 +109,16 @@ const Portfolio = ({ service }: PortfolioProps) => {
             transform: scale(1.15);
           }
         `}</style>
-        <div className="overflow-hidden mt-10">
-          <div className="flex flex-row gap-3 portfolio-scroll">
+        <div className="mt-10 overflow-hidden">
+          <div className="flex flex-row gap-3 lg:gap-4 portfolio-scroll">
             {images.map((image) => (
               <Image
                 key={image.id}
-                className={`w-[350px] h-[600px] flex-shrink-0 portfolio-image ${image.translateY} ${
+                className={`h-auto w-[260px] flex-shrink-0 portfolio-image md:w-[300px] lg:w-[340px] xl:w-[360px] ${image.translateY} ${
                   clickedImageId === image.id ? "selected" : ""
                 }`}
                 src={image.src}
-                alt="Our Process"
+                alt="Portfolio preview"
                 width={1200}
                 height={1500}
                 onClick={() => setClickedImageId(image.id === clickedImageId ? null : image.id)}
