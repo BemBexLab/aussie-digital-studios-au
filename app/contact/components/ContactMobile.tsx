@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Swal from "sweetalert2";
+import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
 import { sendContactEmail } from "@/lib/emailService";
 import { useThemeMode } from "@/lib/useThemeMode";
 
@@ -18,6 +19,26 @@ const ContactMobile = () => {
     detail: "",
   });
   const [loading, setLoading] = useState(false);
+  const contactCards = [
+    {
+      icon: <FiPhone className="h-7 w-7 text-[#f2d300]" />,
+      label: "(0468) 285-539",
+      value: "+61 468 285 539",
+      href: "tel:+61468285539",
+    },
+    {
+      icon: <FiMail className="h-7 w-7 text-[#f2d300]" />,
+      label: "contact@aussiedigitalstudios.com.au",
+      value: "contact@aussiedigitalstudios.com.au",
+      href: "mailto:contact@aussiedigitalstudios.com.au",
+    },
+    {
+      icon: <FiMapPin className="h-7 w-7 text-[#f2d300]" />,
+      label: "16A Fox Cl, Kariong NSW 2250, Australia",
+      value: "16A Fox Cl, Kariong NSW 2250, Australia",
+      href: "",
+    },
+  ];
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -80,47 +101,47 @@ const ContactMobile = () => {
           {/* Image Section */}
           <div className="relative w-full">
             <Image
-              src="/contact/Rectangle_1.webp"
+              src="/Contact/Rectangle_1.webp"
               alt="Get in Touch Illustration"
-              width={280}
-              height={280}
-              className="w-full h-auto object-cover rounded-lg"
+              width={900}
+              height={900}
+              className="h-[260px] w-full rounded-xl object-cover"
             />
-            {/* Move shape inside bounds on mobile */}
-            <div className="absolute -bottom-4 -right-2 pointer-events-none">
+            <div className="pointer-events-none absolute -bottom-4 -right-2">
               <Image
-                src="/contact/shape.webp"
+                src="/Contact/61da23ef-4d09-41be-a65c-a0692caccb38 1.png"
                 alt="decorative shape"
-                width={60}
-                height={60}
-                className="object-contain"
+                width={140}
+                height={140}
+                className="h-auto w-24 object-contain"
               />
             </div>
           </div>
 
           {/* Form Section */}
           <div
-            className="relative w-full bg-gray-900 bg-opacity-80 backdrop-blur rounded-lg p-4"
+            className="relative w-full rounded-2xl bg-gray-900 p-5 backdrop-blur"
             style={{
               backgroundImage: isDarkMode
-                ? "radial-gradient(circle at top right, rgba(255, 255, 255, 0.1) 0%, transparent 50%), url('/Home/Frame_161.svg')"
-                : `url('/Contact/contact_light.svg')`,
+                ? "radial-gradient(circle at top right, rgba(255, 255, 255, 0.2) 0%, transparent 30%), url('/Home/Frame_161.svg')"
+                : "url('/Contact/contact_light.svg')",
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",
             }}
           >
-            {/* Smaller decorative shape */}
-            <div className="absolute -top-6 -right-4 pointer-events-none opacity-60">
+            <div className="pointer-events-none absolute -right-3 -top-3 opacity-70">
               <Image
                 src="/Geometric_Shape_Silver.webp"
                 alt="decorative geometric shape"
-                width={60}
-                height={60}
-                className=""
+                width={90}
+                height={90}
+                className="h-16 w-16 opacity-90"
               />
             </div>
-            <h1 className="text-2xl sm:text-3xl font-bold text-white mb-4 text-center">Get In Touch</h1>
+            <h1 className="mb-6 text-center text-2xl font-bold text-white">
+              Get In Touch
+            </h1>
             <form onSubmit={handleSubmit} className="space-y-4 relative z-10">
               <input
                 type="text"
@@ -197,13 +218,18 @@ const ContactMobile = () => {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="px-5 py-2 text-xs sm:text-sm bg-teal-500 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-blue-400 text-white rounded-full transition-all inline-flex items-center justify-center group relative z-20 pointer-events-auto"
+                  className="group relative z-20 inline-flex items-center justify-center rounded-full bg-teal-500 px-5 py-3 text-sm text-white transition-all hover:bg-blue-400 disabled:cursor-not-allowed disabled:opacity-50"
                 >
                   <span>{loading ? "Sending..." : "Submit"}</span>
-                  <span className="ml-2 relative w-4 h-4 flex items-center justify-center">
-                    <span className={`absolute inset-0 rounded-full transition-colors ${isDarkMode ? "bg-black" : "bg-white"}`} aria-hidden="true"></span>
+                  <span className="relative ml-2 flex h-6 w-6 items-center justify-center">
+                    <span
+                      className={`absolute inset-0 rounded-full transition-colors ${
+                        isDarkMode ? "bg-black" : "bg-white"
+                      }`}
+                      aria-hidden="true"
+                    ></span>
                     <svg
-                      className="relative w-2 h-2 z-10 transition-transform duration-300 group-hover:rotate-45"
+                      className="relative z-10 h-3 w-3 transition-transform duration-300 group-hover:rotate-45"
                       viewBox="0 0 24 24"
                       xmlns="http://www.w3.org/2000/svg"
                       aria-hidden="true"
@@ -236,34 +262,27 @@ const ContactMobile = () => {
 
       {/* Contact Cards Section */}
       <div className="mt-10">
-        {/* Stack cards vertically */}
         <div className="flex flex-col gap-3">
-          {/* Phone Card */}
-          <Image
-            src={isDarkMode ? "/Contact/phone_number_dark.svg" : "/Contact/phone_number_light.svg"}
-            alt="Phone Contact"
-            width={400}
-            height={120}
-            className="w-full h-auto object-cover rounded-lg"
-          />
-
-          {/* Email Card */}
-          <Image
-            src={isDarkMode ? "/Contact/email_dark.svg" : "/Contact/email_light.svg"}
-            alt="Email Contact"
-            width={400}
-            height={120}
-            className="w-full h-auto object-cover rounded-lg"
-          />
-
-          {/* Location Card */}
-          <Image
-            src={isDarkMode ? "/Contact/location_dark.svg" : "/Contact/location_light.svg"}
-            alt="Location Contact"
-            width={400}
-            height={120}
-            className="w-full h-auto object-cover rounded-lg"
-          />
+          {contactCards.map((card) => (
+            <a
+              key={card.label}
+              href={card.href}
+              target={card.href.startsWith("https://") ? "_blank" : undefined}
+              rel={
+                card.href.startsWith("https://")
+                  ? "noreferrer noopener"
+                  : undefined
+              }
+              className="flex min-h-[128px] flex-col items-center justify-center rounded-[18px] border border-white/5 bg-[#221f1f] px-5 py-6 text-center shadow-[0_10px_30px_rgba(0,0,0,0.22)] transition-all duration-300"
+            >
+              <div className="mb-3 flex h-10 w-10 items-center justify-center">
+                {card.icon}
+              </div>
+              <p className="text-[15px] font-light leading-relaxed text-[#f1f1f1]">
+                {card.label}
+              </p>
+            </a>
+          ))}
         </div>
       </div>
     </div>
