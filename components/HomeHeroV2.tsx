@@ -30,7 +30,7 @@ const HomeHeroV2 = () => {
       <div className="absolute left-[-12%] top-[10%] h-[260px] w-[260px] rounded-full bg-[#1c3b31]/20 blur-3xl sm:left-[2%] sm:h-[320px] sm:w-[320px] lg:left-[10%] lg:h-[520px] lg:w-[520px]" />
       <div className="absolute bottom-[-10%] left-[6%] h-[220px] w-[220px] rounded-full bg-[#0f1817]/80 blur-3xl sm:bottom-[-14%] sm:left-[20%] sm:h-[280px] sm:w-[280px] lg:bottom-[-18%] lg:left-[28%] lg:h-[380px] lg:w-[380px]" />
 
-      <div className="relative z-10 flex min-h-screen items-center px-5 py-14 sm:px-8 sm:py-16 md:px-12 lg:px-16 xl:px-20">
+      <div className="relative z-10 flex min-h-screen items-center px-5 pb-14 pt-24 sm:px-8 sm:pb-16 sm:pt-28 md:px-12 md:pt-32 lg:px-16 lg:pt-36 xl:px-20 xl:pt-40">
         <div className="max-w-[92vw] sm:max-w-[560px] lg:max-w-[640px]">
           <p className="mb-3 text-[1.7rem] font-semibold leading-none tracking-[-0.03em] sm:mb-4 sm:text-[2rem] lg:mb-5 lg:text-[2.75rem]">
             Modern
