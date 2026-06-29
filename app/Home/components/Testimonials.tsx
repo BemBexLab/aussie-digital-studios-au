@@ -63,7 +63,11 @@ const TESTIMONIALS: CardData[] = [
 
 const Testimonials = () => {
   const [isPaused, setIsPaused] = React.useState(false);
+  const [repeatCount, setRepeatCount] = React.useState(4);
+  const [groupWidth, setGroupWidth] = React.useState(0);
   const headingRef = React.useRef<HTMLDivElement | null>(null);
+  const marqueeContainerRef = React.useRef<HTMLDivElement | null>(null);
+  const measureGroupRef = React.useRef<HTMLDivElement | null>(null);
   const [isHeadingInView, setIsHeadingInView] = React.useState(false);
   const [cardsData] = React.useState(() =>
     [...TESTIMONIALS].sort(() => Math.random() - 0.5),
@@ -71,60 +75,75 @@ const Testimonials = () => {
 
   const CreateCard = ({ card }: { card: CardData }) => (
     <div
-      className="p-4 rounded-xl mx-2 shadow-lg hover:shadow-xl transition-all duration-200 w-[350px] min-h-[180px] shrink-0 bg-[#202020] text-white border border-gray-800"
+      className="mx-2 w-[calc(100vw-3rem)] max-w-[23rem] min-h-[200px] shrink-0 rounded-xl border border-gray-800 bg-[#202020] p-4 text-white shadow-lg transition-all duration-200 hover:shadow-xl sm:w-[20rem] sm:max-w-none sm:p-5 lg:w-[22rem]"
       data-testimonial-card
     >
       <div className="flex gap-2">
         <div className="flex flex-col">
           {/* Stars goes here */}
-          <div className="flex items-center flex-row gap-1">
+          <div className="flex flex-row items-center gap-1">
             <Image
               src="/Home/Star_5.svg"
-              width={25}
-              height={25}
-              alt="Description of my image"
+              width={20}
+              height={20}
+              alt="Star rating"
+              className="h-4 w-4 sm:h-5 sm:w-5"
             />
             <Image
               src="/Home/Star_5.svg"
-              width={25}
-              height={25}
-              alt="Description of my image"
+              width={20}
+              height={20}
+              alt="Star rating"
+              className="h-4 w-4 sm:h-5 sm:w-5"
             />
             <Image
               src="/Home/Star_5.svg"
-              width={25}
-              height={25}
-              alt="Description of my image"
+              width={20}
+              height={20}
+              alt="Star rating"
+              className="h-4 w-4 sm:h-5 sm:w-5"
             />
             <Image
               src="/Home/Star_5.svg"
-              width={25}
-              height={25}
-              alt="Description of my image"
+              width={20}
+              height={20}
+              alt="Star rating"
+              className="h-4 w-4 sm:h-5 sm:w-5"
             />
             <Image
               src="/Home/Star_5.svg"
-              width={25}
-              height={25}
-              alt="Description of my image"
+              width={20}
+              height={20}
+              alt="Star rating"
+              className="h-4 w-4 sm:h-5 sm:w-5"
             />
           </div>
           {/* <span className="text-xs text-gray-400">{card.handle}</span> */}
         </div>
       </div>
-      <p className="text-sm text-gray-300 mt-2 mb-3 break-words whitespace-normal">
+      <p className="mt-3 mb-4 text-sm leading-6 text-gray-300 break-words whitespace-normal sm:text-[0.95rem]">
         {card.review}
       </p>
-      <div className="flex items-center justify-between text-gray-500 text-xs">
-        <div className="flex items-center gap-1">
+      <div className="mt-auto flex items-center justify-between text-xs text-gray-500">
+        <div className="flex items-center gap-2">
           <img
-            className="size-11 rounded-full"
+            className="h-10 w-10 rounded-full object-cover sm:h-11 sm:w-11"
             src={card.image}
-            alt="User Image"
+            alt={card.name}
           />
-          <p className="px-2 font-medium text-blue-400">{card.name}</p>
+          <p className="pr-2 text-sm font-medium text-blue-400 sm:text-[0.95rem]">
+            {card.name}
+          </p>
         </div>
       </div>
+    </div>
+  );
+
+  const renderCardGroup = (groupKey: string) => (
+    <div key={groupKey} className="flex w-max shrink-0 items-stretch py-3 sm:py-4">
+      {cardsData.map((card, index) => (
+        <CreateCard key={`${groupKey}-${card.name}-${index}`} card={card} />
+      ))}
     </div>
   );
 
@@ -144,11 +163,52 @@ const Testimonials = () => {
     return () => obs.disconnect();
   }, []);
 
+  React.useEffect(() => {
+    const updateMarqueeMetrics = () => {
+      const containerWidth = marqueeContainerRef.current?.offsetWidth ?? 0;
+      const singleGroupWidth = measureGroupRef.current?.scrollWidth ?? 0;
+
+      if (!containerWidth || !singleGroupWidth) {
+        return;
+      }
+
+      setGroupWidth(singleGroupWidth);
+
+      const requiredCopies = Math.max(
+        3,
+        Math.ceil((containerWidth * 2) / singleGroupWidth) + 2,
+      );
+
+      setRepeatCount((current) =>
+        current === requiredCopies ? current : requiredCopies,
+      );
+    };
+
+    updateMarqueeMetrics();
+
+    const resizeObserver = new ResizeObserver(updateMarqueeMetrics);
+
+    if (marqueeContainerRef.current) {
+      resizeObserver.observe(marqueeContainerRef.current);
+    }
+
+    if (measureGroupRef.current) {
+      resizeObserver.observe(measureGroupRef.current);
+    }
+
+    window.addEventListener("resize", updateMarqueeMetrics);
+
+    return () => {
+      resizeObserver.disconnect();
+      window.removeEventListener("resize", updateMarqueeMetrics);
+    };
+  }, [cardsData]);
+
   return (
-    <div className="relative py-8">
-      <div ref={headingRef} className="flex flex-col my-8">
+    <div className="relative py-8 sm:py-10 lg:py-12">
+      <div ref={headingRef} className="my-8 flex flex-col px-4 sm:my-10 sm:px-6 lg:px-8">
         <motion.p
-          className="text-sm text-[#4C8C74] font-semibold text-center"
+          className="text-center text-sm font-semibold text-[#4C8C74] sm:text-base"
           initial={{ opacity: 0, y: 8 }}
           animate={isHeadingInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 8 }}
           transition={{ duration: 0.6 }}
@@ -156,7 +216,7 @@ const Testimonials = () => {
           Testimonial
         </motion.p>
         <motion.p
-          className="text-center text-4xl font-semibold text-white mt-1"
+          className="mt-2 text-center text-2xl font-semibold leading-tight text-white sm:text-3xl lg:text-4xl xl:text-5xl"
           initial={{ opacity: 0, y: 10 }}
           animate={isHeadingInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
           transition={{ duration: 0.6, delay: 0.05 }}
@@ -165,44 +225,82 @@ const Testimonials = () => {
         </motion.p>
       </div>
       <style>{`
-            @keyframes marqueeScroll {
-                0% { transform: translateX(0%); }
-                100% { transform: translateX(-50%); }
+            @keyframes marqueeLeft {
+                0% { transform: translate3d(0, 0, 0); }
+                100% { transform: translate3d(calc(-1 * var(--marquee-distance, 0px)), 0, 0); }
                 }
-                
-            .marquee-inner {
-                animation: marqueeScroll 25s linear infinite;
+
+            @keyframes marqueeRight {
+                0% { transform: translate3d(calc(-1 * var(--marquee-distance, 0px)), 0, 0); }
+                100% { transform: translate3d(0, 0, 0); }
             }
 
-            .marquee-inner.paused {
+            .marquee-track {
+                display: flex;
+                width: max-content;
+                will-change: transform;
+            }
+
+            .marquee-left {
+                animation: marqueeLeft 28s linear infinite;
+            }
+
+            .marquee-right {
+                animation: marqueeRight 28s linear infinite;
+            }
+
+            .marquee-track.paused {
                 animation-play-state: paused;
-            }
-
-            .marquee-reverse {
-                animation-direction: reverse;
             }
         `}</style>
 
       {/* observe headings and trigger animation when visible (handled in hook above) */}
 
-      <div className="marquee-row w-full mx-auto overflow-hidden relative" onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
-        <div className="absolute left-0 top-0 h-full w-10 z-10 pointer-events-none bg-gradient-to-r from-transparent to-transparent"></div>
-        <div className={`marquee-inner flex items-start transform-gpu min-w-[200%] py-4 gap-0 ${isPaused ? 'paused' : ''}`}>
-          {[...cardsData, ...cardsData].map((card, index) => (
-            <CreateCard key={index} card={card} />
-          ))}
-        </div>
-        <div className="absolute right-0 top-0 h-full w-10 md:w-20 z-10 pointer-events-none bg-gradient-to-l from-transparent to-transparent"></div>
+      <div className="absolute -z-10 invisible overflow-hidden pointer-events-none">
+        <div ref={measureGroupRef}>{renderCardGroup("measure")}</div>
       </div>
 
-      <div className="marquee-row w-full mx-auto overflow-hidden relative -mt-2" onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
-        <div className="absolute left-0 top-0 h-full w-10 z-10 pointer-events-none bg-gradient-to-r from-transparent to-transparent"></div>
-        <div className={`marquee-inner marquee-reverse flex items-start transform-gpu min-w-[200%] py-4 gap-0 ${isPaused ? 'paused' : ''}`}>
-          {[...cardsData, ...cardsData].map((card, index) => (
-            <CreateCard key={index} card={card} />
-          ))}
+      <div
+        ref={marqueeContainerRef}
+        className="marquee-row relative mx-auto w-full overflow-hidden"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+      >
+        <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-4 bg-gradient-to-r from-[#0f0f0f] via-[#0f0f0f]/80 to-transparent sm:w-8 lg:w-12"></div>
+        <div
+          className={`marquee-track marquee-left transform-gpu ${isPaused ? "paused" : ""}`}
+          style={
+            {
+              "--marquee-distance": `${groupWidth}px`,
+            } as React.CSSProperties
+          }
+        >
+          {Array.from({ length: repeatCount }, (_, index) =>
+            renderCardGroup(`top-${index}`),
+          )}
         </div>
-        <div className="absolute right-0 top-0 h-full w-10 md:w-20 z-10 pointer-events-none bg-gradient-to-l from-transparent to-transparent"></div>
+        <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-4 bg-gradient-to-l from-[#0f0f0f] via-[#0f0f0f]/80 to-transparent sm:w-8 lg:w-12"></div>
+      </div>
+
+      <div
+        className="marquee-row relative mx-auto -mt-2 w-full overflow-hidden sm:-mt-1"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+      >
+        <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-4 bg-gradient-to-r from-[#0f0f0f] via-[#0f0f0f]/80 to-transparent sm:w-8 lg:w-12"></div>
+        <div
+          className={`marquee-track marquee-right transform-gpu ${isPaused ? "paused" : ""}`}
+          style={
+            {
+              "--marquee-distance": `${groupWidth}px`,
+            } as React.CSSProperties
+          }
+        >
+          {Array.from({ length: repeatCount }, (_, index) =>
+            renderCardGroup(`bottom-${index}`),
+          )}
+        </div>
+        <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-4 bg-gradient-to-l from-[#0f0f0f] via-[#0f0f0f]/80 to-transparent sm:w-8 lg:w-12"></div>
       </div>
     </div>
   );
