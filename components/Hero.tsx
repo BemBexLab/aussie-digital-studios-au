@@ -56,7 +56,7 @@ const Hero = ({ H }: HeroProps) => {
     <>
       {/* Mobile View */}
       <div className="md:hidden">
-        <HeroMobile H={H} />
+        <HeroMobile H={H} shouldRenderVideo={shouldRenderVideo} />
       </div>
 
       {/* Desktop View */}
