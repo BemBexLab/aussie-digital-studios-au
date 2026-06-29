@@ -102,7 +102,7 @@ export default async function ServicePage({
   }
 
   return (
-    <div className="relative w-full p-0 m-0">
+    <div className="relative w-full p-0 m-0 overflow-hidden">
       <Hero H={service.title} />
       <LazySection heightClassName="min-h-72">
         <ServiceBody

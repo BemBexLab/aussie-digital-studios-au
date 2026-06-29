@@ -103,7 +103,7 @@ const ServiceInnerPage = async ({ params }: ServicePageProps) => {
     : undefined) as ComponentProps<typeof ContactUs>["data"];
 
   return (
-    <section>
+    <section className="overflow-hidden">
       <Hero H={service.title} />
       <ServiceBody
         data={serviceBodyData}
