@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const ServicesDropdown = () => {
@@ -182,12 +183,14 @@ const ServicesDropdown = () => {
           onMouseLeave={scheduleCloseDropdown}
           onClick={() => setIsServicesDropdownOpen(false)}
         >
-          {/* Background Image Layer using Tailwind */}
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-[url('/drop_down_2_dark.webp')]"
-            style={{
-              backgroundSize: '100% 100%',
-            }}
+          {/* Background Image Layer */}
+          <Image
+            src="/drop_down_2_dark.webp"
+            alt=""
+            fill
+            priority
+            sizes="1100px"
+            className="absolute inset-0 object-fill"
           />
 
           {/* Content Layer with Semi-transparent Overlay */}
