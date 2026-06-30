@@ -55,11 +55,12 @@ const Portfolio = ({ service }: PortfolioProps) => {
   }, []);
 
   const images = service.portfolioData || defaultPortfolioData;
+  const marqueeImages = [...images, ...images];
 
   return (
     <>
       <PortfolioMobile service={service} />
-      <section className="hidden sm:block py-10" style={{
+      <section className="hidden overflow-x-hidden overflow-y-visible py-10 sm:block" style={{
         backgroundImage: `url("${isDarkMode ? '/Home/CTA.svg' : '/Home/Frame_167_Light.svg'}")`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
@@ -92,7 +93,7 @@ const Portfolio = ({ service }: PortfolioProps) => {
               transform: translateX(0);
             }
             100% {
-              transform: translateX(-100%);
+              transform: translateX(-50%);
             }
           }
           .portfolio-scroll {
@@ -109,12 +110,12 @@ const Portfolio = ({ service }: PortfolioProps) => {
             transform: scale(1.15);
           }
         `}</style>
-        <div className="mt-10 overflow-hidden">
-          <div className="flex flex-row gap-3 lg:gap-4 portfolio-scroll">
-            {images.map((image) => (
+        <div className="mt-10 flex h-[55vh] items-center overflow-x-hidden overflow-y-visible px-4 sm:px-6 lg:px-8">
+          <div className="portfolio-scroll mt-[100px] flex w-max flex-row items-center gap-3 lg:gap-4">
+            {marqueeImages.map((image, index) => (
               <Image
-                key={image.id}
-                className={`h-auto w-[260px] flex-shrink-0 portfolio-image md:w-[300px] lg:w-[340px] xl:w-[360px] ${image.translateY} ${
+                key={`${image.id}-${index}`}
+                className={`portfolio-image h-auto w-[220px] flex-shrink-0 sm:w-[240px] md:w-[280px] lg:w-[320px] xl:w-[360px] ${image.translateY} ${
                   clickedImageId === image.id ? "selected" : ""
                 }`}
                 src={image.src}

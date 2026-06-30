@@ -101,7 +101,7 @@ export const services = [
     // heading: "Web Development Services in Australia",
     serviceBodyData: [
       {
-        imageUrl: "/Services/Rectangle_52.webp",
+        imageUrl: "/Services/image 2.webp",
         description: (
           <>
             <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -117,7 +117,7 @@ export const services = [
         ),
       },
       {
-        imageUrl: "/Services/Rectangle_52.webp",
+        imageUrl: "/Services/image 3.webp",
         description: (
           <>
             <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -168,7 +168,7 @@ export const services = [
             </ul>
             <p className="italic">
               A website that only looks good is a missed opportunity. We build
-              websites that look great and bring real results.—Aussie Digital
+              websites that look great and bring real results.â€”Aussie Digital
               Solutions Team
             </p>
           </>
@@ -176,7 +176,7 @@ export const services = [
       },
     ],
     whyChooseData: {
-      image: "/Services/Rectangle_52.webp",
+      image: "/Services/image 4.webp",
       heading: "Why Choose Our Web Development Company in Australia",
       paragraphs: [
         "We help you create a polished business website, a high converting eCommerce store, a scalable web app, and a Shopify or WordPress platform your team can manage without a developer on speed dial. We deliver it with precision, speed, and long term performance in mind.\n\nWe follow Google's Core Web Vitals standards and build every project as a mobile first solution ready for progressive web app capabilities. Because your customers are searching on every device, your website needs to perform on all of them.\n\nOur team manages everything. The UI/UX planning, front end development, back end architecture, PHP development, eCommerce builds, and post launch support are all handled by the same people who built your site. No outsourcing. No miscommunication. No gaps in accountability.",
@@ -354,7 +354,7 @@ export const services = [
       },
       {
         title: "Shopify Development",
-        desc: "We are proud to say that Shopify is one of the world’s most trusted commerce platforms, and we have worked with it for years. We design engaging, SEO-rich Shopify stores that embody your brand and offer customers an experience they'll want to repeat.",
+        desc: "We are proud to say that Shopify is one of the worldâ€™s most trusted commerce platforms, and we have worked with it for years. We design engaging, SEO-rich Shopify stores that embody your brand and offer customers an experience they'll want to repeat.",
         svg: (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -589,7 +589,7 @@ export const services = [
         heading: "Web Development That Accelerates something",
         serviceBodyData: [
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 6.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -1118,7 +1118,7 @@ export const services = [
           {
             question: "How long does it take to build a custom website?",
             answer:
-              "A standard business website typically takes four to eight weeks from brief to launch. Larger builds take longer. We give you a realistic timeline in the project brief before work begins — not an optimistic one.",
+              "A standard business website typically takes four to eight weeks from brief to launch. Larger builds take longer. We give you a realistic timeline in the project brief before work begins â€” not an optimistic one.",
           },
           {
             question: "Do I own the website once it's built?",
@@ -1196,7 +1196,7 @@ export const services = [
         heading: "eCommerce Website Development",
         serviceBodyData: [
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 7.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -1212,7 +1212,7 @@ export const services = [
             ),
           },
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 8.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -1794,7 +1794,7 @@ export const services = [
         // heading: "eCommerce Website Development in Australia",
         serviceBodyData: [
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 9.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -1860,7 +1860,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
             ),
           },
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 10.webp",
             description: (
               <>
                 {/* <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -2408,7 +2408,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
           {
             question: "Do you offer ongoing Magento support after launch?",
             answer:
-              "Yes. We offer flexible maintenance and support retainers covering security patches, Magento version updates, performance monitoring, extension management, and technical support. Magento requires more active maintenance than simpler platforms — having a reliable technical partner matters.",
+              "Yes. We offer flexible maintenance and support retainers covering security patches, Magento version updates, performance monitoring, extension management, and technical support. Magento requires more active maintenance than simpler platforms â€” having a reliable technical partner matters.",
           },
         ],
         portfolioData: [
@@ -2786,7 +2786,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
             image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
-              "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
+              "Kickstart your project by booking a free web design strategy call with our experts. Weâ€™ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
             image: "/Services/02.svg",
@@ -2856,7 +2856,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
           {
             question: "Are there any other components available?",
             answer:
-              "Yes — check the Components section of the repo or documentation for more reusable UI pieces.",
+              "Yes â€” check the Components section of the repo or documentation for more reusable UI pieces.",
           },
           {
             question: "Are components responsive?",
@@ -3226,7 +3226,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
             image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
-              "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
+              "Kickstart your project by booking a free web design strategy call with our experts. Weâ€™ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
             image: "/Services/02.svg",
@@ -3296,7 +3296,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
           {
             question: "Are there any other components available?",
             answer:
-              "Yes — check the Components section of the repo or documentation for more reusable UI pieces.",
+              "Yes â€” check the Components section of the repo or documentation for more reusable UI pieces.",
           },
           {
             question: "Are components responsive?",
@@ -3666,7 +3666,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
             image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
-              "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
+              "Kickstart your project by booking a free web design strategy call with our experts. Weâ€™ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
             image: "/Services/02.svg",
@@ -3736,7 +3736,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
           {
             question: "Are there any other components available?",
             answer:
-              "Yes — check the Components section of the repo or documentation for more reusable UI pieces.",
+              "Yes â€” check the Components section of the repo or documentation for more reusable UI pieces.",
           },
           {
             question: "Are components responsive?",
@@ -3784,7 +3784,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
         // heading: "eCommerce Website Development in Australia",
         serviceBodyData: [
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 11.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -3851,7 +3851,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
             ),
           },
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 12.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -4451,7 +4451,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
     // heading: "Web Development Services in Australia",
     serviceBodyData: [
       {
-        imageUrl: "/Services/Rectangle_52.webp",
+        imageUrl: "/Services/image 13.webp",
         description: (
           <>
             <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -4462,7 +4462,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
               <li>Get Found Locally.</li>
               <li>Grow Faster.</li>
             </ul>
-            Most Australian businesses are not on Google’s top rank and are
+            Most Australian businesses are not on Googleâ€™s top rank and are
             invisible to customers. It is not because their product is bad, but
             because their SEO is. We fix that. Our professional SEO agency works
             from the technical foundation to local search dominance, providing
@@ -4491,7 +4491,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
       },
     ],
     whyChooseData: {
-      image: "/Services/Rectangle_52.webp",
+      image: "/Services/image 14.webp",
       heading: "Why Aussie Digital Solution",
       paragraphs: [
         <React.Fragment key="why-aussie-branding">
@@ -5282,7 +5282,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
         slug: "seo-strategy-planning",
         title: "SEO Strategy & Planning",
         heading: "Web Development That Accelerates something",
-        imageUrl: "/Services/Rectangle_52.webp",
+        imageUrl: "/Services/image 15.webp",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -5606,7 +5606,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
             image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
-              "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
+              "Kickstart your project by booking a free web design strategy call with our experts. Weâ€™ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
             image: "/Services/02.svg",
@@ -5676,7 +5676,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
           {
             question: "Are there any other components available?",
             answer:
-              "Yes — check the Components section of the repo or documentation for more reusable UI pieces.",
+              "Yes â€” check the Components section of the repo or documentation for more reusable UI pieces.",
           },
           {
             question: "Are components responsive?",
@@ -5722,7 +5722,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
         slug: "local-search-dominance",
         title: "Local Search Dominance",
         heading: "Local Search Dominance That Drives Real Results",
-        imageUrl: "/Services/Rectangle_52.webp",
+        imageUrl: "/Services/image 16.webp",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -6046,7 +6046,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
             image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
-              "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
+              "Kickstart your project by booking a free web design strategy call with our experts. Weâ€™ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
             image: "/Services/02.svg",
@@ -6116,7 +6116,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
           {
             question: "Are there any other components available?",
             answer:
-              "Yes — check the Components section of the repo or documentation for more reusable UI pieces.",
+              "Yes â€” check the Components section of the repo or documentation for more reusable UI pieces.",
           },
           {
             question: "Are components responsive?",
@@ -6162,7 +6162,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
         slug: "local-listing",
         title: "Local Listing",
         heading: "Local Listing That Drives Real Results",
-        imageUrl: "/Services/Rectangle_52.webp",
+        imageUrl: "/Services/image 17.webp",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -6486,7 +6486,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
             image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
-              "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
+              "Kickstart your project by booking a free web design strategy call with our experts. Weâ€™ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
             image: "/Services/02.svg",
@@ -6556,7 +6556,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
           {
             question: "Are there any other components available?",
             answer:
-              "Yes — check the Components section of the repo or documentation for more reusable UI pieces.",
+              "Yes â€” check the Components section of the repo or documentation for more reusable UI pieces.",
           },
           {
             question: "Are components responsive?",
@@ -6602,7 +6602,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
         slug: "onpage-offpage-seo",
         title: "On-Page & Off-Page SEO",
         heading: "SEO That Drives Real Results",
-        imageUrl: "/Services/Rectangle_52.webp",
+        imageUrl: "/Services/image 17.webp",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -6926,7 +6926,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
             image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
-              "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
+              "Kickstart your project by booking a free web design strategy call with our experts. Weâ€™ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
             image: "/Services/02.svg",
@@ -6996,7 +6996,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
           {
             question: "Are there any other components available?",
             answer:
-              "Yes — check the Components section of the repo or documentation for more reusable UI pieces.",
+              "Yes â€” check the Components section of the repo or documentation for more reusable UI pieces.",
           },
           {
             question: "Are components responsive?",
@@ -7366,7 +7366,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
             image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
-              "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
+              "Kickstart your project by booking a free web design strategy call with our experts. Weâ€™ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
             image: "/Services/02.svg",
@@ -7436,7 +7436,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
           {
             question: "Are there any other components available?",
             answer:
-              "Yes — check the Components section of the repo or documentation for more reusable UI pieces.",
+              "Yes â€” check the Components section of the repo or documentation for more reusable UI pieces.",
           },
           {
             question: "Are components responsive?",
@@ -7806,7 +7806,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
             image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
-              "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
+              "Kickstart your project by booking a free web design strategy call with our experts. Weâ€™ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
             image: "/Services/02.svg",
@@ -7876,7 +7876,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
           {
             question: "Are there any other components available?",
             answer:
-              "Yes — check the Components section of the repo or documentation for more reusable UI pieces.",
+              "Yes â€” check the Components section of the repo or documentation for more reusable UI pieces.",
           },
           {
             question: "Are components responsive?",
@@ -7922,7 +7922,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
         slug: "technical-seo-infrastructure",
         title: "Technical SEO Infrastructure",
         heading: "Technical SEO That Drives Real Results",
-        imageUrl: "/Services/Rectangle_52.webp",
+        imageUrl: "/Services/image 19.webp",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -8246,7 +8246,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
             image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
-              "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
+              "Kickstart your project by booking a free web design strategy call with our experts. Weâ€™ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
             image: "/Services/02.svg",
@@ -8316,7 +8316,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
           {
             question: "Are there any other components available?",
             answer:
-              "Yes — check the Components section of the repo or documentation for more reusable UI pieces.",
+              "Yes â€” check the Components section of the repo or documentation for more reusable UI pieces.",
           },
           {
             question: "Are components responsive?",
@@ -8686,7 +8686,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
             image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
-              "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
+              "Kickstart your project by booking a free web design strategy call with our experts. Weâ€™ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
             image: "/Services/02.svg",
@@ -8756,7 +8756,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
           {
             question: "Are there any other components available?",
             answer:
-              "Yes — check the Components section of the repo or documentation for more reusable UI pieces.",
+              "Yes â€” check the Components section of the repo or documentation for more reusable UI pieces.",
           },
           {
             question: "Are components responsive?",
@@ -8802,7 +8802,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
         slug: "google-profile-optimization",
         title: "Google Profile Optimization",
         heading: "Google Profile Optimization That Drives Real Results",
-        imageUrl: "/Services/Rectangle_52.webp",
+        imageUrl: "/Services/image 18.webp",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -9126,7 +9126,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
             image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
-              "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
+              "Kickstart your project by booking a free web design strategy call with our experts. Weâ€™ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
             image: "/Services/02.svg",
@@ -9196,7 +9196,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
           {
             question: "Are there any other components available?",
             answer:
-              "Yes — check the Components section of the repo or documentation for more reusable UI pieces.",
+              "Yes â€” check the Components section of the repo or documentation for more reusable UI pieces.",
           },
           {
             question: "Are components responsive?",
@@ -9248,7 +9248,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
     // heading: "Web Development Services in Australia",
     serviceBodyData: [
       {
-        imageUrl: "/Services/Rectangle_52.webp",
+        imageUrl: "/Services/image 20.webp",
         description: (
           <>
             <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -9283,7 +9283,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
       },
     ],
     whyChooseData: {
-      image: "/Services/Rectangle_52.webp",
+      image: "/Services/image 24.webp",
       heading: "Why Aussie Digital Solution",
       paragraphs: [
         <React.Fragment key="why-aussie-branding">
@@ -9640,7 +9640,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
             Your Ad Strategy Should Fit Your Business; Not a Generic Package A
             local service business in Sydney needs a completely different
             approach from a national eCommerce brand or a B2B SaaS company
-            trying to generate enterprise leads. Fixed packages don’t work that
+            trying to generate enterprise leads. Fixed packages donâ€™t work that
             well because every business has different goals, different margins,
             and different audiences.
             <br />
@@ -9770,7 +9770,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
         // heading: "eCommerce Website Development in Australia",
         serviceBodyData: [
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 22.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -9838,7 +9838,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
             ),
           },
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 26.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -9856,8 +9856,8 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
                   <p>
                     Google Search Ads place your business at the very top of
                     results for keywords your customers are actively searching.
-                    Your audience already has intent; you’re there at the exact
-                    moment they’re ready to decide.
+                    Your audience already has intent; youâ€™re there at the exact
+                    moment theyâ€™re ready to decide.
                   </p>
 
                   <span>
@@ -9901,7 +9901,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
                   <p>
                     Poorly structured campaigns, broad keywords burning budget,
                     missing negative keyword lists, or ad copy that clicks but
-                    doesn’t convert are the real reasons Google Ads
+                    doesnâ€™t convert are the real reasons Google Ads
                     underperforms. We fix all of it, often in the first month.
                   </p>
                 </div>
@@ -10319,7 +10319,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
             question:
               "How much budget do I need to start Google Ads in Australia?",
             answer:
-              "It basically depends on your industry and competition. Some businesses can start with a modest daily budget, while competitive sectors require more to generate results. We’ll recommend a realistic budget based on your specific keywords during your strategy call.",
+              "It basically depends on your industry and competition. Some businesses can start with a modest daily budget, while competitive sectors require more to generate results. Weâ€™ll recommend a realistic budget based on your specific keywords during your strategy call.",
           },
           {
             question: "How quickly will I see results from Google Ads?",
@@ -10388,7 +10388,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
         // heading: "eCommerce Website Development in Australia",
         serviceBodyData: [
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 21.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -10457,7 +10457,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
             ),
           },
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 23.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -10521,7 +10521,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
         ],
         serviceBodyData2: [
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 101.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -10601,7 +10601,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
               description: (
                 <>
                   These ads show up before or during YouTube videos and can be
-                  skipped after five seconds. They’re versatile, measurable, and
+                  skipped after five seconds. Theyâ€™re versatile, measurable, and
                   work well for both awareness and conversions, as long as your
                   creative grabs attention fast.
                   <br />
@@ -10616,11 +10616,11 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
               title: "Bumper Ads",
               description: (
                 <>
-                  Short, sharp, and impossible to skip. These ads don’t tell a
-                  full story — they deliver one clear message. Perfect for
+                  Short, sharp, and impossible to skip. These ads donâ€™t tell a
+                  full story â€” they deliver one clear message. Perfect for
                   reinforcing your brand and staying top of mind. We use them
                   alongside longer ads to retarget warm audiences and keep
-                  visibility high when people aren’t ready to convert yet.
+                  visibility high when people arenâ€™t ready to convert yet.
                 </>
               ),
               icon: <FaFunnelDollar color="#4C8C74" size={40} />,
@@ -10630,7 +10630,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
               description: (
                 <>
                   These show up in search results, the homepage, and related
-                  videos — looking like organic content. They reach people who
+                  videos â€” looking like organic content. They reach people who
                   are already browsing or researching, so the intent is higher.
                   We optimize thumbnails and titles to attract attention and
                   drive clicks at the consideration stage.
@@ -10642,7 +10642,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
               title: "YouTube Remarketing Campaigns",
               description: (
                 <>
-                  We target people who’ve already watched, visited, or engaged
+                  We target people whoâ€™ve already watched, visited, or engaged
                   with your brand, the ones most likely to convert. Different
                   ads are shown based on where they are in the journey.
                   <br />
@@ -10871,7 +10871,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
           {
             question: "Do I need a video already, or do you create it?",
             answer:
-              "You can use existing footage, and we’ll edit it for performance, write scripts, and optimise it for ads. If you don’t have video, we can guide production or connect you with trusted partners.",
+              "You can use existing footage, and weâ€™ll edit it for performance, write scripts, and optimise it for ads. If you donâ€™t have video, we can guide production or connect you with trusted partners.",
           },
           {
             question: "How long before I see results from YouTube Ads?",
@@ -10931,7 +10931,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
         // heading: "eCommerce Website Development in Australia",
         serviceBodyData: [
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 27.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -11000,7 +11000,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
             ),
           },
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 31.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -11197,7 +11197,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
           },
           {
             title: "Transparent Performance Tracking",
-            desc: "Clear reporting so you always know what’s working and where results are coming from.",
+            desc: "Clear reporting so you always know whatâ€™s working and where results are coming from.",
             svg: <CgPerformance color="#4C8C74" size={40} />,
           },
           {
@@ -11363,13 +11363,13 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
             question:
               "How much budget do I need to start Meta Ads in Australia?",
             answer:
-              "It depends on your industry and goals, but you can start with a modest daily budget. We’ll recommend a realistic starting point for your specific business after a free strategy call.",
+              "It depends on your industry and goals, but you can start with a modest daily budget. Weâ€™ll recommend a realistic starting point for your specific business after a free strategy call.",
           },
           {
             question:
               "Do you create the ad creative, or do I need to supply it?",
             answer:
-              "Our company provides ad copy and creative direction. You can use your existing assets, or we’ll guide you on what needs to be created for better performance. We can also connect you with trusted production support if needed.",
+              "Our company provides ad copy and creative direction. You can use your existing assets, or weâ€™ll guide you on what needs to be created for better performance. We can also connect you with trusted production support if needed.",
           },
         ],
         portfolioData: [
@@ -11426,11 +11426,11 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
         // heading: "eCommerce Website Development in Australia",
         serviceBodyData: [
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 29.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
-                  TikTok Isn't Just for Watching—It's for Selling.
+                  TikTok Isn't Just for Watchingâ€”It's for Selling.
                 </h2>
                 <p>
                   TikTok is now one of the most powerful eCommerce platforms in Australia, but most businesses either ignore it or run ads that people instantly skip. We manage TikTok Shop Ads campaigns designed to stop the scroll, drive product discovery, and turn views into purchases.
@@ -11489,7 +11489,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
             ),
           },
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 33.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -11550,7 +11550,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
             ),
           },
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 28.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -11703,7 +11703,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
         //   },
         //   {
         //     title: "Transparent Performance Tracking",
-        //     desc: "Clear reporting so you always know what’s working and where results are coming from.",
+        //     desc: "Clear reporting so you always know whatâ€™s working and where results are coming from.",
         //     svg: <CgPerformance color="#4C8C74" size={40} />,
         //   },
         //   {
@@ -11816,7 +11816,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
                 Tell the Real Story
               </p>
               <p className="text-md">
-                We've run TikTok Shop Ads campaigns for Australian brands across beauty, fashion, health, homewares, food, and fitness. Ask us for performance examples from your category — we share real data before you commit to anything.
+                We've run TikTok Shop Ads campaigns for Australian brands across beauty, fashion, health, homewares, food, and fitness. Ask us for performance examples from your category â€” we share real data before you commit to anything.
               </p>
             </>
           ),
@@ -11832,13 +11832,13 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
             question:
               "What budget do I need to start TikTok Ads?",
             answer:
-              "You can start TikTok ads with a modest budget. The right amount totally depends on your product and goals. We’ll recommend a realistic starting point after a strategy call.",
+              "You can start TikTok ads with a modest budget. The right amount totally depends on your product and goals. Weâ€™ll recommend a realistic starting point after a strategy call.",
           },
           {
             question:
               "Do you create the ad content, or do I need to supply it?",
             answer:
-              "We write scripts and provide creative direction. You can use existing footage, or we’ll guide you on what to create for the best performance.",
+              "We write scripts and provide creative direction. You can use existing footage, or weâ€™ll guide you on what to create for the best performance.",
           },
         ],
         portfolioData: [
@@ -11892,7 +11892,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
         // heading: "eCommerce Website Development in Australia",
         serviceBodyData: [
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 32.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -11955,7 +11955,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
             ),
           },
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 30.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -12127,12 +12127,12 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
           },
           {
             title: "Lead Gen Form Campaigns",
-            desc: "Pre filled forms make it easy for users to submit details without leaving LinkedIn, boosting conversion rates. Success depends on matching the right offer to the audience’s stage.",
+            desc: "Pre filled forms make it easy for users to submit details without leaving LinkedIn, boosting conversion rates. Success depends on matching the right offer to the audienceâ€™s stage.",
             svg: <MdCampaign color="#4C8C74" size={40} />,
           },
           {
             title: "Retargeting & Account-Based Campaigns",
-            desc: "Retarget warm prospects who’ve already engaged, and use account-based targeting to reach decision makers at specific companies with customised messaging.",
+            desc: "Retarget warm prospects whoâ€™ve already engaged, and use account-based targeting to reach decision makers at specific companies with customised messaging.",
             svg: <FiTarget color="#4C8C74" size={40} />,
           },
         ],
@@ -12221,7 +12221,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
           body: (
             <div className="">
               <p>
-                LinkedIn’s higher CPMs leave little room for error, which is why our approach combines sharp strategy with precise execution. We understand how B2B audiences think and write ad copy that speaks directly to decision-makers, not like generic ads. From day one, we set up accurate tracking, segment campaigns for cold and warm audiences, and apply focused targeting across job titles, industries, and seniority to reach the right people. Every campaign is optimized for efficiency, with reporting tied to real outcomes like cost per lead and pipeline quality, not vanity metrics. With a flat monthly fee and no lock in contracts, our focus stays exactly where it should be: driving qualified leads and measurable business growth.
+                LinkedInâ€™s higher CPMs leave little room for error, which is why our approach combines sharp strategy with precise execution. We understand how B2B audiences think and write ad copy that speaks directly to decision-makers, not like generic ads. From day one, we set up accurate tracking, segment campaigns for cold and warm audiences, and apply focused targeting across job titles, industries, and seniority to reach the right people. Every campaign is optimized for efficiency, with reporting tied to real outcomes like cost per lead and pipeline quality, not vanity metrics. With a flat monthly fee and no lock in contracts, our focus stays exactly where it should be: driving qualified leads and measurable business growth.
               </p>
             </div>
           ),
@@ -12232,7 +12232,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
                 Tell the Real Story
               </p>
               <p className="text-md">
-                We've run TikTok Shop Ads campaigns for Australian brands across beauty, fashion, health, homewares, food, and fitness. Ask us for performance examples from your category — we share real data before you commit to anything.
+                We've run TikTok Shop Ads campaigns for Australian brands across beauty, fashion, health, homewares, food, and fitness. Ask us for performance examples from your category â€” we share real data before you commit to anything.
               </p>
             </>
           ),
@@ -12326,7 +12326,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
         // heading: "eCommerce Website Development in Australia",
         serviceBodyData: [
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 34.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -12357,7 +12357,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
             ),
           },
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 38.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -12566,7 +12566,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
             heading: "Optimise, Rotate & Report",
             paragraph: (
               <>
-                Weekly reviews cover creative fatigue, audience performance, frequency data, and conversion rates by segment. We rotate creative regularly to prevent ad blindness, adjust audience windows based on buying cycle data, and continuously refine the messaging for each segment. Monthly reporting ties everything back to revenue — recovered cart sales, re-engaged customers, and overall ROAS across every retargeting channel.
+                Weekly reviews cover creative fatigue, audience performance, frequency data, and conversion rates by segment. We rotate creative regularly to prevent ad blindness, adjust audience windows based on buying cycle data, and continuously refine the messaging for each segment. Monthly reporting ties everything back to revenue â€” recovered cart sales, re-engaged customers, and overall ROAS across every retargeting channel.
               </>
             ),
           },
@@ -12650,33 +12650,33 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
         },
         faqData: [
           {
-            question: "What’s the difference between retargeting and remarketing?",
+            question: "Whatâ€™s the difference between retargeting and remarketing?",
             answer:
-              "Retargeting is when someone visits your site and later sees your ads on platforms like Google or social media. Remarketing is reaching back out through your own channels, like email or SMS. We usually combine both because that’s what actually works.",
+              "Retargeting is when someone visits your site and later sees your ads on platforms like Google or social media. Remarketing is reaching back out through your own channels, like email or SMS. We usually combine both because thatâ€™s what actually works.",
           },
           {
             question:
               "Do retargeting ads annoy people?",
             answer:
-              "They can, if they’re done badly. Seeing the same ad over and over gets frustrating. When it’s handled properly, with the right timing and messaging, it feels relevant rather than annoying.",
+              "They can, if theyâ€™re done badly. Seeing the same ad over and over gets frustrating. When itâ€™s handled properly, with the right timing and messaging, it feels relevant rather than annoying.",
           },
           {
             question:
               "What kind of budget do I need?",
             answer:
-              "Usually less than you’d expect. Since you’re targeting people who already showed interest, the spend is more efficient. The exact number depends on your traffic, and we’ll guide you after a quick audit.",
+              "Usually less than youâ€™d expect. Since youâ€™re targeting people who already showed interest, the spend is more efficient. The exact number depends on your traffic, and weâ€™ll guide you after a quick audit.",
           },
           {
             question:
               "How fast will I see results?",
             answer:
-              "Some campaigns, like cart recovery, can start bringing results within the first week. Most of the time, you’ll start seeing clear performance within a couple of weeks.",
+              "Some campaigns, like cart recovery, can start bringing results within the first week. Most of the time, youâ€™ll start seeing clear performance within a couple of weeks.",
           },
           {
             question:
               "Do you need access to my website?",
             answer:
-              "Yes, but only to set up or check tracking. We’ll tell you exactly what’s needed, and nothing gets touched without your approval.",
+              "Yes, but only to set up or check tracking. Weâ€™ll tell you exactly whatâ€™s needed, and nothing gets touched without your approval.",
           },
           {
             question:
@@ -12736,7 +12736,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
         // heading: "eCommerce Website Development in Australia",
         serviceBodyData: [
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 36.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -12799,7 +12799,7 @@ Australian eCommerce is growing fast. Consumers expect fast loading, seamless mo
             ),
           },
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 40.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -12862,7 +12862,7 @@ For Australian eCommerce stores, Shopping Ads are often the strongest-performing
             ),
           },
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 35.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -13028,7 +13028,7 @@ For Australian eCommerce stores, Shopping Ads are often the strongest-performing
         strategicCardData: [
           {
             title: "Google Shopping Campaigns",
-            desc: "We build Shopping campaigns with proper product group segmentation, smart bid strategies, and a negative keyword framework that keeps spend focused on buyers rather than browsers. Feed quality is the foundation—we optimise titles, descriptions, and product attributes to maximise impression share for relevant searches.",
+            desc: "We build Shopping campaigns with proper product group segmentation, smart bid strategies, and a negative keyword framework that keeps spend focused on buyers rather than browsers. Feed quality is the foundationâ€”we optimise titles, descriptions, and product attributes to maximise impression share for relevant searches.",
             svg: <FaGoogle color="#4C8C74" size={40} />,
           },
           {
@@ -13043,7 +13043,7 @@ For Australian eCommerce stores, Shopping Ads are often the strongest-performing
           },
           {
             title: "Social Shopping Ads",
-            desc: <>We manage social Shopping campaigns as part of a coordinated strategy with Google Shopping—so product visibility is consistent across every channel your customers use, from the moment they search to the moment they browse their social feed.</>,
+            desc: <>We manage social Shopping campaigns as part of a coordinated strategy with Google Shoppingâ€”so product visibility is consistent across every channel your customers use, from the moment they search to the moment they browse their social feed.</>,
             svg: <FaVideo color="#4C8C74" size={40} />,
           },
         ],
@@ -13140,8 +13140,8 @@ For Australian eCommerce stores, Shopping Ads are often the strongest-performing
                 <li><span className="font-semibold">Revenue-Focused Management: </span>We optimise around ROAS and revenue, not clicks and impressions. Budget gets pushed toward your most profitable products. Products that spend without converting get paused or restructured. Every decision is commercial.</li>
                 <li><span className="font-semibold">Built for Australian eCommerce: </span>We understand the Australian retail landscape, seasonality, local search behaviour, competitive categories, and the platforms Australian shoppers actually use. That context shapes every Shopping strategy we build.</li>
                 <li><span className="font-semibold">Retargeting Is Part of the Strategy: </span>Dynamic retargeting for cart abandoners and product viewers is set up as standard, not as an optional extra. It's consistently one of the highest-return elements of any Shopping programme and we treat it that way.</li>
-                <li><span className="font-semibold">Flat Fee—Not a % of Spend: </span>Fixed monthly management fee. We're not incentivised to push your Shopping budget higher. We want your budget generating the best possible return, that's what keeps clients long-term.</li>
-                <li><span className="font-semibold">No Lock-In Contracts: </span>Month-to-month once campaigns are live. You stay because the Shopping campaigns are generating strong ROAS —not because a contract makes leaving difficult.</li>
+                <li><span className="font-semibold">Flat Feeâ€”Not a % of Spend: </span>Fixed monthly management fee. We're not incentivised to push your Shopping budget higher. We want your budget generating the best possible return, that's what keeps clients long-term.</li>
+                <li><span className="font-semibold">No Lock-In Contracts: </span>Month-to-month once campaigns are live. You stay because the Shopping campaigns are generating strong ROAS â€”not because a contract makes leaving difficult.</li>
               </ul>
             </div>
           ),
@@ -13152,7 +13152,7 @@ For Australian eCommerce stores, Shopping Ads are often the strongest-performing
                 Are in the Revenue Numbers
               </p>
               <p className="text-md">
-                We've managed Google Shopping and social Shopping campaigns for Australian eCommerce businesses across fashion, homewares, health, sporting goods, electronics, beauty, and trade supplies. Ask us for examples from your category — we share real ROAS and revenue data before you commit to anything.
+                We've managed Google Shopping and social Shopping campaigns for Australian eCommerce businesses across fashion, homewares, health, sporting goods, electronics, beauty, and trade supplies. Ask us for examples from your category â€” we share real ROAS and revenue data before you commit to anything.
               </p>
             </>
           ),
@@ -13246,7 +13246,7 @@ For Australian eCommerce stores, Shopping Ads are often the strongest-performing
         // heading: "eCommerce Website Development in Australia",
         serviceBodyData: [
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 39.webp",
             description: (
               <>
                 {/* <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -13277,7 +13277,7 @@ For Australian eCommerce stores, Shopping Ads are often the strongest-performing
             ),
           },
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 37.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -13287,7 +13287,7 @@ For Australian eCommerce stores, Shopping Ads are often the strongest-performing
                 <div className="space-y-2">
                   <p>
                    Affiliate performance marketing is a model where your business partners with publishers, content creators, review sites, and influencers, and pays them only when they deliver a result. A completed purchase, a lead, a sign-up. You define the conversion. They promote your business. Commission only triggers when that outcome actually happens. <br /><br />
-That's what makes it different. With Google Ads or Meta Ads, you spend money whether the click converts or not. With affiliate marketing, every dollar of cost is tied to a real result. Your cost per acquisition is fixed before the program even launches. For Australian eCommerce businesses, SaaS companies, and service brands, a well-run affiliate program can become one of your most efficient revenue channels — a growing network of partners that builds brand reach without your marketing budget growing at the same rate.
+That's what makes it different. With Google Ads or Meta Ads, you spend money whether the click converts or not. With affiliate marketing, every dollar of cost is tied to a real result. Your cost per acquisition is fixed before the program even launches. For Australian eCommerce businesses, SaaS companies, and service brands, a well-run affiliate program can become one of your most efficient revenue channels â€” a growing network of partners that builds brand reach without your marketing budget growing at the same rate.
                   </p>
                 </div>
 
@@ -13321,7 +13321,7 @@ That's what makes it different. With Google Ads or Meta Ads, you spend money whe
             ),
           },
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 41.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -13345,7 +13345,7 @@ That's what makes it different. With Google Ads or Meta Ads, you spend money whe
                     <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
                     <span className="font-semibold w-full">
                       Conversion Happens: 
-                    </span>A visitor clicks their link, lands on your site, and completes the defined action — a purchase, a sign-up, a booking. The tracking records it accurately.
+                    </span>A visitor clicks their link, lands on your site, and completes the defined action â€” a purchase, a sign-up, a booking. The tracking records it accurately.
                   </li>
                   <li className="flex items-start gap-2 md:gap-3 mb-2">
                     <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
@@ -13496,7 +13496,7 @@ That's what makes it different. With Google Ads or Meta Ads, you spend money whe
             heading: "Platform Setup & Publisher Recruitment",
             paragraph: (
               <>
-                We set up the affiliate platform, configure tracking, create the publisher portal, and build the promotional assets your affiliates need to promote effectively — banners, product feeds, copy assets, discount codes. Then active recruitment begins. We identify, approach, and onboard quality publishers in your niche — guiding them through the setup process and ensuring they have everything they need to start generating conversions. 
+                We set up the affiliate platform, configure tracking, create the publisher portal, and build the promotional assets your affiliates need to promote effectively â€” banners, product feeds, copy assets, discount codes. Then active recruitment begins. We identify, approach, and onboard quality publishers in your niche â€” guiding them through the setup process and ensuring they have everything they need to start generating conversions. 
               </>
             ),
           },
@@ -13505,7 +13505,7 @@ That's what makes it different. With Google Ads or Meta Ads, you spend money whe
             heading: "Manage, Optimise & Grow",
             paragraph: (
               <>
-                Once the program is live, we manage it actively — monitoring affiliate performance, communicating new promotions and seasonal campaigns, adjusting commissions for top performers, and continuously recruiting to expand the publisher base. Monthly reporting covers active affiliates, revenue generated, commission spend, and ROI. Over time, the program builds momentum as your affiliate network grows and the best partners scale their promotional activity. 
+                Once the program is live, we manage it actively â€” monitoring affiliate performance, communicating new promotions and seasonal campaigns, adjusting commissions for top performers, and continuously recruiting to expand the publisher base. Monthly reporting covers active affiliates, revenue generated, commission spend, and ROI. Over time, the program builds momentum as your affiliate network grows and the best partners scale their promotional activity. 
               </>
             ),
           },
@@ -13578,7 +13578,7 @@ That's what makes it different. With Google Ads or Meta Ads, you spend money whe
           //       Are in the Revenue Numbers
           //     </p>
           //     <p className="text-md">
-          //       We've managed Google Shopping and social Shopping campaigns for Australian eCommerce businesses across fashion, homewares, health, sporting goods, electronics, beauty, and trade supplies. Ask us for examples from your category — we share real ROAS and revenue data before you commit to anything.
+          //       We've managed Google Shopping and social Shopping campaigns for Australian eCommerce businesses across fashion, homewares, health, sporting goods, electronics, beauty, and trade supplies. Ask us for examples from your category â€” we share real ROAS and revenue data before you commit to anything.
           //     </p>
           //   </>
           // ),
@@ -13594,7 +13594,7 @@ That's what makes it different. With Google Ads or Meta Ads, you spend money whe
             question:
               "How soon can I see results?",
             answer:
-              "Initial sales can often begin within the first month, while stronger and consistent growth typically builds over 3–6 months through active partner recruitment and optimization.",
+              "Initial sales can often begin within the first month, while stronger and consistent growth typically builds over 3â€“6 months through active partner recruitment and optimization.",
           },
           {
             question:
@@ -13672,7 +13672,7 @@ That's what makes it different. With Google Ads or Meta Ads, you spend money whe
         // heading: "eCommerce Website Development in Australia",
         serviceBodyData: [
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 42.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -13703,7 +13703,7 @@ That's what makes it different. With Google Ads or Meta Ads, you spend money whe
             ),
           },
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 47.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -13851,7 +13851,7 @@ That's what makes it different. With Google Ads or Meta Ads, you spend money whe
           },
           {
             title: "TikTok",
-            desc: "Australian Android users spend nearly 39 hours per month on TikTok. Nano-influencers on the platform average a 10.3% engagement rate — the highest of any tier. It's where product discovery happens fast, trends move quickly, and authentic content consistently beats polished production.",
+            desc: "Australian Android users spend nearly 39 hours per month on TikTok. Nano-influencers on the platform average a 10.3% engagement rate â€” the highest of any tier. It's where product discovery happens fast, trends move quickly, and authentic content consistently beats polished production.",
             svg: <TbBrandTiktok color="#4C8C74" size={40} />,
           },
           {
@@ -13975,7 +13975,7 @@ That's what makes it different. With Google Ads or Meta Ads, you spend money whe
           //       Are in the Revenue Numbers
           //     </p>
           //     <p className="text-md">
-          //       We've managed Google Shopping and social Shopping campaigns for Australian eCommerce businesses across fashion, homewares, health, sporting goods, electronics, beauty, and trade supplies. Ask us for examples from your category — we share real ROAS and revenue data before you commit to anything.
+          //       We've managed Google Shopping and social Shopping campaigns for Australian eCommerce businesses across fashion, homewares, health, sporting goods, electronics, beauty, and trade supplies. Ask us for examples from your category â€” we share real ROAS and revenue data before you commit to anything.
           //     </p>
           //   </>
           // ),
@@ -13991,7 +13991,7 @@ That's what makes it different. With Google Ads or Meta Ads, you spend money whe
             question:
               "How soon can I see results?",
             answer:
-              "Initial sales can often begin within the first month, while stronger and consistent growth typically builds over 3–6 months through active partner recruitment and optimization.",
+              "Initial sales can often begin within the first month, while stronger and consistent growth typically builds over 3â€“6 months through active partner recruitment and optimization.",
           },
           {
             question:
@@ -14069,7 +14069,7 @@ That's what makes it different. With Google Ads or Meta Ads, you spend money whe
         // heading: "eCommerce Website Development in Australia",
         serviceBodyData: [
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 44.webp",
             description: (
               <>
                 {/* <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -14100,7 +14100,7 @@ That's what makes it different. With Google Ads or Meta Ads, you spend money whe
             ),
           },
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 49.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -14109,7 +14109,7 @@ That's what makes it different. With Google Ads or Meta Ads, you spend money whe
 
                 <div className="space-y-2">
                   <p>
-                   App performance marketing acquires, activates, and retains mobile app users through paid campaigns measured against meaningful in-app events, not just installs. The goal isn’t a big install number, but users who complete onboarding, return on Day 7, make a purchase, or reach any milestone defining a valuable user. Most apps face high install volume but low retention. We build campaigns around post install event optimisation so the algorithm finds users who behave like your best customers, not just those who click an ad once.
+                   App performance marketing acquires, activates, and retains mobile app users through paid campaigns measured against meaningful in-app events, not just installs. The goal isnâ€™t a big install number, but users who complete onboarding, return on Day 7, make a purchase, or reach any milestone defining a valuable user. Most apps face high install volume but low retention. We build campaigns around post install event optimisation so the algorithm finds users who behave like your best customers, not just those who click an ad once.
                   </p>
                 </div>
 
@@ -14153,7 +14153,7 @@ That's what makes it different. With Google Ads or Meta Ads, you spend money whe
             ),
           },
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 43.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -14171,7 +14171,7 @@ That's what makes it different. With Google Ads or Meta Ads, you spend money whe
                     <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
                     <span className="font-semibold w-full">
                       App Retargeting & Re-engagement: 
-                    </span>We re-engage high-value users, those who installed but didn’t onboard, went inactive, or didn’t convert at paywalls. Segmented campaigns deliver tailored messages to recover lost value, often at lower cost than acquiring new installs.
+                    </span>We re-engage high-value users, those who installed but didnâ€™t onboard, went inactive, or didnâ€™t convert at paywalls. Segmented campaigns deliver tailored messages to recover lost value, often at lower cost than acquiring new installs.
                   </li>
                   <li className="flex items-start gap-2 md:gap-3 mb-2">
                     <FiCheckCircle className="mt-0.5 text-[#4C8C74] flex-shrink-0 text-sm md:text-base" />
@@ -14295,7 +14295,7 @@ That's what makes it different. With Google Ads or Meta Ads, you spend money whe
           },
           {
             title: "Creative Strategy & Ad Testing",
-            desc: "App ad creative fatigues fast. We develop and test multiple creative concepts — video, static, and playable formats and rotate consistently to keep performance strong. Creative is one of the biggest levers in UA performance.",
+            desc: "App ad creative fatigues fast. We develop and test multiple creative concepts â€” video, static, and playable formats and rotate consistently to keep performance strong. Creative is one of the biggest levers in UA performance.",
             svg: <GrDocumentTest color="#4C8C74" size={40} />,
           },
           {
@@ -14338,7 +14338,7 @@ That's what makes it different. With Google Ads or Meta Ads, you spend money whe
             heading: "Optimise for LTV & Scale",
             paragraph: (
               <>
-                Weekly performance reviews cover user quality by channel, creative performance, post-install event rates, retention cohorts, and retargeting results. We shift budget toward channels and creatives that produce high-LTV users — not just cheap installs. Monthly reporting covers the full picture: CPI, CAC, Day-7 retention, activation rate, ARPU, and ROAS. As performance builds, we scale what's working systematically. 
+                Weekly performance reviews cover user quality by channel, creative performance, post-install event rates, retention cohorts, and retargeting results. We shift budget toward channels and creatives that produce high-LTV users â€” not just cheap installs. Monthly reporting covers the full picture: CPI, CAC, Day-7 retention, activation rate, ARPU, and ROAS. As performance builds, we scale what's working systematically. 
               </>
             ),
           },
@@ -14347,7 +14347,7 @@ That's what makes it different. With Google Ads or Meta Ads, you spend money whe
             heading: "Manage, Optimise & Grow",
             paragraph: (
               <>
-                Once the program is live, we manage it actively — monitoring affiliate performance, communicating new promotions and seasonal campaigns, adjusting commissions for top performers, and continuously recruiting to expand the publisher base. Monthly reporting covers active affiliates, revenue generated, commission spend, and ROI. Over time, the program builds momentum as your affiliate network grows and the best partners scale their promotional activity. 
+                Once the program is live, we manage it actively â€” monitoring affiliate performance, communicating new promotions and seasonal campaigns, adjusting commissions for top performers, and continuously recruiting to expand the publisher base. Monthly reporting covers active affiliates, revenue generated, commission spend, and ROI. Over time, the program builds momentum as your affiliate network grows and the best partners scale their promotional activity. 
               </>
             ),
           },
@@ -14421,7 +14421,7 @@ That's what makes it different. With Google Ads or Meta Ads, you spend money whe
           //       Are in the Revenue Numbers
           //     </p>
           //     <p className="text-md">
-          //       We've managed Google Shopping and social Shopping campaigns for Australian eCommerce businesses across fashion, homewares, health, sporting goods, electronics, beauty, and trade supplies. Ask us for examples from your category — we share real ROAS and revenue data before you commit to anything.
+          //       We've managed Google Shopping and social Shopping campaigns for Australian eCommerce businesses across fashion, homewares, health, sporting goods, electronics, beauty, and trade supplies. Ask us for examples from your category â€” we share real ROAS and revenue data before you commit to anything.
           //     </p>
           //   </>
           // ),
@@ -14431,31 +14431,31 @@ That's what makes it different. With Google Ads or Meta Ads, you spend money whe
           {
             question: "What is app performance marketing?",
             answer:
-              "It’s all about getting the right users, not just installs. We run ads that bring people who actually use your app, stay engaged, and take actions that matter.",
+              "Itâ€™s all about getting the right users, not just installs. We run ads that bring people who actually use your app, stay engaged, and take actions that matter.",
           },
           {
             question:
               "How do you measure success?",
             answer:
-              "Success isn’t just clicks or installs. We track real actions inside the app — purchases, sign-ups, bookings, or whatever makes a user valuable for your app.",
+              "Success isnâ€™t just clicks or installs. We track real actions inside the app â€” purchases, sign-ups, bookings, or whatever makes a user valuable for your app.",
           },
           {
             question:
-              "What’s the difference between acquisition and retargeting?",
+              "Whatâ€™s the difference between acquisition and retargeting?",
             answer:
-              "Acquisition finds new users. Retargeting brings existing users back, the ones who installed but didn’t finish onboarding, went inactive, or didn’t convert.",
+              "Acquisition finds new users. Retargeting brings existing users back, the ones who installed but didnâ€™t finish onboarding, went inactive, or didnâ€™t convert.",
           },
           {
             question:
               "Why is app store optimisation (ASO) important?",
             answer:
-              "Even the best ads fail if your app page doesn’t convert. We make your store page look and read great, so more visitors actually hit “Install.”",
+              "Even the best ads fail if your app page doesnâ€™t convert. We make your store page look and read great, so more visitors actually hit â€œInstall.â€",
           },
           {
             question:
               "Do I need an MMP (Mobile Measurement Partner)?",
             answer:
-              "Yes. Without one, you don’t know what’s working. We set up tools like Adjust or AppsFlyer so every install, action, and dollar is tracked properly.",
+              "Yes. Without one, you donâ€™t know whatâ€™s working. We set up tools like Adjust or AppsFlyer so every install, action, and dollar is tracked properly.",
           },
         ],
         portfolioData: [
@@ -14511,7 +14511,7 @@ That's what makes it different. With Google Ads or Meta Ads, you spend money whe
     // heading: "Web Development Services in Australia",
     serviceBodyData: [
       {
-        imageUrl: "/Services/Rectangle_52.webp",
+        imageUrl: "/Services/image 48.webp",
         description: (
           <>
             <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -14551,7 +14551,7 @@ That's what makes it different. With Google Ads or Meta Ads, you spend money whe
       },
     ],
     whyChooseData: {
-      image: "/Services/Rectangle_52.webp",
+      image: "/Services/image 45 (1).webp",
       heading: "Why Aussie Digital Solution",
       paragraphs: [
         <React.Fragment key="why-aussie-branding">
@@ -14878,7 +14878,7 @@ That's what makes it different. With Google Ads or Meta Ads, you spend money whe
             <br />
             We help individuals build a personal brand that's genuinely theirs.
             Not a polished corporate version of themselves, but something clear,
-            credible, and consistent — across LinkedIn, their website, and
+            credible, and consistent â€” across LinkedIn, their website, and
             wherever their audience actually spends time.
             <div className="absolute bottom-4 left-0 right-0 flex flex-col items-center text-[10px] gap-y-3">
               <div className="flex items-center justify-center gap-2">
@@ -14930,7 +14930,7 @@ That's what makes it different. With Google Ads or Meta Ads, you spend money whe
             tells the rest.
             <br />
             Animated brand intros, explainer videos, social reels, promotional
-            content — when it's done well, motion makes people stop and actually
+            content â€” when it's done well, motion makes people stop and actually
             watch. We create motion content built around your brand, not generic
             templates. Every frame has a reason to be there.
             <div className="absolute bottom-4 left-0 right-0 flex flex-col items-center text-[10px] gap-y-3">
@@ -15136,7 +15136,7 @@ That's what makes it different. With Google Ads or Meta Ads, you spend money whe
         heading: "Delivery & Brand Launch Support",
         paragraph: (
           <>
-            When everything's finalised, we hand over everything you need —
+            When everything's finalised, we hand over everything you need â€”
             source files, brand guides, digital assets, print-ready files, all
             of it. And if you need help rolling the brand out across your
             website, socials, or marketing materials, we're here for that too.
@@ -15198,11 +15198,11 @@ That's what makes it different. With Google Ads or Meta Ads, you spend money whe
           A three-person startup doesn't need the same thing as a 50-person
           firm. A solo consultant has completely different needs from both.
           We've seen what happens when businesses are forced into a package that
-          doesn't quite fit — it shows in the result. <br />
+          doesn't quite fit â€” it shows in the result. <br />
           <br />
           So we don't do that. Every project starts with a conversation about
           where your business is now and where you're trying to take it. From
-          there, we put together a scope that actually makes sense for you —
+          there, we put together a scope that actually makes sense for you â€”
           honest about what's involved and what it'll cost before anything
           starts.
           <ul className="list-disc list-inside mt-1">
@@ -15309,7 +15309,7 @@ That's what makes it different. With Google Ads or Meta Ads, you spend money whe
         // heading: "eCommerce Website Development in Australia",
         serviceBodyData: [
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 50.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -15340,7 +15340,7 @@ That's what makes it different. With Google Ads or Meta Ads, you spend money whe
             ),
           },
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 55.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -15403,7 +15403,7 @@ That's what makes it different. With Google Ads or Meta Ads, you spend money whe
             ),
           },
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 52.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -15762,17 +15762,17 @@ We assess what's worth keeping, the shapes, the colours, the associations that y
             question:
               "How long does logo design take?",
             answer:
-              "We usually share our first concepts within 48 hours. Most logos are done in 1–2 weeks, depending on feedback and revisions.",
+              "We usually share our first concepts within 48 hours. Most logos are done in 1â€“2 weeks, depending on feedback and revisions.",
           },
           {
             question: "What file formats will I receive?",
             answer:
-              "You’ll get everything you need: AI, PNG, JPG, SVG, PDF, plus all color versions. Ready for web, print, anything.",
+              "Youâ€™ll get everything you need: AI, PNG, JPG, SVG, PDF, plus all color versions. Ready for web, print, anything.",
           },
           {
             question: "Do I own the logo design?",
             answer:
-              "Yes, 100%. Once it’s done and paid for, it’s بالكامل yours, no fees, no restrictions.",
+              "Yes, 100%. Once itâ€™s done and paid for, itâ€™s Ø¨Ø§Ù„ÙƒØ§Ù…Ù„ yours, no fees, no restrictions.",
           },
           {
             question: "Can you redesign my existing logo?",
@@ -15782,10 +15782,10 @@ We assess what's worth keeping, the shapes, the colours, the associations that y
           {
             question: "How many concepts will I see?",
             answer:
-              "You’ll get 3 to 6 unique concepts, real different ideas, not just small tweaks.",
+              "Youâ€™ll get 3 to 6 unique concepts, real different ideas, not just small tweaks.",
           },
           {
-            question: "What if I don’t like the concepts?",
+            question: "What if I donâ€™t like the concepts?",
             answer:
               "No problem. We refine or redo based on your feedback until it feels right.",
           },
@@ -15841,7 +15841,7 @@ We assess what's worth keeping, the shapes, the colours, the associations that y
         // heading: "eCommerce Website Development in Australia",
         serviceBodyData: [
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 57.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -15872,7 +15872,7 @@ We assess what's worth keeping, the shapes, the colours, the associations that y
             ),
           },
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 51.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -15885,10 +15885,10 @@ We assess what's worth keeping, the shapes, the colours, the associations that y
 
                 <div className="space-y-2">
                   <p>
-                    A brand guide is your brand’s rulebook. It explains how everything should look and feel, from logo usage and colours to typography and tone of voice. Anyone working with your brand can follow it and get things right without guesswork.
+                    A brand guide is your brandâ€™s rulebook. It explains how everything should look and feel, from logo usage and colours to typography and tone of voice. Anyone working with your brand can follow it and get things right without guesswork.
                   </p>
                   <p>
-                    Without a guide, small inconsistencies start to creep in. Colours shift, fonts change, logos get misused. Over time, those little mistakes weaken your brand’s identity.
+                    Without a guide, small inconsistencies start to creep in. Colours shift, fonts change, logos get misused. Over time, those little mistakes weaken your brandâ€™s identity.
                   </p>
                   <p>
                     A strong brand guide keeps everything aligned. It protects your visual identity, saves time on every new project, and makes your business look more polished and established. Most importantly, it ensures your brand always shows up the same way, clear, consistent, and intentional.
@@ -15941,7 +15941,7 @@ We assess what's worth keeping, the shapes, the colours, the associations that y
           },
           {
             title: "IMAGERY",
-            desc: "The visual style, mood, and approach for photography, illustrations, and icons — so every image chosen for the brand feels like it belongs.",
+            desc: "The visual style, mood, and approach for photography, illustrations, and icons â€” so every image chosen for the brand feels like it belongs.",
             svg: <CiImageOn size={40} color="#4C8C74" />,
           },
           {
@@ -16133,7 +16133,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
           {
             question: "How long does it take to create a brand guide?",
             answer:
-              "A basic guide usually takes 1–2 weeks. A more detailed playbook can take 2–4 weeks, depending on scope and feedback.",
+              "A basic guide usually takes 1â€“2 weeks. A more detailed playbook can take 2â€“4 weeks, depending on scope and feedback.",
           },
           {
             question: "Can you create a guide for an existing brand?",
@@ -16141,19 +16141,19 @@ Often, the fastest path to a current, usable brand guide is rather than starting
               "Yes. We review what you already have, fix any gaps or inconsistencies, and build a clear, usable guide around it.",
           },
           {
-            question: "What’s the difference between a brand guide and a brand playbook?",
+            question: "Whatâ€™s the difference between a brand guide and a brand playbook?",
             answer:
               "A brand guide covers visuals like logo, colours, and fonts. A playbook goes further into messaging, tone, and how the brand is used across different channels.",
           },
           {
             question: "How many revisions are included?",
             answer:
-              "We go through a few structured rounds and refine until everything feels right. The goal is a guide you’re confident using.",
+              "We go through a few structured rounds and refine until everything feels right. The goal is a guide youâ€™re confident using.",
           },
           {
             question: "Do we own the final brand guide?",
             answer:
-              "Yes. Once it’s delivered and paid for, it’s yours to use, share, or update however you like.",
+              "Yes. Once itâ€™s delivered and paid for, itâ€™s yours to use, share, or update however you like.",
           },
         ],
         portfolioData: [
@@ -16207,14 +16207,14 @@ Often, the fastest path to a current, usable brand guide is rather than starting
         // heading: "eCommerce Website Development in Australia",
         serviceBodyData: [
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 53.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
                   What Is Personal Branding?
                 </h2>
                 <p>
-                  Personal branding is the process of building a unique professional identity online and offline that brings light to your skills, values, experiences, and personality. It’s not just a logo, it’s how the customers actually perceive you, remember you, and trust you when they search your name on Google, LinkedIn, or visit your website
+                  Personal branding is the process of building a unique professional identity online and offline that brings light to your skills, values, experiences, and personality. Itâ€™s not just a logo, itâ€™s how the customers actually perceive you, remember you, and trust you when they search your name on Google, LinkedIn, or visit your website
                 </p>
                 <p>
                   Think of it as creating a reliable reputation that has a great impact on how your audience, whether clients, employers, partners, or peers, sees you in your field. A strong personal brand captivates attention, creates differentiation, and opens doors to new opportunities. 
@@ -16238,7 +16238,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
                     Every Platform, One Focused Team.
                   </h3> */}
                   <p className="mx-auto mt-4 max-w-6xl text-sm leading-7 text-[#AAAAAA] sm:text-base">
-       Building a compelling personal brand is no longer optional; it’s important in today’s competitive digital landscape. A strategic personal brand:
+       Building a compelling personal brand is no longer optional; itâ€™s important in todayâ€™s competitive digital landscape. A strategic personal brand:
                   </p>
                 </div>
               </div>
@@ -16268,7 +16268,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
         easyExperienceData: {
           eyebrow: <></>,
           headingLine1: <>How We Help You Build a Powerful Personal Brand</>,
-          headingLine2: <div className="text-sm">At Aussie Digital Solution, our team of personal branding services is designed to help professionals build a strong identity that attracts opportunities, fosters credibility, and positions them as leaders in their industry. Here’s how we help:</div>,
+          headingLine2: <div className="text-sm">At Aussie Digital Solution, our team of personal branding services is designed to help professionals build a strong identity that attracts opportunities, fosters credibility, and positions them as leaders in their industry. Hereâ€™s how we help:</div>,
           cards: [
             {
               title: "Branding Strategy & Positioning",
@@ -16294,7 +16294,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
               title: "Portfolio & Website Content",
               description: (
                 <>
-                  We create optimized content, case studies, and personal bio pages that tell your professional story and elevate your brand’s online impression.
+                  We create optimized content, case studies, and personal bio pages that tell your professional story and elevate your brandâ€™s online impression.
                 </>
               ),
               icon: <IoDocumentOutline color="#4C8C74" size={40} />,
@@ -16453,7 +16453,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
           {
             question: "How long does it take to create a brand guide?",
             answer:
-              "A basic guide usually takes 1–2 weeks. A more detailed playbook can take 2–4 weeks, depending on scope and feedback.",
+              "A basic guide usually takes 1â€“2 weeks. A more detailed playbook can take 2â€“4 weeks, depending on scope and feedback.",
           },
           {
             question: "Can you create a guide for an existing brand?",
@@ -16461,19 +16461,19 @@ Often, the fastest path to a current, usable brand guide is rather than starting
               "Yes. We review what you already have, fix any gaps or inconsistencies, and build a clear, usable guide around it.",
           },
           {
-            question: "What’s the difference between a brand guide and a brand playbook?",
+            question: "Whatâ€™s the difference between a brand guide and a brand playbook?",
             answer:
               "A brand guide covers visuals like logo, colours, and fonts. A playbook goes further into messaging, tone, and how the brand is used across different channels.",
           },
           {
             question: "How many revisions are included?",
             answer:
-              "We go through a few structured rounds and refine until everything feels right. The goal is a guide you’re confident using.",
+              "We go through a few structured rounds and refine until everything feels right. The goal is a guide youâ€™re confident using.",
           },
           {
             question: "Do we own the final brand guide?",
             answer:
-              "Yes. Once it’s delivered and paid for, it’s yours to use, share, or update however you like.",
+              "Yes. Once itâ€™s delivered and paid for, itâ€™s yours to use, share, or update however you like.",
           },
         ],
         portfolioData: [
@@ -16527,7 +16527,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
         // heading: "eCommerce Website Development in Australia",
         serviceBodyData: [
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 54.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -16558,7 +16558,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
             ),
           },
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 58.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -16571,10 +16571,10 @@ Often, the fastest path to a current, usable brand guide is rather than starting
 
                 <div className="space-y-2">
                   <p>
-                    A brand guide is your brand’s rulebook. It explains how everything should look and feel, from logo usage and colours to typography and tone of voice. Anyone working with your brand can follow it and get things right without guesswork.
+                    A brand guide is your brandâ€™s rulebook. It explains how everything should look and feel, from logo usage and colours to typography and tone of voice. Anyone working with your brand can follow it and get things right without guesswork.
                   </p>
                   <p>
-                    Without a guide, small inconsistencies start to creep in. Colours shift, fonts change, logos get misused. Over time, those little mistakes weaken your brand’s identity.
+                    Without a guide, small inconsistencies start to creep in. Colours shift, fonts change, logos get misused. Over time, those little mistakes weaken your brandâ€™s identity.
                   </p>
                   <p>
                     A strong brand guide keeps everything aligned. It protects your visual identity, saves time on every new project, and makes your business look more polished and established. Most importantly, it ensures your brand always shows up the same way, clear, consistent, and intentional.
@@ -16627,7 +16627,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
           },
           {
             title: "IMAGERY",
-            desc: "The visual style, mood, and approach for photography, illustrations, and icons — so every image chosen for the brand feels like it belongs.",
+            desc: "The visual style, mood, and approach for photography, illustrations, and icons â€” so every image chosen for the brand feels like it belongs.",
             svg: <CiImageOn size={40} color="#4C8C74" />,
           },
           {
@@ -16819,7 +16819,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
           {
             question: "How long does it take to create a brand guide?",
             answer:
-              "A basic guide usually takes 1–2 weeks. A more detailed playbook can take 2–4 weeks, depending on scope and feedback.",
+              "A basic guide usually takes 1â€“2 weeks. A more detailed playbook can take 2â€“4 weeks, depending on scope and feedback.",
           },
           {
             question: "Can you create a guide for an existing brand?",
@@ -16827,19 +16827,19 @@ Often, the fastest path to a current, usable brand guide is rather than starting
               "Yes. We review what you already have, fix any gaps or inconsistencies, and build a clear, usable guide around it.",
           },
           {
-            question: "What’s the difference between a brand guide and a brand playbook?",
+            question: "Whatâ€™s the difference between a brand guide and a brand playbook?",
             answer:
               "A brand guide covers visuals like logo, colours, and fonts. A playbook goes further into messaging, tone, and how the brand is used across different channels.",
           },
           {
             question: "How many revisions are included?",
             answer:
-              "We go through a few structured rounds and refine until everything feels right. The goal is a guide you’re confident using.",
+              "We go through a few structured rounds and refine until everything feels right. The goal is a guide youâ€™re confident using.",
           },
           {
             question: "Do we own the final brand guide?",
             answer:
-              "Yes. Once it’s delivered and paid for, it’s yours to use, share, or update however you like.",
+              "Yes. Once itâ€™s delivered and paid for, itâ€™s yours to use, share, or update however you like.",
           },
         ],
         portfolioData: [
@@ -16895,7 +16895,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
     // heading: "Web Development Services in Australia",
     serviceBodyData: [
       {
-        imageUrl: "/Services/Rectangle_52.webp",
+        imageUrl: "/Services/image 68.webp",
         description: (
           <>
             <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -16943,7 +16943,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
       },
     ],
     whyChooseData: {
-      image: "/Services/Rectangle_52.webp",
+      image: "/Services/image 74.webp",
       heading: "Why Aussie Digital Solution",
       paragraphs: [
         <React.Fragment key="why-aussie-branding">
@@ -17197,7 +17197,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
       body: (
         <>
           <p className="mt-2">
-            A local café in Melbourne has completely different social media
+            A local cafÃ© in Melbourne has completely different social media
             needs from a B2B software company or a national eCommerce brand.
             Cookie-cutter packages don't serve any of them well. We don't use
             them. We have a conversation first. We learn where your business is,
@@ -17306,7 +17306,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
         // heading: "eCommerce Website Development in Australia",
         serviceBodyData: [
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 70.webp",
             description: (
               <>
                 <h2 className="text-white text-3xl mt-5 md:text-4xl font-medium">
@@ -17337,7 +17337,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
             ),
           },
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 76.webp",
             description: (
               <>
                 <h2 className="text-white text-3xl mt-5 md:text-4xl font-medium">
@@ -17349,14 +17349,14 @@ Often, the fastest path to a current, usable brand guide is rather than starting
                     Every piece of your marketing leads back to your profile.
                   </p>
                   <p>
-                    Traffic from content, ads, or outreach means nothing if your profile doesn’t convert. We make sure when people land on your profile, they stay, trust, and take action.
+                    Traffic from content, ads, or outreach means nothing if your profile doesnâ€™t convert. We make sure when people land on your profile, they stay, trust, and take action.
                   </p>
                 </div>
               </>
             ),
           },
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 69.webp",
             description: (
               <>
                 <h2 className="text-white text-3xl mt-5 md:text-4xl font-medium">
@@ -17597,7 +17597,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
         //       <p className="text-white"><span className="font-bold">Strategy First, Always:</span><br />We don't write a single caption until the strategy is locked. Every piece of content connects back to a pillar and a business goal. Not just "content for the sake of content."</p>
         //       <p className="text-white"><span className="font-bold">Real Writers, Not AI Output:</span><br />Your captions are written by people who understand marketing, understand your brand, and understand how Australians actually communicate online. Not generated and copy-pasted.</p>
         //       <p className="text-white"><span className="font-bold">Built for Australian Audiences:</span><br />We know how Australian consumers engage on social media, the tone, the humour, the expectations. Content built for a US audience doesn't land the same way here.</p>
-        //       <p className="text-white"><span className="font-bold">You Stay in Control:</span><br />You approve everything before it goes out. You're not handing over your brand voice — you're adding a team that handles the system while you keep the final say.</p>
+        //       <p className="text-white"><span className="font-bold">You Stay in Control:</span><br />You approve everything before it goes out. You're not handing over your brand voice â€” you're adding a team that handles the system while you keep the final say.</p>
         //       <p className="text-white"><span className="font-bold">In-House From Start to Finish:</span><br />Strategy, design, copywriting, scheduling, all our own team. No freelancers, no outsourced copywriters, no miscommunication between different people handling different parts.</p>
         //       <p className="text-white"><span className="font-bold">No Lock-In Contracts:</span><br />We keep clients because the work produces results. monthly terms, clear scope, honest reporting. You'll know exactly what we're doing and what it's producing.</p>
         //     </div>
@@ -17609,7 +17609,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
         //   //       Are in the Revenue Numbers
         //   //     </p>
         //   //     <p className="text-md">
-        //   //       We've managed Google Shopping and social Shopping campaigns for Australian eCommerce businesses across fashion, homewares, health, sporting goods, electronics, beauty, and trade supplies. Ask us for examples from your category — we share real ROAS and revenue data before you commit to anything.
+        //   //       We've managed Google Shopping and social Shopping campaigns for Australian eCommerce businesses across fashion, homewares, health, sporting goods, electronics, beauty, and trade supplies. Ask us for examples from your category â€” we share real ROAS and revenue data before you commit to anything.
         //   //     </p>
         //   //   </>
         //   // ),
@@ -17690,7 +17690,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
               <p>
                 Your profile is already getting viewed. The question is, is it converting?
               </p>
-              <p>Let’s fix that.</p>
+              <p>Letâ€™s fix that.</p>
             </>
           ),
           buttonText: "Get Started",
@@ -17704,7 +17704,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
         // heading: "eCommerce Website Development in Australia",
         serviceBodyData: [
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 75.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -17735,7 +17735,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
             ),
           },
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 71.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -17794,7 +17794,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
         strategicCardData: [
           {
             title: "Content Pillars & Brand Voice",
-            desc: "We define 3–5 content pillars that reflect your brand and serve your audience, education, social proof, personality, promotion, and community. Each post maps to a pillar. Nothing goes out without a reason.",
+            desc: "We define 3â€“5 content pillars that reflect your brand and serve your audience, education, social proof, personality, promotion, and community. Each post maps to a pillar. Nothing goes out without a reason.",
             svg: <MdOutlineBrandingWatermark color="#4C8C74" size={40} />,
           },
           {
@@ -17988,7 +17988,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
               <p className="text-white"><span className="font-bold">Strategy First, Always:</span><br />We don't write a single caption until the strategy is locked. Every piece of content connects back to a pillar and a business goal. Not just "content for the sake of content."</p>
               <p className="text-white"><span className="font-bold">Real Writers, Not AI Output:</span><br />Your captions are written by people who understand marketing, understand your brand, and understand how Australians actually communicate online. Not generated and copy-pasted.</p>
               <p className="text-white"><span className="font-bold">Built for Australian Audiences:</span><br />We know how Australian consumers engage on social media, the tone, the humour, the expectations. Content built for a US audience doesn't land the same way here.</p>
-              <p className="text-white"><span className="font-bold">You Stay in Control:</span><br />You approve everything before it goes out. You're not handing over your brand voice — you're adding a team that handles the system while you keep the final say.</p>
+              <p className="text-white"><span className="font-bold">You Stay in Control:</span><br />You approve everything before it goes out. You're not handing over your brand voice â€” you're adding a team that handles the system while you keep the final say.</p>
               <p className="text-white"><span className="font-bold">In-House From Start to Finish:</span><br />Strategy, design, copywriting, scheduling, all our own team. No freelancers, no outsourced copywriters, no miscommunication between different people handling different parts.</p>
               <p className="text-white"><span className="font-bold">No Lock-In Contracts:</span><br />We keep clients because the work produces results. monthly terms, clear scope, honest reporting. You'll know exactly what we're doing and what it's producing.</p>
             </div>
@@ -18000,7 +18000,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
           //       Are in the Revenue Numbers
           //     </p>
           //     <p className="text-md">
-          //       We've managed Google Shopping and social Shopping campaigns for Australian eCommerce businesses across fashion, homewares, health, sporting goods, electronics, beauty, and trade supplies. Ask us for examples from your category — we share real ROAS and revenue data before you commit to anything.
+          //       We've managed Google Shopping and social Shopping campaigns for Australian eCommerce businesses across fashion, homewares, health, sporting goods, electronics, beauty, and trade supplies. Ask us for examples from your category â€” we share real ROAS and revenue data before you commit to anything.
           //     </p>
           //   </>
           // ),
@@ -18094,14 +18094,14 @@ Often, the fastest path to a current, usable brand guide is rather than starting
         // heading: "eCommerce Website Development in Australia",
         serviceBodyData: [
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 72.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
-                  Your profile shouldn’t just look good. It should convert.
+                  Your profile shouldnâ€™t just look good. It should convert.
                 </h2>
                 <p>
-                  Most profiles get attention and lose it just as fast. The problem isn’t visibility; it’s what happens after someone lands on your page.
+                  Most profiles get attention and lose it just as fast. The problem isnâ€™t visibility; itâ€™s what happens after someone lands on your page.
                 </p>
                 <p>
                   We turn your profile into a <b>decision making asset</b>, built to hold attention, build trust, and drive action.
@@ -18128,7 +18128,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
             ),
           },
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 73.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -18140,7 +18140,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
                     Every section of your profile should be working toward one outcome: conversion.
                   </p>
                   <p>
-                    We don’t rewrite profiles for aesthetics. We rebuild them with intent, aligning every word, section, and element to guide your audience toward a clear next step.
+                    We donâ€™t rewrite profiles for aesthetics. We rebuild them with intent, aligning every word, section, and element to guide your audience toward a clear next step.
                   </p>
 
                   <p>
@@ -18166,7 +18166,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
             ),
           },
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 77.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -18189,10 +18189,10 @@ Often, the fastest path to a current, usable brand guide is rather than starting
                     Leads to one place, your profile.
                   </p>
                   <p>
-                    If it doesn’t build trust fast and guide action clearly, you lose the opportunity.
+                    If it doesnâ€™t build trust fast and guide action clearly, you lose the opportunity.
                   </p>
                   <p>
-                    We make sure you don’t.
+                    We make sure you donâ€™t.
                   </p>
                 </div>
               </>
@@ -18223,7 +18223,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
         // strategicCardData: [
         //   {
         //     title: "Content Pillars & Brand Voice",
-        //     desc: "We define 3–5 content pillars that reflect your brand and serve your audience, education, social proof, personality, promotion, and community. Each post maps to a pillar. Nothing goes out without a reason.",
+        //     desc: "We define 3â€“5 content pillars that reflect your brand and serve your audience, education, social proof, personality, promotion, and community. Each post maps to a pillar. Nothing goes out without a reason.",
         //     svg: <MdOutlineBrandingWatermark color="#4C8C74" size={40} />,
         //   },
         //   {
@@ -18430,7 +18430,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
           //       Are in the Revenue Numbers
           //     </p>
           //     <p className="text-md">
-          //       We've managed Google Shopping and social Shopping campaigns for Australian eCommerce businesses across fashion, homewares, health, sporting goods, electronics, beauty, and trade supplies. Ask us for examples from your category — we share real ROAS and revenue data before you commit to anything.
+          //       We've managed Google Shopping and social Shopping campaigns for Australian eCommerce businesses across fashion, homewares, health, sporting goods, electronics, beauty, and trade supplies. Ask us for examples from your category â€” we share real ROAS and revenue data before you commit to anything.
           //     </p>
           //   </>
           // ),
@@ -18509,7 +18509,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
                 Your profile is already being seen.<br />The only question is, is it converting?
               </h3>
               <p className="mt-3 text-xl">
-                Let’s fix that.
+                Letâ€™s fix that.
               </p>
             </>
           ),
@@ -18524,14 +18524,14 @@ Often, the fastest path to a current, usable brand guide is rather than starting
         // heading: "eCommerce Website Development in Australia",
         serviceBodyData: [
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 78.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
-                  Visibility is not luck. It’s timing, positioning, and precision.
+                  Visibility is not luck. Itâ€™s timing, positioning, and precision.
                 </h2>
                 <p>
-                  Most content fails not because it’s bad, but because it’s disconnected from what people are actually paying attention to. We bridge that gap by identifying what’s moving in your market and placing your brand directly into it.
+                  Most content fails not because itâ€™s bad, but because itâ€™s disconnected from what people are actually paying attention to. We bridge that gap by identifying whatâ€™s moving in your market and placing your brand directly into it.
                 </p>
                 <p>
                   This is where strategy meets momentum.
@@ -18558,7 +18558,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
             ),
           },
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 85.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -18567,7 +18567,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
 
                 <div className="space-y-2">
                   <p>
-                    We don’t chase trends. We read them early and position you ahead of them.
+                    We donâ€™t chase trends. We read them early and position you ahead of them.
                   </p>
                   <p>
                     Audience search changes with time. Their search also changes, and here our roles come. We first track those shifts and align your content so it fits at the right time, perfectly.
@@ -18577,7 +18577,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
                     <span className="font-bold">Trend Mapping:</span><br />We identify emerging patterns, conversations, and content formats within your niche before they peak.
                   </p>
                   <p>
-                    <span className="font-bold">Content Positioning Strategy:</span><br />Your content is aligned with what’s already gaining traction, increasing the chances of visibility and engagement.
+                    <span className="font-bold">Content Positioning Strategy:</span><br />Your content is aligned with whatâ€™s already gaining traction, increasing the chances of visibility and engagement.
                   </p>
                   <p>
                     <span className="font-bold">Reach Amplification Planning:</span><br />Strategic use of timing, formats, and platform behaviours to extend how far your content travels.
@@ -18593,7 +18593,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
             ),
           },
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 80.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -18605,17 +18605,17 @@ Often, the fastest path to a current, usable brand guide is rather than starting
                     Posting consistently is not enough anymore.
                   </p>
                   <p>
-                    Platforms reward relevance, timing, and engagement signals. If your content isn’t aligned with what people are already interacting with, it will get ignored, ultimately, no matter how good it is.
+                    Platforms reward relevance, timing, and engagement signals. If your content isnâ€™t aligned with what people are already interacting with, it will get ignored, ultimately, no matter how good it is.
                   </p>
                   <p>
-                    We make sure your content enters conversations that are already happening, so you’re not starting from zero every time.
+                    We make sure your content enters conversations that are already happening, so youâ€™re not starting from zero every time.
                   </p>
                 </div>
               </>
             ),
           },
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 87.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -18662,7 +18662,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
         // strategicCardData: [
         //   {
         //     title: "Content Pillars & Brand Voice",
-        //     desc: "We define 3–5 content pillars that reflect your brand and serve your audience, education, social proof, personality, promotion, and community. Each post maps to a pillar. Nothing goes out without a reason.",
+        //     desc: "We define 3â€“5 content pillars that reflect your brand and serve your audience, education, social proof, personality, promotion, and community. Each post maps to a pillar. Nothing goes out without a reason.",
         //     svg: <MdOutlineBrandingWatermark color="#4C8C74" size={40} />,
         //   },
         //   {
@@ -18865,7 +18865,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
         //       <p className="text-white"><span className="font-bold">Strategy First, Always:</span><br />We don't write a single caption until the strategy is locked. Every piece of content connects back to a pillar and a business goal. Not just "content for the sake of content."</p>
         //       <p className="text-white"><span className="font-bold">Real Writers, Not AI Output:</span><br />Your captions are written by people who understand marketing, understand your brand, and understand how Australians actually communicate online. Not generated and copy-pasted.</p>
         //       <p className="text-white"><span className="font-bold">Built for Australian Audiences:</span><br />We know how Australian consumers engage on social media, the tone, the humour, the expectations. Content built for a US audience doesn't land the same way here.</p>
-        //       <p className="text-white"><span className="font-bold">You Stay in Control:</span><br />You approve everything before it goes out. You're not handing over your brand voice — you're adding a team that handles the system while you keep the final say.</p>
+        //       <p className="text-white"><span className="font-bold">You Stay in Control:</span><br />You approve everything before it goes out. You're not handing over your brand voice â€” you're adding a team that handles the system while you keep the final say.</p>
         //       <p className="text-white"><span className="font-bold">In-House From Start to Finish:</span><br />Strategy, design, copywriting, scheduling, all our own team. No freelancers, no outsourced copywriters, no miscommunication between different people handling different parts.</p>
         //       <p className="text-white"><span className="font-bold">No Lock-In Contracts:</span><br />We keep clients because the work produces results. monthly terms, clear scope, honest reporting. You'll know exactly what we're doing and what it's producing.</p>
         //     </div>
@@ -18877,7 +18877,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
         //   //       Are in the Revenue Numbers
         //   //     </p>
         //   //     <p className="text-md">
-        //   //       We've managed Google Shopping and social Shopping campaigns for Australian eCommerce businesses across fashion, homewares, health, sporting goods, electronics, beauty, and trade supplies. Ask us for examples from your category — we share real ROAS and revenue data before you commit to anything.
+        //   //       We've managed Google Shopping and social Shopping campaigns for Australian eCommerce businesses across fashion, homewares, health, sporting goods, electronics, beauty, and trade supplies. Ask us for examples from your category â€” we share real ROAS and revenue data before you commit to anything.
         //   //     </p>
         //   //   </>
         //   // ),
@@ -18956,7 +18956,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
                 Attention is already flowing.<br />The question is, are you positioned to capture it?
               </h3>
               <p className="mt-2">
-                Let’s make sure you are.
+                Letâ€™s make sure you are.
               </p>
             </>
           ),
@@ -18972,7 +18972,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
     title: "Content Marketing Management in Australia",
     serviceBodyData: [
       {
-        imageUrl: "/Services/Rectangle_52.webp",
+        imageUrl: "/Services/image 88.webp",
         description: (
           <>
             <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -19006,7 +19006,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
       },
     ],
     whyChooseData: {
-      image: "/Services/Rectangle_52.webp",
+      image: "/Services/image 90.webp",
       heading: "Why Aussie Digital Solution",
       paragraphs: [
         <React.Fragment key="why-aussie-branding">
@@ -19323,7 +19323,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
         // heading: "eCommerce Website Development in Australia",
         serviceBodyData: [
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 92.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -19355,7 +19355,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
             ),
           },
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 93.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -19364,8 +19364,8 @@ Often, the fastest path to a current, usable brand guide is rather than starting
 
                 <div className="">
                   <div className="space-y-2">
-                    <p>Most businesses rely too heavily on platforms they don’t control.</p>
-                    <p>Social media brings attention, but it doesn’t guarantee access to your audience. Email gives you a direct line of communication, without filters or interruptions.</p>
+                    <p>Most businesses rely too heavily on platforms they donâ€™t control.</p>
+                    <p>Social media brings attention, but it doesnâ€™t guarantee access to your audience. Email gives you a direct line of communication, without filters or interruptions.</p>
                     <p>When done right, it becomes:</p>
 
                     <ul className="list-disc list-inside">
@@ -19397,7 +19397,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
             ),
           },
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 94.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -19440,7 +19440,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
         ],
         // easyExperienceData: {
         //   eyebrow: <>Why Our SEO Writing Works</>,
-        //   headingLine1: <>Because it’s built with intention, not templates</>,
+        //   headingLine1: <>Because itâ€™s built with intention, not templates</>,
         //   // headingLine2: <div className="text-sm">WordPress development involves a lot more technicalities than building a site and handing it over. Below is a mention of what exactly we offer and what each service does for your business in the long term.</div>,
         //   cards: [
         //     {
@@ -19462,7 +19462,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
         //       icon: <PiStrategy color="#4C8C74" size={40} />,
         //     },
         //     {
-        //       title: "Built for Google’s Standards",
+        //       title: "Built for Googleâ€™s Standards",
         //       description: (
         //         <>
         //           Every piece aligns with EEAT (Experience, Expertise, Authority, Trust) and modern ranking signals.
@@ -19554,7 +19554,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
             heading: "Audience Understanding",
             paragraph: (
               <>
-                Identifying who you’re speaking to and what drives their decisions.
+                Identifying who youâ€™re speaking to and what drives their decisions.
               </>
             ),
           },
@@ -19632,17 +19632,17 @@ Often, the fastest path to a current, usable brand guide is rather than starting
         //         We create organic growth systems
         //       </p>
 
-        //       <p>Publishing random blogs won’t improve the scalability of your business.</p>
+        //       <p>Publishing random blogs wonâ€™t improve the scalability of your business.</p>
 
         //       <p>We help you build a connected content ecosystem, where blogs, landing pages, and internal linking work together to strengthen your authority and improve rankings across your entire site.</p>
 
         //       <p>This is how brands move from inconsistent traffic to predictable growth.</p>
 
-        //       <h3 className="text-2xl text-white font-semibold">Who It’s For</h3>
+        //       <h3 className="text-2xl text-white font-semibold">Who Itâ€™s For</h3>
         //       <p>Our SEO writing services are ideal for:</p>
         //       <ul className="list-disc list-inside mt-2">
         //         <li>Businesses aiming for long term organic traffic growth</li>
-        //         <li>Brands struggling with content that doesn’t rank</li>
+        //         <li>Brands struggling with content that doesnâ€™t rank</li>
         //         <li>Startups building authority in competitive niches</li>
         //         <li>Agencies needing scalable, high quality SEO content</li>
         //       </ul>
@@ -19651,7 +19651,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
         //   rightContent: (
         //     <>
         //       <h3 className="text-2xl text-white mt-3">
-        //         What You’ll Gain
+        //         What Youâ€™ll Gain
         //       </h3>
         //       <p className="text-sm"></p>
         //       <ul className="list-disc list-inside mt-1 text-sm">
@@ -19732,7 +19732,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
                 Your audience is already listening.<br />The question is, are you speaking to them the right way?
               </h3>
               <div className="space-y-2 mt-3">
-                <p>Let’s make sure you are.</p>
+                <p>Letâ€™s make sure you are.</p>
               </div>
             </>
           ),
@@ -19747,7 +19747,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
         // heading: "eCommerce Website Development in Australia",
         serviceBodyData: [
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 95.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -19757,7 +19757,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
                   <p>Content built for Google. Written for humans. Designed for growth.</p>
                   <p>Most content online exists. But very little performs.</p>
                   <p>We create SEO content that earns top rankings, attracts the right audience, and delivers real business results. We have expertise in writing blog posts, landing pages, and full website copy; every piece is built based on data after research on search intent, and follows a proven SEO strategy.</p>
-                  <p>This isn’t content for the sake of publishing; it’s content built to grow your visibility, authority, and revenue.</p>
+                  <p>This isnâ€™t content for the sake of publishing; itâ€™s content built to grow your visibility, authority, and revenue.</p>
                 </div>
                 {/* <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
                   <a
@@ -19781,7 +19781,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
             ),
           },
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 96.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
@@ -19796,7 +19796,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
                     <p className="font-semibold text-white text-xl">Our approach combines:</p>
                   </div>
                   <p className="text-2xl font-medium">SEO content writing + search intent optimization + topical authority + AI SEO (GEO)</p>
-                  <p>So your content doesn’t just rank temporarily, it builds long-term organic presence.</p>
+                  <p>So your content doesnâ€™t just rank temporarily, it builds long-term organic presence.</p>
                 </div>
 
                 {/* <ul className="mt-3">
@@ -19845,7 +19845,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
         ],
         easyExperienceData: {
           eyebrow: <>Why Our SEO Writing Works</>,
-          headingLine1: <>Because it’s built with intention, not templates</>,
+          headingLine1: <>Because itâ€™s built with intention, not templates</>,
           // headingLine2: <div className="text-sm">WordPress development involves a lot more technicalities than building a site and handing it over. Below is a mention of what exactly we offer and what each service does for your business in the long term.</div>,
           cards: [
             {
@@ -19867,7 +19867,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
               icon: <PiStrategy color="#4C8C74" size={40} />,
             },
             {
-              title: "Built for Google’s Standards",
+              title: "Built for Googleâ€™s Standards",
               description: (
                 <>
                   Every piece aligns with EEAT (Experience, Expertise, Authority, Trust) and modern ranking signals.
@@ -19952,7 +19952,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
           },
           {
             title: "Content Refresh & Optimization",
-            desc: "Old content shouldn’t be wasted; it should be improved. We audit and upgrade existing pages by improving keyword targeting, depth, structure, and relevance, converting underperforming content into traffic generating assets.",
+            desc: "Old content shouldnâ€™t be wasted; it should be improved. We audit and upgrade existing pages by improving keyword targeting, depth, structure, and relevance, converting underperforming content into traffic generating assets.",
             svg: <IoIosRefresh size={40} color="#4C8C74" />,
           },
         ],
@@ -20044,17 +20044,17 @@ Often, the fastest path to a current, usable brand guide is rather than starting
                 We create organic growth systems
               </p>
 
-              <p>Publishing random blogs won’t improve the scalability of your business.</p>
+              <p>Publishing random blogs wonâ€™t improve the scalability of your business.</p>
 
               <p>We help you build a connected content ecosystem, where blogs, landing pages, and internal linking work together to strengthen your authority and improve rankings across your entire site.</p>
 
               <p>This is how brands move from inconsistent traffic to predictable growth.</p>
 
-              <h3 className="text-2xl text-white font-semibold">Who It’s For</h3>
+              <h3 className="text-2xl text-white font-semibold">Who Itâ€™s For</h3>
               <p>Our SEO writing services are ideal for:</p>
               <ul className="list-disc list-inside mt-2">
                 <li>Businesses aiming for long term organic traffic growth</li>
-                <li>Brands struggling with content that doesn’t rank</li>
+                <li>Brands struggling with content that doesnâ€™t rank</li>
                 <li>Startups building authority in competitive niches</li>
                 <li>Agencies needing scalable, high quality SEO content</li>
               </ul>
@@ -20063,7 +20063,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
           rightContent: (
             <>
               <h3 className="text-2xl text-white mt-3">
-                What You’ll Gain
+                What Youâ€™ll Gain
               </h3>
               <p className="text-sm"></p>
               <ul className="list-disc list-inside mt-1 text-sm">
@@ -20137,7 +20137,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
         footnote:
           "Partner with us to create a website that not only looks great but also delivers real results for your brand.",
         contactData: {
-          heading: <>Let’s Build Content That Performs</>,
+          heading: <>Letâ€™s Build Content That Performs</>,
           body: (
             <>
               {/* <h3 className="text-2xl font-semibold">
@@ -20146,7 +20146,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
               <div className="space-y-2">
                 <p>Stop creating content that gets ignored.</p>
                 <p>If your goal is to grow through search, you need content that is strategic, relevant, and built to last.</p>
-                <p>We’ll help you create content that Google ranks, AI surfaces, and users trust.</p>
+                <p>Weâ€™ll help you create content that Google ranks, AI surfaces, and users trust.</p>
               </div>
               <p className="mt-2 font-semibold">Get a custom SEO content strategy and start building real organic growth.</p>
             </>
@@ -20160,7 +20160,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
         slug: "copywriting",
         title: "Copywriting",
         heading: "Professional Copywriting Services",
-        imageUrl: "/Services/Rectangle_52.webp",
+        imageUrl: "/Services/image 98.webp",
         description: `Build a powerful online presence with high-performing, visually stunning websites tailored to your business goals.\nWe design, develop, and optimize custom websites that engage visitors, boost conversions, and drive your business forward in a digital-first world.`,
         points: [
           "Custom Website Design",
@@ -20484,7 +20484,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
             image: "/Services/01.svg",
             heading: "Book a Strategy Call",
             paragraph:
-              "Kickstart your project by booking a free web design strategy call with our experts. We’ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
+              "Kickstart your project by booking a free web design strategy call with our experts. Weâ€™ll discuss your business goals, current website performance and create a plan to build a conversion-focused, responsive website.",
           },
           {
             image: "/Services/02.svg",
@@ -20554,7 +20554,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
           {
             question: "Are there any other components available?",
             answer:
-              "Yes — check the Components section of the repo or documentation for more reusable UI pieces.",
+              "Yes â€” check the Components section of the repo or documentation for more reusable UI pieces.",
           },
           {
             question: "Are components responsive?",
@@ -20604,11 +20604,11 @@ Often, the fastest path to a current, usable brand guide is rather than starting
         // heading: "eCommerce Website Development in Australia",
         serviceBodyData: [
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 99.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
-                  More traffic isn’t the solution if your system doesn’t convert.
+                  More traffic isnâ€™t the solution if your system doesnâ€™t convert.
                 </h2>
                 <div className="space-y-2 mt-2">
                   <p>Most businesses focus on getting more visitors. The real opportunity is in converting the ones you already have.</p>
@@ -20636,14 +20636,14 @@ Often, the fastest path to a current, usable brand guide is rather than starting
             ),
           },
           {
-            imageUrl: "/Services/Rectangle_52.webp",
+            imageUrl: "/Services/image 100.webp",
             description: (
               <>
                 <h2 className="text-white text-2xl mt-5 md:text-3xl font-medium">
                   Why It Matters
                 </h2>
                 <p>Traffic without conversion is wasted budget.</p>
-                <p>Every missed conversion is a lost opportunity, especially when you’ve already paid to get that visitor.</p>
+                <p>Every missed conversion is a lost opportunity, especially when youâ€™ve already paid to get that visitor.</p>
                 <p className="mt-2">We help you maximise:</p>
                 <ul className="list-disc list-inside mt-2 text-[#AAAAAA]">
                   <li>The value of your existing traffic</li>
@@ -20864,7 +20864,7 @@ Often, the fastest path to a current, usable brand guide is rather than starting
           // rightContent: (
           //   <>
           //     <h3 className="text-2xl text-white mt-3">
-          //       What You’ll Gain
+          //       What Youâ€™ll Gain
           //     </h3>
           //     <p className="text-sm"></p>
           //     <ul className="list-disc list-inside mt-1 text-sm">
@@ -20942,11 +20942,11 @@ Often, the fastest path to a current, usable brand guide is rather than starting
           body: (
             <>
               <h3 className="text-2xl font-semibold">
-                You don’t need more visitors.
+                You donâ€™t need more visitors.
               </h3>
               <div className="mt-1">
                 <p>You need better results from the ones you already have.</p>
-                <p>Let’s make it happen.</p>
+                <p>Letâ€™s make it happen.</p>
               </div>
             </>
           ),

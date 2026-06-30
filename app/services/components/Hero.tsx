@@ -63,7 +63,7 @@ const Hero = ({ H }: HeroProps) => {
 
       {/* Desktop View */}
       <div
-        className="hidden md:flex w-full h-[45vh] lg:h-[55vh] items-center justify-center relative overflow-hidden"
+        className="relative hidden w-full overflow-hidden md:flex md:min-h-[50vh] md:items-end md:justify-center md:pt-24 lg:min-h-[60vh] lg:pt-32"
         data-hero-bg-about
       >
       <Image
@@ -96,7 +96,10 @@ const Hero = ({ H }: HeroProps) => {
       ) : null}
 
       {/* Content Wrapper */}
-      <div ref={headingRef} className="flex flex-col items-center justify-end w-full relative z-10 px-4 pb-6">
+      <div
+        ref={headingRef}
+        className="relative z-10 flex w-full flex-col items-center justify-end px-4 pb-8 lg:pb-10"
+      >
         {/* ThemeToggle: Stacked above text on small screens, top-right on medium+ */}
         {/* <div className="self-end mb-3 md:mb-0 md:absolute md:top-3 md:right-4 lg:top-4 lg:right-6 translate-y-20">
           <ThemeToggle />
@@ -104,7 +107,7 @@ const Hero = ({ H }: HeroProps) => {
 
         {/* Heading from props */}
         <motion.h2
-          className="text-6xl md:text-7xl lg:text-[120px] font-medium text-white text-center leading-tight uppercase"
+          className="text-center text-6xl font-medium leading-tight text-white uppercase md:text-7xl lg:text-[120px]"
           initial={{ opacity: 0, y: 10 }}
           animate={isHeadingInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
           transition={{ duration: 0.6 }}

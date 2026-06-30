@@ -114,7 +114,7 @@ const Contact = () => {
               />
               <div className="pointer-events-none absolute -left-46 top-1/2 hidden -translate-y-1/2 lg:block xl:-left-105">
                 <Image
-                  src="/Contact/61da23ef-4d09-41be-a65c-a0692caccb38 1.png"
+                  src="/Contact/61da23ef-4d09-41be-a65c-a0692caccb38 1.webp"
                   alt="decorative shape"
                   width={596}
                   height={596}

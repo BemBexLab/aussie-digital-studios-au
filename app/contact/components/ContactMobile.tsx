@@ -109,7 +109,7 @@ const ContactMobile = () => {
             />
             <div className="pointer-events-none absolute -bottom-4 -right-2">
               <Image
-                src="/Contact/61da23ef-4d09-41be-a65c-a0692caccb38 1.png"
+                src="/Contact/61da23ef-4d09-41be-a65c-a0692caccb38 1.webp"
                 alt="decorative shape"
                 width={140}
                 height={140}
