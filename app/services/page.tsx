@@ -53,7 +53,7 @@ const servicesCustomPlanData = {
 
 const ServicePage = () => {
   return (
-    <section>
+    <section className="overflow-x-hidden">
       <Hero H="Our Services" />
       <LazySection heightClassName="min-h-72">
         <WhyChoose data={services[0]?.whyChooseData} />
