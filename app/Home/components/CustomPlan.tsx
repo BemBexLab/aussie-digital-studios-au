@@ -24,10 +24,14 @@ const CustomPlan = ({ data }: CustomPlanProps) => {
   const [hasBodyOverflow, setHasBodyOverflow] = useState(false);
   const [hasRightContentOverflow, setHasRightContentOverflow] = useState(false);
   const defaultButtonText = "Book a consultation call to create your perfect plan";
+  const desktopPanelHeight = 300;
   const bodyContentRef = useRef<HTMLDivElement | null>(null);
   const bodyContentInnerRef = useRef<HTMLDivElement | null>(null);
   const rightContentRef = useRef<HTMLDivElement | null>(null);
   const rightContentInnerRef = useRef<HTMLDivElement | null>(null);
+
+  const leftScrollbarClasses =
+    "scrollbar-thin scrollbar-thumb-[#4C8C74] scrollbar-track-transparent [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-[#4C8C74]";
 
   const glassScrollbarClasses =
     "scrollbar-thin scrollbar-thumb-[#AAAAAA]/60 scrollbar-track-white/10 [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-[#ffffff14] [&::-webkit-scrollbar-track]:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.08)] [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:border [&::-webkit-scrollbar-thumb]:border-solid [&::-webkit-scrollbar-thumb]:border-[#ffffff33] [&::-webkit-scrollbar-thumb]:bg-[#AAAAAA99]";
@@ -80,23 +84,25 @@ const CustomPlan = ({ data }: CustomPlanProps) => {
   }, [data]);
 
   return (
-      <>
+    <>
       <CustomPlanMobile data={data} />
       <section className="mb-15 hidden w-full justify-center px-4 sm:flex sm:px-6 lg:px-8">
-        <div className="flex w-full max-w-[1200px] flex-col items-stretch gap-4 md:gap-5 lg:flex-row lg:items-center">
+        <div className="grid w-full max-w-[1200px] grid-cols-1 items-stretch gap-4 md:gap-5 lg:grid-cols-[minmax(0,1.7fr)_minmax(340px,430px)]">
           {/* Custom Plan Content */}
           <div
-            className="flex w-full flex-col rounded-xl px-5 py-7 sm:px-6 sm:py-8 lg:h-[350px] lg:w-[90%] lg:px-6 lg:py-10"
+            className="flex w-full flex-col rounded-xl px-5 py-4 sm:px-6 lg:px-6"
             style={
               isDarkMode
                 ? {
                     backgroundImage: `url('/Home/Custom_plans.webp')`,
-                    backgroundSize: "fill",
+                    backgroundSize: "cover",
                     backgroundRepeat: "no-repeat",
                     backgroundPosition: "center",
+                    height: `${desktopPanelHeight}px`,
                   }
                 : {
                     backgroundColor: "#f9f1f1",
+                    height: `${desktopPanelHeight}px`,
                   }
             }
           >
@@ -105,19 +111,12 @@ const CustomPlan = ({ data }: CustomPlanProps) => {
             </h2>
             <div
               ref={bodyContentRef}
-              className={`mt-4 w-full max-w-full px-1 text-sm leading-relaxed text-[#AAAAAA] sm:px-2 sm:text-base lg:w-[720px] lg:max-h-[170px] ${
+              className={`mt-4 w-full max-w-[720px] flex-1 min-h-0 px-1 text-sm leading-relaxed text-[#AAAAAA] sm:px-2 sm:text-base ${
                 hasBodyOverflow
-                  ? `overflow-y-auto ${glassScrollbarClasses}`
-                  : "overflow-y-hidden"
+                  ? `overflow-y-auto pr-2 ${leftScrollbarClasses}`
+                  : "overflow-hidden"
               }`}
             >
-              {/* <p className="text-sm text-[#4C8C74]">
-              AussieDigitalStudios is a full-service digital studio built for
-              modern, fast-growing brands. From strategy to standout design and
-              digital execution, everything you need to build and grow your
-              online presence lives here, powered by a creative, results-focused
-              team.
-            </p> */}
               <div ref={bodyContentInnerRef}>
                 {data?.body || (
                   <>
@@ -143,10 +142,10 @@ const CustomPlan = ({ data }: CustomPlanProps) => {
                 )}
               </div>
             </div>
-            <div className="mt-6 flex flex-col gap-4 sm:mt-8 sm:flex-row sm:items-start sm:justify-between">
+            <div className="mt-3 flex flex-wrap items-center justify-between gap-4 pt-3">
               <a
                 href="/contact"
-                className="group flex w-full items-center justify-center gap-2 rounded-full bg-[#4C8C74] px-4 py-3 text-center text-sm font-light text-white transition-colors hover:bg-blue-300 sm:mr-auto sm:w-fit sm:justify-start"
+                className="group flex min-h-[40px] w-full items-center justify-center gap-2 rounded-full bg-[#4C8C74] px-5 py-1 text-center text-sm font-light text-white transition-colors hover:bg-blue-300 sm:w-fit sm:min-w-[380px] sm:justify-start"
               >
                 <span className="max-w-[28rem]">
                   {data?.buttonText || defaultButtonText}
@@ -170,50 +169,58 @@ const CustomPlan = ({ data }: CustomPlanProps) => {
                   />
                 </svg>
               </a>
-              <div className="my-1 flex flex-row items-center justify-center self-start sm:my-2 sm:self-center">
-                <p className="text-[#4C8C74]">{data?.miniTagData}</p>
-                <svg
-                  className="m-2"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="12"
-                  height="12"
-                  viewBox="0 0 12 12"
-                  fill="none"
-                >
-                  <circle
-                    cx="5.89511"
-                    cy="5.89511"
-                    r="5.89511"
-                    fill="#4C8C74"
-                  />
-                </svg>
-              </div>
+              {data?.miniTagData ? (
+                <div className="my-1 flex flex-row items-center justify-center self-start sm:self-center">
+                  <p className="text-[#4C8C74]">{data.miniTagData}</p>
+                  <svg
+                    className="m-2"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="12"
+                    height="12"
+                    viewBox="0 0 12 12"
+                    fill="none"
+                  >
+                    <circle
+                      cx="5.89511"
+                      cy="5.89511"
+                      r="5.89511"
+                      fill="#4C8C74"
+                    />
+                  </svg>
+                </div>
+              ) : null}
             </div>
           </div>
 
           {/* Image on right side */}
-          <div className="flex w-full items-center justify-center lg:w-[50%] lg:justify-end">
+          <div className="flex w-full items-stretch justify-center lg:justify-end">
             {data?.rightContent ? (
               <div
                 ref={rightContentRef}
-                className={`w-full rounded-xl border border-white/10 bg-[#08110e] px-5 py-5 text-[#AAAAAA] sm:px-6 lg:h-[350px] lg:max-w-[430px] ${
+                className={`w-full rounded-xl border border-white/10 bg-[#08110e] px-5 py-5 text-[#AAAAAA] sm:px-6 lg:max-w-[430px] ${
                   hasRightContentOverflow
                     ? `overflow-y-auto ${glassScrollbarClasses}`
-                    : "overflow-y-hidden"
+                    : "overflow-visible"
                 }`}
+                style={{ height: `${desktopPanelHeight}px` }}
               >
                 <div ref={rightContentInnerRef} className="flow-root">
                   {data.rightContent}
                 </div>
               </div>
             ) : (
-              <Image
-                src={data?.rightImageUrl || "/Home/performance_marketing.webp"}
-                alt={data?.rightImageAlt || "Custom Plan Illustration"}
-                width={430}
-                height={400}
-                className="h-auto w-full max-w-[430px] rounded-xl object-contain lg:h-[350px]"
-              />
+              <div
+                className="flex w-full items-center justify-center overflow-hidden rounded-xl lg:max-w-[430px]"
+                style={{ height: `${desktopPanelHeight}px` }}
+              >
+                <Image
+                  src={data?.rightImageUrl || "/Home/performance_marketing.webp"}
+                  alt={data?.rightImageAlt || "Custom Plan Illustration"}
+                  width={430}
+                  height={300}
+                  className="h-full w-full rounded-xl object-contain"
+                />
+              </div>
             )}
           </div>
         </div>
