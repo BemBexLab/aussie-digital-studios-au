@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import Hero from "@/components/Hero";
-import { getProjectPosts } from "@/lib/projectPosts";
+import { getPortfolioProjects } from "@/lib/portfolioProjects";
 import SectionFallback from "@/components/SectionFallback";
 import LazySection from "@/components/LazySection";
 import { buildMetadata } from "@/lib/seo";
@@ -21,7 +21,7 @@ const LazyPortfolioSection = dynamic(
 );
 
 const PortfolioPage = async () => {
-  const initialPosts = await getProjectPosts();
+  const initialPosts = await getPortfolioProjects();
 
   return (
     <div>

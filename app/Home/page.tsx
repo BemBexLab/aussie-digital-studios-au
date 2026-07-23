@@ -1,7 +1,7 @@
 import React from "react";
 import dynamic from "next/dynamic";
 import Hero from "./components/Hero";
-import { getProjectPosts } from "@/lib/projectPosts";
+import { getPortfolioProjects } from "@/lib/portfolioProjects";
 import SectionFallback from "@/components/SectionFallback";
 import LazySection from "@/components/LazySection";
 import HomeHeroV2 from "@/components/HomeHeroV2";
@@ -42,7 +42,7 @@ const ContactUs = dynamic(() => import("./components/ContactUs"), {
 });
 
 const HomePage = async () => {
-  const initialPosts = await getProjectPosts();
+  const initialPosts = await getPortfolioProjects();
 
   return (
     <div className="overflow-hidden relative">

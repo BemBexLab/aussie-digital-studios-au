@@ -5,46 +5,32 @@ import { useRouter, usePathname } from "next/navigation";
 import { GoArrowDown } from "react-icons/go";
 import { IoClose } from "react-icons/io5";
 import { motion } from "@/lib/motion";
-import type { ProjectPost } from "@/lib/projectPosts";
+import {
+  PORTFOLIO_API_ORIGIN,
+  type PortfolioProjectPost,
+} from "@/lib/portfolioProjects";
 
-// Category configuration
-const MODAL_CATEGORIES = [
-  "FIGMA DESIGN",
+const PORTFOLIO_CATEGORIES = [
+  "WEB DEVELOPMENT",
   "LOGO DESIGN",
   "BRANDING",
+  "FIGMA DESIGN",
   "ILLUSTRATION",
   "PRINT",
 ];
-
-const ROUTE_CATEGORIES = [
-  "WEB DEVELOPMENT",
-  "SHOPIFY",
-  "WORDPRESS",
-  "MAGENTO",
-  "LARAVEL",
+const WEB_DEVELOPMENT_SUBCATEGORIES = [
+  "ALL",
   "REACT",
-];
-
-const ALL_CATEGORIES = [...ROUTE_CATEGORIES, ...MODAL_CATEGORIES];
-const HOME_CATEGORIES = [
-  "WEB DEVELOPMENT",
-  "FIGMA DESIGN",
-  "LOGO DESIGN",
-  "BRANDING",
-  "ILLUSTRATION",
-  "PRINT",
+  "LARAVEL",
+  "WORDPRESS",
+  "WIX",
+  "SHOPIFY",
 ];
 
 const FIGMA_CARD_HEIGHT = 500;
 const FIGMA_VISIBLE_HEIGHT = Math.floor(FIGMA_CARD_HEIGHT / 2) + 100;
-const WEB_DEVELOPMENT_MATCHERS = [
-  "web development",
-  "react",
-  "magento",
-  "laravel",
-];
-
-type Post = ProjectPost;
+type Post = PortfolioProjectPost;
+type PostId = Post["id"];
 
 const normalizeCategory = (value?: string) => value?.trim().toLowerCase() || "";
 const decodeHtmlEntities = (value: string) =>
@@ -116,7 +102,26 @@ const normalizeSrc = (src?: string): string => {
   if (cleanedSrc.startsWith("http://"))
     return cleanedSrc.replace("http://", "https://");
 
+  if (cleanedSrc.startsWith("/api/images/")) {
+    return new URL(cleanedSrc, PORTFOLIO_API_ORIGIN).toString();
+  }
+
   return cleanedSrc;
+};
+
+const normalizeHref = (href?: string): string => {
+  if (!href) return "";
+
+  const cleanedHref = cleanUrl(href);
+
+  if (!cleanedHref) return "";
+  if (cleanedHref.startsWith("//")) return `https:${cleanedHref}`;
+  if (cleanedHref.startsWith("http://"))
+    return cleanedHref.replace("http://", "https://");
+  if (cleanedHref.startsWith("https://")) return cleanedHref;
+  if (cleanedHref.startsWith("www.")) return `https://${cleanedHref}`;
+
+  return "";
 };
 
 type PortfolioWallProps = {
@@ -128,11 +133,12 @@ export default function PortfolioWall({
 }: PortfolioWallProps) {
   const [posts, setPosts] = useState<Post[]>(initialPosts);
   const [selectedCategory, setSelectedCategory] = useState("WEB DEVELOPMENT");
-  const [hoveredFigmaCard, setHoveredFigmaCard] = useState<number | null>(null);
-  const [scrollOffsets, setScrollOffsets] = useState<Record<number, number>>(
+  const [selectedWebSubcategory, setSelectedWebSubcategory] = useState("ALL");
+  const [hoveredFigmaCard, setHoveredFigmaCard] = useState<PostId | null>(null);
+  const [scrollOffsets, setScrollOffsets] = useState<Record<PostId, number>>(
     {},
   );
-  const imgRefs = useRef<Record<number, HTMLImageElement | null>>({});
+  const imgRefs = useRef<Record<PostId, HTMLImageElement | null>>({});
   const [modalOpen, setModalOpen] = useState(false);
   const [modalProject, setModalProject] = useState<Post | null>(null);
   const [itemsToShow, setItemsToShow] = useState(6);
@@ -148,6 +154,8 @@ export default function PortfolioWall({
   const isCompactCategory = ["logo design", "branding", "illustration"].includes(
     selectedCategory.toLowerCase(),
   );
+  const isWebDevelopmentSelected =
+    normalizeCategory(selectedCategory) === "web development";
 
   const filteredPosts = posts.filter((post) => {
     const cat = post.acf?.catogary;
@@ -158,13 +166,20 @@ export default function PortfolioWall({
       normalizeCategory(value),
     );
 
-    if (selected === "web development") {
-      return postCategories.some((value) =>
-        WEB_DEVELOPMENT_MATCHERS.some((matcher) => value.includes(matcher)),
-      );
+    const matchesCategory = postCategories.some((value) => value === selected);
+
+    if (!matchesCategory) {
+      return false;
     }
 
-    return postCategories.some((value) => value === selected);
+    if (!isWebDevelopmentSelected || selectedWebSubcategory === "ALL") {
+      return true;
+    }
+
+    return (
+      normalizeCategory(post.acf?.subcategory) ===
+      normalizeCategory(selectedWebSubcategory)
+    );
   });
 
   // Fetch posts with proper validation
@@ -188,8 +203,8 @@ export default function PortfolioWall({
     try {
       const postsUrl =
         typeof window !== "undefined"
-          ? new URL("/api/posts", window.location.origin).toString()
-          : "/api/posts";
+          ? new URL("/api/portfolio-projects", window.location.origin).toString()
+          : "/api/portfolio-projects";
 
       const res = await fetch(postsUrl, {
         signal: controller.signal,
@@ -202,15 +217,10 @@ export default function PortfolioWall({
         return;
       }
 
-      const data = await res.json();
-
-      // Clean and validate all posts
+      const data = (await res.json()) as Post[];
       const projectPosts = data
         .filter((post: Post) => {
-          // Must have required fields
           if (!post.slug || !post.acf?.project_image?.url) return false;
-
-          // URL must be valid
           return isValidUrl(post.acf.project_image.url);
         })
         .map((post: Post) => {
@@ -262,6 +272,12 @@ export default function PortfolioWall({
   }, [initialPosts.length]);
 
   useEffect(() => {
+    if (!isWebDevelopmentSelected && selectedWebSubcategory !== "ALL") {
+      setSelectedWebSubcategory("ALL");
+    }
+  }, [isWebDevelopmentSelected, selectedWebSubcategory]);
+
+  useEffect(() => {
     const desktopObserver = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -307,9 +323,7 @@ export default function PortfolioWall({
 
   const isFigmaCard = (post: Post) => {
     const cat = post.acf?.catogary;
-    const matches = (s?: string) =>
-      !!s &&
-      (s.toLowerCase() === "figma design" || s.toLowerCase() === "print");
+    const matches = (s?: string) => !!s && s.toLowerCase() === "print";
     if (Array.isArray(cat)) {
       return cat.some((c) => matches(c));
     }
@@ -317,7 +331,7 @@ export default function PortfolioWall({
   };
 
   const handleImageLoad = (
-    postId: number,
+    postId: PostId,
     visibleHeight = FIGMA_CARD_HEIGHT,
   ) => {
     const img = imgRefs.current[postId];
@@ -331,19 +345,8 @@ export default function PortfolioWall({
   };
 
   const handleCardClick = (post: Post) => {
-    if (
-      MODAL_CATEGORIES.some((cat) =>
-        (Array.isArray(post.acf?.catogary)
-          ? post.acf?.catogary
-          : [post.acf?.catogary]
-        )
-          ?.map((c) => c?.toLowerCase())
-          .includes(cat.toLowerCase()),
-      )
-    ) {
-      setModalProject(post);
-      setModalOpen(true);
-    }
+    setModalProject(post);
+    setModalOpen(true);
   };
 
   const closeModal = () => {
@@ -354,46 +357,26 @@ export default function PortfolioWall({
   const router = useRouter();
   const pathname = usePathname();
   const isOnPortfolioPage = pathname === "/portfolio";
-  const visibleCategories = isOnPortfolioPage
-    ? ALL_CATEGORIES
-    : HOME_CATEGORIES;
+  const visibleCategories = PORTFOLIO_CATEGORIES;
 
   const handleLoadMore = () => {
     if (isOnPortfolioPage) {
       setItemsToShow((s) => s + 6);
     } else {
+      setIsNavigating(true);
       router.push("/portfolio");
     }
   };
 
   const handleNavigateOrOpen = (post: Post) => {
-    if (
-      selectedCategory.toLowerCase() === "figma design" &&
-      isFigmaCard(post)
-    ) {
-      return;
-    }
-    const isModal = MODAL_CATEGORIES.some((cat) =>
-      (Array.isArray(post.acf?.catogary)
-        ? post.acf?.catogary
-        : [post.acf?.catogary]
-      )
-        ?.map((c) => c?.toLowerCase())
-        .includes(cat.toLowerCase()),
-    );
+    const href = normalizeHref(post.hrefUrl);
 
-    if (isModal) {
-      handleCardClick(post);
+    if (href) {
+      window.open(href, "_blank", "noopener,noreferrer");
       return;
     }
 
-    setIsNavigating(true);
-    try {
-      router.push(`/projects/${post.slug}`);
-    } catch (e) {
-      console.error("Navigation error", e);
-      setIsNavigating(false);
-    }
+    handleCardClick(post);
   };
 
   useEffect(() => {
@@ -475,7 +458,12 @@ export default function PortfolioWall({
           {visibleCategories.map((cat, i) => (
             <button
               key={i}
-              onClick={() => setSelectedCategory(cat)}
+              onClick={() => {
+                setSelectedCategory(cat);
+                if (normalizeCategory(cat) !== "web development") {
+                  setSelectedWebSubcategory("ALL");
+                }
+              }}
               className={`cursor-pointer rounded-[8px] border px-3 py-2 text-xs transition sm:px-4 sm:text-sm ${
                 selectedCategory === cat
                   ? "border-yellow-400 text-yellow-400 bg-yellow-400/10"
@@ -487,6 +475,25 @@ export default function PortfolioWall({
             </button>
           ))}
         </div>
+
+        {isWebDevelopmentSelected && (
+          <div className="mb-8 flex flex-wrap justify-center gap-2">
+            {WEB_DEVELOPMENT_SUBCATEGORIES.map((subcat) => (
+              <button
+                key={subcat}
+                onClick={() => setSelectedWebSubcategory(subcat)}
+                className={`cursor-pointer rounded-full border px-3 py-1.5 text-[11px] tracking-[0.18em] transition sm:px-4 sm:text-xs ${
+                  selectedWebSubcategory === subcat
+                    ? "border-[#3A6EA5] bg-[#3A6EA5]/15 text-[#7EB6F0]"
+                    : "border-gray-700 text-gray-400 hover:border-[#3A6EA5] hover:text-[#7EB6F0]"
+                }`}
+                aria-pressed={selectedWebSubcategory === subcat}
+              >
+                {subcat}
+              </button>
+            ))}
+          </div>
+        )}
 
         {/* Main Container */}
         <div className="mx-auto flex max-w-5xl justify-center">
@@ -526,6 +533,20 @@ export default function PortfolioWall({
                 Retry
               </button>
             </div>
+          ) : fetchError ? (
+            <div className="py-24 flex flex-col items-center justify-center text-center">
+              <p className="mb-4 text-white">{fetchError}</p>
+              <button
+                onClick={() => fetchPosts()}
+                className="px-4 py-2 rounded-full text-white bg-white/8 backdrop-blur-md border border-white/20 hover:bg-white/12 transition-shadow duration-150 shadow-lg"
+              >
+                Retry
+              </button>
+            </div>
+          ) : filteredPosts.length === 0 ? (
+            <div className="py-24 text-center text-white/80">
+              No projects found for this selection yet.
+            </div>
           ) : (
             <div
               className={`grid w-full grid-cols-1 justify-items-center gap-8 lg:grid-cols-2 lg:gap-0 ${
@@ -546,22 +567,20 @@ export default function PortfolioWall({
                   : cat
                     ? [cat]
                     : [];
-                const visibleCategoryLabels = categoryLabels.filter(
-                  (label) => normalizeCategory(label) !== "web development",
-                );
+                const webSubcategoryLabel = post.acf?.subcategory;
+                const visibleCategoryLabels = [
+                  ...categoryLabels.filter(
+                    (label) =>
+                      !["web development", "figma design"].includes(
+                        normalizeCategory(label),
+                      ),
+                  ),
+                  ...(webSubcategoryLabel ? [webSubcategoryLabel] : []),
+                ];
                 const primaryCategoryLabel = categoryLabels[0] || "";
 
-                const isFlexible =
-                  isFigmaCard(post) ||
-                  MODAL_CATEGORIES.some((cat) =>
-                    (Array.isArray(post.acf?.catogary)
-                      ? post.acf?.catogary
-                      : [post.acf?.catogary]
-                    )
-                      ?.map((c) => c?.toLowerCase())
-                      .includes(cat.toLowerCase()),
-                  );
                 const isFigma = isFigmaCard(post);
+                const isFlexible = isFigma;
                 const compactCategories = [
                   "logo design",
                   "branding",
@@ -781,7 +800,12 @@ export default function PortfolioWall({
           {visibleCategories.map((cat, i) => (
             <button
               key={i}
-              onClick={() => setSelectedCategory(cat)}
+              onClick={() => {
+                setSelectedCategory(cat);
+                if (normalizeCategory(cat) !== "web development") {
+                  setSelectedWebSubcategory("ALL");
+                }
+              }}
               className={`cursor-pointer rounded-[8px] border px-3 py-2 text-xs transition sm:px-4 sm:text-sm ${
                 selectedCategory === cat
                   ? "border-yellow-400 text-yellow-400 bg-yellow-400/10"
@@ -793,6 +817,25 @@ export default function PortfolioWall({
             </button>
           ))}
         </div>
+
+        {isWebDevelopmentSelected && (
+          <div className="mb-6 flex flex-wrap justify-center gap-2">
+            {WEB_DEVELOPMENT_SUBCATEGORIES.map((subcat) => (
+              <button
+                key={subcat}
+                onClick={() => setSelectedWebSubcategory(subcat)}
+                className={`cursor-pointer rounded-full border px-3 py-1.5 text-[11px] tracking-[0.16em] transition ${
+                  selectedWebSubcategory === subcat
+                    ? "border-[#3A6EA5] bg-[#3A6EA5]/15 text-[#7EB6F0]"
+                    : "border-gray-700 text-gray-400 hover:border-[#3A6EA5] hover:text-[#7EB6F0]"
+                }`}
+                aria-pressed={selectedWebSubcategory === subcat}
+              >
+                {subcat}
+              </button>
+            ))}
+          </div>
+        )}
 
         <div className="w-full">
           {loading || !shouldRenderContent ? (
@@ -831,6 +874,20 @@ export default function PortfolioWall({
                 Retry
               </button>
             </div>
+          ) : fetchError ? (
+            <div className="py-12 flex flex-col items-center justify-center text-center">
+              <p className="mb-3 text-sm text-white">{fetchError}</p>
+              <button
+                onClick={() => fetchPosts()}
+                className="px-3 py-1.5 rounded-full text-white text-sm bg-white/8 backdrop-blur-md border border-white/20 hover:bg-white/12 transition-shadow duration-150"
+              >
+                Retry
+              </button>
+            </div>
+          ) : filteredPosts.length === 0 ? (
+            <div className="py-12 text-center text-sm text-white/80">
+              No projects found for this selection yet.
+            </div>
           ) : (
             <div className="space-y-4 sm:space-y-5">
               {filteredPosts.slice(0, itemsToShow).map((post: Post) => {
@@ -846,9 +903,16 @@ export default function PortfolioWall({
                   : cat
                     ? [cat]
                     : [];
-                const visibleCategoryLabels = categoryLabels.filter(
-                  (label) => normalizeCategory(label) !== "web development",
-                );
+                const webSubcategoryLabel = post.acf?.subcategory;
+                const visibleCategoryLabels = [
+                  ...categoryLabels.filter(
+                    (label) =>
+                      !["web development", "figma design"].includes(
+                        normalizeCategory(label),
+                      ),
+                  ),
+                  ...(webSubcategoryLabel ? [webSubcategoryLabel] : []),
+                ];
                 const primaryCategoryLabel = categoryLabels[0] || "";
                 const isFigma = isFigmaCard(post);
                 const isCompact = ["logo design", "branding", "illustration"].includes(
