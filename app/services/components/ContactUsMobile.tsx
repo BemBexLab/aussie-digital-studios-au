@@ -1,8 +1,8 @@
 "use client";
 
-import { TextField } from "@mui/material";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { sendContactEmail } from "@/lib/emailService";
+import { useThemeMode } from "@/lib/useThemeMode";
 
 type ContactUsData = {
   heading?: React.ReactNode;
@@ -14,7 +14,7 @@ type ContactUsMobileProps = {
 };
 
 const ContactUsMobile = ({ data }: ContactUsMobileProps) => {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const { isDarkMode } = useThemeMode();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -28,59 +28,17 @@ const ContactUsMobile = ({ data }: ContactUsMobileProps) => {
   const [message, setMessage] = useState("");
   const [isSuccess, setIsSuccess] = useState(false);
 
-  useEffect(() => {
-    const theme = localStorage.getItem("ads_theme");
-    setIsDarkMode(theme !== "light");
-
-    const handleThemeChange = () => {
-      const theme = localStorage.getItem("ads_theme");
-      setIsDarkMode(theme !== "light");
-    };
-
-    const observer = new MutationObserver(handleThemeChange);
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
-
-    window.addEventListener("storage", handleThemeChange);
-
-    return () => {
-      observer.disconnect();
-      window.removeEventListener("storage", handleThemeChange);
-    };
-  }, []);
+  const inputClasses = `w-full bg-transparent border-b text-sm pb-2 focus:outline-none focus:border-teal-400 ${
+    isDarkMode
+      ? "border-gray-500 text-white placeholder:text-gray-500"
+      : "border-black text-black placeholder:text-black/60"
+  }`;
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const textFieldSx = {
-    "& .MuiInput-input": {
-      color: isDarkMode ? "white" : "black",
-      fontSize: "0.875rem",
-    },
-    "& .MuiInput-underline:before": {
-      borderBottomColor: isDarkMode ? "rgba(255,255,255,0.3)" : "black",
-    },
-    "& .MuiInput-underline:hover:before": {
-      borderBottomColor: isDarkMode ? "rgba(255,255,255,0.5)" : "black",
-    },
-    "& .MuiInput-underline:after": {
-      borderBottomColor: isDarkMode ? "white" : "black",
-    },
-    "& .MuiInputBase-input::placeholder": {
-      color: isDarkMode ? "rgba(255,255,255,0.7)" : "rgba(0,0,0,0.7)",
-      opacity: 1,
-    },
-    "& .MuiFormLabel-root": {
-      color: isDarkMode ? "rgba(255,255,255,0.7)" : "black",
-      paddingLeft: "8px",
-      fontSize: "0.875rem",
-    },
-    "& .MuiFormLabel-root.Mui-focused": {
-      color: isDarkMode ? "white" : "black",
-    },
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -101,7 +59,7 @@ const ContactUsMobile = ({ data }: ContactUsMobileProps) => {
     setLoading(false);
 
     if (result.success) {
-      setMessage("✅ Email sent successfully! We'll be in touch soon.");
+      setMessage("Email sent successfully! We'll be in touch soon.");
       setIsSuccess(true);
       setFormData({
         firstName: "",
@@ -114,7 +72,7 @@ const ContactUsMobile = ({ data }: ContactUsMobileProps) => {
       });
       setTimeout(() => setMessage(""), 5000);
     } else {
-      setMessage(`❌ Error: ${result.error}`);
+      setMessage(`Error: ${result.error}`);
       setIsSuccess(false);
     }
   };
@@ -122,7 +80,6 @@ const ContactUsMobile = ({ data }: ContactUsMobileProps) => {
   return (
     <section className="sm:hidden my-8 px-4">
       <div className="flex flex-col space-y-6">
-        {/* Text Content */}
         <div className="flex flex-col space-y-3">
           <p className="text-xs sm:text-sm text-[#4C8C74] font-semibold">Contact Us</p>
           <h2 className="font-semibold text-white text-xl sm:text-2xl uppercase leading-tight">
@@ -139,11 +96,10 @@ const ContactUsMobile = ({ data }: ContactUsMobileProps) => {
           </span>
         </div>
 
-        {/* Contact Form */}
         <div
           className="w-full px-4 py-6 rounded-lg relative"
           style={{
-            backgroundImage: `url('${isDarkMode ? '/Home/Frame_161.svg' : '/Home/Frame_163_Light.svg'}')`,
+            backgroundImage: `url('${isDarkMode ? "/Home/Frame_161.svg" : "/Home/Frame_163_Light.svg"}')`,
             backgroundColor: "transparent",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
@@ -151,88 +107,68 @@ const ContactUsMobile = ({ data }: ContactUsMobileProps) => {
           }}
         >
           <form onSubmit={handleSubmit} className="flex flex-col space-y-4 relative z-10">
-            {/* Single Column Fields */}
-            <TextField
-              id="firstName"
-              label="First Name"
-              type="text"
-              variant="standard"
-              fullWidth
+            <input
               name="firstName"
+              placeholder="First Name"
+              type="text"
               onChange={handleChange}
               value={formData.firstName}
               required
-              sx={textFieldSx}
+              className={inputClasses}
             />
 
-            <TextField
-              id="lastName"
-              label="Last Name"
-              type="text"
-              variant="standard"
-              fullWidth
+            <input
               name="lastName"
+              placeholder="Last Name"
+              type="text"
               onChange={handleChange}
               value={formData.lastName}
               required
-              sx={textFieldSx}
+              className={inputClasses}
             />
 
-            <TextField
-              id="email"
-              label="Email"
-              type="email"
-              variant="standard"
-              fullWidth
+            <input
               name="email"
+              placeholder="Email"
+              type="email"
               onChange={handleChange}
               value={formData.email}
               required
-              sx={textFieldSx}
+              className={inputClasses}
             />
 
-            <TextField
-              id="phone"
-              label="Phone Number"
-              type="tel"
-              variant="standard"
-              fullWidth
+            <input
               name="phone"
+              placeholder="Phone Number"
+              type="tel"
               onChange={handleChange}
               value={formData.phone}
               required
-              sx={textFieldSx}
+              className={inputClasses}
             />
 
-            {/* Details Field */}
-            <TextField
-              id="detail"
-              label="Details"
-              multiline
-              rows={3}
-              variant="standard"
-              fullWidth
+            <textarea
               name="detail"
+              placeholder="Details"
+              rows={3}
               onChange={handleChange}
               value={formData.detail}
               required
-              sx={textFieldSx}
+              className={`${inputClasses} resize-none`}
             />
 
-            {/* Message Alert */}
             {message && (
               <div
-                className={`p-3 rounded text-sm text-center ${
+                className={`rounded p-3 text-center text-sm ${
                   isSuccess
-                    ? "bg-green-500 bg-opacity-20 text-green-400"
-                    : "bg-red-500 bg-opacity-20 text-red-400"
+                    ? "bg-green-500/20 text-green-400"
+                    : "bg-red-500/20 text-red-400"
                 }`}
               >
                 {message}
               </div>
             )}
 
-            {/* Submit Button */}
             <button
               type="submit"
               disabled={loading}
@@ -243,7 +179,7 @@ const ContactUsMobile = ({ data }: ContactUsMobileProps) => {
               </span>
               <span className="relative w-5 h-5 flex items-center justify-center flex-shrink-0">
                 <span
-                  className="absolute inset-0 bg-black rounded-full"
+                  className={`absolute inset-0 rounded-full ${isDarkMode ? "bg-black" : "bg-white"}`}
                   aria-hidden="true"
                 ></span>
                 <svg
@@ -255,7 +191,7 @@ const ContactUsMobile = ({ data }: ContactUsMobileProps) => {
                 >
                   <path
                     d="M7 17 L17 7"
-                    stroke="#fff"
+                    stroke={isDarkMode ? "#fff" : "#000"}
                     strokeWidth="1.8"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -263,7 +199,7 @@ const ContactUsMobile = ({ data }: ContactUsMobileProps) => {
                   />
                   <path
                     d="M11 7 H17 V13"
-                    stroke="#fff"
+                    stroke={isDarkMode ? "#fff" : "#000"}
                     strokeWidth="1.8"
                     strokeLinecap="round"
                     strokeLinejoin="round"

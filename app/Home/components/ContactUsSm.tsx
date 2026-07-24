@@ -1,6 +1,5 @@
 "use client";
 
-import { TextField } from "@mui/material";
 import Image from "next/image";
 import React, { useState } from "react";
 import Swal from "sweetalert2";
@@ -20,33 +19,15 @@ const ContactUsSm = () => {
   const { isDarkMode } = useThemeMode();
   const [loading, setLoading] = useState(false);
 
-  const textFieldSx = {
-    "& .MuiInput-input": {
-      color: isDarkMode ? "white" : "black",
-      fontSize: "0.875rem",
-    },
-    "& .MuiInput-underline:before": {
-      borderBottomColor: isDarkMode ? "rgba(255,255,255,0.3)" : "black",
-    },
-    "& .MuiInput-underline:hover:before": {
-      borderBottomColor: isDarkMode ? "rgba(255,255,255,0.5)" : "black",
-    },
-    "& .MuiInput-underline:after": {
-      borderBottomColor: isDarkMode ? "white" : "black",
-    },
-    "& .MuiInputBase-input::placeholder": {
-      color: isDarkMode ? "rgba(255,255,255,0.7)" : "rgba(0,0,0,0.7)",
-      opacity: 1,
-    },
-    "& .MuiFormLabel-root": {
-      color: isDarkMode ? "rgba(255,255,255,0.7)" : "black",
-      paddingLeft: "8px",
-      fontSize: "0.875rem",
-    },
-    "& .MuiFormLabel-root.Mui-focused": {
-      color: isDarkMode ? "white" : "black",
-    },
-  };
+  const inputClasses = `w-full border-b bg-transparent pb-2 text-sm focus:outline-none ${
+    isDarkMode
+      ? "border-white/30 text-white placeholder:text-white/70 focus:border-white"
+      : "border-black text-black placeholder:text-black/70 focus:border-black"
+  }`;
+
+  const labelClasses = `${
+    isDarkMode ? "text-white/70" : "text-black"
+  } mb-1 block px-2 text-sm`;
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -106,11 +87,10 @@ const ContactUsSm = () => {
   return (
     <section className="sm:hidden my-8 px-4">
       <div className="flex flex-col space-y-6">
-        {/* Text Content */}
         <div className="flex flex-col space-y-3">
-          <p className="text-xs sm:text-sm text-[#4C8C74] font-semibold">Let's Talk</p>
+          <p className="text-xs sm:text-sm text-[#4C8C74] font-semibold">Let&apos;s Talk</p>
           <h2 className="font-semibold text-white text-xl sm:text-2xl uppercase leading-tight">
-            If the site is not bringing in the work it should, or you're starting from scratch and want to do it right the first time, get in touch.
+            If the site is not bringing in the work it should, or you&apos;re starting from scratch and want to do it right the first time, get in touch.
           </h2>
           <p className="text-xs sm:text-sm text-[#AAAAAA]" data-text-sm-light>
             Ready to bring your business idea to life? Let our experts work for
@@ -118,7 +98,6 @@ const ContactUsSm = () => {
           </p>
         </div>
 
-        {/* Image */}
         <div className="w-full h-[200px] sm:h-[250px] rounded-lg">
           <Image
             src={isDarkMode ? "/Home/dark_tel.svg" : "/Home/Light_tel.svg"}
@@ -129,89 +108,77 @@ const ContactUsSm = () => {
           />
         </div>
 
-        {/* Contact Form */}
         <div
           className="w-full px-4 py-6 rounded-lg relative"
           style={{
-            backgroundImage: `url('${isDarkMode ? '/Home/contactus_dark.svg' : '/Home/Frame_163_Light.svg'}')`,
+            backgroundImage: `url('${isDarkMode ? "/Home/contactus_dark.svg" : "/Home/Frame_163_Light.svg"}')`,
             backgroundColor: "transparent",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
           }}
         >
-          <form onSubmit={handleSubmit} className="flex flex-col space-y-4 relative z-10">
-            {/* First Name */}
-            <TextField
-              id="firstName"
-              label="First Name"
-              type="text"
-              variant="standard"
-              fullWidth
-              name="firstName"
-              onChange={handleChange}
-              value={formData.firstName}
-              required
-              sx={textFieldSx}
-            />
+          <form onSubmit={handleSubmit} className="relative z-10 flex flex-col space-y-4">
+            <label className="block">
+              <span className={labelClasses}>First Name</span>
+              <input
+                name="firstName"
+                type="text"
+                onChange={handleChange}
+                value={formData.firstName}
+                required
+                className={inputClasses}
+              />
+            </label>
 
-            {/* Last Name */}
-            <TextField
-              id="lastName"
-              label="Last Name"
-              type="text"
-              variant="standard"
-              fullWidth
-              name="lastName"
-              onChange={handleChange}
-              value={formData.lastName}
-              required
-              sx={textFieldSx}
-            />
+            <label className="block">
+              <span className={labelClasses}>Last Name</span>
+              <input
+                name="lastName"
+                type="text"
+                onChange={handleChange}
+                value={formData.lastName}
+                required
+                className={inputClasses}
+              />
+            </label>
 
-            {/* Email */}
-            <TextField
-              id="email"
-              label="Email"
-              type="email"
-              variant="standard"
-              fullWidth
-              name="email"
-              onChange={handleChange}
-              value={formData.email}
-              required
-              sx={textFieldSx}
-            />
+            <label className="block">
+              <span className={labelClasses}>Email</span>
+              <input
+                name="email"
+                type="email"
+                onChange={handleChange}
+                value={formData.email}
+                required
+                className={inputClasses}
+              />
+            </label>
 
-            {/* Phone */}
-            <TextField
-              id="phone"
-              label="Phone Number"
-              type="tel"
-              variant="standard"
-              fullWidth
-              name="phone"
-              onChange={handleChange}
-              value={formData.phone}
-              required
-              sx={textFieldSx}
-            />
+            <label className="block">
+              <span className={labelClasses}>Phone Number</span>
+              <input
+                name="phone"
+                type="tel"
+                onChange={handleChange}
+                value={formData.phone}
+                required
+                className={inputClasses}
+              />
+            </label>
 
-            {/* Details Field */}
-            <TextField
-              id="detail"
-              label="Details"
-              multiline
-              rows={3}
-              variant="standard"
-              fullWidth
-              name="detail"
-              onChange={handleChange}
-              value={formData.detail}
-              required
-              sx={textFieldSx}
-            />
-            {/* Submit Button */}
+            <label className="block">
+              <span className={labelClasses}>Details</span>
+              <textarea
+                name="detail"
+                rows={3}
+                onChange={handleChange}
+                value={formData.detail}
+                required
+                className={`${inputClasses} resize-none`}
+              />
+            </label>
+
             <button
               type="submit"
               disabled={loading}
