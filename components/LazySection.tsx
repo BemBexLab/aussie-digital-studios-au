@@ -46,7 +46,7 @@ export default function LazySection({
         children
       ) : (
         <div
-          className={`w-full animate-pulse rounded-3xl border border-white/10 bg-white/5 ${heightClassName}`}
+          className={`w-full rounded-3xl border border-white/10 bg-white/5 ${heightClassName}`}
           aria-hidden="true"
         />
       )}

@@ -1,36 +1,28 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import { useRouter, usePathname } from "next/navigation";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 import { GoArrowDown } from "react-icons/go";
 import { IoClose } from "react-icons/io5";
 import { motion } from "@/lib/motion";
 import {
-  PORTFOLIO_API_ORIGIN,
+  PORTFOLIO_MAIN_CATEGORIES,
+  PORTFOLIO_WEBSITE_SUBCATEGORIES,
+  type PortfolioMainCategory,
   type PortfolioProjectPost,
+  type PortfolioWebsiteSubcategory,
 } from "@/lib/portfolioProjects";
-
-const PORTFOLIO_CATEGORIES = [
-  "WEB DEVELOPMENT",
-  "LOGO DESIGN",
-  "BRANDING",
-  "FIGMA DESIGN",
-  "ILLUSTRATION",
-  "PRINT",
-];
-const WEB_DEVELOPMENT_SUBCATEGORIES = [
-  "ALL",
-  "REACT",
-  "LARAVEL",
-  "WORDPRESS",
-  "WIX",
-  "SHOPIFY",
-];
 
 const FIGMA_CARD_HEIGHT = 500;
 const FIGMA_VISIBLE_HEIGHT = Math.floor(FIGMA_CARD_HEIGHT / 2) + 100;
-type Post = PortfolioProjectPost;
-type PostId = Post["id"];
+const HIDDEN_CARD_TAGS = new Set(["web development", "figma design"]);
+const WEBSITE_FILTER_ALL = "ALL";
+const FLEXIBLE_CARD_CATEGORIES: PortfolioMainCategory[] = [
+  "LOGO DESIGN",
+  "BRANDING",
+  "ILLUSTRATION",
+  "PRINT",
+];
 
 const normalizeCategory = (value?: string) => value?.trim().toLowerCase() || "";
 const decodeHtmlEntities = (value: string) =>
@@ -42,50 +34,29 @@ const decodeHtmlEntities = (value: string) =>
     .replace(/&#038;/g, "&")
     .replace(/&amp;/g, "&");
 
-// Enhanced URL cleaning function
 const cleanUrl = (url: string): string => {
   if (!url) return "";
 
-  let cleaned = String(url);
-
-  // Remove escaped backslash sequences (\\a, \\n, \\t, etc.)
-  cleaned = cleaned.replace(/\\[a-z]/gi, "");
-
-  // Remove all control characters (including \a, \n, \r, \t)
-  cleaned = cleaned.replace(/[\x00-\x1F\x7F-\x9F]/g, "");
-
-  // Remove all whitespace characters
-  cleaned = cleaned.replace(/\s+/g, "");
-
-  // Trim any remaining whitespace
-  cleaned = cleaned.trim();
-
-  return cleaned;
+  return String(url)
+    .replace(/\\[a-z]/gi, "")
+    .replace(/[\x00-\x1F\x7F-\x9F]/g, "")
+    .replace(/\s+/g, "")
+    .trim();
 };
 
-// Validate that a URL is safe to use
 const isValidUrl = (url: string): boolean => {
   if (!url) return false;
 
-  try {
-    // Check for malformed characters
-    if (/[\x00-\x1F\x7F-\x9F]/.test(url)) return false;
-    if (/\\[a-z]/gi.test(url)) return false;
+  const cleaned = cleanUrl(url);
+  if (!cleaned) return false;
 
-    // Check if it's a valid URL format
-    const cleaned = cleanUrl(url);
-    if (!cleaned) return false;
-
-    // Must start with http, https, or /
-    if (!cleaned.startsWith("http") && !cleaned.startsWith("/")) return false;
-
+  if (cleaned.startsWith("http://") || cleaned.startsWith("https://")) {
     return true;
-  } catch {
-    return false;
   }
+
+  return cleaned.startsWith("/");
 };
 
-// Normalize image src helper
 const normalizeSrc = (src?: string): string => {
   if (!src) return "/Home/Rectangle_33.webp";
 
@@ -95,96 +66,84 @@ const normalizeSrc = (src?: string): string => {
     return "/Home/Rectangle_33.webp";
   }
 
-  // Handle protocol-relative URLs
   if (cleanedSrc.startsWith("//")) return `https:${cleanedSrc}`;
 
-  // Force HTTPS
-  if (cleanedSrc.startsWith("http://"))
+  if (cleanedSrc.startsWith("http://")) {
     return cleanedSrc.replace("http://", "https://");
-
-  if (cleanedSrc.startsWith("/api/images/")) {
-    return new URL(cleanedSrc, PORTFOLIO_API_ORIGIN).toString();
   }
 
   return cleanedSrc;
 };
 
-const normalizeHref = (href?: string): string => {
-  if (!href) return "";
-
-  const cleanedHref = cleanUrl(href);
-
-  if (!cleanedHref) return "";
-  if (cleanedHref.startsWith("//")) return `https:${cleanedHref}`;
-  if (cleanedHref.startsWith("http://"))
-    return cleanedHref.replace("http://", "https://");
-  if (cleanedHref.startsWith("https://")) return cleanedHref;
-  if (cleanedHref.startsWith("www.")) return `https://${cleanedHref}`;
-
-  return "";
-};
-
 type PortfolioWallProps = {
-  initialPosts?: Post[];
+  initialPosts?: PortfolioProjectPost[];
 };
+
+type WebsiteFilter = PortfolioWebsiteSubcategory | typeof WEBSITE_FILTER_ALL;
 
 export default function PortfolioWall({
   initialPosts = [],
 }: PortfolioWallProps) {
-  const [posts, setPosts] = useState<Post[]>(initialPosts);
-  const [selectedCategory, setSelectedCategory] = useState("WEB DEVELOPMENT");
-  const [selectedWebSubcategory, setSelectedWebSubcategory] = useState("ALL");
-  const [hoveredFigmaCard, setHoveredFigmaCard] = useState<PostId | null>(null);
-  const [scrollOffsets, setScrollOffsets] = useState<Record<PostId, number>>(
+  const hasInitialPosts = initialPosts.length > 0;
+  const [posts, setPosts] = useState<PortfolioProjectPost[]>(initialPosts);
+  const [selectedCategory, setSelectedCategory] =
+    useState<PortfolioMainCategory>("WEB DEVELOPMENT");
+  const [selectedWebsiteSubcategory, setSelectedWebsiteSubcategory] =
+    useState<WebsiteFilter>(WEBSITE_FILTER_ALL);
+  const [hoveredFigmaCard, setHoveredFigmaCard] = useState<string | null>(null);
+  const [scrollOffsets, setScrollOffsets] = useState<Record<string, number>>(
     {},
   );
-  const imgRefs = useRef<Record<PostId, HTMLImageElement | null>>({});
+  const imgRefs = useRef<Record<string, HTMLImageElement | null>>({});
   const [modalOpen, setModalOpen] = useState(false);
-  const [modalProject, setModalProject] = useState<Post | null>(null);
+  const [modalProject, setModalProject] = useState<PortfolioProjectPost | null>(
+    null,
+  );
   const [itemsToShow, setItemsToShow] = useState(6);
-  const [loading, setLoading] = useState(initialPosts.length === 0);
+  const [loading, setLoading] = useState(!hasInitialPosts);
   const [fetchTimedOut, setFetchTimedOut] = useState(false);
   const [fetchError, setFetchError] = useState<string | null>(null);
-  const [dataReady, setDataReady] = useState(initialPosts.length > 0);
-  const [isNavigating, setIsNavigating] = useState(false);
+  const [dataReady, setDataReady] = useState(hasInitialPosts);
   const [isInView, setIsInView] = useState(false);
   const [isMobileInView, setIsMobileInView] = useState(false);
   const desktopHeadingRef = useRef<HTMLDivElement>(null);
   const mobileHeadingRef = useRef<HTMLDivElement>(null);
+  const router = useRouter();
+  const pathname = usePathname();
+  const isOnPortfolioPage = pathname === "/portfolio";
   const isCompactCategory = ["logo design", "branding", "illustration"].includes(
     selectedCategory.toLowerCase(),
   );
-  const isWebDevelopmentSelected =
-    normalizeCategory(selectedCategory) === "web development";
 
-  const filteredPosts = posts.filter((post) => {
-    const cat = post.acf?.catogary;
-    if (!cat) return false;
+  const filteredPosts = useMemo(() => {
+    return posts.filter((post) => {
+      const categoryMatch = post.acf.catogary.some(
+        (category) => category === selectedCategory,
+      );
 
-    const selected = normalizeCategory(selectedCategory);
-    const postCategories = (Array.isArray(cat) ? cat : [cat]).map((value) =>
-      normalizeCategory(value),
-    );
+      if (!categoryMatch) {
+        return false;
+      }
 
-    const matchesCategory = postCategories.some((value) => value === selected);
+      if (selectedCategory === "WEB DEVELOPMENT") {
+        if (selectedWebsiteSubcategory === WEBSITE_FILTER_ALL) {
+          return true;
+        }
 
-    if (!matchesCategory) {
-      return false;
-    }
+        return post.acf.subcategory === selectedWebsiteSubcategory;
+      }
 
-    if (!isWebDevelopmentSelected || selectedWebSubcategory === "ALL") {
       return true;
-    }
+    });
+  }, [posts, selectedCategory, selectedWebsiteSubcategory]);
 
-    return (
-      normalizeCategory(post.acf?.subcategory) ===
-      normalizeCategory(selectedWebSubcategory)
-    );
-  });
+  const currentPosts = useMemo(
+    () => filteredPosts.slice(0, itemsToShow),
+    [filteredPosts, itemsToShow],
+  );
 
-  // Fetch posts with proper validation
-  const fetchPosts = async (timeoutMs = 15000) => {
-    if (initialPosts.length > 0) {
+  const fetchPosts = useCallback(async (timeoutMs = 15000) => {
+    if (hasInitialPosts) {
       setPosts(initialPosts);
       setDataReady(true);
       setLoading(false);
@@ -197,6 +156,7 @@ export default function PortfolioWall({
     setDataReady(false);
     setFetchTimedOut(false);
     setFetchError(null);
+
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
 
@@ -206,58 +166,42 @@ export default function PortfolioWall({
           ? new URL("/api/portfolio-projects", window.location.origin).toString()
           : "/api/portfolio-projects";
 
-      const res = await fetch(postsUrl, {
+      const response = await fetch(postsUrl, {
         signal: controller.signal,
       });
 
-      if (!res.ok) {
-        setFetchError(`Server responded with ${res.status} ${res.statusText}`);
-        setPosts([]);
-        setLoading(false);
-        return;
+      if (!response.ok) {
+        throw new Error(
+          `Server responded with ${response.status} ${response.statusText}`,
+        );
       }
 
-      const data = (await res.json()) as Post[];
-      const projectPosts = data
-        .filter((post: Post) => {
-          if (!post.slug || !post.acf?.project_image?.url) return false;
-          return isValidUrl(post.acf.project_image.url);
-        })
-        .map((post: Post) => {
-          if (post.acf?.project_image?.url) {
-            const cleanedUrl = cleanUrl(post.acf.project_image.url);
+      const data = (await response.json()) as PortfolioProjectPost[];
+      const normalizedPosts = data.filter(
+        (post) => post.id && post.acf?.project_image?.url,
+      );
 
-            return {
-              ...post,
-              acf: {
-                ...post.acf,
-                project_image: {
-                  url: cleanedUrl,
-                },
-              },
-            };
-          }
-          return post;
-        })
-        .filter(Boolean);
-
-      setPosts(projectPosts);
+      setPosts(normalizedPosts);
       setDataReady(true);
-    } catch (err: any) {
-      if (err && err.name === "AbortError") {
+    } catch (error) {
+      if (error instanceof DOMException && error.name === "AbortError") {
         setFetchTimedOut(true);
       } else {
-        console.error("Error fetching posts", err);
-        setFetchError("An unexpected error occurred while fetching projects.");
+        console.error("Error fetching portfolio projects", error);
+        setFetchError(
+          error instanceof Error
+            ? error.message
+            : "An unexpected error occurred while fetching projects.",
+        );
       }
     } finally {
       clearTimeout(timeoutId);
       setLoading(false);
     }
-  };
+  }, [hasInitialPosts, initialPosts]);
 
   useEffect(() => {
-    if (initialPosts.length > 0) {
+    if (hasInitialPosts) {
       setPosts(initialPosts);
       setDataReady(true);
       setLoading(false);
@@ -266,16 +210,14 @@ export default function PortfolioWall({
       return;
     }
 
-    if (initialPosts.length === 0) {
-      fetchPosts();
-    }
-  }, [initialPosts.length]);
+    fetchPosts();
+  }, [fetchPosts, hasInitialPosts, initialPosts]);
 
   useEffect(() => {
-    if (!isWebDevelopmentSelected && selectedWebSubcategory !== "ALL") {
-      setSelectedWebSubcategory("ALL");
+    if (selectedCategory !== "WEB DEVELOPMENT") {
+      setSelectedWebsiteSubcategory(WEBSITE_FILTER_ALL);
     }
-  }, [isWebDevelopmentSelected, selectedWebSubcategory]);
+  }, [selectedCategory]);
 
   useEffect(() => {
     const desktopObserver = new IntersectionObserver(
@@ -285,9 +227,7 @@ export default function PortfolioWall({
           desktopObserver.unobserve(entry.target);
         }
       },
-      {
-        threshold: 0.2,
-      },
+      { threshold: 0.2 },
     );
 
     if (desktopHeadingRef.current) {
@@ -307,9 +247,7 @@ export default function PortfolioWall({
           mobileObserver.unobserve(entry.target);
         }
       },
-      {
-        threshold: 0.2,
-      },
+      { threshold: 0.2 },
     );
 
     if (mobileHeadingRef.current) {
@@ -321,30 +259,45 @@ export default function PortfolioWall({
     };
   }, []);
 
-  const isFigmaCard = (post: Post) => {
-    const cat = post.acf?.catogary;
-    const matches = (s?: string) => !!s && s.toLowerCase() === "print";
-    if (Array.isArray(cat)) {
-      return cat.some((c) => matches(c));
+  useEffect(() => {
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setModalOpen(false);
+        setModalProject(null);
+      }
+    };
+
+    if (modalOpen) {
+      document.body.style.overflow = "hidden";
+      window.addEventListener("keydown", onKeyDown);
+    } else {
+      document.body.style.overflow = "";
     }
-    return matches(cat as string | undefined);
-  };
+
+    return () => {
+      window.removeEventListener("keydown", onKeyDown);
+      document.body.style.overflow = "";
+    };
+  }, [modalOpen]);
 
   const handleImageLoad = (
-    postId: PostId,
+    postId: string,
     visibleHeight = FIGMA_CARD_HEIGHT,
   ) => {
     const img = imgRefs.current[postId];
-    if (img) {
-      setTimeout(() => {
-        const displayedHeight = img.offsetHeight;
-        const maxScroll = Math.max(displayedHeight - visibleHeight, 0);
-        setScrollOffsets((prev) => ({ ...prev, [postId]: maxScroll }));
-      }, 10);
+
+    if (!img) {
+      return;
     }
+
+    setTimeout(() => {
+      const displayedHeight = img.offsetHeight;
+      const maxScroll = Math.max(displayedHeight - visibleHeight, 0);
+      setScrollOffsets((prev) => ({ ...prev, [postId]: maxScroll }));
+    }, 10);
   };
 
-  const handleCardClick = (post: Post) => {
+  const openProjectModal = (post: PortfolioProjectPost) => {
     setModalProject(post);
     setModalOpen(true);
   };
@@ -354,84 +307,144 @@ export default function PortfolioWall({
     setModalProject(null);
   };
 
-  const router = useRouter();
-  const pathname = usePathname();
-  const isOnPortfolioPage = pathname === "/portfolio";
-  const visibleCategories = PORTFOLIO_CATEGORIES;
-
   const handleLoadMore = () => {
     if (isOnPortfolioPage) {
-      setItemsToShow((s) => s + 6);
-    } else {
-      setIsNavigating(true);
-      router.push("/portfolio");
-    }
-  };
-
-  const handleNavigateOrOpen = (post: Post) => {
-    const href = normalizeHref(post.hrefUrl);
-
-    if (href) {
-      window.open(href, "_blank", "noopener,noreferrer");
+      setItemsToShow((value) => value + 6);
       return;
     }
 
-    handleCardClick(post);
+    router.push("/portfolio");
   };
 
-  useEffect(() => {
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") closeModal();
-    };
-    if (modalOpen) {
-      document.body.style.overflow = "hidden";
-      window.addEventListener("keydown", onKey);
-    } else {
-      document.body.style.overflow = "";
+  const handleNavigateOrOpen = (post: PortfolioProjectPost) => {
+    if (post.href_url) {
+      window.open(post.href_url, "_blank", "noopener,noreferrer");
+      return;
     }
-    return () => {
-      window.removeEventListener("keydown", onKey);
-      document.body.style.overflow = "";
-    };
-  }, [modalOpen]);
 
-  // Don't render content until data is ready and validated
+    openProjectModal(post);
+  };
+
   const shouldRenderContent = dataReady && !loading;
+
+  const showWebsiteFilters = selectedCategory === "WEB DEVELOPMENT";
+
+  const renderEmptyState = (mobile = false) => (
+    <div
+      className={`flex flex-col items-center justify-center text-center ${
+        mobile ? "py-12" : "py-24"
+      }`}
+    >
+      <p className={`text-white ${mobile ? "mb-3 text-sm" : "mb-4"}`}>
+        {posts.length === 0
+          ? "No portfolio projects are available right now."
+          : "No projects match the current filter."}
+      </p>
+      {fetchError && (
+        <button
+          onClick={() => fetchPosts()}
+          className={`rounded-full border border-white/20 bg-white/8 text-white backdrop-blur-md transition-shadow duration-150 hover:bg-white/12 ${
+            mobile ? "px-3 py-1.5 text-sm" : "px-4 py-2"
+          }`}
+        >
+          Retry
+        </button>
+      )}
+    </div>
+  );
+
+  const renderErrorState = (mobile = false) => (
+    <div
+      className={`flex flex-col items-center justify-center text-center ${
+        mobile ? "py-12" : "py-24"
+      }`}
+    >
+      <p className={`text-white ${mobile ? "mb-3 text-sm" : "mb-4"}`}>
+        {fetchError || "Unable to load portfolio projects right now."}
+      </p>
+      <button
+        onClick={() => fetchPosts()}
+        className={`rounded-full border border-white/20 bg-white/8 text-white backdrop-blur-md transition-shadow duration-150 hover:bg-white/12 ${
+          mobile ? "px-3 py-1.5 text-sm" : "px-4 py-2"
+        }`}
+      >
+        Retry
+      </button>
+    </div>
+  );
+
+  const renderTimeoutState = (mobile = false) => (
+    <div
+      className={`flex flex-col items-center justify-center text-center ${
+        mobile ? "py-12" : "py-24"
+      }`}
+    >
+      <p className={`text-white ${mobile ? "mb-3 text-sm" : "mb-4"}`}>
+        Session timed out - please retry.
+      </p>
+      <button
+        onClick={() => fetchPosts()}
+        className={`rounded-full border border-white/20 bg-white/8 text-white backdrop-blur-md transition-shadow duration-150 hover:bg-white/12 ${
+          mobile ? "px-3 py-1.5 text-sm" : "px-4 py-2"
+        }`}
+      >
+        Retry
+      </button>
+    </div>
+  );
+
+  const renderLoadingState = (mobile = false) => (
+    <div className={`${mobile ? "py-12" : "py-24"} flex items-center justify-center`}>
+      <svg
+        className={`animate-spin text-white ${mobile ? "h-10 w-10" : "h-12 w-12"}`}
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        aria-label="Loading"
+      >
+        <circle
+          className="opacity-25"
+          cx="12"
+          cy="12"
+          r="10"
+          stroke="currentColor"
+          strokeWidth="4"
+        ></circle>
+        <path
+          className="opacity-75"
+          fill="currentColor"
+          d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+        ></path>
+      </svg>
+    </div>
+  );
+
+  const visibleTagLabels = (post: PortfolioProjectPost) => {
+    const labels: string[] = post.acf.catogary.filter(
+      (label) => !HIDDEN_CARD_TAGS.has(normalizeCategory(label)),
+    );
+
+    if (post.acf.subcategory) {
+      labels.push(post.acf.subcategory);
+    }
+
+    return Array.from(new Set(labels));
+  };
+
+  const isFigmaCard = (post: PortfolioProjectPost) => {
+    return (
+      selectedCategory === "FIGMA DESIGN" ||
+      post.acf.catogary.includes("PRINT")
+    );
+  };
 
   return (
     <>
-      {/* Navigation Loading Overlay */}
-      {isNavigating && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
-          <svg
-            className="animate-spin h-12 w-12 text-white"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-          >
-            <circle
-              className="opacity-25"
-              cx="12"
-              cy="12"
-              r="10"
-              stroke="currentColor"
-              strokeWidth="4"
-            ></circle>
-            <path
-              className="opacity-75"
-              fill="currentColor"
-              d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
-            ></path>
-          </svg>
-        </div>
-      )}
-
       <section
         className={`relative my-20 mt-20 hidden px-4 md:block md:px-6 lg:px-8 ${
           isCompactCategory ? "pb-16" : ""
         }`}
       >
-        {/* Heading */}
         <div ref={desktopHeadingRef}>
           <motion.p
             initial={{ opacity: 0 }}
@@ -453,146 +466,83 @@ export default function PortfolioWall({
           </motion.h2>
         </div>
 
-        {/* Category filter buttons */}
         <div className="mb-8 flex flex-wrap justify-center gap-2.5 md:gap-3">
-          {visibleCategories.map((cat, i) => (
+          {PORTFOLIO_MAIN_CATEGORIES.map((category) => (
             <button
-              key={i}
-              onClick={() => {
-                setSelectedCategory(cat);
-                if (normalizeCategory(cat) !== "web development") {
-                  setSelectedWebSubcategory("ALL");
-                }
-              }}
+              key={category}
+              onClick={() => setSelectedCategory(category)}
               className={`cursor-pointer rounded-[8px] border px-3 py-2 text-xs transition sm:px-4 sm:text-sm ${
-                selectedCategory === cat
+                selectedCategory === category
                   ? "border-yellow-400 text-yellow-400 bg-yellow-400/10"
                   : "text-gray-400 border-gray-600 hover:border-yellow-400 hover:text-yellow-400"
               }`}
-              aria-pressed={selectedCategory === cat}
+              aria-pressed={selectedCategory === category}
             >
-              {cat}
+              {category}
             </button>
           ))}
         </div>
 
-        {isWebDevelopmentSelected && (
-          <div className="mb-8 flex flex-wrap justify-center gap-2">
-            {WEB_DEVELOPMENT_SUBCATEGORIES.map((subcat) => (
-              <button
-                key={subcat}
-                onClick={() => setSelectedWebSubcategory(subcat)}
-                className={`cursor-pointer rounded-full border px-3 py-1.5 text-[11px] tracking-[0.18em] transition sm:px-4 sm:text-xs ${
-                  selectedWebSubcategory === subcat
-                    ? "border-[#3A6EA5] bg-[#3A6EA5]/15 text-[#7EB6F0]"
-                    : "border-gray-700 text-gray-400 hover:border-[#3A6EA5] hover:text-[#7EB6F0]"
-                }`}
-                aria-pressed={selectedWebSubcategory === subcat}
-              >
-                {subcat}
-              </button>
-            ))}
+        {showWebsiteFilters && (
+          <div className="mb-8 flex flex-wrap justify-center gap-2.5 md:gap-3">
+            {[WEBSITE_FILTER_ALL, ...PORTFOLIO_WEBSITE_SUBCATEGORIES].map(
+              (subcategory) => (
+                <button
+                  key={subcategory}
+                  onClick={() =>
+                    setSelectedWebsiteSubcategory(subcategory as WebsiteFilter)
+                  }
+                  className={`cursor-pointer rounded-[8px] border px-3 py-2 text-xs transition sm:px-4 sm:text-sm ${
+                    selectedWebsiteSubcategory === subcategory
+                      ? "border-yellow-400 text-yellow-400 bg-yellow-400/10"
+                      : "text-gray-400 border-gray-600 hover:border-yellow-400 hover:text-yellow-400"
+                  }`}
+                  aria-pressed={selectedWebsiteSubcategory === subcategory}
+                >
+                  {subcategory}
+                </button>
+              ),
+            )}
           </div>
         )}
 
-        {/* Main Container */}
         <div className="mx-auto flex max-w-5xl justify-center">
-          {loading || !shouldRenderContent ? (
-            <div className="py-24 flex items-center justify-center">
-              <svg
-                className="animate-spin h-12 w-12 text-white"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                aria-label="Loading"
-              >
-                <circle
-                  className="opacity-25"
-                  cx="12"
-                  cy="12"
-                  r="10"
-                  stroke="currentColor"
-                  strokeWidth="4"
-                ></circle>
-                <path
-                  className="opacity-75"
-                  fill="currentColor"
-                  d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
-                ></path>
-              </svg>
-            </div>
+          {loading ? (
+            renderLoadingState()
           ) : fetchTimedOut ? (
-            <div className="py-24 flex flex-col items-center justify-center text-center">
-              <p className="text-white mb-4">
-                Session timed out — please retry.
-              </p>
-              <button
-                onClick={() => fetchPosts()}
-                className="px-4 py-2 rounded-full text-white bg-white/8 backdrop-blur-md border border-white/20 hover:bg-white/12 transition-shadow duration-150 shadow-lg"
-              >
-                Retry
-              </button>
-            </div>
+            renderTimeoutState()
           ) : fetchError ? (
-            <div className="py-24 flex flex-col items-center justify-center text-center">
-              <p className="mb-4 text-white">{fetchError}</p>
-              <button
-                onClick={() => fetchPosts()}
-                className="px-4 py-2 rounded-full text-white bg-white/8 backdrop-blur-md border border-white/20 hover:bg-white/12 transition-shadow duration-150 shadow-lg"
-              >
-                Retry
-              </button>
-            </div>
-          ) : filteredPosts.length === 0 ? (
-            <div className="py-24 text-center text-white/80">
-              No projects found for this selection yet.
-            </div>
+            renderErrorState()
+          ) : currentPosts.length === 0 ? (
+            renderEmptyState()
           ) : (
             <div
               className={`grid w-full grid-cols-1 justify-items-center gap-8 lg:grid-cols-2 lg:gap-0 ${
                 isCompactCategory ? "mb-8" : ""
               }`}
             >
-              {/* Portfolio Cards */}
-              {filteredPosts.slice(0, itemsToShow).map((post: Post) => {
-                const image =
-                  post.acf?.project_image?.url || "/Home/Rectangle_33.webp";
+              {currentPosts.map((post) => {
+                const image = post.acf.project_image.url || "/Home/Rectangle_33.webp";
                 const title = decodeHtmlEntities(
-                  post.title?.rendered || post.slug,
+                  post.title.rendered || post.alt || post.slug,
                 );
                 const safeImageSrc = normalizeSrc(image);
-                const cat = post.acf?.catogary;
-                const categoryLabels = Array.isArray(cat)
-                  ? cat
-                  : cat
-                    ? [cat]
-                    : [];
-                const webSubcategoryLabel = post.acf?.subcategory;
-                const visibleCategoryLabels = [
-                  ...categoryLabels.filter(
-                    (label) =>
-                      !["web development", "figma design"].includes(
-                        normalizeCategory(label),
-                      ),
-                  ),
-                  ...(webSubcategoryLabel ? [webSubcategoryLabel] : []),
-                ];
-                const primaryCategoryLabel = categoryLabels[0] || "";
-
-                const isFigma = isFigmaCard(post);
-                const isFlexible = isFigma;
+                const categoryLabels = visibleTagLabels(post);
+                const primaryCategoryLabel = post.acf.catogary[0] || "";
+                const figma = isFigmaCard(post);
                 const compactCategories = [
                   "logo design",
                   "branding",
                   "illustration",
                 ];
-                const isCompact = (
-                  Array.isArray(post.acf?.catogary)
-                    ? post.acf?.catogary
-                    : [post.acf?.catogary]
-                )
-                  ?.map((c) => c?.toLowerCase())
-                  .some((c) => compactCategories.includes(c || ""));
+                const isCompact = post.acf.catogary
+                  .map((category) => category.toLowerCase())
+                  .some((category) => compactCategories.includes(category));
+                const isFlexible =
+                  figma ||
+                  FLEXIBLE_CARD_CATEGORIES.some(
+                    (category) => post.acf.catogary.includes(category),
+                  );
 
                 return (
                   <div
@@ -600,7 +550,7 @@ export default function PortfolioWall({
                     className={
                       isCompact
                         ? "group relative w-full max-w-[410px]"
-                        : isFigma
+                        : figma
                           ? "group relative w-full max-w-[470px]"
                           : isFlexible
                             ? "group relative w-full max-w-[470px]"
@@ -609,22 +559,17 @@ export default function PortfolioWall({
                     role="link"
                     tabIndex={0}
                     onClick={() => handleNavigateOrOpen(post)}
-                    onKeyDown={(e) => {
-                      if (e.key === "Enter" || e.key === " ") {
-                        e.preventDefault();
+                    onKeyDown={(event) => {
+                      if (event.key === "Enter" || event.key === " ") {
+                        event.preventDefault();
                         handleNavigateOrOpen(post);
                       }
                     }}
                   >
-                    <div
-                      className="flex h-full flex-col overflow-hidden rounded-lg p-3 shadow-lg transition-transform duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 md:p-4"
-                      style={{
-                        background: "transparent",
-                      }}
-                    >
+                    <div className="flex h-full flex-col overflow-hidden rounded-lg p-3 shadow-lg transition-transform duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 md:p-4">
                       <div
                         className={
-                          isFigma
+                          figma
                             ? "overflow-hidden rounded-md"
                             : isCompact
                               ? "overflow-hidden rounded-md h-[280px] md:h-[320px] lg:h-[350px]"
@@ -632,19 +577,15 @@ export default function PortfolioWall({
                                 ? "overflow-hidden rounded-md"
                                 : "overflow-hidden rounded-md h-[300px] md:h-[330px] lg:h-[350px]"
                         }
-                        style={
-                          isFigma
-                            ? { height: `${FIGMA_VISIBLE_HEIGHT}px` }
-                            : undefined
-                        }
+                        style={figma ? { height: `${FIGMA_VISIBLE_HEIGHT}px` } : undefined}
                       >
-                        {isFigma ? (
+                        {figma ? (
                           <img
-                            ref={(el) => {
-                              if (el) imgRefs.current[post.id] = el;
+                            ref={(element) => {
+                              if (element) imgRefs.current[post.id] = element;
                             }}
                             src={safeImageSrc}
-                            alt={title}
+                            alt={post.alt || title}
                             onLoad={() =>
                               handleImageLoad(post.id, FIGMA_VISIBLE_HEIGHT)
                             }
@@ -656,14 +597,11 @@ export default function PortfolioWall({
                                   : "translateY(0)",
                               transition: `transform ${Math.max(800, (scrollOffsets[post.id] || 0) * 2)}ms linear`,
                             }}
-                            onError={(e) => {
-                              const target =
-                                e.currentTarget as HTMLImageElement;
+                            onError={(event) => {
+                              const target = event.currentTarget;
                               if (
-                                target &&
-                                target.src.indexOf(
-                                  "/Home/Rectangle_33.webp",
-                                ) === -1
+                                target.src.indexOf("/Home/Rectangle_33.webp") ===
+                                -1
                               ) {
                                 target.src = "/Home/Rectangle_33.webp";
                               }
@@ -674,20 +612,17 @@ export default function PortfolioWall({
                         ) : (
                           <img
                             src={safeImageSrc}
-                            alt={title}
+                            alt={post.alt || title}
                             className={
                               isFlexible
                                 ? "h-auto w-full object-contain transition-transform duration-500 ease-out will-change-transform group-hover:scale-105"
                                 : "h-full w-full object-cover transition-transform duration-500 ease-out will-change-transform group-hover:scale-105"
                             }
-                            onError={(e) => {
-                              const target =
-                                e.currentTarget as HTMLImageElement;
+                            onError={(event) => {
+                              const target = event.currentTarget;
                               if (
-                                target &&
-                                target.src.indexOf(
-                                  "/Home/Rectangle_33.webp",
-                                ) === -1
+                                target.src.indexOf("/Home/Rectangle_33.webp") ===
+                                -1
                               ) {
                                 target.src = "/Home/Rectangle_33.webp";
                               }
@@ -697,7 +632,7 @@ export default function PortfolioWall({
                       </div>
 
                       <div className="mt-2 flex-1 flex flex-col justify-start overflow-hidden">
-                        {primaryCategoryLabel?.toLowerCase() !== "print" && (
+                        {primaryCategoryLabel.toLowerCase() !== "print" && (
                           <h2
                             className="mt-2 text-base font-semibold text-[#3A6EA5] md:text-lg"
                             style={{
@@ -711,7 +646,7 @@ export default function PortfolioWall({
                           </h2>
                         )}
                         <div className="flex gap-2 flex-wrap mt-1">
-                          {visibleCategoryLabels.map((label) => (
+                          {categoryLabels.map((label) => (
                             <Tag key={`${post.id}-${label}`} label={label} />
                           ))}
                         </div>
@@ -724,7 +659,6 @@ export default function PortfolioWall({
           )}
         </div>
 
-        {/* Load more button */}
         {shouldRenderContent && filteredPosts.length > itemsToShow && (
           <div
             className={`flex justify-center ${
@@ -742,7 +676,6 @@ export default function PortfolioWall({
         )}
       </section>
 
-      {/* Modal */}
       {modalOpen && modalProject && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4"
@@ -750,7 +683,7 @@ export default function PortfolioWall({
         >
           <div
             className="relative max-w-[90vw] max-h-[90vh]"
-            onClick={(e) => e.stopPropagation()}
+            onClick={(event) => event.stopPropagation()}
           >
             <button
               onClick={closeModal}
@@ -760,11 +693,11 @@ export default function PortfolioWall({
               <IoClose size={20} />
             </button>
             <img
-              src={normalizeSrc(modalProject.acf?.project_image?.url)}
-              alt={modalProject.title?.rendered || modalProject.slug}
+              src={normalizeSrc(modalProject.acf.project_image.url)}
+              alt={modalProject.alt || modalProject.title.rendered}
               className="max-w-full max-h-[80vh] object-contain rounded-lg"
             />
-            {modalProject.title?.rendered && (
+            {modalProject.title.rendered && (
               <h3 className="mt-2 text-white text-center">
                 {modalProject.title.rendered}
               </h3>
@@ -773,7 +706,6 @@ export default function PortfolioWall({
         </div>
       )}
 
-      {/* Mobile section */}
       <section className="relative mb-10 mt-8 block w-full px-4 md:hidden sm:px-5">
         <div ref={mobileHeadingRef}>
           <motion.p
@@ -797,128 +729,69 @@ export default function PortfolioWall({
         </div>
 
         <div className="mb-6 flex flex-wrap justify-center gap-2 pb-2">
-          {visibleCategories.map((cat, i) => (
+          {PORTFOLIO_MAIN_CATEGORIES.map((category) => (
             <button
-              key={i}
-              onClick={() => {
-                setSelectedCategory(cat);
-                if (normalizeCategory(cat) !== "web development") {
-                  setSelectedWebSubcategory("ALL");
-                }
-              }}
+              key={category}
+              onClick={() => setSelectedCategory(category)}
               className={`cursor-pointer rounded-[8px] border px-3 py-2 text-xs transition sm:px-4 sm:text-sm ${
-                selectedCategory === cat
+                selectedCategory === category
                   ? "border-yellow-400 text-yellow-400 bg-yellow-400/10"
                   : "text-gray-400 border-gray-600 hover:border-yellow-400 hover:text-yellow-400"
               }`}
-              aria-pressed={selectedCategory === cat}
+              aria-pressed={selectedCategory === category}
             >
-              {cat}
+              {category}
             </button>
           ))}
         </div>
 
-        {isWebDevelopmentSelected && (
-          <div className="mb-6 flex flex-wrap justify-center gap-2">
-            {WEB_DEVELOPMENT_SUBCATEGORIES.map((subcat) => (
-              <button
-                key={subcat}
-                onClick={() => setSelectedWebSubcategory(subcat)}
-                className={`cursor-pointer rounded-full border px-3 py-1.5 text-[11px] tracking-[0.16em] transition ${
-                  selectedWebSubcategory === subcat
-                    ? "border-[#3A6EA5] bg-[#3A6EA5]/15 text-[#7EB6F0]"
-                    : "border-gray-700 text-gray-400 hover:border-[#3A6EA5] hover:text-[#7EB6F0]"
-                }`}
-                aria-pressed={selectedWebSubcategory === subcat}
-              >
-                {subcat}
-              </button>
-            ))}
+        {showWebsiteFilters && (
+          <div className="mb-6 flex flex-wrap justify-center gap-2 pb-2">
+            {[WEBSITE_FILTER_ALL, ...PORTFOLIO_WEBSITE_SUBCATEGORIES].map(
+              (subcategory) => (
+                <button
+                  key={subcategory}
+                  onClick={() =>
+                    setSelectedWebsiteSubcategory(subcategory as WebsiteFilter)
+                  }
+                  className={`cursor-pointer rounded-[8px] border px-3 py-2 text-xs transition sm:px-4 sm:text-sm ${
+                    selectedWebsiteSubcategory === subcategory
+                      ? "border-yellow-400 text-yellow-400 bg-yellow-400/10"
+                      : "text-gray-400 border-gray-600 hover:border-yellow-400 hover:text-yellow-400"
+                  }`}
+                  aria-pressed={selectedWebsiteSubcategory === subcategory}
+                >
+                  {subcategory}
+                </button>
+              ),
+            )}
           </div>
         )}
 
         <div className="w-full">
-          {loading || !shouldRenderContent ? (
-            <div className="py-12 flex items-center justify-center">
-              <svg
-                className="animate-spin h-10 w-10 text-white"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                aria-label="Loading"
-              >
-                <circle
-                  className="opacity-25"
-                  cx="12"
-                  cy="12"
-                  r="10"
-                  stroke="currentColor"
-                  strokeWidth="4"
-                ></circle>
-                <path
-                  className="opacity-75"
-                  fill="currentColor"
-                  d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
-                ></path>
-              </svg>
-            </div>
+          {loading ? (
+            renderLoadingState(true)
           ) : fetchTimedOut ? (
-            <div className="py-12 flex flex-col items-center justify-center text-center">
-              <p className="text-white mb-3 text-sm">
-                Session timed out — please retry.
-              </p>
-              <button
-                onClick={() => fetchPosts()}
-                className="px-3 py-1.5 rounded-full text-white text-sm bg-white/8 backdrop-blur-md border border-white/20 hover:bg-white/12 transition-shadow duration-150"
-              >
-                Retry
-              </button>
-            </div>
+            renderTimeoutState(true)
           ) : fetchError ? (
-            <div className="py-12 flex flex-col items-center justify-center text-center">
-              <p className="mb-3 text-sm text-white">{fetchError}</p>
-              <button
-                onClick={() => fetchPosts()}
-                className="px-3 py-1.5 rounded-full text-white text-sm bg-white/8 backdrop-blur-md border border-white/20 hover:bg-white/12 transition-shadow duration-150"
-              >
-                Retry
-              </button>
-            </div>
-          ) : filteredPosts.length === 0 ? (
-            <div className="py-12 text-center text-sm text-white/80">
-              No projects found for this selection yet.
-            </div>
+            renderErrorState(true)
+          ) : currentPosts.length === 0 ? (
+            renderEmptyState(true)
           ) : (
             <div className="space-y-4 sm:space-y-5">
-              {filteredPosts.slice(0, itemsToShow).map((post: Post) => {
-                const image =
-                  post.acf?.project_image?.url || "/Home/Rectangle_33.webp";
+              {currentPosts.map((post) => {
+                const image = post.acf.project_image.url || "/Home/Rectangle_33.webp";
                 const title = decodeHtmlEntities(
-                  post.title?.rendered || post.slug,
+                  post.title.rendered || post.alt || post.slug,
                 );
                 const safeImageSrc = normalizeSrc(image);
-                const cat = post.acf?.catogary;
-                const categoryLabels = Array.isArray(cat)
-                  ? cat
-                  : cat
-                    ? [cat]
-                    : [];
-                const webSubcategoryLabel = post.acf?.subcategory;
-                const visibleCategoryLabels = [
-                  ...categoryLabels.filter(
-                    (label) =>
-                      !["web development", "figma design"].includes(
-                        normalizeCategory(label),
-                      ),
-                  ),
-                  ...(webSubcategoryLabel ? [webSubcategoryLabel] : []),
-                ];
-                const primaryCategoryLabel = categoryLabels[0] || "";
-                const isFigma = isFigmaCard(post);
+                const categoryLabels = visibleTagLabels(post);
+                const primaryCategoryLabel = post.acf.catogary[0] || "";
+                const figma = isFigmaCard(post);
                 const isCompact = ["logo design", "branding", "illustration"].includes(
                   primaryCategoryLabel.toLowerCase(),
                 );
-                const mobileCardHeight = isFigma
+                const mobileCardHeight = figma
                   ? Math.min(FIGMA_VISIBLE_HEIGHT, 320)
                   : isCompact
                     ? 220
@@ -931,37 +804,31 @@ export default function PortfolioWall({
                     role="link"
                     tabIndex={0}
                     onClick={() => handleNavigateOrOpen(post)}
-                    onKeyDown={(e) => {
-                      if (e.key === "Enter" || e.key === " ") {
-                        e.preventDefault();
+                    onKeyDown={(event) => {
+                      if (event.key === "Enter" || event.key === " ") {
+                        event.preventDefault();
                         handleNavigateOrOpen(post);
                       }
                     }}
                   >
-                    <div
-                      className="rounded-lg p-3 overflow-hidden shadow-lg transition-transform duration-300 flex flex-col"
-                      style={{
-                        background: "transparent",
-                      }}
-                    >
+                    <div className="rounded-lg p-3 overflow-hidden shadow-lg transition-transform duration-300 flex flex-col">
                       <div
                         className="w-full overflow-hidden rounded-lg"
                         style={{ height: `${mobileCardHeight}px` }}
                       >
                         <img
                           src={safeImageSrc}
-                          alt={title}
+                          alt={post.alt || title}
                           className={`rounded-lg transition-transform duration-500 ease-out will-change-transform group-active:scale-105 ${
-                            isFigma
+                            figma
                               ? "h-auto w-full object-contain"
                               : "h-full w-full object-cover"
                           }`}
-                          onError={(e) => {
-                            const target = e.currentTarget as HTMLImageElement;
+                          onError={(event) => {
+                            const target = event.currentTarget;
                             if (
-                              target &&
                               target.src.indexOf("/Home/Rectangle_33.webp") ===
-                                -1
+                              -1
                             ) {
                               target.src = "/Home/Rectangle_33.webp";
                             }
@@ -970,11 +837,13 @@ export default function PortfolioWall({
                       </div>
 
                       <div className="mt-2 flex-1 flex flex-col justify-start overflow-hidden">
-                        <h3 className="mt-2 line-clamp-2 text-base font-semibold text-[#3A6EA5] sm:text-lg">
-                          {title}
-                        </h3>
+                        {primaryCategoryLabel.toLowerCase() !== "print" && (
+                          <h3 className="mt-2 line-clamp-2 text-base font-semibold text-[#3A6EA5] sm:text-lg">
+                            {title}
+                          </h3>
+                        )}
                         <div className="flex gap-2 flex-wrap mt-1">
-                          {visibleCategoryLabels.map((label) => (
+                          {categoryLabels.map((label) => (
                             <Tag key={`${post.id}-${label}`} label={label} />
                           ))}
                         </div>

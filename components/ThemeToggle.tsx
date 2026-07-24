@@ -1,47 +1,23 @@
 "use client";
-import { useEffect, useState } from "react";
 import { PiSunFill, PiMoonFill } from "react-icons/pi";
-import { dispatchThemeModeChange } from "@/lib/useThemeMode";
+import { applyThemeMode, useThemeMode } from "@/lib/useThemeMode";
 
 export default function ThemeToggle() {
-  const [theme, setTheme] = useState("dark");
-
-  useEffect(() => {
-    // initialise from localStorage or default to dark
-    const stored = localStorage.getItem("ads_theme");
-    const initial = stored || "dark";
-    setTheme(initial);
-    applyTheme(initial);
-  }, []);
-
-  function applyTheme(t: string) {
-    const el = document.documentElement;
-    if (t === "light") {
-      el.classList.add("light");
-      el.classList.remove("dark");
-    } else {
-      el.classList.remove("light");
-      el.classList.add("dark");
-    }
-    dispatchThemeModeChange(t === "light" ? "light" : "dark");
-  }
+  const { themeMode } = useThemeMode();
 
   function toggle() {
-    const next = theme === "dark" ? "light" : "dark";
-    setTheme(next);
-    try {
-      localStorage.setItem("ads_theme", next);
-    } catch {}
-    applyTheme(next);
+    applyThemeMode(themeMode === "dark" ? "light" : "dark");
   }
 
   return (
     <button
-      aria-label={theme === "dark" ? "Switch to light theme" : "Switch to dark theme"}
+      aria-label={
+        themeMode === "dark" ? "Switch to light theme" : "Switch to dark theme"
+      }
       onClick={toggle}
       className="w-12 h-12 rounded-full bg-[#4C8C74] flex items-center justify-center drop-shadow-[0_0_20px_rgba(76,140,116,0.8)]"
     >
-      {theme === "dark" ? <PiSunFill size={26} /> : <PiMoonFill size={26} />}
+      {themeMode === "dark" ? <PiSunFill size={26} /> : <PiMoonFill size={26} />}
     </button>
   );
 }

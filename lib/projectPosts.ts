@@ -1,3 +1,5 @@
+import { unstable_cache } from "next/cache";
+
 export interface ProjectPost {
   id: number;
   slug: string;
@@ -54,28 +56,48 @@ function cleanObject<T>(obj: T): T {
 const PROJECTS_API_URL =
   "https://olive-peafowl-546702.hostingersite.com/index.php/wp-json/wp/v2/posts?per_page=100";
 
-export async function getProjectPosts(): Promise<ProjectPost[]> {
-  const allPosts: ProjectPost[] = [];
-  let page = 1;
-  let totalPages = 1;
+export const PROJECTS_REVALIDATE_SECONDS = 300;
 
-  while (page <= totalPages) {
-    const separator = PROJECTS_API_URL.includes("?") ? "&" : "?";
-    const res = await fetch(`${PROJECTS_API_URL}${separator}page=${page}`, {
-      next: { revalidate: 300 },
-    });
+async function fetchProjectPostsPage(page: number) {
+  const separator = PROJECTS_API_URL.includes("?") ? "&" : "?";
+  const res = await fetch(`${PROJECTS_API_URL}${separator}page=${page}`, {
+    next: { revalidate: PROJECTS_REVALIDATE_SECONDS },
+  });
 
-    if (!res.ok) {
-      throw new Error(`Failed to fetch project posts: ${res.status}`);
-    }
-
-    const posts = (await res.json()) as ProjectPost[];
-    allPosts.push(...posts);
-
-    const totalPagesHeader = res.headers.get("X-WP-TotalPages");
-    totalPages = totalPagesHeader ? Number(totalPagesHeader) : page;
-    page += 1;
+  if (!res.ok) {
+    throw new Error(`Failed to fetch project posts: ${res.status}`);
   }
 
-  return cleanObject(allPosts);
+  const posts = (await res.json()) as ProjectPost[];
+  const totalPagesHeader = res.headers.get("X-WP-TotalPages");
+
+  return {
+    posts,
+    totalPages: totalPagesHeader ? Number(totalPagesHeader) : page,
+  };
+}
+
+const getProjectPostsCached = unstable_cache(
+  async (): Promise<ProjectPost[]> => {
+    const firstPage = await fetchProjectPostsPage(1);
+    const remainingPages = Array.from(
+      { length: Math.max(firstPage.totalPages - 1, 0) },
+      (_, index) => index + 2,
+    );
+
+    const additionalPages = await Promise.all(
+      remainingPages.map((page) => fetchProjectPostsPage(page)),
+    );
+
+    return cleanObject([
+      ...firstPage.posts,
+      ...additionalPages.flatMap((page) => page.posts),
+    ]);
+  },
+  ["project-posts"],
+  { revalidate: PROJECTS_REVALIDATE_SECONDS },
+);
+
+export async function getProjectPosts(): Promise<ProjectPost[]> {
+  return getProjectPostsCached();
 }

@@ -1,56 +1,22 @@
-const PORTFOLIO_API_URL = "https://projects-api-bembexlab.vercel.app/api/images/";
+import { unstable_cache } from "next/cache";
 
-export const PORTFOLIO_API_ORIGIN = "https://projects-api-bembexlab.vercel.app";
+export const PORTFOLIO_API_ORIGIN =
+  "https://projects-api-bembexlab.vercel.app";
 
-type PortfolioApiResponse = {
-  projects?: RawPortfolioProject[];
-};
+const PORTFOLIO_API_URL = `${PORTFOLIO_API_ORIGIN}/api/images/`;
 
-type RawPortfolioProject = {
-  id: string;
-  href_url?: string;
-  category?: string;
-  subcategory?: string;
-  alt?: string;
-  description?: string;
-  cover_image_url?: string;
-  images?: Array<{
-    id: string;
-    image_url?: string;
-    filename?: string;
-    content_type?: string;
-    size?: number;
-  }>;
-};
+export const PORTFOLIO_REVALIDATE_SECONDS = 300;
 
-export interface PortfolioProjectPost {
-  id: string;
-  slug: string;
-  title: { rendered: string };
-  hrefUrl?: string;
-  acf?: {
-    project_image?: { url: string };
-    catogary?: string | string[];
-    subcategory?: string;
-  };
-}
+export const PORTFOLIO_MAIN_CATEGORIES = [
+  "WEB DEVELOPMENT",
+  "LOGO DESIGN",
+  "BRANDING",
+  "FIGMA DESIGN",
+  "ILLUSTRATION",
+  "PRINT",
+] as const;
 
-const CATEGORY_LABELS: Record<string, string> = {
-  branding: "BRANDING",
-  illustration: "ILLUSTRATION",
-  logo: "LOGO DESIGN",
-  print: "PRINT",
-  "website development & design": "WEB DEVELOPMENT",
-};
-
-const WEB_SUBCATEGORY_LABELS: Record<string, string> = {
-  react: "REACT",
-  laravel: "LARAVEL",
-  wordpress: "WORDPRESS",
-  wix: "WIX",
-  shopify: "SHOPIFY",
-};
-const RANDOM_WEB_SUBCATEGORIES = [
+export const PORTFOLIO_WEBSITE_SUBCATEGORIES = [
   "REACT",
   "LARAVEL",
   "WORDPRESS",
@@ -58,83 +24,187 @@ const RANDOM_WEB_SUBCATEGORIES = [
   "SHOPIFY",
 ] as const;
 
-const normalizeKey = (value?: string) => value?.trim().toLowerCase() || "";
+export type PortfolioMainCategory = (typeof PORTFOLIO_MAIN_CATEGORIES)[number];
+export type PortfolioWebsiteSubcategory =
+  (typeof PORTFOLIO_WEBSITE_SUBCATEGORIES)[number];
 
-function assignWebSubcategory(projectId: string) {
-  let hash = 0;
+type RawPortfolioProject = {
+  id?: string;
+  href_url?: string;
+  category?: string;
+  subcategory?: string;
+  alt?: string;
+  description?: string;
+  cover_image_url?: string;
+  images?: Array<{
+    image_url?: string;
+  }>;
+};
 
-  for (const char of projectId) {
-    hash = (hash * 31 + char.charCodeAt(0)) >>> 0;
+type RawPortfolioResponse = {
+  projects?: RawPortfolioProject[];
+};
+
+export type PortfolioProjectPost = {
+  id: string;
+  slug: string;
+  href_url: string;
+  title: { rendered: string };
+  alt: string;
+  description: string;
+  isWebsiteProject: boolean;
+  acf: {
+    project_image: { url: string };
+    catogary: PortfolioMainCategory[];
+    subcategory: PortfolioWebsiteSubcategory | "";
+  };
+};
+
+function cleanString(value?: string | null): string {
+  if (!value) {
+    return "";
   }
 
-  return RANDOM_WEB_SUBCATEGORIES[hash % RANDOM_WEB_SUBCATEGORIES.length];
+  return String(value)
+    .replace(/[\x00-\x1F\x7F-\x9F]/g, "")
+    .trim();
 }
 
-function buildProjectTitle(
-  project: RawPortfolioProject,
-  categoryLabel: string,
-  index: number,
-) {
-  const title = project.alt?.trim() || project.description?.trim();
+function normalizeUrl(value?: string | null): string {
+  const cleaned = cleanString(value);
 
-  if (title) {
-    return title.replace(/[-_]+/g, " ").replace(/\s+/g, " ").trim();
+  if (!cleaned) {
+    return "";
   }
 
-  return `${categoryLabel} ${index + 1}`;
+  if (cleaned.startsWith("//")) {
+    return `https:${cleaned}`;
+  }
+
+  if (cleaned.startsWith("/")) {
+    return new URL(cleaned, PORTFOLIO_API_ORIGIN).toString();
+  }
+
+  if (/^https?:\/\//i.test(cleaned)) {
+    return cleaned.replace(/^http:\/\//i, "https://");
+  }
+
+  return `https://${cleaned}`;
+}
+
+function normalizeCategories(category?: string): PortfolioMainCategory[] {
+  switch (cleanString(category)) {
+    case "Website Development & Design":
+      return ["WEB DEVELOPMENT", "FIGMA DESIGN"];
+    case "Logo":
+      return ["LOGO DESIGN"];
+    case "Branding":
+      return ["BRANDING"];
+    case "Illustration":
+      return ["ILLUSTRATION"];
+    case "Print":
+      return ["PRINT"];
+    default:
+      return [];
+  }
+}
+
+function getStableWebsiteSubcategory(
+  projectId: string,
+): PortfolioWebsiteSubcategory {
+  const hash = Array.from(projectId).reduce((acc, char) => {
+    return (acc * 31 + char.charCodeAt(0)) >>> 0;
+  }, 7);
+
+  return PORTFOLIO_WEBSITE_SUBCATEGORIES[
+    hash % PORTFOLIO_WEBSITE_SUBCATEGORIES.length
+  ];
+}
+
+function slugify(value: string): string {
+  return value
+    .toLowerCase()
+    .replace(/&/g, "and")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+function normalizeTitle(
+  project: RawPortfolioProject,
+  fallbackId: string,
+): string {
+  const title = cleanString(project.alt) || cleanString(project.description);
+
+  if (title) {
+    return title;
+  }
+
+  const category = cleanString(project.category);
+  return category ? `${category} ${fallbackId.slice(-6)}` : `Project ${fallbackId}`;
 }
 
 function normalizePortfolioProject(
   project: RawPortfolioProject,
-  index: number,
 ): PortfolioProjectPost | null {
-  const categoryKey = normalizeKey(project.category);
-  const categoryLabel =
-    CATEGORY_LABELS[categoryKey] ||
-    project.category?.trim().toUpperCase();
-  const normalizedSubcategory =
-    categoryKey === "website development & design"
-      ? assignWebSubcategory(project.id)
-      : WEB_SUBCATEGORY_LABELS[normalizeKey(project.subcategory)] ||
-        project.subcategory?.trim().toUpperCase() ||
-        undefined;
-  const normalizedCategories =
-    categoryKey === "website development & design"
-      ? ["WEB DEVELOPMENT", "FIGMA DESIGN"]
-      : categoryLabel;
-  const imageUrl = project.cover_image_url || project.images?.[0]?.image_url;
+  const projectId = cleanString(project.id);
+  const categories = normalizeCategories(project.category);
+  const imageUrl = normalizeUrl(
+    project.cover_image_url || project.images?.[0]?.image_url,
+  );
 
-  if (!project.id || !categoryLabel || !imageUrl) {
+  if (!projectId || categories.length === 0 || !imageUrl) {
     return null;
   }
 
+  const title = normalizeTitle(project, projectId);
+  const isWebsiteProject =
+    cleanString(project.category) === "Website Development & Design";
+  const subcategory = isWebsiteProject
+    ? getStableWebsiteSubcategory(projectId)
+    : "";
+
   return {
-    id: project.id,
-    slug: project.id,
-    title: {
-      rendered: buildProjectTitle(project, categoryLabel, index),
-    },
-    hrefUrl: project.href_url?.trim() || "",
+    id: projectId,
+    slug: slugify(`${title}-${projectId}`),
+    href_url: normalizeUrl(project.href_url),
+    title: { rendered: title },
+    alt: cleanString(project.alt) || title,
+    description: cleanString(project.description),
+    isWebsiteProject,
     acf: {
-      project_image: { url: imageUrl },
-      catogary: normalizedCategories,
-      subcategory: normalizedSubcategory,
+      project_image: {
+        url: imageUrl,
+      },
+      catogary: categories,
+      subcategory,
     },
   };
 }
 
+const getPortfolioProjectsCached = unstable_cache(
+  async (): Promise<PortfolioProjectPost[]> => {
+    const response = await fetch(PORTFOLIO_API_URL, {
+      next: { revalidate: PORTFOLIO_REVALIDATE_SECONDS },
+    });
+
+    if (!response.ok) {
+      throw new Error(
+        `Failed to fetch portfolio projects: ${response.status} ${response.statusText}`,
+      );
+    }
+
+    const data = (await response.json()) as RawPortfolioResponse;
+
+    return (data.projects || [])
+      .map(normalizePortfolioProject)
+      .filter(
+        (project): project is PortfolioProjectPost => project !== null,
+      );
+  },
+  ["portfolio-projects"],
+  { revalidate: PORTFOLIO_REVALIDATE_SECONDS },
+);
+
 export async function getPortfolioProjects(): Promise<PortfolioProjectPost[]> {
-  const res = await fetch(PORTFOLIO_API_URL, {
-    next: { revalidate: 300 },
-  });
-
-  if (!res.ok) {
-    throw new Error(`Failed to fetch portfolio projects: ${res.status}`);
-  }
-
-  const data = (await res.json()) as PortfolioApiResponse;
-
-  return (data.projects || [])
-    .map((project, index) => normalizePortfolioProject(project, index))
-    .filter((project): project is PortfolioProjectPost => project !== null);
+  return getPortfolioProjectsCached();
 }

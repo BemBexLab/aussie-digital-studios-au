@@ -55,12 +55,8 @@ const ServicePage = () => {
   return (
     <section className="overflow-x-hidden">
       <Hero H="Our Services" />
-      <LazySection heightClassName="min-h-72">
-        <WhyChoose data={services[0]?.whyChooseData} />
-      </LazySection>
-      <LazySection heightClassName="min-h-96">
-        <MainServices />
-      </LazySection>
+      <WhyChoose data={services[0]?.whyChooseData} />
+      <MainServices />
       <LazySection heightClassName="min-h-72">
         <CustomPlan data={servicesCustomPlanData} />
       </LazySection>

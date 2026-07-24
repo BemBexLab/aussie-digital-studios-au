@@ -1,10 +1,12 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 
 export type ThemeMode = "light" | "dark";
 
 const THEME_EVENT = "ads-theme-change";
+const subscribers = new Set<() => void>();
+let listenersInitialized = false;
 
 function readThemeMode(): ThemeMode {
   if (typeof document !== "undefined") {
@@ -26,6 +28,46 @@ function readThemeMode(): ThemeMode {
   return "dark";
 }
 
+function emitThemeModeChange() {
+  subscribers.forEach((callback) => callback());
+}
+
+function ensureThemeListeners() {
+  if (listenersInitialized || typeof window === "undefined") {
+    return;
+  }
+
+  const syncThemeMode = () => {
+    emitThemeModeChange();
+  };
+
+  window.addEventListener("storage", syncThemeMode);
+  window.addEventListener(THEME_EVENT, syncThemeMode as EventListener);
+  listenersInitialized = true;
+}
+
+export function applyThemeMode(nextTheme: ThemeMode) {
+  if (typeof document === "undefined") {
+    return;
+  }
+
+  const root = document.documentElement;
+
+  if (nextTheme === "light") {
+    root.classList.add("light");
+    root.classList.remove("dark");
+  } else {
+    root.classList.remove("light");
+    root.classList.add("dark");
+  }
+
+  try {
+    window.localStorage.setItem("ads_theme", nextTheme);
+  } catch {}
+
+  dispatchThemeModeChange(nextTheme);
+}
+
 export function dispatchThemeModeChange(nextTheme: ThemeMode) {
   if (typeof window !== "undefined") {
     window.dispatchEvent(
@@ -35,23 +77,18 @@ export function dispatchThemeModeChange(nextTheme: ThemeMode) {
 }
 
 export function useThemeMode() {
-  const [themeMode, setThemeMode] = useState<ThemeMode>("dark");
+  const themeMode = useSyncExternalStore(
+    (onStoreChange) => {
+      ensureThemeListeners();
+      subscribers.add(onStoreChange);
 
-  useEffect(() => {
-    const syncThemeMode = () => {
-      setThemeMode(readThemeMode());
-    };
-
-    syncThemeMode();
-
-    window.addEventListener("storage", syncThemeMode);
-    window.addEventListener(THEME_EVENT, syncThemeMode as EventListener);
-
-    return () => {
-      window.removeEventListener("storage", syncThemeMode);
-      window.removeEventListener(THEME_EVENT, syncThemeMode as EventListener);
-    };
-  }, []);
+      return () => {
+        subscribers.delete(onStoreChange);
+      };
+    },
+    readThemeMode,
+    () => "dark",
+  );
 
   return {
     themeMode,

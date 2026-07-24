@@ -30,12 +30,8 @@ const AboutPage = () => {
   return (
     <div className="overflow-x-hidden">
       <Hero H="ABOUT US" />
-      <LazySection heightClassName="min-h-72">
-        <About />
-      </LazySection>
-      <LazySection heightClassName="min-h-72">
-        <Values />
-      </LazySection>
+      <About />
+      <Values />
       {/* <div className="relative">
         <Image
           src="/Geometric_Shape_Silver.webp"

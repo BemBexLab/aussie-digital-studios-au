@@ -104,15 +104,11 @@ export default async function ServicePage({
   return (
     <div className="relative m-0 w-full overflow-x-hidden overflow-y-visible p-0">
       <Hero H={service.title} />
-      <LazySection heightClassName="min-h-72">
-        <ServiceBody
-          data={service.serviceBodyData ?? []}
-          footnote={"footnote" in service ? (service.footnote as ReactNode) : undefined}
-        />
-      </LazySection>
-      <LazySection heightClassName="min-h-96">
-        <Cards service={service} />
-      </LazySection>
+      <ServiceBody
+        data={service.serviceBodyData ?? []}
+        footnote={"footnote" in service ? (service.footnote as ReactNode) : undefined}
+      />
+      <Cards service={service} />
       <LazySection heightClassName="min-h-72">
         <WhyChoose data={service.whyChooseData} />
       </LazySection>

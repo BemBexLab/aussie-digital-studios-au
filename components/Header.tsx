@@ -1,7 +1,7 @@
 // components/Header.tsx
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -9,24 +9,29 @@ import ServicesDropdown from "./ServicesDropdown";
 import MobileHeader from "./MobileHeader";
 import { useThemeMode } from "@/lib/useThemeMode";
 
+const NAV_ITEMS = [
+  "Home",
+  "About",
+  "Services",
+  "Portfolio",
+  "Packages",
+  "Blogs",
+  "Contact",
+] as const;
+
 const Header = () => {
-  const [logoFallback, setLogoFallback] = useState(false);
   const { isDarkMode } = useThemeMode();
   const pathname = usePathname();
   const currentPath = pathname ?? "";
-  const [hash, setHash] = useState(() =>
-    typeof window === "undefined" ? "" : window.location.hash || "",
-  );
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
   const lastScrollY = useRef(0);
   const ticking = useRef(false);
 
-  useEffect(() => {
-    const onHashChange = () => setHash(window.location.hash || "");
-    window.addEventListener("hashchange", onHashChange);
-    return () => window.removeEventListener("hashchange", onHashChange);
-  }, [currentPath]);
+  const logoSrc = useMemo(
+    () => (isDarkMode ? "/Group_1.webp" : "/Aussie_Header_Logo_Light.webp"),
+    [isDarkMode],
+  );
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -67,9 +72,7 @@ const Header = () => {
 
   const isActive = (item: string) => {
     if (item === "Home") return currentPath === "/";
-    if (item === "Services") {
-      return currentPath === "/services" || (currentPath === "/" && hash === "#services");
-    }
+    if (item === "Services") return currentPath.startsWith("/services");
     return currentPath === `/${item.toLowerCase()}`;
   };
 
@@ -83,7 +86,9 @@ const Header = () => {
         className={`hidden lg:block fixed top-0 left-0 w-full z-50 transform transition-transform duration-300 ease-in-out ${isHeaderVisible ? 'translate-y-0' : '-translate-y-full'}`}
       >
       <div
-        className={`relative mx-4 mt-4 flex items-center justify-between rounded-[24px] border px-5 py-3.5 lg:mx-6 lg:px-8 xl:mx-8 xl:px-12 2xl:mx-10 2xl:px-16 backdrop-blur-sm transition-colors duration-300 ${
+        className={`relative mx-4 mt-4 flex items-center justify-between rounded-[24px] border px-5 py-3.5 lg:mx-6 lg:px-8 xl:mx-8 xl:px-12 2xl:mx-10 2xl:px-16 transition-colors duration-300 
+
+          ${
           isScrolled
             ? 'border-white/10 bg-white/6 shadow-[0_10px_24px_rgba(0,0,0,0.1)]'
             : 'border-white/8 bg-white/4 shadow-[0_8px_18px_rgba(0,0,0,0.08)]'
@@ -93,29 +98,21 @@ const Header = () => {
         <div className="flex min-w-0 items-center">
           {/* Logo */}
           <div className="flex shrink-0 items-center">
-            {!logoFallback ? (
-              <Image
-                src={isDarkMode ? "/Group_1.webp" : "/Aussie_Header_Logo_Light.webp"}
-                alt="Aussie Digital Studios Header logo"
-                width={140}
-                height={56}
-                className="h-11 w-auto xl:h-12 2xl:h-14"
-                style={{ width: "auto" }}
-                sizes="140px"
-                onError={() => setLogoFallback(true)}
-              />
-            ) : (
-              // fallback to plain img if next/image fails for any reason
-              // keeps visual classes consistent
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={isDarkMode ? "/Group_1.webp" : "/Aussie_Header_Logo_Light.webp"} alt="Aussie Digital Studios" className="h-14 w-auto" />
-            )}
+            <Image
+              src={logoSrc}
+              alt="Aussie Digital Studios Header logo"
+              width={140}
+              height={56}
+              className="h-11 w-auto xl:h-12 2xl:h-14"
+              style={{ width: "auto" }}
+              sizes="140px"
+            />
           </div>
         </div>
 
         {/* Desktop Nav - viewport centered */}
         <nav className="absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 lg:flex flex-row items-center gap-6 xl:gap-8 2xl:gap-10">
-          {['Home', 'About', 'Services', 'Portfolio', 'Packages', 'Blogs', 'Contact'].map((item) => {
+          {NAV_ITEMS.map((item) => {
             const href =
               item === 'Home'
                 ? '/'

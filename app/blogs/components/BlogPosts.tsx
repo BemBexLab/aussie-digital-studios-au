@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 import { BsArrowUpRightCircle } from "react-icons/bs";
 import { GoArrowDown } from "react-icons/go";
@@ -49,13 +50,13 @@ const BlogPosts = () => {
                 {post.description}
               </p>
 
-              <a
+              <Link
                 className="mt-auto pt-4 inline-flex items-center gap-2 text-[11px] font-light text-[#8f9491] transition hover:text-[#c5c9c7] sm:pt-5 sm:text-[12px]"
                 href={`/blogs/${post.subblog[0]?.slug || "default"}`}
               >
                 <BsArrowUpRightCircle className="h-4 w-4 text-[#4f826c] sm:h-[18px] sm:w-[18px]" />
                 <span>Read More</span>
-              </a>
+              </Link>
             </div>
           </article>
         ))}

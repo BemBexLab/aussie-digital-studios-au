@@ -1,6 +1,5 @@
 import React from "react";
 import dynamic from "next/dynamic";
-import Hero from "./components/Hero";
 import { getPortfolioProjects } from "@/lib/portfolioProjects";
 import SectionFallback from "@/components/SectionFallback";
 import LazySection from "@/components/LazySection";
@@ -42,18 +41,16 @@ const ContactUs = dynamic(() => import("./components/ContactUs"), {
 });
 
 const HomePage = async () => {
-  const initialPosts = await getPortfolioProjects();
+  const initialPosts = await getPortfolioProjects().catch((error) => {
+    console.error("Failed to preload portfolio projects:", error);
+    return [];
+  });
 
   return (
     <div className="overflow-hidden relative">
-      {/* <Hero /> */}
       <HomeHeroV2 />
-      <LazySection heightClassName="min-h-32">
-        <LogoSlider />
-      </LazySection>
-      <LazySection heightClassName="min-h-48">
-        <AboutUs />
-      </LazySection>
+      <LogoSlider />
+      <AboutUs />
       <LazySection heightClassName="min-h-72">
         <Services />
       </LazySection>

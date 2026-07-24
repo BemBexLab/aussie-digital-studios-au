@@ -9,7 +9,7 @@ export async function GET(req: Request) {
     let target: URL;
     try {
       target = new URL(url);
-    } catch (err) {
+    } catch {
       return NextResponse.json({ error: 'invalid url' }, { status: 400 });
     }
 
@@ -40,6 +40,7 @@ export async function GET(req: Request) {
     return new Response(modified, {
       headers: {
         'Content-Type': 'text/html; charset=utf-8',
+        'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600',
       },
     });
   } catch (err) {

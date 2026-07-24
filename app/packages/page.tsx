@@ -30,9 +30,7 @@ const PackagePage = () => {
         width={1920}
         height={1080}
       /> */}
-      <LazySection heightClassName="min-h-96">
-        <PricingPlan />
-      </LazySection>
+      <PricingPlan />
       <LazySection heightClassName="min-h-72">
         <BrandLevelUp />
       </LazySection>

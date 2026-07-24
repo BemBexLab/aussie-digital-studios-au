@@ -3,7 +3,6 @@ import React from 'react'
 import dynamic from "next/dynamic";
 import Hero from '@/components/Hero'
 import SectionFallback from "@/components/SectionFallback";
-import LazySection from "@/components/LazySection";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
@@ -22,9 +21,7 @@ const ContactPage = () => {
   return (
     <div>
       <Hero H="CONTACT US" />
-      <LazySection heightClassName="min-h-96">
-        <Contact />
-      </LazySection>
+      <Contact />
     </div>
 )
 }

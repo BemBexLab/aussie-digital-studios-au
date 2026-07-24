@@ -1,8 +1,6 @@
 "use client";
 
 export {
-  LazyMotion,
-  domAnimation,
-  m as motion,
+  motion,
   useSpring,
 } from "motion/react";

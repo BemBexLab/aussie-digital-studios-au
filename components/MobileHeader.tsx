@@ -1,34 +1,25 @@
 // components/MobileHeader.tsx
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import MobileServicesDropdown from "./MobileServicesDropdown";
 
+const NAV_ITEMS = {
+  primary: ["Home", "About"] as const,
+  secondary: ["Portfolio", "Packages", "Blogs", "Contact"] as const,
+};
+
 const MobileHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [logoFallback, setLogoFallback] = useState(false);
   const pathname = usePathname();
   const currentPath = pathname ?? "";
-  const [hash, setHash] = useState(() =>
-    typeof window === "undefined" ? "" : window.location.hash || "",
-  );
-
-  // Mobile header is dark-only. No theme detection required.
-
-  useEffect(() => {
-    const onHashChange = () => setHash(window.location.hash || "");
-    window.addEventListener("hashchange", onHashChange);
-    return () => window.removeEventListener("hashchange", onHashChange);
-  }, [currentPath]);
 
   const isActive = (item: string) => {
     if (item === "Home") return currentPath === "/";
-    if (item === "Services") {
-      return currentPath === "/services" || (currentPath === "/" && hash === "#services");
-    }
+    if (item === "Services") return currentPath.startsWith("/services");
     return currentPath === `/${item.toLowerCase()}`;
   };
 
@@ -39,20 +30,14 @@ const MobileHeader = () => {
       <div className="flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center">
-          {!logoFallback ? (
-            <Image
-              src="/Group_1.webp"
-              alt="Aussie Digital Studios"
-              width={100}
-              height={40}
-              className="h-9 w-auto sm:h-10"
-              sizes="100px"
-              onError={() => setLogoFallback(true)}
-            />
-          ) : (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img src="/Group_1.webp" alt="Aussie Digital Studios" className="h-10 w-auto" />
-          )}
+          <Image
+            src="/Group_1.webp"
+            alt="Aussie Digital Studios"
+            width={100}
+            height={40}
+            className="h-9 w-auto sm:h-10"
+            sizes="100px"
+          />
         </div>
 
         {/* Mobile Menu Button */}
@@ -83,7 +68,7 @@ const MobileHeader = () => {
       {isMenuOpen && (
         <div className="mx-3 mt-2 rounded-[22px] border border-white/12 bg-black/12 pb-4 text-white backdrop-blur-xl shadow-[0_14px_40px_rgba(0,0,0,0.22)] sm:mx-4">
           <nav className="flex flex-col space-y-2 px-4 py-4 sm:px-5">
-            {['Home', 'About'].map((item) => {
+            {NAV_ITEMS.primary.map((item) => {
               const href = item === 'Home' ? '/' : `/${item.toLowerCase()}`;
               const active = isActive(item);
 
@@ -106,7 +91,7 @@ const MobileHeader = () => {
             {/* Services Dropdown - after About */}
             <MobileServicesDropdown />
 
-            {['Portfolio', 'Packages', 'Blogs', 'Contact'].map((item) => {
+            {NAV_ITEMS.secondary.map((item) => {
               const href = `/${item.toLowerCase()}`;
               const active = isActive(item);
 
