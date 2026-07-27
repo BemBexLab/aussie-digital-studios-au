@@ -466,6 +466,7 @@ export const services = [
           "48 to 72 hours TAT",
           "Complete Deployment",
           "100% Satisfaction Guarantee",
+          "Unlimited Revisions",
         ],
       },
       {
@@ -487,6 +488,7 @@ export const services = [
           "Mobile Responsive will be Additional $200",
           "CMS will be Additional $250",
           "Choose Plan Chat Now",
+          "Unlimited Revisions",
         ],
       },
       {
@@ -508,6 +510,7 @@ export const services = [
           "100% Unique Design Guarantee",
           "100% Money Back Guarantee",
           "Mobile Responsive will be Additional $200",
+          "Unlimited Revisions",
         ],
       },
     ],
