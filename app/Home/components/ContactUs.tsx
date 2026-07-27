@@ -34,7 +34,7 @@ const ContactUs = () => {
           obs.disconnect();
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.2 },
     );
     obs.observe(el);
     return () => obs.disconnect();
@@ -67,7 +67,7 @@ const ContactUs = () => {
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -177,129 +177,136 @@ const ContactUs = () => {
             className="h-auto w-full max-w-[360px] object-contain md:max-w-[420px] xl:h-[365px] xl:max-w-[450px]"
           />
 
-        {/* Contact Form */}
-        <div
-          className="w-full max-w-[760px] rounded-2xl px-5 py-5 sm:px-6 md:px-7 md:py-4 xl:h-[310px] xl:max-w-[700px]"
-          style={{
-            backgroundImage: `url('${isDarkMode ? '/Home/contactus_dark.svg' : '/Home/Frame_163_Light.svg'}')`,
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-          }}
-          suppressHydrationWarning
-        >
-          <form onSubmit={handleSubmit} className="flex flex-col gap-4" suppressHydrationWarning>
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-2" suppressHydrationWarning>
-              {/* First Name */}
-              <TextField
-                name="firstName"
-                label="First Name"
-                type="text"
-                variant="standard"
-                fullWidth
-                value={formData.firstName}
-                onChange={handleChange}
-                required
-                sx={textFieldSx}
-              />
-
-              {/* Last Name */}
-              <TextField
-                name="lastName"
-                label="Last Name"
-                type="text"
-                variant="standard"
-                fullWidth
-                value={formData.lastName}
-                onChange={handleChange}
-                required
-                sx={textFieldSx}
-              />
-
-              {/* Email */}
-              <TextField
-                name="email"
-                label="Email"
-                type="email"
-                variant="standard"
-                fullWidth
-                value={formData.email}
-                onChange={handleChange}
-                required
-                sx={textFieldSx}
-              />
-
-              {/* Phone */}
-              <TextField
-                name="phone"
-                label="Phone Number"
-                type="tel"
-                variant="standard"
-                fullWidth
-                value={formData.phone}
-                onChange={handleChange}
-                required
-                sx={textFieldSx}
-              />
-            </div>
-
-            {/* Details Field */}
-            <TextField
-              name="detail"
-              label="Details"
-              multiline
-              rows={3}
-              variant="standard"
-              fullWidth
-              value={formData.detail}
-              onChange={handleChange}
-              required
-              sx={textFieldSx}
-            />
-            {/* Submit Button */}
-            <div className="mt-2 flex flex-row justify-start">
-              <button
-                type="submit"
-                disabled={loading}
-                className="group inline-flex h-[40px] w-full items-center justify-center gap-1 rounded-full bg-teal-500 text-sm text-white transition-all hover:bg-blue-400 disabled:cursor-not-allowed disabled:opacity-50 sm:w-[128px]"
+          {/* Contact Form */}
+          <div
+            className="w-full max-w-[760px] rounded-2xl px-5 py-5 sm:px-6 md:px-7 md:py-4 xl:h-[310px] xl:max-w-[700px]"
+            style={{
+              backgroundImage: `url('${isDarkMode ? "/Home/contactus_dark.svg" : "/Home/Frame_163_Light.svg"}')`,
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+            }}
+            suppressHydrationWarning
+          >
+            <form
+              onSubmit={handleSubmit}
+              className="flex flex-col gap-4"
+              suppressHydrationWarning
+            >
+              <div
+                className="grid grid-cols-1 gap-4 md:grid-cols-2"
+                suppressHydrationWarning
               >
-                <span className="ml-2 text-sm font-light md:text-base">
-                  {loading ? "Sending..." : "Submit"}
-                </span>
-                <span className="ml-2 relative w-7 h-7 flex items-center justify-center">
-                  <span
-                    className="absolute inset-0 bg-black rounded-full"
-                    aria-hidden="true"
-                  ></span>
-                  <svg
-                    className="relative w-4 h-4 z-10 transition-transform duration-300 group-hover:rotate-45 button-arrow-svg"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true"
-                    role="img"
-                  >
-                    <path
-                      d="M7 17 L17 7"
-                      stroke="#fff"
-                      strokeWidth="1.8"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      fill="none"
-                    />
-                    <path
-                      d="M11 7 H17 V13"
-                      stroke="#fff"
-                      strokeWidth="1.8"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      fill="none"
-                    />
-                  </svg>
-                </span>
-              </button>
-            </div>
-          </form>
-        </div>
+                {/* First Name */}
+                <TextField
+                  name="firstName"
+                  label="First Name"
+                  type="text"
+                  variant="standard"
+                  fullWidth
+                  value={formData.firstName}
+                  onChange={handleChange}
+                  required
+                  sx={textFieldSx}
+                />
+
+                {/* Last Name */}
+                <TextField
+                  name="lastName"
+                  label="Last Name"
+                  type="text"
+                  variant="standard"
+                  fullWidth
+                  value={formData.lastName}
+                  onChange={handleChange}
+                  required
+                  sx={textFieldSx}
+                />
+
+                {/* Email */}
+                <TextField
+                  name="email"
+                  label="Email"
+                  type="email"
+                  variant="standard"
+                  fullWidth
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  sx={textFieldSx}
+                />
+
+                {/* Phone */}
+                <TextField
+                  name="phone"
+                  label="Phone Number"
+                  type="tel"
+                  variant="standard"
+                  fullWidth
+                  value={formData.phone}
+                  onChange={handleChange}
+                  required
+                  sx={textFieldSx}
+                />
+              </div>
+
+              {/* Details Field */}
+              <TextField
+                name="detail"
+                label="Details"
+                multiline
+                rows={3}
+                variant="standard"
+                fullWidth
+                value={formData.detail}
+                onChange={handleChange}
+                required
+                sx={textFieldSx}
+              />
+              {/* Submit Button */}
+              <div className="mt-2 flex flex-row justify-start">
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="group inline-flex h-[40px] w-full items-center justify-center gap-1 rounded-full bg-teal-500 text-sm text-white transition-all hover:bg-blue-400 disabled:cursor-not-allowed disabled:opacity-50 sm:w-[128px]"
+                >
+                  <span className="ml-2 text-sm font-light md:text-base">
+                    {loading ? "Sending..." : "Submit"}
+                  </span>
+                  <span className="ml-2 relative w-7 h-7 flex items-center justify-center">
+                    <span
+                      className="absolute inset-0 bg-black rounded-full"
+                      aria-hidden="true"
+                    ></span>
+                    <svg
+                      className="relative w-4 h-4 z-10 transition-transform duration-300 group-hover:rotate-45 button-arrow-svg"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      role="img"
+                    >
+                      <path
+                        d="M7 17 L17 7"
+                        stroke="#fff"
+                        strokeWidth="1.8"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        fill="none"
+                      />
+                      <path
+                        d="M11 7 H17 V13"
+                        stroke="#fff"
+                        strokeWidth="1.8"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        fill="none"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </section>
     </>

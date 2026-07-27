@@ -10,6 +10,7 @@ type PricingPlanProps = {
       title: string;
       price: string;
       discountedFrom: string;
+      description?: string;
       includes: string[];
     }>;
   };
@@ -127,6 +128,9 @@ const PricingPlan = ({ service }: PricingPlanProps) => {
                   <span className="font-bold">$50%</span>{" "}
                   referral AAR
                 </p> */}
+
+                {/* Description */}
+                {card.description ? <p className="text-[#4C8C74] py-2">{card.description}</p> : null}
 
                 {/* Includes Section */}
                 <div className="flex-grow">
