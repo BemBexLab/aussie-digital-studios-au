@@ -129,8 +129,8 @@ const PricingPlan = ({ service }: PricingPlanProps) => {
                   referral AAR
                 </p> */}
 
-                {/* Description */}
-                {card.description ? <p className="text-[#4C8C74] py-2">{card.description}</p> : null}
+                {/* Description
+                {card.description ? <p className="text-[#4C8C74] py-2">{card.description}</p> : null} */}
 
                 {/* Includes Section */}
                 <div className="flex-grow">
