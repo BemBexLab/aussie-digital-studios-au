@@ -9,7 +9,7 @@ export default function CountryRestrictedPage() {
           Website not available in your country.
         </h1>
         <p className="mx-auto mt-6 max-w-xl text-base leading-7 text-[#AAB6B1] sm:text-lg">
-          This website is currently available only in Pakistan and Australia.
+          Coming Soon to your country.
         </p>
       </section>
     </main>
